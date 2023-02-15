@@ -1,0 +1,91 @@
+:root
+    --raisin-black #1e1e24
+    --raisin-black-2 #484857
+    --cultured #f5f5f5
+    --red-pigment #e3281e
+    --purple #7009a3
+    --rainbow-gradient linear-gradient(90deg, var(--purple) 0%, var(--red-pigment) 100%)
+
+body
+    display flex
+    font-family 'Lato', sans-serif
+    background-color var(--raisin-black)
+    color var(--cultured)
+    font-weight 400
+    min-height 100vh
+
+    #__nuxt
+        flex 1 1 auto
+        min-width 0
+        min-height 0
+        display flex
+        flex-direction column
+
+.raisin-black
+    color var(--raisin-black)
+
+.red-pigment
+    color var(--red-pigment)
+
+.bg-cultured
+    background-color var(--cultured)
+
+.bg-raisin-black
+    background-color var(--raisin-black)
+
+.bg-raisin-black-2
+    background-color var(--raisin-black-2)
+
+.h100
+    height 100%
+
+*
+    box-sizing border-box
+    outline none !important
+
+.btn
+    border none
+
+    &-primary
+        font-size 20px
+        font-weight 700
+        background var(--purple)
+        background var(--rainbow-gradient)
+
+a
+    text-decoration none
+    color inherit
+
+    &:not(.btn):hover
+        opacity 0.8
+
+// Typography
+h1, .h1
+    font-weight 900
+
+.uppercase
+    text-transform uppercase
+
+.font-thin
+    font-weight 100
+    letter-spacing -3px
+
+.font-light
+    font-weight 300
+
+.font-bold
+    font-weight 700
+
+.font-black
+    font-weight 900
+
+.cursor-pointer
+    cursor pointer
+
+// Nuxt animations
+.page-enter-active, .page-leave-active
+    transition all 0.4s
+
+.page-enter-from, .page-leave-to
+    opacity 0
+    filter blur(1rem)
