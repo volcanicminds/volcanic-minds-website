@@ -1,7 +1,7 @@
 <template>
 	<div>
 		<div class="relative">
-			<img class="bkg-image absolute top-0 col-12 left-0 h100" src="~/assets/images/background.png" alt="Background" />
+			<img class="bkg-image absolute top-0 col-12 left-0 h100" src="../assets/images/background.png" alt="Background" />
 			<WrapperContainer class="py4">
 				<h1 class="uppercase mt2"><span class="font-thin">Volcanic</span><br />Minds</h1>
 				<p class="description">

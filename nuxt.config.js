@@ -1,4 +1,10 @@
-export default {
+import { defineNuxtConfig } from '@nuxt/bridge'
+
+export default defineNuxtConfig({
+	bridge: {
+		meta: true,
+		vite: true
+	},
 	// Global page headers: https://go.nuxtjs.dev/config-head
 	head: {
 		title: 'volcanic-website-prismic',
@@ -32,7 +38,7 @@ export default {
 	components: true,
 
 	// Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
-	buildModules: ['@nuxtjs/prismic', '@nuxt/typescript-build', '@nuxt/postcss8'],
+	buildModules: ['@nuxtjs/prismic'],
 
 	// Modules: https://go.nuxtjs.dev/config-modules
 	modules: [],
@@ -43,4 +49,4 @@ export default {
 	prismic: {
 		preview: '/preview'
 	}
-}
+})
