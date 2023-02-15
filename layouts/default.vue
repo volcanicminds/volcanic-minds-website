@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<p>cacca</p>
+		<p>Test default template</p>
 		<nuxt />
 	</div>
 </template>

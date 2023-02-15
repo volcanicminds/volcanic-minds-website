@@ -32,21 +32,17 @@
 	</div>
 </template>
 
-<script lang="ts">
-export default {
-	head() {
-		return {
-			title: 'Volcanic Minds • Home',
-			meta: [
-				{
-					name: 'description',
-					content:
-						'Volcanic Minds è una digital experience company. La nostra passione? Realizzare il miglior prodotto per i nostri partner.'
-				}
-			]
+<script setup lang="ts">
+useHead({
+	title: 'Volcanic Minds • Home',
+	meta: [
+		{
+			name: 'description',
+			content:
+				'Volcanic Minds è una digital experience company. La nostra passione? Realizzare il miglior prodotto per i nostri partner.'
 		}
-	}
-}
+	]
+})
 </script>
 
 <style lang="stylus" scoped>
