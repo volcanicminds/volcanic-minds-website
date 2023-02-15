@@ -6,8 +6,60 @@ import type * as prismic from "@prismicio/client";
 type Simplify<T> = {
     [KeyType in keyof T]: T[KeyType];
 };
+/** Content for Pagina di primo livello documents */
+interface FirstLevelPageDocumentData {
+    /**
+     * Titolo pagina field in *Pagina di primo livello*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: first_level_page.page_title
+     * - **Tab**: SEO
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    page_title: prismicT.KeyTextField;
+}
+/**
+ * Pagina di primo livello document from Prismic
+ *
+ * - **API ID**: `first_level_page`
+ * - **Repeatable**: `true`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type FirstLevelPageDocument<Lang extends string = string> = prismicT.PrismicDocumentWithUID<Simplify<FirstLevelPageDocumentData>, "first_level_page", Lang>;
 /** Content for Homepage documents */
-type HomepageDocumentData = Record<string, never>;
+interface HomepageDocumentData {
+    /**
+     * Slice Zone field in *Homepage*
+     *
+     * - **Field Type**: Slice Zone
+     * - **Placeholder**: *None*
+     * - **API ID Path**: homepage.slices[]
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/slices
+     *
+     */
+    slices: prismicT.SliceZone<HomepageDocumentDataSlicesSlice>;
+    /**
+     * Titolo pagina field in *Homepage*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: homepage.page_title
+     * - **Tab**: SEO
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    page_title: prismicT.KeyTextField;
+}
+/**
+ * Slice for *Homepage → Slice Zone*
+ *
+ */
+type HomepageDocumentDataSlicesSlice = HeroBannerSlice;
 /**
  * Homepage document from Prismic
  *
@@ -17,13 +69,76 @@ type HomepageDocumentData = Record<string, never>;
  *
  * @typeParam Lang - Language API ID of the document.
  */
-export type HomepageDocument<Lang extends string = string> = prismicT.PrismicDocumentWithoutUID<Simplify<HomepageDocumentData>, "homepage", Lang>;
-export type AllDocumentTypes = HomepageDocument;
+export type HomepageDocument<Lang extends string = string> = prismicT.PrismicDocumentWithUID<Simplify<HomepageDocumentData>, "homepage", Lang>;
+/** Content for Pagina di secondo livello documents */
+interface SecondLevelPageDocumentData {
+    /**
+     * Titolo pagina field in *Pagina di secondo livello*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: second_level_page.page_title
+     * - **Tab**: SEO
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    page_title: prismicT.KeyTextField;
+}
+/**
+ * Pagina di secondo livello document from Prismic
+ *
+ * - **API ID**: `second_level_page`
+ * - **Repeatable**: `true`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type SecondLevelPageDocument<Lang extends string = string> = prismicT.PrismicDocumentWithUID<Simplify<SecondLevelPageDocumentData>, "second_level_page", Lang>;
+export type AllDocumentTypes = FirstLevelPageDocument | HomepageDocument | SecondLevelPageDocument;
+/**
+ * Primary content in HeroBanner → Primary
+ *
+ */
+interface HeroBannerSliceDefaultPrimary {
+    /**
+     * Prova link field in *HeroBanner → Primary*
+     *
+     * - **Field Type**: Link
+     * - **Placeholder**: *None*
+     * - **API ID Path**: hero_banner.primary.prova_link
+     * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
+     *
+     */
+    prova_link: prismicT.LinkField;
+}
+/**
+ * Default variation for HeroBanner Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: `HeroBanner`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type HeroBannerSliceDefault = prismicT.SharedSliceVariation<"default", Simplify<HeroBannerSliceDefaultPrimary>, never>;
+/**
+ * Slice variation for *HeroBanner*
+ *
+ */
+type HeroBannerSliceVariation = HeroBannerSliceDefault;
+/**
+ * HeroBanner Shared Slice
+ *
+ * - **API ID**: `hero_banner`
+ * - **Description**: `HeroBanner`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type HeroBannerSlice = prismicT.SharedSlice<"hero_banner", HeroBannerSliceVariation>;
 declare module "@prismicio/client" {
     interface CreateClient {
         (repositoryNameOrEndpoint: string, options?: prismic.ClientConfig): prismic.Client<AllDocumentTypes>;
     }
     namespace Content {
-        export type { HomepageDocumentData, HomepageDocument, AllDocumentTypes };
+        export type { FirstLevelPageDocumentData, FirstLevelPageDocument, HomepageDocumentData, HomepageDocumentDataSlicesSlice, HomepageDocument, SecondLevelPageDocumentData, SecondLevelPageDocument, AllDocumentTypes, HeroBannerSliceDefaultPrimary, HeroBannerSliceDefault, HeroBannerSliceVariation, HeroBannerSlice };
     }
 }

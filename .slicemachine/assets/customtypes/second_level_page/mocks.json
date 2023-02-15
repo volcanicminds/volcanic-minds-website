@@ -1,0 +1,11 @@
+{
+  "uid": {
+    "__TYPE__": "UIDContent",
+    "value": "speed"
+  },
+  "page_title": {
+    "__TYPE__": "FieldContent",
+    "value": "difficulty",
+    "type": "Text"
+  }
+}

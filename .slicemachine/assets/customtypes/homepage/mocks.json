@@ -1,1 +1,39 @@
-{}
+{
+  "uid": {
+    "__TYPE__": "UIDContent",
+    "value": "neighbor"
+  },
+  "slices": {
+    "__TYPE__": "SliceContentType",
+    "value": [
+      {
+        "key": "hero_banner$cfca828a-1a02-4b6c-b561-eaf082706fb7",
+        "name": "hero_banner",
+        "widget": {
+          "__TYPE__": "SharedSliceContent",
+          "variation": "default",
+          "primary": {
+            "prova_link": {
+              "__TYPE__": "LinkContent",
+              "value": {
+                "__TYPE__": "ExternalLink",
+                "url": "https://slicemachine.dev"
+              }
+            }
+          },
+          "items": [
+            {
+              "__TYPE__": "GroupItemContent",
+              "value": []
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "page_title": {
+    "__TYPE__": "FieldContent",
+    "value": "stems",
+    "type": "Text"
+  }
+}

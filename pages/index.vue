@@ -1,5 +1,6 @@
 <template>
 	<div>
+		<slice-zone :components="components" :slices="document.data.slices" />
 		<div class="relative">
 			<img class="bkg-image absolute top-0 col-12 left-0 h100" src="../assets/images/background.png" alt="Background" />
 			<WrapperContainer class="py4">
@@ -32,7 +33,25 @@
 	</div>
 </template>
 
-<script setup lang="ts">
+<script>
+import { components } from '~/slices'
+
+export default {
+	async asyncData({ $prismic, params, error }) {
+		const document = await $prismic.api.getByUID('homepage', 'homepage')
+		if (document) {
+			return { document }
+		} else {
+			error({ statusCode: 404, message: 'Page not found' })
+		}
+	},
+	data: function () {
+		return { components }
+	}
+}
+</script>
+
+<script setup>
 useHead({
 	title: 'Volcanic Minds • Home',
 	meta: [

@@ -1,5 +1,14 @@
 {
   "_cts": {
-    "homepage": {}
+    "homepage": {},
+    "first_level_page": {},
+    "second_level_page": {}
+  },
+  "slices": {
+    "HeroBanner": {
+      "default": {
+        "primary": {}
+      }
+    }
   }
 }
