@@ -1,9 +1,9 @@
 import { defineNuxtConfig } from '@nuxt/bridge'
+import smConfig from './sm.json'
 
 export default defineNuxtConfig({
 	bridge: {
-		meta: true,
-		vite: true
+		meta: true
 	},
 	// Global page headers: https://go.nuxtjs.dev/config-head
 	head: {
@@ -41,12 +41,23 @@ export default defineNuxtConfig({
 	buildModules: ['@nuxtjs/prismic'],
 
 	// Modules: https://go.nuxtjs.dev/config-modules
-	modules: [],
+	modules: [
+		[
+			'@nuxtjs/prismic',
+			{
+				endpoint: smConfig.apiEndpoint || ''
+			}
+		]
+	],
 
 	// Build Configuration: https://go.nuxtjs.dev/config-build
-	build: {},
+	build: {
+		transpile: ['@unhead', 'iron-webcrypto']
+	},
 
 	prismic: {
+		endpoint: smConfig.apiEndpoint,
+		modern: true,
 		preview: '/preview'
 	}
 })
