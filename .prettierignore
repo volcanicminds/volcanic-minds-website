@@ -94,3 +94,11 @@ sw.*
 
 # Vim swap files
 *.swp
+
+# Stylus files, beautified by Manta's Stylus Supremacy
+*.styl
+
+# Slicemachine folder
+.slicemachine/
+index.json
+model.json

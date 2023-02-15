@@ -1,0 +1,10 @@
+{
+	"recommendations": [
+		"dbaeumer.vscode-eslint",
+		"esbenp.prettier-vscode",
+		"sysoev.language-stylus",
+		"vue.vscode-typescript-vue-plugin",
+		"vue.volar",
+		"thisismanta.stylus-supremacy" //use 2.16.0!
+	]
+}
