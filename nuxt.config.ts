@@ -51,14 +51,7 @@ export default defineNuxtConfig({
 	buildModules: ['@nuxtjs/prismic'],
 
 	// Modules: https://go.nuxtjs.dev/config-modules
-	modules: [
-		[
-			'@nuxtjs/prismic',
-			{
-				endpoint: smConfig.apiEndpoint || ''
-			}
-		]
-	],
+	modules: [],
 
 	// Build Configuration: https://go.nuxtjs.dev/config-build
 	build: {
@@ -68,7 +61,26 @@ export default defineNuxtConfig({
 	prismic: {
 		endpoint: smConfig.apiEndpoint,
 		modern: true,
-		preview: '/preview'
+		preview: '/preview',
+		apiOptions: {
+			routes: [
+				{
+					type: 'homepage',
+					path: '/'
+				},
+				{
+					type: 'first_level_page',
+					path: '/:uid'
+				},
+				{
+					type: 'second_level_page',
+					resolvers: {
+						section: 'section'
+					},
+					path: '/:section/:uid'
+				}
+			]
+		}
 	},
 
 	hooks: {

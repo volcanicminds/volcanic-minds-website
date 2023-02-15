@@ -73,6 +73,17 @@ export type HomepageDocument<Lang extends string = string> = prismicT.PrismicDoc
 /** Content for Pagina di secondo livello documents */
 interface SecondLevelPageDocumentData {
     /**
+     * section field in *Pagina di secondo livello*
+     *
+     * - **Field Type**: Content Relationship
+     * - **Placeholder**: *None*
+     * - **API ID Path**: second_level_page.section
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
+     *
+     */
+    section: prismicT.RelationField<"first_level_page">;
+    /**
      * Titolo pagina field in *Pagina di secondo livello*
      *
      * - **Field Type**: Text

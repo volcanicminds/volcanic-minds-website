@@ -1,5 +1,5 @@
 <template>
-	<p>PROVA2</p>
+	<p>{{ document.data.section }}</p>
 </template>
 
 <script>

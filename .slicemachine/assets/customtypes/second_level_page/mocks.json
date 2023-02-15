@@ -1,11 +1,18 @@
 {
   "uid": {
     "__TYPE__": "UIDContent",
-    "value": "speed"
+    "value": "rice"
+  },
+  "section": {
+    "__TYPE__": "LinkContent",
+    "value": {
+      "__TYPE__": "DocumentLink",
+      "id": "mock_document_id"
+    }
   },
   "page_title": {
     "__TYPE__": "FieldContent",
-    "value": "difficulty",
+    "value": "managed",
     "type": "Text"
   }
 }
