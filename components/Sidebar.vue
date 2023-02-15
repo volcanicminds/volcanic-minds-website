@@ -9,7 +9,7 @@
 				/>
 				<div class="py3 center">
 					<NuxtLink to="/prenota-appuntamento" class="block my2 h2">Prenota un appuntamento</NuxtLink>
-					<NuxtLink href="/documents/VolcanicMinds-pitch.pdf" target="_blank" external class="block my2 h2"
+					<NuxtLink to="/documents/VolcanicMinds-pitch.pdf" target="_blank" external class="block my2 h2"
 						>Scopri di pi&ugrave;</NuxtLink
 					>
 				</div>

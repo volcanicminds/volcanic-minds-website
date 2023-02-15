@@ -7,7 +7,7 @@
 				/></NuxtLink>
 			</div>
 			<NuxtLink to="/prenota-appuntamento" class="px2 xs-hide sm-hide">Prenota un appuntamento</NuxtLink>
-			<NuxtLink href="/documents/VolcanicMinds-pitch.pdf" target="_blank" external class="px2 pr0 xs-hide sm-hide"
+			<NuxtLink to="/documents/VolcanicMinds-pitch.pdf" target="_blank" external class="px2 pr0 xs-hide sm-hide"
 				>Scopri di pi&ugrave;</NuxtLink
 			>
 			<font-awesome-icon

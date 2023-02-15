@@ -1,6 +1,8 @@
 <template>
 	<div>
-		<p>Test default template</p>
+		<Sidebar />
+		<Header />
 		<nuxt />
+		<Footer />
 	</div>
 </template>

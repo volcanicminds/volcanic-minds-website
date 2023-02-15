@@ -28,11 +28,12 @@ export default defineNuxtConfig({
 		'basscss-btn-sizes/css/btn-sizes.css',
 		'basscss-btn-outline/css/btn-outline.css',
 		'basscss-btn-primary/css/btn-primary.css',
-		'@/assets/style/index.styl'
+		'@/assets/style/index.styl',
+		'@fortawesome/fontawesome-svg-core/styles.css'
 	],
 
 	// Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-	plugins: [],
+	plugins: ['~/plugins/fontawesome.js'],
 
 	// Auto import components: https://go.nuxtjs.dev/config-components
 	components: true,
