@@ -10,9 +10,12 @@
     "lint:js": "eslint --ext \".js,.ts,.vue\" --ignore-path .gitignore .",
     "lint:prettier": "prettier --check .",
     "lint": "yarn lint:js && yarn lint:prettier",
-    "lintfix": "prettier --write --list-different . && yarn lint:js --fix"
+    "lintfix": "prettier --write --list-different . && yarn lint:js --fix",
+    "slicemachine": "start-slicemachine"
   },
   "dependencies": {
+    "@nuxtjs/prismic": "^1.4.2",
+    "@prismicio/slice-simulator-vue": "^0.2.2",
     "core-js": "^3.25.3",
     "nuxt": "^2.15.8",
     "vue": "^2.7.10",
@@ -25,10 +28,12 @@
     "@nuxt/typescript-build": "^2.1.0",
     "@nuxtjs/eslint-config-typescript": "^11.0.0",
     "@nuxtjs/eslint-module": "^3.1.0",
+    "@prismicio/types": "^0.2.7",
     "eslint": "^8.24.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-nuxt": "^4.0.0",
     "eslint-plugin-vue": "^9.5.1",
-    "prettier": "^2.7.1"
+    "prettier": "^2.7.1",
+    "slice-machine-ui": "^0.6.1"
   }
 }
