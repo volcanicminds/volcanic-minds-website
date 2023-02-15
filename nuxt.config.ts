@@ -1,4 +1,5 @@
 import { defineNuxtConfig } from '@nuxt/bridge'
+import { fromNodeMiddleware, type NodeMiddleware } from 'h3'
 import smConfig from './sm.json'
 
 export default defineNuxtConfig({
@@ -17,7 +18,15 @@ export default defineNuxtConfig({
 			{ hid: 'description', name: 'description', content: '' },
 			{ name: 'format-detection', content: 'telephone=no' }
 		],
-		link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
+		link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+		script: [
+			{
+				type: 'text/javascript',
+				async: true,
+				defer: true,
+				src: 'https://static.cdn.prismic.io/prismic.js?new=true&repo=volcanic-website'
+			}
+		]
 	},
 
 	// Global CSS: https://go.nuxtjs.dev/config-css
@@ -60,5 +69,15 @@ export default defineNuxtConfig({
 		endpoint: smConfig.apiEndpoint,
 		modern: true,
 		preview: '/preview'
+	},
+
+	hooks: {
+		ready(nuxt) {
+			// https://github.com/nuxt/bridge/issues/607
+			// translate nuxt 2 hook from @nuxt/webpack-edge to nuxt bridge hook
+			nuxt.hook('server:devMiddleware' as any, async (devMiddleware: NodeMiddleware) => {
+				await nuxt.callHook('server:devHandler', fromNodeMiddleware(devMiddleware))
+			})
+		}
 	}
 })
