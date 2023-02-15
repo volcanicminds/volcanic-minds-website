@@ -15,7 +15,15 @@ export default {
 	},
 
 	// Global CSS: https://go.nuxtjs.dev/config-css
-	css: [],
+	css: [
+		'normalize.css',
+		'basscss/css/basscss.min.css',
+		'basscss-btn/css/btn.css',
+		'basscss-btn-sizes/css/btn-sizes.css',
+		'basscss-btn-outline/css/btn-outline.css',
+		'basscss-btn-primary/css/btn-primary.css',
+		'@/assets/style/index.styl'
+	],
 
 	// Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
 	plugins: [],
