@@ -77,7 +77,7 @@ export default defineNuxtConfig({
 					resolvers: {
 						section: 'section'
 					},
-					path: '/:section/:uid'
+					path: '/:section?/:uid'
 				}
 			]
 		}
