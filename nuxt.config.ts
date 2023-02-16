@@ -55,7 +55,7 @@ export default defineNuxtConfig({
 
 	// Build Configuration: https://go.nuxtjs.dev/config-build
 	build: {
-		transpile: ['@unhead', 'iron-webcrypto']
+		transpile: ['unhead', 'iron-webcrypto']
 	},
 
 	prismic: {

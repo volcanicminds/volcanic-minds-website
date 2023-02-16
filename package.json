@@ -15,7 +15,7 @@
 		"@fortawesome/vue-fontawesome": "^2.0.10",
 		"@nuxtjs/prismic": "^1.4.2",
 		"@prismicio/slice-simulator-vue": "^0.2.2",
-		"@vueuse/head": "^1.0.25",
+		"@vueuse/head": "^1.0.26",
 		"basscss": "^8.1.0",
 		"core-js": "^3.25.3",
 		"h3": "^1.4.0",
@@ -40,7 +40,7 @@
 		"eslint-plugin-nuxt": "^4.0.0",
 		"eslint-plugin-prettier": "^4.2.1",
 		"prettier": "^2.7.1",
-		"slice-machine-ui": "^0.6.1",
+		"slice-machine-ui": "^0.7.0",
 		"stylus": "^0.59.0",
 		"stylus-loader": "4.3.3"
 	},
