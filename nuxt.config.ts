@@ -8,17 +8,72 @@ export default defineNuxtConfig({
 	},
 	// Global page headers: https://go.nuxtjs.dev/config-head
 	head: {
-		title: 'volcanic-website-prismic',
+		title: 'Volcanic Minds',
 		htmlAttrs: {
-			lang: 'en'
+			lang: 'it'
 		},
 		meta: [
 			{ charset: 'utf-8' },
-			{ name: 'viewport', content: 'width=device-width, initial-scale=1' },
-			{ hid: 'description', name: 'description', content: '' },
-			{ name: 'format-detection', content: 'telephone=no' }
+			{ name: 'description', content: 'Volcanic Minds website' },
+			{
+				name: 'viewport',
+				content: 'height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0'
+			},
+			{ name: 'theme-color', content: '#3c0557' },
+			{ name: 'msapplication-TileColor', content: '#7009a3' }
 		],
-		link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+		link: [
+			{
+				rel: 'apple-touch-icon',
+				sizes: '180x180',
+				href: '/apple-touch-icon.png?v=2'
+			},
+			{
+				rel: 'shortcut icon',
+				href: '/favicon.ico?v=2'
+			},
+			{
+				rel: 'icon',
+				type: 'image/png',
+				sizes: '32x32',
+				href: '/favicon-32x32.png?v=2'
+			},
+			{
+				rel: 'icon',
+				type: 'image/png',
+				sizes: '16x16',
+				href: '/favicon-16x16.png?v=2'
+			},
+			{
+				rel: 'manifest',
+				href: '/site.webmanifest?v=2'
+			},
+			{
+				rel: 'mask-icon',
+				href: '/safari-pinned-tab.svg?v=2',
+				color: '#7009a3'
+			},
+			{
+				rel: 'preconnect',
+				href: 'https://fonts.googleapis.com'
+			},
+			{
+				rel: 'preconnect',
+				href: 'https://fonts.gstatic.com/',
+				crossorigin: true as any
+			},
+			{
+				rel: 'preload',
+				as: 'style',
+				href: 'https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap'
+			},
+			{
+				rel: 'stylesheet',
+				media: 'print',
+				onload: 'this.onload=null;this.removeAttribute("media");',
+				href: 'https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap'
+			}
+		],
 		script: [
 			{
 				type: 'text/javascript',

@@ -1,5 +1,5 @@
 <template>
-	<div>
+	<div class="flex-auto">
 		<slice-zone :components="components" :slices="document.data.slices" />
 		<div class="relative">
 			<img class="bkg-image absolute top-0 col-12 left-0 h100" src="../assets/images/background.png" alt="Background" />
