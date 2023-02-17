@@ -9,6 +9,17 @@ type Simplify<T> = {
 /** Content for Pagina di primo livello documents */
 interface FirstLevelPageDocumentData {
     /**
+     * Slice Zone field in *Pagina di primo livello*
+     *
+     * - **Field Type**: Slice Zone
+     * - **Placeholder**: *None*
+     * - **API ID Path**: first_level_page.slices[]
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/slices
+     *
+     */
+    slices: prismicT.SliceZone<FirstLevelPageDocumentDataSlicesSlice>;
+    /**
      * Titolo pagina field in *Pagina di primo livello*
      *
      * - **Field Type**: Text
@@ -20,6 +31,11 @@ interface FirstLevelPageDocumentData {
      */
     page_title: prismicT.KeyTextField;
 }
+/**
+ * Slice for *Pagina di primo livello → Slice Zone*
+ *
+ */
+type FirstLevelPageDocumentDataSlicesSlice = HeroBannerSlice;
 /**
  * Pagina di primo livello document from Prismic
  *
@@ -150,6 +166,6 @@ declare module "@prismicio/client" {
         (repositoryNameOrEndpoint: string, options?: prismic.ClientConfig): prismic.Client<AllDocumentTypes>;
     }
     namespace Content {
-        export type { FirstLevelPageDocumentData, FirstLevelPageDocument, HomepageDocumentData, HomepageDocumentDataSlicesSlice, HomepageDocument, SecondLevelPageDocumentData, SecondLevelPageDocument, AllDocumentTypes, HeroBannerSliceDefaultPrimary, HeroBannerSliceDefault, HeroBannerSliceVariation, HeroBannerSlice };
+        export type { FirstLevelPageDocumentData, FirstLevelPageDocumentDataSlicesSlice, FirstLevelPageDocument, HomepageDocumentData, HomepageDocumentDataSlicesSlice, HomepageDocument, SecondLevelPageDocumentData, SecondLevelPageDocument, AllDocumentTypes, HeroBannerSliceDefaultPrimary, HeroBannerSliceDefault, HeroBannerSliceVariation, HeroBannerSlice };
     }
 }

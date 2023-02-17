@@ -1,11 +1,39 @@
 {
   "uid": {
     "__TYPE__": "UIDContent",
-    "value": "its"
+    "value": "species"
+  },
+  "slices": {
+    "__TYPE__": "SliceContentType",
+    "value": [
+      {
+        "key": "hero_banner$06613df5-8ea0-4ed9-85f6-721d4adc6488",
+        "name": "hero_banner",
+        "widget": {
+          "__TYPE__": "SharedSliceContent",
+          "variation": "default",
+          "primary": {
+            "prova_link": {
+              "__TYPE__": "LinkContent",
+              "value": {
+                "__TYPE__": "ExternalLink",
+                "url": "http://google.com"
+              }
+            }
+          },
+          "items": [
+            {
+              "__TYPE__": "GroupItemContent",
+              "value": []
+            }
+          ]
+        }
+      }
+    ]
   },
   "page_title": {
     "__TYPE__": "FieldContent",
-    "value": "our",
+    "value": "calm",
     "type": "Text"
   }
 }

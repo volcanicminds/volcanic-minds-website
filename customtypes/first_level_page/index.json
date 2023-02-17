@@ -11,6 +11,17 @@
           "label": "UID",
           "placeholder": ""
         }
+      },
+      "slices": {
+        "type": "Slices",
+        "fieldset": "Slice Zone",
+        "config": {
+          "choices": {
+            "hero_banner": {
+              "type": "SharedSlice"
+            }
+          }
+        }
       }
     },
     "SEO": {
