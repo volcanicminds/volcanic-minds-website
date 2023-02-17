@@ -18,6 +18,21 @@
             "placeholder": "",
             "select": null
           }
+        },
+        "testo": {
+          "type": "Text",
+          "config": {
+            "label": "Testo",
+            "placeholder": ""
+          }
+        },
+        "immagine": {
+          "type": "Image",
+          "config": {
+            "label": "immagine",
+            "constraint": {},
+            "thumbnails": []
+          }
         }
       },
       "items": {},

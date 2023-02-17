@@ -137,6 +137,26 @@ interface HeroBannerSliceDefaultPrimary {
      *
      */
     prova_link: prismicT.LinkField;
+    /**
+     * Testo field in *HeroBanner → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: hero_banner.primary.testo
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    testo: prismicT.KeyTextField;
+    /**
+     * immagine field in *HeroBanner → Primary*
+     *
+     * - **Field Type**: Image
+     * - **Placeholder**: *None*
+     * - **API ID Path**: hero_banner.primary.immagine
+     * - **Documentation**: https://prismic.io/docs/core-concepts/image
+     *
+     */
+    immagine: prismicT.ImageField<never>;
 }
 /**
  * Default variation for HeroBanner Slice
