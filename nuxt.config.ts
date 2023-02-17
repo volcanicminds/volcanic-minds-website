@@ -51,13 +51,20 @@ export default defineNuxtConfig({
 	buildModules: ['@nuxtjs/prismic'],
 
 	// Modules: https://go.nuxtjs.dev/config-modules
-	modules: [],
+	modules: [
+		[
+			'@nuxtjs/prismic',
+			{
+				endpoint: smConfig.apiEndpoint || ''
+			}
+		]
+	],
 
 	// Build Configuration: https://go.nuxtjs.dev/config-build
 	build: {
 		// https://github.com/nuxt/bridge/issues/708
 		// @ts-ignore
-		transpile: ['unhead', 'iron-webcrypto']
+		transpile: ['unhead', 'iron-webcrypto', '@prismicio/vue']
 	},
 
 	prismic: {
