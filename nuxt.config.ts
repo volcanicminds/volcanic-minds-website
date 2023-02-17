@@ -55,6 +55,8 @@ export default defineNuxtConfig({
 
 	// Build Configuration: https://go.nuxtjs.dev/config-build
 	build: {
+		// https://github.com/nuxt/bridge/issues/708
+		// @ts-ignore
 		transpile: ['unhead', 'iron-webcrypto']
 	},
 
