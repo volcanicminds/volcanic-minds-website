@@ -35,7 +35,7 @@ watch(isSidebarOpened, (newValue, _oldValue) => {
 .sidebar-leave-active
 	transition opacity 0.5s ease
 
-.sidebar-enter-from
+.sidebar-enter
 .sidebar-leave-to
 	opacity 0
 </style>
