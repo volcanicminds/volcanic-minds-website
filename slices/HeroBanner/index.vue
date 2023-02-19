@@ -1,11 +1,15 @@
 <template>
 	<div>
-		<!-- <PrismicLink v-if="slice.primary.prova_link" :field="slice.primary.prova_link">LINK</PrismicLink> -->
-		<NuxtLink :to="cacca">cane</NuxtLink>
+		<NuxtLink v-if="slice.primary.prova_link" :to="prismicH.asLink(slice.primary.prova_link)"> CIAO </NuxtLink>
+		<p v-if="slice.primary.testo">{{ slice.primary.testo }}</p>
+		<PrismicImage v-if="slice.primary.immagine" :field="slice.primary.immagine"></PrismicImage>
+		<p v-if="slice.primary.richtext" v-html="prismicH.asHTML(slice.primary.richtext)" />
 	</div>
 </template>
 
 <script lang="ts">
+// https://prismic.io/docs/technical-reference/prismicio-vue?version=v2
+// https://prismic.io/docs/technical-reference/prismicio-helpers
 import * as prismicH from '@prismicio/helpers'
 export default {
 	name: 'HeroBanner'
@@ -13,11 +17,10 @@ export default {
 </script>
 
 <script setup lang="ts">
-const props = defineProps({
+defineProps({
 	slice: {
 		type: Object,
 		required: true
 	}
 })
-const cacca = prismicH.asLink(props.slice.primary.prova_link)
 </script>

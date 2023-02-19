@@ -157,6 +157,16 @@ interface HeroBannerSliceDefaultPrimary {
      *
      */
     immagine: prismicT.ImageField<never>;
+    /**
+     * richtext field in *HeroBanner → Primary*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: hero_banner.primary.richtext
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    richtext: prismicT.RichTextField;
 }
 /**
  * Default variation for HeroBanner Slice
