@@ -3,6 +3,7 @@ import Header from './components/Header.vue'
 import Sidebar from './components/Sidebar.vue'
 import WrapperCard from './components/wrapper/Card.vue'
 import WrapperContainer from './components/wrapper/Container.vue'
+import WrapperPrismicLink from './components/wrapper/PrismicLink.vue'
 
 declare module 'vue' {
 	interface GlobalComponents {
@@ -11,5 +12,6 @@ declare module 'vue' {
 		Sidebar: typeof Sidebar
 		WrapperCard: typeof WrapperCard
 		WrapperContainer: typeof WrapperContainer
+		WrapperPrismicLink: typeof WrapperPrismicLink
 	}
 }
