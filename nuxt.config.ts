@@ -119,7 +119,7 @@ export default defineNuxtConfig({
 	build: {
 		// https://github.com/nuxt/bridge/issues/708
 		// @ts-ignore
-		transpile: ['unhead', 'iron-webcrypto', '@prismicio/vue']
+		transpile: ['unhead', 'iron-webcrypto', '@prismicio/vue', '@prismicio/helpers']
 	},
 
 	prismic: {
