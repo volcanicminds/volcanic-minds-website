@@ -9,6 +9,17 @@ type Simplify<T> = {
 /** Content for Pagina di primo livello documents */
 interface FirstLevelPageDocumentData {
     /**
+     * Titolo field in *Pagina di primo livello*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: first_level_page.title
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    title: prismicT.KeyTextField;
+    /**
      * Slice Zone field in *Pagina di primo livello*
      *
      * - **Field Type**: Slice Zone
@@ -89,7 +100,18 @@ export type HomepageDocument<Lang extends string = string> = prismicT.PrismicDoc
 /** Content for Pagina di secondo livello documents */
 interface SecondLevelPageDocumentData {
     /**
-     * section field in *Pagina di secondo livello*
+     * Titolo field in *Pagina di secondo livello*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: second_level_page.title
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    title: prismicT.KeyTextField;
+    /**
+     * Sezione field in *Pagina di secondo livello*
      *
      * - **Field Type**: Content Relationship
      * - **Placeholder**: *None*
@@ -99,6 +121,17 @@ interface SecondLevelPageDocumentData {
      *
      */
     section: prismicT.RelationField<"first_level_page">;
+    /**
+     * Slice Zone field in *Pagina di secondo livello*
+     *
+     * - **Field Type**: Slice Zone
+     * - **Placeholder**: *None*
+     * - **API ID Path**: second_level_page.slices[]
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/slices
+     *
+     */
+    slices: prismicT.SliceZone<SecondLevelPageDocumentDataSlicesSlice>;
     /**
      * Titolo pagina field in *Pagina di secondo livello*
      *
@@ -111,6 +144,11 @@ interface SecondLevelPageDocumentData {
      */
     page_title: prismicT.KeyTextField;
 }
+/**
+ * Slice for *Pagina di secondo livello → Slice Zone*
+ *
+ */
+type SecondLevelPageDocumentDataSlicesSlice = HeroBannerSlice;
 /**
  * Pagina di secondo livello document from Prismic
  *
@@ -196,6 +234,6 @@ declare module "@prismicio/client" {
         (repositoryNameOrEndpoint: string, options?: prismic.ClientConfig): prismic.Client<AllDocumentTypes>;
     }
     namespace Content {
-        export type { FirstLevelPageDocumentData, FirstLevelPageDocumentDataSlicesSlice, FirstLevelPageDocument, HomepageDocumentData, HomepageDocumentDataSlicesSlice, HomepageDocument, SecondLevelPageDocumentData, SecondLevelPageDocument, AllDocumentTypes, HeroBannerSliceDefaultPrimary, HeroBannerSliceDefault, HeroBannerSliceVariation, HeroBannerSlice };
+        export type { FirstLevelPageDocumentData, FirstLevelPageDocumentDataSlicesSlice, FirstLevelPageDocument, HomepageDocumentData, HomepageDocumentDataSlicesSlice, HomepageDocument, SecondLevelPageDocumentData, SecondLevelPageDocumentDataSlicesSlice, SecondLevelPageDocument, AllDocumentTypes, HeroBannerSliceDefaultPrimary, HeroBannerSliceDefault, HeroBannerSliceVariation, HeroBannerSlice };
     }
 }

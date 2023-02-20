@@ -1,5 +1,8 @@
 <template>
-	<p>PROVA</p>
+	<div>
+		<Breadcrumbs :current-page="document.data.title" />
+		<slice-zone :components="components" :slices="document.data.slices" />
+	</div>
 </template>
 
 <script>

@@ -12,14 +12,32 @@
           "placeholder": ""
         }
       },
+      "title": {
+        "type": "Text",
+        "config": {
+          "label": "Titolo",
+          "placeholder": ""
+        }
+      },
       "section": {
         "type": "Link",
         "config": {
-          "label": "section",
+          "label": "Sezione",
           "select": "document",
           "customtypes": [
             "first_level_page"
           ]
+        }
+      },
+      "slices": {
+        "type": "Slices",
+        "fieldset": "Slice Zone",
+        "config": {
+          "choices": {
+            "hero_banner": {
+              "type": "SharedSlice"
+            }
+          }
         }
       }
     },

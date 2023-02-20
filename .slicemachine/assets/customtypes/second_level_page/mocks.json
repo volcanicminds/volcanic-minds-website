@@ -1,7 +1,12 @@
 {
   "uid": {
     "__TYPE__": "UIDContent",
-    "value": "rice"
+    "value": "truth"
+  },
+  "title": {
+    "__TYPE__": "FieldContent",
+    "value": "physical",
+    "type": "Text"
   },
   "section": {
     "__TYPE__": "LinkContent",
@@ -10,9 +15,74 @@
       "id": "mock_document_id"
     }
   },
+  "slices": {
+    "__TYPE__": "SliceContentType",
+    "value": [
+      {
+        "key": "hero_banner$622dd73e-1083-4e39-a0d6-90cb7bf80743",
+        "name": "hero_banner",
+        "widget": {
+          "__TYPE__": "SharedSliceContent",
+          "variation": "default",
+          "primary": {
+            "prova_link": {
+              "__TYPE__": "LinkContent",
+              "value": {
+                "__TYPE__": "ExternalLink",
+                "url": "http://twitter.com"
+              }
+            },
+            "testo": {
+              "__TYPE__": "FieldContent",
+              "value": "rod",
+              "type": "Text"
+            },
+            "immagine": {
+              "__TYPE__": "ImageContent",
+              "origin": {
+                "id": "main",
+                "url": "https://images.unsplash.com/photo-1579931794097-0ad001e51edb",
+                "width": 3958,
+                "height": 3958
+              },
+              "url": "https://images.unsplash.com/photo-1579931794097-0ad001e51edb",
+              "width": 3958,
+              "height": 3958,
+              "edit": {
+                "zoom": 1,
+                "crop": {
+                  "x": 0,
+                  "y": 0
+                },
+                "background": "transparent"
+              },
+              "thumbnails": {}
+            },
+            "richtext": {
+              "__TYPE__": "StructuredTextContent",
+              "value": [
+                {
+                  "type": "paragraph",
+                  "content": {
+                    "text": "Incididunt laborum qui reprehenderit velit et officia aute do."
+                  }
+                }
+              ]
+            }
+          },
+          "items": [
+            {
+              "__TYPE__": "GroupItemContent",
+              "value": []
+            }
+          ]
+        }
+      }
+    ]
+  },
   "page_title": {
     "__TYPE__": "FieldContent",
-    "value": "managed",
+    "value": "trick",
     "type": "Text"
   }
 }
