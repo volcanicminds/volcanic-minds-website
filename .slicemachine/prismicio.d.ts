@@ -31,16 +31,16 @@ interface FirstLevelPageDocumentData {
      */
     slices: prismicT.SliceZone<FirstLevelPageDocumentDataSlicesSlice>;
     /**
-     * Titolo pagina field in *Pagina di primo livello*
+     * Titolo SEO field in *Pagina di primo livello*
      *
      * - **Field Type**: Text
      * - **Placeholder**: *None*
-     * - **API ID Path**: first_level_page.page_title
+     * - **API ID Path**: first_level_page.seo_title
      * - **Tab**: SEO
      * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
      *
      */
-    page_title: prismicT.KeyTextField;
+    seo_title: prismicT.KeyTextField;
 }
 /**
  * Slice for *Pagina di primo livello → Slice Zone*
@@ -60,6 +60,17 @@ export type FirstLevelPageDocument<Lang extends string = string> = prismicT.Pris
 /** Content for Homepage documents */
 interface HomepageDocumentData {
     /**
+     * Titolo field in *Homepage*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: homepage.title
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    title: prismicT.KeyTextField;
+    /**
      * Slice Zone field in *Homepage*
      *
      * - **Field Type**: Slice Zone
@@ -71,16 +82,16 @@ interface HomepageDocumentData {
      */
     slices: prismicT.SliceZone<HomepageDocumentDataSlicesSlice>;
     /**
-     * Titolo pagina field in *Homepage*
+     * Titolo SEO field in *Homepage*
      *
      * - **Field Type**: Text
      * - **Placeholder**: *None*
-     * - **API ID Path**: homepage.page_title
+     * - **API ID Path**: homepage.seo_title
      * - **Tab**: SEO
      * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
      *
      */
-    page_title: prismicT.KeyTextField;
+    seo_title: prismicT.KeyTextField;
 }
 /**
  * Slice for *Homepage → Slice Zone*
@@ -133,16 +144,16 @@ interface SecondLevelPageDocumentData {
      */
     slices: prismicT.SliceZone<SecondLevelPageDocumentDataSlicesSlice>;
     /**
-     * Titolo pagina field in *Pagina di secondo livello*
+     * Titolo SEO field in *Pagina di secondo livello*
      *
      * - **Field Type**: Text
      * - **Placeholder**: *None*
-     * - **API ID Path**: second_level_page.page_title
+     * - **API ID Path**: second_level_page.SEO_title
      * - **Tab**: SEO
      * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
      *
      */
-    page_title: prismicT.KeyTextField;
+    SEO_title: prismicT.KeyTextField;
 }
 /**
  * Slice for *Pagina di secondo livello → Slice Zone*

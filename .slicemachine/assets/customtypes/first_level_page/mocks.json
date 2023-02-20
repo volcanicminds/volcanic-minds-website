@@ -1,18 +1,18 @@
 {
   "uid": {
     "__TYPE__": "UIDContent",
-    "value": "serious"
+    "value": "refused"
   },
   "title": {
     "__TYPE__": "FieldContent",
-    "value": "suddenly",
+    "value": "thread",
     "type": "Text"
   },
   "slices": {
     "__TYPE__": "SliceContentType",
     "value": [
       {
-        "key": "hero_banner$8879227a-ab58-4c7e-b080-4e04bda676b6",
+        "key": "hero_banner$7483e747-93d3-4a39-99f1-ff8ec06dfb54",
         "name": "hero_banner",
         "widget": {
           "__TYPE__": "SharedSliceContent",
@@ -22,25 +22,25 @@
               "__TYPE__": "LinkContent",
               "value": {
                 "__TYPE__": "ExternalLink",
-                "url": "http://google.com"
+                "url": "https://slicemachine.dev"
               }
             },
             "testo": {
               "__TYPE__": "FieldContent",
-              "value": "only",
+              "value": "tank",
               "type": "Text"
             },
             "immagine": {
               "__TYPE__": "ImageContent",
               "origin": {
                 "id": "main",
-                "url": "https://images.unsplash.com/photo-1547394765-185e1e68f34e",
-                "width": 6000,
-                "height": 4000
+                "url": "https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2",
+                "width": 3648,
+                "height": 4560
               },
-              "url": "https://images.unsplash.com/photo-1547394765-185e1e68f34e",
-              "width": 6000,
-              "height": 4000,
+              "url": "https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2",
+              "width": 3648,
+              "height": 4560,
               "edit": {
                 "zoom": 1,
                 "crop": {
@@ -57,7 +57,7 @@
                 {
                   "type": "paragraph",
                   "content": {
-                    "text": "Nostrud occaecat ut reprehenderit eu Lorem culpa non cillum anim amet ut labore occaecat. Aliquip pariatur reprehenderit eiusmod veniam ad nulla. Do deserunt irure nisi reprehenderit ex tempor."
+                    "text": "Eu in id laboris ullamco qui esse elit elit id ea amet mollit irure ipsum. Non sit ut proident est ex. Laboris qui minim veniam ipsum sint fugiat."
                   }
                 }
               ]
@@ -73,9 +73,9 @@
       }
     ]
   },
-  "page_title": {
+  "seo_title": {
     "__TYPE__": "FieldContent",
-    "value": "instead",
+    "value": "this",
     "type": "Text"
   }
 }

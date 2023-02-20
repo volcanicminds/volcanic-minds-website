@@ -32,10 +32,10 @@
       }
     },
     "SEO": {
-      "page_title": {
+      "seo_title": {
         "type": "Text",
         "config": {
-          "label": "Titolo pagina",
+          "label": "Titolo SEO",
           "placeholder": ""
         }
       }
