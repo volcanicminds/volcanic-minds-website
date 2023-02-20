@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<Breadcrumbs :current-page="document.data.title" />
+		<Breadcrumbs v-if="document.data.title" :current-page="document.data.title" />
 		<slice-zone :components="components" :slices="document.data.slices" />
 	</div>
 </template>

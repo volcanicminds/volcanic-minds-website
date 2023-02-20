@@ -1,7 +1,7 @@
 <template>
 	<div>
 		<NuxtLink to="/">Home</NuxtLink> /
-		<template v-if="section"
+		<template v-if="section && section.data.title"
 			><NuxtLink :to="section.url">{{ section.data.title }}</NuxtLink> /</template
 		>
 		<span>{{ currentPage }}</span>

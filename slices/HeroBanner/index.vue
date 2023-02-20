@@ -3,8 +3,8 @@
 		<WrapperPrismicLink v-if="slice.primary.prova_link && slice.primary.testo" :link="slice.primary.prova_link">{{
 			slice.primary.testo
 		}}</WrapperPrismicLink>
-		<PrismicImage v-if="slice.primary.immagine" :field="slice.primary.immagine"></PrismicImage>
-		<p v-if="slice.primary.richtext" v-html="prismicH.asHTML(slice.primary.richtext)" />
+		<PrismicImage v-if="Object.keys(slice.primary.immagine).length" :field="slice.primary.immagine"></PrismicImage>
+		<div v-html="prismicH.asHTML(slice.primary.richtext)" />
 	</div>
 </template>
 
