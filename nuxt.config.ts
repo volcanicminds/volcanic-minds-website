@@ -147,6 +147,11 @@ export default defineNuxtConfig({
 		}
 	},
 
+	loading: {
+		color: 'white',
+		height: '5px'
+	},
+
 	hooks: {
 		ready(nuxt) {
 			// https://github.com/nuxt/bridge/issues/607

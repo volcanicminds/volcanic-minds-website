@@ -66,3 +66,19 @@ More information about the usage of this directory in [the documentation](https:
 This directory contains your Vuex store files. Creating a file in this directory automatically activates Vuex.
 
 More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/store).
+
+### `@prismicio/vue`
+
+Prismic helpers don't work on NuxtBridge, so in this project we use a workaround by translating components links and rich texts with native @prismicio/helpers.
+
+e.g. instead of using
+
+```
+<PrismicRichText :field="slice.primary.richtext" />
+```
+
+we use
+
+```
+<p v-html="prismicH.asHTML(slice.primary.richtext)" />
+```
