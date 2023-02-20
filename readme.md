@@ -67,6 +67,8 @@ This directory contains your Vuex store files. Creating a file in this directory
 
 More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/store).
 
+## Additional notes
+
 ### `@prismicio/vue`
 
 Prismic helpers don't work on NuxtBridge, so in this project we use a workaround by translating components links and rich texts with native @prismicio/helpers.
@@ -82,3 +84,7 @@ we use
 ```
 <p v-html="prismicH.asHTML(slice.primary.richtext)" />
 ```
+
+### `Volar / Vetur / TypeScript`
+
+Make sure you turn off Vetur VSCode extension and leave only Volar enabled, as suggested in vscode/extensions.json. Also disable @buildin:typescript in VSCode extensions to enable Take Over Mode
