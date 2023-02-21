@@ -1,0 +1,20 @@
+{
+    "name": "Volcanic Minds",
+    "short_name": "Volcanic Minds",
+    "icons": [
+        {
+            "src": "/android-chrome-192x192.png?v=2",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/android-chrome-512x512.png?v=2",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+    "theme_color": "#3c0557",
+    "background_color": "#3c0557",
+    "start_url": "https://volcanicminds.com",
+    "display": "standalone"
+}

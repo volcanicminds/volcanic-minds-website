@@ -1,0 +1,16 @@
+{
+	"stylusSupremacy.insertBraces": false,
+	"stylusSupremacy.insertColons": false,
+	"stylusSupremacy.insertSemicolons": false,
+	"editor.codeActionsOnSave": {
+		"source.fixAll.eslint": true
+	},
+	"editor.formatOnSave": true,
+	"editor.defaultFormatter": "esbenp.prettier-vscode",
+	"[stylus]": {
+		"editor.defaultFormatter": "thisismanta.stylus-supremacy"
+	},
+	"[vue]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	}
+}

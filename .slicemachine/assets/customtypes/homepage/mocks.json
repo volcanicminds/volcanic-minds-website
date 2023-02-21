@@ -1,0 +1,81 @@
+{
+  "uid": {
+    "__TYPE__": "UIDContent",
+    "value": "him"
+  },
+  "title": {
+    "__TYPE__": "FieldContent",
+    "value": "angry",
+    "type": "Text"
+  },
+  "slices": {
+    "__TYPE__": "SliceContentType",
+    "value": [
+      {
+        "key": "hero_banner$36b78986-2c61-418a-88f8-bfe6bd385a05",
+        "name": "hero_banner",
+        "widget": {
+          "__TYPE__": "SharedSliceContent",
+          "variation": "default",
+          "primary": {
+            "prova_link": {
+              "__TYPE__": "LinkContent",
+              "value": {
+                "__TYPE__": "ExternalLink",
+                "url": "http://google.com"
+              }
+            },
+            "testo": {
+              "__TYPE__": "FieldContent",
+              "value": "bark",
+              "type": "Text"
+            },
+            "immagine": {
+              "__TYPE__": "ImageContent",
+              "origin": {
+                "id": "main",
+                "url": "https://images.unsplash.com/photo-1600804931749-2da4ce26c869",
+                "width": 3199,
+                "height": 3199
+              },
+              "url": "https://images.unsplash.com/photo-1600804931749-2da4ce26c869",
+              "width": 3199,
+              "height": 3199,
+              "edit": {
+                "zoom": 1,
+                "crop": {
+                  "x": 0,
+                  "y": 0
+                },
+                "background": "transparent"
+              },
+              "thumbnails": {}
+            },
+            "richtext": {
+              "__TYPE__": "StructuredTextContent",
+              "value": [
+                {
+                  "type": "paragraph",
+                  "content": {
+                    "text": "Eu dolor culpa magna consequat dolor in magna qui ullamco. Incididunt elit qui sunt ullamco quis consequat. Id dolore commodo esse qui anim officia tempor aute occaecat eu adipisicing."
+                  }
+                }
+              ]
+            }
+          },
+          "items": [
+            {
+              "__TYPE__": "GroupItemContent",
+              "value": []
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "seo_title": {
+    "__TYPE__": "FieldContent",
+    "value": "this",
+    "type": "Text"
+  }
+}
