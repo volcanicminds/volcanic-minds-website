@@ -4690,6 +4690,16 @@ basscss-position@^2.0.3:
   resolved "https://registry.yarnpkg.com/basscss-position/-/basscss-position-2.0.3.tgz#467180a1f8f386e9072ed8d08294d2a6e0ba4305"
   integrity sha512-g3esHpUHqABF4wieZyAVaLI6JnK7/mPVG65OCfM6VcSRQcw7g4mxHI8nTWlnwlzpwFnqXnI/KBco00ccUJvOLg==
 
+basscss-responsive-margin@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/basscss-responsive-margin/-/basscss-responsive-margin-1.1.0.tgz#2243bcbd00d1d56008496dedb4be2b3cb329d920"
+  integrity sha512-5VSpJBDcKZg/w7t8i8WaRm4dCvEfcTElnYZ3lLzAcU4mV8qPWXEbxh1+bJvIlQtPzY7xBMa9bUbUAsUA6LBfKg==
+
+basscss-responsive-padding@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/basscss-responsive-padding/-/basscss-responsive-padding-1.1.0.tgz#cecf9eb36b7b1f6f257a54739e6c3aa33de6f1f5"
+  integrity sha512-fObdzDW5E8lZeUyKcpDVydNmrIKidWfquzBqO6K4rJKk5xqKHrU0pJtk5s9RQ5KRM5bYYtoyBKffMAl+ik7OcQ==
+
 basscss-type-scale@^1.0.6:
   version "1.0.6"
   resolved "https://registry.yarnpkg.com/basscss-type-scale/-/basscss-type-scale-1.0.6.tgz#f2a4d77252f7119414aa7baf9df290c6921c0542"

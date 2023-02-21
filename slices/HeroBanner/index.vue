@@ -1,7 +1,7 @@
 <template>
-	<div class="relative py4 overflow-hidden hero">
+	<div class="relative pb4 md-py4 overflow-hidden hero">
 		<WrapperContainer class="relative z1">
-			<h1 class="mt4 mb0 hero-title" v-html="prismicH.asHTML(slice.primary.title)" />
+			<h1 class="mt2 md-mt4 mb0 hero-title" v-html="prismicH.asHTML(slice.primary.title)" />
 			<div class="hero-subtitle" v-html="prismicH.asHTML(slice.primary.subtitle)" />
 			<div class="center mt2">
 				<WrapperPrismicLink

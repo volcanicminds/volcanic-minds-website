@@ -1,5 +1,5 @@
 <template>
-	<div class="bg-raisin-black header-container top-0 z4">
+	<div class="bg-raisin-black header-container top-0 z3">
 		<WrapperContainer class="flex items-center px3 py2">
 			<div class="flex-auto">
 				<NuxtLink to="/"

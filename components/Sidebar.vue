@@ -1,6 +1,6 @@
 <template>
 	<Transition name="sidebar">
-		<div v-if="isSidebarOpened" class="fixed z2 col-12 h100 bg-raisin-black left-0 top-0">
+		<div v-if="isSidebarOpened" class="fixed z4 col-12 h100 bg-raisin-black left-0 top-0">
 			<WrapperContainer class="py3">
 				<font-awesome-icon
 					:icon="['fas', 'xmark']"

@@ -92,6 +92,8 @@ export default defineNuxtConfig({
 		'basscss-btn-sizes/css/btn-sizes.css',
 		'basscss-btn-outline/css/btn-outline.css',
 		'basscss-btn-primary/css/btn-primary.css',
+		'basscss-responsive-margin/css/responsive-margin.css',
+		'basscss-responsive-padding/css/responsive-padding.css',
 		'@/assets/style/index.styl',
 		'@fortawesome/fontawesome-svg-core/styles.css'
 	],
