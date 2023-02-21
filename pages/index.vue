@@ -1,5 +1,6 @@
 <template>
 	<div class="flex-auto">
+		<LangSwitcher :alt-langs="altLangs" />
 		<slice-zone :components="components" :slices="document.data.slices" />
 	</div>
 </template>
@@ -11,8 +12,12 @@ export default {
 	async asyncData({ $prismic, params, error, i18n }) {
 		const lang = i18n.locale
 		const document = await $prismic.api.getByUID('homepage', 'homepage', { lang })
-		if (document) {
-			return { document }
+
+		const alternateIds = document.alternate_languages.map((lang) => lang.id)
+		const altLangs = await $prismic.api.query($prismic.predicate.in('document.id', alternateIds), { lang: '*' })
+
+		if (document && altLangs) {
+			return { document, altLangs }
 		} else {
 			error({ statusCode: 404, message: 'Page not found' })
 		}
