@@ -7,13 +7,14 @@
 				<WrapperPrismicLink
 					v-if="slice.primary.cta_link && slice.primary.cta_text"
 					:link="slice.primary.cta_link"
-					class="btn btn-primary btn-big mb4"
+					class="btn btn-primary btn-big mb4 uppercase"
 					>{{ slice.primary.cta_text }}</WrapperPrismicLink
 				>
 			</div>
 		</WrapperContainer>
-		<PrismicImage
+		<WrapperPrismicImage
 			:field="slice.primary.background_image"
+			:size="1000"
 			class="cover absolute col-12 h100 left-0 top-0"
 			:class="slice.primary.background_image_blur ? 'blur' : ''"
 		/>
