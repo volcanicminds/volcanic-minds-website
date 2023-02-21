@@ -15,10 +15,23 @@
 				class="md-hide lg-hide fa-xl cursor-pointer"
 				@click="isSidebarOpened = true"
 			/>
-			<NuxtLink v-for="alternateLang in alternateLanguages.results" :key="alternateLang.id" :to="alternateLang.url">
-				<p>{{ alternateLang.lang }}</p>
-			</NuxtLink>
+			<div class="relative">
+				<div class="country-flag country-flag-current cursor-pointer p2" :class="currentLanguage" />
+				<template v-if="alternateLanguages">
+					<div class="country-flag-dropdown absolute bg-raisin-black-2 px1">
+						<WrapperPrismicLink
+							v-for="alternateLang in alternateLanguages.results"
+							:key="alternateLang.id"
+							:link="alternateLang"
+							class="block country-flag my1"
+							:class="alternateLang.lang"
+							aria-label="Scegli lingua"
+						/>
+					</div>
+				</template>
+			</div>
 		</WrapperContainer>
+
 		<RainbowBar />
 	</div>
 </template>
@@ -28,6 +41,9 @@ export default {
 	computed: {
 		alternateLanguages() {
 			return this.$store.state.prismic.alternateLanguages
+		},
+		currentLanguage() {
+			return this.$store.state.prismic.currentLanguage
 		}
 	}
 }
@@ -43,4 +59,25 @@ const isSidebarOpened = useState('isSidebarOpened')
 	@media screen and (max-width: 40em)
 		.logo
 			height 30px
+	.country-flag
+		width 20px
+		height 20px
+		background-size 20px 20px
+		background-repeat no-repeat
+		background-position center
+		&.it-it
+			background-image url('~/assets/images/it-it.png')
+		&.de-de
+			background-image url('~/assets/images/de-de.png')
+		&.en-eu
+			background-image url('~/assets/images/en-eu.png')
+	.country-flag-current:hover + .country-flag-dropdown
+		display block
+	.country-flag-dropdown
+		display none
+		border-radius 10px
+		top 32px
+		left -1px
+		&:hover
+			display block
 </style>

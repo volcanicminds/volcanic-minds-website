@@ -18,11 +18,12 @@ export default {
 		const document = await $prismic.api.getByUID('second_level_page', params.uid, { lang })
 		const section = await $prismic.api.getByUID('first_level_page', document.data.section.uid)
 
-		if (document && document.alternate_languages.length) {
+		let altLangs = {}
+		if (document.alternate_languages.length) {
 			const alternateIds = document.alternate_languages.map((lang) => lang.id)
-			const altLangs = await $prismic.api.query($prismic.predicate.in('document.id', alternateIds), { lang: '*' })
-			await store.dispatch('prismic/load', altLangs)
+			altLangs = await $prismic.api.query($prismic.predicate.in('document.id', alternateIds), { lang: '*' })
 		}
+		await store.dispatch('prismic/load', { lang, altLangs })
 
 		if (document && section) {
 			return { document, section }
