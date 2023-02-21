@@ -2,7 +2,7 @@
 	<div class="bg-raisin-black header-container top-0 z3">
 		<WrapperContainer class="flex items-center px3 py2">
 			<div class="flex-auto">
-				<NuxtLink to="/"
+				<NuxtLink :to="localePath('/')"
 					><img loading="lazy" class="logo" src="../assets/images/logo/logo-dark.png" height="50" alt="Logo"
 				/></NuxtLink>
 			</div>
@@ -15,10 +15,23 @@
 				class="md-hide lg-hide fa-xl cursor-pointer"
 				@click="isSidebarOpened = true"
 			/>
+			<NuxtLink v-for="alternateLang in alternateLanguages.results" :key="alternateLang.id" :to="alternateLang.url">
+				<p>{{ alternateLang.lang }}</p>
+			</NuxtLink>
 		</WrapperContainer>
 		<RainbowBar />
 	</div>
 </template>
+
+<script lang="ts">
+export default {
+	computed: {
+		alternateLanguages() {
+			return this.$store.state.prismic.alternateLanguages
+		}
+	}
+}
+</script>
 
 <script setup lang="ts">
 const isSidebarOpened = useState('isSidebarOpened')
