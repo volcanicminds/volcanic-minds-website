@@ -13,6 +13,7 @@
 		"@fortawesome/fontawesome-svg-core": "^6.3.0",
 		"@fortawesome/free-solid-svg-icons": "^6.3.0",
 		"@fortawesome/vue-fontawesome": "^2.0.10",
+		"@nuxtjs/i18n": "^7.3.1",
 		"@prismicio/helpers": "^2.3.9",
 		"@prismicio/slice-simulator-vue": "^0.2.2",
 		"@vueuse/head": "^1.0.26",

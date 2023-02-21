@@ -8,8 +8,9 @@
 import { components } from '~/slices'
 
 export default {
-	async asyncData({ $prismic, params, error }) {
-		const document = await $prismic.api.getByUID('homepage', 'homepage')
+	async asyncData({ $prismic, params, error, i18n }) {
+		const lang = i18n.locale
+		const document = await $prismic.api.getByUID('homepage', 'homepage', { lang })
 		if (document) {
 			return { document }
 		} else {
