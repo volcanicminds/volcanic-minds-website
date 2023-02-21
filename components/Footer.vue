@@ -1,5 +1,5 @@
 <template>
-	<div class="bg-raisin-black-2">
+	<div class="bg-raisin-black">
 		<WrapperContainer class="center py3">
 			<div class="flex justify-center social-links-container">
 				<NuxtLink external target="_blank" aria-label="Send email" to="mailto:info@volcanicminds.com">

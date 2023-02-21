@@ -18,7 +18,7 @@ export const _Default = () => ({
   },
   data() {
     return {
-      mock: {"variation":"default","version":"sktwi1xtmkfgx8626","items":[{}],"primary":{"prova_link":{"link_type":"Web","url":"http://google.com"},"testo":"court","immagine":{"dimensions":{"width":4000,"height":4000},"alt":null,"copyright":null,"url":"https://images.unsplash.com/photo-1591012911207-0dbac31f37da"},"richtext":[{"type":"paragraph","text":"Occaecat sit tempor dolor ad eiusmod irure deserunt id laboris elit quis nulla non et.","spans":[]}]},"id":"_Default","slice_type":"hero_banner"}
+      mock: {"variation":"default","version":"sktwi1xtmkfgx8626","items":[{}],"primary":{"title":[{"type":"paragraph","text":"Deserunt est in Lorem velit incididunt ex. Sint non minim tempor laboris elit quis culpa Lorem eu incididunt est fugiat velit. Ullamco dolor magna incididunt nostrud proident sunt cillum fugiat.","spans":[]}],"subtitle":[{"type":"paragraph","text":"Occaecat pariatur amet duis ea labore pariatur. Qui proident sit deserunt nulla sint officia commodo. Quis labore nisi fugiat veniam et est et eiusmod incididunt eu proident sit.","spans":[]}],"background_image":{"dimensions":{"width":3958,"height":3958},"alt":null,"copyright":null,"url":"https://images.unsplash.com/photo-1579931794097-0ad001e51edb"},"background_image_blur":false,"margin_top":false,"margin_bottom":true,"cta_link":{"link_type":"Web","url":"http://twitter.com"},"cta_text":"greatly"},"id":"_Default","slice_type":"hero_banner"}
     }
   },
   template: '<SliceZone :slices="[mock]" :resolver="resolve" />'

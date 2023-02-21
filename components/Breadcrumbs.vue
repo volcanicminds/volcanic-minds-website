@@ -1,11 +1,11 @@
 <template>
-	<div>
+	<WrapperContainer class="py2">
 		<NuxtLink to="/">Home</NuxtLink> /
 		<template v-if="section && section.data.title"
 			><NuxtLink :to="section.url">{{ section.data.title }}</NuxtLink> /</template
 		>
 		<span>{{ currentPage }}</span>
-	</div>
+	</WrapperContainer>
 </template>
 
 <script setup lang="ts">

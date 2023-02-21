@@ -11,37 +11,73 @@
       "version": "sktwi1xtmkfgx8626",
       "description": "HeroBanner",
       "primary": {
-        "prova_link": {
+        "title": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Titolo",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "strong,em,paragraph"
+          }
+        },
+        "subtitle": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Sottotitolo",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "paragraph,strong,em"
+          }
+        },
+        "background_image": {
+          "type": "Image",
+          "config": {
+            "label": "Immagine di sfondo",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "background_image_blur": {
+          "type": "Boolean",
+          "config": {
+            "label": "Blur immagine di sfondo",
+            "placeholder_false": "NO",
+            "placeholder_true": "SI",
+            "default_value": false
+          }
+        },
+        "margin_top": {
+          "type": "Boolean",
+          "config": {
+            "label": "Margine superiore",
+            "placeholder_false": "NO",
+            "placeholder_true": "SI",
+            "default_value": false
+          }
+        },
+        "margin_bottom": {
+          "type": "Boolean",
+          "config": {
+            "label": "Margine inferiore",
+            "placeholder_false": "NO",
+            "placeholder_true": "SI",
+            "default_value": false
+          }
+        },
+        "cta_link": {
           "type": "Link",
           "config": {
-            "label": "Prova link",
+            "label": "CTA link",
             "placeholder": "",
             "allowTargetBlank": true,
             "select": null
           }
         },
-        "testo": {
+        "cta_text": {
           "type": "Text",
           "config": {
-            "label": "Testo",
+            "label": "CTA testo",
             "placeholder": ""
-          }
-        },
-        "immagine": {
-          "type": "Image",
-          "config": {
-            "label": "immagine",
-            "constraint": {},
-            "thumbnails": []
-          }
-        },
-        "richtext": {
-          "type": "StructuredText",
-          "config": {
-            "label": "richtext",
-            "placeholder": "",
-            "allowTargetBlank": true,
-            "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
           }
         }
       },

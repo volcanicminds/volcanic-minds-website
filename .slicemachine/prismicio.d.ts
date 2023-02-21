@@ -20,6 +20,18 @@ interface FirstLevelPageDocumentData {
      */
     title: prismicT.KeyTextField;
     /**
+     * Mostra breadcrumb field in *Pagina di primo livello*
+     *
+     * - **Field Type**: Boolean
+     * - **Placeholder**: *None*
+     * - **Default Value**: false
+     * - **API ID Path**: first_level_page.show_breadcrumb
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/boolean
+     *
+     */
+    show_breadcrumb: prismicT.BooleanField;
+    /**
      * Slice Zone field in *Pagina di primo livello*
      *
      * - **Field Type**: Slice Zone
@@ -133,6 +145,18 @@ interface SecondLevelPageDocumentData {
      */
     section: prismicT.RelationField<"first_level_page">;
     /**
+     * Mostra breadcrumb field in *Pagina di secondo livello*
+     *
+     * - **Field Type**: Boolean
+     * - **Placeholder**: *None*
+     * - **Default Value**: false
+     * - **API ID Path**: second_level_page.show_breadcrumb
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/boolean
+     *
+     */
+    show_breadcrumb: prismicT.BooleanField;
+    /**
      * Slice Zone field in *Pagina di secondo livello*
      *
      * - **Field Type**: Slice Zone
@@ -177,45 +201,88 @@ export type AllDocumentTypes = FirstLevelPageDocument | HomepageDocument | Secon
  */
 interface HeroBannerSliceDefaultPrimary {
     /**
-     * Prova link field in *HeroBanner → Primary*
-     *
-     * - **Field Type**: Link
-     * - **Placeholder**: *None*
-     * - **API ID Path**: hero_banner.primary.prova_link
-     * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
-     *
-     */
-    prova_link: prismicT.LinkField;
-    /**
-     * Testo field in *HeroBanner → Primary*
-     *
-     * - **Field Type**: Text
-     * - **Placeholder**: *None*
-     * - **API ID Path**: hero_banner.primary.testo
-     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
-     *
-     */
-    testo: prismicT.KeyTextField;
-    /**
-     * immagine field in *HeroBanner → Primary*
-     *
-     * - **Field Type**: Image
-     * - **Placeholder**: *None*
-     * - **API ID Path**: hero_banner.primary.immagine
-     * - **Documentation**: https://prismic.io/docs/core-concepts/image
-     *
-     */
-    immagine: prismicT.ImageField<never>;
-    /**
-     * richtext field in *HeroBanner → Primary*
+     * Titolo field in *HeroBanner → Primary*
      *
      * - **Field Type**: Rich Text
      * - **Placeholder**: *None*
-     * - **API ID Path**: hero_banner.primary.richtext
+     * - **API ID Path**: hero_banner.primary.title
      * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
      *
      */
-    richtext: prismicT.RichTextField;
+    title: prismicT.RichTextField;
+    /**
+     * Sottotitolo field in *HeroBanner → Primary*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: hero_banner.primary.subtitle
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    subtitle: prismicT.RichTextField;
+    /**
+     * Immagine di sfondo field in *HeroBanner → Primary*
+     *
+     * - **Field Type**: Image
+     * - **Placeholder**: *None*
+     * - **API ID Path**: hero_banner.primary.background_image
+     * - **Documentation**: https://prismic.io/docs/core-concepts/image
+     *
+     */
+    background_image: prismicT.ImageField<never>;
+    /**
+     * Blur immagine di sfondo field in *HeroBanner → Primary*
+     *
+     * - **Field Type**: Boolean
+     * - **Placeholder**: *None*
+     * - **Default Value**: false
+     * - **API ID Path**: hero_banner.primary.background_image_blur
+     * - **Documentation**: https://prismic.io/docs/core-concepts/boolean
+     *
+     */
+    background_image_blur: prismicT.BooleanField;
+    /**
+     * Margine superiore field in *HeroBanner → Primary*
+     *
+     * - **Field Type**: Boolean
+     * - **Placeholder**: *None*
+     * - **Default Value**: false
+     * - **API ID Path**: hero_banner.primary.margin_top
+     * - **Documentation**: https://prismic.io/docs/core-concepts/boolean
+     *
+     */
+    margin_top: prismicT.BooleanField;
+    /**
+     * Margine inferiore field in *HeroBanner → Primary*
+     *
+     * - **Field Type**: Boolean
+     * - **Placeholder**: *None*
+     * - **Default Value**: false
+     * - **API ID Path**: hero_banner.primary.margin_bottom
+     * - **Documentation**: https://prismic.io/docs/core-concepts/boolean
+     *
+     */
+    margin_bottom: prismicT.BooleanField;
+    /**
+     * CTA link field in *HeroBanner → Primary*
+     *
+     * - **Field Type**: Link
+     * - **Placeholder**: *None*
+     * - **API ID Path**: hero_banner.primary.cta_link
+     * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
+     *
+     */
+    cta_link: prismicT.LinkField;
+    /**
+     * CTA testo field in *HeroBanner → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: hero_banner.primary.cta_text
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    cta_text: prismicT.KeyTextField;
 }
 /**
  * Default variation for HeroBanner Slice

@@ -29,6 +29,15 @@
           ]
         }
       },
+      "show_breadcrumb": {
+        "type": "Boolean",
+        "config": {
+          "label": "Mostra breadcrumb",
+          "placeholder_false": "NO",
+          "placeholder_true": "SI",
+          "default_value": false
+        }
+      },
       "slices": {
         "type": "Slices",
         "fieldset": "Slice Zone",
