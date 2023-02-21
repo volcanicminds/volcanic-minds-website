@@ -18,12 +18,12 @@
 			<div class="relative">
 				<div class="country-flag country-flag-current cursor-pointer p2" :class="currentLanguage" />
 				<template v-if="alternateLanguages">
-					<div class="country-flag-dropdown absolute bg-raisin-black-2 px1">
+					<div class="country-flag-dropdown absolute bg-raisin-black-2 px2">
 						<WrapperPrismicLink
 							v-for="alternateLang in alternateLanguages.results"
 							:key="alternateLang.id"
 							:link="alternateLang"
-							class="block country-flag my1"
+							class="block country-flag my2"
 							:class="alternateLang.lang"
 							aria-label="Scegli lingua"
 						/>
@@ -77,7 +77,7 @@ const isSidebarOpened = useState('isSidebarOpened')
 		display none
 		border-radius 10px
 		top 32px
-		left -1px
+		left -10px
 		&:hover
 			display block
 </style>

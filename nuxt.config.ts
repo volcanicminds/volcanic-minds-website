@@ -120,12 +120,17 @@ export default async () => {
 				{
 					endpoint: smConfig.apiEndpoint || ''
 				}
-			]
+			],
+			'@nuxtjs/sitemap'
 		],
 
 		i18n: {
 			locales,
 			defaultLocale
+		},
+
+		sitemap: {
+			i18n: true
 		},
 
 		// Build Configuration: https://go.nuxtjs.dev/config-build

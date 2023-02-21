@@ -14,7 +14,7 @@ export default {
 		const document = await $prismic.api.getByUID('first_level_page', params.uid, { lang })
 
 		let altLangs = {}
-		if (document.alternate_languages.length) {
+		if (document && document.alternate_languages.length) {
 			const alternateIds = document.alternate_languages.map((lang) => lang.id)
 			altLangs = await $prismic.api.query($prismic.predicate.in('document.id', alternateIds), { lang: '*' })
 		}
