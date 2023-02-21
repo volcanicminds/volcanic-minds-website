@@ -16,7 +16,7 @@ export default {
 	async asyncData({ $prismic, params, error, i18n, store }) {
 		const lang = i18n.locale
 		const document = await $prismic.api.getByUID('second_level_page', params.uid, { lang })
-		const section = await $prismic.api.getByUID('first_level_page', document.data.section.uid)
+		const section = await $prismic.api.getByUID('first_level_page', document.data.section.uid, { lang })
 
 		let altLangs = {}
 		if (document && document.alternate_languages.length) {
