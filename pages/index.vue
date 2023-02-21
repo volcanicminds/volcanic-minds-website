@@ -1,6 +1,6 @@
 <template>
 	<div class="flex-auto">
-		<LangSwitcher :alt-langs="altLangs" />
+		<LangSwitcher v-if="altLangs" :alt-langs="altLangs" />
 		<slice-zone :components="components" :slices="document.data.slices" />
 	</div>
 </template>
@@ -13,10 +13,13 @@ export default {
 		const lang = i18n.locale
 		const document = await $prismic.api.getByUID('homepage', 'homepage', { lang })
 
-		const alternateIds = document.alternate_languages.map((lang) => lang.id)
-		const altLangs = await $prismic.api.query($prismic.predicate.in('document.id', alternateIds), { lang: '*' })
+		let altLangs = null
+		if (document.alternate_languages.length) {
+			const alternateIds = document.alternate_languages.map((lang) => lang.id)
+			altLangs = await $prismic.api.query($prismic.predicate.in('document.id', alternateIds), { lang: '*' })
+		}
 
-		if (document && altLangs) {
+		if (document) {
 			return { document, altLangs }
 		} else {
 			error({ statusCode: 404, message: 'Page not found' })
@@ -40,28 +43,3 @@ useHead({
 	]
 })
 </script>
-
-<style lang="stylus" scoped>
-.bkg-image
-	object-fit cover
-	z-index -1
-
-h1
-	line-height 54px
-	font-size 75px
-	@media screen and (min-width: 40em)
-		line-height 71px
-		font-size 100px
-	.font-thin
-		font-size 54px
-		@media screen and (min-width: 40em)
-			font-size 71px
-.description
-	font-size 25px
-	font-weight 300
-
-.carousel-image
-	object-fit contain
-	height 100px
-	width 200px
-</style>

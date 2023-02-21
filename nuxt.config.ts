@@ -143,18 +143,18 @@ export default async () => {
 				routes: [
 					{
 						type: 'homepage',
-						path: '/'
+						path: '/:lang?'
 					},
 					{
 						type: 'first_level_page',
-						path: '/:uid'
+						path: '/:lang?/:uid'
 					},
 					{
 						type: 'second_level_page',
 						resolvers: {
 							section: 'section'
 						},
-						path: '/:section?/:uid'
+						path: '/:lang?/:section/:uid'
 					}
 				]
 			}
