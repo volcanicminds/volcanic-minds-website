@@ -1,5 +1,5 @@
 <template>
-	<div>
+	<div class="flex-auto">
 		<Breadcrumbs v-if="document.data.show_breadcrumb && document.data.title" :current-page="document.data.title" />
 		<slice-zone :components="components" :slices="document.data.slices" />
 	</div>

@@ -1,5 +1,5 @@
 <template>
-	<div>
+	<div class="flex-auto">
 		<Breadcrumbs
 			v-if="document.data.show_breadcrumb && document.data.title"
 			:section="section"

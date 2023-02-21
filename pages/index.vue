@@ -1,35 +1,6 @@
 <template>
 	<div class="flex-auto">
 		<slice-zone :components="components" :slices="document.data.slices" />
-		<!-- <div class="relative">
-			<img class="bkg-image absolute top-0 col-12 left-0 h100" src="../assets/images/background.png" alt="Background" />
-			<WrapperContainer class="py4">
-				<h1 class="uppercase mt2"><span class="font-thin">Volcanic</span><br />Minds</h1>
-				<p class="description">
-					Siamo una
-					<span class="bold red-pigment">digital experience company</span>.<br />
-					La nostra passione? Realizzare il miglior prodotto per i nostri partner.<br />
-				</p>
-
-				<div class="center mt2 mb2">
-					<NuxtLink to="/documents/VolcanicMinds-pitch.pdf" class="btn btn-primary btn-big" target="_blank" external
-						>SCOPRI DI PI&Ugrave;</NuxtLink
-					>
-				</div>
-			</WrapperContainer>
-		</div>
-		<WrapperContainer>
-			<WrapperCard class="left-align">
-				<p class="h2 mt0">ciao</p>
-				<p class="m0">
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-					magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-					pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-					est laborum.
-				</p>
-			</WrapperCard>
-		</WrapperContainer> -->
 	</div>
 </template>
 
