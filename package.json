@@ -1,6 +1,6 @@
 {
 	"name": "volcanic-website-prismic",
-	"version": "1.0.0",
+	"version": "1.0.2",
 	"scripts": {
 		"dev": "export NODE_ENV=development && node ./switch_env.mjs && nuxi dev",
 		"prod": "export NODE_ENV=production && node ./switch_env.mjs && nuxi dev",
