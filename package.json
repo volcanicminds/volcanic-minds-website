@@ -5,7 +5,7 @@
 		"dev": "nuxi dev",
 		"build": "nuxi build",
 		"start": "nuxi preview",
-		"generate": "nuxi generate",
+		"generate": "nuxt generate",
 		"lint": "eslint . --ext .ts,.vue",
 		"slicemachine": "start-slicemachine"
 	},
@@ -14,7 +14,8 @@
 		"@fortawesome/free-solid-svg-icons": "^6.3.0",
 		"@fortawesome/vue-fontawesome": "^2.0.10",
 		"@nuxtjs/i18n": "^7.3.1",
-		"@nuxtjs/sitemap": "thisismydesign/sitemap-module#cd4dc22293b9b67e8ebb5b3c49840e67c108e312",
+		"@nuxtjs/robots": "^3.0.0",
+		"@nuxtjs/sitemap": "^2.4.0",
 		"@prismicio/helpers": "^2.3.9",
 		"@prismicio/slice-simulator-vue": "^0.2.2",
 		"@vueuse/head": "^1.0.26",

@@ -111,7 +111,7 @@ export default async () => {
 		components: true,
 
 		// Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
-		buildModules: ['@nuxtjs/prismic'],
+		buildModules: ['@nuxtjs/prismic', '~/modules/sitemapGenerator.ts'],
 
 		// Modules: https://go.nuxtjs.dev/config-modules
 		modules: [
@@ -120,6 +120,12 @@ export default async () => {
 				'@nuxtjs/prismic',
 				{
 					endpoint: smConfig.apiEndpoint || ''
+				}
+			],
+			[
+				'@nuxtjs/robots',
+				{
+					configPath: 'robots.config.ts'
 				}
 			],
 			'@nuxtjs/sitemap'
@@ -186,7 +192,7 @@ export default async () => {
 			sitemap: {
 				generate: {
 					done(nuxtInstance: { options: { generate: { dir: any } } }) {
-						fs.copyFileSync(`${nuxtInstance.options.generate.dir}/sitemap.xml`, `static/sitemap.xml`)
+						fs.copyFileSync(`${nuxtInstance.options.generate.dir}/sitemap.xml`, `static/VMsitemap.xml`)
 					}
 				}
 			}
