@@ -138,8 +138,8 @@ export default async () => {
 
 		sitemap: {
 			i18n: true,
-			hostname: process.env.SITENAME,
-			exclude: process.env.EXCLUDE_PATHS.split(','),
+			hostname: process.env.NUXT_SITENAME,
+			exclude: process.env.NUXT_PRE_EXCLUDE_PATHS.split(','),
 			path: '/sitemapindex.xml'
 		},
 
