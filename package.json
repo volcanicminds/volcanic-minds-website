@@ -2,8 +2,10 @@
 	"name": "volcanic-website-prismic",
 	"version": "1.0.0",
 	"scripts": {
-		"dev": "nuxi dev",
-		"build": "nuxi build",
+		"dev": "export NODE_ENV=development && node ./switch_env.mjs && nuxi dev",
+		"prod": "export NODE_ENV=production && node ./switch_env.mjs && nuxi dev",
+		"build-dev": "export NODE_ENV=development && node ./switch_env.mjs && nuxi build",
+		"build": "export NODE_ENV=production && node ./switch_env.mjs && nuxi build",
 		"start": "nuxi preview",
 		"generate": "nuxt generate",
 		"lint": "eslint . --ext .ts,.vue",

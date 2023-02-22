@@ -15,21 +15,21 @@
         <loc>https://volcanicminds.com/</loc>
     </url>
     <url>
-        <loc>https://volcanicminds.com/de-de/sezionen-1</loc>
+        <loc>https://volcanicminds.com/en-eu/section-1</loc>
     </url>
     <url>
         <loc>https://volcanicminds.com/sezione-1</loc>
     </url>
     <url>
-        <loc>https://volcanicminds.com/en-eu/section-1</loc>
-    </url>
-    <url>
-        <loc>https://volcanicminds.com/sezione-1/pagina-1</loc>
+        <loc>https://volcanicminds.com/de-de/sezionen-1</loc>
     </url>
     <url>
         <loc>https://volcanicminds.com/en-eu/section-1/page-1</loc>
     </url>
     <url>
         <loc>https://volcanicminds.com/de-de/sezionen-1/paginnen-1</loc>
+    </url>
+    <url>
+        <loc>https://volcanicminds.com/sezione-1/pagina-1</loc>
     </url>
 </urlset>

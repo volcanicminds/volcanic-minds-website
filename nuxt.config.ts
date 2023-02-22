@@ -125,7 +125,7 @@ export default async () => {
 			[
 				'@nuxtjs/robots',
 				{
-					configPath: 'robots.config.ts'
+					configPath: '~/modules/robotsConfig.ts'
 				}
 			],
 			'@nuxtjs/sitemap'
@@ -138,8 +138,8 @@ export default async () => {
 
 		sitemap: {
 			i18n: true,
-			hostname: 'https://volcanicminds.com',
-			exclude: ['/preview', '/*/preview', '/slice-simulator', '/*/slice-simulator']
+			hostname: process.env.SITENAME,
+			exclude: process.env.EXCLUDE_PATHS.split(',')
 		},
 
 		// Build Configuration: https://go.nuxtjs.dev/config-build
@@ -192,7 +192,10 @@ export default async () => {
 			sitemap: {
 				generate: {
 					done(nuxtInstance: { options: { generate: { dir: any } } }) {
-						fs.copyFileSync(`${nuxtInstance.options.generate.dir}/sitemap.xml`, `static/VMsitemap.xml`)
+						fs.copyFileSync(
+							`${nuxtInstance.options.generate.dir}/sitemap.xml`,
+							`static/${process.env.SITEMAP_NAME}.xml`
+						)
 					}
 				}
 			}
