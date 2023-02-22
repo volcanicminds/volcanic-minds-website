@@ -1,6 +1,6 @@
 <template>
 	<WrapperContainer class="py2">
-		<NuxtLink to="/">Home</NuxtLink> /
+		<NuxtLink :to="localePath('/')">Home</NuxtLink> /
 		<template v-if="section && section.data.title"
 			><NuxtLink :to="section.url">{{ section.data.title }}</NuxtLink> /</template
 		>
