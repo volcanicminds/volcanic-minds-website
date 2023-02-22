@@ -6,30 +6,30 @@
     xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
     xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
     <url>
-        <loc>https://volcanicminds.com/de-de</loc>
+        <loc>http://localhost:3000/de-de</loc>
     </url>
     <url>
-        <loc>https://volcanicminds.com/en-eu</loc>
+        <loc>http://localhost:3000/en-eu</loc>
     </url>
     <url>
-        <loc>https://volcanicminds.com/</loc>
+        <loc>http://localhost:3000/</loc>
     </url>
     <url>
-        <loc>https://volcanicminds.com/en-eu/section-1</loc>
+        <loc>http://localhost:3000/sezione-1</loc>
     </url>
     <url>
-        <loc>https://volcanicminds.com/sezione-1</loc>
+        <loc>http://localhost:3000/en-eu/section-1</loc>
     </url>
     <url>
-        <loc>https://volcanicminds.com/de-de/sezionen-1</loc>
+        <loc>http://localhost:3000/de-de/sezionen-1</loc>
     </url>
     <url>
-        <loc>https://volcanicminds.com/en-eu/section-1/page-1</loc>
+        <loc>http://localhost:3000/en-eu/section-1/page-1</loc>
     </url>
     <url>
-        <loc>https://volcanicminds.com/de-de/sezionen-1/paginnen-1</loc>
+        <loc>http://localhost:3000/de-de/sezionen-1/paginnen-1</loc>
     </url>
     <url>
-        <loc>https://volcanicminds.com/sezione-1/pagina-1</loc>
+        <loc>http://localhost:3000/sezione-1/pagina-1</loc>
     </url>
 </urlset>

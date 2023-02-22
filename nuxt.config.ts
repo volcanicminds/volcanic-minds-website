@@ -139,7 +139,8 @@ export default async () => {
 		sitemap: {
 			i18n: true,
 			hostname: process.env.SITENAME,
-			exclude: process.env.EXCLUDE_PATHS.split(',')
+			exclude: process.env.EXCLUDE_PATHS.split(','),
+			path: '/sitemapindex.xml'
 		},
 
 		// Build Configuration: https://go.nuxtjs.dev/config-build
@@ -192,10 +193,7 @@ export default async () => {
 			sitemap: {
 				generate: {
 					done(nuxtInstance: { options: { generate: { dir: any } } }) {
-						fs.copyFileSync(
-							`${nuxtInstance.options.generate.dir}/sitemap.xml`,
-							`static/${process.env.SITEMAP_NAME}.xml`
-						)
+						fs.copyFileSync(`${nuxtInstance.options.generate.dir}/sitemapindex.xml`, `static/sitemap.xml`)
 					}
 				}
 			}

@@ -7,7 +7,7 @@ excludePaths.forEach((path) => robots.push({ Disallow: path }))
 robots.push({ BlankLine: true })
 robots.push({ Comment: 'Custom sitemap' })
 robots.push({
-	Sitemap: `${process.env.SITENAME}/${process.env.SITEMAP_NAME}.xml`
+	Sitemap: `${process.env.SITENAME}/sitemap.xml`
 })
 
 export default robots
