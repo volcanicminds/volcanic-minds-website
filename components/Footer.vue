@@ -2,7 +2,7 @@
 	<div class="bg-raisin-black">
 		<WrapperContainer class="center py3">
 			<div class="flex justify-center social-links-container">
-				<NuxtLink external target="_blank" aria-label="Send email" to="mailto:info@volcanicminds.com">
+				<!-- <NuxtLink external target="_blank" aria-label="Send email" to="mailto:info@volcanicminds.com">
 					<img loading="lazy" class="social-logo" src="../assets/images/icons/email.png" alt="Email" />
 				</NuxtLink>
 				<NuxtLink
@@ -20,7 +20,7 @@
 					to="https://www.instagram.com/volcanic_minds/"
 				>
 					<img loading="lazy" class="social-logo" src="../assets/images/icons/instagram.png" alt="Instagram" />
-				</NuxtLink>
+				</NuxtLink> -->
 			</div>
 			<p class="mb0">
 				<small

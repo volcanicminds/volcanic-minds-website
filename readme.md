@@ -88,3 +88,13 @@ we use
 ### `Volar / Vetur / TypeScript`
 
 Make sure you turn off Vetur VSCode extension and leave only Volar enabled, as suggested in vscode/extensions.json. Also disable @buildin:typescript in VSCode extensions to enable Take Over Mode
+
+### `Sitemap`
+
+Sitemap is generated statically, due to limitations on dynamic routes. To recreate a new one, run
+
+```
+yarn generate
+```
+
+and re-deploy.

@@ -6,7 +6,7 @@
 					><img loading="lazy" class="logo" src="../assets/images/logo/logo-dark.png" height="50" alt="Logo"
 				/></NuxtLink>
 			</div>
-			<NuxtLink to="/prenota-appuntamento" class="px2 xs-hide sm-hide">Prenota un appuntamento</NuxtLink>
+			<!-- <NuxtLink to="/prenota-appuntamento" class="px2 xs-hide sm-hide">Prenota un appuntamento</NuxtLink> -->
 			<NuxtLink to="/documents/VolcanicMinds-pitch.pdf" target="_blank" external class="px2 pr0 xs-hide sm-hide"
 				>Scopri di pi&ugrave;</NuxtLink
 			>
@@ -22,7 +22,7 @@
 						<WrapperPrismicLink
 							v-for="alternateLang in alternateLanguages.results"
 							:key="alternateLang.id"
-							:link="alternateLang"
+							:link="{ ...alternateLang, link_type: 'Document' }"
 							class="block country-flag my2"
 							:class="alternateLang.lang"
 							aria-label="Scegli lingua"
