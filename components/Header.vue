@@ -22,7 +22,7 @@
 						<WrapperPrismicLink
 							v-for="alternateLang in alternateLanguages.results"
 							:key="alternateLang.id"
-							:link="alternateLang"
+							:link="{ ...alternateLang, link_type: 'Document' }"
 							class="block country-flag my2"
 							:class="alternateLang.lang"
 							aria-label="Scegli lingua"
