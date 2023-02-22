@@ -1,3 +1,4 @@
+import * as fs from 'fs'
 import { defineNuxtConfig } from '@nuxt/bridge'
 import { fromNodeMiddleware, type NodeMiddleware } from 'h3'
 import Prismic from '@prismicio/client'
@@ -130,7 +131,9 @@ export default async () => {
 		},
 
 		sitemap: {
-			i18n: true
+			i18n: true,
+			hostname: 'https://volcanicminds.com',
+			exclude: ['/preview', '/*/preview', '/slice-simulator', '/*/slice-simulator']
 		},
 
 		// Build Configuration: https://go.nuxtjs.dev/config-build
@@ -177,6 +180,15 @@ export default async () => {
 				nuxt.hook('server:devMiddleware' as any, async (devMiddleware: NodeMiddleware) => {
 					await nuxt.callHook('server:devHandler', fromNodeMiddleware(devMiddleware))
 				})
+			},
+			// https://github.com/nuxt-community/sitemap-module/issues/281
+			// @ts-ignore
+			sitemap: {
+				generate: {
+					done(nuxtInstance: { options: { generate: { dir: any } } }) {
+						fs.copyFileSync(`${nuxtInstance.options.generate.dir}/sitemap.xml`, `static/sitemap.xml`)
+					}
+				}
 			}
 		}
 	})
