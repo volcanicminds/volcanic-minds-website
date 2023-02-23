@@ -1,9 +1,11 @@
 <template>
-	<WrapperContainer class="py2">
-		<NuxtLink :to="localePath('/')">Home</NuxtLink> /
-		<template v-if="section && section.data.title"
-			><NuxtLink :to="section.url">{{ section.data.title }}</NuxtLink> /</template
-		>
+	<WrapperContainer class="breadcrumbs-container relative z1 flex items-center">
+		<NuxtLink :to="localePath('/')">Home</NuxtLink>
+		<font-awesome-icon :icon="['fas', 'chevron-right']" class="mx1" size="xs" />
+		<template v-if="section && section.data.title">
+			<NuxtLink :to="section.url">{{ section.data.title }}</NuxtLink>
+			<font-awesome-icon :icon="['fas', 'chevron-right']" class="mx1" size="xs" />
+		</template>
 		<span>{{ currentPage }}</span>
 	</WrapperContainer>
 </template>
@@ -24,3 +26,9 @@ withDefaults(
 	}
 )
 </script>
+
+<style lang="stylus" scoped>
+.breadcrumbs-container
+	height 50px
+	margin-bottom -50px
+</style>
