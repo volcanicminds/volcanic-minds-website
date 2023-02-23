@@ -1,8 +1,8 @@
 <template>
-	<NuxtLink v-if="link.link_type === 'Document'" :to="prismicH.asLink(link)">
+	<NuxtLink v-if="link.link_type === 'Document' && !link.isBroken" :to="prismicH.asLink(link)">
 		<slot />
 	</NuxtLink>
-	<a v-else :href="link.url" :target="link.target || undefined">
+	<a v-else-if="!link.isBroken" :href="link.url" :target="link.target || undefined">
 		<slot />
 	</a>
 </template>

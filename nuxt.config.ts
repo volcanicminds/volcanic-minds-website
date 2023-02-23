@@ -133,7 +133,10 @@ export default async () => {
 
 		i18n: {
 			locales,
-			defaultLocale
+			defaultLocale,
+			detectBrowserLanguage: {
+				alwaysRedirect: true
+			}
 		},
 
 		sitemap: {
