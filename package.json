@@ -21,7 +21,6 @@
 		"@nuxtjs/sitemap": "^2.4.0",
 		"@prismicio/helpers": "^2.3.9",
 		"@prismicio/slice-simulator-vue": "^0.2.2",
-		"@vueuse/head": "^1.0.26",
 		"basscss": "^8.1.0",
 		"core-js": "^3.25.3",
 		"fs": "^0.0.1-security",

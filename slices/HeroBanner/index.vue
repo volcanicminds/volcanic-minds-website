@@ -1,7 +1,7 @@
 <template>
 	<div class="relative pb4 md-py4 overflow-hidden hero">
 		<WrapperContainer class="relative z1">
-			<h1 class="mt2 md-mt4 mb0 hero-title" v-html="prismicH.asHTML(slice.primary.title)" />
+			<h1 class="mt2 mb0 hero-title" v-html="prismicH.asHTML(slice.primary.title)" />
 			<div class="hero-subtitle" v-html="prismicH.asHTML(slice.primary.subtitle)" />
 			<div class="center mt2">
 				<WrapperPrismicLink
@@ -42,12 +42,17 @@ defineProps({
 .hero
 	&-title
 		font-weight 100
-		font-size 80px
-		line-height 80px
+		font-size 50px
+		line-height 50px
+		@media (min-width: 52em)
+			font-size 80px
+			line-height 80px
 		>>> p
 			margin 0
 	&-subtitle
-		font-size 25px
+		font-size 20px
+		@media (min-width: 52em)
+			font-size 25px
 		>>> strong
 			font-weight 700
 			color var(--red-pigment)

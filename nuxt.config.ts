@@ -9,9 +9,6 @@ export default async () => {
 	const locales = client.languages.map((lang) => lang.id)
 	const defaultLocale = locales[0]
 	return defineNuxtConfig({
-		bridge: {
-			meta: true
-		},
 		// Global page headers: https://go.nuxtjs.dev/config-head
 		head: {
 			title: 'Volcanic Minds',
@@ -136,7 +133,8 @@ export default async () => {
 			defaultLocale,
 			detectBrowserLanguage: {
 				alwaysRedirect: true
-			}
+			},
+			parsePages: false
 		},
 
 		sitemap: {
@@ -150,7 +148,7 @@ export default async () => {
 		build: {
 			// https://github.com/nuxt/bridge/issues/708
 			// @ts-ignore
-			transpile: ['unhead', 'iron-webcrypto', '@prismicio/vue', '@prismicio/helpers']
+			transpile: ['iron-webcrypto', '@prismicio/vue', '@prismicio/helpers']
 		},
 
 		prismic: {
