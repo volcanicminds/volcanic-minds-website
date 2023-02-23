@@ -111,7 +111,7 @@ export default async () => {
 		components: true,
 
 		// Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
-		buildModules: ['@nuxtjs/prismic', '~/modules/sitemapGenerator.ts'],
+		buildModules: ['@nuxtjs/prismic', '~/modules/sitemapGenerator.ts', 'nuxt-compress'],
 
 		// Modules: https://go.nuxtjs.dev/config-modules
 		modules: [

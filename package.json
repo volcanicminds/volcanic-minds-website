@@ -50,6 +50,7 @@
 		"eslint-config-prettier": "^8.5.0",
 		"eslint-plugin-nuxt": "^4.0.0",
 		"eslint-plugin-prettier": "^4.2.1",
+		"nuxt-compress": "^5.0.0",
 		"prettier": "^2.7.1",
 		"slice-machine-ui": "^0.7.0",
 		"stylus": "^0.59.0",
