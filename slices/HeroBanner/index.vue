@@ -1,8 +1,8 @@
 <template>
 	<div class="relative pb4 md-py4 overflow-hidden hero">
 		<WrapperContainer class="relative z1">
-			<h1 class="mt2 mb0 hero-title" v-html="prismicH.asHTML(slice.primary.title)" />
-			<div class="hero-subtitle" v-html="prismicH.asHTML(slice.primary.subtitle)" />
+			<PrismicRichText class="mt2 mb0 hero-title" :field="slice.primary.title" wrapper="h1" />
+			<PrismicRichText class="hero-subtitle" :field="slice.primary.subtitle" wrapper="div" />
 			<div class="center mt2">
 				<PrismicLink
 					v-if="slice.primary.cta_link && slice.primary.cta_text"
@@ -23,7 +23,6 @@
 </template>
 
 <script lang="ts">
-import * as prismicH from '@prismicio/helpers'
 export default {
 	name: 'HeroBanner'
 }

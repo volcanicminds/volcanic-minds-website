@@ -1,4 +1,4 @@
-import { defineNuxtConfig } from '@nuxt/bridge'
+// import { defineNuxtConfig } from '@nuxt/bridge'
 import Prismic from '@prismicio/client'
 import smConfig from './sm.json'
 
@@ -16,9 +16,9 @@ export default async () => {
 		Sitemap: `${process.env.NUXT_SITENAME}/sitemap.xml`
 	})
 
-	return defineNuxtConfig({
-		bridge: false,
+	return {
 		target: 'static',
+
 		// Global page headers: https://go.nuxtjs.dev/config-head
 		head: {
 			title: 'Volcanic Minds',
@@ -150,8 +150,7 @@ export default async () => {
 
 		// Build Configuration: https://go.nuxtjs.dev/config-build
 		build: {
-			// https://github.com/nuxt/bridge/issues/708
-			transpile: ['@prismicio/vue', '@prismicio/helpers']
+			transpile: ['@prismicio/vue']
 		},
 
 		prismic: {
@@ -183,5 +182,5 @@ export default async () => {
 			color: 'white',
 			height: '5px'
 		}
-	})
+	}
 }
