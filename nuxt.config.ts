@@ -7,9 +7,9 @@ export default async () => {
 	const defaultLocale = locales[0]
 
 	// Robots
-	const robots = []
+	const robots = [] as Array<{}>
 	robots.push({ UserAgent: '*' })
-	const excludePaths = process.env.NUXT_PRE_EXCLUDE_PATHS.split(',')
+	const excludePaths = process.env.NUXT_PRE_EXCLUDE_PATHS!.split(',')
 	excludePaths.forEach((path) => robots.push({ Disallow: path }))
 	robots.push({
 		Sitemap: `${process.env.NUXT_SITENAME}/sitemap.xml`
@@ -144,7 +144,7 @@ export default async () => {
 		sitemap: {
 			i18n: true,
 			hostname: process.env.NUXT_SITENAME,
-			exclude: process.env.NUXT_PRE_EXCLUDE_PATHS.split(',')
+			exclude: process.env.NUXT_PRE_EXCLUDE_PATHS!.split(',')
 		},
 
 		// Build Configuration: https://go.nuxtjs.dev/config-build
@@ -178,6 +178,14 @@ export default async () => {
 		loading: {
 			color: 'white',
 			height: '5px'
+		},
+
+		typescript: {
+			typeCheck: {
+				eslint: {
+					files: './**/*.{ts,js,vue}'
+				}
+			}
 		}
 	}
 }

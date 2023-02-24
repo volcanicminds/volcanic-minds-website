@@ -13,8 +13,9 @@
 	</Transition>
 </template>
 
-<script>
-export default {
+<script lang="ts">
+import { defineComponent } from 'vue'
+export default defineComponent({
 	computed: {
 		isSidebarOpened() {
 			return this.$store.state.prismic.isSidebarOpened
@@ -25,7 +26,7 @@ export default {
 			this.$store.commit('prismic/setIsSidebarOpened', false)
 		}
 	}
-}
+})
 </script>
 
 <style lang="stylus" scoped>

@@ -42,9 +42,10 @@
 	</div>
 </template>
 
-<script>
+<script lang="ts">
+import { defineComponent } from 'vue'
 import ClickOutside from 'vue-click-outside'
-export default {
+export default defineComponent({
 	directives: {
 		ClickOutside
 	},
@@ -55,9 +56,11 @@ export default {
 	},
 	computed: {
 		alternateLanguages() {
+			// @ts-ignore
 			return this.$store.state.prismic.alternateLanguages
 		},
 		currentLanguage() {
+			// @ts-ignore
 			return this.$store.state.prismic.currentLanguage
 		}
 	},
@@ -66,7 +69,7 @@ export default {
 			this.$store.commit('prismic/setIsSidebarOpened', true)
 		}
 	}
-}
+})
 </script>
 
 <style lang="stylus" scoped>

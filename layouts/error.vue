@@ -2,10 +2,11 @@
 	<span />
 </template>
 
-<script>
-export default {
+<script lang="ts">
+import { defineComponent } from 'vue'
+export default defineComponent({
 	beforeCreate() {
 		this.$router.push('/404')
 	}
-}
+})
 </script>

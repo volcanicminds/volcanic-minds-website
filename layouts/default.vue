@@ -9,8 +9,9 @@
 	</div>
 </template>
 
-<script>
-export default {
+<script lang="ts">
+import { defineComponent } from 'vue'
+export default defineComponent({
 	watch: {
 		$route() {
 			this.closeSidebar()
@@ -30,7 +31,7 @@ export default {
 			window.innerWidth > 831 && this.closeSidebar()
 		}
 	}
-}
+})
 </script>
 
 <style lang="stylus" scoped>
