@@ -1,6 +1,7 @@
 export const state = () => ({
 	currentLanguage: '',
-	alternateLanguages: {}
+	alternateLanguages: {},
+	isSidebarOpened: false
 })
 
 export const mutations = {
@@ -9,6 +10,9 @@ export const mutations = {
 	},
 	setCurrentLanguage(state, currentLanguage) {
 		state.currentLanguage = currentLanguage
+	},
+	setIsSidebarOpened(state, isSidebarOpened) {
+		state.isSidebarOpened = isSidebarOpened
 	}
 }
 

@@ -34,7 +34,7 @@
 			<font-awesome-icon
 				:icon="['fas', 'bars']"
 				class="md-hide lg-hide fa-xl cursor-pointer ml2"
-				@click="isSidebarOpened = true"
+				@click="openSidebar"
 			/>
 		</WrapperContainer>
 
@@ -42,11 +42,16 @@
 	</div>
 </template>
 
-<script>
+<script lang="ts">
 import ClickOutside from 'vue-click-outside'
 export default {
 	directives: {
 		ClickOutside
+	},
+	data: () => {
+		return {
+			isLanguageSelectorOpened: false
+		}
 	},
 	computed: {
 		alternateLanguages() {
@@ -55,14 +60,14 @@ export default {
 		currentLanguage() {
 			return this.$store.state.prismic.currentLanguage
 		}
+	},
+	methods: {
+		openSidebar() {
+			this.$store.commit('prismic/setIsSidebarOpened', true)
+		}
 	}
 }
 </script>
-
-<!-- <script setup>
-const isSidebarOpened = useState('isSidebarOpened')
-const isLanguageSelectorOpened = useState('isLanguageSelectorOpened', () => false)
-</script> -->
 
 <style lang="stylus" scoped>
 .header-container

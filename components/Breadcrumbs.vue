@@ -22,7 +22,7 @@ withDefaults(
 		currentPage: string
 	}>(),
 	{
-		section: null
+		section: undefined
 	}
 )
 </script>

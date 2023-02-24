@@ -1,10 +1,10 @@
 <template>
-	<p>Pagina non trovata</p>
+	<span />
 </template>
 
 <script>
 export default {
-	mounted() {
+	beforeCreate() {
 		this.$router.push('/404')
 	}
 }
