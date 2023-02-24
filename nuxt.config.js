@@ -1,4 +1,3 @@
-// import { defineNuxtConfig } from '@nuxt/bridge'
 import Prismic from '@prismicio/client'
 import smConfig from './sm.json'
 
@@ -23,7 +22,7 @@ export default async () => {
 		head: {
 			title: 'Volcanic Minds',
 			htmlAttrs: {
-				lang: 'it'
+				lang: 'it-it'
 			},
 			meta: [
 				{ charset: 'utf-8' },
@@ -149,9 +148,7 @@ export default async () => {
 		},
 
 		// Build Configuration: https://go.nuxtjs.dev/config-build
-		build: {
-			transpile: ['@prismicio/vue']
-		},
+		build: {},
 
 		prismic: {
 			endpoint: smConfig.apiEndpoint,
