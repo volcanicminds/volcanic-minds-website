@@ -1,9 +1,12 @@
 <template>
-	<div class="relative pb4 md-py4 overflow-hidden hero">
+	<div class="relative py4 overflow-hidden hero">
 		<WrapperContainer class="relative z1">
 			<PrismicRichText class="mt2 mb0 hero-title" :field="slice.primary.title" wrapper="h1" />
 			<PrismicRichText class="hero-subtitle" :field="slice.primary.subtitle" wrapper="div" />
-			<div v-if="slice.primary.cta_link && slice.primary.cta_text" class="center mt2">
+			<div
+				v-if="slice.primary.cta_link && !slice.primary.cta_link.isBroken && slice.primary.cta_text"
+				class="center mt2"
+			>
 				<PrismicLink :field="slice.primary.cta_link" class="btn btn-primary btn-big mb4 uppercase">{{
 					slice.primary.cta_text
 				}}</PrismicLink>
