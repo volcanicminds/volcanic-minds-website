@@ -3,13 +3,10 @@
 		<WrapperContainer class="relative z1">
 			<PrismicRichText class="mt2 mb0 hero-title" :field="slice.primary.title" wrapper="h1" />
 			<PrismicRichText class="hero-subtitle" :field="slice.primary.subtitle" wrapper="div" />
-			<div class="center mt2">
-				<PrismicLink
-					v-if="slice.primary.cta_link && slice.primary.cta_text"
-					:field="slice.primary.cta_link"
-					class="btn btn-primary btn-big mb4 uppercase"
-					>{{ slice.primary.cta_text }}</PrismicLink
-				>
+			<div v-if="slice.primary.cta_link && slice.primary.cta_text" class="center mt2">
+				<PrismicLink :field="slice.primary.cta_link" class="btn btn-primary btn-big mb4 uppercase">{{
+					slice.primary.cta_text
+				}}</PrismicLink>
 			</div>
 		</WrapperContainer>
 		<WrapperPrismicImage
