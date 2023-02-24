@@ -9,6 +9,7 @@ export default async () => {
 	const locales = client.languages.map((lang) => lang.id)
 	const defaultLocale = locales[0]
 	return defineNuxtConfig({
+		// target: 'static', // https://github.com/nuxt/nuxt/issues/11776
 		// Global page headers: https://go.nuxtjs.dev/config-head
 		head: {
 			title: 'Volcanic Minds',
@@ -108,6 +109,8 @@ export default async () => {
 		components: true,
 
 		// Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
+		// https://github.com/farnabaz/nuxt-bridge/tree/main
+		// '~/modules/generate.js'
 		buildModules: ['@nuxtjs/prismic', '~/modules/sitemapGenerator.ts', 'nuxt-compress'],
 
 		// Modules: https://go.nuxtjs.dev/config-modules
