@@ -2,7 +2,7 @@
 	<p>Loading Prismic preview...</p>
 </template>
 
-<script lang="ts">
+<script>
 export default {
 	mounted() {
 		this.$prismic.preview()

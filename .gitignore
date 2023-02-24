@@ -89,6 +89,5 @@ sw.*
 # Vim swap files
 *.swp
 
-# Prismic + Nuxt Bridge
+# Prismic + Nuxt
 .reports
-.output

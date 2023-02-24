@@ -9,7 +9,7 @@
 	</div>
 </template>
 
-<script setup lang="ts">
+<!-- <script setup lang="ts">
 const route = useRoute()
 const isSidebarOpened = useState('isSidebarOpened')
 watch(
@@ -29,7 +29,7 @@ function windowResize(e: any) {
 function closeSidebar() {
 	isSidebarOpened.value = false
 }
-</script>
+</script> -->
 
 <style lang="stylus" scoped>
 .main-container

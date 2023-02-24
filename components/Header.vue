@@ -42,7 +42,7 @@
 	</div>
 </template>
 
-<script lang="ts">
+<script>
 import ClickOutside from 'vue-click-outside'
 export default {
 	directives: {
@@ -59,10 +59,10 @@ export default {
 }
 </script>
 
-<script setup lang="ts">
+<!-- <script setup>
 const isSidebarOpened = useState('isSidebarOpened')
 const isLanguageSelectorOpened = useState('isLanguageSelectorOpened', () => false)
-</script>
+</script> -->
 
 <style lang="stylus" scoped>
 .header-container

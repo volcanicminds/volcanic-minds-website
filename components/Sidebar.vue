@@ -18,7 +18,7 @@
 	</Transition>
 </template>
 
-<script setup lang="ts">
+<!-- <script setup lang="ts">
 const isSidebarOpened = useState('isSidebarOpened', () => false)
 
 watch(isSidebarOpened, (newValue, _oldValue) => {
@@ -28,7 +28,7 @@ watch(isSidebarOpened, (newValue, _oldValue) => {
 		document.body.classList.remove('overflow-hidden')
 	}
 })
-</script>
+</script> -->
 
 <style lang="stylus" scoped>
 .sidebar-enter-active
