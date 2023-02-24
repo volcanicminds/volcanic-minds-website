@@ -1,4 +1,3 @@
-import * as fs from 'fs'
 import { defineNuxtConfig } from '@nuxt/bridge'
 import Prismic from '@prismicio/client'
 import smConfig from './sm.json'
@@ -7,6 +6,16 @@ export default async () => {
 	const client = await Prismic.getApi(smConfig.apiEndpoint)
 	const locales = client.languages.map((lang) => lang.id)
 	const defaultLocale = locales[0]
+
+	// Robots
+	const robots = []
+	robots.push({ UserAgent: '*' })
+	const excludePaths = process.env.NUXT_PRE_EXCLUDE_PATHS.split(',')
+	excludePaths.forEach((path) => robots.push({ Disallow: path }))
+	robots.push({
+		Sitemap: `${process.env.NUXT_SITENAME}/sitemap.xml`
+	})
+
 	return defineNuxtConfig({
 		bridge: false,
 		target: 'static',
@@ -109,7 +118,7 @@ export default async () => {
 		components: true,
 
 		// Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
-		buildModules: ['@nuxtjs/prismic', '@nuxt/typescript-build', 'nuxt-compress'],
+		buildModules: ['@nuxtjs/prismic', '@nuxt/typescript-build', '~/modules/sitemapGenerator.ts', 'nuxt-compress'],
 
 		// Modules: https://go.nuxtjs.dev/config-modules
 		modules: [
@@ -120,12 +129,7 @@ export default async () => {
 					endpoint: smConfig.apiEndpoint || ''
 				}
 			],
-			[
-				'@nuxtjs/robots',
-				{
-					configPath: '~/modules/robotsConfig.js'
-				}
-			],
+			['@nuxtjs/robots', robots],
 			'@nuxtjs/sitemap'
 		],
 
@@ -142,7 +146,6 @@ export default async () => {
 			i18n: true,
 			hostname: process.env.NUXT_SITENAME,
 			exclude: process.env.NUXT_PRE_EXCLUDE_PATHS.split(',')
-			// path: '/sitemapindex.xml'
 		},
 
 		// Build Configuration: https://go.nuxtjs.dev/config-build
