@@ -5,10 +5,12 @@
 	</div>
 </template>
 
-<script>
+<script lang="ts">
+import Vue from 'vue'
 import { components } from '~/slices'
 
-export default {
+export default Vue.extend({
+	// @ts-ignore
 	async asyncData({ $prismic, params, error, i18n, store }) {
 		const lang = i18n.locale
 		const document = await $prismic.api.getByUID('first_level_page', params.uid, { lang })
@@ -82,5 +84,5 @@ export default {
 			}
 		}
 	}
-}
+})
 </script>

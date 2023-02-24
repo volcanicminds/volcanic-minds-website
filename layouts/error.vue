@@ -3,8 +3,8 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue'
-export default defineComponent({
+import Vue from 'vue'
+export default Vue.extend({
 	beforeCreate() {
 		this.$router.push('/404')
 	}

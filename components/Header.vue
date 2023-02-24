@@ -43,24 +43,22 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue'
+import Vue from 'vue'
 import ClickOutside from 'vue-click-outside'
-export default defineComponent({
+export default Vue.extend({
 	directives: {
 		ClickOutside
 	},
-	data: () => {
+	data() {
 		return {
 			isLanguageSelectorOpened: false
 		}
 	},
 	computed: {
 		alternateLanguages() {
-			// @ts-ignore
 			return this.$store.state.prismic.alternateLanguages
 		},
 		currentLanguage() {
-			// @ts-ignore
 			return this.$store.state.prismic.currentLanguage
 		}
 	},
