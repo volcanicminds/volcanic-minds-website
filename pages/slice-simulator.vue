@@ -4,16 +4,10 @@
 	</SliceSimulator>
 </template>
 
-<script>
+<script setup lang="ts">
 import { SliceSimulator } from '@prismicio/slice-simulator-vue'
+import { ref } from 'vue'
 import { components } from '~/slices'
 
-export default {
-	components: {
-		SliceSimulator
-	},
-	data() {
-		return { state: {}, components }
-	}
-}
+const state = ref({})
 </script>

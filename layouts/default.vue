@@ -9,26 +9,29 @@
 	</div>
 </template>
 
-<script setup lang="ts">
-const route = useRoute()
-const isSidebarOpened = useState('isSidebarOpened')
-watch(
-	() => route.query,
-	() => closeSidebar()
-)
-onMounted(() => {
-	window.addEventListener('resize', windowResize)
+<script lang="ts">
+import { defineComponent } from 'vue'
+export default defineComponent({
+	watch: {
+		$route() {
+			this.closeSidebar()
+		}
+	},
+	mounted() {
+		window.addEventListener('resize', this.onResize)
+	},
+	destroyed() {
+		window.removeEventListener('resize', this.onResize)
+	},
+	methods: {
+		closeSidebar() {
+			this.$store.commit('prismic/setIsSidebarOpened', false)
+		},
+		onResize() {
+			window.innerWidth > 831 && this.closeSidebar()
+		}
+	}
 })
-onUnmounted(() => {
-	window.removeEventListener('resize', windowResize)
-})
-function windowResize(e: any) {
-	e.target.window.innerWidth > 831 && closeSidebar()
-}
-
-function closeSidebar() {
-	isSidebarOpened.value = false
-}
 </script>
 
 <style lang="stylus" scoped>

@@ -1,6 +1,3 @@
-import * as fs from 'fs'
-import { defineNuxtConfig } from '@nuxt/bridge'
-import { fromNodeMiddleware, type NodeMiddleware } from 'h3'
 import Prismic from '@prismicio/client'
 import smConfig from './sm.json'
 
@@ -8,15 +5,24 @@ export default async () => {
 	const client = await Prismic.getApi(smConfig.apiEndpoint)
 	const locales = client.languages.map((lang) => lang.id)
 	const defaultLocale = locales[0]
-	return defineNuxtConfig({
-		bridge: {
-			meta: true
-		},
+
+	// Robots
+	const robots = [] as Array<{}>
+	robots.push({ UserAgent: '*' })
+	const excludePaths = process.env.NUXT_PRE_EXCLUDE_PATHS!.split(',')
+	excludePaths.forEach((path) => robots.push({ Disallow: path }))
+	robots.push({
+		Sitemap: `${process.env.NUXT_SITENAME}/sitemap.xml`
+	})
+
+	return {
+		target: 'static',
+
 		// Global page headers: https://go.nuxtjs.dev/config-head
 		head: {
 			title: 'Volcanic Minds',
 			htmlAttrs: {
-				lang: 'it'
+				lang: 'it-it'
 			},
 			meta: [
 				{ charset: 'utf-8' },
@@ -111,7 +117,7 @@ export default async () => {
 		components: true,
 
 		// Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
-		buildModules: ['@nuxtjs/prismic', '~/modules/sitemapGenerator.ts'],
+		buildModules: ['@nuxtjs/prismic', '@nuxt/typescript-build', '~/modules/sitemapGenerator.ts', 'nuxt-compress'],
 
 		// Modules: https://go.nuxtjs.dev/config-modules
 		modules: [
@@ -122,33 +128,27 @@ export default async () => {
 					endpoint: smConfig.apiEndpoint || ''
 				}
 			],
-			[
-				'@nuxtjs/robots',
-				{
-					configPath: '~/modules/robotsConfig.ts'
-				}
-			],
+			['@nuxtjs/robots', robots],
 			'@nuxtjs/sitemap'
 		],
 
 		i18n: {
 			locales,
-			defaultLocale
+			defaultLocale,
+			detectBrowserLanguage: {
+				alwaysRedirect: true
+			},
+			parsePages: false
 		},
 
 		sitemap: {
 			i18n: true,
-			hostname: process.env.SITENAME,
-			exclude: process.env.EXCLUDE_PATHS.split(','),
-			path: '/sitemapindex.xml'
+			hostname: process.env.NUXT_SITENAME,
+			exclude: process.env.NUXT_PRE_EXCLUDE_PATHS!.split(',')
 		},
 
 		// Build Configuration: https://go.nuxtjs.dev/config-build
-		build: {
-			// https://github.com/nuxt/bridge/issues/708
-			// @ts-ignore
-			transpile: ['unhead', 'iron-webcrypto', '@prismicio/vue', '@prismicio/helpers']
-		},
+		build: {},
 
 		prismic: {
 			endpoint: smConfig.apiEndpoint,
@@ -180,23 +180,12 @@ export default async () => {
 			height: '5px'
 		},
 
-		hooks: {
-			ready(nuxt) {
-				// https://github.com/nuxt/bridge/issues/607
-				// translate nuxt 2 hook from @nuxt/webpack-edge to nuxt bridge hook
-				nuxt.hook('server:devMiddleware' as any, async (devMiddleware: NodeMiddleware) => {
-					await nuxt.callHook('server:devHandler', fromNodeMiddleware(devMiddleware))
-				})
-			},
-			// https://github.com/nuxt-community/sitemap-module/issues/281
-			// @ts-ignore
-			sitemap: {
-				generate: {
-					done(nuxtInstance: { options: { generate: { dir: any } } }) {
-						fs.copyFileSync(`${nuxtInstance.options.generate.dir}/sitemapindex.xml`, `static/sitemap.xml`)
-					}
+		typescript: {
+			typeCheck: {
+				eslint: {
+					files: './**/*.{ts,js,vue}'
 				}
 			}
 		}
-	})
+	}
 }

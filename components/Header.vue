@@ -10,26 +10,32 @@
 			<NuxtLink to="/documents/VolcanicMinds-pitch.pdf" target="_blank" external class="px2 pr0 xs-hide sm-hide"
 				>Scopri di pi&ugrave;</NuxtLink
 			>
+
+			<div v-click-outside="() => (isLanguageSelectorOpened = false)" class="relative">
+				<div
+					class="country-flag country-flag-current cursor-pointer p2"
+					:class="currentLanguage"
+					@click="isLanguageSelectorOpened = true"
+				/>
+				<div
+					v-if="alternateLanguages && isLanguageSelectorOpened"
+					class="country-flag-dropdown absolute bg-raisin-black-2 px2"
+				>
+					<PrismicLink
+						v-for="alternateLang in alternateLanguages.results"
+						:key="alternateLang.id"
+						:field="{ ...alternateLang, link_type: 'Document' }"
+						class="block country-flag my2"
+						:class="alternateLang.lang"
+						aria-label="Scegli lingua"
+					/>
+				</div>
+			</div>
 			<font-awesome-icon
 				:icon="['fas', 'bars']"
-				class="md-hide lg-hide fa-xl cursor-pointer"
-				@click="isSidebarOpened = true"
+				class="md-hide lg-hide fa-xl cursor-pointer ml2"
+				@click="openSidebar"
 			/>
-			<div class="relative">
-				<div class="country-flag country-flag-current cursor-pointer p2" :class="currentLanguage" />
-				<template v-if="alternateLanguages">
-					<div class="country-flag-dropdown absolute bg-raisin-black-2 px2">
-						<WrapperPrismicLink
-							v-for="alternateLang in alternateLanguages.results"
-							:key="alternateLang.id"
-							:link="{ ...alternateLang, link_type: 'Document' }"
-							class="block country-flag my2"
-							:class="alternateLang.lang"
-							aria-label="Scegli lingua"
-						/>
-					</div>
-				</template>
-			</div>
 		</WrapperContainer>
 
 		<RainbowBar />
@@ -37,20 +43,33 @@
 </template>
 
 <script lang="ts">
-export default {
+import { defineComponent } from 'vue'
+import ClickOutside from 'vue-click-outside'
+export default defineComponent({
+	directives: {
+		ClickOutside
+	},
+	data: () => {
+		return {
+			isLanguageSelectorOpened: false
+		}
+	},
 	computed: {
 		alternateLanguages() {
+			// @ts-ignore
 			return this.$store.state.prismic.alternateLanguages
 		},
 		currentLanguage() {
+			// @ts-ignore
 			return this.$store.state.prismic.currentLanguage
 		}
+	},
+	methods: {
+		openSidebar() {
+			this.$store.commit('prismic/setIsSidebarOpened', true)
+		}
 	}
-}
-</script>
-
-<script setup lang="ts">
-const isSidebarOpened = useState('isSidebarOpened')
+})
 </script>
 
 <style lang="stylus" scoped>
@@ -71,13 +90,8 @@ const isSidebarOpened = useState('isSidebarOpened')
 			background-image url('~/assets/images/de-de.png')
 		&.en-eu
 			background-image url('~/assets/images/en-eu.png')
-	.country-flag-current:hover + .country-flag-dropdown
-		display block
 	.country-flag-dropdown
-		display none
 		border-radius 10px
 		top 32px
 		left -10px
-		&:hover
-			display block
 </style>
