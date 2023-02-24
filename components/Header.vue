@@ -21,10 +21,10 @@
 					v-if="alternateLanguages && isLanguageSelectorOpened"
 					class="country-flag-dropdown absolute bg-raisin-black-2 px2"
 				>
-					<WrapperPrismicLink
+					<PrismicLink
 						v-for="alternateLang in alternateLanguages.results"
 						:key="alternateLang.id"
-						:link="{ ...alternateLang, link_type: 'Document' }"
+						:field="{ ...alternateLang, link_type: 'Document' }"
 						class="block country-flag my2"
 						:class="alternateLang.lang"
 						aria-label="Scegli lingua"
@@ -34,7 +34,7 @@
 			<font-awesome-icon
 				:icon="['fas', 'bars']"
 				class="md-hide lg-hide fa-xl cursor-pointer ml2"
-				@click="isSidebarOpened = true"
+				@click="openSidebar"
 			/>
 		</WrapperContainer>
 
@@ -43,25 +43,33 @@
 </template>
 
 <script lang="ts">
+import { defineComponent } from 'vue'
 import ClickOutside from 'vue-click-outside'
-export default {
+export default defineComponent({
 	directives: {
 		ClickOutside
 	},
+	data: () => {
+		return {
+			isLanguageSelectorOpened: false
+		}
+	},
 	computed: {
 		alternateLanguages() {
+			// @ts-ignore
 			return this.$store.state.prismic.alternateLanguages
 		},
 		currentLanguage() {
+			// @ts-ignore
 			return this.$store.state.prismic.currentLanguage
 		}
+	},
+	methods: {
+		openSidebar() {
+			this.$store.commit('prismic/setIsSidebarOpened', true)
+		}
 	}
-}
-</script>
-
-<script setup lang="ts">
-const isSidebarOpened = useState('isSidebarOpened')
-const isLanguageSelectorOpened = useState('isLanguageSelectorOpened', () => false)
+})
 </script>
 
 <style lang="stylus" scoped>

@@ -100,5 +100,10 @@ sw.*
 
 # Slicemachine folder
 .slicemachine/
+slices/index.js
 index.json
 model.json
+mocks.json
+
+# Static folder
+static/

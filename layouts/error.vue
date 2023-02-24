@@ -1,8 +1,12 @@
 <template>
-	<p>Pagina non trovata</p>
+	<span />
 </template>
 
-<script setup lang="ts">
-const router = useRouter()
-router.push({ path: '/404' })
+<script lang="ts">
+import { defineComponent } from 'vue'
+export default defineComponent({
+	beforeCreate() {
+		this.$router.push('/404')
+	}
+})
 </script>

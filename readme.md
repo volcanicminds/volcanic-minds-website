@@ -69,32 +69,6 @@ More information about the usage of this directory in [the documentation](https:
 
 ## Additional notes
 
-### `@prismicio/vue`
-
-Prismic helpers don't work on NuxtBridge, so in this project we use a workaround by translating components links and rich texts with native @prismicio/helpers.
-
-e.g. instead of using
-
-```
-<PrismicRichText :field="slice.primary.richtext" />
-```
-
-we use
-
-```
-<p v-html="prismicH.asHTML(slice.primary.richtext)" />
-```
-
 ### `Volar / Vetur / TypeScript`
 
 Make sure you turn off Vetur VSCode extension and leave only Volar enabled, as suggested in vscode/extensions.json. Also disable @buildin:typescript in VSCode extensions to enable Take Over Mode
-
-### `Sitemap`
-
-Sitemap is generated statically, due to limitations on dynamic routes. To recreate a new one, run
-
-```
-yarn generate
-```
-
-and re-deploy.
