@@ -42,7 +42,7 @@
 	</div>
 </template>
 
-<script lang="ts">
+<script>
 import ClickOutside from 'vue-click-outside'
 export default {
 	directives: {
