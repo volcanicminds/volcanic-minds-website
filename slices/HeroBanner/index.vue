@@ -4,11 +4,11 @@
 			<h1 class="mt2 mb0 hero-title" v-html="prismicH.asHTML(slice.primary.title)" />
 			<div class="hero-subtitle" v-html="prismicH.asHTML(slice.primary.subtitle)" />
 			<div class="center mt2">
-				<WrapperPrismicLink
+				<PrismicLink
 					v-if="slice.primary.cta_link && slice.primary.cta_text"
-					:link="slice.primary.cta_link"
+					:field="slice.primary.cta_link"
 					class="btn btn-primary btn-big mb4 uppercase"
-					>{{ slice.primary.cta_text }}</WrapperPrismicLink
+					>{{ slice.primary.cta_text }}</PrismicLink
 				>
 			</div>
 		</WrapperContainer>
