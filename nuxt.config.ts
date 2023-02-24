@@ -16,14 +16,14 @@ export default async () => {
 	})
 
 	return {
+		server: {
+			host: '0.0.0.0' // default: localhost
+		},
 		target: 'static',
 
 		// Global page headers: https://go.nuxtjs.dev/config-head
 		head: {
 			title: 'Volcanic Minds',
-			htmlAttrs: {
-				lang: 'it-it'
-			},
 			meta: [
 				{ charset: 'utf-8' },
 				{ name: 'description', content: 'Volcanic Minds website' },
