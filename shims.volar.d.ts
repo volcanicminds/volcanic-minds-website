@@ -5,6 +5,7 @@ import Sidebar from './components/Sidebar.vue'
 import WrapperCard from './components/wrapper/Card.vue'
 import WrapperContainer from './components/wrapper/Container.vue'
 import WrapperPrismicImage from './components/wrapper/PrismicImage.vue'
+import WrapperSlice from './components/wrapper/Slice.vue'
 
 declare module 'vue' {
 	interface GlobalComponents {
@@ -15,5 +16,6 @@ declare module 'vue' {
 		WrapperCard: typeof WrapperCard
 		WrapperContainer: typeof WrapperContainer
 		WrapperPrismicImage: typeof WrapperPrismicImage
+		WrapperSlice: typeof WrapperSlice
 	}
 }

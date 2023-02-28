@@ -1,5 +1,9 @@
 <template>
-	<div class="relative py4 overflow-hidden hero">
+	<WrapperSlice
+		css-class="relative py4 overflow-hidden hero"
+		:margin-top="slice.primary.margin_top || false"
+		:margin-bottom="slice.primary.margin_bottom || false"
+	>
 		<WrapperContainer class="relative z1">
 			<PrismicRichText class="mt2 mb0 hero-title" :field="slice.primary.title" wrapper="h1" />
 			<PrismicRichText class="hero-subtitle" :field="slice.primary.subtitle" wrapper="div" />
@@ -19,7 +23,7 @@
 			:class="slice.primary.background_image_blur ? 'blur' : ''"
 		/>
 		<div class="fade-overlay absolute col-12 h100 left-0 top-0" />
-	</div>
+	</WrapperSlice>
 </template>
 
 <script lang="ts">

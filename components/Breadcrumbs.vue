@@ -29,6 +29,6 @@ withDefaults(
 
 <style lang="stylus" scoped>
 .breadcrumbs-container
-	height 50px
-	margin-bottom -50px
+	height 65px
+	margin-bottom -65px
 </style>

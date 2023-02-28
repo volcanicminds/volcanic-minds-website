@@ -12,6 +12,11 @@
       "default": {
         "primary": {}
       }
+    },
+    "ImageAndText": {
+      "default": {
+        "primary": {}
+      }
     }
   }
 }

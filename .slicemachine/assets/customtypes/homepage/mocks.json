@@ -1,46 +1,56 @@
 {
   "uid": {
     "__TYPE__": "UIDContent",
-    "value": "him"
+    "value": "exact"
   },
   "title": {
     "__TYPE__": "FieldContent",
-    "value": "angry",
+    "value": "writing",
     "type": "Text"
   },
   "slices": {
     "__TYPE__": "SliceContentType",
     "value": [
       {
-        "key": "hero_banner$36b78986-2c61-418a-88f8-bfe6bd385a05",
+        "key": "hero_banner$c7fcfa93-c4c7-4b38-b798-efcdd37f1ad1",
         "name": "hero_banner",
         "widget": {
           "__TYPE__": "SharedSliceContent",
           "variation": "default",
           "primary": {
-            "prova_link": {
-              "__TYPE__": "LinkContent",
-              "value": {
-                "__TYPE__": "ExternalLink",
-                "url": "http://google.com"
-              }
+            "title": {
+              "__TYPE__": "StructuredTextContent",
+              "value": [
+                {
+                  "type": "paragraph",
+                  "content": {
+                    "text": "Elit laboris exercitation veniam anim aute in cillum ad. Voluptate minim consectetur exercitation consequat elit amet laborum in ipsum."
+                  }
+                }
+              ]
             },
-            "testo": {
-              "__TYPE__": "FieldContent",
-              "value": "bark",
-              "type": "Text"
+            "subtitle": {
+              "__TYPE__": "StructuredTextContent",
+              "value": [
+                {
+                  "type": "paragraph",
+                  "content": {
+                    "text": "In incididunt nulla laboris duis. Irure do dolor incididunt Lorem proident. Laboris est magna fugiat ea."
+                  }
+                }
+              ]
             },
-            "immagine": {
+            "background_image": {
               "__TYPE__": "ImageContent",
               "origin": {
                 "id": "main",
-                "url": "https://images.unsplash.com/photo-1600804931749-2da4ce26c869",
-                "width": 3199,
-                "height": 3199
+                "url": "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2",
+                "width": 5616,
+                "height": 3744
               },
-              "url": "https://images.unsplash.com/photo-1600804931749-2da4ce26c869",
-              "width": 3199,
-              "height": 3199,
+              "url": "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2",
+              "width": 5616,
+              "height": 3744,
               "edit": {
                 "zoom": 1,
                 "crop": {
@@ -51,16 +61,95 @@
               },
               "thumbnails": {}
             },
-            "richtext": {
+            "background_image_blur": {
+              "__TYPE__": "BooleanContent",
+              "value": false
+            },
+            "margin_top": {
+              "__TYPE__": "BooleanContent",
+              "value": false
+            },
+            "margin_bottom": {
+              "__TYPE__": "BooleanContent",
+              "value": false
+            },
+            "cta_link": {
+              "__TYPE__": "LinkContent",
+              "value": {
+                "__TYPE__": "ExternalLink",
+                "url": "http://twitter.com"
+              }
+            },
+            "cta_text": {
+              "__TYPE__": "FieldContent",
+              "value": "active",
+              "type": "Text"
+            }
+          },
+          "items": [
+            {
+              "__TYPE__": "GroupItemContent",
+              "value": []
+            }
+          ]
+        }
+      },
+      {
+        "key": "image_and_text$053e8904-b873-46fc-b704-85287e855e8b",
+        "name": "image_and_text",
+        "widget": {
+          "__TYPE__": "SharedSliceContent",
+          "variation": "default",
+          "primary": {
+            "image": {
+              "__TYPE__": "ImageContent",
+              "origin": {
+                "id": "main",
+                "url": "https://images.unsplash.com/photo-1587905069134-008460d7a636",
+                "width": 3935,
+                "height": 5894
+              },
+              "url": "https://images.unsplash.com/photo-1587905069134-008460d7a636",
+              "width": 3935,
+              "height": 5894,
+              "edit": {
+                "zoom": 1,
+                "crop": {
+                  "x": 0,
+                  "y": 0
+                },
+                "background": "transparent"
+              },
+              "thumbnails": {}
+            },
+            "title": {
+              "__TYPE__": "FieldContent",
+              "value": "lake",
+              "type": "Text"
+            },
+            "subtitle": {
+              "__TYPE__": "FieldContent",
+              "value": "solid",
+              "type": "Text"
+            },
+            "description": {
               "__TYPE__": "StructuredTextContent",
               "value": [
                 {
                   "type": "paragraph",
                   "content": {
-                    "text": "Eu dolor culpa magna consequat dolor in magna qui ullamco. Incididunt elit qui sunt ullamco quis consequat. Id dolore commodo esse qui anim officia tempor aute occaecat eu adipisicing."
+                    "text": "Anim nisi eiusmod aliqua exercitation."
                   }
                 }
               ]
+            },
+            "margin_top": {
+              "__TYPE__": "BooleanContent",
+              "value": true
+            },
+            "margin_bottom": {
+              "__TYPE__": "BooleanContent",
+              "value": true
             }
           },
           "items": [
@@ -75,7 +164,7 @@
   },
   "seo_title": {
     "__TYPE__": "FieldContent",
-    "value": "this",
+    "value": "settle",
     "type": "Text"
   }
 }
