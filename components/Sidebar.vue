@@ -4,9 +4,11 @@
 			<WrapperContainer class="py3">
 				<font-awesome-icon :icon="['fas', 'xmark']" class="fa-xl cursor-pointer" @click="closeSidebar" />
 				<div class="py3 center">
-					<NuxtLink to="/documents/VolcanicMinds-pitch.pdf" target="_blank" external class="block my2 h2"
-						>Scopri di pi&ugrave;</NuxtLink
-					>
+					<template v-if="headerData">
+						<template v-for="(link, i) in headerData.data.links">
+							<PrismicLink :key="i" class="block my2 h2" :field="link.link_url">{{ link.link_title }}</PrismicLink>
+						</template>
+					</template>
 				</div>
 			</WrapperContainer>
 		</div>
@@ -19,6 +21,9 @@ export default Vue.extend({
 	computed: {
 		isSidebarOpened() {
 			return this.$store.state.prismic.isSidebarOpened
+		},
+		headerData() {
+			return this.$store.state.prismic.header
 		}
 	},
 	methods: {
