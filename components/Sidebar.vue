@@ -32,7 +32,7 @@ export default Vue.extend({
 <style lang="stylus" scoped>
 .sidebar-enter-active
 .sidebar-leave-active
-	transition opacity 0.5s ease
+	transition all 0.4s
 
 .sidebar-enter
 .sidebar-leave-to

@@ -5,7 +5,7 @@
 			class="loading-page top-0 left-0 col-12 h100 fixed flex flex-column items-center justify-center"
 		>
 			<img loading="lazy" class="logo" src="~/assets/images/logo/logo-dark.png" height="50" alt="Logo" />
-			<div class="spinner mt2" />
+			<div class="spinner mt3" />
 		</div>
 	</Transition>
 </template>
@@ -32,9 +32,9 @@ export default {
 	z-index 9999
 	backdrop-filter blur(5px)
 	.spinner
-		width 40px
+		width 30px
 		background var(--rainbow-gradient)
-		height 40px
+		height 30px
 		border-radius 50%
 		animation pulse-animation 2s infinite
 .loading-enter-active
