@@ -6,8 +6,12 @@
 					><img loading="lazy" class="logo" src="../assets/images/logo/logo-dark.png" height="50" alt="Logo"
 				/></NuxtLink>
 			</div>
-			<template v-for="(link, i) in headerData.data.links">
-				<PrismicLink :key="i" class="px2 pr0 xs-hide sm-hide" :field="link.link_url">{{ link.link_title }}</PrismicLink>
+			<template v-if="headerData">
+				<template v-for="(link, i) in headerData.data.links">
+					<PrismicLink :key="i" class="px2 pr0 xs-hide sm-hide" :field="link.link_url">{{
+						link.link_title
+					}}</PrismicLink>
+				</template>
 			</template>
 
 			<div v-click-outside="() => (isLanguageSelectorOpened = false)" class="relative">

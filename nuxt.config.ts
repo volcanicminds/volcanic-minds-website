@@ -175,10 +175,7 @@ export default async () => {
 			}
 		},
 
-		loading: {
-			color: 'white',
-			height: '5px'
-		},
+		loading: '~/components/Loading.vue',
 
 		typescript: {
 			typeCheck: {

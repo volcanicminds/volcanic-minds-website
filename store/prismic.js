@@ -2,7 +2,7 @@ export const state = () => ({
 	currentLanguage: '',
 	alternateLanguages: {},
 	isSidebarOpened: false,
-	header: {}
+	header: undefined
 })
 
 export const mutations = {
