@@ -69,6 +69,67 @@ type FirstLevelPageDocumentDataSlicesSlice = HeroBannerSlice;
  * @typeParam Lang - Language API ID of the document.
  */
 export type FirstLevelPageDocument<Lang extends string = string> = prismicT.PrismicDocumentWithUID<Simplify<FirstLevelPageDocumentData>, "first_level_page", Lang>;
+/** Content for Header documents */
+interface HeaderDocumentData {
+    /**
+     * Titolo field in *Header*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: header.title
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    title: prismicT.KeyTextField;
+    /**
+     * Links field in *Header*
+     *
+     * - **Field Type**: Group
+     * - **Placeholder**: *None*
+     * - **API ID Path**: header.links[]
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/group
+     *
+     */
+    links: prismicT.GroupField<Simplify<HeaderDocumentDataLinksItem>>;
+}
+/**
+ * Item in Header → Links
+ *
+ */
+export interface HeaderDocumentDataLinksItem {
+    /**
+     * URL link field in *Header → Links*
+     *
+     * - **Field Type**: Link
+     * - **Placeholder**: *None*
+     * - **API ID Path**: header.links[].link_url
+     * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
+     *
+     */
+    link_url: prismicT.LinkField;
+    /**
+     * Titolo link field in *Header → Links*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: header.links[].link_title
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    link_title: prismicT.KeyTextField;
+}
+/**
+ * Header document from Prismic
+ *
+ * - **API ID**: `header`
+ * - **Repeatable**: `false`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type HeaderDocument<Lang extends string = string> = prismicT.PrismicDocumentWithoutUID<Simplify<HeaderDocumentData>, "header", Lang>;
 /** Content for Homepage documents */
 interface HomepageDocumentData {
     /**
@@ -194,7 +255,7 @@ type SecondLevelPageDocumentDataSlicesSlice = HeroBannerSlice;
  * @typeParam Lang - Language API ID of the document.
  */
 export type SecondLevelPageDocument<Lang extends string = string> = prismicT.PrismicDocumentWithUID<Simplify<SecondLevelPageDocumentData>, "second_level_page", Lang>;
-export type AllDocumentTypes = FirstLevelPageDocument | HomepageDocument | SecondLevelPageDocument;
+export type AllDocumentTypes = FirstLevelPageDocument | HeaderDocument | HomepageDocument | SecondLevelPageDocument;
 /**
  * Primary content in HeroBanner → Primary
  *
@@ -312,6 +373,6 @@ declare module "@prismicio/client" {
         (repositoryNameOrEndpoint: string, options?: prismic.ClientConfig): prismic.Client<AllDocumentTypes>;
     }
     namespace Content {
-        export type { FirstLevelPageDocumentData, FirstLevelPageDocumentDataSlicesSlice, FirstLevelPageDocument, HomepageDocumentData, HomepageDocumentDataSlicesSlice, HomepageDocument, SecondLevelPageDocumentData, SecondLevelPageDocumentDataSlicesSlice, SecondLevelPageDocument, AllDocumentTypes, HeroBannerSliceDefaultPrimary, HeroBannerSliceDefault, HeroBannerSliceVariation, HeroBannerSlice };
+        export type { FirstLevelPageDocumentData, FirstLevelPageDocumentDataSlicesSlice, FirstLevelPageDocument, HeaderDocumentData, HeaderDocumentDataLinksItem, HeaderDocument, HomepageDocumentData, HomepageDocumentDataSlicesSlice, HomepageDocument, SecondLevelPageDocumentData, SecondLevelPageDocumentDataSlicesSlice, SecondLevelPageDocument, AllDocumentTypes, HeroBannerSliceDefaultPrimary, HeroBannerSliceDefault, HeroBannerSliceVariation, HeroBannerSlice };
     }
 }

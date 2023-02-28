@@ -1,7 +1,8 @@
 export const state = () => ({
 	currentLanguage: '',
 	alternateLanguages: {},
-	isSidebarOpened: false
+	isSidebarOpened: false,
+	header: {}
 })
 
 export const mutations = {
@@ -13,11 +14,16 @@ export const mutations = {
 	},
 	setIsSidebarOpened(state, isSidebarOpened) {
 		state.isSidebarOpened = isSidebarOpened
+	},
+	setHeader(state, header) {
+		state.header = header
 	}
 }
 
 export const actions = {
-	load(store, { lang, altLangs }) {
+	async load(store, { lang, altLangs }) {
+		const header = await this.$prismic.api.getSingle('header', { lang })
+		store.commit('setHeader', header)
 		store.commit('setCurrentLanguage', lang)
 		store.commit('setAlternateLanguages', altLangs)
 	}

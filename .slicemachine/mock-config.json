@@ -2,7 +2,10 @@
   "_cts": {
     "homepage": {},
     "first_level_page": {},
-    "second_level_page": {}
+    "second_level_page": {},
+    "header": {
+      "links": {}
+    }
   },
   "slices": {
     "HeroBanner": {

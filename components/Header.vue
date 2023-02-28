@@ -6,10 +6,9 @@
 					><img loading="lazy" class="logo" src="../assets/images/logo/logo-dark.png" height="50" alt="Logo"
 				/></NuxtLink>
 			</div>
-			<!-- <NuxtLink to="/prenota-appuntamento" class="px2 xs-hide sm-hide">Prenota un appuntamento</NuxtLink> -->
-			<NuxtLink to="/documents/VolcanicMinds-pitch.pdf" target="_blank" external class="px2 pr0 xs-hide sm-hide"
-				>Scopri di pi&ugrave;</NuxtLink
-			>
+			<template v-for="(link, i) in headerData.data.links">
+				<PrismicLink :key="i" class="px2 pr0 xs-hide sm-hide" :field="link.link_url">{{ link.link_title }}</PrismicLink>
+			</template>
 
 			<div v-click-outside="() => (isLanguageSelectorOpened = false)" class="relative">
 				<div
@@ -60,6 +59,9 @@ export default Vue.extend({
 		},
 		currentLanguage() {
 			return this.$store.state.prismic.currentLanguage
+		},
+		headerData() {
+			return this.$store.state.prismic.header
 		}
 	},
 	methods: {
