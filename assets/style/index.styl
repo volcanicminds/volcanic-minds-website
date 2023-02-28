@@ -13,8 +13,10 @@ body
     font-weight 400
 
 .global-container
-    height 100vh
-    max-height -webkit-fill-available
+    min-height 100vh
+
+    @supports (-webkit-hyphens none)
+        min-height -webkit-fill-available
 
 .raisin-black
     color var(--raisin-black)
@@ -58,6 +60,9 @@ img
     &.cover
         object-fit cover
 
+    &.contain
+        object-fit contain
+
 // Typography
 h1, .h1
     font-weight 900
@@ -78,6 +83,12 @@ h1, .h1
 .font-black
     font-weight 900
 
+.cursor-pointer
+    cursor pointer
+
+.row-reverse
+    flex-direction row-reverse
+
 // Nuxt animations
 .page-enter-active, .page-leave-active
     transition all 0.4s
@@ -85,6 +96,3 @@ h1, .h1
 .page-enter, .page-leave-to
     opacity 0
     filter blur(1rem)
-
-.cursor-pointer
-    cursor pointer

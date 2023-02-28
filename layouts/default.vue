@@ -2,9 +2,7 @@
 	<div class="global-container flex flex-column">
 		<Sidebar />
 		<Header />
-		<div class="col-12 flex-auto flex flex-column main-container">
-			<nuxt />
-		</div>
+		<nuxt />
 		<Footer />
 	</div>
 </template>
