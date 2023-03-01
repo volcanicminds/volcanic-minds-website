@@ -170,7 +170,7 @@ interface HomepageDocumentData {
  * Slice for *Homepage → Slice Zone*
  *
  */
-type HomepageDocumentDataSlicesSlice = HeroBannerSlice | ImageAndTextSlice;
+type HomepageDocumentDataSlicesSlice = HeroBannerSlice | ImageAndTextSlice | RichTextSlice;
 /**
  * Homepage document from Prismic
  *
@@ -446,6 +446,26 @@ interface ImageAndTextSliceDefaultPrimary {
      *
      */
     reverse: prismicT.BooleanField;
+    /**
+     * CTA Link field in *ImageAndText → Primary*
+     *
+     * - **Field Type**: Link
+     * - **Placeholder**: *None*
+     * - **API ID Path**: image_and_text.primary.cta_link
+     * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
+     *
+     */
+    cta_link: prismicT.LinkField;
+    /**
+     * CTA Testo field in *ImageAndText → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: image_and_text.primary.cta_text
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    cta_text: prismicT.KeyTextField;
 }
 /**
  * Default variation for ImageAndText Slice
@@ -470,11 +490,82 @@ type ImageAndTextSliceVariation = ImageAndTextSliceDefault;
  *
  */
 export type ImageAndTextSlice = prismicT.SharedSlice<"image_and_text", ImageAndTextSliceVariation>;
+/**
+ * Primary content in RichText → Primary
+ *
+ */
+interface RichTextSliceDefaultPrimary {
+    /**
+     * Testo field in *RichText → Primary*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: rich_text.primary.text
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    text: prismicT.RichTextField;
+    /**
+     * Allineamento field in *RichText → Primary*
+     *
+     * - **Field Type**: Select
+     * - **Placeholder**: *None*
+     * - **API ID Path**: rich_text.primary.text_align
+     * - **Documentation**: https://prismic.io/docs/core-concepts/select
+     *
+     */
+    text_align: prismicT.SelectField<"Sinistra" | "Centro" | "Destra">;
+    /**
+     * Margine superiore field in *RichText → Primary*
+     *
+     * - **Field Type**: Boolean
+     * - **Placeholder**: *None*
+     * - **Default Value**: false
+     * - **API ID Path**: rich_text.primary.margin_top
+     * - **Documentation**: https://prismic.io/docs/core-concepts/boolean
+     *
+     */
+    margin_top: prismicT.BooleanField;
+    /**
+     * Margine inferiore field in *RichText → Primary*
+     *
+     * - **Field Type**: Boolean
+     * - **Placeholder**: *None*
+     * - **Default Value**: false
+     * - **API ID Path**: rich_text.primary.margin_bottom
+     * - **Documentation**: https://prismic.io/docs/core-concepts/boolean
+     *
+     */
+    margin_bottom: prismicT.BooleanField;
+}
+/**
+ * Default variation for RichText Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: `RichText`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type RichTextSliceDefault = prismicT.SharedSliceVariation<"default", Simplify<RichTextSliceDefaultPrimary>, never>;
+/**
+ * Slice variation for *RichText*
+ *
+ */
+type RichTextSliceVariation = RichTextSliceDefault;
+/**
+ * RichText Shared Slice
+ *
+ * - **API ID**: `rich_text`
+ * - **Description**: `RichText`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type RichTextSlice = prismicT.SharedSlice<"rich_text", RichTextSliceVariation>;
 declare module "@prismicio/client" {
     interface CreateClient {
         (repositoryNameOrEndpoint: string, options?: prismic.ClientConfig): prismic.Client<AllDocumentTypes>;
     }
     namespace Content {
-        export type { FirstLevelPageDocumentData, FirstLevelPageDocumentDataSlicesSlice, FirstLevelPageDocument, HeaderDocumentData, HeaderDocumentDataLinksItem, HeaderDocument, HomepageDocumentData, HomepageDocumentDataSlicesSlice, HomepageDocument, SecondLevelPageDocumentData, SecondLevelPageDocumentDataSlicesSlice, SecondLevelPageDocument, AllDocumentTypes, HeroBannerSliceDefaultPrimary, HeroBannerSliceDefault, HeroBannerSliceVariation, HeroBannerSlice, ImageAndTextSliceDefaultPrimary, ImageAndTextSliceDefault, ImageAndTextSliceVariation, ImageAndTextSlice };
+        export type { FirstLevelPageDocumentData, FirstLevelPageDocumentDataSlicesSlice, FirstLevelPageDocument, HeaderDocumentData, HeaderDocumentDataLinksItem, HeaderDocument, HomepageDocumentData, HomepageDocumentDataSlicesSlice, HomepageDocument, SecondLevelPageDocumentData, SecondLevelPageDocumentDataSlicesSlice, SecondLevelPageDocument, AllDocumentTypes, HeroBannerSliceDefaultPrimary, HeroBannerSliceDefault, HeroBannerSliceVariation, HeroBannerSlice, ImageAndTextSliceDefaultPrimary, ImageAndTextSliceDefault, ImageAndTextSliceVariation, ImageAndTextSlice, RichTextSliceDefaultPrimary, RichTextSliceDefault, RichTextSliceVariation, RichTextSlice };
     }
 }

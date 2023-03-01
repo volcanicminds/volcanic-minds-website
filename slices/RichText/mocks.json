@@ -1,0 +1,38 @@
+[
+  {
+    "__TYPE__": "SharedSliceContent",
+    "variation": "default",
+    "primary": {
+      "text": {
+        "__TYPE__": "StructuredTextContent",
+        "value": [
+          {
+            "type": "paragraph",
+            "content": {
+              "text": "Dolore velit reprehenderit laboris dolor laborum tempor."
+            }
+          }
+        ]
+      },
+      "text_align": {
+        "__TYPE__": "FieldContent",
+        "value": "Centro",
+        "type": "Select"
+      },
+      "margin_top": {
+        "__TYPE__": "BooleanContent",
+        "value": true
+      },
+      "margin_bottom": {
+        "__TYPE__": "BooleanContent",
+        "value": true
+      }
+    },
+    "items": [
+      {
+        "__TYPE__": "GroupItemContent",
+        "value": []
+      }
+    ]
+  }
+]

@@ -58,6 +58,18 @@
       "reverse": {
         "__TYPE__": "BooleanContent",
         "value": false
+      },
+      "cta_link": {
+        "__TYPE__": "LinkContent",
+        "value": {
+          "__TYPE__": "ExternalLink",
+          "url": "https://prismic.io"
+        }
+      },
+      "cta_text": {
+        "__TYPE__": "FieldContent",
+        "value": "center",
+        "type": "Text"
       }
     },
     "items": [

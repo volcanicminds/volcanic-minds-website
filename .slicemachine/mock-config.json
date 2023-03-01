@@ -17,6 +17,11 @@
       "default": {
         "primary": {}
       }
+    },
+    "RichText": {
+      "default": {
+        "primary": {}
+      }
     }
   }
 }

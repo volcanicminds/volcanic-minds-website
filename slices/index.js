@@ -2,13 +2,16 @@
 
 import HeroBanner from './HeroBanner';
 import ImageAndText from './ImageAndText';
+import RichText from './RichText';
 
 export {
 	HeroBanner,
 	ImageAndText,
+	RichText,
 };
 
 export const components = {
 	hero_banner: HeroBanner,
 	image_and_text: ImageAndText,
+	rich_text: RichText,
 };

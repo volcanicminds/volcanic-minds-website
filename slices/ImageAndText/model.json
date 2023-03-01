@@ -68,6 +68,21 @@
             "placeholder_true": "SI",
             "default_value": false
           }
+        },
+        "cta_link": {
+          "type": "Link",
+          "config": {
+            "label": "CTA Link",
+            "placeholder": "",
+            "select": null
+          }
+        },
+        "cta_text": {
+          "type": "Text",
+          "config": {
+            "label": "CTA Testo",
+            "placeholder": ""
+          }
         }
       },
       "items": {},
