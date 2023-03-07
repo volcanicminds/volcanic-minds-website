@@ -170,7 +170,7 @@ interface HomepageDocumentData {
  * Slice for *Homepage → Slice Zone*
  *
  */
-type HomepageDocumentDataSlicesSlice = HeroBannerSlice | ImageAndTextSlice | RichTextSlice;
+type HomepageDocumentDataSlicesSlice = HeroBannerSlice | ImageAndTextSlice | RichTextSlice | CardsGridSlice;
 /**
  * Homepage document from Prismic
  *
@@ -256,6 +256,113 @@ type SecondLevelPageDocumentDataSlicesSlice = HeroBannerSlice;
  */
 export type SecondLevelPageDocument<Lang extends string = string> = prismicT.PrismicDocumentWithUID<Simplify<SecondLevelPageDocumentData>, "second_level_page", Lang>;
 export type AllDocumentTypes = FirstLevelPageDocument | HeaderDocument | HomepageDocument | SecondLevelPageDocument;
+/**
+ * Primary content in CardsGrid → Primary
+ *
+ */
+interface CardsGridSliceDefaultPrimary {
+    /**
+     * Titolo field in *CardsGrid → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: cards_grid.primary.title
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    title: prismicT.KeyTextField;
+    /**
+     * Sottotitolo field in *CardsGrid → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: cards_grid.primary.subtitle
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    subtitle: prismicT.KeyTextField;
+    /**
+     * Margine superiore field in *CardsGrid → Primary*
+     *
+     * - **Field Type**: Boolean
+     * - **Placeholder**: *None*
+     * - **Default Value**: false
+     * - **API ID Path**: cards_grid.primary.margin_top
+     * - **Documentation**: https://prismic.io/docs/core-concepts/boolean
+     *
+     */
+    margin_top: prismicT.BooleanField;
+    /**
+     * Margine inferiore field in *CardsGrid → Primary*
+     *
+     * - **Field Type**: Boolean
+     * - **Placeholder**: *None*
+     * - **Default Value**: false
+     * - **API ID Path**: cards_grid.primary.margin_bottom
+     * - **Documentation**: https://prismic.io/docs/core-concepts/boolean
+     *
+     */
+    margin_bottom: prismicT.BooleanField;
+}
+/**
+ * Item in CardsGrid → Items
+ *
+ */
+export interface CardsGridSliceDefaultItem {
+    /**
+     * Immagine card field in *CardsGrid → Items*
+     *
+     * - **Field Type**: Image
+     * - **Placeholder**: *None*
+     * - **API ID Path**: cards_grid.items[].card_image
+     * - **Documentation**: https://prismic.io/docs/core-concepts/image
+     *
+     */
+    card_image: prismicT.ImageField<never>;
+    /**
+     * Titolo card field in *CardsGrid → Items*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: cards_grid.items[].card_title
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    card_title: prismicT.KeyTextField;
+    /**
+     * Descrizione card field in *CardsGrid → Items*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: cards_grid.items[].card_description
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    card_description: prismicT.KeyTextField;
+}
+/**
+ * Default variation for CardsGrid Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: `CardsGrid`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type CardsGridSliceDefault = prismicT.SharedSliceVariation<"default", Simplify<CardsGridSliceDefaultPrimary>, Simplify<CardsGridSliceDefaultItem>>;
+/**
+ * Slice variation for *CardsGrid*
+ *
+ */
+type CardsGridSliceVariation = CardsGridSliceDefault;
+/**
+ * CardsGrid Shared Slice
+ *
+ * - **API ID**: `cards_grid`
+ * - **Description**: `CardsGrid`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type CardsGridSlice = prismicT.SharedSlice<"cards_grid", CardsGridSliceVariation>;
 /**
  * Primary content in HeroBanner → Primary
  *
@@ -566,6 +673,6 @@ declare module "@prismicio/client" {
         (repositoryNameOrEndpoint: string, options?: prismic.ClientConfig): prismic.Client<AllDocumentTypes>;
     }
     namespace Content {
-        export type { FirstLevelPageDocumentData, FirstLevelPageDocumentDataSlicesSlice, FirstLevelPageDocument, HeaderDocumentData, HeaderDocumentDataLinksItem, HeaderDocument, HomepageDocumentData, HomepageDocumentDataSlicesSlice, HomepageDocument, SecondLevelPageDocumentData, SecondLevelPageDocumentDataSlicesSlice, SecondLevelPageDocument, AllDocumentTypes, HeroBannerSliceDefaultPrimary, HeroBannerSliceDefault, HeroBannerSliceVariation, HeroBannerSlice, ImageAndTextSliceDefaultPrimary, ImageAndTextSliceDefault, ImageAndTextSliceVariation, ImageAndTextSlice, RichTextSliceDefaultPrimary, RichTextSliceDefault, RichTextSliceVariation, RichTextSlice };
+        export type { FirstLevelPageDocumentData, FirstLevelPageDocumentDataSlicesSlice, FirstLevelPageDocument, HeaderDocumentData, HeaderDocumentDataLinksItem, HeaderDocument, HomepageDocumentData, HomepageDocumentDataSlicesSlice, HomepageDocument, SecondLevelPageDocumentData, SecondLevelPageDocumentDataSlicesSlice, SecondLevelPageDocument, AllDocumentTypes, CardsGridSliceDefaultPrimary, CardsGridSliceDefaultItem, CardsGridSliceDefault, CardsGridSliceVariation, CardsGridSlice, HeroBannerSliceDefaultPrimary, HeroBannerSliceDefault, HeroBannerSliceVariation, HeroBannerSlice, ImageAndTextSliceDefaultPrimary, ImageAndTextSliceDefault, ImageAndTextSliceVariation, ImageAndTextSlice, RichTextSliceDefaultPrimary, RichTextSliceDefault, RichTextSliceVariation, RichTextSlice };
     }
 }

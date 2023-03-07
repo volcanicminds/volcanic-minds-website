@@ -22,6 +22,11 @@
       "default": {
         "primary": {}
       }
+    },
+    "CardsGrid": {
+      "default": {
+        "primary": {}
+      }
     }
   }
 }

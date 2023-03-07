@@ -32,6 +32,9 @@
             },
             "rich_text": {
               "type": "SharedSlice"
+            },
+            "cards_grid": {
+              "type": "SharedSlice"
             }
           }
         }
