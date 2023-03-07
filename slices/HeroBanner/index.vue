@@ -45,8 +45,8 @@ defineProps({
 .hero
 	&-title
 		font-weight 100
-		font-size 50px
-		line-height 50px
+		font-size 60px
+		line-height 60px
 		@media (min-width: 52em)
 			font-size 80px
 			line-height 80px
