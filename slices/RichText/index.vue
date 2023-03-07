@@ -5,7 +5,7 @@
 		css-class="flex"
 	>
 		<WrapperContainer>
-			<PrismicRichText :field="slice.primary.text" class="pippo" />
+			<PrismicRichText :field="slice.primary.text" class="rich-text center" />
 		</WrapperContainer>
 	</WrapperSlice>
 </template>
@@ -26,6 +26,6 @@ defineProps({
 </script>
 
 <style lang="stylus" scoped>
-.pippo
+.rich-text
 	font-size 30px
 </style>

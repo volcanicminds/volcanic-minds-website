@@ -20,7 +20,7 @@ export default {
 			this.loading = true
 		},
 		finish() {
-			setTimeout(() => (this.loading = false), 1000)
+			setTimeout(() => (this.loading = false), 800)
 		}
 	}
 }
@@ -28,7 +28,7 @@ export default {
 
 <style lang="stylus" scoped>
 .loading-page
-	background #1e1e24b3
+	background var(--raisin-black)
 	z-index 9999
 	backdrop-filter blur(5px)
 	.spinner
