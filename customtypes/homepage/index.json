@@ -35,6 +35,9 @@
             },
             "cards_grid": {
               "type": "SharedSlice"
+            },
+            "accordion": {
+              "type": "SharedSlice"
             }
           }
         }

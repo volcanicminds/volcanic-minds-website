@@ -15,7 +15,7 @@
 				:class="slice.primary.reverse ? 'md-pr4' : 'md-pl4'"
 			>
 				<div class="h2 font-thin">{{ slice.primary.title }}</div>
-				<div class="h1 red-pigment">{{ slice.primary.subtitle }}</div>
+				<div class="h1">{{ slice.primary.subtitle }}</div>
 				<PrismicRichText :field="slice.primary.description" wrapper="div" />
 				<div
 					v-if="slice.primary.cta_link && !slice.primary.cta_link.isBroken && slice.primary.cta_text"
@@ -54,7 +54,8 @@ defineProps({
 <style lang="stylus" scoped>
 .gradient-bg
 	background var(--rainbow-gradient)
-	border-radius 50% 100%
+	border-radius 100%
+	// border-radius 50% 100%
 	// border-radius 50% 50%
 	img
 		border-radius 100% 50%

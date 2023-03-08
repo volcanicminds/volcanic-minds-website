@@ -45,12 +45,11 @@
         }
       },
       "items": {
-        "card_image": {
-          "type": "Image",
+        "card_icon": {
+          "type": "Text",
           "config": {
-            "label": "Immagine card",
-            "constraint": {},
-            "thumbnails": []
+            "label": "Icona card",
+            "placeholder": ""
           }
         },
         "card_title": {

@@ -27,32 +27,6 @@
         "__TYPE__": "GroupItemContent",
         "value": [
           [
-            "card_image",
-            {
-              "origin": {
-                "id": "main",
-                "url": "https://images.unsplash.com/photo-1601933973783-43cf8a7d4c5f",
-                "width": 6597,
-                "height": 4398
-              },
-              "url": "https://images.unsplash.com/photo-1601933973783-43cf8a7d4c5f",
-              "width": 6597,
-              "height": 4398,
-              "edit": {
-                "zoom": 1,
-                "crop": {
-                  "x": 0,
-                  "y": 0
-                },
-                "background": "transparent"
-              },
-              "credits": null,
-              "alt": null,
-              "__TYPE__": "ImageContent",
-              "thumbnails": {}
-            }
-          ],
-          [
             "card_title",
             {
               "__TYPE__": "FieldContent",
@@ -65,6 +39,14 @@
             {
               "__TYPE__": "FieldContent",
               "value": "hospital",
+              "type": "Text"
+            }
+          ],
+          [
+            "card_icon",
+            {
+              "__TYPE__": "FieldContent",
+              "value": "pitch",
               "type": "Text"
             }
           ]

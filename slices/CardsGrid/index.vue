@@ -1,14 +1,16 @@
 <template>
 	<WrapperSlice :margin-top="slice.primary.margin_top || false" :margin-bottom="slice.primary.margin_bottom || false">
 		<WrapperContainer>
-			<div class="h2 font-thin">{{ slice.primary.title }}</div>
-			<div class="h1 red-pigment">{{ slice.primary.subtitle }}</div>
+			<div class="center">
+				<div v-if="slice.primary.title" class="h2 font-thin">{{ slice.primary.title }}</div>
+				<div v-if="slice.primary.subtitle" class="h1">{{ slice.primary.subtitle }}</div>
+			</div>
 
 			<div class="flex-wrap cards-container mt2">
 				<div v-for="(item, i) in slice.items" :key="`slice-item-${i}`" class="card p3">
-					<WrapperPrismicImage :field="item.card_image" :size="1000" class="col-12 h100 cover" />
-					<p class="h2 mb0">{{ item.card_title }}</p>
-					<p>{{ item.card_description }}</p>
+					<font-awesome-icon v-if="item.card_icon" :icon="item.card_icon" class="fa-2xl" />
+					<p v-if="item.card_title" class="h2 mb0">{{ item.card_title }}</p>
+					<p v-if="item.card_description" class="mb0">{{ item.card_description }}</p>
 				</div>
 			</div>
 		</WrapperContainer>
@@ -38,7 +40,4 @@ defineProps({
 	.card
 		background-color #292937
 		border-radius 10px
-		img
-			width 20px
-			height 20px
 </style>

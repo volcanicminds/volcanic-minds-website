@@ -25,7 +25,14 @@
     },
     "CardsGrid": {
       "default": {
-        "primary": {}
+        "primary": {},
+        "items": {}
+      }
+    },
+    "Accordion": {
+      "default": {
+        "primary": {},
+        "items": {}
       }
     }
   }

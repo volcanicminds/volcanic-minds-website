@@ -170,7 +170,7 @@ interface HomepageDocumentData {
  * Slice for *Homepage → Slice Zone*
  *
  */
-type HomepageDocumentDataSlicesSlice = HeroBannerSlice | ImageAndTextSlice | RichTextSlice | CardsGridSlice;
+type HomepageDocumentDataSlicesSlice = HeroBannerSlice | ImageAndTextSlice | RichTextSlice | CardsGridSlice | AccordionSlice;
 /**
  * Homepage document from Prismic
  *
@@ -257,6 +257,81 @@ type SecondLevelPageDocumentDataSlicesSlice = HeroBannerSlice;
 export type SecondLevelPageDocument<Lang extends string = string> = prismicT.PrismicDocumentWithUID<Simplify<SecondLevelPageDocumentData>, "second_level_page", Lang>;
 export type AllDocumentTypes = FirstLevelPageDocument | HeaderDocument | HomepageDocument | SecondLevelPageDocument;
 /**
+ * Primary content in Accordion → Primary
+ *
+ */
+interface AccordionSliceDefaultPrimary {
+    /**
+     * Titolo field in *Accordion → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: accordion.primary.title
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    title: prismicT.KeyTextField;
+    /**
+     * Sottotitolo field in *Accordion → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: accordion.primary.subtitle
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    subtitle: prismicT.KeyTextField;
+}
+/**
+ * Item in Accordion → Items
+ *
+ */
+export interface AccordionSliceDefaultItem {
+    /**
+     * Titolo field in *Accordion → Items*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: accordion.items[].title
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    title: prismicT.KeyTextField;
+    /**
+     * Descrizione field in *Accordion → Items*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: accordion.items[].description
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    description: prismicT.RichTextField;
+}
+/**
+ * Default variation for Accordion Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: `Accordion`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type AccordionSliceDefault = prismicT.SharedSliceVariation<"default", Simplify<AccordionSliceDefaultPrimary>, Simplify<AccordionSliceDefaultItem>>;
+/**
+ * Slice variation for *Accordion*
+ *
+ */
+type AccordionSliceVariation = AccordionSliceDefault;
+/**
+ * Accordion Shared Slice
+ *
+ * - **API ID**: `accordion`
+ * - **Description**: `Accordion`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type AccordionSlice = prismicT.SharedSlice<"accordion", AccordionSliceVariation>;
+/**
  * Primary content in CardsGrid → Primary
  *
  */
@@ -310,15 +385,15 @@ interface CardsGridSliceDefaultPrimary {
  */
 export interface CardsGridSliceDefaultItem {
     /**
-     * Immagine card field in *CardsGrid → Items*
+     * Icona card field in *CardsGrid → Items*
      *
-     * - **Field Type**: Image
+     * - **Field Type**: Text
      * - **Placeholder**: *None*
-     * - **API ID Path**: cards_grid.items[].card_image
-     * - **Documentation**: https://prismic.io/docs/core-concepts/image
+     * - **API ID Path**: cards_grid.items[].card_icon
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
      *
      */
-    card_image: prismicT.ImageField<never>;
+    card_icon: prismicT.KeyTextField;
     /**
      * Titolo card field in *CardsGrid → Items*
      *
@@ -673,6 +748,6 @@ declare module "@prismicio/client" {
         (repositoryNameOrEndpoint: string, options?: prismic.ClientConfig): prismic.Client<AllDocumentTypes>;
     }
     namespace Content {
-        export type { FirstLevelPageDocumentData, FirstLevelPageDocumentDataSlicesSlice, FirstLevelPageDocument, HeaderDocumentData, HeaderDocumentDataLinksItem, HeaderDocument, HomepageDocumentData, HomepageDocumentDataSlicesSlice, HomepageDocument, SecondLevelPageDocumentData, SecondLevelPageDocumentDataSlicesSlice, SecondLevelPageDocument, AllDocumentTypes, CardsGridSliceDefaultPrimary, CardsGridSliceDefaultItem, CardsGridSliceDefault, CardsGridSliceVariation, CardsGridSlice, HeroBannerSliceDefaultPrimary, HeroBannerSliceDefault, HeroBannerSliceVariation, HeroBannerSlice, ImageAndTextSliceDefaultPrimary, ImageAndTextSliceDefault, ImageAndTextSliceVariation, ImageAndTextSlice, RichTextSliceDefaultPrimary, RichTextSliceDefault, RichTextSliceVariation, RichTextSlice };
+        export type { FirstLevelPageDocumentData, FirstLevelPageDocumentDataSlicesSlice, FirstLevelPageDocument, HeaderDocumentData, HeaderDocumentDataLinksItem, HeaderDocument, HomepageDocumentData, HomepageDocumentDataSlicesSlice, HomepageDocument, SecondLevelPageDocumentData, SecondLevelPageDocumentDataSlicesSlice, SecondLevelPageDocument, AllDocumentTypes, AccordionSliceDefaultPrimary, AccordionSliceDefaultItem, AccordionSliceDefault, AccordionSliceVariation, AccordionSlice, CardsGridSliceDefaultPrimary, CardsGridSliceDefaultItem, CardsGridSliceDefault, CardsGridSliceVariation, CardsGridSlice, HeroBannerSliceDefaultPrimary, HeroBannerSliceDefault, HeroBannerSliceVariation, HeroBannerSlice, ImageAndTextSliceDefaultPrimary, ImageAndTextSliceDefault, ImageAndTextSliceVariation, ImageAndTextSlice, RichTextSliceDefaultPrimary, RichTextSliceDefault, RichTextSliceVariation, RichTextSlice };
     }
 }
