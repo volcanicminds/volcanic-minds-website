@@ -69,6 +69,83 @@ type FirstLevelPageDocumentDataSlicesSlice = HeroBannerSlice;
  * @typeParam Lang - Language API ID of the document.
  */
 export type FirstLevelPageDocument<Lang extends string = string> = prismicT.PrismicDocumentWithUID<Simplify<FirstLevelPageDocumentData>, "first_level_page", Lang>;
+/** Content for Footer documents */
+interface FooterDocumentData {
+    /**
+     * Dati societari field in *Footer*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: footer.company_data
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    company_data: prismicT.RichTextField;
+    /**
+     * Links field in *Footer*
+     *
+     * - **Field Type**: Group
+     * - **Placeholder**: *None*
+     * - **API ID Path**: footer.links[]
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/group
+     *
+     */
+    links: prismicT.GroupField<Simplify<FooterDocumentDataLinksItem>>;
+    /**
+     * Slice Zone field in *Footer*
+     *
+     * - **Field Type**: Slice Zone
+     * - **Placeholder**: *None*
+     * - **API ID Path**: footer.slices[]
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/slices
+     *
+     */
+    slices: prismicT.SliceZone<FooterDocumentDataSlicesSlice>;
+}
+/**
+ * Item in Footer → Links
+ *
+ */
+export interface FooterDocumentDataLinksItem {
+    /**
+     * Icona field in *Footer → Links*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: footer.links[].icon
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    icon: prismicT.KeyTextField;
+    /**
+     * Link field in *Footer → Links*
+     *
+     * - **Field Type**: Link
+     * - **Placeholder**: *None*
+     * - **API ID Path**: footer.links[].link
+     * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
+     *
+     */
+    link: prismicT.LinkField;
+}
+/**
+ * Slice for *Footer → Slice Zone*
+ *
+ */
+type FooterDocumentDataSlicesSlice = never;
+/**
+ * Footer document from Prismic
+ *
+ * - **API ID**: `footer`
+ * - **Repeatable**: `false`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type FooterDocument<Lang extends string = string> = prismicT.PrismicDocumentWithoutUID<Simplify<FooterDocumentData>, "footer", Lang>;
 /** Content for Header documents */
 interface HeaderDocumentData {
     /**
@@ -255,7 +332,7 @@ type SecondLevelPageDocumentDataSlicesSlice = HeroBannerSlice;
  * @typeParam Lang - Language API ID of the document.
  */
 export type SecondLevelPageDocument<Lang extends string = string> = prismicT.PrismicDocumentWithUID<Simplify<SecondLevelPageDocumentData>, "second_level_page", Lang>;
-export type AllDocumentTypes = FirstLevelPageDocument | HeaderDocument | HomepageDocument | SecondLevelPageDocument;
+export type AllDocumentTypes = FirstLevelPageDocument | FooterDocument | HeaderDocument | HomepageDocument | SecondLevelPageDocument;
 /**
  * Primary content in Accordion → Primary
  *
@@ -748,6 +825,6 @@ declare module "@prismicio/client" {
         (repositoryNameOrEndpoint: string, options?: prismic.ClientConfig): prismic.Client<AllDocumentTypes>;
     }
     namespace Content {
-        export type { FirstLevelPageDocumentData, FirstLevelPageDocumentDataSlicesSlice, FirstLevelPageDocument, HeaderDocumentData, HeaderDocumentDataLinksItem, HeaderDocument, HomepageDocumentData, HomepageDocumentDataSlicesSlice, HomepageDocument, SecondLevelPageDocumentData, SecondLevelPageDocumentDataSlicesSlice, SecondLevelPageDocument, AllDocumentTypes, AccordionSliceDefaultPrimary, AccordionSliceDefaultItem, AccordionSliceDefault, AccordionSliceVariation, AccordionSlice, CardsGridSliceDefaultPrimary, CardsGridSliceDefaultItem, CardsGridSliceDefault, CardsGridSliceVariation, CardsGridSlice, HeroBannerSliceDefaultPrimary, HeroBannerSliceDefault, HeroBannerSliceVariation, HeroBannerSlice, ImageAndTextSliceDefaultPrimary, ImageAndTextSliceDefault, ImageAndTextSliceVariation, ImageAndTextSlice, RichTextSliceDefaultPrimary, RichTextSliceDefault, RichTextSliceVariation, RichTextSlice };
+        export type { FirstLevelPageDocumentData, FirstLevelPageDocumentDataSlicesSlice, FirstLevelPageDocument, FooterDocumentData, FooterDocumentDataLinksItem, FooterDocumentDataSlicesSlice, FooterDocument, HeaderDocumentData, HeaderDocumentDataLinksItem, HeaderDocument, HomepageDocumentData, HomepageDocumentDataSlicesSlice, HomepageDocument, SecondLevelPageDocumentData, SecondLevelPageDocumentDataSlicesSlice, SecondLevelPageDocument, AllDocumentTypes, AccordionSliceDefaultPrimary, AccordionSliceDefaultItem, AccordionSliceDefault, AccordionSliceVariation, AccordionSlice, CardsGridSliceDefaultPrimary, CardsGridSliceDefaultItem, CardsGridSliceDefault, CardsGridSliceVariation, CardsGridSlice, HeroBannerSliceDefaultPrimary, HeroBannerSliceDefault, HeroBannerSliceVariation, HeroBannerSlice, ImageAndTextSliceDefaultPrimary, ImageAndTextSliceDefault, ImageAndTextSliceVariation, ImageAndTextSlice, RichTextSliceDefaultPrimary, RichTextSliceDefault, RichTextSliceVariation, RichTextSlice };
     }
 }
