@@ -38,6 +38,9 @@
             },
             "accordion": {
               "type": "SharedSlice"
+            },
+            "contacts": {
+              "type": "SharedSlice"
             }
           }
         }

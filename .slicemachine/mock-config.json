@@ -35,6 +35,11 @@
         "primary": {},
         "items": {}
       }
+    },
+    "Contacts": {
+      "default": {
+        "primary": {}
+      }
     }
   }
 }

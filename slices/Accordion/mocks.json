@@ -12,6 +12,14 @@
         "__TYPE__": "FieldContent",
         "value": "general",
         "type": "Text"
+      },
+      "margin_top": {
+        "__TYPE__": "BooleanContent",
+        "value": true
+      },
+      "margin_bottom": {
+        "__TYPE__": "BooleanContent",
+        "value": true
       }
     },
     "items": [

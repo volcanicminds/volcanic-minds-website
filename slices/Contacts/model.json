@@ -1,16 +1,32 @@
 {
-  "id": "accordion",
+  "id": "contacts",
   "type": "SharedSlice",
-  "name": "Accordion",
-  "description": "Accordion",
+  "name": "Contacts",
+  "description": "Contacts",
   "variations": [
     {
       "id": "default",
       "name": "Default",
       "docURL": "...",
       "version": "sktwi1xtmkfgx8626",
-      "description": "Accordion",
+      "description": "Contacts",
       "primary": {
+        "background_1": {
+          "type": "Image",
+          "config": {
+            "label": "Background 1",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "background_2": {
+          "type": "Image",
+          "config": {
+            "label": "Background 2",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
         "title": {
           "type": "Text",
           "config": {
@@ -18,10 +34,27 @@
             "placeholder": ""
           }
         },
-        "subtitle": {
+        "text": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Testo",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "paragraph,strong,em"
+          }
+        },
+        "button_link": {
+          "type": "Link",
+          "config": {
+            "label": "Link bottone",
+            "placeholder": "",
+            "select": null
+          }
+        },
+        "button_label": {
           "type": "Text",
           "config": {
-            "label": "Sottotitolo",
+            "label": "Label bottone",
             "placeholder": ""
           }
         },
@@ -45,20 +78,12 @@
         }
       },
       "items": {
-        "title": {
-          "type": "Text",
+        "face": {
+          "type": "Image",
           "config": {
-            "label": "Titolo",
-            "placeholder": ""
-          }
-        },
-        "description": {
-          "type": "StructuredText",
-          "config": {
-            "label": "Descrizione",
-            "placeholder": "",
-            "allowTargetBlank": true,
-            "multi": "paragraph,em,strong,hyperlink,list-item,o-list-item"
+            "label": "Face",
+            "constraint": {},
+            "thumbnails": []
           }
         }
       },

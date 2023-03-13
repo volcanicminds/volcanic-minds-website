@@ -11,7 +11,7 @@
           "label": "Dati societari",
           "placeholder": "",
           "allowTargetBlank": true,
-          "multi": "paragraph,strong,em"
+          "multi": "paragraph,strong,em,hyperlink"
         }
       },
       "links": {

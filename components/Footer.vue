@@ -8,7 +8,7 @@
 					</PrismicLink>
 				</template>
 			</div>
-			<PrismicRichText :field="footerData.data.company_data" wrapper="p" />
+			<PrismicRichText :field="footerData.data.company_data" wrapper="div" />
 		</WrapperContainer>
 	</div>
 </template>

@@ -58,7 +58,7 @@ interface FirstLevelPageDocumentData {
  * Slice for *Pagina di primo livello → Slice Zone*
  *
  */
-type FirstLevelPageDocumentDataSlicesSlice = HeroBannerSlice;
+type FirstLevelPageDocumentDataSlicesSlice = HeroBannerSlice | AccordionSlice | CardsGridSlice | ContactsSlice | RichTextSlice | ImageAndTextSlice;
 /**
  * Pagina di primo livello document from Prismic
  *
@@ -247,7 +247,7 @@ interface HomepageDocumentData {
  * Slice for *Homepage → Slice Zone*
  *
  */
-type HomepageDocumentDataSlicesSlice = HeroBannerSlice | ImageAndTextSlice | RichTextSlice | CardsGridSlice | AccordionSlice;
+type HomepageDocumentDataSlicesSlice = HeroBannerSlice | ImageAndTextSlice | RichTextSlice | CardsGridSlice | AccordionSlice | ContactsSlice;
 /**
  * Homepage document from Prismic
  *
@@ -321,7 +321,7 @@ interface SecondLevelPageDocumentData {
  * Slice for *Pagina di secondo livello → Slice Zone*
  *
  */
-type SecondLevelPageDocumentDataSlicesSlice = HeroBannerSlice;
+type SecondLevelPageDocumentDataSlicesSlice = HeroBannerSlice | CardsGridSlice | AccordionSlice | ContactsSlice | RichTextSlice | ImageAndTextSlice;
 /**
  * Pagina di secondo livello document from Prismic
  *
@@ -358,6 +358,28 @@ interface AccordionSliceDefaultPrimary {
      *
      */
     subtitle: prismicT.KeyTextField;
+    /**
+     * Margine superiore field in *Accordion → Primary*
+     *
+     * - **Field Type**: Boolean
+     * - **Placeholder**: *None*
+     * - **Default Value**: false
+     * - **API ID Path**: accordion.primary.margin_top
+     * - **Documentation**: https://prismic.io/docs/core-concepts/boolean
+     *
+     */
+    margin_top: prismicT.BooleanField;
+    /**
+     * Margine inferiore field in *Accordion → Primary*
+     *
+     * - **Field Type**: Boolean
+     * - **Placeholder**: *None*
+     * - **Default Value**: false
+     * - **API ID Path**: accordion.primary.margin_bottom
+     * - **Documentation**: https://prismic.io/docs/core-concepts/boolean
+     *
+     */
+    margin_bottom: prismicT.BooleanField;
 }
 /**
  * Item in Accordion → Items
@@ -515,6 +537,133 @@ type CardsGridSliceVariation = CardsGridSliceDefault;
  *
  */
 export type CardsGridSlice = prismicT.SharedSlice<"cards_grid", CardsGridSliceVariation>;
+/**
+ * Primary content in Contacts → Primary
+ *
+ */
+interface ContactsSliceDefaultPrimary {
+    /**
+     * Background 1 field in *Contacts → Primary*
+     *
+     * - **Field Type**: Image
+     * - **Placeholder**: *None*
+     * - **API ID Path**: contacts.primary.background_1
+     * - **Documentation**: https://prismic.io/docs/core-concepts/image
+     *
+     */
+    background_1: prismicT.ImageField<never>;
+    /**
+     * Background 2 field in *Contacts → Primary*
+     *
+     * - **Field Type**: Image
+     * - **Placeholder**: *None*
+     * - **API ID Path**: contacts.primary.background_2
+     * - **Documentation**: https://prismic.io/docs/core-concepts/image
+     *
+     */
+    background_2: prismicT.ImageField<never>;
+    /**
+     * Titolo field in *Contacts → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: contacts.primary.title
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    title: prismicT.KeyTextField;
+    /**
+     * Testo field in *Contacts → Primary*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: contacts.primary.text
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    text: prismicT.RichTextField;
+    /**
+     * Link bottone field in *Contacts → Primary*
+     *
+     * - **Field Type**: Link
+     * - **Placeholder**: *None*
+     * - **API ID Path**: contacts.primary.button_link
+     * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
+     *
+     */
+    button_link: prismicT.LinkField;
+    /**
+     * Label bottone field in *Contacts → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: contacts.primary.button_label
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    button_label: prismicT.KeyTextField;
+    /**
+     * Margine superiore field in *Contacts → Primary*
+     *
+     * - **Field Type**: Boolean
+     * - **Placeholder**: *None*
+     * - **Default Value**: false
+     * - **API ID Path**: contacts.primary.margin_top
+     * - **Documentation**: https://prismic.io/docs/core-concepts/boolean
+     *
+     */
+    margin_top: prismicT.BooleanField;
+    /**
+     * Margine inferiore field in *Contacts → Primary*
+     *
+     * - **Field Type**: Boolean
+     * - **Placeholder**: *None*
+     * - **Default Value**: false
+     * - **API ID Path**: contacts.primary.margin_bottom
+     * - **Documentation**: https://prismic.io/docs/core-concepts/boolean
+     *
+     */
+    margin_bottom: prismicT.BooleanField;
+}
+/**
+ * Item in Contacts → Items
+ *
+ */
+export interface ContactsSliceDefaultItem {
+    /**
+     * Face field in *Contacts → Items*
+     *
+     * - **Field Type**: Image
+     * - **Placeholder**: *None*
+     * - **API ID Path**: contacts.items[].face
+     * - **Documentation**: https://prismic.io/docs/core-concepts/image
+     *
+     */
+    face: prismicT.ImageField<never>;
+}
+/**
+ * Default variation for Contacts Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: `Contacts`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type ContactsSliceDefault = prismicT.SharedSliceVariation<"default", Simplify<ContactsSliceDefaultPrimary>, Simplify<ContactsSliceDefaultItem>>;
+/**
+ * Slice variation for *Contacts*
+ *
+ */
+type ContactsSliceVariation = ContactsSliceDefault;
+/**
+ * Contacts Shared Slice
+ *
+ * - **API ID**: `contacts`
+ * - **Description**: `Contacts`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type ContactsSlice = prismicT.SharedSlice<"contacts", ContactsSliceVariation>;
 /**
  * Primary content in HeroBanner → Primary
  *
@@ -825,6 +974,6 @@ declare module "@prismicio/client" {
         (repositoryNameOrEndpoint: string, options?: prismic.ClientConfig): prismic.Client<AllDocumentTypes>;
     }
     namespace Content {
-        export type { FirstLevelPageDocumentData, FirstLevelPageDocumentDataSlicesSlice, FirstLevelPageDocument, FooterDocumentData, FooterDocumentDataLinksItem, FooterDocumentDataSlicesSlice, FooterDocument, HeaderDocumentData, HeaderDocumentDataLinksItem, HeaderDocument, HomepageDocumentData, HomepageDocumentDataSlicesSlice, HomepageDocument, SecondLevelPageDocumentData, SecondLevelPageDocumentDataSlicesSlice, SecondLevelPageDocument, AllDocumentTypes, AccordionSliceDefaultPrimary, AccordionSliceDefaultItem, AccordionSliceDefault, AccordionSliceVariation, AccordionSlice, CardsGridSliceDefaultPrimary, CardsGridSliceDefaultItem, CardsGridSliceDefault, CardsGridSliceVariation, CardsGridSlice, HeroBannerSliceDefaultPrimary, HeroBannerSliceDefault, HeroBannerSliceVariation, HeroBannerSlice, ImageAndTextSliceDefaultPrimary, ImageAndTextSliceDefault, ImageAndTextSliceVariation, ImageAndTextSlice, RichTextSliceDefaultPrimary, RichTextSliceDefault, RichTextSliceVariation, RichTextSlice };
+        export type { FirstLevelPageDocumentData, FirstLevelPageDocumentDataSlicesSlice, FirstLevelPageDocument, FooterDocumentData, FooterDocumentDataLinksItem, FooterDocumentDataSlicesSlice, FooterDocument, HeaderDocumentData, HeaderDocumentDataLinksItem, HeaderDocument, HomepageDocumentData, HomepageDocumentDataSlicesSlice, HomepageDocument, SecondLevelPageDocumentData, SecondLevelPageDocumentDataSlicesSlice, SecondLevelPageDocument, AllDocumentTypes, AccordionSliceDefaultPrimary, AccordionSliceDefaultItem, AccordionSliceDefault, AccordionSliceVariation, AccordionSlice, CardsGridSliceDefaultPrimary, CardsGridSliceDefaultItem, CardsGridSliceDefault, CardsGridSliceVariation, CardsGridSlice, ContactsSliceDefaultPrimary, ContactsSliceDefaultItem, ContactsSliceDefault, ContactsSliceVariation, ContactsSlice, HeroBannerSliceDefaultPrimary, HeroBannerSliceDefault, HeroBannerSliceVariation, HeroBannerSlice, ImageAndTextSliceDefaultPrimary, ImageAndTextSliceDefault, ImageAndTextSliceVariation, ImageAndTextSlice, RichTextSliceDefaultPrimary, RichTextSliceDefault, RichTextSliceVariation, RichTextSlice };
     }
 }

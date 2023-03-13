@@ -5,7 +5,7 @@
       {
         "type": "paragraph",
         "content": {
-          "text": "Pariatur nulla pariatur quis qui non elit quis. Minim aute commodo adipisicing. Deserunt ipsum labore incididunt ex dolor velit ut aliquip dolore officia ut."
+          "text": "Aliqua ullamco Lorem dolor eu voluptate cupidatat ad quis culpa labore anim. Laborum fugiat ipsum laboris. Dolor nostrud aliquip eu nostrud ex esse enim ad quis deserunt."
         }
       }
     ]
@@ -20,7 +20,7 @@
             "icon",
             {
               "__TYPE__": "FieldContent",
-              "value": "choice",
+              "value": "thirty",
               "type": "Text"
             }
           ],
@@ -30,7 +30,7 @@
               "__TYPE__": "LinkContent",
               "value": {
                 "__TYPE__": "ExternalLink",
-                "url": "https://slicemachine.dev"
+                "url": "http://google.com"
               }
             }
           ]
