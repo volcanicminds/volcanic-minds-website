@@ -922,7 +922,7 @@ interface RichTextSliceDefaultPrimary {
      * - **Documentation**: https://prismic.io/docs/core-concepts/select
      *
      */
-    text_align: prismicT.SelectField<"Sinistra" | "Centro" | "Destra">;
+    text_align: prismicT.SelectField<"Left" | "Center" | "Right">;
     /**
      * Margine superiore field in *RichText → Primary*
      *

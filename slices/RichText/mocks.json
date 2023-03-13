@@ -16,7 +16,7 @@
       },
       "text_align": {
         "__TYPE__": "FieldContent",
-        "value": "Centro",
+        "value": "Right",
         "type": "Select"
       },
       "margin_top": {

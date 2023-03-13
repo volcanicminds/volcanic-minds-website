@@ -26,9 +26,9 @@
             "label": "Allineamento",
             "placeholder": "",
             "options": [
-              "Sinistra",
-              "Centro",
-              "Destra"
+              "Left",
+              "Center",
+              "Right"
             ]
           }
         },
