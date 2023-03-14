@@ -38,6 +38,6 @@ defineProps({
 	grid-template-columns repeat(auto-fit, minmax(230px, 1fr))
 	grid-gap 15px
 	.card
-		background-color #292937
+		background-color var(--raisin-black-2)
 		border-radius 10px
 </style>

@@ -1,11 +1,32 @@
 {
+  "logo": {
+    "__TYPE__": "ImageContent",
+    "origin": {
+      "id": "main",
+      "url": "https://images.unsplash.com/photo-1607582278043-57198ac8da43",
+      "width": 4024,
+      "height": 4024
+    },
+    "url": "https://images.unsplash.com/photo-1607582278043-57198ac8da43",
+    "width": 4024,
+    "height": 4024,
+    "edit": {
+      "zoom": 1,
+      "crop": {
+        "x": 0,
+        "y": 0
+      },
+      "background": "transparent"
+    },
+    "thumbnails": {}
+  },
   "company_data": {
     "__TYPE__": "StructuredTextContent",
     "value": [
       {
         "type": "paragraph",
         "content": {
-          "text": "Aliqua ullamco Lorem dolor eu voluptate cupidatat ad quis culpa labore anim. Laborum fugiat ipsum laboris. Dolor nostrud aliquip eu nostrud ex esse enim ad quis deserunt."
+          "text": "Ex sunt fugiat commodo veniam veniam ea. Cupidatat voluptate occaecat ullamco enim dolor ullamco culpa commodo sint enim."
         }
       }
     ]
@@ -20,7 +41,7 @@
             "icon",
             {
               "__TYPE__": "FieldContent",
-              "value": "thirty",
+              "value": "how",
               "type": "Text"
             }
           ],

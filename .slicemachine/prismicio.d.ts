@@ -72,6 +72,17 @@ export type FirstLevelPageDocument<Lang extends string = string> = prismicT.Pris
 /** Content for Footer documents */
 interface FooterDocumentData {
     /**
+     * Logo field in *Footer*
+     *
+     * - **Field Type**: Image
+     * - **Placeholder**: *None*
+     * - **API ID Path**: footer.logo
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/image
+     *
+     */
+    logo: prismicT.ImageField<never>;
+    /**
      * Dati societari field in *Footer*
      *
      * - **Field Type**: Rich Text
@@ -149,16 +160,16 @@ export type FooterDocument<Lang extends string = string> = prismicT.PrismicDocum
 /** Content for Header documents */
 interface HeaderDocumentData {
     /**
-     * Titolo field in *Header*
+     * Logo field in *Header*
      *
-     * - **Field Type**: Text
+     * - **Field Type**: Image
      * - **Placeholder**: *None*
-     * - **API ID Path**: header.title
+     * - **API ID Path**: header.logo
      * - **Tab**: Main
-     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     * - **Documentation**: https://prismic.io/docs/core-concepts/image
      *
      */
-    title: prismicT.KeyTextField;
+    logo: prismicT.ImageField<never>;
     /**
      * Links field in *Header*
      *

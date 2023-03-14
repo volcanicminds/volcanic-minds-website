@@ -5,11 +5,12 @@
   "status": true,
   "json": {
     "Main": {
-      "title": {
-        "type": "Text",
+      "logo": {
+        "type": "Image",
         "config": {
-          "label": "Titolo",
-          "placeholder": ""
+          "label": "Logo",
+          "constraint": {},
+          "thumbnails": []
         }
       },
       "links": {

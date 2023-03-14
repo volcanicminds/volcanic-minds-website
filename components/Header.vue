@@ -1,17 +1,13 @@
 <template>
-	<div class="bg-raisin-black header-container top-0 z3">
+	<div v-if="headerData" class="bg-raisin-black header-container top-0 z3">
 		<WrapperContainer class="flex items-center px3 py2">
-			<div class="flex-auto">
-				<NuxtLink :to="localePath('/')"
-					><img loading="lazy" class="logo" src="../assets/images/logo/logo-dark.png" height="50" alt="Logo"
-				/></NuxtLink>
+			<div v-if="headerData.data.logo" class="flex-auto">
+				<NuxtLink :to="localePath('/')">
+					<WrapperPrismicImage :field="headerData.data.logo" :size="50" resize-by-height class="logo" />
+				</NuxtLink>
 			</div>
-			<template v-if="headerData">
-				<template v-for="(link, i) in headerData.data.links">
-					<PrismicLink :key="i" class="px2 pr0 xs-hide sm-hide" :field="link.link_url">{{
-						link.link_title
-					}}</PrismicLink>
-				</template>
+			<template v-for="(link, i) in headerData.data.links">
+				<PrismicLink :key="i" class="px2 pr0 xs-hide sm-hide" :field="link.link_url">{{ link.link_title }}</PrismicLink>
 			</template>
 
 			<div v-click-outside="() => (isLanguageSelectorOpened = false)" class="relative">
