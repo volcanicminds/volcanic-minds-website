@@ -58,7 +58,7 @@ interface FirstLevelPageDocumentData {
  * Slice for *Pagina di primo livello → Slice Zone*
  *
  */
-type FirstLevelPageDocumentDataSlicesSlice = HeroBannerSlice | AccordionSlice | CardsGridSlice | ContactsSlice | RichTextSlice | ImageAndTextSlice | StatisticsSlice | PartnersSlice;
+type FirstLevelPageDocumentDataSlicesSlice = HeroBannerSlice | AccordionSlice | CardsGridSlice | ContactsSlice | RichTextSlice | ImageAndTextSlice | StatisticsSlice | PartnersSlice | CallToActionSlice;
 /**
  * Pagina di primo livello document from Prismic
  *
@@ -290,7 +290,7 @@ interface HomepageDocumentData {
  * Slice for *Homepage → Slice Zone*
  *
  */
-type HomepageDocumentDataSlicesSlice = HeroBannerSlice | ImageAndTextSlice | RichTextSlice | CardsGridSlice | AccordionSlice | ContactsSlice | StatisticsSlice | PartnersSlice;
+type HomepageDocumentDataSlicesSlice = HeroBannerSlice | ImageAndTextSlice | RichTextSlice | CardsGridSlice | AccordionSlice | ContactsSlice | StatisticsSlice | PartnersSlice | CallToActionSlice;
 /**
  * Homepage document from Prismic
  *
@@ -364,7 +364,7 @@ interface SecondLevelPageDocumentData {
  * Slice for *Pagina di secondo livello → Slice Zone*
  *
  */
-type SecondLevelPageDocumentDataSlicesSlice = HeroBannerSlice | CardsGridSlice | AccordionSlice | ContactsSlice | RichTextSlice | ImageAndTextSlice | StatisticsSlice | PartnersSlice;
+type SecondLevelPageDocumentDataSlicesSlice = HeroBannerSlice | CardsGridSlice | AccordionSlice | ContactsSlice | RichTextSlice | ImageAndTextSlice | StatisticsSlice | PartnersSlice | CallToActionSlice;
 /**
  * Pagina di secondo livello document from Prismic
  *
@@ -473,6 +473,88 @@ type AccordionSliceVariation = AccordionSliceDefault;
  *
  */
 export type AccordionSlice = prismicT.SharedSlice<"accordion", AccordionSliceVariation>;
+/**
+ * Primary content in CallToAction → Primary
+ *
+ */
+interface CallToActionSliceDefaultPrimary {
+    /**
+     * Label field in *CallToAction → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: call_to_action.primary.label
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    label: prismicT.KeyTextField;
+    /**
+     * Link field in *CallToAction → Primary*
+     *
+     * - **Field Type**: Link
+     * - **Placeholder**: *None*
+     * - **API ID Path**: call_to_action.primary.link
+     * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
+     *
+     */
+    link: prismicT.LinkField;
+    /**
+     * Dimensione field in *CallToAction → Primary*
+     *
+     * - **Field Type**: Boolean
+     * - **Placeholder**: *None*
+     * - **Default Value**: false
+     * - **API ID Path**: call_to_action.primary.size
+     * - **Documentation**: https://prismic.io/docs/core-concepts/boolean
+     *
+     */
+    size: prismicT.BooleanField;
+    /**
+     * Margine superiore field in *CallToAction → Primary*
+     *
+     * - **Field Type**: Boolean
+     * - **Placeholder**: *None*
+     * - **Default Value**: false
+     * - **API ID Path**: call_to_action.primary.margin_top
+     * - **Documentation**: https://prismic.io/docs/core-concepts/boolean
+     *
+     */
+    margin_top: prismicT.BooleanField;
+    /**
+     * Margine inferiore field in *CallToAction → Primary*
+     *
+     * - **Field Type**: Boolean
+     * - **Placeholder**: *None*
+     * - **Default Value**: false
+     * - **API ID Path**: call_to_action.primary.margin_bottom
+     * - **Documentation**: https://prismic.io/docs/core-concepts/boolean
+     *
+     */
+    margin_bottom: prismicT.BooleanField;
+}
+/**
+ * Default variation for CallToAction Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: `CallToAction`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type CallToActionSliceDefault = prismicT.SharedSliceVariation<"default", Simplify<CallToActionSliceDefaultPrimary>, never>;
+/**
+ * Slice variation for *CallToAction*
+ *
+ */
+type CallToActionSliceVariation = CallToActionSliceDefault;
+/**
+ * CallToAction Shared Slice
+ *
+ * - **API ID**: `call_to_action`
+ * - **Description**: `CallToAction`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type CallToActionSlice = prismicT.SharedSlice<"call_to_action", CallToActionSliceVariation>;
 /**
  * Primary content in CardsGrid → Primary
  *
@@ -1192,6 +1274,6 @@ declare module "@prismicio/client" {
         (repositoryNameOrEndpoint: string, options?: prismic.ClientConfig): prismic.Client<AllDocumentTypes>;
     }
     namespace Content {
-        export type { FirstLevelPageDocumentData, FirstLevelPageDocumentDataSlicesSlice, FirstLevelPageDocument, FooterDocumentData, FooterDocumentDataLinksItem, FooterDocumentDataSlicesSlice, FooterDocument, HeaderDocumentData, HeaderDocumentDataLinksItem, HeaderDocument, HomepageDocumentData, HomepageDocumentDataSlicesSlice, HomepageDocument, SecondLevelPageDocumentData, SecondLevelPageDocumentDataSlicesSlice, SecondLevelPageDocument, AllDocumentTypes, AccordionSliceDefaultPrimary, AccordionSliceDefaultItem, AccordionSliceDefault, AccordionSliceVariation, AccordionSlice, CardsGridSliceDefaultPrimary, CardsGridSliceDefaultItem, CardsGridSliceDefault, CardsGridSliceVariation, CardsGridSlice, ContactsSliceDefaultPrimary, ContactsSliceDefaultItem, ContactsSliceDefault, ContactsSliceVariation, ContactsSlice, HeroBannerSliceDefaultPrimary, HeroBannerSliceDefault, HeroBannerSliceVariation, HeroBannerSlice, ImageAndTextSliceDefaultPrimary, ImageAndTextSliceDefault, ImageAndTextSliceVariation, ImageAndTextSlice, PartnersSliceDefaultPrimary, PartnersSliceDefaultItem, PartnersSliceDefault, PartnersSliceVariation, PartnersSlice, RichTextSliceDefaultPrimary, RichTextSliceDefault, RichTextSliceVariation, RichTextSlice, StatisticsSliceDefaultPrimary, StatisticsSliceDefaultItem, StatisticsSliceDefault, StatisticsSliceVariation, StatisticsSlice };
+        export type { FirstLevelPageDocumentData, FirstLevelPageDocumentDataSlicesSlice, FirstLevelPageDocument, FooterDocumentData, FooterDocumentDataLinksItem, FooterDocumentDataSlicesSlice, FooterDocument, HeaderDocumentData, HeaderDocumentDataLinksItem, HeaderDocument, HomepageDocumentData, HomepageDocumentDataSlicesSlice, HomepageDocument, SecondLevelPageDocumentData, SecondLevelPageDocumentDataSlicesSlice, SecondLevelPageDocument, AllDocumentTypes, AccordionSliceDefaultPrimary, AccordionSliceDefaultItem, AccordionSliceDefault, AccordionSliceVariation, AccordionSlice, CallToActionSliceDefaultPrimary, CallToActionSliceDefault, CallToActionSliceVariation, CallToActionSlice, CardsGridSliceDefaultPrimary, CardsGridSliceDefaultItem, CardsGridSliceDefault, CardsGridSliceVariation, CardsGridSlice, ContactsSliceDefaultPrimary, ContactsSliceDefaultItem, ContactsSliceDefault, ContactsSliceVariation, ContactsSlice, HeroBannerSliceDefaultPrimary, HeroBannerSliceDefault, HeroBannerSliceVariation, HeroBannerSlice, ImageAndTextSliceDefaultPrimary, ImageAndTextSliceDefault, ImageAndTextSliceVariation, ImageAndTextSlice, PartnersSliceDefaultPrimary, PartnersSliceDefaultItem, PartnersSliceDefault, PartnersSliceVariation, PartnersSlice, RichTextSliceDefaultPrimary, RichTextSliceDefault, RichTextSliceVariation, RichTextSlice, StatisticsSliceDefaultPrimary, StatisticsSliceDefaultItem, StatisticsSliceDefault, StatisticsSliceVariation, StatisticsSlice };
     }
 }

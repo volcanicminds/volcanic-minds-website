@@ -6,7 +6,7 @@
 	>
 		<WrapperContainer class="flex flex-wrap" :class="slice.primary.reverse ? 'row-reverse' : ''">
 			<div class="col-12 md-col-5 flex items-center justify-center md-py3 mb2 md-mb0">
-				<div class="gradient-bg flex h100 col-12 p1">
+				<div class="gradient-bg flex h100 col-12">
 					<WrapperPrismicImage :field="slice.primary.image" :size="1000" class="col-12 h100 cover" />
 				</div>
 			</div>
@@ -54,10 +54,8 @@ defineProps({
 <style lang="stylus" scoped>
 .gradient-bg
 	background var(--rainbow-gradient)
-	border-radius 100%
-	// border-radius 50% 100%
-	// border-radius 50% 50%
+	border-radius 10px
+	padding 4px
 	img
-		border-radius 100% 50%
-		// border-radius 10% 50%
+		border-radius 7px
 </style>
