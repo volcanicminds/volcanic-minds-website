@@ -1,6 +1,10 @@
 <template>
 	<WrapperSlice :margin-top="slice.primary.margin_top || false" :margin-bottom="slice.primary.margin_bottom || false">
 		<WrapperContainer>
+			<div class="center">
+				<div v-if="slice.primary.title" class="h2 font-thin">{{ slice.primary.title }}</div>
+				<PrismicRichText v-if="slice.primary.subtitle" :field="slice.primary.subtitle" class="h1" />
+			</div>
 			<div class="stats-container">
 				<div v-for="(item, i) in slice.items" :key="`slice-item-${i}`" class="center stats-item">
 					<p v-if="item.data" class="h1 red-pigment m0">{{ item.data }}</p>
@@ -30,7 +34,7 @@ defineProps({
 .stats
 	&-container
 		display grid
-		grid-template-columns repeat(auto-fit, minmax(170px, 1fr))
+		grid-template-columns repeat(auto-fit, minmax(190px, 1fr))
 		grid-gap 25px
 	&-item
 		.h1

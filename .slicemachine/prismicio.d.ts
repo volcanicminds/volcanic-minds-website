@@ -1219,6 +1219,26 @@ interface StatisticsSliceDefaultPrimary {
      *
      */
     margin_bottom: prismicT.BooleanField;
+    /**
+     * Titolo field in *Statistics → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: statistics.primary.title
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    title: prismicT.KeyTextField;
+    /**
+     * Sottotitolo field in *Statistics → Primary*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: statistics.primary.subtitle
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    subtitle: prismicT.RichTextField;
 }
 /**
  * Item in Statistics → Items

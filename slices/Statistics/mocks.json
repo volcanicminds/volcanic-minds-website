@@ -10,6 +10,22 @@
       "margin_bottom": {
         "__TYPE__": "BooleanContent",
         "value": true
+      },
+      "title": {
+        "__TYPE__": "FieldContent",
+        "value": "snake",
+        "type": "Text"
+      },
+      "subtitle": {
+        "__TYPE__": "StructuredTextContent",
+        "value": [
+          {
+            "type": "paragraph",
+            "content": {
+              "text": "Ut eiusmod aute adipisicing eu laborum commodo nulla ex. In pariatur in quis duis ipsum. Fugiat consectetur cillum mollit irure quis irure aliquip deserunt incididunt aliqua exercitation fugiat."
+            }
+          }
+        ]
       }
     },
     "items": [
