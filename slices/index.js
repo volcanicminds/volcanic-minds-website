@@ -6,6 +6,7 @@ import Contacts from './Contacts';
 import HeroBanner from './HeroBanner';
 import ImageAndText from './ImageAndText';
 import RichText from './RichText';
+import Statistics from './Statistics';
 
 export {
 	Accordion,
@@ -14,6 +15,7 @@ export {
 	HeroBanner,
 	ImageAndText,
 	RichText,
+	Statistics,
 };
 
 export const components = {
@@ -23,4 +25,5 @@ export const components = {
 	hero_banner: HeroBanner,
 	image_and_text: ImageAndText,
 	rich_text: RichText,
+	statistics: Statistics,
 };

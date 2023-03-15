@@ -50,6 +50,9 @@
             },
             "image_and_text": {
               "type": "SharedSlice"
+            },
+            "statistics": {
+              "type": "SharedSlice"
             }
           }
         }

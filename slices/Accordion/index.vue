@@ -49,7 +49,6 @@ function openAccordion(accordion) {
 	height 25px
 
 .separator
-	background var(--cultured)
+	background var(--cultured-opaque)
 	height 1px
-	opacity 0.5
 </style>

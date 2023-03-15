@@ -41,6 +41,9 @@
             },
             "contacts": {
               "type": "SharedSlice"
+            },
+            "statistics": {
+              "type": "SharedSlice"
             }
           }
         }

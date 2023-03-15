@@ -41,6 +41,13 @@
                 "placeholder": "",
                 "select": null
               }
+            },
+            "alt_text": {
+              "type": "Text",
+              "config": {
+                "label": "Alt text",
+                "placeholder": ""
+              }
             }
           }
         }
