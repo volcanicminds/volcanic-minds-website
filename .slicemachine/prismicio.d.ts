@@ -58,7 +58,7 @@ interface FirstLevelPageDocumentData {
  * Slice for *Pagina di primo livello → Slice Zone*
  *
  */
-type FirstLevelPageDocumentDataSlicesSlice = HeroBannerSlice | AccordionSlice | CardsGridSlice | ContactsSlice | RichTextSlice | ImageAndTextSlice | StatisticsSlice;
+type FirstLevelPageDocumentDataSlicesSlice = HeroBannerSlice | AccordionSlice | CardsGridSlice | ContactsSlice | RichTextSlice | ImageAndTextSlice | StatisticsSlice | PartnersSlice;
 /**
  * Pagina di primo livello document from Prismic
  *
@@ -290,7 +290,7 @@ interface HomepageDocumentData {
  * Slice for *Homepage → Slice Zone*
  *
  */
-type HomepageDocumentDataSlicesSlice = HeroBannerSlice | ImageAndTextSlice | RichTextSlice | CardsGridSlice | AccordionSlice | ContactsSlice | StatisticsSlice;
+type HomepageDocumentDataSlicesSlice = HeroBannerSlice | ImageAndTextSlice | RichTextSlice | CardsGridSlice | AccordionSlice | ContactsSlice | StatisticsSlice | PartnersSlice;
 /**
  * Homepage document from Prismic
  *
@@ -364,7 +364,7 @@ interface SecondLevelPageDocumentData {
  * Slice for *Pagina di secondo livello → Slice Zone*
  *
  */
-type SecondLevelPageDocumentDataSlicesSlice = HeroBannerSlice | CardsGridSlice | AccordionSlice | ContactsSlice | RichTextSlice | ImageAndTextSlice | StatisticsSlice;
+type SecondLevelPageDocumentDataSlicesSlice = HeroBannerSlice | CardsGridSlice | AccordionSlice | ContactsSlice | RichTextSlice | ImageAndTextSlice | StatisticsSlice | PartnersSlice;
 /**
  * Pagina di secondo livello document from Prismic
  *
@@ -942,6 +942,93 @@ type ImageAndTextSliceVariation = ImageAndTextSliceDefault;
  */
 export type ImageAndTextSlice = prismicT.SharedSlice<"image_and_text", ImageAndTextSliceVariation>;
 /**
+ * Primary content in Partners → Primary
+ *
+ */
+interface PartnersSliceDefaultPrimary {
+    /**
+     * Titolo field in *Partners → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: partners.primary.title
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    title: prismicT.KeyTextField;
+    /**
+     * Margine superiore field in *Partners → Primary*
+     *
+     * - **Field Type**: Boolean
+     * - **Placeholder**: *None*
+     * - **Default Value**: false
+     * - **API ID Path**: partners.primary.margin_top
+     * - **Documentation**: https://prismic.io/docs/core-concepts/boolean
+     *
+     */
+    margin_top: prismicT.BooleanField;
+    /**
+     * Margine inferiore field in *Partners → Primary*
+     *
+     * - **Field Type**: Boolean
+     * - **Placeholder**: *None*
+     * - **Default Value**: false
+     * - **API ID Path**: partners.primary.margin_bottom
+     * - **Documentation**: https://prismic.io/docs/core-concepts/boolean
+     *
+     */
+    margin_bottom: prismicT.BooleanField;
+}
+/**
+ * Item in Partners → Items
+ *
+ */
+export interface PartnersSliceDefaultItem {
+    /**
+     * Logo field in *Partners → Items*
+     *
+     * - **Field Type**: Image
+     * - **Placeholder**: *None*
+     * - **API ID Path**: partners.items[].logo
+     * - **Documentation**: https://prismic.io/docs/core-concepts/image
+     *
+     */
+    logo: prismicT.ImageField<never>;
+    /**
+     * Nome field in *Partners → Items*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: partners.items[].name
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    name: prismicT.KeyTextField;
+}
+/**
+ * Default variation for Partners Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: `Partners`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type PartnersSliceDefault = prismicT.SharedSliceVariation<"default", Simplify<PartnersSliceDefaultPrimary>, Simplify<PartnersSliceDefaultItem>>;
+/**
+ * Slice variation for *Partners*
+ *
+ */
+type PartnersSliceVariation = PartnersSliceDefault;
+/**
+ * Partners Shared Slice
+ *
+ * - **API ID**: `partners`
+ * - **Description**: `Partners`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type PartnersSlice = prismicT.SharedSlice<"partners", PartnersSliceVariation>;
+/**
  * Primary content in RichText → Primary
  *
  */
@@ -1094,6 +1181,6 @@ declare module "@prismicio/client" {
         (repositoryNameOrEndpoint: string, options?: prismic.ClientConfig): prismic.Client<AllDocumentTypes>;
     }
     namespace Content {
-        export type { FirstLevelPageDocumentData, FirstLevelPageDocumentDataSlicesSlice, FirstLevelPageDocument, FooterDocumentData, FooterDocumentDataLinksItem, FooterDocumentDataSlicesSlice, FooterDocument, HeaderDocumentData, HeaderDocumentDataLinksItem, HeaderDocument, HomepageDocumentData, HomepageDocumentDataSlicesSlice, HomepageDocument, SecondLevelPageDocumentData, SecondLevelPageDocumentDataSlicesSlice, SecondLevelPageDocument, AllDocumentTypes, AccordionSliceDefaultPrimary, AccordionSliceDefaultItem, AccordionSliceDefault, AccordionSliceVariation, AccordionSlice, CardsGridSliceDefaultPrimary, CardsGridSliceDefaultItem, CardsGridSliceDefault, CardsGridSliceVariation, CardsGridSlice, ContactsSliceDefaultPrimary, ContactsSliceDefaultItem, ContactsSliceDefault, ContactsSliceVariation, ContactsSlice, HeroBannerSliceDefaultPrimary, HeroBannerSliceDefault, HeroBannerSliceVariation, HeroBannerSlice, ImageAndTextSliceDefaultPrimary, ImageAndTextSliceDefault, ImageAndTextSliceVariation, ImageAndTextSlice, RichTextSliceDefaultPrimary, RichTextSliceDefault, RichTextSliceVariation, RichTextSlice, StatisticsSliceDefaultPrimary, StatisticsSliceDefaultItem, StatisticsSliceDefault, StatisticsSliceVariation, StatisticsSlice };
+        export type { FirstLevelPageDocumentData, FirstLevelPageDocumentDataSlicesSlice, FirstLevelPageDocument, FooterDocumentData, FooterDocumentDataLinksItem, FooterDocumentDataSlicesSlice, FooterDocument, HeaderDocumentData, HeaderDocumentDataLinksItem, HeaderDocument, HomepageDocumentData, HomepageDocumentDataSlicesSlice, HomepageDocument, SecondLevelPageDocumentData, SecondLevelPageDocumentDataSlicesSlice, SecondLevelPageDocument, AllDocumentTypes, AccordionSliceDefaultPrimary, AccordionSliceDefaultItem, AccordionSliceDefault, AccordionSliceVariation, AccordionSlice, CardsGridSliceDefaultPrimary, CardsGridSliceDefaultItem, CardsGridSliceDefault, CardsGridSliceVariation, CardsGridSlice, ContactsSliceDefaultPrimary, ContactsSliceDefaultItem, ContactsSliceDefault, ContactsSliceVariation, ContactsSlice, HeroBannerSliceDefaultPrimary, HeroBannerSliceDefault, HeroBannerSliceVariation, HeroBannerSlice, ImageAndTextSliceDefaultPrimary, ImageAndTextSliceDefault, ImageAndTextSliceVariation, ImageAndTextSlice, PartnersSliceDefaultPrimary, PartnersSliceDefaultItem, PartnersSliceDefault, PartnersSliceVariation, PartnersSlice, RichTextSliceDefaultPrimary, RichTextSliceDefault, RichTextSliceVariation, RichTextSlice, StatisticsSliceDefaultPrimary, StatisticsSliceDefaultItem, StatisticsSliceDefault, StatisticsSliceVariation, StatisticsSlice };
     }
 }

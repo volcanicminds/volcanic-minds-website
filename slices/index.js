@@ -5,6 +5,7 @@ import CardsGrid from './CardsGrid';
 import Contacts from './Contacts';
 import HeroBanner from './HeroBanner';
 import ImageAndText from './ImageAndText';
+import Partners from './Partners';
 import RichText from './RichText';
 import Statistics from './Statistics';
 
@@ -14,6 +15,7 @@ export {
 	Contacts,
 	HeroBanner,
 	ImageAndText,
+	Partners,
 	RichText,
 	Statistics,
 };
@@ -24,6 +26,7 @@ export const components = {
 	contacts: Contacts,
 	hero_banner: HeroBanner,
 	image_and_text: ImageAndText,
+	partners: Partners,
 	rich_text: RichText,
 	statistics: Statistics,
 };
