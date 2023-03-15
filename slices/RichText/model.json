@@ -49,6 +49,15 @@
             "placeholder_true": "SI",
             "default_value": false
           }
+        },
+        "big_text": {
+          "type": "Boolean",
+          "config": {
+            "label": "Testo big",
+            "placeholder_false": "NO",
+            "placeholder_true": "SI",
+            "default_value": false
+          }
         }
       },
       "items": {},

@@ -1075,6 +1075,17 @@ interface RichTextSliceDefaultPrimary {
      *
      */
     margin_bottom: prismicT.BooleanField;
+    /**
+     * Testo big field in *RichText → Primary*
+     *
+     * - **Field Type**: Boolean
+     * - **Placeholder**: *None*
+     * - **Default Value**: false
+     * - **API ID Path**: rich_text.primary.big_text
+     * - **Documentation**: https://prismic.io/docs/core-concepts/boolean
+     *
+     */
+    big_text: prismicT.BooleanField;
 }
 /**
  * Default variation for RichText Slice

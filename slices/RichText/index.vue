@@ -1,6 +1,6 @@
 <template>
 	<WrapperSlice :margin-top="slice.primary.margin_top || false" :margin-bottom="slice.primary.margin_bottom || false">
-		<WrapperContainer>
+		<WrapperContainer :class="slice.primary.big_text ? 'big-text' : ''">
 			<PrismicRichText
 				:field="slice.primary.text"
 				class="rich-text"
@@ -28,9 +28,10 @@ defineProps({
 </script>
 
 <style lang="stylus" scoped>
-.rich-text
-	font-size 20px
-	font-weight 300
-	@media (min-width: 40em)
-		font-size 25px
+.big-text
+	.rich-text
+		font-size 20px
+		font-weight 300
+		@media (min-width: 40em)
+			font-size 25px
 </style>
