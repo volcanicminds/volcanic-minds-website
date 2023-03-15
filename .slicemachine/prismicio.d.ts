@@ -228,6 +228,17 @@ export interface HeaderDocumentDataLinksItem {
      *
      */
     link_title: prismicT.KeyTextField;
+    /**
+     * Nascondi su desktop field in *Header → Links*
+     *
+     * - **Field Type**: Boolean
+     * - **Placeholder**: *None*
+     * - **Default Value**: false
+     * - **API ID Path**: header.links[].hide_on_desktop
+     * - **Documentation**: https://prismic.io/docs/core-concepts/boolean
+     *
+     */
+    hide_on_desktop: prismicT.BooleanField;
 }
 /**
  * Header document from Prismic
