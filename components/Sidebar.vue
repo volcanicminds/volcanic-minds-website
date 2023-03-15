@@ -11,13 +11,13 @@
 			</WrapperContainer>
 			<WrapperContainer v-if="headerData.data.links" class="py2 flex-auto overflow-auto center">
 				<template v-for="(link, i) in headerData.data.links">
-					<PrismicLink :key="i" class="block my2 h2 font-regular" :field="link.link_url">{{
+					<PrismicLink :key="i" class="block my2 h2 font-light" :field="link.link_url">{{
 						link.link_title
 					}}</PrismicLink>
 				</template>
 			</WrapperContainer>
 			<div class="flex flex-column items-center py3">
-				<WrapperPrismicImage v-if="footerData.data.logo" :field="footerData.data.logo" :size="200" />
+				<WrapperPrismicImage v-if="footerData.data.logo" :field="footerData.data.logo" :size="150" />
 				<div v-if="footerData.data.links" class="flex social-links-container mt2">
 					<template v-for="(link, i) in footerData.data.links">
 						<PrismicLink :key="i" :field="link.link" :aria-label="link.alt_text">

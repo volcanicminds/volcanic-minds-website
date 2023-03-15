@@ -48,8 +48,8 @@ defineProps({
 		font-size 60px
 		line-height 60px
 		@media (min-width: 52em)
-			font-size 80px
-			line-height 80px
+			font-size 100px
+			line-height 90px
 		>>> p
 			margin 0
 	&-subtitle
