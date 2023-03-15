@@ -13,6 +13,15 @@
           "thumbnails": []
         }
       },
+      "site_data": {
+        "type": "StructuredText",
+        "config": {
+          "label": "Dati del sito",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "multi": "paragraph,strong,em,hyperlink"
+        }
+      },
       "company_data": {
         "type": "StructuredText",
         "config": {

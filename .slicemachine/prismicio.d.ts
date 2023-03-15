@@ -83,6 +83,17 @@ interface FooterDocumentData {
      */
     logo: prismicT.ImageField<never>;
     /**
+     * Dati del sito field in *Footer*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: footer.site_data
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    site_data: prismicT.RichTextField;
+    /**
      * Dati societari field in *Footer*
      *
      * - **Field Type**: Rich Text

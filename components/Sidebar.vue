@@ -1,18 +1,32 @@
 <template>
 	<Transition name="sidebar">
-		<div v-if="isSidebarOpened" class="fixed z4 col-12 h100 bg-raisin-black left-0 top-0">
-			<WrapperContainer class="py3">
+		<div
+			v-if="isSidebarOpened && headerData"
+			class="fixed z4 col-12 h100 bg-raisin-black left-0 top-0 flex flex-column"
+		>
+			<WrapperContainer class="pt3 pb2">
 				<div class="right">
 					<font-awesome-icon :icon="['fas', 'xmark']" class="fa-xl cursor-pointer" @click="closeSidebar" />
 				</div>
-				<div class="py3 center">
-					<template v-if="headerData">
-						<template v-for="(link, i) in headerData.data.links">
-							<PrismicLink :key="i" class="block my2 h2" :field="link.link_url">{{ link.link_title }}</PrismicLink>
-						</template>
+			</WrapperContainer>
+			<WrapperContainer v-if="headerData.data.links" class="py2 flex-auto overflow-auto center">
+				<template v-for="(link, i) in headerData.data.links">
+					<PrismicLink :key="i" class="block my2 h2 font-regular" :field="link.link_url">{{
+						link.link_title
+					}}</PrismicLink>
+				</template>
+			</WrapperContainer>
+			<div class="flex flex-column items-center py3">
+				<WrapperPrismicImage v-if="footerData.data.logo" :field="footerData.data.logo" :size="200" />
+				<div v-if="footerData.data.links" class="flex social-links-container mt2">
+					<template v-for="(link, i) in footerData.data.links">
+						<PrismicLink :key="i" :field="link.link" :aria-label="link.alt_text">
+							<font-awesome-icon :icon="link.icon" size="2xl" />
+						</PrismicLink>
 					</template>
 				</div>
-			</WrapperContainer>
+			</div>
+			<RainbowBar />
 		</div>
 	</Transition>
 </template>
@@ -26,22 +40,28 @@ export default Vue.extend({
 		},
 		headerData() {
 			return this.$store.state.prismic.header
+		},
+		footerData() {
+			return this.$store.state.prismic.footer
 		}
 	},
 	methods: {
 		closeSidebar() {
 			this.$store.commit('prismic/setIsSidebarOpened', false)
+			document.body.style.overflow = 'visible'
 		}
 	}
 })
 </script>
 
 <style lang="stylus" scoped>
+.social-links-container
+	gap 30px
 .sidebar-enter-active
 .sidebar-leave-active
 	transition all 0.4s
 
 .sidebar-enter
 .sidebar-leave-to
-	opacity 0
+	transform translateX(100%)
 </style>

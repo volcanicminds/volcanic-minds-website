@@ -29,5 +29,8 @@ defineProps({
 
 <style lang="stylus" scoped>
 .rich-text
-	font-size 25px
+	font-size 20px
+	font-weight 300
+	@media (min-width: 40em)
+		font-size 25px
 </style>

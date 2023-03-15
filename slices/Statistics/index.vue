@@ -4,7 +4,7 @@
 			<div class="stats-container">
 				<div v-for="(item, i) in slice.items" :key="`slice-item-${i}`" class="center stats-item">
 					<p v-if="item.data" class="h1 red-pigment m0">{{ item.data }}</p>
-					<p v-if="item.description" class="m0">{{ item.description }}</p>
+					<p v-if="item.description" class="h3 m0">{{ item.description }}</p>
 				</div>
 			</div>
 		</WrapperContainer>
@@ -30,12 +30,12 @@ defineProps({
 .stats
 	&-container
 		display grid
-		grid-template-columns repeat(auto-fit, minmax(150px, 1fr))
-		grid-gap 15px
+		grid-template-columns repeat(auto-fit, minmax(170px, 1fr))
+		grid-gap 25px
 	&-item
-		padding-right 15px
-		&:not(:last-child)
-			border-right 1px solid var(--cultured-opaque)
 		.h1
 			font-size 40px
+			background var(--rainbow-gradient)
+			-webkit-background-clip text
+			-webkit-text-fill-color transparent
 </style>

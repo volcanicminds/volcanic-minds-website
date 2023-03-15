@@ -67,6 +67,7 @@ export default Vue.extend({
 	methods: {
 		openSidebar() {
 			this.$store.commit('prismic/setIsSidebarOpened', true)
+			document.body.style.overflow = 'hidden'
 		}
 	}
 })
@@ -75,7 +76,7 @@ export default Vue.extend({
 <style lang="stylus" scoped>
 .header-container
 	position sticky
-	@media screen and (max-width: 40em)
+	@media (max-width: 40em)
 		.logo
 			height 30px
 	.country-flag
