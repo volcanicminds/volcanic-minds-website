@@ -18,7 +18,7 @@ export const _Default = () => ({
   },
   data() {
     return {
-      mock: {"variation":"default","version":"sktwi1xtmkfgx8626","items":[{}],"primary":{"label":"birthday","link":{"link_type":"Web","url":"https://slicemachine.dev"},"size":true,"margin_top":false,"margin_bottom":false},"id":"_Default","slice_type":"call_to_action"}
+      mock: {"variation":"default","version":"sktwi1xtmkfgx8626","items":[{}],"primary":{"label":"birthday","link":{"link_type":"Web","url":"http://twitter.com"},"size":true,"margin_top":false,"margin_bottom":false},"id":"_Default","slice_type":"call_to_action"}
     }
   },
   template: '<SliceZone :slices="[mock]" :resolver="resolve" />'
