@@ -148,7 +148,9 @@ export default async () => {
 		},
 
 		// Build Configuration: https://go.nuxtjs.dev/config-build
-		build: {},
+		build: {
+			transpile: ['vue-intersect']
+		},
 
 		prismic: {
 			endpoint: smConfig.apiEndpoint,
