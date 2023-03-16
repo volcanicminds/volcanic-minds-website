@@ -3,6 +3,7 @@
 		:margin-top="slice.primary.margin_top || false"
 		:margin-bottom="slice.primary.margin_bottom || false"
 		css-class="bg-raisin-black-2 py4"
+		:enable-observer="slice.primary.enable_animation || false"
 	>
 		<WrapperContainer class="flex flex-wrap" :class="slice.primary.reverse ? 'row-reverse' : ''">
 			<div class="col-12 md-col-5 flex items-center justify-center md-py3 mb2 md-mb0">

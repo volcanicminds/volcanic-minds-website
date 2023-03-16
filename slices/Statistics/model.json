@@ -44,6 +44,15 @@
             "allowTargetBlank": true,
             "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
           }
+        },
+        "enable_animation": {
+          "type": "Boolean",
+          "config": {
+            "label": "Abilita animazione",
+            "placeholder_false": "NO",
+            "placeholder_true": "SI",
+            "default_value": false
+          }
         }
       },
       "items": {

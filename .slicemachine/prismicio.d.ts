@@ -423,6 +423,17 @@ interface AccordionSliceDefaultPrimary {
      *
      */
     margin_bottom: prismicT.BooleanField;
+    /**
+     * Abilita animazione field in *Accordion → Primary*
+     *
+     * - **Field Type**: Boolean
+     * - **Placeholder**: *None*
+     * - **Default Value**: false
+     * - **API ID Path**: accordion.primary.enable_animation
+     * - **Documentation**: https://prismic.io/docs/core-concepts/boolean
+     *
+     */
+    enable_animation: prismicT.BooleanField;
 }
 /**
  * Item in Accordion → Items
@@ -531,6 +542,17 @@ interface CallToActionSliceDefaultPrimary {
      *
      */
     margin_bottom: prismicT.BooleanField;
+    /**
+     * Abilita animazione field in *CallToAction → Primary*
+     *
+     * - **Field Type**: Boolean
+     * - **Placeholder**: *None*
+     * - **Default Value**: false
+     * - **API ID Path**: call_to_action.primary.enable_animation
+     * - **Documentation**: https://prismic.io/docs/core-concepts/boolean
+     *
+     */
+    enable_animation: prismicT.BooleanField;
 }
 /**
  * Default variation for CallToAction Slice
@@ -602,6 +624,17 @@ interface CardsGridSliceDefaultPrimary {
      *
      */
     margin_bottom: prismicT.BooleanField;
+    /**
+     * Abilita animazione field in *CardsGrid → Primary*
+     *
+     * - **Field Type**: Boolean
+     * - **Placeholder**: *None*
+     * - **Default Value**: false
+     * - **API ID Path**: cards_grid.primary.enable_animation
+     * - **Documentation**: https://prismic.io/docs/core-concepts/boolean
+     *
+     */
+    enable_animation: prismicT.BooleanField;
 }
 /**
  * Item in CardsGrid → Items
@@ -749,6 +782,17 @@ interface ContactsSliceDefaultPrimary {
      *
      */
     margin_bottom: prismicT.BooleanField;
+    /**
+     * Abilita animazione field in *Contacts → Primary*
+     *
+     * - **Field Type**: Boolean
+     * - **Placeholder**: *None*
+     * - **Default Value**: false
+     * - **API ID Path**: contacts.primary.enable_animation
+     * - **Documentation**: https://prismic.io/docs/core-concepts/boolean
+     *
+     */
+    enable_animation: prismicT.BooleanField;
 }
 /**
  * Item in Contacts → Items
@@ -877,6 +921,17 @@ interface HeroBannerSliceDefaultPrimary {
      *
      */
     cta_text: prismicT.KeyTextField;
+    /**
+     * Abilita animazione field in *HeroBanner → Primary*
+     *
+     * - **Field Type**: Boolean
+     * - **Placeholder**: *None*
+     * - **Default Value**: false
+     * - **API ID Path**: hero_banner.primary.enable_animation
+     * - **Documentation**: https://prismic.io/docs/core-concepts/boolean
+     *
+     */
+    enable_animation: prismicT.BooleanField;
 }
 /**
  * Default variation for HeroBanner Slice
@@ -999,6 +1054,17 @@ interface ImageAndTextSliceDefaultPrimary {
      *
      */
     cta_text: prismicT.KeyTextField;
+    /**
+     * Abilita animazione field in *ImageAndText → Primary*
+     *
+     * - **Field Type**: Boolean
+     * - **Placeholder**: *None*
+     * - **Default Value**: false
+     * - **API ID Path**: image_and_text.primary.enable_animation
+     * - **Documentation**: https://prismic.io/docs/core-concepts/boolean
+     *
+     */
+    enable_animation: prismicT.BooleanField;
 }
 /**
  * Default variation for ImageAndText Slice
@@ -1060,6 +1126,17 @@ interface PartnersSliceDefaultPrimary {
      *
      */
     margin_bottom: prismicT.BooleanField;
+    /**
+     * Abilita animazione field in *Partners → Primary*
+     *
+     * - **Field Type**: Boolean
+     * - **Placeholder**: *None*
+     * - **Default Value**: false
+     * - **API ID Path**: partners.primary.enable_animation
+     * - **Documentation**: https://prismic.io/docs/core-concepts/boolean
+     *
+     */
+    enable_animation: prismicT.BooleanField;
 }
 /**
  * Item in Partners → Items
@@ -1168,6 +1245,17 @@ interface RichTextSliceDefaultPrimary {
      *
      */
     big_text: prismicT.BooleanField;
+    /**
+     * Abilita animazione field in *RichText → Primary*
+     *
+     * - **Field Type**: Boolean
+     * - **Placeholder**: *None*
+     * - **Default Value**: false
+     * - **API ID Path**: rich_text.primary.enable_animation
+     * - **Documentation**: https://prismic.io/docs/core-concepts/boolean
+     *
+     */
+    enable_animation: prismicT.BooleanField;
 }
 /**
  * Default variation for RichText Slice
@@ -1239,6 +1327,17 @@ interface StatisticsSliceDefaultPrimary {
      *
      */
     subtitle: prismicT.RichTextField;
+    /**
+     * Abilita animazione field in *Statistics → Primary*
+     *
+     * - **Field Type**: Boolean
+     * - **Placeholder**: *None*
+     * - **Default Value**: false
+     * - **API ID Path**: statistics.primary.enable_animation
+     * - **Documentation**: https://prismic.io/docs/core-concepts/boolean
+     *
+     */
+    enable_animation: prismicT.BooleanField;
 }
 /**
  * Item in Statistics → Items

@@ -1,5 +1,9 @@
 <template>
-	<WrapperSlice :margin-top="slice.primary.margin_top || false" :margin-bottom="slice.primary.margin_bottom || false">
+	<WrapperSlice
+		:margin-top="slice.primary.margin_top || false"
+		:margin-bottom="slice.primary.margin_bottom || false"
+		:enable-observer="slice.primary.enable_animation || false"
+	>
 		<WrapperContainer>
 			<div class="center">
 				<div v-if="slice.primary.title" class="h2 font-thin">{{ slice.primary.title }}</div>
@@ -18,9 +22,10 @@
 </template>
 
 <script lang="ts">
-export default {
+import Vue from 'vue'
+export default Vue.extend({
 	name: 'CardsGrid'
-}
+})
 </script>
 
 <script setup lang="ts">

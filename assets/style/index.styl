@@ -95,6 +95,14 @@ h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6
 .row-reverse
     flex-direction row-reverse
 
+.opacity-animate
+    transition all 1s ease
+
+    &-off
+        opacity 0.5
+        filter grayscale(0.5)
+        transform translateY(100px)
+
 // Nuxt animations
 .page-enter-active, .page-leave-active
     transition all 0.4s

@@ -79,6 +79,15 @@
             "label": "CTA testo",
             "placeholder": ""
           }
+        },
+        "enable_animation": {
+          "type": "Boolean",
+          "config": {
+            "label": "Abilita animazione",
+            "placeholder_false": "NO",
+            "placeholder_true": "SI",
+            "default_value": false
+          }
         }
       },
       "items": {},

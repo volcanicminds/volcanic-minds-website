@@ -1,5 +1,9 @@
 <template>
-	<WrapperSlice :margin-top="slice.primary.margin_top || false" :margin-bottom="slice.primary.margin_bottom || false">
+	<WrapperSlice
+		:margin-top="slice.primary.margin_top || false"
+		:margin-bottom="slice.primary.margin_bottom || false"
+		:enable-observer="slice.primary.enable_animation || false"
+	>
 		<WrapperContainer class="grid-container">
 			<div class="title mb3 sm-mb0">
 				<p class="h1 mt0 mb2">{{ slice.primary.title }}</p>

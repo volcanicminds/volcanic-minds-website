@@ -20,6 +20,10 @@
       "margin_bottom": {
         "__TYPE__": "BooleanContent",
         "value": true
+      },
+      "enable_animation": {
+        "__TYPE__": "BooleanContent",
+        "value": true
       }
     },
     "items": [

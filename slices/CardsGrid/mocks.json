@@ -20,6 +20,10 @@
         "__TYPE__": "FieldContent",
         "value": "think",
         "type": "Text"
+      },
+      "enable_animation": {
+        "__TYPE__": "BooleanContent",
+        "value": true
       }
     },
     "items": [
