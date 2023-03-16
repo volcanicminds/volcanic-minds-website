@@ -1,5 +1,5 @@
 <template>
-	<Observer @isVisible="isSliceVisible = true">
+	<Observer @isVisible.once="isSliceVisible = true">
 		<section
 			:class="[
 				cssClass,

@@ -1,7 +1,7 @@
 <template>
-	<intersect @enter.once="$emit('isVisible')">
+	<Intersect :threshold="[0.25]" @enter="$emit('isVisible')">
 		<slot />
-	</intersect>
+	</Intersect>
 </template>
 
 <script setup lang="ts">
