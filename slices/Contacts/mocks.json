@@ -69,7 +69,7 @@
         "__TYPE__": "LinkContent",
         "value": {
           "__TYPE__": "ExternalLink",
-          "url": "https://prismic.io"
+          "url": "http://google.com"
         }
       },
       "button_label": {

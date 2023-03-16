@@ -10,8 +10,9 @@
 	</Transition>
 </template>
 
-<script>
-export default {
+<script lang="ts">
+import Vue from 'vue'
+export default Vue.extend({
 	data: () => ({
 		loading: false
 	}),
@@ -23,7 +24,7 @@ export default {
 			setTimeout(() => (this.loading = false), 800)
 		}
 	}
-}
+})
 </script>
 
 <style lang="stylus" scoped>

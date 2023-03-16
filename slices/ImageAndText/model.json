@@ -74,6 +74,7 @@
           "config": {
             "label": "CTA Link",
             "placeholder": "",
+            "allowTargetBlank": true,
             "select": null
           }
         },
