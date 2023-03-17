@@ -12,8 +12,8 @@
 			</div>
 			<div class="stats-container">
 				<div v-for="(item, i) in slice.items" :key="`slice-item-${i}`" class="center stats-item">
-					<p v-if="item.data" class="h1 red-pigment m0">{{ item.data }}</p>
-					<p v-if="item.description" class="h3 m0">{{ item.description }}</p>
+					<div v-if="item.data" class="h1 red-pigment">{{ item.data }}</div>
+					<div v-if="item.description" class="h3">{{ item.description }}</div>
 				</div>
 			</div>
 		</WrapperContainer>

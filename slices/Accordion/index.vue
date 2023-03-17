@@ -7,7 +7,7 @@
 		<WrapperContainer>
 			<div v-for="(item, i) in slice.items" :key="`accordion-${i}`" class="my2">
 				<div class="cursor-pointer flex items-center justify-between" @click="openAccordion(`accordion-${i}`)">
-					<p class="h2 m0">{{ item.title }}</p>
+					<div class="h2">{{ item.title }}</div>
 					<div class="accordion-toggle items-center justify-center flex">
 						<font-awesome-icon :icon="['fas', isOpened === `accordion-${i}` ? 'minus' : 'plus']" />
 					</div>

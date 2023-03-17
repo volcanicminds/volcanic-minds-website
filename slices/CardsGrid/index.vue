@@ -13,8 +13,8 @@
 			<div class="cards-container mt2">
 				<div v-for="(item, i) in slice.items" :key="`slice-item-${i}`" class="card p3">
 					<font-awesome-icon v-if="item.card_icon" :icon="item.card_icon" class="fa-2xl" />
-					<p v-if="item.card_title" class="h2 mb0">{{ item.card_title }}</p>
-					<p v-if="item.card_description" class="mb0">{{ item.card_description }}</p>
+					<div v-if="item.card_title" class="h2 my2">{{ item.card_title }}</div>
+					<div v-if="item.card_description">{{ item.card_description }}</div>
 				</div>
 			</div>
 		</WrapperContainer>

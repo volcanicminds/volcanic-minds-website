@@ -13,7 +13,7 @@
 					<WrapperPrismicImage :field="face.face" :size="1000" class="h100 col-12 cover" />
 				</div>
 			</div>
-			<p v-if="slice.primary.title" class="h1 mt0">{{ slice.primary.title }}</p>
+			<div v-if="slice.primary.title" class="h1 mb3">{{ slice.primary.title }}</div>
 			<PrismicRichText v-if="slice.primary.text" :field="slice.primary.text" />
 			<PrismicLink
 				v-if="slice.primary.button_label"
