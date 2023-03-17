@@ -9,11 +9,11 @@
 		<WrapperPrismicImage :field="slice.primary.background_2" :size="1000" class="absolute top-0 right-0 bg-image" />
 		<WrapperContainer class="relative center">
 			<div class="flex flex-wrap justify-center faces-container">
-				<div v-for="(face, i) in slice.items" :key="i" class="faces-image overflow-hidden">
+				<div v-for="(face, i) in slice.items" :key="i" class="faces-image overflow-hidden mb2">
 					<WrapperPrismicImage :field="face.face" :size="1000" class="h100 col-12 cover" />
 				</div>
 			</div>
-			<p v-if="slice.primary.title" class="h1">{{ slice.primary.title }}</p>
+			<p v-if="slice.primary.title" class="h1 mt0">{{ slice.primary.title }}</p>
 			<PrismicRichText v-if="slice.primary.text" :field="slice.primary.text" />
 			<PrismicLink
 				v-if="slice.primary.button_label"
