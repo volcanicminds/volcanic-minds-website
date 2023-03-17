@@ -17,8 +17,13 @@
 				</template>
 			</WrapperContainer>
 			<div class="flex flex-column items-center py3">
-				<WrapperPrismicImage v-if="footerData.data.logo" :field="footerData.data.logo" :size="150" />
-				<div v-if="footerData.data.icon_links" class="flex social-links-container mt3">
+				<WrapperPrismicImage
+					v-if="footerData.data.logo"
+					:field="footerData.data.logo"
+					:size="150"
+					class="footer-logo mb3"
+				/>
+				<div v-if="footerData.data.icon_links" class="flex social-links-container">
 					<template v-for="(link, i) in footerData.data.icon_links">
 						<PrismicLink v-if="link.icon" :key="i" :field="link.link" :aria-label="link.alt_text">
 							<font-awesome-icon :icon="link.icon" size="2xl" />
@@ -57,6 +62,10 @@ export default Vue.extend({
 <style lang="stylus" scoped>
 .social-links-container
 	gap 30px
+
+.footer-logo
+	@media screen and (orientation: landscape)
+		display none
 .sidebar-enter-active
 .sidebar-leave-active
 	transition all 0.4s
