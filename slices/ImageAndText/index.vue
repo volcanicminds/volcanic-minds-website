@@ -57,6 +57,8 @@ defineProps({
 	background var(--rainbow-gradient)
 	border-radius 10px
 	padding 4px
+	@media (max-width: 52em)
+		max-height 250px
 	img
 		border-radius 7px
 </style>
