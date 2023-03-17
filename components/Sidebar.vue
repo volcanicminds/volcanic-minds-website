@@ -18,9 +18,9 @@
 			</WrapperContainer>
 			<div class="flex flex-column items-center py3">
 				<WrapperPrismicImage v-if="footerData.data.logo" :field="footerData.data.logo" :size="150" />
-				<div v-if="footerData.data.links" class="flex social-links-container mt2">
-					<template v-for="(link, i) in footerData.data.links">
-						<PrismicLink :key="i" :field="link.link" :aria-label="link.alt_text">
+				<div v-if="footerData.data.icon_links" class="flex social-links-container mt3">
+					<template v-for="(link, i) in footerData.data.icon_links">
+						<PrismicLink v-if="link.icon" :key="i" :field="link.link" :aria-label="link.alt_text">
 							<font-awesome-icon :icon="link.icon" size="2xl" />
 						</PrismicLink>
 					</template>

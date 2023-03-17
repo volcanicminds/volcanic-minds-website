@@ -3,13 +3,13 @@
     "__TYPE__": "ImageContent",
     "origin": {
       "id": "main",
-      "url": "https://images.unsplash.com/photo-1560762484-813fc97650a0",
-      "width": 3344,
-      "height": 2509
+      "url": "https://images.unsplash.com/photo-1587613865763-4b8b0d19e8ab",
+      "width": 12288,
+      "height": 16384
     },
-    "url": "https://images.unsplash.com/photo-1560762484-813fc97650a0",
-    "width": 3344,
-    "height": 2509,
+    "url": "https://images.unsplash.com/photo-1587613865763-4b8b0d19e8ab",
+    "width": 12288,
+    "height": 16384,
     "edit": {
       "zoom": 1,
       "crop": {
@@ -26,7 +26,7 @@
       {
         "type": "paragraph",
         "content": {
-          "text": "Dolore sit dolore officia dolor exercitation consectetur ipsum. Aliqua ullamco fugiat ea sint occaecat eiusmod laborum nulla Lorem cupidatat ad aliquip laboris duis."
+          "text": "Aliquip deserunt veniam sint laborum esse labore pariatur voluptate sint anim."
         }
       }
     ]
@@ -37,12 +37,12 @@
       {
         "type": "paragraph",
         "content": {
-          "text": "Consequat ad reprehenderit consectetur quis deserunt amet non eiusmod est deserunt dolor eiusmod qui amet. Laboris in aliqua in et magna nisi. Exercitation do id occaecat Lorem."
+          "text": "In dolore eiusmod dolore nisi sint tempor ea pariatur id ea duis ea qui do. Quis est ullamco dolor culpa."
         }
       }
     ]
   },
-  "links": {
+  "icon_links": {
     "__TYPE__": "GroupContentType",
     "value": [
       {
@@ -52,7 +52,7 @@
             "icon",
             {
               "__TYPE__": "FieldContent",
-              "value": "rubber",
+              "value": "bat",
               "type": "Text"
             }
           ],
@@ -62,7 +62,7 @@
               "__TYPE__": "LinkContent",
               "value": {
                 "__TYPE__": "ExternalLink",
-                "url": "https://slicemachine.dev"
+                "url": "https://prismic.io"
               }
             }
           ],
@@ -70,8 +70,36 @@
             "alt_text",
             {
               "__TYPE__": "FieldContent",
-              "value": "last",
+              "value": "company",
               "type": "Text"
+            }
+          ]
+        ]
+      }
+    ]
+  },
+  "text_links": {
+    "__TYPE__": "GroupContentType",
+    "value": [
+      {
+        "__TYPE__": "GroupItemContent",
+        "value": [
+          [
+            "text",
+            {
+              "__TYPE__": "FieldContent",
+              "value": "sleep",
+              "type": "Text"
+            }
+          ],
+          [
+            "link",
+            {
+              "__TYPE__": "LinkContent",
+              "value": {
+                "__TYPE__": "ExternalLink",
+                "url": "http://google.com"
+              }
             }
           ]
         ]

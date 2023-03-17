@@ -3,16 +3,23 @@
 		<WrapperContainer class="py3">
 			<div class="flex flex-column items-center">
 				<WrapperPrismicImage v-if="footerData.data.logo" :field="footerData.data.logo" :size="200" />
-				<div v-if="footerData.data.links" class="flex social-links-container mt3">
-					<template v-for="(link, i) in footerData.data.links">
-						<PrismicLink :key="i" :field="link.link" :aria-label="link.alt_text">
+				<div v-if="footerData.data.icon_links" class="flex social-links-container mt3">
+					<template v-for="(link, i) in footerData.data.icon_links">
+						<PrismicLink v-if="link.icon" :key="i" :field="link.link" :aria-label="link.alt_text">
 							<font-awesome-icon :icon="link.icon" size="2xl" />
 						</PrismicLink>
 					</template>
 				</div>
 			</div>
-			<div v-if="footerData.data.site_data" class="center md-px4 mt3">
-				<PrismicRichText :field="footerData.data.site_data" wrapper="div" class="footer-data" />
+
+			<div v-if="footerData.data.text_links" class="center md-px4 mt3">
+				<PrismicLink
+					v-for="(textLink, index) in footerData.data.text_links"
+					:key="index"
+					:field="textLink.link"
+					class="footer-data"
+					>{{ textLink.text }}{{ index < footerData.data.text_links.length - 1 ? ' &#8226; ' : '' }}</PrismicLink
+				>
 			</div>
 			<div v-if="footerData.data.company_data" class="center md-px4 mt3">
 				<PrismicRichText :field="footerData.data.company_data" wrapper="div" class="footer-data" />

@@ -6,7 +6,10 @@
     "header": {
       "links": {}
     },
-    "footer": {}
+    "footer": {
+      "icon_links": {},
+      "text_links": {}
+    }
   },
   "slices": {
     "HeroBanner": {
