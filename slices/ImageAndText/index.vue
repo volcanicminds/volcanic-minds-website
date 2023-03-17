@@ -2,19 +2,16 @@
 	<WrapperSlice
 		:margin-top="slice.primary.margin_top || false"
 		:margin-bottom="slice.primary.margin_bottom || false"
-		:css-class="`py4${slice.primary.enable_bg ? ' bg-raisin-black-2' : ''}`"
+		:css-class="`py3${slice.primary.enable_bg ? ' bg-raisin-black-2' : ''}`"
 		:enable-observer="slice.primary.enable_animation || false"
 	>
 		<WrapperContainer class="flex flex-wrap" :class="slice.primary.reverse ? 'row-reverse' : ''">
-			<div class="col-12 md-col-5 flex items-center justify-center md-py3 mb2 md-mb0">
+			<div class="col-12 md-col-5 flex items-center justify-center mb3 md-mb0">
 				<div class="gradient-bg flex h100 col-12">
 					<WrapperPrismicImage :field="slice.primary.image" :size="1000" class="col-12 h100 cover" />
 				</div>
 			</div>
-			<div
-				class="col-12 md-col-7 flex flex-column justify-center py2 md-py0 px0"
-				:class="slice.primary.reverse ? 'md-pr4' : 'md-pl4'"
-			>
+			<div class="col-12 md-col-7 flex flex-column justify-center" :class="slice.primary.reverse ? 'md-pr4' : 'md-pl4'">
 				<div class="h2 font-thin mb1">{{ slice.primary.title }}</div>
 				<div class="h1 mb1">{{ slice.primary.subtitle }}</div>
 				<PrismicRichText :field="slice.primary.description" wrapper="div" />

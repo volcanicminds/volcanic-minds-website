@@ -2,7 +2,7 @@
 	<WrapperSlice
 		:margin-top="slice.primary.margin_top || false"
 		:margin-bottom="slice.primary.margin_bottom || false"
-		css-class="bg-raisin-black-2 py4 relative overflow-hidden"
+		css-class="bg-raisin-black-2 py3 relative overflow-hidden"
 		:enable-observer="slice.primary.enable_animation || false"
 	>
 		<WrapperPrismicImage :field="slice.primary.background_1" :size="1000" class="absolute bottom-0 left-0 bg-image" />

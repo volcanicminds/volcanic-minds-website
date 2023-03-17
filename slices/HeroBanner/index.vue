@@ -1,13 +1,18 @@
 <template>
 	<WrapperSlice
-		css-class="relative py4 overflow-hidden hero"
+		css-class="relative py3 overflow-hidden hero"
 		:margin-top="slice.primary.margin_top || false"
 		:margin-bottom="slice.primary.margin_bottom || false"
 		:enable-observer="slice.primary.enable_animation || false"
 	>
 		<WrapperContainer class="relative z1">
 			<PrismicRichText class="mt2 mb0 hero-title" :field="slice.primary.title" wrapper="h1" />
-			<PrismicRichText class="hero-subtitle" :field="slice.primary.subtitle" wrapper="div" />
+			<PrismicRichText
+				v-if="slice.primary.subtitle[0].text !== ''"
+				class="hero-subtitle"
+				:field="slice.primary.subtitle"
+				wrapper="div"
+			/>
 			<div
 				v-if="slice.primary.cta_link && !slice.primary.cta_link.isBroken && slice.primary.cta_text"
 				class="center mt2"
