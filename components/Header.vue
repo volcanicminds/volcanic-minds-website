@@ -69,7 +69,9 @@ export default Vue.extend({
 	methods: {
 		openSidebar() {
 			this.$store.commit('prismic/setIsSidebarOpened', true)
-			document.body.style.overflow = 'hidden'
+			if (process.client) {
+				document.body.style.overflow = 'hidden'
+			}
 		}
 	}
 })
