@@ -830,6 +830,17 @@ interface ContactsSliceDefaultPrimary {
      *
      */
     enable_animation: prismicT.BooleanField;
+    /**
+     * Abilita background field in *Contacts → Primary*
+     *
+     * - **Field Type**: Boolean
+     * - **Placeholder**: *None*
+     * - **Default Value**: false
+     * - **API ID Path**: contacts.primary.enable_bg
+     * - **Documentation**: https://prismic.io/docs/core-concepts/boolean
+     *
+     */
+    enable_bg: prismicT.BooleanField;
 }
 /**
  * Item in Contacts → Items

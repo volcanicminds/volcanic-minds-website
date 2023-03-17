@@ -2,7 +2,7 @@
 	<WrapperSlice
 		:margin-top="slice.primary.margin_top || false"
 		:margin-bottom="slice.primary.margin_bottom || false"
-		:css-class="`py3${slice.primary.enable_bg ? ' bg-raisin-black-2' : ''}`"
+		:css-class="`py4${slice.primary.enable_bg ? ' bg-raisin-black-2' : ''}`"
 		:enable-observer="slice.primary.enable_animation || false"
 	>
 		<WrapperContainer class="flex flex-wrap" :class="slice.primary.reverse ? 'row-reverse' : ''">

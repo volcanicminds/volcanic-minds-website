@@ -88,6 +88,10 @@
       "enable_animation": {
         "__TYPE__": "BooleanContent",
         "value": true
+      },
+      "enable_bg": {
+        "__TYPE__": "BooleanContent",
+        "value": true
       }
     },
     "items": [
