@@ -45,9 +45,9 @@ defineProps({
 		grid-gap 25px
 	&-item
 		.h1
-			font-size 25px
+			font-size 1.3em
 			@media (min-width: 40em)
-				font-size 40px
+				font-size 2.1em
 			background var(--rainbow-gradient)
 			-webkit-background-clip text
 			-webkit-text-fill-color transparent

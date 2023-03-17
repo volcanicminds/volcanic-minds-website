@@ -46,17 +46,15 @@ defineProps({
 .hero
 	&-title
 		font-weight 100
-		font-size 60px
-		line-height 60px
+		font-size 3.3em
 		@media (min-width: 52em)
-			font-size 100px
-			line-height 90px
+			font-size 5em
 		>>> p
 			margin 0
 	&-subtitle
-		font-size 20px
+		font-size 1.1em
 		@media (min-width: 52em)
-			font-size 25px
+			font-size 1.3em
 		>>> strong
 			font-weight 700
 			color var(--red-pigment)

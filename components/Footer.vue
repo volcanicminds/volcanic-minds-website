@@ -44,5 +44,5 @@ export default Vue.extend({
 	gap 30px
 
 .footer-data
-	font-size 14px
+	font-size 0.9rem
 </style>
