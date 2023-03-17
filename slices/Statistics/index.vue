@@ -3,7 +3,6 @@
 		:margin-top="slice.primary.margin_top || false"
 		:margin-bottom="slice.primary.margin_bottom || false"
 		:enable-observer="slice.primary.enable_animation || false"
-		css-class="bg-raisin-black-2 py4"
 	>
 		<WrapperContainer>
 			<div class="center">

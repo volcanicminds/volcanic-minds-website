@@ -8,12 +8,12 @@
 		<WrapperPrismicImage
 			:field="slice.primary.background_1"
 			:size="1000"
-			class="absolute bottom-0 left-0 bg-image contain position-bottom"
+			class="absolute bottom-0 left-0 bg-image contain position-bottom-left"
 		/>
 		<WrapperPrismicImage
 			:field="slice.primary.background_2"
 			:size="1000"
-			class="absolute top-0 right-0 bg-image contain position-top"
+			class="absolute top-0 right-0 bg-image contain position-top-right"
 		/>
 		<WrapperContainer class="center relative">
 			<div class="flex flex-wrap justify-center faces-container">
@@ -52,9 +52,6 @@ defineProps({
 .bg-image
 	width 80%
 	height 80%
-	@media (min-width: 40em)
-		width 40%
-		height 40%
 	filter blur(15px)
 
 .faces
