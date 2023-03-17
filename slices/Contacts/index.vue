@@ -43,6 +43,7 @@ defineProps({
 <style lang="stylus" scoped>
 .bg-image
 	max-width 40%
+	max-height 100%
 	filter blur(15px)
 
 .faces
