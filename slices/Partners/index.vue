@@ -11,8 +11,8 @@
 			</div>
 			<div class="partners-container">
 				<div v-for="(item, i) in slice.items" :key="`slice-item-${i}`" class="flex items-center">
-					<WrapperPrismicImage :field="item.logo" :size="30" />
-					<span v-if="item.name" class="h3 font-bold ml2 nowrap">{{ item.name }}</span>
+					<WrapperPrismicImage :field="item.logo" :size="25" />
+					<span v-if="item.name" class="h4 font-bold ml1 nowrap">{{ item.name }}</span>
 				</div>
 			</div>
 		</WrapperContainer>

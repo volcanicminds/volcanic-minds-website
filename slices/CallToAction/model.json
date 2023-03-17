@@ -40,9 +40,9 @@
           "type": "Boolean",
           "config": {
             "label": "Margine superiore",
-            "default_value": false,
-            "placeholder_true": "true",
-            "placeholder_false": "false"
+            "placeholder_false": "NO",
+            "placeholder_true": "SI",
+            "default_value": false
           }
         },
         "margin_bottom": {

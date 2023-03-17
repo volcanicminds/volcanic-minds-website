@@ -21,7 +21,7 @@
       },
       "margin_top": {
         "__TYPE__": "BooleanContent",
-        "value": false
+        "value": true
       },
       "margin_bottom": {
         "__TYPE__": "BooleanContent",
