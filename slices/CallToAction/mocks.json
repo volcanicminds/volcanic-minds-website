@@ -25,7 +25,7 @@
       },
       "margin_bottom": {
         "__TYPE__": "BooleanContent",
-        "value": false
+        "value": true
       },
       "enable_animation": {
         "__TYPE__": "BooleanContent",

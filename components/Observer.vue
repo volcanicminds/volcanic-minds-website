@@ -1,5 +1,5 @@
 <template>
-	<Intersect :threshold="[0.25]" @enter="$emit('isVisible')">
+	<Intersect :threshold="[0, 0]" @enter="$emit('isVisible')">
 		<slot />
 	</Intersect>
 </template>

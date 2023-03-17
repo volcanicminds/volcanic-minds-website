@@ -52,9 +52,9 @@ defineProps({
 		>>> p
 			margin 0
 	&-subtitle
-		font-size 1.1em
+		font-size 1.2em
 		@media (min-width: 52em)
-			font-size 1.3em
+			font-size 1.4em
 		>>> strong
 			font-weight 700
 			color var(--red-pigment)

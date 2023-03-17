@@ -1102,6 +1102,17 @@ interface ImageAndTextSliceDefaultPrimary {
      *
      */
     enable_animation: prismicT.BooleanField;
+    /**
+     * Abilita sfondo field in *ImageAndText → Primary*
+     *
+     * - **Field Type**: Boolean
+     * - **Placeholder**: *None*
+     * - **Default Value**: false
+     * - **API ID Path**: image_and_text.primary.enable_bg
+     * - **Documentation**: https://prismic.io/docs/core-concepts/boolean
+     *
+     */
+    enable_bg: prismicT.BooleanField;
 }
 /**
  * Default variation for ImageAndText Slice

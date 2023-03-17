@@ -6,11 +6,11 @@
 	>
 		<WrapperContainer>
 			<div class="center">
-				<div v-if="slice.primary.title" class="h2 font-thin">{{ slice.primary.title }}</div>
+				<div v-if="slice.primary.title" class="h2 font-thin mb1">{{ slice.primary.title }}</div>
 				<div v-if="slice.primary.subtitle" class="h1">{{ slice.primary.subtitle }}</div>
 			</div>
 
-			<div class="cards-container mt2">
+			<div class="cards-container mt3">
 				<div v-for="(item, i) in slice.items" :key="`slice-item-${i}`" class="card p3">
 					<font-awesome-icon v-if="item.card_icon" :icon="item.card_icon" class="fa-2xl" />
 					<div v-if="item.card_title" class="h2 my2">{{ item.card_title }}</div>
