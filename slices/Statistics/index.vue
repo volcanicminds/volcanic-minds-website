@@ -7,7 +7,11 @@
 		<WrapperContainer>
 			<div class="center">
 				<div v-if="slice.primary.title" class="h2 font-thin">{{ slice.primary.title }}</div>
-				<PrismicRichText v-if="slice.primary.subtitle[0].text !== ''" :field="slice.primary.subtitle" class="h1" />
+				<PrismicRichText
+					v-if="slice.primary.subtitle.length && slice.primary.subtitle[0].text !== ''"
+					:field="slice.primary.subtitle"
+					class="h1"
+				/>
 			</div>
 			<div class="stats-container">
 				<div v-for="(item, i) in slice.items" :key="`slice-item-${i}`" class="center stats-item">

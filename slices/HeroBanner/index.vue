@@ -8,7 +8,7 @@
 		<WrapperContainer class="relative z1">
 			<PrismicRichText class="mt2 mb0 hero-title" :field="slice.primary.title" wrapper="h1" />
 			<PrismicRichText
-				v-if="slice.primary.subtitle[0].text !== ''"
+				v-if="slice.primary.subtitle.length && slice.primary.subtitle[0].text !== ''"
 				class="hero-subtitle"
 				:field="slice.primary.subtitle"
 				wrapper="div"
