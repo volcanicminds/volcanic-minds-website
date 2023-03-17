@@ -3,11 +3,12 @@
 		:margin-top="slice.primary.margin_top || false"
 		:margin-bottom="slice.primary.margin_bottom || false"
 		:enable-observer="slice.primary.enable_animation || false"
+		css-class="bg-raisin-black-2 py4"
 	>
 		<WrapperContainer>
 			<div class="center">
 				<div v-if="slice.primary.title" class="h2 font-thin">{{ slice.primary.title }}</div>
-				<PrismicRichText v-if="slice.primary.subtitle" :field="slice.primary.subtitle" class="h1" />
+				<PrismicRichText v-if="slice.primary.subtitle[0].text !== ''" :field="slice.primary.subtitle" class="h1" />
 			</div>
 			<div class="stats-container">
 				<div v-for="(item, i) in slice.items" :key="`slice-item-${i}`" class="center stats-item">
@@ -38,11 +39,15 @@ defineProps({
 .stats
 	&-container
 		display grid
-		grid-template-columns repeat(auto-fit, minmax(190px, 1fr))
+		grid-template-columns repeat(auto-fit, minmax(140px, 1fr))
+		@media (min-width: 40em)
+			grid-template-columns repeat(auto-fit, minmax(190px, 1fr))
 		grid-gap 25px
 	&-item
 		.h1
-			font-size 40px
+			font-size 25px
+			@media (min-width: 40em)
+				font-size 40px
 			background var(--rainbow-gradient)
 			-webkit-background-clip text
 			-webkit-text-fill-color transparent
