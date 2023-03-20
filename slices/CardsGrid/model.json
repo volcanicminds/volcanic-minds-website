@@ -68,11 +68,13 @@
             "placeholder": ""
           }
         },
-        "card_description": {
-          "type": "Text",
+        "card_desc": {
+          "type": "StructuredText",
           "config": {
             "label": "Descrizione card",
-            "placeholder": ""
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "paragraph,strong,em,hyperlink"
           }
         }
       },

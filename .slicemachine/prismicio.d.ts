@@ -701,13 +701,13 @@ export interface CardsGridSliceDefaultItem {
     /**
      * Descrizione card field in *CardsGrid → Items*
      *
-     * - **Field Type**: Text
+     * - **Field Type**: Rich Text
      * - **Placeholder**: *None*
-     * - **API ID Path**: cards_grid.items[].card_description
-     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     * - **API ID Path**: cards_grid.items[].card_desc
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
      *
      */
-    card_description: prismicT.KeyTextField;
+    card_desc: prismicT.RichTextField;
 }
 /**
  * Default variation for CardsGrid Slice
