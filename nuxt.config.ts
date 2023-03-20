@@ -96,6 +96,8 @@ export default async () => {
 			]
 		},
 
+		generate: { fallback: '404.html' },
+
 		// Global CSS: https://go.nuxtjs.dev/config-css
 		css: [
 			'normalize.css',
