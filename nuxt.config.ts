@@ -23,7 +23,7 @@ export default async () => {
 
 		// Global page headers: https://go.nuxtjs.dev/config-head
 		head: {
-			title: 'Smart, Fast, Efficient | Volcanic Minds',
+			title: 'Volcanic Minds | Smart, Fast, Efficient',
 			meta: [
 				{ charset: 'utf-8' },
 				{
