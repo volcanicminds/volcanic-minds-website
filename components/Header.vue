@@ -91,9 +91,9 @@ export default Vue.extend({
 		background-position center
 		&.it-it
 			background-image url('~/assets/images/it-it.png')
-		&.de-de
+		&.de
 			background-image url('~/assets/images/de-de.png')
-		&.en-eu
+		&.en
 			background-image url('~/assets/images/en-eu.png')
 	.country-flag-dropdown
 		border-radius 10px
