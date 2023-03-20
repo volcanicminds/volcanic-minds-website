@@ -20,7 +20,7 @@
 			/>
 			<div
 				v-if="slice.primary.cta_link && !slice.primary.cta_link.isBroken && slice.primary.cta_text"
-				class="center mt2"
+				class="center mt4"
 			>
 				<PrismicLink :field="slice.primary.cta_link" class="btn btn-primary btn-big mb4 uppercase">{{
 					slice.primary.cta_text
@@ -64,7 +64,7 @@ defineProps({
 	&-subtitle
 		font-size 1.2em
 		@media (min-width: 52em)
-			font-size 1.4em
+			font-size 1.5em
 		>>> strong
 			font-weight 700
 			color var(--red-pigment)

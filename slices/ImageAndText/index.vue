@@ -52,10 +52,10 @@ defineProps({
 <style lang="stylus" scoped>
 .gradient-bg
 	background var(--rainbow-gradient)
-	border-radius 10px
+	border-radius 40px 10px
 	padding 4px
 	@media (max-width: 52em)
 		max-height 250px
 	img
-		border-radius 7px
+		border-radius 37px 6px
 </style>

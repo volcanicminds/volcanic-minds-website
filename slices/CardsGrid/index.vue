@@ -13,7 +13,7 @@
 			<div class="cards-container mt3">
 				<div v-for="(item, i) in slice.items" :key="`slice-item-${i}`" class="card p3">
 					<font-awesome-icon v-if="item.card_icon" :icon="item.card_icon" class="fa-2xl" />
-					<div v-if="item.card_title" class="h2 my2">{{ item.card_title }}</div>
+					<div v-if="item.card_title" class="h2 mt3 mb2">{{ item.card_title }}</div>
 					<PrismicRichText v-if="item.card_desc" :field="item.card_desc" />
 				</div>
 			</div>
@@ -44,5 +44,7 @@ defineProps({
 	grid-gap 15px
 	.card
 		background-color var(--raisin-black-2)
-		border-radius 10px
+		border-radius 40px 10px
+		*
+			word-wrap break-word
 </style>
