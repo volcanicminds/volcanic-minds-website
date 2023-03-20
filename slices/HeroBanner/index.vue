@@ -57,6 +57,7 @@ defineProps({
 	&-title
 		font-weight 100
 		font-size 3.3em
+		word-wrap break-word
 		@media (min-width: 52em)
 			font-size 5em
 		>>> p

@@ -11,7 +11,7 @@
 			</WrapperContainer>
 			<WrapperContainer v-if="headerData.data.links" class="py2 flex-auto overflow-auto center">
 				<template v-for="(link, i) in headerData.data.links">
-					<PrismicLink :key="i" class="block my2 h2 font-light" :field="link.link_url">{{
+					<PrismicLink :key="i" class="block my2 h2 font-light" :field="link.link_url" @click.native="closeSidebar">{{
 						link.link_title
 					}}</PrismicLink>
 				</template>
