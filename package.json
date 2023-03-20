@@ -29,7 +29,7 @@
 		"basscss": "^8.1.0",
 		"core-js": "^3.29.1",
 		"normalize.css": "^8.0.1",
-		"nuxt": "^2.16.2",
+		"nuxt": "2.16.2",
 		"prettier-plugin-stylus": "^0.0.1-beta.8",
 		"vue": "^2.7.10",
 		"vue-click-outside": "^1.1.0",
@@ -38,7 +38,7 @@
 		"vue-template-compiler": "^2.7.14"
 	},
 	"devDependencies": {
-		"@nuxt/types": "^2.16.0",
+		"@nuxt/types": "2.16.2",
 		"@nuxt/typescript-build": "^2.1.0",
 		"@nuxtjs/eslint-config-typescript": "^12.0.0",
 		"@nuxtjs/eslint-module": "^3.1.0",
@@ -54,7 +54,7 @@
 		"eslint-plugin-nuxt": "^4.0.0",
 		"eslint-plugin-vue": "^9.9.0",
 		"nuxt-compress": "^5.0.0",
-		"prettier": "^2.8.4",
+		"prettier": "^2.8.5",
 		"slice-machine-ui": "^0.7.1",
 		"stylus": "^0.59.0",
 		"stylus-loader": "4.3.3"
