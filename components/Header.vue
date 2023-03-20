@@ -81,7 +81,7 @@ export default Vue.extend({
 <style lang="stylus" scoped>
 .header-container
 	position sticky
-	@media (max-width: 40em)
+	@media (max-width: 52em)
 		.logo
 			height 30px
 	.country-flag
