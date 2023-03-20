@@ -43,7 +43,7 @@ interface FirstLevelPageDocumentData {
      */
     slices: prismicT.SliceZone<FirstLevelPageDocumentDataSlicesSlice>;
     /**
-     * Titolo SEO field in *Pagina di primo livello*
+     * SEO title field in *Pagina di primo livello*
      *
      * - **Field Type**: Text
      * - **Placeholder**: *None*
@@ -53,6 +53,72 @@ interface FirstLevelPageDocumentData {
      *
      */
     seo_title: prismicT.KeyTextField;
+    /**
+     * SEO description field in *Pagina di primo livello*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: first_level_page.seo_description
+     * - **Tab**: SEO
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    seo_description: prismicT.KeyTextField;
+    /**
+     * OG title field in *Pagina di primo livello*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: first_level_page.og_title
+     * - **Tab**: SEO
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    og_title: prismicT.KeyTextField;
+    /**
+     * OG description field in *Pagina di primo livello*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: first_level_page.og_description
+     * - **Tab**: SEO
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    og_description: prismicT.KeyTextField;
+    /**
+     * OG sitename field in *Pagina di primo livello*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: first_level_page.og_sitename
+     * - **Tab**: SEO
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    og_sitename: prismicT.KeyTextField;
+    /**
+     * OG url field in *Pagina di primo livello*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: first_level_page.og_url
+     * - **Tab**: SEO
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    og_url: prismicT.KeyTextField;
+    /**
+     * OG image field in *Pagina di primo livello*
+     *
+     * - **Field Type**: Image
+     * - **Placeholder**: *None*
+     * - **API ID Path**: first_level_page.og_image
+     * - **Tab**: SEO
+     * - **Documentation**: https://prismic.io/docs/core-concepts/image
+     *
+     */
+    og_image: prismicT.ImageField<never>;
 }
 /**
  * Slice for *Pagina di primo livello → Slice Zone*
@@ -312,7 +378,7 @@ interface HomepageDocumentData {
      */
     slices: prismicT.SliceZone<HomepageDocumentDataSlicesSlice>;
     /**
-     * Titolo SEO field in *Homepage*
+     * SEO title field in *Homepage*
      *
      * - **Field Type**: Text
      * - **Placeholder**: *None*
@@ -322,6 +388,72 @@ interface HomepageDocumentData {
      *
      */
     seo_title: prismicT.KeyTextField;
+    /**
+     * SEO description field in *Homepage*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: homepage.seo_description
+     * - **Tab**: SEO
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    seo_description: prismicT.KeyTextField;
+    /**
+     * OG title field in *Homepage*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: homepage.og_title
+     * - **Tab**: SEO
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    og_title: prismicT.KeyTextField;
+    /**
+     * OG description field in *Homepage*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: homepage.og_description
+     * - **Tab**: SEO
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    og_description: prismicT.KeyTextField;
+    /**
+     * OG sitename field in *Homepage*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: homepage.og_sitename
+     * - **Tab**: SEO
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    og_sitename: prismicT.KeyTextField;
+    /**
+     * OG url field in *Homepage*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: homepage.og_url
+     * - **Tab**: SEO
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    og_url: prismicT.KeyTextField;
+    /**
+     * OG image field in *Homepage*
+     *
+     * - **Field Type**: Image
+     * - **Placeholder**: *None*
+     * - **API ID Path**: homepage.og_image
+     * - **Tab**: SEO
+     * - **Documentation**: https://prismic.io/docs/core-concepts/image
+     *
+     */
+    og_image: prismicT.ImageField<never>;
 }
 /**
  * Slice for *Homepage → Slice Zone*
@@ -386,16 +518,82 @@ interface SecondLevelPageDocumentData {
      */
     slices: prismicT.SliceZone<SecondLevelPageDocumentDataSlicesSlice>;
     /**
-     * Titolo SEO field in *Pagina di secondo livello*
+     * SEO title field in *Pagina di secondo livello*
      *
      * - **Field Type**: Text
      * - **Placeholder**: *None*
-     * - **API ID Path**: second_level_page.SEO_title
+     * - **API ID Path**: second_level_page.seo_title
      * - **Tab**: SEO
      * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
      *
      */
-    SEO_title: prismicT.KeyTextField;
+    seo_title: prismicT.KeyTextField;
+    /**
+     * SEO description field in *Pagina di secondo livello*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: second_level_page.seo_description
+     * - **Tab**: SEO
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    seo_description: prismicT.KeyTextField;
+    /**
+     * OG title field in *Pagina di secondo livello*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: second_level_page.og_title
+     * - **Tab**: SEO
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    og_title: prismicT.KeyTextField;
+    /**
+     * OG description field in *Pagina di secondo livello*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: second_level_page.og_description
+     * - **Tab**: SEO
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    og_description: prismicT.KeyTextField;
+    /**
+     * OG sitename field in *Pagina di secondo livello*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: second_level_page.og_sitename
+     * - **Tab**: SEO
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    og_sitename: prismicT.KeyTextField;
+    /**
+     * OG url field in *Pagina di secondo livello*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: second_level_page.og_url
+     * - **Tab**: SEO
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    og_url: prismicT.KeyTextField;
+    /**
+     * OG image field in *Pagina di secondo livello*
+     *
+     * - **Field Type**: Image
+     * - **Placeholder**: *None*
+     * - **API ID Path**: second_level_page.og_image
+     * - **Tab**: SEO
+     * - **Documentation**: https://prismic.io/docs/core-concepts/image
+     *
+     */
+    og_image: prismicT.ImageField<never>;
 }
 /**
  * Slice for *Pagina di secondo livello → Slice Zone*
