@@ -1,6 +1,6 @@
 <template>
 	<WrapperSlice
-		css-class="relative py3 overflow-hidden hero"
+		css-class="relative py4 overflow-hidden hero"
 		:margin-top="slice.primary.margin_top || false"
 		:margin-bottom="slice.primary.margin_bottom || false"
 		:enable-observer="slice.primary.enable_animation || false"
@@ -8,7 +8,7 @@
 		<WrapperContainer class="relative z1">
 			<PrismicRichText
 				v-if="slice.primary.title.length && slice.primary.title[0].text !== ''"
-				class="mt2 mb0 hero-title"
+				class="m0 hero-title"
 				:field="slice.primary.title"
 				wrapper="h1"
 			/>

@@ -23,12 +23,11 @@
 			</div>
 			<div v-if="slice.primary.title" class="h1 mb3">{{ slice.primary.title }}</div>
 			<PrismicRichText v-if="slice.primary.text" :field="slice.primary.text" />
-			<PrismicLink
-				v-if="slice.primary.button_label"
-				:field="slice.primary.button_link"
-				class="btn btn-primary btn-big uppercase mb4"
-				>{{ slice.primary.button_label }}</PrismicLink
-			>
+			<div v-if="slice.primary.button_label && slice.primary.button_link" class="mt3">
+				<PrismicLink :field="slice.primary.button_link" class="btn btn-primary btn-big uppercase">{{
+					slice.primary.button_label
+				}}</PrismicLink>
+			</div>
 		</WrapperContainer>
 	</WrapperSlice>
 </template>
