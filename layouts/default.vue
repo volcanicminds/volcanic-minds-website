@@ -10,6 +10,17 @@
 <script lang="ts">
 import Vue from 'vue'
 export default Vue.extend({
+	head() {
+		return {
+			link: [
+				{
+					hid: 'canonical',
+					rel: 'canonical',
+					href: `${process.env.NUXT_SITENAME}${this.$nuxt.$route.path}`
+				}
+			]
+		}
+	},
 	watch: {
 		$route() {
 			this.closeSidebar()
