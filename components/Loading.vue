@@ -5,7 +5,7 @@
 			class="loading-page top-0 left-0 col-12 h100 fixed flex flex-column items-center justify-center"
 		>
 			<img loading="lazy" class="logo" src="~/assets/images/logo/logo-dark.png" height="50" alt="Logo" />
-			<div class="font-thin mt2 h3">smart, fast, efficient</div>
+			<!-- <div class="font-thin mt2 h3">smart, fast, efficient</div> -->
 			<div class="spinner mt3" />
 		</div>
 	</Transition>
