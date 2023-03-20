@@ -11,9 +11,13 @@
 			</WrapperContainer>
 			<WrapperContainer v-if="headerData.data.links" class="py2 flex-auto overflow-auto center">
 				<template v-for="(link, i) in headerData.data.links">
-					<PrismicLink :key="i" class="block my2 h2 font-light" :field="link.link_url" @click.native="closeSidebar">{{
-						link.link_title
-					}}</PrismicLink>
+					<PrismicLink
+						:key="i"
+						class="block sidebar-link h2 font-light"
+						:field="link.link_url"
+						@click.native="closeSidebar"
+						>{{ link.link_title }}</PrismicLink
+					>
 				</template>
 			</WrapperContainer>
 			<div class="flex flex-column items-center py3">
@@ -64,6 +68,10 @@ export default Vue.extend({
 <style lang="stylus" scoped>
 .social-links-container
 	gap 30px
+
+.sidebar-link
+	margin-top 24px
+	margin-bottom 24px
 
 .footer-logo
 	@media screen and (orientation: landscape)

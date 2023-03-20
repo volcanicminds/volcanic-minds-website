@@ -56,7 +56,7 @@ defineProps({
 .hero
 	&-title
 		font-weight 100
-		font-size 3.3em
+		font-size 13vw
 		word-wrap break-word
 		@media (min-width: 52em)
 			font-size 5em
