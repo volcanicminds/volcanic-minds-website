@@ -98,17 +98,6 @@ interface FirstLevelPageDocumentData {
      */
     og_sitename: prismicT.KeyTextField;
     /**
-     * OG url field in *Pagina di primo livello*
-     *
-     * - **Field Type**: Text
-     * - **Placeholder**: *None*
-     * - **API ID Path**: first_level_page.og_url
-     * - **Tab**: SEO
-     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
-     *
-     */
-    og_url: prismicT.KeyTextField;
-    /**
      * OG image field in *Pagina di primo livello*
      *
      * - **Field Type**: Image
@@ -433,17 +422,6 @@ interface HomepageDocumentData {
      */
     og_sitename: prismicT.KeyTextField;
     /**
-     * OG url field in *Homepage*
-     *
-     * - **Field Type**: Text
-     * - **Placeholder**: *None*
-     * - **API ID Path**: homepage.og_url
-     * - **Tab**: SEO
-     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
-     *
-     */
-    og_url: prismicT.KeyTextField;
-    /**
      * OG image field in *Homepage*
      *
      * - **Field Type**: Image
@@ -572,17 +550,6 @@ interface SecondLevelPageDocumentData {
      *
      */
     og_sitename: prismicT.KeyTextField;
-    /**
-     * OG url field in *Pagina di secondo livello*
-     *
-     * - **Field Type**: Text
-     * - **Placeholder**: *None*
-     * - **API ID Path**: second_level_page.og_url
-     * - **Tab**: SEO
-     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
-     *
-     */
-    og_url: prismicT.KeyTextField;
     /**
      * OG image field in *Pagina di secondo livello*
      *

@@ -110,13 +110,6 @@
           "placeholder": ""
         }
       },
-      "og_url": {
-        "type": "Text",
-        "config": {
-          "label": "OG url",
-          "placeholder": ""
-        }
-      },
       "og_image": {
         "type": "Image",
         "config": {

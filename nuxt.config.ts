@@ -23,10 +23,15 @@ export default async () => {
 
 		// Global page headers: https://go.nuxtjs.dev/config-head
 		head: {
-			title: 'Volcanic Minds',
+			title: 'Smart, Fast, Efficient | Volcanic Minds',
 			meta: [
 				{ charset: 'utf-8' },
-				{ name: 'description', content: 'Volcanic Minds website' },
+				{
+					name: 'description',
+					hid: 'description',
+					content:
+						'Siamo una società specializzata in soluzioni tailor-made e servizi quality-driven. Usa le nostre competenze digitali per affrontare i tuoi progetti.'
+				},
 				{
 					name: 'viewport',
 					content: 'height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0'
