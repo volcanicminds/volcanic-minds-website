@@ -28,7 +28,8 @@
 						:field="{ ...alternateLang, link_type: 'Document' }"
 						class="block country-flag my2"
 						:class="alternateLang.lang"
-						aria-label="Scegli lingua"
+						aria-label="Choose language"
+						@click.native="isLanguageSelectorOpened = false"
 					/>
 				</div>
 			</div>
