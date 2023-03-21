@@ -20,6 +20,15 @@
             "multi": "strong,em,heading1"
           }
         },
+        "title_mb": {
+          "type": "Boolean",
+          "config": {
+            "label": "Margine inferiore titolo",
+            "placeholder_false": "NO",
+            "placeholder_true": "SI",
+            "default_value": false
+          }
+        },
         "subtitle": {
           "type": "StructuredText",
           "config": {

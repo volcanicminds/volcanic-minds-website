@@ -1062,6 +1062,17 @@ interface HeroBannerSliceDefaultPrimary {
      */
     title: prismicT.RichTextField;
     /**
+     * Margine inferiore titolo field in *HeroBanner → Primary*
+     *
+     * - **Field Type**: Boolean
+     * - **Placeholder**: *None*
+     * - **Default Value**: false
+     * - **API ID Path**: hero_banner.primary.title_mb
+     * - **Documentation**: https://prismic.io/docs/core-concepts/boolean
+     *
+     */
+    title_mb: prismicT.BooleanField;
+    /**
      * Sottotitolo field in *HeroBanner → Primary*
      *
      * - **Field Type**: Rich Text

@@ -3,6 +3,7 @@
 		:margin-top="slice.primary.margin_top || false"
 		:margin-bottom="slice.primary.margin_bottom || false"
 		:enable-observer="slice.primary.enable_animation || false"
+		:is-section="slice.primary.subtitle ? true : false"
 	>
 		<WrapperContainer>
 			<div class="center">

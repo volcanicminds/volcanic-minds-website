@@ -4,6 +4,7 @@
 		:margin-bottom="slice.primary.margin_bottom || false"
 		:css-class="`py4 relative overflow-hidden${slice.primary.enable_bg ? ' bg-raisin-black-2' : ''}`"
 		:enable-observer="slice.primary.enable_animation || false"
+		:is-section="slice.primary.title ? true : false"
 	>
 		<WrapperPrismicImage
 			:field="slice.primary.background_1"

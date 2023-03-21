@@ -4,11 +4,13 @@
 		:margin-top="slice.primary.margin_top || false"
 		:margin-bottom="slice.primary.margin_bottom || false"
 		:enable-observer="slice.primary.enable_animation || false"
+		is-section
 	>
 		<WrapperContainer class="relative z1">
 			<PrismicRichText
 				v-if="slice.primary.title.length && slice.primary.title[0].text !== ''"
 				class="hero-title"
+				:class="slice.primary.title_mb ? '' : 'mb0'"
 				:field="slice.primary.title"
 				wrapper="div"
 			/>
@@ -64,6 +66,10 @@ defineProps({
 				font-size 5em
 			&:first-letter
 				text-transform lowercase
+
+		&.mb0
+			>>> h1
+				margin-bottom 0
 		>>> p
 			margin 0
 	&-subtitle

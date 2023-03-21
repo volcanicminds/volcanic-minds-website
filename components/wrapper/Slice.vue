@@ -1,6 +1,7 @@
 <template>
 	<Observer @isVisible.once="isSliceVisible = true">
-		<section
+		<component
+			:is="isSection ? 'section' : 'div'"
 			:class="[
 				cssClass,
 				marginTop && 'mt4',
@@ -10,7 +11,7 @@
 			]"
 		>
 			<slot />
-		</section>
+		</component>
 	</Observer>
 </template>
 
@@ -23,9 +24,11 @@ withDefaults(
 		marginBottom: boolean
 		cssClass?: string
 		enableObserver: boolean
+		isSection?: boolean
 	}>(),
 	{
-		cssClass: ''
+		cssClass: '',
+		isSection: false
 	}
 )
 

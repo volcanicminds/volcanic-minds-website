@@ -77,7 +77,7 @@ export default async () => {
 				{
 					rel: 'preconnect',
 					href: 'https://fonts.gstatic.com/',
-					crossorigin: true
+					crossorigin: 'anonymous'
 				},
 				{
 					rel: 'preload',
@@ -93,7 +93,6 @@ export default async () => {
 			],
 			script: [
 				{
-					type: 'text/javascript',
 					async: true,
 					defer: true,
 					src: 'https://static.cdn.prismic.io/prismic.js?new=true&repo=volcanic-website'

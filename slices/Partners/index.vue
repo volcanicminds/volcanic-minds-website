@@ -3,10 +3,11 @@
 		:margin-top="slice.primary.margin_top || false"
 		:margin-bottom="slice.primary.margin_bottom || false"
 		:enable-observer="slice.primary.enable_animation || false"
+		:is-section="slice.primary.title ? true : false"
 	>
 		<WrapperContainer class="grid-container">
 			<div class="title mb3 sm-mb0">
-				<h2 class="h1 mt0 mb2">{{ slice.primary.title }}</h2>
+				<h2 v-if="slice.primary.title" class="h1 mt0 mb2">{{ slice.primary.title }}</h2>
 				<RainbowBar />
 			</div>
 			<div class="partners-container">

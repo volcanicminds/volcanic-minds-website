@@ -4,6 +4,7 @@
 		:margin-bottom="slice.primary.margin_bottom || false"
 		:css-class="`py4${slice.primary.enable_bg ? ' bg-raisin-black-2' : ''}`"
 		:enable-observer="slice.primary.enable_animation || false"
+		:is-section="slice.primary.subtitle ? true : false"
 	>
 		<WrapperContainer class="flex flex-wrap" :class="slice.primary.reverse ? 'row-reverse' : ''">
 			<div class="col-12 md-col-5 flex items-center justify-center mb3 md-mb0">
@@ -12,8 +13,8 @@
 				</div>
 			</div>
 			<div class="col-12 md-col-7 flex flex-column justify-center" :class="slice.primary.reverse ? 'md-pr4' : 'md-pl4'">
-				<div class="h2 font-thin mb1">{{ slice.primary.title }}</div>
-				<h2 class="h1 mb1 mt0">{{ slice.primary.subtitle }}</h2>
+				<div v-if="slice.primary.title" class="h2 font-thin mb1">{{ slice.primary.title }}</div>
+				<h2 v-if="slice.primary.subtitle" class="h1 mb1 mt0">{{ slice.primary.subtitle }}</h2>
 				<PrismicRichText :field="slice.primary.description" wrapper="div" />
 				<div
 					v-if="slice.primary.cta_link && !slice.primary.cta_link.isBroken && slice.primary.cta_text"
