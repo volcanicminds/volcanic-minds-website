@@ -7,7 +7,7 @@
 		<WrapperContainer>
 			<div class="center">
 				<div v-if="slice.primary.title" class="h2 font-thin mb1">{{ slice.primary.title }}</div>
-				<div v-if="slice.primary.subtitle" class="h1">{{ slice.primary.subtitle }}</div>
+				<h2 v-if="slice.primary.subtitle" class="h1 m0">{{ slice.primary.subtitle }}</h2>
 			</div>
 
 			<div class="cards-container mt3">

@@ -8,9 +8,9 @@
 		<WrapperContainer class="relative z1">
 			<PrismicRichText
 				v-if="slice.primary.title.length && slice.primary.title[0].text !== ''"
-				class="m0 hero-title"
+				class="hero-title"
 				:field="slice.primary.title"
-				wrapper="h1"
+				wrapper="div"
 			/>
 			<PrismicRichText
 				v-if="slice.primary.subtitle.length && slice.primary.subtitle[0].text !== ''"
@@ -55,11 +55,15 @@ defineProps({
 <style lang="stylus" scoped>
 .hero
 	&-title
-		font-weight 100
-		font-size 13vw
-		word-wrap break-word
-		@media (min-width: 52em)
-			font-size 5em
+		>>> h1
+			margin-top 0
+			font-weight 100
+			font-size 13vw
+			word-wrap break-word
+			@media (min-width: 52em)
+				font-size 5em
+			&:first-letter
+				text-transform lowercase
 		>>> p
 			margin 0
 	&-subtitle

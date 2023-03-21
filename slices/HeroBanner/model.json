@@ -17,7 +17,7 @@
             "label": "Titolo",
             "placeholder": "",
             "allowTargetBlank": true,
-            "multi": "strong,em,paragraph"
+            "multi": "strong,em,heading1"
           }
         },
         "subtitle": {

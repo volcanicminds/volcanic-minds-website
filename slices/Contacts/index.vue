@@ -16,12 +16,12 @@
 			class="absolute top-0 right-0 bg-image contain position-top-right"
 		/>
 		<WrapperContainer class="center relative">
-			<div class="flex flex-wrap justify-center faces-container">
-				<div v-for="(face, i) in slice.items" :key="i" class="faces-image overflow-hidden mb2">
+			<div v-if="slice.items.length" class="flex flex-wrap justify-center faces-container mb3">
+				<div v-for="(face, i) in slice.items" :key="i" class="faces-image overflow-hidden">
 					<WrapperPrismicImage :field="face.face" :size="1000" class="h100 col-12 cover" />
 				</div>
 			</div>
-			<div v-if="slice.primary.title" class="h1 mb3">{{ slice.primary.title }}</div>
+			<h2 v-if="slice.primary.title" class="h1 mt0 mb3">{{ slice.primary.title }}</h2>
 			<PrismicRichText v-if="slice.primary.text" :field="slice.primary.text" />
 			<div v-if="slice.primary.button_label && slice.primary.button_link" class="mt3">
 				<PrismicLink :field="slice.primary.button_link" class="btn btn-primary btn-big uppercase">{{

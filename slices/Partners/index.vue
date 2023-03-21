@@ -6,7 +6,7 @@
 	>
 		<WrapperContainer class="grid-container">
 			<div class="title mb3 sm-mb0">
-				<div class="h1 mb2">{{ slice.primary.title }}</div>
+				<h2 class="h1 mt0 mb2">{{ slice.primary.title }}</h2>
 				<RainbowBar />
 			</div>
 			<div class="partners-container">

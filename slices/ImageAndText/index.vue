@@ -13,7 +13,7 @@
 			</div>
 			<div class="col-12 md-col-7 flex flex-column justify-center" :class="slice.primary.reverse ? 'md-pr4' : 'md-pl4'">
 				<div class="h2 font-thin mb1">{{ slice.primary.title }}</div>
-				<div class="h1 mb1">{{ slice.primary.subtitle }}</div>
+				<h2 class="h1 mb1 mt0">{{ slice.primary.subtitle }}</h2>
 				<PrismicRichText :field="slice.primary.description" wrapper="div" />
 				<div
 					v-if="slice.primary.cta_link && !slice.primary.cta_link.isBroken && slice.primary.cta_text"
