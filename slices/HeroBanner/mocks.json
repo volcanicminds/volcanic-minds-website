@@ -7,9 +7,9 @@
         "__TYPE__": "StructuredTextContent",
         "value": [
           {
-            "type": "paragraph",
+            "type": "heading1",
             "content": {
-              "text": "Deserunt est in Lorem velit incididunt ex. Sint non minim tempor laboris elit quis culpa Lorem eu incididunt est fugiat velit. Ullamco dolor magna incididunt nostrud proident sunt cillum fugiat."
+              "text": "Section"
             }
           }
         ]
@@ -71,6 +71,14 @@
       "background_image_blur": {
         "__TYPE__": "BooleanContent",
         "value": false
+      },
+      "enable_animation": {
+        "__TYPE__": "BooleanContent",
+        "value": true
+      },
+      "title_mb": {
+        "__TYPE__": "BooleanContent",
+        "value": true
       }
     },
     "items": [

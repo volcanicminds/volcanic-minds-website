@@ -1,0 +1,51 @@
+{
+  "id": "header",
+  "label": "Header",
+  "repeatable": false,
+  "status": true,
+  "json": {
+    "Main": {
+      "logo": {
+        "type": "Image",
+        "config": {
+          "label": "Logo",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "links": {
+        "type": "Group",
+        "config": {
+          "label": "Links",
+          "fields": {
+            "link_url": {
+              "type": "Link",
+              "config": {
+                "label": "URL link",
+                "placeholder": "",
+                "allowTargetBlank": true,
+                "select": null
+              }
+            },
+            "link_title": {
+              "type": "Text",
+              "config": {
+                "label": "Titolo link",
+                "placeholder": ""
+              }
+            },
+            "hide_on_desktop": {
+              "type": "Boolean",
+              "config": {
+                "label": "Nascondi su desktop",
+                "placeholder_false": "NO",
+                "placeholder_true": "SI",
+                "default_value": false
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

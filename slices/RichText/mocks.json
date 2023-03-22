@@ -1,0 +1,46 @@
+[
+  {
+    "__TYPE__": "SharedSliceContent",
+    "variation": "default",
+    "primary": {
+      "text": {
+        "__TYPE__": "StructuredTextContent",
+        "value": [
+          {
+            "type": "paragraph",
+            "content": {
+              "text": "Dolore velit reprehenderit laboris dolor laborum tempor."
+            }
+          }
+        ]
+      },
+      "text_align": {
+        "__TYPE__": "FieldContent",
+        "value": "Right",
+        "type": "Select"
+      },
+      "margin_top": {
+        "__TYPE__": "BooleanContent",
+        "value": true
+      },
+      "margin_bottom": {
+        "__TYPE__": "BooleanContent",
+        "value": true
+      },
+      "big_text": {
+        "__TYPE__": "BooleanContent",
+        "value": false
+      },
+      "enable_animation": {
+        "__TYPE__": "BooleanContent",
+        "value": false
+      }
+    },
+    "items": [
+      {
+        "__TYPE__": "GroupItemContent",
+        "value": []
+      }
+    ]
+  }
+]

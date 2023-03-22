@@ -17,7 +17,16 @@
             "label": "Titolo",
             "placeholder": "",
             "allowTargetBlank": true,
-            "multi": "strong,em,paragraph"
+            "multi": "strong,em,heading1"
+          }
+        },
+        "title_mb": {
+          "type": "Boolean",
+          "config": {
+            "label": "Margine inferiore titolo",
+            "placeholder_false": "NO",
+            "placeholder_true": "SI",
+            "default_value": false
           }
         },
         "subtitle": {
@@ -78,6 +87,15 @@
           "config": {
             "label": "CTA testo",
             "placeholder": ""
+          }
+        },
+        "enable_animation": {
+          "type": "Boolean",
+          "config": {
+            "label": "Abilita animazione",
+            "placeholder_false": "NO",
+            "placeholder_true": "SI",
+            "default_value": false
           }
         }
       },

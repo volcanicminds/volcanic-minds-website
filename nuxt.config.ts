@@ -16,17 +16,22 @@ export default async () => {
 	})
 
 	return {
+		server: {
+			host: '0.0.0.0' // default: localhost
+		},
 		target: 'static',
 
 		// Global page headers: https://go.nuxtjs.dev/config-head
 		head: {
-			title: 'Volcanic Minds',
-			htmlAttrs: {
-				lang: 'it-it'
-			},
+			title: 'Volcanic Minds | Smart, Fast, Efficient',
 			meta: [
 				{ charset: 'utf-8' },
-				{ name: 'description', content: 'Volcanic Minds website' },
+				{
+					name: 'description',
+					hid: 'description',
+					content:
+						'Siamo una società specializzata in soluzioni tailor-made e servizi quality-driven. Usa le nostre competenze digitali per affrontare i tuoi progetti.'
+				},
 				{
 					name: 'viewport',
 					content: 'height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0'
@@ -72,7 +77,7 @@ export default async () => {
 				{
 					rel: 'preconnect',
 					href: 'https://fonts.gstatic.com/',
-					crossorigin: true
+					crossorigin: 'anonymous'
 				},
 				{
 					rel: 'preload',
@@ -87,14 +92,27 @@ export default async () => {
 				}
 			],
 			script: [
+				// {
+				// 	'data-categories': 'analytics',
+				// 	type: 'text/plain',
+				// 	async: true,
+				// 	src: 'https://www.googletagmanager.com/gtag/js?id=G-7F4GLM9RZL'
+				// },
+				// {
+				// 	'data-categories': 'analytics',
+				// 	type: 'text/plain',
+				// 	src: '/gtag.js',
+				// 	async: true
+				// },
 				{
-					type: 'text/javascript',
 					async: true,
 					defer: true,
 					src: 'https://static.cdn.prismic.io/prismic.js?new=true&repo=volcanic-website'
 				}
 			]
 		},
+
+		generate: { fallback: '404.html' },
 
 		// Global CSS: https://go.nuxtjs.dev/config-css
 		css: [
@@ -111,7 +129,7 @@ export default async () => {
 		],
 
 		// Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-		plugins: ['~/plugins/fontawesome.js'],
+		plugins: ['~/plugins/fontawesome.js', '~/plugins/constants'],
 
 		// Auto import components: https://go.nuxtjs.dev/config-components
 		components: true,
@@ -133,7 +151,8 @@ export default async () => {
 		],
 
 		i18n: {
-			locales,
+			// locales,
+			locales: ['it-it'],
 			defaultLocale,
 			detectBrowserLanguage: {
 				alwaysRedirect: true
@@ -148,7 +167,9 @@ export default async () => {
 		},
 
 		// Build Configuration: https://go.nuxtjs.dev/config-build
-		build: {},
+		build: {
+			transpile: ['vue-intersect']
+		},
 
 		prismic: {
 			endpoint: smConfig.apiEndpoint,
@@ -175,10 +196,7 @@ export default async () => {
 			}
 		},
 
-		loading: {
-			color: 'white',
-			height: '5px'
-		},
+		loading: '~/components/Loading.vue',
 
 		typescript: {
 			typeCheck: {

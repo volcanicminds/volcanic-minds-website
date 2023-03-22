@@ -2,10 +2,59 @@
   "_cts": {
     "homepage": {},
     "first_level_page": {},
-    "second_level_page": {}
+    "second_level_page": {},
+    "header": {
+      "links": {}
+    },
+    "footer": {
+      "icon_links": {},
+      "text_links": {}
+    }
   },
   "slices": {
     "HeroBanner": {
+      "default": {
+        "primary": {}
+      }
+    },
+    "ImageAndText": {
+      "default": {
+        "primary": {}
+      }
+    },
+    "RichText": {
+      "default": {
+        "primary": {}
+      }
+    },
+    "CardsGrid": {
+      "default": {
+        "primary": {},
+        "items": {}
+      }
+    },
+    "Accordion": {
+      "default": {
+        "primary": {},
+        "items": {}
+      }
+    },
+    "Contacts": {
+      "default": {
+        "primary": {}
+      }
+    },
+    "Statistics": {
+      "default": {
+        "primary": {}
+      }
+    },
+    "Partners": {
+      "default": {
+        "primary": {}
+      }
+    },
+    "CallToAction": {
       "default": {
         "primary": {}
       }

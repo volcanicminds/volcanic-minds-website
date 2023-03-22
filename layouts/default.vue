@@ -2,19 +2,23 @@
 	<div class="global-container flex flex-column">
 		<Sidebar />
 		<Header />
-		<div class="col-12 flex-auto flex flex-column main-container">
-			<nuxt />
-		</div>
+		<nuxt />
 		<Footer />
 	</div>
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue'
-export default defineComponent({
-	watch: {
-		$route() {
-			this.closeSidebar()
+import Vue from 'vue'
+export default Vue.extend({
+	head() {
+		return {
+			link: [
+				{
+					hid: 'canonical',
+					rel: 'canonical',
+					href: `${process.env.NUXT_SITENAME}${this.$nuxt.$route.path}`
+				}
+			]
 		}
 	},
 	mounted() {
@@ -26,6 +30,9 @@ export default defineComponent({
 	methods: {
 		closeSidebar() {
 			this.$store.commit('prismic/setIsSidebarOpened', false)
+			if (process.client) {
+				document.body.style.overflow = 'visible'
+			}
 		},
 		onResize() {
 			window.innerWidth > 831 && this.closeSidebar()

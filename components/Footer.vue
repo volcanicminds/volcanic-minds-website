@@ -1,44 +1,48 @@
 <template>
-	<div class="bg-raisin-black">
-		<WrapperContainer class="center py3">
-			<div class="flex justify-center social-links-container">
-				<!-- <NuxtLink external target="_blank" aria-label="Send email" to="mailto:info@volcanicminds.com">
-					<img loading="lazy" class="social-logo" src="../assets/images/icons/email.png" alt="Email" />
-				</NuxtLink>
-				<NuxtLink
-					external
-					target="_blank"
-					aria-label="Follow us on LinkedIn"
-					to="https://www.linkedin.com/company/volcanic-minds"
-				>
-					<img loading="lazy" class="social-logo" src="../assets/images/icons/linkedin.png" alt="LinkedIn" />
-				</NuxtLink>
-				<NuxtLink
-					external
-					target="_blank"
-					aria-label="Follow us on Instagram"
-					to="https://www.instagram.com/volcanic_minds/"
-				>
-					<img loading="lazy" class="social-logo" src="../assets/images/icons/instagram.png" alt="Instagram" />
-				</NuxtLink> -->
+	<div v-if="footerData" class="bg-raisin-black">
+		<WrapperContainer class="py3">
+			<div class="flex flex-column items-center">
+				<WrapperPrismicImage v-if="footerData.data.logo" :field="footerData.data.logo" :size="200" />
+				<div v-if="footerData.data.icon_links" class="flex social-links-container mt3">
+					<template v-for="(link, i) in footerData.data.icon_links">
+						<PrismicLink v-if="link.icon" :key="i" :field="link.link" :aria-label="link.alt_text">
+							<font-awesome-icon :icon="link.icon" size="2xl" />
+						</PrismicLink>
+					</template>
+				</div>
 			</div>
-			<p class="mb0">
-				<small
-					>Volcanic Minds S.r.l. - Corso Vinzaglio 24, 10121 Torino (TO) - P. Iva 127<span></span>543<span
-					></span>300<span></span>12</small
+
+			<div v-if="footerData.data.text_links" class="center md-px4 mt3">
+				<PrismicLink
+					v-for="(textLink, index) in footerData.data.text_links"
+					:key="index"
+					:field="textLink.link"
+					class="footer-data"
+					>{{ textLink.text }}{{ index < footerData.data.text_links.length - 1 ? ' &#8226; ' : '' }}</PrismicLink
 				>
-			</p>
+			</div>
+			<div v-if="footerData.data.company_data" class="center md-px4 mt3">
+				<PrismicRichText :field="footerData.data.company_data" wrapper="div" class="footer-data" />
+			</div>
 		</WrapperContainer>
 	</div>
 </template>
 
+<script lang="ts">
+import Vue from 'vue'
+export default Vue.extend({
+	computed: {
+		footerData() {
+			return this.$store.state.prismic.footer
+		}
+	}
+})
+</script>
+
 <style lang="stylus" scoped>
 .social-links-container
-	gap 40px
-	@media screen and (min-width: 40em)
-		gap 60px
-	.social-logo
-		height 30px
-		@media screen and (min-width: 40em)
-			height 45px
+	gap 30px
+
+.footer-data
+	font-size 0.9rem
 </style>

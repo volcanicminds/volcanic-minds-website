@@ -1,40 +1,86 @@
 <template>
 	<Transition name="sidebar">
-		<div v-if="isSidebarOpened" class="fixed z4 col-12 h100 bg-raisin-black left-0 top-0">
-			<WrapperContainer class="py3">
-				<font-awesome-icon :icon="['fas', 'xmark']" class="fa-xl cursor-pointer" @click="closeSidebar" />
-				<div class="py3 center">
-					<NuxtLink to="/documents/VolcanicMinds-pitch.pdf" target="_blank" external class="block my2 h2"
-						>Scopri di pi&ugrave;</NuxtLink
-					>
+		<div
+			v-if="isSidebarOpened && headerData"
+			class="fixed z4 col-12 h100 bg-raisin-black left-0 top-0 flex flex-column"
+		>
+			<WrapperContainer class="pt3 pb2">
+				<div class="right">
+					<font-awesome-icon :icon="['fas', 'xmark']" class="fa-xl cursor-pointer" @click="closeSidebar" />
 				</div>
 			</WrapperContainer>
+			<WrapperContainer v-if="headerData.data.links" class="py2 flex-auto overflow-auto center">
+				<template v-for="(link, i) in headerData.data.links">
+					<PrismicLink
+						:key="i"
+						class="block sidebar-link h2 font-light"
+						:field="link.link_url"
+						@click.native="closeSidebar"
+						>{{ link.link_title }}</PrismicLink
+					>
+				</template>
+			</WrapperContainer>
+			<div class="flex flex-column items-center py3">
+				<WrapperPrismicImage
+					v-if="footerData.data.logo"
+					:field="footerData.data.logo"
+					:size="150"
+					class="footer-logo mb3"
+				/>
+				<div v-if="footerData.data.icon_links" class="flex social-links-container">
+					<template v-for="(link, i) in footerData.data.icon_links">
+						<PrismicLink v-if="link.icon" :key="i" :field="link.link" :aria-label="link.alt_text">
+							<font-awesome-icon :icon="link.icon" size="2xl" />
+						</PrismicLink>
+					</template>
+				</div>
+			</div>
+			<RainbowBar />
 		</div>
 	</Transition>
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue'
-export default defineComponent({
+import Vue from 'vue'
+export default Vue.extend({
 	computed: {
 		isSidebarOpened() {
 			return this.$store.state.prismic.isSidebarOpened
+		},
+		headerData() {
+			return this.$store.state.prismic.header
+		},
+		footerData() {
+			return this.$store.state.prismic.footer
 		}
 	},
 	methods: {
 		closeSidebar() {
 			this.$store.commit('prismic/setIsSidebarOpened', false)
+			if (process.client) {
+				document.body.style.overflow = 'visible'
+			}
 		}
 	}
 })
 </script>
 
 <style lang="stylus" scoped>
+.social-links-container
+	gap 30px
+
+.sidebar-link
+	margin-top 24px
+	margin-bottom 24px
+
+.footer-logo
+	@media screen and (orientation: landscape)
+		display none
 .sidebar-enter-active
 .sidebar-leave-active
-	transition opacity 0.5s ease
+	transition all 0.4s
 
 .sidebar-enter
 .sidebar-leave-to
-	opacity 0
+	transform translateX(100%)
 </style>

@@ -1,11 +1,28 @@
 <template>
-	<div class="relative py4 overflow-hidden hero">
+	<WrapperSlice
+		css-class="relative py4 overflow-hidden hero"
+		:margin-top="slice.primary.margin_top || false"
+		:margin-bottom="slice.primary.margin_bottom || false"
+		:enable-observer="slice.primary.enable_animation || false"
+		is-section
+	>
 		<WrapperContainer class="relative z1">
-			<PrismicRichText class="mt2 mb0 hero-title" :field="slice.primary.title" wrapper="h1" />
-			<PrismicRichText class="hero-subtitle" :field="slice.primary.subtitle" wrapper="div" />
+			<PrismicRichText
+				v-if="slice.primary.title.length && slice.primary.title[0].text !== ''"
+				class="hero-title"
+				:class="slice.primary.title_mb ? '' : 'mb0'"
+				:field="slice.primary.title"
+				wrapper="div"
+			/>
+			<PrismicRichText
+				v-if="slice.primary.subtitle.length && slice.primary.subtitle[0].text !== ''"
+				class="hero-subtitle"
+				:field="slice.primary.subtitle"
+				wrapper="div"
+			/>
 			<div
 				v-if="slice.primary.cta_link && !slice.primary.cta_link.isBroken && slice.primary.cta_text"
-				class="center mt2"
+				class="center mt4"
 			>
 				<PrismicLink :field="slice.primary.cta_link" class="btn btn-primary btn-big mb4 uppercase">{{
 					slice.primary.cta_text
@@ -17,9 +34,10 @@
 			:size="1000"
 			class="cover absolute col-12 h100 left-0 top-0"
 			:class="slice.primary.background_image_blur ? 'blur' : ''"
+			:lazy="false"
 		/>
 		<div class="fade-overlay absolute col-12 h100 left-0 top-0" />
-	</div>
+	</WrapperSlice>
 </template>
 
 <script lang="ts">
@@ -40,18 +58,25 @@ defineProps({
 <style lang="stylus" scoped>
 .hero
 	&-title
-		font-weight 100
-		font-size 50px
-		line-height 50px
-		@media (min-width: 52em)
-			font-size 80px
-			line-height 80px
+		>>> h1
+			margin-top 0
+			font-weight 100
+			font-size 13vw
+			word-wrap break-word
+			@media (min-width: 52em)
+				font-size 5em
+			&:first-letter
+				text-transform lowercase
+
+		&.mb0
+			>>> h1
+				margin-bottom 0
 		>>> p
 			margin 0
 	&-subtitle
-		font-size 20px
+		font-size 1.2em
 		@media (min-width: 52em)
-			font-size 25px
+			font-size 1.5em
 		>>> strong
 			font-weight 700
 			color var(--red-pigment)

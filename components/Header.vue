@@ -1,15 +1,16 @@
 <template>
-	<div class="bg-raisin-black header-container top-0 z3">
+	<div v-if="headerData" class="bg-raisin-black header-container top-0 z3">
 		<WrapperContainer class="flex items-center px3 py2">
-			<div class="flex-auto">
-				<NuxtLink :to="localePath('/')"
-					><img loading="lazy" class="logo" src="../assets/images/logo/logo-dark.png" height="50" alt="Logo"
-				/></NuxtLink>
+			<div v-if="headerData.data.logo" class="flex flex-auto">
+				<NuxtLink :to="localePath('/')" class="flex">
+					<WrapperPrismicImage :field="headerData.data.logo" :size="50" resize-by-height class="logo" />
+				</NuxtLink>
 			</div>
-			<!-- <NuxtLink to="/prenota-appuntamento" class="px2 xs-hide sm-hide">Prenota un appuntamento</NuxtLink> -->
-			<NuxtLink to="/documents/VolcanicMinds-pitch.pdf" target="_blank" external class="px2 pr0 xs-hide sm-hide"
-				>Scopri di pi&ugrave;</NuxtLink
-			>
+			<template v-for="(link, i) in headerData.data.links">
+				<PrismicLink v-if="!link.hide_on_desktop" :key="i" class="px2 pr0 xs-hide sm-hide" :field="link.link_url">{{
+					link.link_title
+				}}</PrismicLink>
+			</template>
 
 			<div v-click-outside="() => (isLanguageSelectorOpened = false)" class="relative">
 				<div
@@ -27,7 +28,8 @@
 						:field="{ ...alternateLang, link_type: 'Document' }"
 						class="block country-flag my2"
 						:class="alternateLang.lang"
-						aria-label="Scegli lingua"
+						aria-label="Choose language"
+						@click.native="isLanguageSelectorOpened = false"
 					/>
 				</div>
 			</div>
@@ -43,30 +45,34 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue'
+import Vue from 'vue'
 import ClickOutside from 'vue-click-outside'
-export default defineComponent({
+export default Vue.extend({
 	directives: {
 		ClickOutside
 	},
-	data: () => {
+	data() {
 		return {
 			isLanguageSelectorOpened: false
 		}
 	},
 	computed: {
 		alternateLanguages() {
-			// @ts-ignore
 			return this.$store.state.prismic.alternateLanguages
 		},
 		currentLanguage() {
-			// @ts-ignore
 			return this.$store.state.prismic.currentLanguage
+		},
+		headerData() {
+			return this.$store.state.prismic.header
 		}
 	},
 	methods: {
 		openSidebar() {
 			this.$store.commit('prismic/setIsSidebarOpened', true)
+			if (process.client) {
+				document.body.style.overflow = 'hidden'
+			}
 		}
 	}
 })
@@ -75,7 +81,7 @@ export default defineComponent({
 <style lang="stylus" scoped>
 .header-container
 	position sticky
-	@media screen and (max-width: 40em)
+	@media (max-width: 52em)
 		.logo
 			height 30px
 	.country-flag
@@ -86,9 +92,9 @@ export default defineComponent({
 		background-position center
 		&.it-it
 			background-image url('~/assets/images/it-it.png')
-		&.de-de
+		&.de
 			background-image url('~/assets/images/de-de.png')
-		&.en-eu
+		&.en
 			background-image url('~/assets/images/en-eu.png')
 	.country-flag-dropdown
 		border-radius 10px

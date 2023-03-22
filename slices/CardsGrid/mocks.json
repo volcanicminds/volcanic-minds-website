@@ -1,0 +1,67 @@
+[
+  {
+    "__TYPE__": "SharedSliceContent",
+    "variation": "default",
+    "primary": {
+      "title": {
+        "__TYPE__": "FieldContent",
+        "value": "silly",
+        "type": "Text"
+      },
+      "margin_top": {
+        "__TYPE__": "BooleanContent",
+        "value": false
+      },
+      "margin_bottom": {
+        "__TYPE__": "BooleanContent",
+        "value": false
+      },
+      "subtitle": {
+        "__TYPE__": "FieldContent",
+        "value": "think",
+        "type": "Text"
+      },
+      "enable_animation": {
+        "__TYPE__": "BooleanContent",
+        "value": true
+      }
+    },
+    "items": [
+      {
+        "__TYPE__": "GroupItemContent",
+        "value": [
+          [
+            "card_title",
+            {
+              "__TYPE__": "FieldContent",
+              "value": "industry",
+              "type": "Text"
+            }
+          ],
+          [
+            "card_icon",
+            {
+              "__TYPE__": "FieldContent",
+              "value": "pitch",
+              "type": "Text"
+            }
+          ],
+          [
+            "card_desc",
+            {
+              "__TYPE__": "StructuredTextContent",
+              "value": [
+                {
+                  "type": "paragraph",
+                  "content": {
+                    "text": "Enim culpa ad consequat dolore pariatur dolore nulla labore et proident cupidatat ipsum eiusmod ex consequat."
+                  }
+                }
+              ]
+            }
+          ]
+        ]
+      }
+    ]
+  }
+]

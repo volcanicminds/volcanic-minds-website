@@ -1,7 +1,8 @@
 :root
     --raisin-black #1e1e24
-    --raisin-black-2 #484857
+    --raisin-black-2 hsl(240, 9%, 17%)
     --cultured #f5f5f5
+    --cultured-opaque #f5f5f580
     --red-pigment #e3281e
     --purple #7009a3
     --rainbow-gradient linear-gradient(90deg, var(--purple) 0%, var(--red-pigment) 100%)
@@ -10,11 +11,15 @@ body
     font-family 'Lato', sans-serif
     background-color var(--raisin-black)
     color var(--cultured)
-    font-weight 400
-    min-height 100vh
+    font-weight 300
+    font-size 1.2em
+    line-height 1.4
 
 .global-container
     min-height 100vh
+
+    @supports (-webkit-hyphens none)
+        min-height -webkit-fill-available
 
 .raisin-black
     color var(--raisin-black)
@@ -42,7 +47,7 @@ body
     border none
 
     &-primary
-        font-size 20px
+        font-size 1.1em
         font-weight 700
         background var(--purple)
         background var(--rainbow-gradient)
@@ -50,6 +55,7 @@ body
 a
     text-decoration none
     color inherit
+    line-height 1
 
     &:not(.btn):hover
         opacity 0.8
@@ -58,19 +64,35 @@ img
     &.cover
         object-fit cover
 
+    &.position-bottom-left
+        object-position bottom left
+
+    &.position-top-right
+        object-position top right
+
+    &.contain
+        object-fit contain
+
 // Typography
 h1, .h1
     font-weight 900
+    line-height 1.1
+
+h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6
+    font-weight 700
+    line-height 1.1
 
 .uppercase
     text-transform uppercase
 
 .font-thin
     font-weight 100
-    letter-spacing -3px
 
 .font-light
     font-weight 300
+
+.font-regular
+    font-weight 400
 
 .font-bold
     font-weight 700
@@ -80,6 +102,26 @@ h1, .h1
 
 .cursor-pointer
     cursor pointer
+
+b, strong
+    font-weight 900
+
+.row-reverse
+    flex-direction row-reverse
+
+// Prismic
+.nuxt-link-exact-active.nuxt-link-active
+    font-weight 700
+
+p:last-child
+    margin-bottom 0
+
+.opacity-animate
+    transition all 1s ease
+
+    &-off
+        opacity 0
+        transform translateY(100px)
 
 // Nuxt animations
 .page-enter-active, .page-leave-active
