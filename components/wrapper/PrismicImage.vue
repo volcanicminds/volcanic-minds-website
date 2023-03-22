@@ -1,7 +1,7 @@
 <template>
 	<img
 		v-if="Object.keys(field).length"
-		loading="lazy"
+		:loading="lazy ? 'lazy' : 'eager'"
 		:src="getPrismicImageSrc()"
 		:srcset="getPrismicImageSrcset()"
 		:alt="field.alt || 'image'"
@@ -14,10 +14,12 @@ const props = withDefaults(
 		resizeByHeight?: boolean
 		size?: number
 		field: any
+		lazy?: boolean
 	}>(),
 	{
 		resizeByHeight: false,
-		size: 1300
+		size: 1300,
+		lazy: true
 	}
 )
 
