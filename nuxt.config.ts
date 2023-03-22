@@ -92,18 +92,18 @@ export default async () => {
 				}
 			],
 			script: [
-				{
-					// 'data-categories': 'analytics',
-					// type: 'text/plain',
-					async: true,
-					src: 'https://www.googletagmanager.com/gtag/js?id=G-7F4GLM9RZL'
-				},
-				{
-					// 'data-categories': 'analytics',
-					// type: 'text/plain',
-					src: '/gtag.js',
-					async: true
-				},
+				// {
+				// 	'data-categories': 'analytics',
+				// 	type: 'text/plain',
+				// 	async: true,
+				// 	src: 'https://www.googletagmanager.com/gtag/js?id=G-7F4GLM9RZL'
+				// },
+				// {
+				// 	'data-categories': 'analytics',
+				// 	type: 'text/plain',
+				// 	src: '/gtag.js',
+				// 	async: true
+				// },
 				{
 					async: true,
 					defer: true,
