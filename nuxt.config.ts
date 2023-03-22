@@ -116,7 +116,6 @@ export default async () => {
 				// 	type: 'text/javascript'
 				// },
 				{
-					id: 'cookieyes',
 					src: 'https://app.termly.io/embed.min.js',
 					'data-auto-block': 'on',
 					'data-website-uuid': 'ef1056bd-4af3-4cba-bea8-34b4385bf582',
