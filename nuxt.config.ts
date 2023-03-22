@@ -96,6 +96,31 @@ export default async () => {
 					async: true,
 					defer: true,
 					src: 'https://static.cdn.prismic.io/prismic.js?new=true&repo=volcanic-website'
+				},
+				// {
+				// 	id: 'Cookiebot',
+				// 	src: 'https://consent.cookiebot.com/uc.js',
+				// 	'data-cbid': 'fd235a0f-2b1b-45f0-bf30-9416471f2b08',
+				// 	'data-blockingmode': 'auto',
+				// 	type: 'text/javascript'
+				// },
+				// {
+				// 	id: 'cookieyes',
+				// 	src: 'https://cdn-cookieyes.com/client_data/9b753e247a46d906f5ba1e22/script.js',
+				// 	type: 'text/javascript'
+				// },
+				// {
+				// 	id: 'cookieyes',
+				// 	src: 'https://cdn.cookie-script.com/s/ae53c6534bf71ab14f053f0692b057a1.js',
+				// 	charset: 'UTF-8',
+				// 	type: 'text/javascript'
+				// },
+				{
+					id: 'cookieyes',
+					src: 'https://app.termly.io/embed.min.js',
+					'data-auto-block': 'on',
+					'data-website-uuid': 'ef1056bd-4af3-4cba-bea8-34b4385bf582',
+					type: 'text/javascript'
 				}
 			]
 		},
