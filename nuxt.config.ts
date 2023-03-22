@@ -93,6 +93,18 @@ export default async () => {
 			],
 			script: [
 				{
+					// 'data-categories': 'analytics',
+					// type: 'text/plain',
+					async: true,
+					src: 'https://www.googletagmanager.com/gtag/js?id=G-7F4GLM9RZL'
+				},
+				{
+					// 'data-categories': 'analytics',
+					// type: 'text/plain',
+					src: '/gtag.js',
+					async: true
+				},
+				{
 					async: true,
 					defer: true,
 					src: 'https://static.cdn.prismic.io/prismic.js?new=true&repo=volcanic-website'
@@ -117,7 +129,7 @@ export default async () => {
 		],
 
 		// Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-		plugins: ['~/plugins/fontawesome.js', '~/plugins/constants', '~/plugins/vue-gtag'],
+		plugins: ['~/plugins/fontawesome.js', '~/plugins/constants'],
 
 		// Auto import components: https://go.nuxtjs.dev/config-components
 		components: true,
