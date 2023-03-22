@@ -93,14 +93,20 @@ export default async () => {
 			],
 			script: [
 				{
-					// 'data-categories': 'analytics',
-					// type: 'text/plain',
+					src: 'https://app.termly.io/embed.min.js',
+					'data-auto-block': 'on',
+					'data-website-uuid': 'ef1056bd-4af3-4cba-bea8-34b4385bf582',
+					type: 'text/javascript'
+				},
+				{
+					'data-categories': 'analytics',
+					type: 'text/plain',
 					async: true,
 					src: 'https://www.googletagmanager.com/gtag/js?id=G-7F4GLM9RZL'
 				},
 				{
-					// 'data-categories': 'analytics',
-					// type: 'text/plain',
+					'data-categories': 'analytics',
+					type: 'text/plain',
 					src: '/gtag.js',
 					async: true
 				},
@@ -108,7 +114,7 @@ export default async () => {
 					async: true,
 					defer: true,
 					src: 'https://static.cdn.prismic.io/prismic.js?new=true&repo=volcanic-website'
-				},
+				}
 				// {
 				// 	id: 'Cookiebot',
 				// 	src: 'https://consent.cookiebot.com/uc.js',
@@ -127,12 +133,6 @@ export default async () => {
 				// 	charset: 'UTF-8',
 				// 	type: 'text/javascript'
 				// },
-				{
-					src: 'https://app.termly.io/embed.min.js',
-					'data-auto-block': 'on',
-					'data-website-uuid': 'ef1056bd-4af3-4cba-bea8-34b4385bf582',
-					type: 'text/javascript'
-				}
 			]
 		},
 
