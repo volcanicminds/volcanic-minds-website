@@ -1,6 +1,6 @@
 {
-	"name": "volcanic-website-prismic",
-	"version": "1.1.1",
+	"name": "volcanic-minds-website",
+	"version": "1.1.2",
 	"license": "ISC",
 	"scripts": {
 		"dev": "export NODE_ENV=development && node ./switch_env.mjs && nuxt dev",
