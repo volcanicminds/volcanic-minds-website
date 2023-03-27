@@ -1,4 +1,4 @@
-# volcanic-website-prismic
+# volcanic-minds-website
 
 ## Build Setup
 
