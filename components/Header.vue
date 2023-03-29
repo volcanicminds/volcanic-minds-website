@@ -2,8 +2,13 @@
 	<div v-if="headerData" class="bg-raisin-black header-container top-0 z3">
 		<WrapperContainer class="flex items-center px3 py2">
 			<div v-if="headerData.data.logo" class="flex flex-auto">
-				<NuxtLink :to="localePath('/')" class="flex">
-					<WrapperPrismicImage :field="headerData.data.logo" :size="50" resize-by-height class="logo" />
+				<NuxtLink :to="localePath('/')" class="flex logo">
+					<WrapperPrismicImage
+						:field="headerData.data.logo"
+						:size="50"
+						resize-by-height
+						class="contain position-left col-12 h100"
+					/>
 				</NuxtLink>
 			</div>
 			<template v-for="(link, i) in headerData.data.links">
@@ -81,8 +86,12 @@ export default Vue.extend({
 <style lang="stylus" scoped>
 .header-container
 	position sticky
+	.logo
+		width 130px
+		height 50px
 	@media (max-width: 52em)
 		.logo
+			width 80
 			height 30px
 	.country-flag
 		width 20px
