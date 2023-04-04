@@ -1,5 +1,5 @@
 <template>
-	<div v-if="footerData" class="bg-raisin-black">
+	<div v-if="footerData" class="bg-raisin-black" role="contentinfo" aria-label="Footer">
 		<WrapperContainer class="py3">
 			<div class="flex flex-column items-center">
 				<WrapperPrismicImage v-if="footerData.data.logo" :field="footerData.data.logo" :size="200" />
