@@ -18,6 +18,9 @@
 					:key="index"
 					:field="textLink.link"
 					class="footer-data"
+					:aria-label="
+						textLink.link && textLink.link.target && textLink.link.target === '_blank' ? openInNewTabLabel : ''
+					"
 					>{{ textLink.text }}{{ index < footerData.data.text_links.length - 1 ? ' &#8226; ' : '' }}</PrismicLink
 				>
 			</div>
@@ -34,6 +37,9 @@ export default Vue.extend({
 	computed: {
 		footerData() {
 			return this.$store.state.prismic.footer
+		},
+		openInNewTabLabel() {
+			return this.$store.state.prismic.genericSettings.data.open_in_new_tab_label
 		}
 	}
 })

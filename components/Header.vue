@@ -21,6 +21,8 @@
 				<div
 					class="country-flag country-flag-current cursor-pointer p2"
 					:class="currentLanguage"
+					role="button"
+					:aria-label="headerData.data.language_choose_label"
 					@click="isLanguageSelectorOpened = true"
 				/>
 				<div
@@ -33,7 +35,7 @@
 						:field="{ ...alternateLang, link_type: 'Document' }"
 						class="block country-flag my2"
 						:class="alternateLang.lang"
-						aria-label="Choose language"
+						:aria-label="headerData.data.language_choose_label"
 						@click.native="isLanguageSelectorOpened = false"
 					/>
 				</div>

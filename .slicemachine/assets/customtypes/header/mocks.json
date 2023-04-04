@@ -3,12 +3,12 @@
     "__TYPE__": "ImageContent",
     "origin": {
       "id": "main",
-      "url": "https://images.unsplash.com/photo-1544731612-de7f96afe55f",
-      "width": 6000,
+      "url": "https://images.unsplash.com/photo-1606248897732-2c5ffe759c04",
+      "width": 4000,
       "height": 4000
     },
-    "url": "https://images.unsplash.com/photo-1544731612-de7f96afe55f",
-    "width": 6000,
+    "url": "https://images.unsplash.com/photo-1606248897732-2c5ffe759c04",
+    "width": 4000,
     "height": 4000,
     "edit": {
       "zoom": 1,
@@ -32,7 +32,7 @@
               "__TYPE__": "LinkContent",
               "value": {
                 "__TYPE__": "ExternalLink",
-                "url": "https://prismic.io"
+                "url": "http://google.com"
               }
             }
           ],
@@ -40,7 +40,7 @@
             "link_title",
             {
               "__TYPE__": "FieldContent",
-              "value": "alone",
+              "value": "building",
               "type": "Text"
             }
           ],
@@ -54,5 +54,10 @@
         ]
       }
     ]
+  },
+  "language_choose_label": {
+    "__TYPE__": "FieldContent",
+    "value": "wrapped",
+    "type": "Text"
   }
 }

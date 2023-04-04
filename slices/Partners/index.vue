@@ -12,7 +12,7 @@
 			</div>
 			<div class="partners-container">
 				<div v-for="(item, i) in slice.items" :key="`slice-item-${i}`" class="flex items-center">
-					<div class="image-container">
+					<div class="image-container flex-none">
 						<WrapperPrismicImage
 							:field="item.logo"
 							:size="25"
@@ -20,7 +20,7 @@
 							class="col-12 h100 contain position-left"
 						/>
 					</div>
-					<span v-if="item.name" class="h4 font-bold ml1 nowrap">{{ item.name }}</span>
+					<span v-if="item.name" class="h4 font-bold ml1 nowrap truncate">{{ item.name }}</span>
 				</div>
 			</div>
 		</WrapperContainer>

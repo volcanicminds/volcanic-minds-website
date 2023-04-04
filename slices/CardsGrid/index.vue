@@ -13,8 +13,8 @@
 
 			<div class="cards-container mt3">
 				<div v-for="(item, i) in slice.items" :key="`slice-item-${i}`" class="card p3">
-					<font-awesome-icon v-if="item.card_icon" :icon="item.card_icon" class="fa-2xl" />
-					<div v-if="item.card_title" class="h2 mt3 mb2">{{ item.card_title }}</div>
+					<font-awesome-icon v-if="item.card_icon" :icon="item.card_icon" class="fa-2xl mb3" />
+					<div v-if="item.card_title" class="h2 mb2">{{ item.card_title }}</div>
 					<PrismicRichText v-if="item.card_desc" :field="item.card_desc" />
 				</div>
 			</div>

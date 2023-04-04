@@ -270,6 +270,30 @@ type FooterDocumentDataSlicesSlice = never;
  * @typeParam Lang - Language API ID of the document.
  */
 export type FooterDocument<Lang extends string = string> = prismicT.PrismicDocumentWithoutUID<Simplify<FooterDocumentData>, "footer", Lang>;
+/** Content for Generic settings documents */
+interface GenericSettingsDocumentData {
+    /**
+     * open_in_new_tab_label field in *Generic settings*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: generic_settings.open_in_new_tab_label
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    open_in_new_tab_label: prismicT.KeyTextField;
+}
+/**
+ * Generic settings document from Prismic
+ *
+ * - **API ID**: `generic_settings`
+ * - **Repeatable**: `false`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type GenericSettingsDocument<Lang extends string = string> = prismicT.PrismicDocumentWithoutUID<Simplify<GenericSettingsDocumentData>, "generic_settings", Lang>;
 /** Content for Header documents */
 interface HeaderDocumentData {
     /**
@@ -294,6 +318,17 @@ interface HeaderDocumentData {
      *
      */
     links: prismicT.GroupField<Simplify<HeaderDocumentDataLinksItem>>;
+    /**
+     * Label scelta linguaggio field in *Header*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: header.language_choose_label
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    language_choose_label: prismicT.KeyTextField;
 }
 /**
  * Item in Header → Links
@@ -577,7 +612,7 @@ type SecondLevelPageDocumentDataSlicesSlice = HeroBannerSlice | CardsGridSlice |
  * @typeParam Lang - Language API ID of the document.
  */
 export type SecondLevelPageDocument<Lang extends string = string> = prismicT.PrismicDocumentWithUID<Simplify<SecondLevelPageDocumentData>, "second_level_page", Lang>;
-export type AllDocumentTypes = FirstLevelPageDocument | FooterDocument | HeaderDocument | HomepageDocument | SecondLevelPageDocument;
+export type AllDocumentTypes = FirstLevelPageDocument | FooterDocument | GenericSettingsDocument | HeaderDocument | HomepageDocument | SecondLevelPageDocument;
 /**
  * Primary content in Accordion → Primary
  *
@@ -1628,6 +1663,6 @@ declare module "@prismicio/client" {
         (repositoryNameOrEndpoint: string, options?: prismic.ClientConfig): prismic.Client<AllDocumentTypes>;
     }
     namespace Content {
-        export type { FirstLevelPageDocumentData, FirstLevelPageDocumentDataSlicesSlice, FirstLevelPageDocument, FooterDocumentData, FooterDocumentDataIconLinksItem, FooterDocumentDataTextLinksItem, FooterDocumentDataSlicesSlice, FooterDocument, HeaderDocumentData, HeaderDocumentDataLinksItem, HeaderDocument, HomepageDocumentData, HomepageDocumentDataSlicesSlice, HomepageDocument, SecondLevelPageDocumentData, SecondLevelPageDocumentDataSlicesSlice, SecondLevelPageDocument, AllDocumentTypes, AccordionSliceDefaultPrimary, AccordionSliceDefaultItem, AccordionSliceDefault, AccordionSliceVariation, AccordionSlice, CallToActionSliceDefaultPrimary, CallToActionSliceDefault, CallToActionSliceVariation, CallToActionSlice, CardsGridSliceDefaultPrimary, CardsGridSliceDefaultItem, CardsGridSliceDefault, CardsGridSliceVariation, CardsGridSlice, ContactsSliceDefaultPrimary, ContactsSliceDefaultItem, ContactsSliceDefault, ContactsSliceVariation, ContactsSlice, HeroBannerSliceDefaultPrimary, HeroBannerSliceDefault, HeroBannerSliceVariation, HeroBannerSlice, ImageAndTextSliceDefaultPrimary, ImageAndTextSliceDefault, ImageAndTextSliceVariation, ImageAndTextSlice, PartnersSliceDefaultPrimary, PartnersSliceDefaultItem, PartnersSliceDefault, PartnersSliceVariation, PartnersSlice, RichTextSliceDefaultPrimary, RichTextSliceDefault, RichTextSliceVariation, RichTextSlice, StatisticsSliceDefaultPrimary, StatisticsSliceDefaultItem, StatisticsSliceDefault, StatisticsSliceVariation, StatisticsSlice };
+        export type { FirstLevelPageDocumentData, FirstLevelPageDocumentDataSlicesSlice, FirstLevelPageDocument, FooterDocumentData, FooterDocumentDataIconLinksItem, FooterDocumentDataTextLinksItem, FooterDocumentDataSlicesSlice, FooterDocument, GenericSettingsDocumentData, GenericSettingsDocument, HeaderDocumentData, HeaderDocumentDataLinksItem, HeaderDocument, HomepageDocumentData, HomepageDocumentDataSlicesSlice, HomepageDocument, SecondLevelPageDocumentData, SecondLevelPageDocumentDataSlicesSlice, SecondLevelPageDocument, AllDocumentTypes, AccordionSliceDefaultPrimary, AccordionSliceDefaultItem, AccordionSliceDefault, AccordionSliceVariation, AccordionSlice, CallToActionSliceDefaultPrimary, CallToActionSliceDefault, CallToActionSliceVariation, CallToActionSlice, CardsGridSliceDefaultPrimary, CardsGridSliceDefaultItem, CardsGridSliceDefault, CardsGridSliceVariation, CardsGridSlice, ContactsSliceDefaultPrimary, ContactsSliceDefaultItem, ContactsSliceDefault, ContactsSliceVariation, ContactsSlice, HeroBannerSliceDefaultPrimary, HeroBannerSliceDefault, HeroBannerSliceVariation, HeroBannerSlice, ImageAndTextSliceDefaultPrimary, ImageAndTextSliceDefault, ImageAndTextSliceVariation, ImageAndTextSlice, PartnersSliceDefaultPrimary, PartnersSliceDefaultItem, PartnersSliceDefault, PartnersSliceVariation, PartnersSlice, RichTextSliceDefaultPrimary, RichTextSliceDefault, RichTextSliceVariation, RichTextSlice, StatisticsSliceDefaultPrimary, StatisticsSliceDefaultItem, StatisticsSliceDefault, StatisticsSliceVariation, StatisticsSlice };
     }
 }
