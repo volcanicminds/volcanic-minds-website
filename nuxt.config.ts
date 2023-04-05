@@ -107,6 +107,10 @@ export default async () => {
 			]
 		},
 
+		env: {
+			NUXT_SITENAME: process.env.NUXT_SITENAME
+		},
+
 		generate: { fallback: '404.html' },
 
 		// Global CSS: https://go.nuxtjs.dev/config-css
