@@ -1,11 +1,13 @@
 <template>
-	<WrapperContainer class="breadcrumbs-container relative z1 flex items-center">
-		<NuxtLink :to="localePath('/')" class="no-underline" role="button" aria-label="Home">Home</NuxtLink>
+	<WrapperContainer
+		class="breadcrumbs-container relative z1 flex items-center"
+		role="navigation"
+		aria-label="Breadcrumb"
+	>
+		<NuxtLink :to="localePath('/')" class="no-underline">Home</NuxtLink>
 		<font-awesome-icon :icon="['fas', 'chevron-right']" class="mx1" size="xs" />
 		<template v-if="section && section.data.title">
-			<NuxtLink :to="section.url" class="no-underline" role="button" :aria-label="section.data.title">{{
-				section.data.title
-			}}</NuxtLink>
+			<NuxtLink :to="section.url" class="no-underline">{{ section.data.title }}</NuxtLink>
 			<font-awesome-icon :icon="['fas', 'chevron-right']" class="mx1" size="xs" />
 		</template>
 		<span>{{ currentPage }}</span>
