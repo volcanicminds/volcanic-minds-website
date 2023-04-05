@@ -2,20 +2,31 @@
 	<div v-if="headerData" class="bg-raisin-black header-container top-0 z3">
 		<WrapperContainer class="flex items-center px3 py2">
 			<div v-if="headerData.data.logo" class="flex flex-auto">
-				<NuxtLink :to="localePath('/')" class="flex">
-					<WrapperPrismicImage :field="headerData.data.logo" :size="50" resize-by-height class="logo" />
+				<NuxtLink :to="localePath('/')" class="flex logo">
+					<WrapperPrismicImage
+						:field="headerData.data.logo"
+						:size="50"
+						resize-by-height
+						class="contain position-left col-12 h100"
+					/>
 				</NuxtLink>
 			</div>
 			<template v-for="(link, i) in headerData.data.links">
-				<PrismicLink v-if="!link.hide_on_desktop" :key="i" class="px2 pr0 xs-hide sm-hide" :field="link.link_url">{{
-					link.link_title
-				}}</PrismicLink>
+				<PrismicLink
+					v-if="!link.hide_on_desktop"
+					:key="i"
+					class="px2 pr0 xs-hide sm-hide no-underline"
+					:field="link.link_url"
+					>{{ link.link_title }}</PrismicLink
+				>
 			</template>
 
 			<div v-click-outside="() => (isLanguageSelectorOpened = false)" class="relative">
 				<div
 					class="country-flag country-flag-current cursor-pointer p2"
 					:class="currentLanguage"
+					role="button"
+					:aria-label="headerData.data.language_choose_label"
 					@click="isLanguageSelectorOpened = true"
 				/>
 				<div
@@ -28,7 +39,7 @@
 						:field="{ ...alternateLang, link_type: 'Document' }"
 						class="block country-flag my2"
 						:class="alternateLang.lang"
-						aria-label="Choose language"
+						:aria-label="headerData.data.language_choose_label"
 						@click.native="isLanguageSelectorOpened = false"
 					/>
 				</div>
@@ -81,8 +92,12 @@ export default Vue.extend({
 <style lang="stylus" scoped>
 .header-container
 	position sticky
+	.logo
+		width 130px
+		height 50px
 	@media (max-width: 52em)
 		.logo
+			width 80
 			height 30px
 	.country-flag
 		width 20px

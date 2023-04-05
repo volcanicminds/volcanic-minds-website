@@ -18,7 +18,7 @@
 				<PrismicRichText :field="slice.primary.description" wrapper="div" />
 				<div
 					v-if="slice.primary.cta_link && !slice.primary.cta_link.isBroken && slice.primary.cta_text"
-					class="center mt2"
+					class="center mt3"
 				>
 					<PrismicLink :field="slice.primary.cta_link" class="btn btn-primary mb4">{{
 						slice.primary.cta_text

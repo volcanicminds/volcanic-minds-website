@@ -45,6 +45,13 @@
             }
           }
         }
+      },
+      "language_choose_label": {
+        "type": "Text",
+        "config": {
+          "label": "Label scelta linguaggio",
+          "placeholder": ""
+        }
       }
     }
   }

@@ -1,5 +1,5 @@
 <template>
-	<div v-if="footerData" class="bg-raisin-black">
+	<div v-if="footerData" class="bg-raisin-black" role="contentinfo" aria-label="Footer">
 		<WrapperContainer class="py3">
 			<div class="flex flex-column items-center">
 				<WrapperPrismicImage v-if="footerData.data.logo" :field="footerData.data.logo" :size="200" />
@@ -17,7 +17,10 @@
 					v-for="(textLink, index) in footerData.data.text_links"
 					:key="index"
 					:field="textLink.link"
-					class="footer-data"
+					class="footer-data no-underline"
+					:aria-label="
+						textLink.link && textLink.link.target && textLink.link.target === '_blank' ? openInNewTabLabel : ''
+					"
 					>{{ textLink.text }}{{ index < footerData.data.text_links.length - 1 ? ' &#8226; ' : '' }}</PrismicLink
 				>
 			</div>
@@ -34,6 +37,9 @@ export default Vue.extend({
 	computed: {
 		footerData() {
 			return this.$store.state.prismic.footer
+		},
+		openInNewTabLabel() {
+			return this.$store.state.prismic.genericSettings.data.open_in_new_tab_label
 		}
 	}
 })

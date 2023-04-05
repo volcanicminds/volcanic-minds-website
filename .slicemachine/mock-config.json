@@ -9,7 +9,8 @@
     "footer": {
       "icon_links": {},
       "text_links": {}
-    }
+    },
+    "generic_settings": {}
   },
   "slices": {
     "HeroBanner": {

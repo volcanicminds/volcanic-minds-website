@@ -12,8 +12,15 @@
 			</div>
 			<div class="partners-container">
 				<div v-for="(item, i) in slice.items" :key="`slice-item-${i}`" class="flex items-center">
-					<WrapperPrismicImage :field="item.logo" :size="25" />
-					<span v-if="item.name" class="h4 font-bold ml1 nowrap">{{ item.name }}</span>
+					<div class="image-container flex-none">
+						<WrapperPrismicImage
+							:field="item.logo"
+							:size="25"
+							resize-by-height
+							class="col-12 h100 contain position-left"
+						/>
+					</div>
+					<span v-if="item.name" class="h4 font-bold ml1 nowrap truncate">{{ item.name }}</span>
 				</div>
 			</div>
 		</WrapperContainer>
@@ -48,4 +55,8 @@ defineProps({
 		display grid
 		grid-template-columns repeat(auto-fit, minmax(150px, 1fr))
 		grid-gap 25px
+
+		.image-container
+			width 25px
+			height 25px
 </style>

@@ -1,0 +1,17 @@
+{
+  "id": "generic_settings",
+  "label": "Generic settings",
+  "repeatable": false,
+  "status": true,
+  "json": {
+    "Main": {
+      "open_in_new_tab_label": {
+        "type": "Text",
+        "config": {
+          "label": "open_in_new_tab_label",
+          "placeholder": ""
+        }
+      }
+    }
+  }
+}

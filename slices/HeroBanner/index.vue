@@ -5,6 +5,10 @@
 		:margin-bottom="slice.primary.margin_bottom || false"
 		:enable-observer="slice.primary.enable_animation || false"
 		is-section
+		role="main"
+		:aria-label="
+			(slice.primary.title.length && slice.primary.title[0].text !== '' && slice.primary.title[0].text) || 'Hero banner'
+		"
 	>
 		<WrapperContainer class="relative z1">
 			<PrismicRichText

@@ -13,7 +13,7 @@
 				<template v-for="(link, i) in headerData.data.links">
 					<PrismicLink
 						:key="i"
-						class="block sidebar-link h2 font-light"
+						class="block sidebar-link h2 font-light no-underline"
 						:field="link.link_url"
 						@click.native="closeSidebar"
 						>{{ link.link_title }}</PrismicLink
