@@ -17,7 +17,7 @@
 					v-for="(textLink, index) in footerData.data.text_links"
 					:key="index"
 					:field="textLink.link"
-					class="footer-data"
+					class="footer-data no-underline"
 					:aria-label="
 						textLink.link && textLink.link.target && textLink.link.target === '_blank' ? openInNewTabLabel : ''
 					"

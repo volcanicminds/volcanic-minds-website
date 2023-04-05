@@ -12,9 +12,13 @@
 				</NuxtLink>
 			</div>
 			<template v-for="(link, i) in headerData.data.links">
-				<PrismicLink v-if="!link.hide_on_desktop" :key="i" class="px2 pr0 xs-hide sm-hide" :field="link.link_url">{{
-					link.link_title
-				}}</PrismicLink>
+				<PrismicLink
+					v-if="!link.hide_on_desktop"
+					:key="i"
+					class="px2 pr0 xs-hide sm-hide no-underline"
+					:field="link.link_url"
+					>{{ link.link_title }}</PrismicLink
+				>
 			</template>
 
 			<div v-click-outside="() => (isLanguageSelectorOpened = false)" class="relative">
