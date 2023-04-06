@@ -97,7 +97,7 @@ export default Vue.extend({
 		height 50px
 	@media (max-width: 52em)
 		.logo
-			width 80 px
+			width 80px
 			height 30px
 	.country-flag
 		width 20px
