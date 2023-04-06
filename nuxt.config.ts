@@ -150,8 +150,8 @@ export default async () => {
 		],
 
 		i18n: {
-			// locales,
-			locales: ['it-it'],
+			locales,
+			// locales: ['it-it'],
 			defaultLocale,
 			detectBrowserLanguage: {
 				alwaysRedirect: true
