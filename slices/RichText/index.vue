@@ -8,6 +8,7 @@
 			<PrismicRichText
 				:field="slice.primary.text"
 				class="rich-text"
+				role="heading"
 				:class="
 					slice.primary.text_align === 'Center' ? 'center' : slice.primary.text_align === 'Right' ? 'right-align' : ''
 				"
