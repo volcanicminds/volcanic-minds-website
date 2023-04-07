@@ -6,7 +6,13 @@
 		>
 			<WrapperContainer class="pt3 pb2">
 				<div class="right">
-					<font-awesome-icon :icon="['fas', 'xmark']" class="fa-xl cursor-pointer" @click="closeSidebar" />
+					<font-awesome-icon
+						:icon="['fas', 'xmark']"
+						class="fa-xl cursor-pointer"
+						:title="headerData.data.close_sidebar_label || 'Close sidebar'"
+						role="button"
+						@click="closeSidebar"
+					/>
 				</div>
 			</WrapperContainer>
 			<WrapperContainer v-if="headerData.data.links" class="py2 flex-auto overflow-auto center">

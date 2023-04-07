@@ -52,6 +52,20 @@
           "label": "Label scelta linguaggio",
           "placeholder": ""
         }
+      },
+      "open_sidebar_label": {
+        "type": "Text",
+        "config": {
+          "label": "Label apertura sidebar",
+          "placeholder": ""
+        }
+      },
+      "close_sidebar_label": {
+        "type": "Text",
+        "config": {
+          "label": "Label chiusura sidebar",
+          "placeholder": ""
+        }
       }
     }
   }

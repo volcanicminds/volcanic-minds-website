@@ -39,7 +39,8 @@
 						:field="{ ...alternateLang, link_type: 'Document' }"
 						class="block country-flag my2"
 						:class="alternateLang.lang"
-						:aria-label="headerData.data.language_choose_label"
+						:aria-label="alternateLang.lang === 'en' ? 'English' : alternateLang.lang === 'de' ? 'Deutsch' : 'Italiano'"
+						role="button"
 						@click.native="isLanguageSelectorOpened = false"
 					/>
 				</div>
@@ -47,6 +48,8 @@
 			<font-awesome-icon
 				:icon="['fas', 'bars']"
 				class="md-hide lg-hide fa-xl cursor-pointer ml2"
+				:title="headerData.data.open_sidebar_label || 'Open sidebar'"
+				role="button"
 				@click="openSidebar"
 			/>
 		</WrapperContainer>

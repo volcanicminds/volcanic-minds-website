@@ -329,6 +329,28 @@ interface HeaderDocumentData {
      *
      */
     language_choose_label: prismicT.KeyTextField;
+    /**
+     * Label apertura sidebar field in *Header*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: header.open_sidebar_label
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    open_sidebar_label: prismicT.KeyTextField;
+    /**
+     * Label chiusura sidebar field in *Header*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: header.close_sidebar_label
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    close_sidebar_label: prismicT.KeyTextField;
 }
 /**
  * Item in Header → Links
