@@ -759,6 +759,16 @@ interface CallToActionSliceDefaultPrimary {
      */
     label: prismicT.KeyTextField;
     /**
+     * Label accessibile field in *CallToAction → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: call_to_action.primary.accessible_label
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    accessible_label: prismicT.KeyTextField;
+    /**
      * Link field in *CallToAction → Primary*
      *
      * - **Field Type**: Link
@@ -1335,6 +1345,16 @@ interface ImageAndTextSliceDefaultPrimary {
      *
      */
     cta_text: prismicT.KeyTextField;
+    /**
+     * CTA Testo accessible field in *ImageAndText → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: image_and_text.primary.cta_accessibile_text
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    cta_accessibile_text: prismicT.KeyTextField;
     /**
      * Abilita animazione field in *ImageAndText → Primary*
      *
