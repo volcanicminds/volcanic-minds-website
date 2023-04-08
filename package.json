@@ -29,7 +29,7 @@
 		"basscss": "^8.1.0",
 		"core-js": "^3.30.0",
 		"normalize.css": "^8.0.1",
-		"nuxt": "2.16.2",
+		"nuxt": "2.16.3",
 		"prettier-plugin-stylus": "^0.0.1-beta.8",
 		"vue": "^2.7.10",
 		"vue-click-outside": "^1.1.0",
