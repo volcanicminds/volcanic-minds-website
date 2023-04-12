@@ -16,7 +16,7 @@
 					role="button"
 					@click="openAccordion(`accordion-${i}`)"
 				>
-					<h3 class="m0 h2">{{ item.title }}</h3>
+					<h3 class="my0 h2 mr2">{{ item.title }}</h3>
 					<div class="accordion-toggle items-center justify-center flex flex-none">
 						<font-awesome-icon :icon="['fas', isOpened === `accordion-${i}` ? 'minus' : 'plus']" />
 					</div>
