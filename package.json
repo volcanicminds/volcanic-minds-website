@@ -23,7 +23,6 @@
 		"@nuxtjs/i18n": "^7.3.1",
 		"@nuxtjs/prismic": "^1.4.2",
 		"@nuxtjs/robots": "^2.5.0",
-		"@nuxtjs/sitemap": "^2.4.0",
 		"@prismicio/helpers": "^2.3.9",
 		"@prismicio/slice-simulator-vue": "^0.2.3",
 		"basscss": "^8.1.0",
