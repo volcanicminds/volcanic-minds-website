@@ -151,9 +151,7 @@ export default async () => {
 		i18n: {
 			locales,
 			defaultLocale,
-			detectBrowserLanguage: {
-				alwaysRedirect: true
-			},
+			detectBrowserLanguage: false,
 			parsePages: false
 		},
 
