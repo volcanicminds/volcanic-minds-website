@@ -134,7 +134,7 @@ export default async () => {
 		components: true,
 
 		// Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
-		buildModules: ['@nuxtjs/prismic', '@nuxt/typescript-build', '~/modules/sitemapGenerator.ts', 'nuxt-compress'],
+		buildModules: ['@nuxtjs/prismic', '@nuxt/typescript-build', 'nuxt-compress'],
 
 		// Modules: https://go.nuxtjs.dev/config-modules
 		modules: [
@@ -145,24 +145,14 @@ export default async () => {
 					endpoint: smConfig.apiEndpoint || ''
 				}
 			],
-			['@nuxtjs/robots', robots],
-			'@nuxtjs/sitemap'
+			['@nuxtjs/robots', robots]
 		],
 
 		i18n: {
-			// locales,
-			locales: ['it-it'],
+			locales,
 			defaultLocale,
-			detectBrowserLanguage: {
-				alwaysRedirect: true
-			},
+			detectBrowserLanguage: false,
 			parsePages: false
-		},
-
-		sitemap: {
-			i18n: true,
-			hostname: process.env.NUXT_SITENAME,
-			exclude: process.env.NUXT_PRE_EXCLUDE_PATHS!.split(',')
 		},
 
 		// Build Configuration: https://go.nuxtjs.dev/config-build

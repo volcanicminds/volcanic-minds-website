@@ -3,13 +3,13 @@
     "__TYPE__": "ImageContent",
     "origin": {
       "id": "main",
-      "url": "https://images.unsplash.com/photo-1606248897732-2c5ffe759c04",
-      "width": 4000,
-      "height": 4000
+      "url": "https://images.unsplash.com/photo-1587614295999-6c1c13675117",
+      "width": 3810,
+      "height": 5715
     },
-    "url": "https://images.unsplash.com/photo-1606248897732-2c5ffe759c04",
-    "width": 4000,
-    "height": 4000,
+    "url": "https://images.unsplash.com/photo-1587614295999-6c1c13675117",
+    "width": 3810,
+    "height": 5715,
     "edit": {
       "zoom": 1,
       "crop": {
@@ -32,7 +32,7 @@
               "__TYPE__": "LinkContent",
               "value": {
                 "__TYPE__": "ExternalLink",
-                "url": "http://google.com"
+                "url": "https://slicemachine.dev"
               }
             }
           ],
@@ -40,7 +40,7 @@
             "link_title",
             {
               "__TYPE__": "FieldContent",
-              "value": "building",
+              "value": "good",
               "type": "Text"
             }
           ],
@@ -48,7 +48,7 @@
             "hide_on_desktop",
             {
               "__TYPE__": "BooleanContent",
-              "value": true
+              "value": false
             }
           ]
         ]
@@ -57,7 +57,17 @@
   },
   "language_choose_label": {
     "__TYPE__": "FieldContent",
-    "value": "wrapped",
+    "value": "relationship",
+    "type": "Text"
+  },
+  "open_sidebar_label": {
+    "__TYPE__": "FieldContent",
+    "value": "excitement",
+    "type": "Text"
+  },
+  "close_sidebar_label": {
+    "__TYPE__": "FieldContent",
+    "value": "lift",
     "type": "Text"
   }
 }

@@ -5,7 +5,7 @@
 				<WrapperPrismicImage v-if="footerData.data.logo" :field="footerData.data.logo" :size="200" />
 				<div v-if="footerData.data.icon_links" class="flex social-links-container mt3">
 					<template v-for="(link, i) in footerData.data.icon_links">
-						<PrismicLink v-if="link.icon" :key="i" :field="link.link" :aria-label="link.alt_text">
+						<PrismicLink v-if="link.icon" :key="i" :field="link.link" :aria-label="link.alt_text || 'Link'">
 							<font-awesome-icon :icon="link.icon" size="2xl" />
 						</PrismicLink>
 					</template>

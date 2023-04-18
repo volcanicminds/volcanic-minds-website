@@ -329,6 +329,28 @@ interface HeaderDocumentData {
      *
      */
     language_choose_label: prismicT.KeyTextField;
+    /**
+     * Label apertura sidebar field in *Header*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: header.open_sidebar_label
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    open_sidebar_label: prismicT.KeyTextField;
+    /**
+     * Label chiusura sidebar field in *Header*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: header.close_sidebar_label
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    close_sidebar_label: prismicT.KeyTextField;
 }
 /**
  * Item in Header → Links
@@ -736,6 +758,16 @@ interface CallToActionSliceDefaultPrimary {
      *
      */
     label: prismicT.KeyTextField;
+    /**
+     * Label accessibile field in *CallToAction → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: call_to_action.primary.accessible_label
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    accessible_label: prismicT.KeyTextField;
     /**
      * Link field in *CallToAction → Primary*
      *
@@ -1313,6 +1345,16 @@ interface ImageAndTextSliceDefaultPrimary {
      *
      */
     cta_text: prismicT.KeyTextField;
+    /**
+     * CTA Testo accessible field in *ImageAndText → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: image_and_text.primary.cta_accessibile_text
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    cta_accessibile_text: prismicT.KeyTextField;
     /**
      * Abilita animazione field in *ImageAndText → Primary*
      *

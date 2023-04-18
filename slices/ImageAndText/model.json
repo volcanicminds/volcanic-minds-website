@@ -85,6 +85,13 @@
             "placeholder": ""
           }
         },
+        "cta_accessibile_text": {
+          "type": "Text",
+          "config": {
+            "label": "CTA Testo accessible",
+            "placeholder": ""
+          }
+        },
         "enable_animation": {
           "type": "Boolean",
           "config": {

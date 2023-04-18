@@ -18,7 +18,7 @@ export const _Default = () => ({
   },
   data() {
     return {
-      mock: {"variation":"default","version":"sktwi1xtmkfgx8626","items":[{}],"primary":{"image":{"dimensions":{"width":6000,"height":4000},"alt":null,"copyright":null,"url":"https://images.unsplash.com/photo-1544731612-de7f96afe55f"},"title":"rock","subtitle":"its","description":[{"type":"paragraph","text":"Aliqua et excepteur Lorem. Quis tempor id ad eu laborum eu tempor officia culpa in excepteur eiusmod. Nulla eu enim labore occaecat nostrud in consectetur Lorem.","spans":[]}],"margin_top":false,"margin_bottom":true,"reverse":false,"cta_link":{"link_type":"Web","url":"https://prismic.io"},"cta_text":"center","enable_animation":false,"enable_bg":true},"id":"_Default","slice_type":"image_and_text"}
+      mock: {"variation":"default","version":"sktwi1xtmkfgx8626","items":[{}],"primary":{"image":{"dimensions":{"width":6000,"height":4000},"alt":null,"copyright":null,"url":"https://images.unsplash.com/photo-1544731612-de7f96afe55f"},"title":"rock","subtitle":"its","description":[{"type":"paragraph","text":"Aliqua et excepteur Lorem. Quis tempor id ad eu laborum eu tempor officia culpa in excepteur eiusmod. Nulla eu enim labore occaecat nostrud in consectetur Lorem.","spans":[]}],"margin_top":false,"margin_bottom":true,"reverse":false,"cta_link":{"link_type":"Web","url":"https://prismic.io"},"cta_text":"center","cta_accessibile_text":"cream","enable_animation":false,"enable_bg":true},"id":"_Default","slice_type":"image_and_text"}
     }
   },
   template: '<SliceZone :slices="[mock]" :resolver="resolve" />'

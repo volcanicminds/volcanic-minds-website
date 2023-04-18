@@ -30,6 +30,11 @@
       "enable_animation": {
         "__TYPE__": "BooleanContent",
         "value": true
+      },
+      "accessible_label": {
+        "__TYPE__": "FieldContent",
+        "value": "lie",
+        "type": "Text"
       }
     },
     "items": [

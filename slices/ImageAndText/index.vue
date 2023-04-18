@@ -20,9 +20,19 @@
 					v-if="slice.primary.cta_link && !slice.primary.cta_link.isBroken && slice.primary.cta_text"
 					class="center mt3"
 				>
-					<PrismicLink :field="slice.primary.cta_link" class="btn btn-primary mb4">{{
-						slice.primary.cta_text
-					}}</PrismicLink>
+					<PrismicLink
+						:field="slice.primary.cta_link"
+						class="btn btn-primary mb4"
+						:aria-label="
+							slice.primary.cta_accessibile_text &&
+							slice.primary.cta_link &&
+							slice.primary.cta_link.target &&
+							slice.primary.cta_link.target === '_blank'
+								? slice.primary.cta_accessibile_text
+								: undefined
+						"
+						>{{ slice.primary.cta_text }}</PrismicLink
+					>
 				</div>
 			</div>
 		</WrapperContainer>
@@ -30,9 +40,10 @@
 </template>
 
 <script lang="ts">
-export default {
+import Vue from 'vue'
+export default Vue.extend({
 	name: 'ImageAndText'
-}
+})
 </script>
 
 <script setup lang="ts">

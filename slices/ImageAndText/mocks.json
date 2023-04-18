@@ -78,6 +78,11 @@
       "enable_bg": {
         "__TYPE__": "BooleanContent",
         "value": true
+      },
+      "cta_accessibile_text": {
+        "__TYPE__": "FieldContent",
+        "value": "cream",
+        "type": "Text"
       }
     },
     "items": [

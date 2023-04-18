@@ -9,6 +9,14 @@
 				:field="slice.primary.link"
 				class="btn btn-primary uppercase"
 				:class="slice.primary.size === 'regular' ? '' : 'btn-big'"
+				:aria-label="
+					slice.primary.accessible_label &&
+					slice.primary.link &&
+					slice.primary.link.target &&
+					slice.primary.link.target === '_blank'
+						? slice.primary.accessible_label
+						: undefined
+				"
 				>{{ slice.primary.label }}</PrismicLink
 			>
 		</WrapperContainer>
@@ -16,9 +24,10 @@
 </template>
 
 <script lang="ts">
-export default {
+import Vue from 'vue'
+export default Vue.extend({
 	name: 'CallToAction'
-}
+})
 </script>
 
 <script setup lang="ts">

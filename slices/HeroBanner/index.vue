@@ -23,6 +23,8 @@
 				class="hero-subtitle"
 				:field="slice.primary.subtitle"
 				wrapper="div"
+				role="heading"
+				aria-level="1"
 			/>
 			<div
 				v-if="slice.primary.cta_link && !slice.primary.cta_link.isBroken && slice.primary.cta_text"
