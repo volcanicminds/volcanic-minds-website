@@ -1,6 +1,7 @@
 {
 	"apiEndpoint": "https://volcanic-website.prismic.io/api/v2",
-	"libraries": ["@/slices"],
-	"_latest": "0.6.1",
+	"repositoryName": "volcanic-website",
+	"adapter": "@slicemachine/adapter-nuxt2",
+	"libraries": ["./slices"],
 	"localSliceSimulatorURL": "http://localhost:3000/slice-simulator"
 }
