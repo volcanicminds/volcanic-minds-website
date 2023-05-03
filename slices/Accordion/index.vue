@@ -45,7 +45,7 @@ defineProps({
 	}
 })
 
-function openAccordion(accordion) {
+function openAccordion(accordion: string) {
 	if (accordion === isOpened.value) {
 		isOpened.value = ''
 	} else {
