@@ -31,7 +31,7 @@
 					@click="isLanguageSelectorOpened = true"
 				/>
 				<div
-					v-if="alternateLanguages && isLanguageSelectorOpened"
+					v-show="alternateLanguages && isLanguageSelectorOpened"
 					class="country-flag-dropdown absolute bg-raisin-black-2 px2"
 				>
 					<PrismicLink
