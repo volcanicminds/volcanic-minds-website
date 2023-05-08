@@ -12,15 +12,46 @@
 				</NuxtLink>
 			</div>
 
-			<template v-for="(item, i) in navigationMenuData.data.slices">
-				<PrismicLink
-					v-if="item.primary.link_url && item.primary.link_title && !item.primary.hide_on_desktop"
-					:key="i"
-					class="px2 pr0 xs-hide sm-hide no-underline"
-					:field="item.primary.link_url"
-					>{{ item.primary.link_title }}</PrismicLink
-				>
-			</template>
+			<!-- https://moderncss.dev/css-only-accessible-dropdown-navigation-menu/ -->
+			<nav :aria-label="navigationMenuData.data.aria_label" class="xs-hide sm-hide">
+				<ul class="m0 p0">
+					<template v-for="(firstLevel, i) in navigationMenuData.data.slices">
+						<template v-if="firstLevel.primary.link_title">
+							<li v-if="Object.keys(firstLevel.items).length" :key="i" class="inline-block with-submenu relative p0">
+								<button
+									type="button"
+									class="px2 border-none font-light"
+									aria-expanded="false"
+									:aria-controls="`sweets-dropdown-${i}`"
+								>
+									{{ firstLevel.primary.link_title }}
+								</button>
+								<ul :id="`sweets-dropdown-${i}`" class="dropdown absolute submenu bg-raisin-black-2">
+									<template v-for="(secondLevel, j) in firstLevel.items">
+										<li :key="i + j" class="p0">
+											<PrismicLink
+												v-if="secondLevel.link_url && secondLevel.link_title"
+												class="px2 block xs-hide sm-hide no-underline"
+												:field="secondLevel.link_url"
+												>{{ secondLevel.link_title }}</PrismicLink
+											>
+										</li>
+									</template>
+								</ul>
+							</li>
+							<li
+								v-else-if="firstLevel.primary.link_url && !firstLevel.primary.hide_on_desktop"
+								:key="i"
+								class="inline-block p0"
+							>
+								<PrismicLink class="px2 no-underline" :field="firstLevel.primary.link_url">{{
+									firstLevel.primary.link_title
+								}}</PrismicLink>
+							</li>
+						</template>
+					</template>
+				</ul>
+			</nav>
 
 			<div v-click-outside="() => (isLanguageSelectorOpened = false)" class="relative">
 				<div
@@ -107,6 +138,27 @@ export default Vue.extend({
 		.logo
 			width 80px
 			height 30px
+
+	ul
+		list-style none
+		.submenu
+			display none
+			visibility hidden
+			opacity 0
+			width 400px
+			border-radius 10px
+
+		button
+			background transparent
+			color var(--cultured)
+
+		.with-submenu:hover > .submenu
+		.with-submenu:focus-within > .submenu
+		.with-submenu .submenu:hover
+		.with-submenu .submenu:focus
+			visibility visible
+			opacity 1
+			display block
 	.country-flag
 		width 20px
 		height 20px

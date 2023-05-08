@@ -546,6 +546,17 @@ export type HomepageDocument<Lang extends string = string> = prismicT.PrismicDoc
 /** Content for Navigation menu documents */
 interface NavigationMenuDocumentData {
 	/**
+	 * Aria label field in *Navigation menu*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: navigation_menu.aria_label
+	 * - **Tab**: Main
+	 * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+	 *
+	 */
+	aria_label: prismicT.KeyTextField
+	/**
 	 * Slice Zone field in *Navigation menu*
 	 *
 	 * - **Field Type**: Slice Zone

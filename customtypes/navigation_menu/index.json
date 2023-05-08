@@ -5,6 +5,7 @@
 	"status": true,
 	"json": {
 		"Main": {
+			"aria_label": { "type": "Text", "config": { "label": "Aria label", "placeholder": "" } },
 			"slices": {
 				"type": "Slices",
 				"fieldset": "Slice Zone",
