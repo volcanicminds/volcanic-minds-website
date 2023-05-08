@@ -543,6 +543,39 @@ export type HomepageDocument<Lang extends string = string> = prismicT.PrismicDoc
 	'homepage',
 	Lang
 >
+/** Content for Navigation menu documents */
+interface NavigationMenuDocumentData {
+	/**
+	 * Slice Zone field in *Navigation menu*
+	 *
+	 * - **Field Type**: Slice Zone
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: navigation_menu.slices[]
+	 * - **Tab**: Main
+	 * - **Documentation**: https://prismic.io/docs/core-concepts/slices
+	 *
+	 */
+	slices: prismicT.SliceZone<NavigationMenuDocumentDataSlicesSlice>
+}
+/**
+ * Slice for *Navigation menu → Slice Zone*
+ *
+ */
+type NavigationMenuDocumentDataSlicesSlice = NavigationMenuSlice
+/**
+ * Navigation menu document from Prismic
+ *
+ * - **API ID**: `navigation_menu`
+ * - **Repeatable**: `false`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type NavigationMenuDocument<Lang extends string = string> = prismicT.PrismicDocumentWithoutUID<
+	Simplify<NavigationMenuDocumentData>,
+	'navigation_menu',
+	Lang
+>
 /** Content for Pagina di secondo livello documents */
 interface SecondLevelPageDocumentData {
 	/**
@@ -691,6 +724,7 @@ export type AllDocumentTypes =
 	| GenericSettingsDocument
 	| HeaderDocument
 	| HomepageDocument
+	| NavigationMenuDocument
 	| SecondLevelPageDocument
 /**
  * Primary content in Accordion → Primary
@@ -1483,6 +1517,96 @@ type ImageAndTextSliceVariation = ImageAndTextSliceDefault
  */
 export type ImageAndTextSlice = prismicT.SharedSlice<'image_and_text', ImageAndTextSliceVariation>
 /**
+ * Primary content in NavigationItem → Primary
+ *
+ */
+interface NavigationMenuSliceDefaultPrimary {
+	/**
+	 * URL link field in *NavigationItem → Primary*
+	 *
+	 * - **Field Type**: Link
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: navigation_menu.primary.link_url
+	 * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
+	 *
+	 */
+	link_url: prismicT.LinkField
+	/**
+	 * Titolo link field in *NavigationItem → Primary*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: navigation_menu.primary.link_title
+	 * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+	 *
+	 */
+	link_title: prismicT.KeyTextField
+	/**
+	 * Nascondi su desktop field in *NavigationItem → Primary*
+	 *
+	 * - **Field Type**: Boolean
+	 * - **Placeholder**: *None*
+	 * - **Default Value**: false
+	 * - **API ID Path**: navigation_menu.primary.hide_on_desktop
+	 * - **Documentation**: https://prismic.io/docs/core-concepts/boolean
+	 *
+	 */
+	hide_on_desktop: prismicT.BooleanField
+}
+/**
+ * Item in NavigationItem → Items
+ *
+ */
+export interface NavigationMenuSliceDefaultItem {
+	/**
+	 * URL link field in *NavigationItem → Items*
+	 *
+	 * - **Field Type**: Link
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: navigation_menu.items[].link_url
+	 * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
+	 *
+	 */
+	link_url: prismicT.LinkField
+	/**
+	 * Titolo link field in *NavigationItem → Items*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: navigation_menu.items[].link_title
+	 * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+	 *
+	 */
+	link_title: prismicT.KeyTextField
+}
+/**
+ * Default variation for NavigationItem Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: `Default`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type NavigationMenuSliceDefault = prismicT.SharedSliceVariation<
+	'default',
+	Simplify<NavigationMenuSliceDefaultPrimary>,
+	Simplify<NavigationMenuSliceDefaultItem>
+>
+/**
+ * Slice variation for *NavigationItem*
+ *
+ */
+type NavigationMenuSliceVariation = NavigationMenuSliceDefault
+/**
+ * NavigationItem Shared Slice
+ *
+ * - **API ID**: `navigation_menu`
+ * - **Description**: `NavigationMenu`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type NavigationMenuSlice = prismicT.SharedSlice<'navigation_menu', NavigationMenuSliceVariation>
+/**
  * Primary content in Partners → Primary
  *
  */
@@ -1815,6 +1939,9 @@ declare module '@prismicio/client' {
 			HomepageDocumentData,
 			HomepageDocumentDataSlicesSlice,
 			HomepageDocument,
+			NavigationMenuDocumentData,
+			NavigationMenuDocumentDataSlicesSlice,
+			NavigationMenuDocument,
 			SecondLevelPageDocumentData,
 			SecondLevelPageDocumentDataSlicesSlice,
 			SecondLevelPageDocument,
@@ -1846,6 +1973,11 @@ declare module '@prismicio/client' {
 			ImageAndTextSliceDefault,
 			ImageAndTextSliceVariation,
 			ImageAndTextSlice,
+			NavigationMenuSliceDefaultPrimary,
+			NavigationMenuSliceDefaultItem,
+			NavigationMenuSliceDefault,
+			NavigationMenuSliceVariation,
+			NavigationMenuSlice,
 			PartnersSliceDefaultPrimary,
 			PartnersSliceDefaultItem,
 			PartnersSliceDefault,

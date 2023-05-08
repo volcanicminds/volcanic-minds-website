@@ -11,13 +11,14 @@
 					/>
 				</NuxtLink>
 			</div>
-			<template v-for="(link, i) in headerData.data.links">
+
+			<template v-for="(item, i) in navigationMenuData.data.slices">
 				<PrismicLink
-					v-if="!link.hide_on_desktop"
+					v-if="item.primary.link_url && item.primary.link_title && !item.primary.hide_on_desktop"
 					:key="i"
 					class="px2 pr0 xs-hide sm-hide no-underline"
-					:field="link.link_url"
-					>{{ link.link_title }}</PrismicLink
+					:field="item.primary.link_url"
+					>{{ item.primary.link_title }}</PrismicLink
 				>
 			</template>
 
@@ -80,6 +81,9 @@ export default Vue.extend({
 		},
 		headerData() {
 			return this.$store.state.prismic.header
+		},
+		navigationMenuData() {
+			return this.$store.state.prismic.navigationMenu
 		}
 	},
 	methods: {

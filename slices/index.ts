@@ -7,6 +7,8 @@ export const components = {
 	contacts: () => import(/* webpackChunkName: "prismic__slices__contacts" */ './Contacts/index.vue'),
 	hero_banner: () => import(/* webpackChunkName: "prismic__slices__hero_banner" */ './HeroBanner/index.vue'),
 	image_and_text: () => import(/* webpackChunkName: "prismic__slices__image_and_text" */ './ImageAndText/index.vue'),
+	navigation_menu: () =>
+		import(/* webpackChunkName: "prismic__slices__navigation_menu" */ './NavigationItem/index.vue'),
 	partners: () => import(/* webpackChunkName: "prismic__slices__partners" */ './Partners/index.vue'),
 	rich_text: () => import(/* webpackChunkName: "prismic__slices__rich_text" */ './RichText/index.vue'),
 	statistics: () => import(/* webpackChunkName: "prismic__slices__statistics" */ './Statistics/index.vue')
