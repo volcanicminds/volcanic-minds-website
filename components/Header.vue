@@ -13,25 +13,25 @@
 			</div>
 
 			<!-- https://moderncss.dev/css-only-accessible-dropdown-navigation-menu/ -->
-			<nav :aria-label="navigationMenuData.data.aria_label" class="xs-hide sm-hide">
+			<nav v-if="navigationMenuData" :aria-label="navigationMenuData.data.aria_label" class="xs-hide sm-hide">
 				<ul class="m0 p0">
 					<template v-for="(firstLevel, i) in navigationMenuData.data.slices">
 						<template v-if="firstLevel.primary.link_title">
-							<li v-if="Object.keys(firstLevel.items).length" :key="i" class="inline-block with-submenu relative p0">
+							<li v-if="Object.keys(firstLevel.items).length" :key="i" class="inline-block dropdown relative p0">
 								<button
 									type="button"
-									class="px2 border-none font-light"
+									class="px2 border-none font-light dropdown__title cursor-pointer"
 									aria-expanded="false"
 									:aria-controls="`sweets-dropdown-${i}`"
 								>
 									{{ firstLevel.primary.link_title }}
 								</button>
-								<ul :id="`sweets-dropdown-${i}`" class="dropdown absolute submenu bg-raisin-black-2">
+								<ul :id="`sweets-dropdown-${i}`" class="dropdown__menu absolute bg-raisin-black-2 p0 center">
 									<template v-for="(secondLevel, j) in firstLevel.items">
-										<li :key="i + j" class="p0">
+										<li :key="i + j" class="px3 py1">
 											<PrismicLink
 												v-if="secondLevel.link_url && secondLevel.link_title"
-												class="px2 block xs-hide sm-hide no-underline"
+												class="py2 xs-hide sm-hide no-underline dropdown__menu_link"
 												:field="secondLevel.link_url"
 												>{{ secondLevel.link_title }}</PrismicLink
 											>
@@ -141,24 +141,28 @@ export default Vue.extend({
 
 	ul
 		list-style none
-		.submenu
-			display none
-			visibility hidden
-			opacity 0
-			width 400px
-			border-radius 10px
 
-		button
-			background transparent
-			color var(--cultured)
-
-		.with-submenu:hover > .submenu
-		.with-submenu:focus-within > .submenu
-		.with-submenu .submenu:hover
-		.with-submenu .submenu:focus
-			visibility visible
-			opacity 1
-			display block
+		.dropdown
+			&:hover > .dropdown__menu
+			&:focus-within > .dropdown__menu
+				visibility visible
+				opacity 1
+				display block
+				transform rotateX(0) translateX(-50%)
+			&__menu
+				left 50%
+				top 35px
+				transform rotateX(-90deg) translateX(-50%)
+				transform-origin top center
+				transition 280ms all 120ms ease-out
+				opacity 0.3
+				visibility hidden
+				border-radius 10px
+				&_link
+					white-space nowrap
+			&__title
+				background transparent
+				color var(--cultured)
 	.country-flag
 		width 20px
 		height 20px
