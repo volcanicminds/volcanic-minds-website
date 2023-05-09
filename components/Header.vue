@@ -22,11 +22,12 @@
 									type="button"
 									class="px2 border-none font-light dropdown__title cursor-pointer"
 									aria-expanded="false"
-									:aria-controls="`sweets-dropdown-${i}`"
+									:aria-controls="`dropdown-${i}`"
 								>
-									{{ firstLevel.primary.link_title }}
+									{{ firstLevel.primary.link_title
+									}}<font-awesome-icon class="open-icon relative mr1" :icon="['fas', 'angle-down']" size="2xs" />
 								</button>
-								<ul :id="`sweets-dropdown-${i}`" class="dropdown__menu absolute bg-raisin-black-2 p0 center">
+								<ul :id="`dropdown-${i}`" class="dropdown__menu absolute bg-raisin-black-2 px0 py1 center">
 									<template v-for="(secondLevel, j) in firstLevel.items">
 										<li :key="i + j" class="px3 py1">
 											<PrismicLink
@@ -143,12 +144,16 @@ export default Vue.extend({
 		list-style none
 
 		.dropdown
-			&:hover > .dropdown__menu
-			&:focus-within > .dropdown__menu
-				visibility visible
-				opacity 1
-				display block
-				transform rotateX(0) translateX(-50%)
+			&:hover
+			&:focus-within
+				> .dropdown__menu
+				> .dropdown__menu
+					visibility visible
+					opacity 1
+					display block
+					transform rotateX(0) translateX(-50%)
+				.open-icon
+					transform rotateX(180deg)
 			&__menu
 				left 50%
 				top 35px
@@ -163,6 +168,10 @@ export default Vue.extend({
 			&__title
 				background transparent
 				color var(--cultured)
+				.open-icon
+					transition 280ms all 120ms ease-out
+					top 4px
+					left 5px
 	.country-flag
 		width 20px
 		height 20px
