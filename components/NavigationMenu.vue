@@ -20,12 +20,15 @@
 							{{ firstLevel.primary.link_title
 							}}<font-awesome-icon class="open-icon relative mr1" :icon="['fas', 'angle-down']" size="2xs" />
 						</button>
-						<ul :id="`dropdown-${i}`" class="dropdown__menu absolute bg-raisin-black-2 px0 py1 center">
+						<ul :id="`dropdown-${i}`" class="dropdown__menu absolute px3 gradient-bg">
+							<li class="dropdown-bg bg-raisin-black-2 m-auto absolute col-12 h100 left-0 top-0 right-0 bottom-0">
+								&nbsp;
+							</li>
 							<template v-for="(secondLevel, j) in firstLevel.items">
-								<li :key="i + j" class="px3 my1">
+								<li :key="i + j" class="my2 relative">
 									<PrismicLink
 										v-if="secondLevel.link_url && secondLevel.link_title"
-										class="py2 no-underline dropdown__menu_link"
+										class="no-underline"
 										:field="secondLevel.link_url"
 										:class="isMobile ? 'h2 font-light' : ''"
 										@click.native="closeSidebar"
@@ -58,7 +61,7 @@
 <script lang="ts">
 import Vue from 'vue'
 export default Vue.extend({
-	// TODO: undestand why Composition API props won't work with Options API computed
+	// TODO: understand why Composition API props won't work with Options API computed
 	props: {
 		isMobile: Boolean
 	},
@@ -77,6 +80,12 @@ export default Vue.extend({
 	}
 })
 </script>
+
+<style scoped>
+.sidebar-link .gradient-bg {
+	box-shadow: 20px 20px 60px #1a1a1f, -20px -20px 60px #232329;
+}
+</style>
 
 <style lang="stylus" scoped>
 ul
@@ -105,9 +114,17 @@ ul
 			transition 280ms all 120ms ease-out
 			opacity 0.3
 			visibility hidden
-			border-radius 10px
-			&_link
-				white-space nowrap
+			border-radius 20px 5px
+			width 250px
+			&.gradient-bg
+				background var(--rainbow-gradient)
+			.dropdown-bg
+				width 97%
+				height 93%
+				border-radius 18px 5px
+		&.sidebar-link
+			.dropdown__menu
+				max-width 100%
 		&__title
 			background transparent
 			color var(--cultured)
