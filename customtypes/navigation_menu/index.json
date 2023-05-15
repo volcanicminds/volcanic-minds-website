@@ -1,0 +1,16 @@
+{
+	"id": "navigation_menu",
+	"label": "Navigation menu",
+	"repeatable": false,
+	"status": true,
+	"json": {
+		"Main": {
+			"aria_label": { "type": "Text", "config": { "label": "Aria label", "placeholder": "" } },
+			"slices": {
+				"type": "Slices",
+				"fieldset": "Slice Zone",
+				"config": { "choices": { "navigation_menu": { "type": "SharedSlice" } } }
+			}
+		}
+	}
+}

@@ -2,6 +2,7 @@ import Breadcrumbs from './components/Breadcrumbs.vue'
 import Footer from './components/Footer.vue'
 import Header from './components/Header.vue'
 import Loading from './components/Loading.vue'
+import NavigationMenu from './components/NavigationMenu.vue'
 import Observer from './components/Observer.vue'
 import RainbowBar from './components/RainbowBar.vue'
 import Sidebar from './components/Sidebar.vue'
@@ -16,6 +17,7 @@ declare module 'vue' {
 		Footer: typeof Footer
 		Header: typeof Header
 		Loading: typeof Loading
+		NavigationMenu: typeof NavigationMenu
 		Observer: typeof Observer
 		RainbowBar: typeof RainbowBar
 		Sidebar: typeof Sidebar

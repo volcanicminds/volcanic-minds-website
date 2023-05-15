@@ -5,6 +5,6 @@
 		"sysoev.language-stylus",
 		"vue.vscode-typescript-vue-plugin",
 		"vue.volar",
-		"thisismanta.stylus-supremacy" //use 2.16.0!
+		"thisismanta.stylus-supremacy"
 	]
 }

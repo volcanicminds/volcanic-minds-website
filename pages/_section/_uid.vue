@@ -10,10 +10,10 @@
 </template>
 
 <script lang="ts">
-import Vue from 'vue'
+import { Vue, Component, Provide } from 'nuxt-property-decorator'
 import { components } from '~/slices'
 
-export default Vue.extend({
+@Component({
 	// @ts-ignore
 	async asyncData({ $prismic, params, error, i18n, store }) {
 		const lang = i18n.locale
@@ -36,11 +36,24 @@ export default Vue.extend({
 		} else {
 			error({ statusCode: 404, message: 'Page not found' })
 		}
-	},
-	data: function () {
-		return { components }
-	},
-	head() {
+	}
+})
+export default class PageComponent extends Vue {
+	document!: any
+	$constants!: any
+	section!: any
+
+	@Provide() components = components
+
+	// https://jankal.dev/blog/typing-the-nuxt-head-method/
+	head(): {
+		title: any
+		meta: (
+			| { hid: string; name: string; content: any; property?: undefined }
+			| { hid: string; property: string; content: any; name?: undefined }
+		)[]
+		htmlAttrs: { lang: string }
+	} {
 		return {
 			title: this.document.data.seo_title || this.$constants.seoTitle,
 			meta: [
@@ -84,5 +97,5 @@ export default Vue.extend({
 			}
 		}
 	}
-})
+}
 </script>

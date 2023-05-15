@@ -1,5 +1,5 @@
 import Prismic from '@prismicio/client'
-import smConfig from './sm.json'
+import smConfig from './slicemachine.config.json'
 
 export default async () => {
 	const client = await Prismic.getApi(smConfig.apiEndpoint)

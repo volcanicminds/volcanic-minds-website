@@ -11,15 +11,8 @@
 					/>
 				</NuxtLink>
 			</div>
-			<template v-for="(link, i) in headerData.data.links">
-				<PrismicLink
-					v-if="!link.hide_on_desktop"
-					:key="i"
-					class="px2 pr0 xs-hide sm-hide no-underline"
-					:field="link.link_url"
-					>{{ link.link_title }}</PrismicLink
-				>
-			</template>
+
+			<NavigationMenu class="xs-hide sm-hide" />
 
 			<div v-click-outside="() => (isLanguageSelectorOpened = false)" class="relative">
 				<div
@@ -31,7 +24,7 @@
 					@click="isLanguageSelectorOpened = true"
 				/>
 				<div
-					v-if="alternateLanguages && isLanguageSelectorOpened"
+					v-show="alternateLanguages && isLanguageSelectorOpened"
 					class="country-flag-dropdown absolute bg-raisin-black-2 px2"
 				>
 					<PrismicLink
@@ -66,24 +59,22 @@ export default Vue.extend({
 	directives: {
 		ClickOutside
 	},
-	data() {
-		return {
-			isLanguageSelectorOpened: false
-		}
-	},
+	data: (): { isLanguageSelectorOpened: boolean } => ({
+		isLanguageSelectorOpened: false
+	}),
 	computed: {
-		alternateLanguages() {
+		alternateLanguages(): any {
 			return this.$store.state.prismic.alternateLanguages
 		},
-		currentLanguage() {
+		currentLanguage(): any {
 			return this.$store.state.prismic.currentLanguage
 		},
-		headerData() {
+		headerData(): any {
 			return this.$store.state.prismic.header
 		}
 	},
 	methods: {
-		openSidebar() {
+		openSidebar(): void {
 			this.$store.commit('prismic/setIsSidebarOpened', true)
 			if (process.client) {
 				document.body.style.overflow = 'hidden'
@@ -103,6 +94,7 @@ export default Vue.extend({
 		.logo
 			width 80px
 			height 30px
+
 	.country-flag
 		width 20px
 		height 20px

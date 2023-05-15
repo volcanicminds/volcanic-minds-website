@@ -15,7 +15,7 @@
 					/>
 				</div>
 			</WrapperContainer>
-			<WrapperContainer v-if="headerData.data.links" class="py2 flex-auto overflow-auto center">
+			<!-- <WrapperContainer v-if="headerData.data.links" class="py2 flex-auto overflow-auto center">
 				<template v-for="(link, i) in headerData.data.links">
 					<PrismicLink
 						:key="i"
@@ -25,6 +25,9 @@
 						>{{ link.link_title }}</PrismicLink
 					>
 				</template>
+			</WrapperContainer> -->
+			<WrapperContainer class="py2 flex-auto overflow-auto center">
+				<NavigationMenu is-mobile />
 			</WrapperContainer>
 			<div class="flex flex-column items-center py3">
 				<WrapperPrismicImage
@@ -50,18 +53,18 @@
 import Vue from 'vue'
 export default Vue.extend({
 	computed: {
-		isSidebarOpened() {
+		isSidebarOpened(): any {
 			return this.$store.state.prismic.isSidebarOpened
 		},
-		headerData() {
+		headerData(): any {
 			return this.$store.state.prismic.header
 		},
-		footerData() {
+		footerData(): any {
 			return this.$store.state.prismic.footer
 		}
 	},
 	methods: {
-		closeSidebar() {
+		closeSidebar(): void {
 			this.$store.commit('prismic/setIsSidebarOpened', false)
 			if (process.client) {
 				document.body.style.overflow = 'visible'
@@ -74,10 +77,6 @@ export default Vue.extend({
 <style lang="stylus" scoped>
 .social-links-container
 	gap 30px
-
-.sidebar-link
-	margin-top 24px
-	margin-bottom 24px
 
 .footer-logo
 	@media screen and (orientation: landscape)

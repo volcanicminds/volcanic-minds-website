@@ -1,98 +1,57 @@
 {
-  "id": "footer",
-  "label": "Footer",
-  "repeatable": false,
-  "status": true,
-  "json": {
-    "Main": {
-      "logo": {
-        "type": "Image",
-        "config": {
-          "label": "Logo",
-          "constraint": {},
-          "thumbnails": []
-        }
-      },
-      "site_data": {
-        "type": "StructuredText",
-        "config": {
-          "label": "Dati del sito",
-          "placeholder": "",
-          "allowTargetBlank": true,
-          "multi": "paragraph,strong,em,hyperlink"
-        }
-      },
-      "company_data": {
-        "type": "StructuredText",
-        "config": {
-          "label": "Dati societari",
-          "placeholder": "",
-          "allowTargetBlank": true,
-          "multi": "paragraph,strong,em,hyperlink"
-        }
-      },
-      "icon_links": {
-        "type": "Group",
-        "config": {
-          "label": "Link con icone",
-          "fields": {
-            "icon": {
-              "type": "Text",
-              "config": {
-                "label": "Icona",
-                "placeholder": ""
-              }
-            },
-            "link": {
-              "type": "Link",
-              "config": {
-                "label": "Link",
-                "placeholder": "",
-                "allowTargetBlank": true,
-                "select": null
-              }
-            },
-            "alt_text": {
-              "type": "Text",
-              "config": {
-                "label": "Alt text",
-                "placeholder": ""
-              }
-            }
-          }
-        }
-      },
-      "text_links": {
-        "type": "Group",
-        "config": {
-          "label": "Link testuali",
-          "fields": {
-            "text": {
-              "type": "Text",
-              "config": {
-                "label": "Testo",
-                "placeholder": ""
-              }
-            },
-            "link": {
-              "type": "Link",
-              "config": {
-                "label": "Link",
-                "placeholder": "",
-                "allowTargetBlank": true,
-                "select": null
-              }
-            }
-          }
-        }
-      },
-      "slices": {
-        "type": "Slices",
-        "fieldset": "Slice Zone",
-        "config": {
-          "choices": {}
-        }
-      }
-    }
-  }
+	"id": "footer",
+	"label": "Footer",
+	"repeatable": false,
+	"status": true,
+	"json": {
+		"Main": {
+			"logo": { "type": "Image", "config": { "label": "Logo", "constraint": {}, "thumbnails": [] } },
+			"site_data": {
+				"type": "StructuredText",
+				"config": {
+					"label": "Dati del sito",
+					"placeholder": "",
+					"allowTargetBlank": true,
+					"multi": "paragraph,strong,em,hyperlink"
+				}
+			},
+			"company_data": {
+				"type": "StructuredText",
+				"config": {
+					"label": "Dati societari",
+					"placeholder": "",
+					"allowTargetBlank": true,
+					"multi": "paragraph,strong,em,hyperlink"
+				}
+			},
+			"icon_links": {
+				"type": "Group",
+				"config": {
+					"label": "Link con icone",
+					"fields": {
+						"icon": { "type": "Text", "config": { "label": "Icona", "placeholder": "" } },
+						"link": {
+							"type": "Link",
+							"config": { "label": "Link", "placeholder": "", "allowTargetBlank": true, "select": null }
+						},
+						"alt_text": { "type": "Text", "config": { "label": "Alt text", "placeholder": "" } }
+					}
+				}
+			},
+			"text_links": {
+				"type": "Group",
+				"config": {
+					"label": "Link testuali",
+					"fields": {
+						"text": { "type": "Text", "config": { "label": "Testo", "placeholder": "" } },
+						"link": {
+							"type": "Link",
+							"config": { "label": "Link", "placeholder": "", "allowTargetBlank": true, "select": null }
+						}
+					}
+				}
+			},
+			"slices": { "type": "Slices", "fieldset": "Slice Zone", "config": { "choices": {} } }
+		}
+	}
 }

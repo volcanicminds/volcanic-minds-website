@@ -35,10 +35,10 @@
 import Vue from 'vue'
 export default Vue.extend({
 	computed: {
-		footerData() {
+		footerData(): any {
 			return this.$store.state.prismic.footer
 		},
-		openInNewTabLabel() {
+		openInNewTabLabel(): any {
 			return this.$store.state.prismic.genericSettings.data.open_in_new_tab_label
 		}
 	}

@@ -1,0 +1,115 @@
+[
+  {
+    "logo": {
+      "__TYPE__": "ImageContent",
+      "origin": {
+        "id": "main",
+        "url": "https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2",
+        "width": 3648,
+        "height": 4560
+      },
+      "url": "https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2",
+      "width": 3648,
+      "height": 4560,
+      "edit": {
+        "zoom": 1,
+        "crop": {
+          "x": 0,
+          "y": 0
+        },
+        "background": "transparent"
+      },
+      "thumbnails": {}
+    },
+    "site_data": {
+      "__TYPE__": "StructuredTextContent",
+      "value": [
+        {
+          "type": "paragraph",
+          "content": {
+            "text": "Cillum magna ut ad ipsum laboris Lorem amet eu dolor et deserunt velit ipsum ad ea. Sunt qui labore ipsum. Ut tempor voluptate exercitation."
+          }
+        }
+      ]
+    },
+    "company_data": {
+      "__TYPE__": "StructuredTextContent",
+      "value": [
+        {
+          "type": "paragraph",
+          "content": {
+            "text": "Proident est officia minim commodo. Pariatur dolore fugiat et commodo occaecat magna cupidatat ea cillum ut duis mollit dolore minim consequat. Dolor Lorem tempor nisi cillum proident est."
+          }
+        }
+      ]
+    },
+    "icon_links": {
+      "__TYPE__": "GroupContentType",
+      "value": [
+        {
+          "__TYPE__": "GroupItemContent",
+          "value": [
+            [
+              "icon",
+              {
+                "__TYPE__": "FieldContent",
+                "value": "wild",
+                "type": "Text"
+              }
+            ],
+            [
+              "link",
+              {
+                "__TYPE__": "LinkContent",
+                "value": {
+                  "__TYPE__": "ExternalLink",
+                  "url": "https://slicemachine.dev"
+                }
+              }
+            ],
+            [
+              "alt_text",
+              {
+                "__TYPE__": "FieldContent",
+                "value": "basic",
+                "type": "Text"
+              }
+            ]
+          ]
+        }
+      ]
+    },
+    "text_links": {
+      "__TYPE__": "GroupContentType",
+      "value": [
+        {
+          "__TYPE__": "GroupItemContent",
+          "value": [
+            [
+              "text",
+              {
+                "__TYPE__": "FieldContent",
+                "value": "mud",
+                "type": "Text"
+              }
+            ],
+            [
+              "link",
+              {
+                "__TYPE__": "LinkContent",
+                "value": {
+                  "__TYPE__": "ExternalLink",
+                  "url": "http://google.com"
+                }
+              }
+            ]
+          ]
+        }
+      ]
+    },
+    "slices": {
+      "__TYPE__": "SliceContentType",
+      "value": []
+    }
+  }
+]

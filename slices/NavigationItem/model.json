@@ -1,0 +1,39 @@
+{
+	"id": "navigation_menu",
+	"type": "SharedSlice",
+	"name": "NavigationItem",
+	"description": "NavigationMenu",
+	"variations": [
+		{
+			"id": "default",
+			"name": "Default",
+			"docURL": "...",
+			"version": "initial",
+			"description": "Default",
+			"imageUrl": "",
+			"primary": {
+				"link_url": {
+					"type": "Link",
+					"config": { "label": "URL link", "placeholder": "", "allowTargetBlank": true, "select": null }
+				},
+				"link_title": { "type": "Text", "config": { "label": "Titolo link", "placeholder": "" } },
+				"hide_on_desktop": {
+					"type": "Boolean",
+					"config": {
+						"label": "Nascondi su desktop",
+						"placeholder_false": "NO",
+						"placeholder_true": "SI",
+						"default_value": false
+					}
+				}
+			},
+			"items": {
+				"link_url": {
+					"type": "Link",
+					"config": { "label": "URL link", "placeholder": "", "allowTargetBlank": true, "select": null }
+				},
+				"link_title": { "type": "Text", "config": { "label": "Titolo link", "placeholder": "" } }
+			}
+		}
+	]
+}

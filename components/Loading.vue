@@ -14,14 +14,14 @@
 <script lang="ts">
 import Vue from 'vue'
 export default Vue.extend({
-	data: () => ({
+	data: (): { loading: boolean } => ({
 		loading: false
 	}),
 	methods: {
-		start() {
+		start(): void {
 			this.loading = true
 		},
-		finish() {
+		finish(): void {
 			setTimeout(() => (this.loading = false), 800)
 		}
 	}
