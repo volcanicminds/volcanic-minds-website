@@ -6,6 +6,7 @@
 import Vue from 'vue'
 export default Vue.extend({
 	mounted() {
+		// @ts-ignore
 		this.$prismic.preview()
 	}
 })
