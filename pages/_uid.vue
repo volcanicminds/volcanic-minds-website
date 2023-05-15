@@ -36,7 +36,14 @@ export default class PageComponent extends Vue {
 	@Provide() components = components
 
 	// https://jankal.dev/blog/typing-the-nuxt-head-method/
-	head() {
+	head(): {
+		title: any
+		meta: (
+			| { hid: string; name: string; content: any; property?: undefined }
+			| { hid: string; property: string; content: any; name?: undefined }
+		)[]
+		htmlAttrs: { lang: string }
+	} {
 		return {
 			title: this.document.data.seo_title || this.$constants.seoTitle,
 			meta: [

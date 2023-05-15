@@ -5,7 +5,7 @@
 <script lang="ts">
 import Vue from 'vue'
 export default Vue.extend({
-	mounted() {
+	mounted(): void {
 		// @ts-ignore
 		this.$prismic.preview()
 	}

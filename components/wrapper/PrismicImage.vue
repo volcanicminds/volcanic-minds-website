@@ -23,7 +23,7 @@ const props = withDefaults(
 	}
 )
 
-function getPrismicImageSrc() {
+function getPrismicImageSrc(): any {
 	if (props.field.url.includes('.svg')) {
 		return props.field.url // do not perform any modifications on SVG files, due to Prismic security check
 	}
@@ -33,7 +33,7 @@ function getPrismicImageSrc() {
 	return props.field.url + `&w=${props.size}` + '&fit=max'
 }
 
-function getPrismicImageSrcset() {
+function getPrismicImageSrcset(): string | undefined {
 	if (props.field.url.includes('.svg')) {
 		return undefined // if file is SVG, provide no srcset
 	}

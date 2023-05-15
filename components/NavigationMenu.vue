@@ -66,12 +66,12 @@ export default Vue.extend({
 		isMobile: Boolean
 	},
 	computed: {
-		navigationMenuData() {
+		navigationMenuData(): any {
 			return this.$store.state.prismic.navigationMenu
 		}
 	},
 	methods: {
-		closeSidebar() {
+		closeSidebar(): void {
 			this.$store.commit('prismic/setIsSidebarOpened', false)
 			if (process.client) {
 				document.body.style.overflow = 'visible'

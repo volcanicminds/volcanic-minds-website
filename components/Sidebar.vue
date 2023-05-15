@@ -53,18 +53,18 @@
 import Vue from 'vue'
 export default Vue.extend({
 	computed: {
-		isSidebarOpened() {
+		isSidebarOpened(): any {
 			return this.$store.state.prismic.isSidebarOpened
 		},
-		headerData() {
+		headerData(): any {
 			return this.$store.state.prismic.header
 		},
-		footerData() {
+		footerData(): any {
 			return this.$store.state.prismic.footer
 		}
 	},
 	methods: {
-		closeSidebar() {
+		closeSidebar(): void {
 			this.$store.commit('prismic/setIsSidebarOpened', false)
 			if (process.client) {
 				document.body.style.overflow = 'visible'

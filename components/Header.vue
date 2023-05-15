@@ -59,24 +59,22 @@ export default Vue.extend({
 	directives: {
 		ClickOutside
 	},
-	data() {
-		return {
-			isLanguageSelectorOpened: false
-		}
-	},
+	data: (): { isLanguageSelectorOpened: boolean } => ({
+		isLanguageSelectorOpened: false
+	}),
 	computed: {
-		alternateLanguages() {
+		alternateLanguages(): any {
 			return this.$store.state.prismic.alternateLanguages
 		},
-		currentLanguage() {
+		currentLanguage(): any {
 			return this.$store.state.prismic.currentLanguage
 		},
-		headerData() {
+		headerData(): any {
 			return this.$store.state.prismic.header
 		}
 	},
 	methods: {
-		openSidebar() {
+		openSidebar(): void {
 			this.$store.commit('prismic/setIsSidebarOpened', true)
 			if (process.client) {
 				document.body.style.overflow = 'hidden'
