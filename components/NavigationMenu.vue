@@ -119,8 +119,8 @@ ul
 			&.gradient-bg
 				background var(--rainbow-gradient)
 			.dropdown-bg
-				width 97%
-				height 93%
+				width calc(100% - 6px)
+				height calc(100% - 6px)
 				border-radius 18px 5px
 		&.sidebar-link
 			.dropdown__menu
