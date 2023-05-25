@@ -66,7 +66,6 @@
 					"type": "Link",
 					"config": { "label": "CTA Link", "placeholder": "", "allowTargetBlank": true, "select": null }
 				},
-				"cta_text": { "type": "Text", "config": { "label": "CTA Testo", "placeholder": "" } },
 				"cta_accessible_text": { "type": "Text", "config": { "label": "CTA Testo accessibile", "placeholder": "" } },
 				"background": { "type": "Image", "config": { "label": "Sfondo", "constraint": {}, "thumbnails": [] } }
 			},

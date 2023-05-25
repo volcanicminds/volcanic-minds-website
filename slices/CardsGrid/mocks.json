@@ -75,14 +75,6 @@
 						}
 					],
 					[
-						"cta_text",
-						{
-							"__TYPE__": "FieldContent",
-							"value": "unusual",
-							"type": "Text"
-						}
-					],
-					[
 						"cta_accessible_text",
 						{
 							"__TYPE__": "FieldContent",
@@ -93,7 +85,6 @@
 					[
 						"background",
 						{
-							"__TYPE__": "ImageContent",
 							"origin": {
 								"id": "main",
 								"url": "https://images.unsplash.com/photo-1586952518485-11b180e92764",
@@ -111,6 +102,9 @@
 								},
 								"background": "transparent"
 							},
+							"credits": null,
+							"alt": null,
+							"__TYPE__": "ImageContent",
 							"thumbnails": {}
 						}
 					]

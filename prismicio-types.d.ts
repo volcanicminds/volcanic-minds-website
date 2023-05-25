@@ -1024,16 +1024,6 @@ export interface CardsGridSliceDefaultItem {
 	 */
 	cta_link: prismic.LinkField
 	/**
-	 * CTA Testo field in *CardsGrid → Items*
-	 *
-	 * - **Field Type**: Text
-	 * - **Placeholder**: *None*
-	 * - **API ID Path**: cards_grid.items[].cta_text
-	 * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
-	 *
-	 */
-	cta_text: prismic.KeyTextField
-	/**
 	 * CTA Testo accessibile field in *CardsGrid → Items*
 	 *
 	 * - **Field Type**: Text

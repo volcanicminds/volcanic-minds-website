@@ -19,14 +19,13 @@
 						</div>
 						<div v-if="item.card_title" class="h2">{{ item.card_title }}</div>
 						<PrismicRichText v-if="item.card_desc" :field="item.card_desc" class="mb-auto" />
-						<div v-if="item.cta_link && !item.cta_link.isBroken && item.cta_text" class="mt2 right-align">
+						<div v-if="item.cta_link && !item.cta_link.isBroken" class="mt2 right-align">
 							<PrismicLink
-								v-if="item.cta_link && !item.cta_link.isBroken && item.cta_text"
 								:field="item.cta_link"
-								class="btn btn-primary card-link flex flex-center"
+								class="btn btn-primary card-link flex-column justify-center"
 								:aria-label="item.cta_accessible_text ? item.cta_accessible_text : undefined"
 							>
-								<font-awesome-icon :icon="['fas', 'arrow-right']" size="xs" />
+								<font-awesome-icon :icon="['fas', 'arrow-right']" size="xl" />
 							</PrismicLink>
 						</div>
 					</div>
@@ -70,6 +69,7 @@ defineProps({
 			word-wrap break-word
 		.card-link
 			border-radius 50%
+			display inline-flex
 			width 46px
 			height 46px
 </style>
