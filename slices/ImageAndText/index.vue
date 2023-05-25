@@ -18,17 +18,17 @@
 				<PrismicRichText :field="slice.primary.description" wrapper="div" />
 				<div
 					v-if="slice.primary.cta_link && !slice.primary.cta_link.isBroken && slice.primary.cta_text"
-					class="center mt3"
+					class="center mt2"
 				>
 					<PrismicLink
 						:field="slice.primary.cta_link"
 						class="btn btn-primary mb4"
 						:aria-label="
-							slice.primary.cta_accessibile_text &&
+							slice.primary.cta_accessible_text &&
 							slice.primary.cta_link &&
 							slice.primary.cta_link.target &&
 							slice.primary.cta_link.target === '_blank'
-								? slice.primary.cta_accessibile_text
+								? slice.primary.cta_accessible_text
 								: undefined
 						"
 						>{{ slice.primary.cta_text }}</PrismicLink

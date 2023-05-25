@@ -12,10 +12,30 @@
 			</div>
 
 			<div class="cards-container mt3">
-				<div v-for="(item, i) in slice.items" :key="`slice-item-${i}`" class="card p3">
-					<font-awesome-icon v-if="item.card_icon" :icon="item.card_icon" class="fa-2xl mb3" />
-					<div v-if="item.card_title" class="h2 mb2">{{ item.card_title }}</div>
-					<PrismicRichText v-if="item.card_desc" :field="item.card_desc" />
+				<div v-for="(item, i) in slice.items" :key="`slice-item-${i}`" class="card p3 relative overflow-hidden">
+					<div class="flex flex-column relative z1 h100" :class="slice.primary.center_card_content ? 'center' : ''">
+						<div>
+							<font-awesome-icon v-if="item.card_icon" :icon="item.card_icon" class="fa-2xl mb3" />
+						</div>
+						<div v-if="item.card_title" class="h2">{{ item.card_title }}</div>
+						<PrismicRichText v-if="item.card_desc" :field="item.card_desc" class="mb-auto" />
+						<div v-if="item.cta_link && !item.cta_link.isBroken && item.cta_text" class="mt2 right-align">
+							<PrismicLink
+								v-if="item.cta_link && !item.cta_link.isBroken && item.cta_text"
+								:field="item.cta_link"
+								class="btn btn-primary card-link flex flex-center"
+								:aria-label="item.cta_accessible_text ? item.cta_accessible_text : undefined"
+							>
+								<font-awesome-icon :icon="['fas', 'arrow-right']" size="xs" />
+							</PrismicLink>
+						</div>
+					</div>
+					<WrapperPrismicImage
+						v-if="item.background"
+						:field="item.background"
+						:size="500"
+						class="absolute cover left-0 top-0 col-12 h100 blur-2"
+					/>
 				</div>
 			</div>
 		</WrapperContainer>
@@ -48,4 +68,8 @@ defineProps({
 		border-radius 40px 10px
 		*
 			word-wrap break-word
+		.card-link
+			border-radius 50%
+			width 46px
+			height 46px
 </style>

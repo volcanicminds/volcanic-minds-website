@@ -1,67 +1,121 @@
 [
-  {
-    "__TYPE__": "SharedSliceContent",
-    "variation": "default",
-    "primary": {
-      "title": {
-        "__TYPE__": "FieldContent",
-        "value": "silly",
-        "type": "Text"
-      },
-      "margin_top": {
-        "__TYPE__": "BooleanContent",
-        "value": false
-      },
-      "margin_bottom": {
-        "__TYPE__": "BooleanContent",
-        "value": false
-      },
-      "subtitle": {
-        "__TYPE__": "FieldContent",
-        "value": "think",
-        "type": "Text"
-      },
-      "enable_animation": {
-        "__TYPE__": "BooleanContent",
-        "value": true
-      }
-    },
-    "items": [
-      {
-        "__TYPE__": "GroupItemContent",
-        "value": [
-          [
-            "card_title",
-            {
-              "__TYPE__": "FieldContent",
-              "value": "industry",
-              "type": "Text"
-            }
-          ],
-          [
-            "card_icon",
-            {
-              "__TYPE__": "FieldContent",
-              "value": "pitch",
-              "type": "Text"
-            }
-          ],
-          [
-            "card_desc",
-            {
-              "__TYPE__": "StructuredTextContent",
-              "value": [
-                {
-                  "type": "paragraph",
-                  "content": {
-                    "text": "Enim culpa ad consequat dolore pariatur dolore nulla labore et proident cupidatat ipsum eiusmod ex consequat."
-                  }
-                }
-              ]
-            }
-          ]
-        ]
-      }
-    ]
-  }
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"title": {
+				"__TYPE__": "FieldContent",
+				"value": "silly",
+				"type": "Text"
+			},
+			"margin_top": {
+				"__TYPE__": "BooleanContent",
+				"value": false
+			},
+			"margin_bottom": {
+				"__TYPE__": "BooleanContent",
+				"value": false
+			},
+			"subtitle": {
+				"__TYPE__": "FieldContent",
+				"value": "think",
+				"type": "Text"
+			},
+			"enable_animation": {
+				"__TYPE__": "BooleanContent",
+				"value": true
+			},
+			"center_card_content": {
+				"__TYPE__": "BooleanContent",
+				"value": false
+			}
+		},
+		"items": [
+			{
+				"__TYPE__": "GroupItemContent",
+				"value": [
+					[
+						"card_title",
+						{
+							"__TYPE__": "FieldContent",
+							"value": "industry",
+							"type": "Text"
+						}
+					],
+					[
+						"card_icon",
+						{
+							"__TYPE__": "FieldContent",
+							"value": "pitch",
+							"type": "Text"
+						}
+					],
+					[
+						"card_desc",
+						{
+							"__TYPE__": "StructuredTextContent",
+							"value": [
+								{
+									"type": "paragraph",
+									"content": {
+										"text": "Enim culpa ad consequat dolore pariatur dolore nulla labore et proident cupidatat ipsum eiusmod ex consequat."
+									}
+								}
+							]
+						}
+					],
+					[
+						"cta_link",
+						{
+							"__TYPE__": "LinkContent",
+							"value": {
+								"__TYPE__": "ExternalLink",
+								"url": "http://google.com"
+							}
+						}
+					],
+					[
+						"cta_text",
+						{
+							"__TYPE__": "FieldContent",
+							"value": "unusual",
+							"type": "Text"
+						}
+					],
+					[
+						"cta_accessible_text",
+						{
+							"__TYPE__": "FieldContent",
+							"value": "rush",
+							"type": "Text"
+						}
+					],
+					[
+						"background",
+						{
+							"__TYPE__": "ImageContent",
+							"origin": {
+								"id": "main",
+								"url": "https://images.unsplash.com/photo-1586952518485-11b180e92764",
+								"width": 4172,
+								"height": 4000
+							},
+							"url": "https://images.unsplash.com/photo-1586952518485-11b180e92764",
+							"width": 4172,
+							"height": 4000,
+							"edit": {
+								"zoom": 1,
+								"crop": {
+									"x": 0,
+									"y": 0
+								},
+								"background": "transparent"
+							},
+							"thumbnails": {}
+						}
+					]
+				]
+			}
+		]
+	}
 ]

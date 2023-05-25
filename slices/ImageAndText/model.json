@@ -1,118 +1,82 @@
 {
-  "id": "image_and_text",
-  "type": "SharedSlice",
-  "name": "ImageAndText",
-  "description": "ImageAndText",
-  "variations": [
-    {
-      "id": "default",
-      "name": "Default",
-      "docURL": "...",
-      "version": "sktwi1xtmkfgx8626",
-      "description": "ImageAndText",
-      "primary": {
-        "image": {
-          "type": "Image",
-          "config": {
-            "label": "Immagine",
-            "constraint": {},
-            "thumbnails": []
-          }
-        },
-        "title": {
-          "type": "Text",
-          "config": {
-            "label": "Titolo",
-            "placeholder": ""
-          }
-        },
-        "subtitle": {
-          "type": "Text",
-          "config": {
-            "label": "Sottotitolo",
-            "placeholder": ""
-          }
-        },
-        "description": {
-          "type": "StructuredText",
-          "config": {
-            "label": "Descrizione",
-            "placeholder": "",
-            "allowTargetBlank": true,
-            "multi": "paragraph,strong,em,hyperlink"
-          }
-        },
-        "margin_top": {
-          "type": "Boolean",
-          "config": {
-            "label": "Margine superiore",
-            "placeholder_false": "NO",
-            "placeholder_true": "SI",
-            "default_value": false
-          }
-        },
-        "margin_bottom": {
-          "type": "Boolean",
-          "config": {
-            "label": "Margine inferiore",
-            "placeholder_false": "NO",
-            "placeholder_true": "SI",
-            "default_value": false
-          }
-        },
-        "reverse": {
-          "type": "Boolean",
-          "config": {
-            "label": "Layout specchiato",
-            "placeholder_false": "NO",
-            "placeholder_true": "SI",
-            "default_value": false
-          }
-        },
-        "cta_link": {
-          "type": "Link",
-          "config": {
-            "label": "CTA Link",
-            "placeholder": "",
-            "allowTargetBlank": true,
-            "select": null
-          }
-        },
-        "cta_text": {
-          "type": "Text",
-          "config": {
-            "label": "CTA Testo",
-            "placeholder": ""
-          }
-        },
-        "cta_accessibile_text": {
-          "type": "Text",
-          "config": {
-            "label": "CTA Testo accessible",
-            "placeholder": ""
-          }
-        },
-        "enable_animation": {
-          "type": "Boolean",
-          "config": {
-            "label": "Abilita animazione",
-            "placeholder_false": "NO",
-            "placeholder_true": "SI",
-            "default_value": false
-          }
-        },
-        "enable_bg": {
-          "type": "Boolean",
-          "config": {
-            "label": "Abilita sfondo",
-            "placeholder_false": "NO",
-            "placeholder_true": "SI",
-            "default_value": false
-          }
-        }
-      },
-      "items": {},
-      "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
-    }
-  ]
+	"id": "image_and_text",
+	"type": "SharedSlice",
+	"name": "ImageAndText",
+	"description": "ImageAndText",
+	"variations": [
+		{
+			"id": "default",
+			"name": "Default",
+			"docURL": "...",
+			"version": "sktwi1xtmkfgx8626",
+			"description": "ImageAndText",
+			"primary": {
+				"image": { "type": "Image", "config": { "label": "Immagine", "constraint": {}, "thumbnails": [] } },
+				"title": { "type": "Text", "config": { "label": "Titolo", "placeholder": "" } },
+				"subtitle": { "type": "Text", "config": { "label": "Sottotitolo", "placeholder": "" } },
+				"description": {
+					"type": "StructuredText",
+					"config": {
+						"label": "Descrizione",
+						"placeholder": "",
+						"allowTargetBlank": true,
+						"multi": "paragraph,strong,em,hyperlink"
+					}
+				},
+				"margin_top": {
+					"type": "Boolean",
+					"config": {
+						"label": "Margine superiore",
+						"placeholder_false": "NO",
+						"placeholder_true": "SI",
+						"default_value": false
+					}
+				},
+				"margin_bottom": {
+					"type": "Boolean",
+					"config": {
+						"label": "Margine inferiore",
+						"placeholder_false": "NO",
+						"placeholder_true": "SI",
+						"default_value": false
+					}
+				},
+				"reverse": {
+					"type": "Boolean",
+					"config": {
+						"label": "Layout specchiato",
+						"placeholder_false": "NO",
+						"placeholder_true": "SI",
+						"default_value": false
+					}
+				},
+				"cta_link": {
+					"type": "Link",
+					"config": { "label": "CTA Link", "placeholder": "", "allowTargetBlank": true, "select": null }
+				},
+				"cta_text": { "type": "Text", "config": { "label": "CTA Testo", "placeholder": "" } },
+				"cta_accessible_text": { "type": "Text", "config": { "label": "CTA Testo accessible", "placeholder": "" } },
+				"enable_animation": {
+					"type": "Boolean",
+					"config": {
+						"label": "Abilita animazione",
+						"placeholder_false": "NO",
+						"placeholder_true": "SI",
+						"default_value": false
+					}
+				},
+				"enable_bg": {
+					"type": "Boolean",
+					"config": {
+						"label": "Abilita sfondo",
+						"placeholder_false": "NO",
+						"placeholder_true": "SI",
+						"default_value": false
+					}
+				}
+			},
+			"items": {},
+			"imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+		}
+	]
 }
