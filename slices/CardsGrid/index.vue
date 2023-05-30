@@ -33,7 +33,7 @@
 						v-if="item.background"
 						:field="item.background"
 						:size="500"
-						class="absolute cover left-0 top-0 col-12 h100 blur-2"
+						class="card-bg absolute cover left-0 top-0 col-12 h100 blur-2"
 					/>
 				</div>
 			</div>
@@ -72,4 +72,11 @@ defineProps({
 			display inline-flex
 			width 46px
 			height 46px
+
+		.card-bg
+			transition all 0.4s
+
+		&:hover
+			.card-bg
+				transform scale(1.15)
 </style>
