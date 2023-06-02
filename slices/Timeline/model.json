@@ -1,0 +1,68 @@
+{
+	"id": "timeline",
+	"type": "SharedSlice",
+	"name": "Timeline",
+	"description": "Timeline",
+	"variations": [
+		{
+			"id": "default",
+			"name": "Default",
+			"docURL": "...",
+			"version": "initial",
+			"description": "Default",
+			"imageUrl": "",
+			"primary": {
+				"title": { "type": "Text", "config": { "label": "Titolo", "placeholder": "" } },
+				"subtitle": {
+					"type": "StructuredText",
+					"config": {
+						"label": "Sottotitolo",
+						"placeholder": "",
+						"allowTargetBlank": true,
+						"multi": "paragraph,strong,em"
+					}
+				},
+				"margin_top": {
+					"type": "Boolean",
+					"config": {
+						"label": "Margine superiore",
+						"default_value": false,
+						"placeholder_true": "true",
+						"placeholder_false": "false"
+					}
+				},
+				"margin_bottom": {
+					"type": "Boolean",
+					"config": {
+						"label": "Margine inferiore",
+						"default_value": false,
+						"placeholder_true": "true",
+						"placeholder_false": "false"
+					}
+				},
+				"enable_animation": {
+					"type": "Boolean",
+					"config": {
+						"label": "Abilita animazione",
+						"default_value": false,
+						"placeholder_true": "true",
+						"placeholder_false": "false"
+					}
+				}
+			},
+			"items": {
+				"number": { "type": "Text", "config": { "label": "Numero", "placeholder": "" } },
+				"title": { "type": "Text", "config": { "label": "Titolo", "placeholder": "" } },
+				"content": {
+					"type": "StructuredText",
+					"config": {
+						"label": "Contenuto",
+						"placeholder": "",
+						"allowTargetBlank": true,
+						"multi": "paragraph,strong,em"
+					}
+				}
+			}
+		}
+	]
+}

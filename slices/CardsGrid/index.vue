@@ -19,7 +19,7 @@
 						</div>
 						<div v-if="item.card_title" class="h2">{{ item.card_title }}</div>
 						<PrismicRichText v-if="item.card_desc" :field="item.card_desc" class="mb-auto" />
-						<div v-if="item.cta_link && !item.cta_link.isBroken" class="mt2 right-align">
+						<div v-if="item.cta_link && !item.cta_link.isBroken && item.cta_link.url" class="mt2 right-align">
 							<PrismicLink
 								:field="item.cta_link"
 								class="btn btn-primary card-link flex-column justify-center"

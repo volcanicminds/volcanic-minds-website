@@ -1,0 +1,73 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"margin_top": {
+				"__TYPE__": "BooleanContent",
+				"value": false
+			},
+			"margin_bottom": {
+				"__TYPE__": "BooleanContent",
+				"value": false
+			},
+			"enable_animation": {
+				"__TYPE__": "BooleanContent",
+				"value": true
+			},
+			"title": {
+				"__TYPE__": "FieldContent",
+				"value": "lunch",
+				"type": "Text"
+			},
+			"subtitle": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Qui excepteur officia magna est amet duis commodo labore esse eu. Tempor dolore cupidatat ex sit est quis pariatur Lorem adipisicing ad. Magna veniam fugiat esse consequat mollit dolore reprehenderit qui consequat et aliqua velit."
+						}
+					}
+				]
+			}
+		},
+		"items": [
+			{
+				"__TYPE__": "GroupItemContent",
+				"value": [
+					[
+						"number",
+						{
+							"__TYPE__": "FieldContent",
+							"value": "finally",
+							"type": "Text"
+						}
+					],
+					[
+						"title",
+						{
+							"__TYPE__": "FieldContent",
+							"value": "stairs",
+							"type": "Text"
+						}
+					],
+					[
+						"content",
+						{
+							"__TYPE__": "StructuredTextContent",
+							"value": [
+								{
+									"type": "paragraph",
+									"content": {
+										"text": "Excepteur consequat consectetur ex labore ex cupidatat mollit laborum proident irure enim ex cillum velit laborum. Pariatur incididunt eiusmod do est labore dolor mollit proident cillum sit esse Lorem cupidatat velit irure."
+									}
+								}
+							]
+						}
+					]
+				]
+			}
+		]
+	}
+]
