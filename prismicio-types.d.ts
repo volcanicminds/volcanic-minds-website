@@ -1937,13 +1937,13 @@ interface TimelineSliceDefaultPrimary {
 	/**
 	 * Sottotitolo field in *Timeline → Primary*
 	 *
-	 * - **Field Type**: Rich Text
+	 * - **Field Type**: Text
 	 * - **Placeholder**: *None*
 	 * - **API ID Path**: timeline.primary.subtitle
-	 * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+	 * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
 	 *
 	 */
-	subtitle: prismic.RichTextField
+	subtitle: prismic.KeyTextField
 	/**
 	 * Margine superiore field in *Timeline → Primary*
 	 *

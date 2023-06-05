@@ -9,7 +9,7 @@
 			},
 			"margin_bottom": {
 				"__TYPE__": "BooleanContent",
-				"value": false
+				"value": true
 			},
 			"enable_animation": {
 				"__TYPE__": "BooleanContent",
@@ -21,15 +21,9 @@
 				"type": "Text"
 			},
 			"subtitle": {
-				"__TYPE__": "StructuredTextContent",
-				"value": [
-					{
-						"type": "paragraph",
-						"content": {
-							"text": "Qui excepteur officia magna est amet duis commodo labore esse eu. Tempor dolore cupidatat ex sit est quis pariatur Lorem adipisicing ad. Magna veniam fugiat esse consequat mollit dolore reprehenderit qui consequat et aliqua velit."
-						}
-					}
-				]
+				"__TYPE__": "FieldContent",
+				"value": "tip",
+				"type": "Text"
 			}
 		},
 		"items": [
