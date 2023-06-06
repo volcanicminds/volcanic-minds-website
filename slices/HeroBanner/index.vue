@@ -39,7 +39,7 @@
 			:field="slice.primary.background_image"
 			:size="1000"
 			class="cover absolute col-12 h100 left-0 top-0"
-			:class="slice.primary.background_image_blur ? 'blur-10' : ''"
+			:class="slice.primary.background_image_blur ? 'blur-4' : ''"
 			:lazy="false"
 		/>
 		<div class="fade-overlay absolute col-12 h100 left-0 top-0" />
@@ -71,8 +71,7 @@ defineProps({
 			word-wrap break-word
 			@media (min-width: 52em)
 				font-size 5em
-			&:first-letter
-				text-transform lowercase
+			text-transform lowercase
 
 		&.mb0
 			>>> h1

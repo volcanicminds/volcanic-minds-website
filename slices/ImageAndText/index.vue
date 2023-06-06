@@ -55,14 +55,9 @@ defineProps({
 })
 </script>
 
-<style scoped>
-.gradient-bg {
-	box-shadow: 20px 20px 60px #1a1a1f, -20px -20px 60px #232329;
-}
-</style>
-
 <style lang="stylus" scoped>
 .gradient-bg
+	box-shadow var(--neu-shadow-2)
 	background var(--rainbow-gradient)
 	border-radius 40px 10px
 	padding 4px

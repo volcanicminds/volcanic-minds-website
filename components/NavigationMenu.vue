@@ -81,12 +81,6 @@ export default Vue.extend({
 })
 </script>
 
-<style scoped>
-.sidebar-link .gradient-bg {
-	box-shadow: 20px 20px 60px #1a1a1f, -20px -20px 60px #232329;
-}
-</style>
-
 <style lang="stylus" scoped>
 ul
 	list-style none
@@ -94,6 +88,8 @@ ul
 	.sidebar-link
 		margin-top 24px
 		margin-bottom 24px
+		.gradient-bg
+			box-shadow var(--neu-shadow-2)
 
 	.dropdown
 		&:hover
