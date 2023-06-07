@@ -3,7 +3,7 @@
 	"label": "Pagina di primo livello",
 	"repeatable": true,
 	"status": true,
-	"format": "custom",
+	"format": "page",
 	"json": {
 		"Main": {
 			"uid": { "type": "UID", "config": { "label": "UID", "placeholder": "" } },
