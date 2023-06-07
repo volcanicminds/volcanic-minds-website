@@ -12,33 +12,8 @@
 				</NuxtLink>
 			</div>
 
-			<NavigationMenu class="xs-hide sm-hide" />
+			<NavigationMenu />
 
-			<div v-click-outside="() => (isLanguageSelectorOpened = false)" class="relative">
-				<div
-					class="country-flag country-flag-current cursor-pointer p2"
-					:class="currentLanguage"
-					role="button"
-					tabindex="0"
-					:aria-label="headerData.data.language_choose_label"
-					@click="isLanguageSelectorOpened = true"
-				/>
-				<div
-					v-show="alternateLanguages && isLanguageSelectorOpened"
-					class="country-flag-dropdown absolute bg-raisin-black-2 px2"
-				>
-					<PrismicLink
-						v-for="alternateLang in alternateLanguages.results"
-						:key="alternateLang.id"
-						:field="{ ...alternateLang, link_type: 'Document' }"
-						class="block country-flag my2"
-						:class="alternateLang.lang"
-						:aria-label="alternateLang.lang === 'en' ? 'English' : alternateLang.lang === 'de' ? 'Deutsch' : 'Italiano'"
-						role="button"
-						@click.native="isLanguageSelectorOpened = false"
-					/>
-				</div>
-			</div>
 			<font-awesome-icon
 				:icon="['fas', 'bars']"
 				class="md-hide lg-hide fa-xl cursor-pointer ml2"
@@ -54,21 +29,8 @@
 
 <script lang="ts">
 import Vue from 'vue'
-import ClickOutside from 'vue-click-outside'
 export default Vue.extend({
-	directives: {
-		ClickOutside
-	},
-	data: (): { isLanguageSelectorOpened: boolean } => ({
-		isLanguageSelectorOpened: false
-	}),
 	computed: {
-		alternateLanguages(): any {
-			return this.$store.state.prismic.alternateLanguages
-		},
-		currentLanguage(): any {
-			return this.$store.state.prismic.currentLanguage
-		},
 		headerData(): any {
 			return this.$store.state.prismic.header
 		}
@@ -94,21 +56,4 @@ export default Vue.extend({
 		.logo
 			width 80px
 			height 30px
-
-	.country-flag
-		width 20px
-		height 20px
-		background-size 20px 20px
-		background-repeat no-repeat
-		background-position center
-		&.it-it
-			background-image url('~/assets/images/it-it.png')
-		&.de
-			background-image url('~/assets/images/de-de.png')
-		&.en
-			background-image url('~/assets/images/en-eu.png')
-	.country-flag-dropdown
-		border-radius 10px
-		top 32px
-		left -10px
 </style>
