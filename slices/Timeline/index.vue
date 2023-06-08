@@ -12,13 +12,17 @@
 			</div>
 			<div class="center relative timeline">
 				<div class="absolute timeline-line bg-rainbow-gradient left-0 right-0 mx-auto mt1 top-0" />
-				<div v-for="(item, i) in slice.items" :key="`timeline-${i}`" class="mb2 md-mb4 timeline-container items-center">
+				<div
+					v-for="(item, i) in slice.items"
+					:key="`timeline-${i}`"
+					class="mb2 md-mb4 timeline-container md-flex items-center"
+				>
 					<div
 						class="timeline-number z1 relative bg-rainbow-gradient flex justify-center items-center m-auto flex-none"
 					>
 						<span class="font-black h1">{{ item.number }}</span>
 					</div>
-					<div class="timeline-card relative left-align p3 pt4 md-px4 md-py3">
+					<div class="timeline-card relative flex-auto left-align p3 pt4 md-px4 md-py3">
 						<p class="h2 m0">{{ item.title }}</p>
 						<PrismicRichText
 							v-if="item.content.length && item.content[0].text !== ''"
@@ -53,8 +57,6 @@ defineProps({
 		width 5px
 		height calc(100% - 200px)
 	&-container
-		@media (min-width: 52em)
-			display inline-flex
 		&:nth-child(odd)
 			flex-direction row-reverse
 			.timeline-card
