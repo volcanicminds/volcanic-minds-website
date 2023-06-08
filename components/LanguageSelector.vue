@@ -2,7 +2,7 @@
 	<li class="dropdown relative p0 inline-block">
 		<button
 			type="button"
-			class="px2 border-none relative dropdown__title flex items-center cursor-pointer"
+			class="ml1 border-none relative dropdown__title flex items-center cursor-pointer"
 			aria-expanded="false"
 			aria-controls="language-selector"
 			:aria-label="headerData.data.language_choose_label"

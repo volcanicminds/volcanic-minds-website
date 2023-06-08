@@ -1,18 +1,18 @@
 <template>
 	<!-- https://moderncss.dev/css-only-accessible-dropdown-navigation-menu/ -->
 	<nav v-if="navigationMenuData" :aria-label="navigationMenuData.data.aria_label">
-		<ul class="m0 p0 flex items-center">
+		<ul class="m0 p0 flex flex-column items-center">
 			<template v-for="(firstLevel, i) in navigationMenuData.data.slices">
 				<template v-if="firstLevel.primary.link_title">
 					<li
 						v-if="Object.keys(firstLevel.items).length"
 						:key="i"
-						class="dropdown relative p0"
+						class="dropdown relative p0 mx2"
 						:class="isMobile ? 'sidebar-link' : 'inline-block xs-hide sm-hide'"
 					>
 						<button
 							type="button"
-							class="px2 border-none font-light dropdown__title cursor-pointer flex items-center"
+							class="border-none font-light dropdown__title cursor-pointer flex items-center"
 							:class="isMobile ? 'h2 font-light' : ''"
 							aria-expanded="false"
 							:aria-controls="`dropdown-${i}`"
@@ -41,11 +41,11 @@
 					<li
 						v-else-if="firstLevel.primary.link_url && !firstLevel.primary.hide_on_desktop"
 						:key="i"
-						class="p0"
+						class="p0 mx2"
 						:class="isMobile ? 'sidebar-link' : 'inline-block xs-hide sm-hide'"
 					>
 						<PrismicLink
-							class="px2 no-underline"
+							class="no-underline"
 							:field="firstLevel.primary.link_url"
 							:class="isMobile ? 'h2 font-light' : ''"
 							@click.native="closeSidebar"
@@ -85,10 +85,11 @@ export default Vue.extend({
 <style lang="stylus" scoped>
 >>> ul
 	list-style none
+	@media (min-width: 52em)
+		flex-direction row
 
 	.sidebar-link
-		margin-top 24px
-		margin-bottom 24px
+		margin-top 28px
 		.gradient-bg
 			box-shadow var(--neu-shadow-2)
 
@@ -121,7 +122,7 @@ export default Vue.extend({
 				border-radius 18px 5px
 		&.sidebar-link
 			.dropdown__menu
-				max-width 100%
+				max-width 100vw
 		&__title
 			background-color transparent
 			color var(--cultured)
