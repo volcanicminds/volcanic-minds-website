@@ -2,7 +2,7 @@
 	<li class="dropdown relative p0 inline-block">
 		<button
 			type="button"
-			class="ml1 border-none relative dropdown__title flex items-center cursor-pointer"
+			class="border-none relative dropdown__title flex items-center cursor-pointer"
 			aria-expanded="false"
 			aria-controls="language-selector"
 			:aria-label="headerData.data.language_choose_label"
@@ -17,7 +17,7 @@
 		</button>
 
 		<ul v-if="alternateLanguages" id="language-selector" class="dropdown__menu absolute px2 gradient-bg">
-			<li class="dropdown-bg bg-raisin-black-2 m-auto absolute col-12 h100 left-0 top-0 right-0 bottom-0">&nbsp;</li>
+			<li class="dropdown-bg bg-shark m-auto absolute col-12 h100 left-0 top-0 right-0 bottom-0">&nbsp;</li>
 			<PrismicLink
 				v-for="alternateLang in alternateLanguages.results"
 				:key="alternateLang.id"
@@ -63,6 +63,6 @@ export default Vue.extend({
 		&.en
 			background-image url('~/assets/images/en-eu.png')
 	.dropdown__menu
-		left 38%
+		left 16px
 		width unset
 </style>

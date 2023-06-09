@@ -7,7 +7,7 @@
 					<li
 						v-if="Object.keys(firstLevel.items).length"
 						:key="i"
-						class="dropdown relative p0 mx2"
+						class="dropdown relative p0"
 						:class="isMobile ? 'sidebar-link' : 'inline-block xs-hide sm-hide'"
 					>
 						<button
@@ -21,9 +21,7 @@
 							}}<font-awesome-icon class="open-icon relative ml1" :icon="['fas', 'angle-down']" size="2xs" />
 						</button>
 						<ul :id="`dropdown-${i}`" class="dropdown__menu absolute px3 gradient-bg">
-							<li class="dropdown-bg bg-raisin-black-2 m-auto absolute col-12 h100 left-0 top-0 right-0 bottom-0">
-								&nbsp;
-							</li>
+							<li class="dropdown-bg bg-shark m-auto absolute col-12 h100 left-0 top-0 right-0 bottom-0">&nbsp;</li>
 							<template v-for="(secondLevel, j) in firstLevel.items">
 								<li :key="i + j" class="my2 relative">
 									<PrismicLink
@@ -41,7 +39,7 @@
 					<li
 						v-else-if="firstLevel.primary.link_url && !firstLevel.primary.hide_on_desktop"
 						:key="i"
-						class="p0 mx2"
+						class="p0"
 						:class="isMobile ? 'sidebar-link' : 'inline-block xs-hide sm-hide'"
 					>
 						<PrismicLink
@@ -85,11 +83,11 @@ export default Vue.extend({
 <style lang="stylus" scoped>
 >>> ul
 	list-style none
+	gap 25px
 	@media (min-width: 52em)
 		flex-direction row
 
 	.sidebar-link
-		margin-top 28px
 		.gradient-bg
 			box-shadow var(--neu-shadow-2)
 

@@ -1,9 +1,14 @@
 <template>
-	<div />
+	<div :style="`height: ${height}px`" class="bg-rainbow-gradient" />
 </template>
-<style lang="stylus" scoped>
-div
-	height 5px
-	background var(--purple)
-	background var(--rainbow-gradient)
-</style>
+
+<script setup lang="ts">
+withDefaults(
+	defineProps<{
+		height?: number
+	}>(),
+	{
+		height: 5
+	}
+)
+</script>

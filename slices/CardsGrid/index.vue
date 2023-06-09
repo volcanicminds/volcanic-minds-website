@@ -12,7 +12,11 @@
 			</div>
 
 			<div class="cards-container mt3">
-				<div v-for="(item, i) in slice.items" :key="`slice-item-${i}`" class="card p3 relative overflow-hidden">
+				<div
+					v-for="(item, i) in slice.items"
+					:key="`slice-item-${i}`"
+					class="card p3 relative overflow-hidden bg-shark"
+				>
 					<div class="flex flex-column relative z1 h100" :class="slice.primary.center_card_content ? 'center' : ''">
 						<div>
 							<font-awesome-icon v-if="item.card_icon" :icon="item.card_icon" class="fa-2xl mb3" />
@@ -63,7 +67,6 @@ defineProps({
 	grid-template-columns repeat(auto-fit, minmax(230px, 1fr))
 	grid-gap 15px
 	.card
-		background-color var(--raisin-black-2)
 		border-radius 40px 10px
 		*
 			word-wrap break-word
