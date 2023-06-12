@@ -2333,7 +2333,7 @@
     newtype-ts "^0.3.5"
     tslib "^2.3.1"
 
-"@prismicio/types@^0.2.0", "@prismicio/types@^0.2.4", "@prismicio/types@^0.2.7":
+"@prismicio/types@^0.2.0", "@prismicio/types@^0.2.4", "@prismicio/types@^0.2.7", "@prismicio/types@^0.2.8":
   version "0.2.8"
   resolved "https://registry.yarnpkg.com/@prismicio/types/-/types-0.2.8.tgz#76a0eb2f657a87f003ec81b654c8d72dbcd3228b"
   integrity sha512-EmuYYil56U+UtEifMD/9TmLzpWliV+X6kypwPq47GNXmIXyFK1JsP3z872fUziXwoBjd2YILj28DNdYXlLOpXg==
@@ -6664,7 +6664,7 @@ eslint-plugin-unicorn@^44.0.2:
     semver "^7.3.7"
     strip-indent "^3.0.0"
 
-eslint-plugin-vue@^9.13.0, eslint-plugin-vue@^9.4.0, eslint-plugin-vue@^9.7.0:
+eslint-plugin-vue@^9.14.1, eslint-plugin-vue@^9.4.0, eslint-plugin-vue@^9.7.0:
   version "9.14.1"
   resolved "https://registry.yarnpkg.com/eslint-plugin-vue/-/eslint-plugin-vue-9.14.1.tgz#3b0c9857642dac547c7564031cfb09d283eafdd4"
   integrity sha512-LQazDB1qkNEKejLe/b5a9VfEbtbczcOaui5lQ4Qw0tbRBbQYREyxxOV5BQgNDTqGPs9pxqiEpbMi9ywuIaF7vw==
@@ -6742,7 +6742,7 @@ eslint-webpack-plugin@^2.6.0:
     normalize-path "^3.0.0"
     schema-utils "^3.1.1"
 
-eslint@^8.40.0:
+eslint@^8.42.0:
   version "8.42.0"
   resolved "https://registry.yarnpkg.com/eslint/-/eslint-8.42.0.tgz#7bebdc3a55f9ed7167251fe7259f75219cade291"
   integrity sha512-ulg9Ms6E1WPf67PHaEY4/6E2tEn5/f7FXGzr3t9cBMugOmf1INYvuUwwh1aXQN4MfJ6a5K2iNwP3w4AColvI9A==
@@ -12345,7 +12345,7 @@ slash@^4.0.0:
   resolved "https://registry.yarnpkg.com/slash/-/slash-4.0.0.tgz#2422372176c4c6c5addb5e2ada885af984b396a7"
   integrity sha512-3dOsAHXXUkQTpOYcoAxLIorMTp4gIQr5IW3iVb7A7lFIp0VHhnynm9izx6TssdrIcVIESAlVjtnO2K8bg+Coew==
 
-slice-machine-ui@^1.1.0:
+slice-machine-ui@^1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/slice-machine-ui/-/slice-machine-ui-1.2.0.tgz#f626de8296ef6ea198991336062aa3913baf0600"
   integrity sha512-Bm/E3F3nkuvjae441APD41GaPSPTFSDt0CQYeiBiW3ooOW0h4M7b9FII9J65jjw1iTA3tXcXNvsZ+FgXgAuMMw==
@@ -13727,7 +13727,7 @@ vue-template-es2015-compiler@^1.9.0:
   resolved "https://registry.yarnpkg.com/vue-template-es2015-compiler/-/vue-template-es2015-compiler-1.9.1.tgz#1ee3bc9a16ecbf5118be334bb15f9c46f82f5825"
   integrity sha512-4gDntzrifFnCEvyoO8PqyJDmguXgVPxKiIxrBKjIowvL9l+N66196+72XVYR8BBf1Uv1Fgt3bGevJ+sEmxfZzw==
 
-vue@^2.7.10:
+vue@^2.7.10, vue@^2.7.14:
   version "2.7.14"
   resolved "https://registry.yarnpkg.com/vue/-/vue-2.7.14.tgz#3743dcd248fd3a34d421ae456b864a0246bafb17"
   integrity sha512-b2qkFyOM0kwqWFuQmgd4o+uHGU7T+2z3T+WQp8UBjADfEv2n4FEMffzBmCKNP0IGzOEEfYjvtcC62xaSKeQDrQ==
