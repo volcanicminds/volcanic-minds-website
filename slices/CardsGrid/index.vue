@@ -12,10 +12,13 @@
 			</div>
 
 			<div class="cards-container mt3">
-				<div
+				<component
+					:is="item.cta_link && !item.cta_link.isBroken && item.cta_link.url ? 'PrismicLink' : 'div'"
 					v-for="(item, i) in slice.items"
 					:key="`slice-item-${i}`"
-					class="card p3 relative overflow-hidden bg-shark"
+					:aria-label="item.cta_accessible_text ? item.cta_accessible_text : undefined"
+					:field="item.cta_link && !item.cta_link.isBroken && item.cta_link.url ? item.cta_link : undefined"
+					class="card p3 relative overflow-hidden bg-shark no-underline"
 				>
 					<div class="flex flex-column relative z1 h100" :class="slice.primary.center_card_content ? 'center' : ''">
 						<div>
@@ -24,13 +27,12 @@
 						<div v-if="item.card_title" class="h2">{{ item.card_title }}</div>
 						<PrismicRichText v-if="item.card_desc" :field="item.card_desc" class="mb-auto" />
 						<div v-if="item.cta_link && !item.cta_link.isBroken && item.cta_link.url" class="mt2 right-align">
-							<PrismicLink
-								:field="item.cta_link"
+							<div
 								class="btn btn-primary card-link flex-column justify-center"
 								:aria-label="item.cta_accessible_text ? item.cta_accessible_text : undefined"
 							>
 								<font-awesome-icon :icon="['fas', 'arrow-right']" size="xl" />
-							</PrismicLink>
+							</div>
 						</div>
 					</div>
 					<WrapperPrismicImage
@@ -39,7 +41,7 @@
 						:size="500"
 						class="card-bg absolute cover left-0 top-0 col-12 h100 blur-2"
 					/>
-				</div>
+				</component>
 			</div>
 		</WrapperContainer>
 	</WrapperSlice>
