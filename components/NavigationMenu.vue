@@ -29,6 +29,7 @@
 										class="no-underline"
 										:field="secondLevel.link_url"
 										:class="isMobile ? 'h2 font-light' : ''"
+										onclick="this.blur()"
 										@click.native="closeSidebar"
 										>{{ secondLevel.link_title }}</PrismicLink
 									>
@@ -70,7 +71,7 @@ export default Vue.extend({
 		}
 	},
 	methods: {
-		closeSidebar(): void {
+		closeSidebar(e: any): void {
 			this.$store.commit('prismic/setIsSidebarOpened', false)
 			if (process.client) {
 				document.body.style.overflow = 'visible'

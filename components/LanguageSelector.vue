@@ -21,6 +21,7 @@
 			<PrismicLink
 				v-for="alternateLang in alternateLanguages.results"
 				:key="alternateLang.id"
+				onclick="this.blur()"
 				:field="{ ...alternateLang, link_type: 'Document' }"
 				class="block country-flag my2 relative"
 				:class="alternateLang.lang"
