@@ -27,10 +27,7 @@
 						<div v-if="item.card_title" class="h2">{{ item.card_title }}</div>
 						<PrismicRichText v-if="item.card_desc" :field="item.card_desc" class="mb-auto" />
 						<div v-if="item.cta_link && !item.cta_link.isBroken && item.cta_link.url" class="mt2 right-align">
-							<div
-								class="btn btn-primary card-link flex-column justify-center"
-								:aria-label="item.cta_accessible_text ? item.cta_accessible_text : undefined"
-							>
+							<div class="btn btn-primary card-link flex-column justify-center">
 								<font-awesome-icon :icon="['fas', 'arrow-right']" size="xl" />
 							</div>
 						</div>

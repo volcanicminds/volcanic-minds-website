@@ -2,7 +2,7 @@
 	<li class="dropdown relative p0 inline-block">
 		<button
 			type="button"
-			class="border-none relative dropdown__title flex items-center cursor-pointer"
+			class="border-none relative dropdown__title flex items-center cursor-pointer p0"
 			aria-expanded="false"
 			aria-controls="language-selector"
 			:aria-label="headerData.data.language_choose_label"
@@ -21,12 +21,12 @@
 			<PrismicLink
 				v-for="alternateLang in alternateLanguages.results"
 				:key="alternateLang.id"
-				onclick="this.blur()"
 				:field="{ ...alternateLang, link_type: 'Document' }"
 				class="block country-flag my2 relative"
 				:class="alternateLang.lang"
 				:aria-label="alternateLang.lang === 'en' ? 'English' : alternateLang.lang === 'de' ? 'Deutsch' : 'Italiano'"
 				role="button"
+				@click.native="handleDropdownClick"
 			/>
 		</ul>
 	</li>
@@ -44,6 +44,11 @@ export default Vue.extend({
 		},
 		headerData(): any {
 			return this.$store.state.prismic.header
+		}
+	},
+	methods: {
+		handleDropdownClick(e: any): void {
+			e.target.blur()
 		}
 	}
 })
@@ -64,6 +69,6 @@ export default Vue.extend({
 		&.en
 			background-image url('~/assets/images/en-eu.png')
 	.dropdown__menu
-		left 16px
+		left 10px
 		width unset
 </style>

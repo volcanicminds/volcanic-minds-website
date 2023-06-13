@@ -12,7 +12,7 @@
 					>
 						<button
 							type="button"
-							class="border-none font-light dropdown__title cursor-pointer flex items-center"
+							class="border-none font-light dropdown__title cursor-pointer flex items-center p0"
 							:class="isMobile ? 'h2 font-light' : ''"
 							aria-expanded="false"
 							:aria-controls="`dropdown-${i}`"
@@ -29,8 +29,7 @@
 										class="no-underline"
 										:field="secondLevel.link_url"
 										:class="isMobile ? 'h2 font-light' : ''"
-										onclick="this.blur()"
-										@click.native="closeSidebar"
+										@click.native="handleDropdownClick"
 										>{{ secondLevel.link_title }}</PrismicLink
 									>
 								</li>
@@ -71,7 +70,11 @@ export default Vue.extend({
 		}
 	},
 	methods: {
-		closeSidebar(e: any): void {
+		handleDropdownClick(e: any): void {
+			e.target.blur()
+			this.closeSidebar()
+		},
+		closeSidebar(): void {
 			this.$store.commit('prismic/setIsSidebarOpened', false)
 			if (process.client) {
 				document.body.style.overflow = 'visible'
