@@ -1660,6 +1660,39 @@ interface PartnersSliceDefaultPrimary {
 	 *
 	 */
 	enable_animation: prismic.BooleanField
+	/**
+	 * Padding superiore field in *Partners → Primary*
+	 *
+	 * - **Field Type**: Boolean
+	 * - **Placeholder**: *None*
+	 * - **Default Value**: false
+	 * - **API ID Path**: partners.primary.padding_top
+	 * - **Documentation**: https://prismic.io/docs/core-concepts/boolean
+	 *
+	 */
+	padding_top: prismic.BooleanField
+	/**
+	 * Padding inferiore field in *Partners → Primary*
+	 *
+	 * - **Field Type**: Boolean
+	 * - **Placeholder**: *None*
+	 * - **Default Value**: false
+	 * - **API ID Path**: partners.primary.padding_bottom
+	 * - **Documentation**: https://prismic.io/docs/core-concepts/boolean
+	 *
+	 */
+	padding_bottom: prismic.BooleanField
+	/**
+	 * Abilita sfondo field in *Partners → Primary*
+	 *
+	 * - **Field Type**: Boolean
+	 * - **Placeholder**: *None*
+	 * - **Default Value**: false
+	 * - **API ID Path**: partners.primary.enable_bg
+	 * - **Documentation**: https://prismic.io/docs/core-concepts/boolean
+	 *
+	 */
+	enable_bg: prismic.BooleanField
 }
 /**
  * Item in Partners → Items

@@ -23,7 +23,7 @@
 						<span class="font-black h1">{{ item.number }}</span>
 					</div>
 					<div class="timeline-card relative flex-auto left-align p3 pt4 md-px4 md-py3">
-						<p class="h2 m0">{{ item.title }}</p>
+						<h3 class="h2 m0">{{ item.title }}</h3>
 						<PrismicRichText
 							v-if="item.content.length && item.content[0].text !== ''"
 							:field="item.content"

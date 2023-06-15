@@ -2,6 +2,9 @@
 	<WrapperSlice
 		:margin-top="slice.primary.margin_top || false"
 		:margin-bottom="slice.primary.margin_bottom || false"
+		:padding-top="slice.primary.padding_top || false"
+		:padding-bottom="slice.primary.padding_bottom || false"
+		:enable-bg="slice.primary.enable_bg || false"
 		:enable-observer="slice.primary.enable_animation || false"
 		:is-section="slice.primary.title ? true : false"
 	>
@@ -20,7 +23,7 @@
 							class="col-12 h100 contain position-left"
 						/>
 					</div>
-					<span v-if="item.name" class="h4 font-bold ml1 nowrap truncate">{{ item.name }}</span>
+					<h3 v-if="item.name" class="h4 m0 font-bold ml1 nowrap truncate">{{ item.name }}</h3>
 				</div>
 			</div>
 		</WrapperContainer>

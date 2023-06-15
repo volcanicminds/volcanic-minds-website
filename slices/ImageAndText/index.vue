@@ -2,7 +2,8 @@
 	<WrapperSlice
 		:margin-top="slice.primary.margin_top || false"
 		:margin-bottom="slice.primary.margin_bottom || false"
-		:css-class="`py4${slice.primary.enable_bg ? ' bg-shark' : ''}`"
+		:enable-bg="slice.primary.enable_bg || false"
+		css-class="py4"
 		:enable-observer="slice.primary.enable_animation || false"
 		:is-section="slice.primary.subtitle ? true : false"
 	>
