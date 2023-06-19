@@ -7,6 +7,7 @@ import NavigationMenu from './components/NavigationMenu.vue'
 import Observer from './components/Observer.vue'
 import RainbowBar from './components/RainbowBar.vue'
 import Sidebar from './components/Sidebar.vue'
+import TimelineSection from './components/TimelineSection.vue'
 import WrapperContainer from './components/wrapper/Container.vue'
 import WrapperPrismicImage from './components/wrapper/PrismicImage.vue'
 import WrapperSlice from './components/wrapper/Slice.vue'
@@ -22,6 +23,7 @@ declare module 'vue' {
 		Observer: typeof Observer
 		RainbowBar: typeof RainbowBar
 		Sidebar: typeof Sidebar
+		TimelineSection: typeof TimelineSection
 		WrapperContainer: typeof WrapperContainer
 		WrapperPrismicImage: typeof WrapperPrismicImage
 		WrapperSlice: typeof WrapperSlice

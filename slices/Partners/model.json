@@ -65,7 +65,9 @@
 						"placeholder_true": "SI",
 						"default_value": false
 					}
-				}
+				},
+				"section_title": { "type": "Text", "config": { "label": "Titolo sezione", "placeholder": "" } },
+				"section_subtitle": { "type": "Text", "config": { "label": "Sottotitolo sezione", "placeholder": "" } }
 			},
 			"items": {
 				"logo": { "type": "Image", "config": { "label": "Logo", "constraint": {}, "thumbnails": [] } },

@@ -31,6 +31,16 @@
 			"enable_bg": {
 				"__TYPE__": "BooleanContent",
 				"value": true
+			},
+			"section_title": {
+				"__TYPE__": "FieldContent",
+				"value": "next",
+				"type": "Text"
+			},
+			"section_subtitle": {
+				"__TYPE__": "FieldContent",
+				"value": "already",
+				"type": "Text"
 			}
 		},
 		"items": [

@@ -1693,6 +1693,26 @@ interface PartnersSliceDefaultPrimary {
 	 *
 	 */
 	enable_bg: prismic.BooleanField
+	/**
+	 * Titolo sezione field in *Partners → Primary*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: partners.primary.section_title
+	 * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+	 *
+	 */
+	section_title: prismic.KeyTextField
+	/**
+	 * Sottotitolo sezione field in *Partners → Primary*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: partners.primary.section_subtitle
+	 * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+	 *
+	 */
+	section_subtitle: prismic.KeyTextField
 }
 /**
  * Item in Partners → Items
