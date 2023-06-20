@@ -12,11 +12,33 @@
 			</div>
 
 			<div class="cards-container mt3">
-				<div v-for="(item, i) in slice.items" :key="`slice-item-${i}`" class="card p3">
-					<font-awesome-icon v-if="item.card_icon" :icon="item.card_icon" class="fa-2xl mb3" />
-					<div v-if="item.card_title" class="h2 mb2">{{ item.card_title }}</div>
-					<PrismicRichText v-if="item.card_desc" :field="item.card_desc" />
-				</div>
+				<component
+					:is="item.cta_link && !item.cta_link.isBroken && item.cta_link.url ? 'PrismicLink' : 'div'"
+					v-for="(item, i) in slice.items"
+					:key="`slice-item-${i}`"
+					:aria-label="item.cta_accessible_text ? item.cta_accessible_text : undefined"
+					:field="item.cta_link && !item.cta_link.isBroken && item.cta_link.url ? item.cta_link : undefined"
+					class="card p3 relative overflow-hidden bg-shark no-underline"
+				>
+					<div class="flex flex-column relative z1 h100" :class="slice.primary.center_card_content ? 'center' : ''">
+						<div>
+							<font-awesome-icon v-if="item.card_icon" :icon="item.card_icon" class="fa-2xl mb3" />
+						</div>
+						<div v-if="item.card_title" class="h2">{{ item.card_title }}</div>
+						<PrismicRichText v-if="item.card_desc" :field="item.card_desc" class="mb-auto" />
+						<div v-if="item.cta_link && !item.cta_link.isBroken && item.cta_link.url" class="mt2 right-align">
+							<div class="btn btn-primary card-link flex-column justify-center">
+								<font-awesome-icon :icon="['fas', 'arrow-right']" size="xl" />
+							</div>
+						</div>
+					</div>
+					<WrapperPrismicImage
+						v-if="item.background"
+						:field="item.background"
+						:size="500"
+						class="card-bg absolute cover left-0 top-0 col-12 h100 blur-2"
+					/>
+				</component>
 			</div>
 		</WrapperContainer>
 	</WrapperSlice>
@@ -44,8 +66,19 @@ defineProps({
 	grid-template-columns repeat(auto-fit, minmax(230px, 1fr))
 	grid-gap 15px
 	.card
-		background-color var(--raisin-black-2)
 		border-radius 40px 10px
 		*
 			word-wrap break-word
+		.card-link
+			border-radius 50%
+			display inline-flex
+			width 46px
+			height 46px
+
+		.card-bg
+			transition all 0.4s
+
+		&:hover
+			.card-bg
+				transform scale(1.15)
 </style>

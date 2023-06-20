@@ -1,66 +1,88 @@
 [
-  {
-    "__TYPE__": "SharedSliceContent",
-    "variation": "default",
-    "primary": {
-      "title": {
-        "__TYPE__": "FieldContent",
-        "value": "away",
-        "type": "Text"
-      },
-      "margin_top": {
-        "__TYPE__": "BooleanContent",
-        "value": false
-      },
-      "margin_bottom": {
-        "__TYPE__": "BooleanContent",
-        "value": false
-      },
-      "enable_animation": {
-        "__TYPE__": "BooleanContent",
-        "value": false
-      }
-    },
-    "items": [
-      {
-        "__TYPE__": "GroupItemContent",
-        "value": [
-          [
-            "logo",
-            {
-              "origin": {
-                "id": "main",
-                "url": "https://images.unsplash.com/photo-1600804931749-2da4ce26c869",
-                "width": 3199,
-                "height": 3199
-              },
-              "url": "https://images.unsplash.com/photo-1600804931749-2da4ce26c869",
-              "width": 3199,
-              "height": 3199,
-              "edit": {
-                "zoom": 1,
-                "crop": {
-                  "x": 0,
-                  "y": 0
-                },
-                "background": "transparent"
-              },
-              "credits": null,
-              "alt": null,
-              "__TYPE__": "ImageContent",
-              "thumbnails": {}
-            }
-          ],
-          [
-            "name",
-            {
-              "__TYPE__": "FieldContent",
-              "value": "hill",
-              "type": "Text"
-            }
-          ]
-        ]
-      }
-    ]
-  }
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"title": {
+				"__TYPE__": "FieldContent",
+				"value": "away",
+				"type": "Text"
+			},
+			"margin_top": {
+				"__TYPE__": "BooleanContent",
+				"value": false
+			},
+			"margin_bottom": {
+				"__TYPE__": "BooleanContent",
+				"value": false
+			},
+			"enable_animation": {
+				"__TYPE__": "BooleanContent",
+				"value": false
+			},
+			"padding_top": {
+				"__TYPE__": "BooleanContent",
+				"value": true
+			},
+			"padding_bottom": {
+				"__TYPE__": "BooleanContent",
+				"value": true
+			},
+			"enable_bg": {
+				"__TYPE__": "BooleanContent",
+				"value": true
+			},
+			"section_title": {
+				"__TYPE__": "FieldContent",
+				"value": "next",
+				"type": "Text"
+			},
+			"section_subtitle": {
+				"__TYPE__": "FieldContent",
+				"value": "already",
+				"type": "Text"
+			}
+		},
+		"items": [
+			{
+				"__TYPE__": "GroupItemContent",
+				"value": [
+					[
+						"logo",
+						{
+							"origin": {
+								"id": "main",
+								"url": "https://images.unsplash.com/photo-1600804931749-2da4ce26c869",
+								"width": 3199,
+								"height": 3199
+							},
+							"url": "https://images.unsplash.com/photo-1600804931749-2da4ce26c869",
+							"width": 3199,
+							"height": 3199,
+							"edit": {
+								"zoom": 1,
+								"crop": {
+									"x": 0,
+									"y": 0
+								},
+								"background": "transparent"
+							},
+							"credits": null,
+							"alt": null,
+							"__TYPE__": "ImageContent",
+							"thumbnails": {}
+						}
+					],
+					[
+						"name",
+						{
+							"__TYPE__": "FieldContent",
+							"value": "hill",
+							"type": "Text"
+						}
+					]
+				]
+			}
+		]
+	}
 ]

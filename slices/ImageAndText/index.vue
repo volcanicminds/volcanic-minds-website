@@ -2,7 +2,8 @@
 	<WrapperSlice
 		:margin-top="slice.primary.margin_top || false"
 		:margin-bottom="slice.primary.margin_bottom || false"
-		:css-class="`py4${slice.primary.enable_bg ? ' bg-raisin-black-2' : ''}`"
+		:enable-bg="slice.primary.enable_bg || false"
+		css-class="py4"
 		:enable-observer="slice.primary.enable_animation || false"
 		:is-section="slice.primary.subtitle ? true : false"
 	>
@@ -18,17 +19,17 @@
 				<PrismicRichText :field="slice.primary.description" wrapper="div" />
 				<div
 					v-if="slice.primary.cta_link && !slice.primary.cta_link.isBroken && slice.primary.cta_text"
-					class="center mt3"
+					class="center mt2"
 				>
 					<PrismicLink
 						:field="slice.primary.cta_link"
 						class="btn btn-primary mb4"
 						:aria-label="
-							slice.primary.cta_accessibile_text &&
+							slice.primary.cta_accessible_text &&
 							slice.primary.cta_link &&
 							slice.primary.cta_link.target &&
 							slice.primary.cta_link.target === '_blank'
-								? slice.primary.cta_accessibile_text
+								? slice.primary.cta_accessible_text
 								: undefined
 						"
 						>{{ slice.primary.cta_text }}</PrismicLink
@@ -55,14 +56,9 @@ defineProps({
 })
 </script>
 
-<style scoped>
-.gradient-bg {
-	box-shadow: 20px 20px 60px #1a1a1f, -20px -20px 60px #232329;
-}
-</style>
-
 <style lang="stylus" scoped>
 .gradient-bg
+	box-shadow var(--neu-shadow-2)
 	background var(--rainbow-gradient)
 	border-radius 40px 10px
 	padding 4px

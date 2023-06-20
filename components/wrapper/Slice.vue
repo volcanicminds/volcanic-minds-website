@@ -6,6 +6,9 @@
 				cssClass,
 				marginTop && 'mt4',
 				marginBottom && 'mb4',
+				paddingTop && 'pt4',
+				paddingBottom && 'pb4',
+				enableBg && 'bg-shark',
 				enableObserver && 'opacity-animate',
 				enableObserver && !isSliceVisible && 'opacity-animate-off'
 			]"
@@ -22,13 +25,19 @@ withDefaults(
 	defineProps<{
 		marginTop: boolean
 		marginBottom: boolean
+		paddingTop?: boolean
+		paddingBottom?: boolean
+		enableBg?: boolean
 		cssClass?: string
 		enableObserver: boolean
 		isSection?: boolean
 	}>(),
 	{
 		cssClass: '',
-		isSection: false
+		isSection: false,
+		paddingTop: false,
+		paddingBottom: false,
+		enableBg: false
 	}
 )
 

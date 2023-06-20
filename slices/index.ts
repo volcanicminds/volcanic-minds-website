@@ -11,5 +11,6 @@ export const components = {
 		import(/* webpackChunkName: "prismic__slices__navigation_menu" */ './NavigationItem/index.vue'),
 	partners: () => import(/* webpackChunkName: "prismic__slices__partners" */ './Partners/index.vue'),
 	rich_text: () => import(/* webpackChunkName: "prismic__slices__rich_text" */ './RichText/index.vue'),
-	statistics: () => import(/* webpackChunkName: "prismic__slices__statistics" */ './Statistics/index.vue')
+	statistics: () => import(/* webpackChunkName: "prismic__slices__statistics" */ './Statistics/index.vue'),
+	timeline: () => import(/* webpackChunkName: "prismic__slices__timeline" */ './Timeline/index.vue')
 }

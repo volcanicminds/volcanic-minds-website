@@ -15,31 +15,22 @@
 					/>
 				</div>
 			</WrapperContainer>
-			<!-- <WrapperContainer v-if="headerData.data.links" class="py2 flex-auto overflow-auto center">
-				<template v-for="(link, i) in headerData.data.links">
-					<PrismicLink
-						:key="i"
-						class="block sidebar-link h2 font-light no-underline"
-						:field="link.link_url"
-						@click.native="closeSidebar"
-						>{{ link.link_title }}</PrismicLink
-					>
-				</template>
-			</WrapperContainer> -->
 			<WrapperContainer class="py2 flex-auto overflow-auto center">
 				<NavigationMenu is-mobile />
 			</WrapperContainer>
 			<div class="flex flex-column items-center py3">
-				<WrapperPrismicImage
-					v-if="footerData.data.logo"
-					:field="footerData.data.logo"
-					:size="150"
-					class="footer-logo mb3"
-				/>
+				<NuxtLink :to="localePath('/')" @click.native="closeSidebar">
+					<WrapperPrismicImage
+						v-if="footerData.data.logo"
+						:field="footerData.data.logo"
+						:size="150"
+						class="footer-logo mb3"
+					/>
+				</NuxtLink>
 				<div v-if="footerData.data.icon_links" class="flex social-links-container">
 					<template v-for="(link, i) in footerData.data.icon_links">
 						<PrismicLink v-if="link.icon" :key="i" :field="link.link" :aria-label="link.alt_text">
-							<font-awesome-icon :icon="link.icon" size="2xl" />
+							<font-awesome-icon :icon="link.icon" size="2xl" class="social-link" />
 						</PrismicLink>
 					</template>
 				</div>
@@ -78,8 +69,8 @@ export default Vue.extend({
 .social-links-container
 	gap 30px
 
-.footer-logo
-	@media screen and (orientation: landscape)
+@media screen and (orientation: landscape)
+	.footer-logo
 		display none
 .sidebar-enter-active
 .sidebar-leave-active

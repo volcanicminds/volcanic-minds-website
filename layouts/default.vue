@@ -23,6 +23,7 @@ export default Vue.extend({
 	},
 	mounted() {
 		window.addEventListener('resize', this.onResize)
+		document.body.tabIndex = -1
 	},
 	destroyed() {
 		window.removeEventListener('resize', this.onResize)
