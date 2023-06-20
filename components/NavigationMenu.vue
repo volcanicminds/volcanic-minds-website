@@ -22,18 +22,16 @@
 						</button>
 						<ul :id="`dropdown-${i}`" class="dropdown__menu absolute px3 gradient-bg">
 							<li class="dropdown-bg bg-shark m-auto absolute col-12 h100 left-0 top-0 right-0 bottom-0">&nbsp;</li>
-							<template v-for="(secondLevel, j) in firstLevel.items">
-								<li :key="i + j" class="my2 relative">
-									<PrismicLink
-										v-if="secondLevel.link_url && secondLevel.link_title"
-										class="no-underline"
-										:field="secondLevel.link_url"
-										:class="isMobile ? 'h2 font-light' : ''"
-										@click.native="handleDropdownClick"
-										>{{ secondLevel.link_title }}</PrismicLink
-									>
-								</li>
-							</template>
+							<li v-for="(secondLevel, j) in firstLevel.items" :key="i + j" class="my2 relative">
+								<PrismicLink
+									v-if="secondLevel.link_url && secondLevel.link_title"
+									class="no-underline"
+									:field="secondLevel.link_url"
+									:class="isMobile ? 'h2 font-light' : ''"
+									@click.native="handleDropdownClick"
+									>{{ secondLevel.link_title }}</PrismicLink
+								>
+							</li>
 						</ul>
 					</li>
 					<li
