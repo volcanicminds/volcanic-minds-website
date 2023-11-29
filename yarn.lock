@@ -2118,10 +2118,10 @@
     ufo "^0.8.5"
     vue-i18n "^8.27.2"
 
-"@nuxtjs/prismic@^1.4.3":
-  version "1.4.3"
-  resolved "https://registry.yarnpkg.com/@nuxtjs/prismic/-/prismic-1.4.3.tgz#9479294c0d2d89b6f8c59aac34f26106158e8a6e"
-  integrity sha512-aHTkaDvTxhPuznzTsWhzDeQucM7zWAlAuXjhQMyYetCTfsJab1H/eQ8AU3Rb5ZNP5/GxsIWN3dVNkYRgNS567A==
+"@nuxtjs/prismic@^1.5.0":
+  version "1.5.0"
+  resolved "https://registry.yarnpkg.com/@nuxtjs/prismic/-/prismic-1.5.0.tgz#3667b2b8006b82efd136abcb70290806b5c3a662"
+  integrity sha512-9SZD8RFPtPOfRI8zCUhHihJBxhT0PDce/zk1SqjII3igkKXqrYhjWDC9jaOPqqjukvZCVZDEyFQlgxa79Wsx5Q==
   dependencies:
     "@prismicio/client" "^4.0.0 || ^5.1.0"
     "@prismicio/vue" "^2.1.0"
