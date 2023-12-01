@@ -13,16 +13,16 @@
 			</div>
 
 			<div v-if="footerData.data.text_links" class="center md-px4 mt3">
-				<PrismicLink
-					v-for="(textLink, index) in footerData.data.text_links"
-					:key="index"
-					:field="textLink.link"
-					class="footer-data no-underline"
-					:aria-label="
-						textLink.link && textLink.link.target && textLink.link.target === '_blank' ? openInNewTabLabel : ''
-					"
-					>{{ textLink.text }}{{ index < footerData.data.text_links.length - 1 ? ' &#8226; ' : '' }}</PrismicLink
-				>
+				<template v-for="(textLink, index) in footerData.data.text_links">
+					<PrismicLink
+						:key="index"
+						:field="textLink.link"
+						class="footer-data no-underline"
+						:aria-label="textLink.accessible_name"
+						>{{ textLink.text }}</PrismicLink
+					>
+					{{ index < footerData.data.text_links.length - 1 ? ' &#8226; ' : '' }}
+				</template>
 			</div>
 			<div v-if="footerData.data.company_data" class="center md-px4 mt3">
 				<PrismicRichText :field="footerData.data.company_data" wrapper="div" class="footer-data" />
@@ -37,9 +37,6 @@ export default Vue.extend({
 	computed: {
 		footerData(): any {
 			return this.$store.state.prismic.footer
-		},
-		openInNewTabLabel(): any {
-			return this.$store.state.prismic.genericSettings.data.open_in_new_tab_label
 		}
 	}
 })
