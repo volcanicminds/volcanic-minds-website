@@ -4,8 +4,7 @@ export const state = () => ({
 	isSidebarOpened: false,
 	header: undefined,
 	navigationMenu: undefined,
-	footer: undefined,
-	genericSettings: undefined
+	footer: undefined
 })
 
 export const mutations = {
@@ -26,9 +25,6 @@ export const mutations = {
 	},
 	setFooter(state, footer) {
 		state.footer = footer
-	},
-	setGenericSettings(state, genericSettings) {
-		state.genericSettings = genericSettings
 	}
 }
 
@@ -37,11 +33,9 @@ export const actions = {
 		const header = await this.$prismic.api.getSingle('header', { lang })
 		const navigationMenu = await this.$prismic.api.getSingle('navigation_menu', { lang })
 		const footer = await this.$prismic.api.getSingle('footer', { lang })
-		const genericSettings = await this.$prismic.api.getSingle('generic_settings', { lang })
 		store.commit('setHeader', header)
 		store.commit('setNavigationMenu', navigationMenu)
 		store.commit('setFooter', footer)
-		store.commit('setGenericSettings', genericSettings)
 		store.commit('setCurrentLanguage', lang)
 		store.commit('setAlternateLanguages', altLangs)
 	}

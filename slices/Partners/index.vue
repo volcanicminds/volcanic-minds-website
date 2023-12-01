@@ -17,15 +17,22 @@
 					<RainbowBar />
 				</div>
 				<div class="partners-container">
-					<div v-for="(item, i) in slice.items" :key="`slice-item-${i}`" class="flex items-center">
+					<component
+						:is="item.link && item.link.url ? 'PrismicLink' : 'div'"
+						v-for="(item, i) in slice.items"
+						:key="`slice-item-${i}`"
+						:field="item.link && item.link"
+						:aria-label="item.link && item.name ? item.name : ''"
+						class="flex items-center no-underline"
+					>
 						<WrapperPrismicImage
 							:field="item.logo"
 							:size="25"
 							resize-by-height
 							class="contain partners-image flex-none"
 						/>
-						<h4 v-if="item.name" class="h4 m0 font-bold ml1 nowrap truncate">{{ item.name }}</h4>
-					</div>
+						<h4 v-if="item.name" class="h2 m0 font-light ml1 nowrap truncate">{{ item.name }}</h4>
+					</component>
 				</div>
 			</div>
 		</WrapperContainer>
@@ -33,9 +40,10 @@
 </template>
 
 <script lang="ts">
-export default {
+import Vue from 'vue'
+export default Vue.extend({
 	name: 'Partners'
-}
+})
 </script>
 
 <script setup lang="ts">
@@ -59,8 +67,8 @@ defineProps({
 	.partners
 		&-container
 			display grid
-			grid-template-columns repeat(auto-fit, minmax(150px, 1fr))
-			grid-gap 25px
+			grid-template-columns repeat(auto-fit, minmax(250px, 1fr))
+			grid-gap 40px 10px
 
 		&-image
 			width 25px
