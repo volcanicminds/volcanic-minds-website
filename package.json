@@ -31,10 +31,10 @@
 		"nuxt": "^2.17.1",
 		"nuxt-property-decorator": "^2.9.1",
 		"prettier-plugin-stylus": "0.1.0",
-		"vue": "^2.7.14",
+		"vue": "^2.7.16",
 		"vue-intersect": "^1.1.6",
-		"vue-server-renderer": "^2.7.14",
-		"vue-template-compiler": "^2.7.14"
+		"vue-server-renderer": "^2.7.16",
+		"vue-template-compiler": "^2.7.16"
 	},
 	"devDependencies": {
 		"@nuxt/types": "^2.17.1",
@@ -49,10 +49,10 @@
 		"basscss-btn-sizes": "^1.2.0",
 		"basscss-responsive-margin": "^1.1.0",
 		"basscss-responsive-padding": "^1.1.0",
-		"eslint": "^8.57.0",
+		"eslint": "^8.54.0",
 		"eslint-config-prettier": "^8.10.0",
 		"eslint-plugin-nuxt": "^4.0.0",
-		"eslint-plugin-vue": "^9.24.0",
+		"eslint-plugin-vue": "^9.19.2",
 		"nuxt-compress": "^5.0.0",
 		"prettier": "^2.8.8",
 		"slice-machine-ui": "^1.26.0",
