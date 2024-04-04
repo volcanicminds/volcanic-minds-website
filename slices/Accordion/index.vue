@@ -29,10 +29,10 @@
 </template>
 
 <script lang="ts">
-import { ref } from 'vue'
-export default {
+import { defineComponent, ref } from 'vue'
+export default defineComponent({
 	name: 'Accordion'
-}
+})
 </script>
 
 <script setup lang="ts">
