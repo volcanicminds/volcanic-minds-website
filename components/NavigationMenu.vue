@@ -56,9 +56,8 @@
 </template>
 
 <script lang="ts">
-import Vue from 'vue'
-export default Vue.extend({
-	// TODO: understand why Composition API props won't work with Options API computed
+import { defineComponent } from 'vue'
+export default defineComponent({
 	props: {
 		isMobile: Boolean
 	},

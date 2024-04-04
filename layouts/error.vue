@@ -3,8 +3,8 @@
 </template>
 
 <script lang="ts">
-import Vue from 'vue'
-export default Vue.extend({
+import { defineComponent } from 'vue'
+export default defineComponent({
 	beforeCreate() {
 		const currentLanguage = this.$store.state.prismic.currentLanguage
 		if (currentLanguage === 'it-it') {

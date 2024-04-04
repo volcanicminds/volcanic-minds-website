@@ -19,9 +19,10 @@
 </template>
 
 <script lang="ts">
-export default {
+import { defineComponent } from 'vue'
+export default defineComponent({
 	name: 'RichText'
-}
+})
 </script>
 
 <script setup lang="ts">

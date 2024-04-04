@@ -15,6 +15,5 @@
 	},
 	"[xml]": {
 		"editor.defaultFormatter": "DotJoshJohnson.xml"
-	},
-	"typescript.tsdk": "node_modules/typescript/lib"
+	}
 }

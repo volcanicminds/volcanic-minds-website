@@ -28,8 +28,8 @@
 </template>
 
 <script lang="ts">
-import Vue from 'vue'
-export default Vue.extend({
+import { defineComponent } from 'vue'
+export default defineComponent({
 	computed: {
 		headerData(): any {
 			return this.$store.state.prismic.header
