@@ -13,7 +13,7 @@ import WrapperPrismicImage from './components/wrapper/PrismicImage.vue'
 import WrapperSlice from './components/wrapper/Slice.vue'
 
 declare module 'vue' {
-	interface GlobalComponents {
+	export interface GlobalComponents {
 		Breadcrumbs: typeof Breadcrumbs
 		Footer: typeof Footer
 		Header: typeof Header
@@ -29,3 +29,5 @@ declare module 'vue' {
 		WrapperSlice: typeof WrapperSlice
 	}
 }
+
+export {}
