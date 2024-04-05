@@ -4,6 +4,7 @@
 		"esbenp.prettier-vscode",
 		"sysoev.language-stylus",
 		"thisismanta.stylus-supremacy",
-		"DotJoshJohnson.xml"
+		"DotJoshJohnson.xml",
+		"vue.volar"
 	]
 }
