@@ -97,7 +97,7 @@ export default async () => {
 							defer: true,
 							'data-domain': 'volcanicminds.com',
 							src: 'https://plausible.io/js/script.js'
-					  }
+						}
 					: {},
 				{
 					async: true,
@@ -111,7 +111,7 @@ export default async () => {
 			NUXT_SITENAME: process.env.NUXT_SITENAME
 		},
 
-		generate: { fallback: '404.html' },
+		generate: { fallback: '404.html', routes: ['/thank-you'] },
 
 		// Global CSS: https://go.nuxtjs.dev/config-css
 		css: [
