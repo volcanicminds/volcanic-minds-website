@@ -145,4 +145,8 @@
         <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en" />
         <xhtml:link rel="alternate" hreflang="de" href="https://volcanicminds.com/de" />
     </url>
+    <url>
+        <loc>https://volcanicminds.com/thank-you</loc>
+        <xhtml:link rel="alternate" hreflang="it-it" href="https://volcanicminds.com/thank-you" />
+    </url>
 </urlset>
