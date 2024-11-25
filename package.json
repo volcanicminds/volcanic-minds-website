@@ -1,6 +1,6 @@
 {
 	"name": "volcanic-minds-website",
-	"version": "1.5.2",
+	"version": "1.5.3",
 	"license": "ISC",
 	"scripts": {
 		"dev": "export NODE_ENV=development && node ./switch_env.mjs && nuxt dev",

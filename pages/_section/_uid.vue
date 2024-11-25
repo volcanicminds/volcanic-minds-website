@@ -57,6 +57,7 @@ export default class PageComponent extends Vue {
 		return {
 			title: this.document.data.seo_title || this.$constants.seoTitle,
 			meta: [
+				...(this.document.data.no_index ? [{ hid: 'robots', name: 'robots', content: 'noindex, nofollow' }] : []),
 				{
 					hid: 'description',
 					name: 'description',
