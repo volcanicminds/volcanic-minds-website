@@ -118,6 +118,18 @@ interface FirstLevelPageDocumentData {
 	 * - **Documentation**: https://prismic.io/docs/field#image
 	 */
 	og_image: prismic.ImageField<never>
+
+	/**
+	 * No index field in *Pagina di primo livello*
+	 *
+	 * - **Field Type**: Boolean
+	 * - **Placeholder**: *None*
+	 * - **Default Value**: false
+	 * - **API ID Path**: first_level_page.no_index
+	 * - **Tab**: SEO
+	 * - **Documentation**: https://prismic.io/docs/field#boolean
+	 */
+	no_index: prismic.BooleanField
 }
 
 /**
@@ -642,6 +654,18 @@ interface SecondLevelPageDocumentData {
 	 * - **Documentation**: https://prismic.io/docs/field#image
 	 */
 	og_image: prismic.ImageField<never>
+
+	/**
+	 * No index field in *Pagina di secondo livello*
+	 *
+	 * - **Field Type**: Boolean
+	 * - **Placeholder**: *None*
+	 * - **Default Value**: false
+	 * - **API ID Path**: second_level_page.no_index
+	 * - **Tab**: SEO
+	 * - **Documentation**: https://prismic.io/docs/field#boolean
+	 */
+	no_index: prismic.BooleanField
 }
 
 /**
@@ -668,58 +692,58 @@ export type AllDocumentTypes =
 	| SecondLevelPageDocument
 
 /**
- * Primary content in *Accordion → Primary*
+ * Primary content in *Accordion → Default → Primary*
  */
 export interface AccordionSliceDefaultPrimary {
 	/**
-	 * Titolo field in *Accordion → Primary*
+	 * Titolo field in *Accordion → Default → Primary*
 	 *
 	 * - **Field Type**: Text
 	 * - **Placeholder**: *None*
-	 * - **API ID Path**: accordion.primary.title
+	 * - **API ID Path**: accordion.default.primary.title
 	 * - **Documentation**: https://prismic.io/docs/field#key-text
 	 */
 	title: prismic.KeyTextField
 
 	/**
-	 * Sottotitolo field in *Accordion → Primary*
+	 * Sottotitolo field in *Accordion → Default → Primary*
 	 *
 	 * - **Field Type**: Text
 	 * - **Placeholder**: *None*
-	 * - **API ID Path**: accordion.primary.subtitle
+	 * - **API ID Path**: accordion.default.primary.subtitle
 	 * - **Documentation**: https://prismic.io/docs/field#key-text
 	 */
 	subtitle: prismic.KeyTextField
 
 	/**
-	 * Margine superiore field in *Accordion → Primary*
+	 * Margine superiore field in *Accordion → Default → Primary*
 	 *
 	 * - **Field Type**: Boolean
 	 * - **Placeholder**: *None*
 	 * - **Default Value**: false
-	 * - **API ID Path**: accordion.primary.margin_top
+	 * - **API ID Path**: accordion.default.primary.margin_top
 	 * - **Documentation**: https://prismic.io/docs/field#boolean
 	 */
 	margin_top: prismic.BooleanField
 
 	/**
-	 * Margine inferiore field in *Accordion → Primary*
+	 * Margine inferiore field in *Accordion → Default → Primary*
 	 *
 	 * - **Field Type**: Boolean
 	 * - **Placeholder**: *None*
 	 * - **Default Value**: false
-	 * - **API ID Path**: accordion.primary.margin_bottom
+	 * - **API ID Path**: accordion.default.primary.margin_bottom
 	 * - **Documentation**: https://prismic.io/docs/field#boolean
 	 */
 	margin_bottom: prismic.BooleanField
 
 	/**
-	 * Abilita animazione field in *Accordion → Primary*
+	 * Abilita animazione field in *Accordion → Default → Primary*
 	 *
 	 * - **Field Type**: Boolean
 	 * - **Placeholder**: *None*
 	 * - **Default Value**: false
-	 * - **API ID Path**: accordion.primary.enable_animation
+	 * - **API ID Path**: accordion.default.primary.enable_animation
 	 * - **Documentation**: https://prismic.io/docs/field#boolean
 	 */
 	enable_animation: prismic.BooleanField
@@ -778,79 +802,79 @@ type AccordionSliceVariation = AccordionSliceDefault
 export type AccordionSlice = prismic.SharedSlice<'accordion', AccordionSliceVariation>
 
 /**
- * Primary content in *CallToAction → Primary*
+ * Primary content in *CallToAction → Default → Primary*
  */
 export interface CallToActionSliceDefaultPrimary {
 	/**
-	 * Label field in *CallToAction → Primary*
+	 * Label field in *CallToAction → Default → Primary*
 	 *
 	 * - **Field Type**: Text
 	 * - **Placeholder**: *None*
-	 * - **API ID Path**: call_to_action.primary.label
+	 * - **API ID Path**: call_to_action.default.primary.label
 	 * - **Documentation**: https://prismic.io/docs/field#key-text
 	 */
 	label: prismic.KeyTextField
 
 	/**
-	 * Label accessibile field in *CallToAction → Primary*
+	 * Label accessibile field in *CallToAction → Default → Primary*
 	 *
 	 * - **Field Type**: Text
 	 * - **Placeholder**: *None*
-	 * - **API ID Path**: call_to_action.primary.accessible_label
+	 * - **API ID Path**: call_to_action.default.primary.accessible_label
 	 * - **Documentation**: https://prismic.io/docs/field#key-text
 	 */
 	accessible_label: prismic.KeyTextField
 
 	/**
-	 * Link field in *CallToAction → Primary*
+	 * Link field in *CallToAction → Default → Primary*
 	 *
 	 * - **Field Type**: Link
 	 * - **Placeholder**: *None*
-	 * - **API ID Path**: call_to_action.primary.link
+	 * - **API ID Path**: call_to_action.default.primary.link
 	 * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
 	 */
 	link: prismic.LinkField
 
 	/**
-	 * Dimensione field in *CallToAction → Primary*
+	 * Dimensione field in *CallToAction → Default → Primary*
 	 *
 	 * - **Field Type**: Boolean
 	 * - **Placeholder**: *None*
 	 * - **Default Value**: false
-	 * - **API ID Path**: call_to_action.primary.size
+	 * - **API ID Path**: call_to_action.default.primary.size
 	 * - **Documentation**: https://prismic.io/docs/field#boolean
 	 */
 	size: prismic.BooleanField
 
 	/**
-	 * Margine superiore field in *CallToAction → Primary*
+	 * Margine superiore field in *CallToAction → Default → Primary*
 	 *
 	 * - **Field Type**: Boolean
 	 * - **Placeholder**: *None*
 	 * - **Default Value**: false
-	 * - **API ID Path**: call_to_action.primary.margin_top
+	 * - **API ID Path**: call_to_action.default.primary.margin_top
 	 * - **Documentation**: https://prismic.io/docs/field#boolean
 	 */
 	margin_top: prismic.BooleanField
 
 	/**
-	 * Margine inferiore field in *CallToAction → Primary*
+	 * Margine inferiore field in *CallToAction → Default → Primary*
 	 *
 	 * - **Field Type**: Boolean
 	 * - **Placeholder**: *None*
 	 * - **Default Value**: false
-	 * - **API ID Path**: call_to_action.primary.margin_bottom
+	 * - **API ID Path**: call_to_action.default.primary.margin_bottom
 	 * - **Documentation**: https://prismic.io/docs/field#boolean
 	 */
 	margin_bottom: prismic.BooleanField
 
 	/**
-	 * Abilita animazione field in *CallToAction → Primary*
+	 * Abilita animazione field in *CallToAction → Default → Primary*
 	 *
 	 * - **Field Type**: Boolean
 	 * - **Placeholder**: *None*
 	 * - **Default Value**: false
-	 * - **API ID Path**: call_to_action.primary.enable_animation
+	 * - **API ID Path**: call_to_action.default.primary.enable_animation
 	 * - **Documentation**: https://prismic.io/docs/field#boolean
 	 */
 	enable_animation: prismic.BooleanField
@@ -884,69 +908,69 @@ type CallToActionSliceVariation = CallToActionSliceDefault
 export type CallToActionSlice = prismic.SharedSlice<'call_to_action', CallToActionSliceVariation>
 
 /**
- * Primary content in *CardsGrid → Primary*
+ * Primary content in *CardsGrid → Default → Primary*
  */
 export interface CardsGridSliceDefaultPrimary {
 	/**
-	 * Titolo field in *CardsGrid → Primary*
+	 * Titolo field in *CardsGrid → Default → Primary*
 	 *
 	 * - **Field Type**: Text
 	 * - **Placeholder**: *None*
-	 * - **API ID Path**: cards_grid.primary.title
+	 * - **API ID Path**: cards_grid.default.primary.title
 	 * - **Documentation**: https://prismic.io/docs/field#key-text
 	 */
 	title: prismic.KeyTextField
 
 	/**
-	 * Sottotitolo field in *CardsGrid → Primary*
+	 * Sottotitolo field in *CardsGrid → Default → Primary*
 	 *
 	 * - **Field Type**: Text
 	 * - **Placeholder**: *None*
-	 * - **API ID Path**: cards_grid.primary.subtitle
+	 * - **API ID Path**: cards_grid.default.primary.subtitle
 	 * - **Documentation**: https://prismic.io/docs/field#key-text
 	 */
 	subtitle: prismic.KeyTextField
 
 	/**
-	 * Margine superiore field in *CardsGrid → Primary*
+	 * Margine superiore field in *CardsGrid → Default → Primary*
 	 *
 	 * - **Field Type**: Boolean
 	 * - **Placeholder**: *None*
 	 * - **Default Value**: false
-	 * - **API ID Path**: cards_grid.primary.margin_top
+	 * - **API ID Path**: cards_grid.default.primary.margin_top
 	 * - **Documentation**: https://prismic.io/docs/field#boolean
 	 */
 	margin_top: prismic.BooleanField
 
 	/**
-	 * Margine inferiore field in *CardsGrid → Primary*
+	 * Margine inferiore field in *CardsGrid → Default → Primary*
 	 *
 	 * - **Field Type**: Boolean
 	 * - **Placeholder**: *None*
 	 * - **Default Value**: false
-	 * - **API ID Path**: cards_grid.primary.margin_bottom
+	 * - **API ID Path**: cards_grid.default.primary.margin_bottom
 	 * - **Documentation**: https://prismic.io/docs/field#boolean
 	 */
 	margin_bottom: prismic.BooleanField
 
 	/**
-	 * Abilita animazione field in *CardsGrid → Primary*
+	 * Abilita animazione field in *CardsGrid → Default → Primary*
 	 *
 	 * - **Field Type**: Boolean
 	 * - **Placeholder**: *None*
 	 * - **Default Value**: false
-	 * - **API ID Path**: cards_grid.primary.enable_animation
+	 * - **API ID Path**: cards_grid.default.primary.enable_animation
 	 * - **Documentation**: https://prismic.io/docs/field#boolean
 	 */
 	enable_animation: prismic.BooleanField
 
 	/**
-	 * Centra contenuto card field in *CardsGrid → Primary*
+	 * Centra contenuto card field in *CardsGrid → Default → Primary*
 	 *
 	 * - **Field Type**: Boolean
 	 * - **Placeholder**: *None*
 	 * - **Default Value**: false
-	 * - **API ID Path**: cards_grid.primary.center_card_content
+	 * - **API ID Path**: cards_grid.default.primary.center_card_content
 	 * - **Documentation**: https://prismic.io/docs/field#boolean
 	 */
 	center_card_content: prismic.BooleanField
@@ -1045,109 +1069,109 @@ type CardsGridSliceVariation = CardsGridSliceDefault
 export type CardsGridSlice = prismic.SharedSlice<'cards_grid', CardsGridSliceVariation>
 
 /**
- * Primary content in *Contacts → Primary*
+ * Primary content in *Contacts → Default → Primary*
  */
 export interface ContactsSliceDefaultPrimary {
 	/**
-	 * Background 1 field in *Contacts → Primary*
+	 * Background 1 field in *Contacts → Default → Primary*
 	 *
 	 * - **Field Type**: Image
 	 * - **Placeholder**: *None*
-	 * - **API ID Path**: contacts.primary.background_1
+	 * - **API ID Path**: contacts.default.primary.background_1
 	 * - **Documentation**: https://prismic.io/docs/field#image
 	 */
 	background_1: prismic.ImageField<never>
 
 	/**
-	 * Background 2 field in *Contacts → Primary*
+	 * Background 2 field in *Contacts → Default → Primary*
 	 *
 	 * - **Field Type**: Image
 	 * - **Placeholder**: *None*
-	 * - **API ID Path**: contacts.primary.background_2
+	 * - **API ID Path**: contacts.default.primary.background_2
 	 * - **Documentation**: https://prismic.io/docs/field#image
 	 */
 	background_2: prismic.ImageField<never>
 
 	/**
-	 * Titolo field in *Contacts → Primary*
+	 * Titolo field in *Contacts → Default → Primary*
 	 *
 	 * - **Field Type**: Text
 	 * - **Placeholder**: *None*
-	 * - **API ID Path**: contacts.primary.title
+	 * - **API ID Path**: contacts.default.primary.title
 	 * - **Documentation**: https://prismic.io/docs/field#key-text
 	 */
 	title: prismic.KeyTextField
 
 	/**
-	 * Testo field in *Contacts → Primary*
+	 * Testo field in *Contacts → Default → Primary*
 	 *
 	 * - **Field Type**: Rich Text
 	 * - **Placeholder**: *None*
-	 * - **API ID Path**: contacts.primary.text
+	 * - **API ID Path**: contacts.default.primary.text
 	 * - **Documentation**: https://prismic.io/docs/field#rich-text-title
 	 */
 	text: prismic.RichTextField
 
 	/**
-	 * Link bottone field in *Contacts → Primary*
+	 * Link bottone field in *Contacts → Default → Primary*
 	 *
 	 * - **Field Type**: Link
 	 * - **Placeholder**: *None*
-	 * - **API ID Path**: contacts.primary.button_link
+	 * - **API ID Path**: contacts.default.primary.button_link
 	 * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
 	 */
 	button_link: prismic.LinkField
 
 	/**
-	 * Label bottone field in *Contacts → Primary*
+	 * Label bottone field in *Contacts → Default → Primary*
 	 *
 	 * - **Field Type**: Text
 	 * - **Placeholder**: *None*
-	 * - **API ID Path**: contacts.primary.button_label
+	 * - **API ID Path**: contacts.default.primary.button_label
 	 * - **Documentation**: https://prismic.io/docs/field#key-text
 	 */
 	button_label: prismic.KeyTextField
 
 	/**
-	 * Margine superiore field in *Contacts → Primary*
+	 * Margine superiore field in *Contacts → Default → Primary*
 	 *
 	 * - **Field Type**: Boolean
 	 * - **Placeholder**: *None*
 	 * - **Default Value**: false
-	 * - **API ID Path**: contacts.primary.margin_top
+	 * - **API ID Path**: contacts.default.primary.margin_top
 	 * - **Documentation**: https://prismic.io/docs/field#boolean
 	 */
 	margin_top: prismic.BooleanField
 
 	/**
-	 * Margine inferiore field in *Contacts → Primary*
+	 * Margine inferiore field in *Contacts → Default → Primary*
 	 *
 	 * - **Field Type**: Boolean
 	 * - **Placeholder**: *None*
 	 * - **Default Value**: false
-	 * - **API ID Path**: contacts.primary.margin_bottom
+	 * - **API ID Path**: contacts.default.primary.margin_bottom
 	 * - **Documentation**: https://prismic.io/docs/field#boolean
 	 */
 	margin_bottom: prismic.BooleanField
 
 	/**
-	 * Abilita animazione field in *Contacts → Primary*
+	 * Abilita animazione field in *Contacts → Default → Primary*
 	 *
 	 * - **Field Type**: Boolean
 	 * - **Placeholder**: *None*
 	 * - **Default Value**: false
-	 * - **API ID Path**: contacts.primary.enable_animation
+	 * - **API ID Path**: contacts.default.primary.enable_animation
 	 * - **Documentation**: https://prismic.io/docs/field#boolean
 	 */
 	enable_animation: prismic.BooleanField
 
 	/**
-	 * Abilita background field in *Contacts → Primary*
+	 * Abilita background field in *Contacts → Default → Primary*
 	 *
 	 * - **Field Type**: Boolean
 	 * - **Placeholder**: *None*
 	 * - **Default Value**: false
-	 * - **API ID Path**: contacts.primary.enable_bg
+	 * - **API ID Path**: contacts.default.primary.enable_bg
 	 * - **Documentation**: https://prismic.io/docs/field#boolean
 	 */
 	enable_bg: prismic.BooleanField
@@ -1196,110 +1220,110 @@ type ContactsSliceVariation = ContactsSliceDefault
 export type ContactsSlice = prismic.SharedSlice<'contacts', ContactsSliceVariation>
 
 /**
- * Primary content in *HeroBanner → Primary*
+ * Primary content in *HeroBanner → Default → Primary*
  */
 export interface HeroBannerSliceDefaultPrimary {
 	/**
-	 * Titolo field in *HeroBanner → Primary*
+	 * Titolo field in *HeroBanner → Default → Primary*
 	 *
 	 * - **Field Type**: Rich Text
 	 * - **Placeholder**: *None*
-	 * - **API ID Path**: hero_banner.primary.title
+	 * - **API ID Path**: hero_banner.default.primary.title
 	 * - **Documentation**: https://prismic.io/docs/field#rich-text-title
 	 */
 	title: prismic.RichTextField
 
 	/**
-	 * Margine inferiore titolo field in *HeroBanner → Primary*
+	 * Margine inferiore titolo field in *HeroBanner → Default → Primary*
 	 *
 	 * - **Field Type**: Boolean
 	 * - **Placeholder**: *None*
 	 * - **Default Value**: false
-	 * - **API ID Path**: hero_banner.primary.title_mb
+	 * - **API ID Path**: hero_banner.default.primary.title_mb
 	 * - **Documentation**: https://prismic.io/docs/field#boolean
 	 */
 	title_mb: prismic.BooleanField
 
 	/**
-	 * Sottotitolo field in *HeroBanner → Primary*
+	 * Sottotitolo field in *HeroBanner → Default → Primary*
 	 *
 	 * - **Field Type**: Rich Text
 	 * - **Placeholder**: *None*
-	 * - **API ID Path**: hero_banner.primary.subtitle
+	 * - **API ID Path**: hero_banner.default.primary.subtitle
 	 * - **Documentation**: https://prismic.io/docs/field#rich-text-title
 	 */
 	subtitle: prismic.RichTextField
 
 	/**
-	 * Immagine di sfondo field in *HeroBanner → Primary*
+	 * Immagine di sfondo field in *HeroBanner → Default → Primary*
 	 *
 	 * - **Field Type**: Image
 	 * - **Placeholder**: *None*
-	 * - **API ID Path**: hero_banner.primary.background_image
+	 * - **API ID Path**: hero_banner.default.primary.background_image
 	 * - **Documentation**: https://prismic.io/docs/field#image
 	 */
 	background_image: prismic.ImageField<never>
 
 	/**
-	 * Blur immagine di sfondo field in *HeroBanner → Primary*
+	 * Blur immagine di sfondo field in *HeroBanner → Default → Primary*
 	 *
 	 * - **Field Type**: Boolean
 	 * - **Placeholder**: *None*
 	 * - **Default Value**: false
-	 * - **API ID Path**: hero_banner.primary.background_image_blur
+	 * - **API ID Path**: hero_banner.default.primary.background_image_blur
 	 * - **Documentation**: https://prismic.io/docs/field#boolean
 	 */
 	background_image_blur: prismic.BooleanField
 
 	/**
-	 * Margine superiore field in *HeroBanner → Primary*
+	 * Margine superiore field in *HeroBanner → Default → Primary*
 	 *
 	 * - **Field Type**: Boolean
 	 * - **Placeholder**: *None*
 	 * - **Default Value**: false
-	 * - **API ID Path**: hero_banner.primary.margin_top
+	 * - **API ID Path**: hero_banner.default.primary.margin_top
 	 * - **Documentation**: https://prismic.io/docs/field#boolean
 	 */
 	margin_top: prismic.BooleanField
 
 	/**
-	 * Margine inferiore field in *HeroBanner → Primary*
+	 * Margine inferiore field in *HeroBanner → Default → Primary*
 	 *
 	 * - **Field Type**: Boolean
 	 * - **Placeholder**: *None*
 	 * - **Default Value**: false
-	 * - **API ID Path**: hero_banner.primary.margin_bottom
+	 * - **API ID Path**: hero_banner.default.primary.margin_bottom
 	 * - **Documentation**: https://prismic.io/docs/field#boolean
 	 */
 	margin_bottom: prismic.BooleanField
 
 	/**
-	 * CTA link field in *HeroBanner → Primary*
+	 * CTA link field in *HeroBanner → Default → Primary*
 	 *
 	 * - **Field Type**: Link
 	 * - **Placeholder**: *None*
-	 * - **API ID Path**: hero_banner.primary.cta_link
+	 * - **API ID Path**: hero_banner.default.primary.cta_link
 	 * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
 	 */
 	cta_link: prismic.LinkField
 
 	/**
-	 * CTA testo field in *HeroBanner → Primary*
+	 * CTA testo field in *HeroBanner → Default → Primary*
 	 *
 	 * - **Field Type**: Text
 	 * - **Placeholder**: *None*
-	 * - **API ID Path**: hero_banner.primary.cta_text
+	 * - **API ID Path**: hero_banner.default.primary.cta_text
 	 * - **Documentation**: https://prismic.io/docs/field#key-text
 	 */
 	cta_text: prismic.KeyTextField
 
 	/**
-	 * Abilita animazione field in *HeroBanner → Primary*
+	 * Abilita animazione field in *HeroBanner → Default → Primary*
 	 *
 	 * - **Field Type**: Boolean
 	 * - **Placeholder**: *None*
 	 * - **Default Value**: false
-	 * - **API ID Path**: hero_banner.primary.enable_animation
+	 * - **API ID Path**: hero_banner.default.primary.enable_animation
 	 * - **Documentation**: https://prismic.io/docs/field#boolean
 	 */
 	enable_animation: prismic.BooleanField
@@ -1333,130 +1357,130 @@ type HeroBannerSliceVariation = HeroBannerSliceDefault
 export type HeroBannerSlice = prismic.SharedSlice<'hero_banner', HeroBannerSliceVariation>
 
 /**
- * Primary content in *ImageAndText → Primary*
+ * Primary content in *ImageAndText → Default → Primary*
  */
 export interface ImageAndTextSliceDefaultPrimary {
 	/**
-	 * Immagine field in *ImageAndText → Primary*
+	 * Immagine field in *ImageAndText → Default → Primary*
 	 *
 	 * - **Field Type**: Image
 	 * - **Placeholder**: *None*
-	 * - **API ID Path**: image_and_text.primary.image
+	 * - **API ID Path**: image_and_text.default.primary.image
 	 * - **Documentation**: https://prismic.io/docs/field#image
 	 */
 	image: prismic.ImageField<never>
 
 	/**
-	 * Titolo field in *ImageAndText → Primary*
+	 * Titolo field in *ImageAndText → Default → Primary*
 	 *
 	 * - **Field Type**: Text
 	 * - **Placeholder**: *None*
-	 * - **API ID Path**: image_and_text.primary.title
+	 * - **API ID Path**: image_and_text.default.primary.title
 	 * - **Documentation**: https://prismic.io/docs/field#key-text
 	 */
 	title: prismic.KeyTextField
 
 	/**
-	 * Sottotitolo field in *ImageAndText → Primary*
+	 * Sottotitolo field in *ImageAndText → Default → Primary*
 	 *
 	 * - **Field Type**: Text
 	 * - **Placeholder**: *None*
-	 * - **API ID Path**: image_and_text.primary.subtitle
+	 * - **API ID Path**: image_and_text.default.primary.subtitle
 	 * - **Documentation**: https://prismic.io/docs/field#key-text
 	 */
 	subtitle: prismic.KeyTextField
 
 	/**
-	 * Descrizione field in *ImageAndText → Primary*
+	 * Descrizione field in *ImageAndText → Default → Primary*
 	 *
 	 * - **Field Type**: Rich Text
 	 * - **Placeholder**: *None*
-	 * - **API ID Path**: image_and_text.primary.description
+	 * - **API ID Path**: image_and_text.default.primary.description
 	 * - **Documentation**: https://prismic.io/docs/field#rich-text-title
 	 */
 	description: prismic.RichTextField
 
 	/**
-	 * Margine superiore field in *ImageAndText → Primary*
+	 * Margine superiore field in *ImageAndText → Default → Primary*
 	 *
 	 * - **Field Type**: Boolean
 	 * - **Placeholder**: *None*
 	 * - **Default Value**: false
-	 * - **API ID Path**: image_and_text.primary.margin_top
+	 * - **API ID Path**: image_and_text.default.primary.margin_top
 	 * - **Documentation**: https://prismic.io/docs/field#boolean
 	 */
 	margin_top: prismic.BooleanField
 
 	/**
-	 * Margine inferiore field in *ImageAndText → Primary*
+	 * Margine inferiore field in *ImageAndText → Default → Primary*
 	 *
 	 * - **Field Type**: Boolean
 	 * - **Placeholder**: *None*
 	 * - **Default Value**: false
-	 * - **API ID Path**: image_and_text.primary.margin_bottom
+	 * - **API ID Path**: image_and_text.default.primary.margin_bottom
 	 * - **Documentation**: https://prismic.io/docs/field#boolean
 	 */
 	margin_bottom: prismic.BooleanField
 
 	/**
-	 * Layout specchiato field in *ImageAndText → Primary*
+	 * Layout specchiato field in *ImageAndText → Default → Primary*
 	 *
 	 * - **Field Type**: Boolean
 	 * - **Placeholder**: *None*
 	 * - **Default Value**: false
-	 * - **API ID Path**: image_and_text.primary.reverse
+	 * - **API ID Path**: image_and_text.default.primary.reverse
 	 * - **Documentation**: https://prismic.io/docs/field#boolean
 	 */
 	reverse: prismic.BooleanField
 
 	/**
-	 * CTA Link field in *ImageAndText → Primary*
+	 * CTA Link field in *ImageAndText → Default → Primary*
 	 *
 	 * - **Field Type**: Link
 	 * - **Placeholder**: *None*
-	 * - **API ID Path**: image_and_text.primary.cta_link
+	 * - **API ID Path**: image_and_text.default.primary.cta_link
 	 * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
 	 */
 	cta_link: prismic.LinkField
 
 	/**
-	 * CTA Testo field in *ImageAndText → Primary*
+	 * CTA Testo field in *ImageAndText → Default → Primary*
 	 *
 	 * - **Field Type**: Text
 	 * - **Placeholder**: *None*
-	 * - **API ID Path**: image_and_text.primary.cta_text
+	 * - **API ID Path**: image_and_text.default.primary.cta_text
 	 * - **Documentation**: https://prismic.io/docs/field#key-text
 	 */
 	cta_text: prismic.KeyTextField
 
 	/**
-	 * CTA Testo accessible field in *ImageAndText → Primary*
+	 * CTA Testo accessible field in *ImageAndText → Default → Primary*
 	 *
 	 * - **Field Type**: Text
 	 * - **Placeholder**: *None*
-	 * - **API ID Path**: image_and_text.primary.cta_accessible_text
+	 * - **API ID Path**: image_and_text.default.primary.cta_accessible_text
 	 * - **Documentation**: https://prismic.io/docs/field#key-text
 	 */
 	cta_accessible_text: prismic.KeyTextField
 
 	/**
-	 * Abilita animazione field in *ImageAndText → Primary*
+	 * Abilita animazione field in *ImageAndText → Default → Primary*
 	 *
 	 * - **Field Type**: Boolean
 	 * - **Placeholder**: *None*
 	 * - **Default Value**: false
-	 * - **API ID Path**: image_and_text.primary.enable_animation
+	 * - **API ID Path**: image_and_text.default.primary.enable_animation
 	 * - **Documentation**: https://prismic.io/docs/field#boolean
 	 */
 	enable_animation: prismic.BooleanField
 
 	/**
-	 * Abilita sfondo field in *ImageAndText → Primary*
+	 * Abilita sfondo field in *ImageAndText → Default → Primary*
 	 *
 	 * - **Field Type**: Boolean
 	 * - **Placeholder**: *None*
 	 * - **Default Value**: false
-	 * - **API ID Path**: image_and_text.primary.enable_bg
+	 * - **API ID Path**: image_and_text.default.primary.enable_bg
 	 * - **Documentation**: https://prismic.io/docs/field#boolean
 	 */
 	enable_bg: prismic.BooleanField
@@ -1490,36 +1514,36 @@ type ImageAndTextSliceVariation = ImageAndTextSliceDefault
 export type ImageAndTextSlice = prismic.SharedSlice<'image_and_text', ImageAndTextSliceVariation>
 
 /**
- * Primary content in *NavigationItem → Primary*
+ * Primary content in *NavigationItem → Default → Primary*
  */
 export interface NavigationMenuSliceDefaultPrimary {
 	/**
-	 * URL link field in *NavigationItem → Primary*
+	 * URL link field in *NavigationItem → Default → Primary*
 	 *
 	 * - **Field Type**: Link
 	 * - **Placeholder**: *None*
-	 * - **API ID Path**: navigation_menu.primary.link_url
+	 * - **API ID Path**: navigation_menu.default.primary.link_url
 	 * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
 	 */
 	link_url: prismic.LinkField
 
 	/**
-	 * Titolo link field in *NavigationItem → Primary*
+	 * Titolo link field in *NavigationItem → Default → Primary*
 	 *
 	 * - **Field Type**: Text
 	 * - **Placeholder**: *None*
-	 * - **API ID Path**: navigation_menu.primary.link_title
+	 * - **API ID Path**: navigation_menu.default.primary.link_title
 	 * - **Documentation**: https://prismic.io/docs/field#key-text
 	 */
 	link_title: prismic.KeyTextField
 
 	/**
-	 * Nascondi su desktop field in *NavigationItem → Primary*
+	 * Nascondi su desktop field in *NavigationItem → Default → Primary*
 	 *
 	 * - **Field Type**: Boolean
 	 * - **Placeholder**: *None*
 	 * - **Default Value**: false
-	 * - **API ID Path**: navigation_menu.primary.hide_on_desktop
+	 * - **API ID Path**: navigation_menu.default.primary.hide_on_desktop
 	 * - **Documentation**: https://prismic.io/docs/field#boolean
 	 */
 	hide_on_desktop: prismic.BooleanField
@@ -1578,101 +1602,101 @@ type NavigationMenuSliceVariation = NavigationMenuSliceDefault
 export type NavigationMenuSlice = prismic.SharedSlice<'navigation_menu', NavigationMenuSliceVariation>
 
 /**
- * Primary content in *Partners → Primary*
+ * Primary content in *Partners → Default → Primary*
  */
 export interface PartnersSliceDefaultPrimary {
 	/**
-	 * Titolo field in *Partners → Primary*
+	 * Titolo field in *Partners → Default → Primary*
 	 *
 	 * - **Field Type**: Text
 	 * - **Placeholder**: *None*
-	 * - **API ID Path**: partners.primary.title
+	 * - **API ID Path**: partners.default.primary.title
 	 * - **Documentation**: https://prismic.io/docs/field#key-text
 	 */
 	title: prismic.KeyTextField
 
 	/**
-	 * Margine superiore field in *Partners → Primary*
+	 * Margine superiore field in *Partners → Default → Primary*
 	 *
 	 * - **Field Type**: Boolean
 	 * - **Placeholder**: *None*
 	 * - **Default Value**: false
-	 * - **API ID Path**: partners.primary.margin_top
+	 * - **API ID Path**: partners.default.primary.margin_top
 	 * - **Documentation**: https://prismic.io/docs/field#boolean
 	 */
 	margin_top: prismic.BooleanField
 
 	/**
-	 * Margine inferiore field in *Partners → Primary*
+	 * Margine inferiore field in *Partners → Default → Primary*
 	 *
 	 * - **Field Type**: Boolean
 	 * - **Placeholder**: *None*
 	 * - **Default Value**: false
-	 * - **API ID Path**: partners.primary.margin_bottom
+	 * - **API ID Path**: partners.default.primary.margin_bottom
 	 * - **Documentation**: https://prismic.io/docs/field#boolean
 	 */
 	margin_bottom: prismic.BooleanField
 
 	/**
-	 * Abilita animazione field in *Partners → Primary*
+	 * Abilita animazione field in *Partners → Default → Primary*
 	 *
 	 * - **Field Type**: Boolean
 	 * - **Placeholder**: *None*
 	 * - **Default Value**: false
-	 * - **API ID Path**: partners.primary.enable_animation
+	 * - **API ID Path**: partners.default.primary.enable_animation
 	 * - **Documentation**: https://prismic.io/docs/field#boolean
 	 */
 	enable_animation: prismic.BooleanField
 
 	/**
-	 * Padding superiore field in *Partners → Primary*
+	 * Padding superiore field in *Partners → Default → Primary*
 	 *
 	 * - **Field Type**: Boolean
 	 * - **Placeholder**: *None*
 	 * - **Default Value**: false
-	 * - **API ID Path**: partners.primary.padding_top
+	 * - **API ID Path**: partners.default.primary.padding_top
 	 * - **Documentation**: https://prismic.io/docs/field#boolean
 	 */
 	padding_top: prismic.BooleanField
 
 	/**
-	 * Padding inferiore field in *Partners → Primary*
+	 * Padding inferiore field in *Partners → Default → Primary*
 	 *
 	 * - **Field Type**: Boolean
 	 * - **Placeholder**: *None*
 	 * - **Default Value**: false
-	 * - **API ID Path**: partners.primary.padding_bottom
+	 * - **API ID Path**: partners.default.primary.padding_bottom
 	 * - **Documentation**: https://prismic.io/docs/field#boolean
 	 */
 	padding_bottom: prismic.BooleanField
 
 	/**
-	 * Abilita sfondo field in *Partners → Primary*
+	 * Abilita sfondo field in *Partners → Default → Primary*
 	 *
 	 * - **Field Type**: Boolean
 	 * - **Placeholder**: *None*
 	 * - **Default Value**: false
-	 * - **API ID Path**: partners.primary.enable_bg
+	 * - **API ID Path**: partners.default.primary.enable_bg
 	 * - **Documentation**: https://prismic.io/docs/field#boolean
 	 */
 	enable_bg: prismic.BooleanField
 
 	/**
-	 * Titolo sezione field in *Partners → Primary*
+	 * Titolo sezione field in *Partners → Default → Primary*
 	 *
 	 * - **Field Type**: Text
 	 * - **Placeholder**: *None*
-	 * - **API ID Path**: partners.primary.section_title
+	 * - **API ID Path**: partners.default.primary.section_title
 	 * - **Documentation**: https://prismic.io/docs/field#key-text
 	 */
 	section_title: prismic.KeyTextField
 
 	/**
-	 * Sottotitolo sezione field in *Partners → Primary*
+	 * Sottotitolo sezione field in *Partners → Default → Primary*
 	 *
 	 * - **Field Type**: Text
 	 * - **Placeholder**: *None*
-	 * - **API ID Path**: partners.primary.section_subtitle
+	 * - **API ID Path**: partners.default.primary.section_subtitle
 	 * - **Documentation**: https://prismic.io/docs/field#key-text
 	 */
 	section_subtitle: prismic.KeyTextField
@@ -1741,69 +1765,69 @@ type PartnersSliceVariation = PartnersSliceDefault
 export type PartnersSlice = prismic.SharedSlice<'partners', PartnersSliceVariation>
 
 /**
- * Primary content in *RichText → Primary*
+ * Primary content in *RichText → Default → Primary*
  */
 export interface RichTextSliceDefaultPrimary {
 	/**
-	 * Testo field in *RichText → Primary*
+	 * Testo field in *RichText → Default → Primary*
 	 *
 	 * - **Field Type**: Rich Text
 	 * - **Placeholder**: *None*
-	 * - **API ID Path**: rich_text.primary.text
+	 * - **API ID Path**: rich_text.default.primary.text
 	 * - **Documentation**: https://prismic.io/docs/field#rich-text-title
 	 */
 	text: prismic.RichTextField
 
 	/**
-	 * Allineamento field in *RichText → Primary*
+	 * Allineamento field in *RichText → Default → Primary*
 	 *
 	 * - **Field Type**: Select
 	 * - **Placeholder**: *None*
-	 * - **API ID Path**: rich_text.primary.text_align
+	 * - **API ID Path**: rich_text.default.primary.text_align
 	 * - **Documentation**: https://prismic.io/docs/field#select
 	 */
 	text_align: prismic.SelectField<'Left' | 'Center' | 'Right'>
 
 	/**
-	 * Margine superiore field in *RichText → Primary*
+	 * Margine superiore field in *RichText → Default → Primary*
 	 *
 	 * - **Field Type**: Boolean
 	 * - **Placeholder**: *None*
 	 * - **Default Value**: false
-	 * - **API ID Path**: rich_text.primary.margin_top
+	 * - **API ID Path**: rich_text.default.primary.margin_top
 	 * - **Documentation**: https://prismic.io/docs/field#boolean
 	 */
 	margin_top: prismic.BooleanField
 
 	/**
-	 * Margine inferiore field in *RichText → Primary*
+	 * Margine inferiore field in *RichText → Default → Primary*
 	 *
 	 * - **Field Type**: Boolean
 	 * - **Placeholder**: *None*
 	 * - **Default Value**: false
-	 * - **API ID Path**: rich_text.primary.margin_bottom
+	 * - **API ID Path**: rich_text.default.primary.margin_bottom
 	 * - **Documentation**: https://prismic.io/docs/field#boolean
 	 */
 	margin_bottom: prismic.BooleanField
 
 	/**
-	 * Testo big field in *RichText → Primary*
+	 * Testo big field in *RichText → Default → Primary*
 	 *
 	 * - **Field Type**: Boolean
 	 * - **Placeholder**: *None*
 	 * - **Default Value**: false
-	 * - **API ID Path**: rich_text.primary.big_text
+	 * - **API ID Path**: rich_text.default.primary.big_text
 	 * - **Documentation**: https://prismic.io/docs/field#boolean
 	 */
 	big_text: prismic.BooleanField
 
 	/**
-	 * Abilita animazione field in *RichText → Primary*
+	 * Abilita animazione field in *RichText → Default → Primary*
 	 *
 	 * - **Field Type**: Boolean
 	 * - **Placeholder**: *None*
 	 * - **Default Value**: false
-	 * - **API ID Path**: rich_text.primary.enable_animation
+	 * - **API ID Path**: rich_text.default.primary.enable_animation
 	 * - **Documentation**: https://prismic.io/docs/field#boolean
 	 */
 	enable_animation: prismic.BooleanField
@@ -1833,58 +1857,58 @@ type RichTextSliceVariation = RichTextSliceDefault
 export type RichTextSlice = prismic.SharedSlice<'rich_text', RichTextSliceVariation>
 
 /**
- * Primary content in *Statistics → Primary*
+ * Primary content in *Statistics → Default → Primary*
  */
 export interface StatisticsSliceDefaultPrimary {
 	/**
-	 * Margine superiore field in *Statistics → Primary*
+	 * Margine superiore field in *Statistics → Default → Primary*
 	 *
 	 * - **Field Type**: Boolean
 	 * - **Placeholder**: *None*
 	 * - **Default Value**: false
-	 * - **API ID Path**: statistics.primary.margin_top
+	 * - **API ID Path**: statistics.default.primary.margin_top
 	 * - **Documentation**: https://prismic.io/docs/field#boolean
 	 */
 	margin_top: prismic.BooleanField
 
 	/**
-	 * Margine inferiore field in *Statistics → Primary*
+	 * Margine inferiore field in *Statistics → Default → Primary*
 	 *
 	 * - **Field Type**: Boolean
 	 * - **Placeholder**: *None*
 	 * - **Default Value**: false
-	 * - **API ID Path**: statistics.primary.margin_bottom
+	 * - **API ID Path**: statistics.default.primary.margin_bottom
 	 * - **Documentation**: https://prismic.io/docs/field#boolean
 	 */
 	margin_bottom: prismic.BooleanField
 
 	/**
-	 * Titolo field in *Statistics → Primary*
+	 * Titolo field in *Statistics → Default → Primary*
 	 *
 	 * - **Field Type**: Text
 	 * - **Placeholder**: *None*
-	 * - **API ID Path**: statistics.primary.title
+	 * - **API ID Path**: statistics.default.primary.title
 	 * - **Documentation**: https://prismic.io/docs/field#key-text
 	 */
 	title: prismic.KeyTextField
 
 	/**
-	 * Sottotitolo field in *Statistics → Primary*
+	 * Sottotitolo field in *Statistics → Default → Primary*
 	 *
 	 * - **Field Type**: Rich Text
 	 * - **Placeholder**: *None*
-	 * - **API ID Path**: statistics.primary.subtitle
+	 * - **API ID Path**: statistics.default.primary.subtitle
 	 * - **Documentation**: https://prismic.io/docs/field#rich-text-title
 	 */
 	subtitle: prismic.RichTextField
 
 	/**
-	 * Abilita animazione field in *Statistics → Primary*
+	 * Abilita animazione field in *Statistics → Default → Primary*
 	 *
 	 * - **Field Type**: Boolean
 	 * - **Placeholder**: *None*
 	 * - **Default Value**: false
-	 * - **API ID Path**: statistics.primary.enable_animation
+	 * - **API ID Path**: statistics.default.primary.enable_animation
 	 * - **Documentation**: https://prismic.io/docs/field#boolean
 	 */
 	enable_animation: prismic.BooleanField
@@ -1943,58 +1967,58 @@ type StatisticsSliceVariation = StatisticsSliceDefault
 export type StatisticsSlice = prismic.SharedSlice<'statistics', StatisticsSliceVariation>
 
 /**
- * Primary content in *Timeline → Primary*
+ * Primary content in *Timeline → Default → Primary*
  */
 export interface TimelineSliceDefaultPrimary {
 	/**
-	 * Titolo field in *Timeline → Primary*
+	 * Titolo field in *Timeline → Default → Primary*
 	 *
 	 * - **Field Type**: Text
 	 * - **Placeholder**: *None*
-	 * - **API ID Path**: timeline.primary.title
+	 * - **API ID Path**: timeline.default.primary.title
 	 * - **Documentation**: https://prismic.io/docs/field#key-text
 	 */
 	title: prismic.KeyTextField
 
 	/**
-	 * Sottotitolo field in *Timeline → Primary*
+	 * Sottotitolo field in *Timeline → Default → Primary*
 	 *
 	 * - **Field Type**: Text
 	 * - **Placeholder**: *None*
-	 * - **API ID Path**: timeline.primary.subtitle
+	 * - **API ID Path**: timeline.default.primary.subtitle
 	 * - **Documentation**: https://prismic.io/docs/field#key-text
 	 */
 	subtitle: prismic.KeyTextField
 
 	/**
-	 * Margine superiore field in *Timeline → Primary*
+	 * Margine superiore field in *Timeline → Default → Primary*
 	 *
 	 * - **Field Type**: Boolean
 	 * - **Placeholder**: *None*
 	 * - **Default Value**: false
-	 * - **API ID Path**: timeline.primary.margin_top
+	 * - **API ID Path**: timeline.default.primary.margin_top
 	 * - **Documentation**: https://prismic.io/docs/field#boolean
 	 */
 	margin_top: prismic.BooleanField
 
 	/**
-	 * Margine inferiore field in *Timeline → Primary*
+	 * Margine inferiore field in *Timeline → Default → Primary*
 	 *
 	 * - **Field Type**: Boolean
 	 * - **Placeholder**: *None*
 	 * - **Default Value**: false
-	 * - **API ID Path**: timeline.primary.margin_bottom
+	 * - **API ID Path**: timeline.default.primary.margin_bottom
 	 * - **Documentation**: https://prismic.io/docs/field#boolean
 	 */
 	margin_bottom: prismic.BooleanField
 
 	/**
-	 * Abilita animazione field in *Timeline → Primary*
+	 * Abilita animazione field in *Timeline → Default → Primary*
 	 *
 	 * - **Field Type**: Boolean
 	 * - **Placeholder**: *None*
 	 * - **Default Value**: false
-	 * - **API ID Path**: timeline.primary.enable_animation
+	 * - **API ID Path**: timeline.default.primary.enable_animation
 	 * - **Documentation**: https://prismic.io/docs/field#boolean
 	 */
 	enable_animation: prismic.BooleanField
@@ -2065,6 +2089,17 @@ export type TimelineSlice = prismic.SharedSlice<'timeline', TimelineSliceVariati
 declare module '@prismicio/client' {
 	interface CreateClient {
 		(repositoryNameOrEndpoint: string, options?: prismicClient.ClientConfig): prismicClient.Client<AllDocumentTypes>
+	}
+
+	interface CreateWriteClient {
+		(
+			repositoryNameOrEndpoint: string,
+			options: prismicClient.WriteClientConfig
+		): prismicClient.WriteClient<AllDocumentTypes>
+	}
+
+	interface CreateMigration {
+		(): prismicClient.Migration<AllDocumentTypes>
 	}
 
 	namespace Content {

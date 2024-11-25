@@ -6,8 +6,20 @@
 	"format": "page",
 	"json": {
 		"Main": {
-			"uid": { "type": "UID", "config": { "label": "UID", "placeholder": "" } },
-			"title": { "type": "Text", "config": { "label": "Titolo", "placeholder": "" } },
+			"uid": {
+				"type": "UID",
+				"config": {
+					"label": "UID",
+					"placeholder": ""
+				}
+			},
+			"title": {
+				"type": "Text",
+				"config": {
+					"label": "Titolo",
+					"placeholder": ""
+				}
+			},
 			"show_breadcrumb": {
 				"type": "Boolean",
 				"config": {
@@ -22,27 +34,93 @@
 				"fieldset": "Slice Zone",
 				"config": {
 					"choices": {
-						"hero_banner": { "type": "SharedSlice" },
-						"accordion": { "type": "SharedSlice" },
-						"cards_grid": { "type": "SharedSlice" },
-						"contacts": { "type": "SharedSlice" },
-						"rich_text": { "type": "SharedSlice" },
-						"image_and_text": { "type": "SharedSlice" },
-						"statistics": { "type": "SharedSlice" },
-						"partners": { "type": "SharedSlice" },
-						"call_to_action": { "type": "SharedSlice" },
-						"timeline": { "type": "SharedSlice" }
+						"hero_banner": {
+							"type": "SharedSlice"
+						},
+						"accordion": {
+							"type": "SharedSlice"
+						},
+						"cards_grid": {
+							"type": "SharedSlice"
+						},
+						"contacts": {
+							"type": "SharedSlice"
+						},
+						"rich_text": {
+							"type": "SharedSlice"
+						},
+						"image_and_text": {
+							"type": "SharedSlice"
+						},
+						"statistics": {
+							"type": "SharedSlice"
+						},
+						"partners": {
+							"type": "SharedSlice"
+						},
+						"call_to_action": {
+							"type": "SharedSlice"
+						},
+						"timeline": {
+							"type": "SharedSlice"
+						}
 					}
 				}
 			}
 		},
 		"SEO": {
-			"seo_title": { "type": "Text", "config": { "label": "SEO title", "placeholder": "" } },
-			"seo_description": { "type": "Text", "config": { "label": "SEO description", "placeholder": "" } },
-			"og_title": { "type": "Text", "config": { "label": "OG title", "placeholder": "" } },
-			"og_description": { "type": "Text", "config": { "label": "OG description", "placeholder": "" } },
-			"og_sitename": { "type": "Text", "config": { "label": "OG sitename", "placeholder": "" } },
-			"og_image": { "type": "Image", "config": { "label": "OG image", "constraint": {}, "thumbnails": [] } }
+			"seo_title": {
+				"type": "Text",
+				"config": {
+					"label": "SEO title",
+					"placeholder": ""
+				}
+			},
+			"seo_description": {
+				"type": "Text",
+				"config": {
+					"label": "SEO description",
+					"placeholder": ""
+				}
+			},
+			"og_title": {
+				"type": "Text",
+				"config": {
+					"label": "OG title",
+					"placeholder": ""
+				}
+			},
+			"og_description": {
+				"type": "Text",
+				"config": {
+					"label": "OG description",
+					"placeholder": ""
+				}
+			},
+			"og_sitename": {
+				"type": "Text",
+				"config": {
+					"label": "OG sitename",
+					"placeholder": ""
+				}
+			},
+			"og_image": {
+				"type": "Image",
+				"config": {
+					"label": "OG image",
+					"constraint": {},
+					"thumbnails": []
+				}
+			},
+			"no_index": {
+				"type": "Boolean",
+				"config": {
+					"label": "No index",
+					"placeholder_false": "NO",
+					"placeholder_true": "SI",
+					"default_value": false
+				}
+			}
 		}
 	}
 }
