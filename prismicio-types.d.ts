@@ -991,6 +991,26 @@ export interface CardsGridSliceDefaultItem {
 	card_icon: prismic.KeyTextField
 
 	/**
+	 * Immagine card field in *CardsGrid → Items*
+	 *
+	 * - **Field Type**: Image
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: cards_grid.items[].card_image
+	 * - **Documentation**: https://prismic.io/docs/field#image
+	 */
+	card_image: prismic.ImageField<never>
+
+	/**
+	 * Data di pubblicazione field in *CardsGrid → Items*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: cards_grid.items[].publication_date
+	 * - **Documentation**: https://prismic.io/docs/field#key-text
+	 */
+	publication_date: prismic.KeyTextField
+
+	/**
 	 * Titolo card field in *CardsGrid → Items*
 	 *
 	 * - **Field Type**: Text

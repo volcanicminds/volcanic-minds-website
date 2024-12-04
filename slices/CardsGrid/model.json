@@ -1,75 +1,132 @@
 {
-	"id": "cards_grid",
-	"type": "SharedSlice",
-	"name": "CardsGrid",
-	"description": "CardsGrid",
-	"variations": [
-		{
-			"id": "default",
-			"name": "Default",
-			"docURL": "...",
-			"version": "sktwi1xtmkfgx8626",
-			"description": "CardsGrid",
-			"primary": {
-				"title": { "type": "Text", "config": { "label": "Titolo", "placeholder": "" } },
-				"subtitle": { "type": "Text", "config": { "label": "Sottotitolo", "placeholder": "" } },
-				"margin_top": {
-					"type": "Boolean",
-					"config": {
-						"label": "Margine superiore",
-						"placeholder_false": "NO",
-						"placeholder_true": "SI",
-						"default_value": false
-					}
-				},
-				"margin_bottom": {
-					"type": "Boolean",
-					"config": {
-						"label": "Margine inferiore",
-						"placeholder_false": "NO",
-						"placeholder_true": "SI",
-						"default_value": false
-					}
-				},
-				"enable_animation": {
-					"type": "Boolean",
-					"config": {
-						"label": "Abilita animazione",
-						"placeholder_false": "NO",
-						"placeholder_true": "SI",
-						"default_value": false
-					}
-				},
-				"center_card_content": {
-					"type": "Boolean",
-					"config": {
-						"label": "Centra contenuto card",
-						"placeholder_false": "NO",
-						"placeholder_true": "SI",
-						"default_value": false
-					}
-				}
-			},
-			"items": {
-				"card_icon": { "type": "Text", "config": { "label": "Icona card", "placeholder": "" } },
-				"card_title": { "type": "Text", "config": { "label": "Titolo card", "placeholder": "" } },
-				"card_desc": {
-					"type": "StructuredText",
-					"config": {
-						"label": "Descrizione card",
-						"placeholder": "",
-						"allowTargetBlank": true,
-						"multi": "paragraph,strong,em,hyperlink"
-					}
-				},
-				"cta_link": {
-					"type": "Link",
-					"config": { "label": "CTA Link", "placeholder": "", "allowTargetBlank": true, "select": null }
-				},
-				"cta_accessible_text": { "type": "Text", "config": { "label": "CTA Testo accessibile", "placeholder": "" } },
-				"background": { "type": "Image", "config": { "label": "Sfondo", "constraint": {}, "thumbnails": [] } }
-			},
-			"imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
-		}
-	]
+  "id": "cards_grid",
+  "type": "SharedSlice",
+  "name": "CardsGrid",
+  "description": "CardsGrid",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "sktwi1xtmkfgx8626",
+      "description": "CardsGrid",
+      "primary": {
+        "title": {
+          "type": "Text",
+          "config": {
+            "label": "Titolo",
+            "placeholder": ""
+          }
+        },
+        "subtitle": {
+          "type": "Text",
+          "config": {
+            "label": "Sottotitolo",
+            "placeholder": ""
+          }
+        },
+        "margin_top": {
+          "type": "Boolean",
+          "config": {
+            "label": "Margine superiore",
+            "placeholder_false": "NO",
+            "placeholder_true": "SI",
+            "default_value": false
+          }
+        },
+        "margin_bottom": {
+          "type": "Boolean",
+          "config": {
+            "label": "Margine inferiore",
+            "placeholder_false": "NO",
+            "placeholder_true": "SI",
+            "default_value": false
+          }
+        },
+        "enable_animation": {
+          "type": "Boolean",
+          "config": {
+            "label": "Abilita animazione",
+            "placeholder_false": "NO",
+            "placeholder_true": "SI",
+            "default_value": false
+          }
+        },
+        "center_card_content": {
+          "type": "Boolean",
+          "config": {
+            "label": "Centra contenuto card",
+            "placeholder_false": "NO",
+            "placeholder_true": "SI",
+            "default_value": false
+          }
+        }
+      },
+      "items": {
+        "card_icon": {
+          "type": "Text",
+          "config": {
+            "label": "Icona card",
+            "placeholder": ""
+          }
+        },
+        "card_image": {
+          "type": "Image",
+          "config": {
+            "label": "Immagine card",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "publication_date": {
+          "type": "Text",
+          "config": {
+            "label": "Data di pubblicazione",
+            "placeholder": ""
+          }
+        },
+        "card_title": {
+          "type": "Text",
+          "config": {
+            "label": "Titolo card",
+            "placeholder": ""
+          }
+        },
+        "card_desc": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Descrizione card",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "paragraph,strong,em,hyperlink"
+          }
+        },
+        "cta_link": {
+          "type": "Link",
+          "config": {
+            "label": "CTA Link",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "select": null
+          }
+        },
+        "cta_accessible_text": {
+          "type": "Text",
+          "config": {
+            "label": "CTA Testo accessibile",
+            "placeholder": ""
+          }
+        },
+        "background": {
+          "type": "Image",
+          "config": {
+            "label": "Sfondo",
+            "constraint": {},
+            "thumbnails": []
+          }
+        }
+      },
+      "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+    }
+  ]
 }

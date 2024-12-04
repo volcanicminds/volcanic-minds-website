@@ -5,10 +5,36 @@
 	"status": true,
 	"json": {
 		"Main": {
-			"logo": { "type": "Image", "config": { "label": "Logo", "constraint": {}, "thumbnails": [] } },
-			"language_choose_label": { "type": "Text", "config": { "label": "Label scelta linguaggio", "placeholder": "" } },
-			"open_sidebar_label": { "type": "Text", "config": { "label": "Label apertura sidebar", "placeholder": "" } },
-			"close_sidebar_label": { "type": "Text", "config": { "label": "Label chiusura sidebar", "placeholder": "" } }
+			"logo": {
+				"type": "Image",
+				"config": {
+					"label": "Logo",
+					"constraint": {},
+					"thumbnails": []
+				}
+			},
+			"language_choose_label": {
+				"type": "Text",
+				"config": {
+					"label": "Label scelta linguaggio",
+					"placeholder": ""
+				}
+			},
+			"open_sidebar_label": {
+				"type": "Text",
+				"config": {
+					"label": "Label apertura sidebar",
+					"placeholder": ""
+				}
+			},
+			"close_sidebar_label": {
+				"type": "Text",
+				"config": {
+					"label": "Label chiusura sidebar",
+					"placeholder": ""
+				}
+			}
 		}
-	}
+	},
+	"format": "custom"
 }
