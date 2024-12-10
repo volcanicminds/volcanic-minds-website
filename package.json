@@ -1,6 +1,6 @@
 {
 	"name": "volcanic-minds-website",
-	"version": "1.5.5",
+	"version": "1.5.6",
 	"license": "ISC",
 	"scripts": {
 		"dev": "export NODE_ENV=development && node ./switch_env.mjs && nuxt dev",
@@ -43,7 +43,7 @@
 		"@nuxtjs/eslint-config-typescript": "12.0.0",
 		"@nuxtjs/eslint-module": "^3.1.0",
 		"@prismicio/types": "^0.2.9",
-		"@slicemachine/adapter-nuxt2": "^0.3.54",
+		"@slicemachine/adapter-nuxt2": "^0.3.59",
 		"basscss-btn": "^1.1.1",
 		"basscss-btn-outline": "^1.1.0",
 		"basscss-btn-primary": "^1.1.0",
