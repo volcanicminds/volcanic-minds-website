@@ -116,8 +116,8 @@
 				"type": "Boolean",
 				"config": {
 					"label": "No index",
-					"placeholder_false": "NO",
-					"placeholder_true": "SI",
+					"placeholder_false": "Indicizza",
+					"placeholder_true": "Non indicizzare",
 					"default_value": false
 				}
 			}

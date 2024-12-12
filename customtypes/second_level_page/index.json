@@ -124,9 +124,9 @@
 				"type": "Boolean",
 				"config": {
 					"label": "No index",
-					"default_value": false,
-					"placeholder_true": "true",
-					"placeholder_false": "false"
+					"placeholder_false": "Indicizza",
+					"placeholder_true": "Non indicizzare",
+					"default_value": false
 				}
 			}
 		}

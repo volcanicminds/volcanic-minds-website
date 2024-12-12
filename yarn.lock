@@ -2052,6 +2052,16 @@
     tslib "^2.3.1"
     uuid "^9.0.0"
 
+"@prismicio/types-internal@3.2.0":
+  version "3.2.0"
+  resolved "https://registry.yarnpkg.com/@prismicio/types-internal/-/types-internal-3.2.0.tgz#98ee6b4a0d50abc89560e561ed252a4d73a165e4"
+  integrity sha512-e/eps+d/LPPn9FlzmjxLFvZV+SU6lu65zUH53BrS1Tm0JBQjyL9zSWBX96TrSGnuzwxf5LleYlyc+KBs8pYSkg==
+  dependencies:
+    monocle-ts "^2.3.11"
+    newtype-ts "^0.3.5"
+    tslib "^2.3.1"
+    uuid "^9.0.0"
+
 "@prismicio/types-internal@^1.0.1":
   version "1.5.3"
   resolved "https://registry.yarnpkg.com/@prismicio/types-internal/-/types-internal-1.5.3.tgz#0f723df44b5e8a3dc155f721d4cab366cd4494ef"
@@ -2061,7 +2071,7 @@
     newtype-ts "^0.3.5"
     tslib "^2.3.1"
 
-"@prismicio/types-internal@^2.2.0", "@prismicio/types-internal@^2.8.0":
+"@prismicio/types-internal@^2.2.0":
   version "2.8.0"
   resolved "https://registry.yarnpkg.com/@prismicio/types-internal/-/types-internal-2.8.0.tgz#acbce8ae8f4c1560779311595adac462932821b0"
   integrity sha512-CkqBaKy0UcEgTJC37rqQlQUpbnEENcPR4XLlBQAdxOGLtFdgejE0cuZWea2DDrg0HUPxB+WQ+NmwhQYwTDhrkA==
@@ -2164,14 +2174,14 @@
   resolved "https://registry.yarnpkg.com/@sideway/pinpoint/-/pinpoint-2.0.0.tgz#cff8ffadc372ad29fd3f78277aeb29e632cc70df"
   integrity sha512-RNiOoTPkptFtSVzQevY/yWtZwf/RxyVnPy/OcA9HBM3MlGDnBEYL5B41H0MTn0Uec8Hi+2qUtTfG2WWZBmMejQ==
 
-"@slicemachine/adapter-nuxt2@^0.3.59":
-  version "0.3.59"
-  resolved "https://registry.yarnpkg.com/@slicemachine/adapter-nuxt2/-/adapter-nuxt2-0.3.59.tgz#0af57a786772b2539ddbb26abab818a94e45c318"
-  integrity sha512-ecRClPCuDYPVOBPfHmOSFNr9t/DUbXhPBPIojLgEFVyCESQlhfHk/wRmh1JzN7g053hd2y7vYA/7+Wudq3lGsQ==
+"@slicemachine/adapter-nuxt2@^0.3.60":
+  version "0.3.60"
+  resolved "https://registry.yarnpkg.com/@slicemachine/adapter-nuxt2/-/adapter-nuxt2-0.3.60.tgz#563a96d4b54853fdcbe0992bcae36120dcdb98de"
+  integrity sha512-zvCZk1QM1TJl1Awefy0NymiybHE1FnECIJZpiHnbl/ZetUbxdzY8TKFRRgJ0oiIPYtx1wXFAetoW3FKxPMYmxw==
   dependencies:
     "@prismicio/simulator" "^0.1.4"
-    "@prismicio/types-internal" "^2.8.0"
-    "@slicemachine/plugin-kit" "0.4.59"
+    "@prismicio/types-internal" "3.2.0"
+    "@slicemachine/plugin-kit" "0.4.60"
     common-tags "^1.8.2"
     fp-ts "^2.13.1"
     io-ts "^2.2.20"
@@ -2227,10 +2237,10 @@
     prettier "^3.0.3"
     prismic-ts-codegen "^0.1.19"
 
-"@slicemachine/plugin-kit@0.4.59":
-  version "0.4.59"
-  resolved "https://registry.yarnpkg.com/@slicemachine/plugin-kit/-/plugin-kit-0.4.59.tgz#3fd29efc67062a742138801518c71170b65459ea"
-  integrity sha512-NWAMHZGd9WjCIDWOaKt+HG7mu5xceTx+XmHtgQ2BVFgMrhSMT3vMBI7ZDe87Ng6JWqFqTQT35Pfw5RBQOr0Rfw==
+"@slicemachine/plugin-kit@0.4.60":
+  version "0.4.60"
+  resolved "https://registry.yarnpkg.com/@slicemachine/plugin-kit/-/plugin-kit-0.4.60.tgz#50d1cf1f1cc11b1244f9d22737a9dacaf148c2f1"
+  integrity sha512-SLwRRo6FHGULfZh2c8Dqn5SpvFCleQCJvks0X0sVQ3gjiqpCw+MRee1UeAg//do6+CGCHpvtcHoc/vF8JLoMQg==
   dependencies:
     "@prismicio/client" "^7.11.0"
     common-tags "^1.8.2"
@@ -2242,7 +2252,7 @@
     io-ts-reporters "^2.0.1"
     p-limit "^4.0.0"
     prettier "^3.0.3"
-    prismic-ts-codegen "^0.1.22"
+    prismic-ts-codegen "0.1.23"
 
 "@tokenizer/token@^0.3.0":
   version "0.3.0"
@@ -9188,7 +9198,7 @@ prismic-dom@^2.2.6:
     "@prismicio/richtext" "^1.1.0"
     escape-html "1.0.3"
 
-prismic-ts-codegen@^0.1.19, prismic-ts-codegen@^0.1.22:
+prismic-ts-codegen@0.1.23, prismic-ts-codegen@^0.1.19:
   version "0.1.23"
   resolved "https://registry.yarnpkg.com/prismic-ts-codegen/-/prismic-ts-codegen-0.1.23.tgz#14f9a07b0a146e6a42e7fed1e678a315c9ae3f07"
   integrity sha512-ORpwaYZQbauNy+SP+wzHEJAe3hHVUHoVV0efUlJen4g6Fetda8Qd1MBfqQyYA066rGQ4BcDwtOAnlNrBv1HDuw==
