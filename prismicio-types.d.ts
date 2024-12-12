@@ -1831,17 +1831,6 @@ export interface RichTextSliceDefaultPrimary {
 	margin_bottom: prismic.BooleanField
 
 	/**
-	 * Testo big field in *RichText → Default → Primary*
-	 *
-	 * - **Field Type**: Boolean
-	 * - **Placeholder**: *None*
-	 * - **Default Value**: false
-	 * - **API ID Path**: rich_text.default.primary.big_text
-	 * - **Documentation**: https://prismic.io/docs/field#boolean
-	 */
-	big_text: prismic.BooleanField
-
-	/**
 	 * Abilita animazione field in *RichText → Default → Primary*
 	 *
 	 * - **Field Type**: Boolean
@@ -1851,6 +1840,17 @@ export interface RichTextSliceDefaultPrimary {
 	 * - **Documentation**: https://prismic.io/docs/field#boolean
 	 */
 	enable_animation: prismic.BooleanField
+
+	/**
+	 * Dimensione testo field in *RichText → Default → Primary*
+	 *
+	 * - **Field Type**: Select
+	 * - **Placeholder**: Scegliere una dimensione del testo
+	 * - **Default Value**: Default
+	 * - **API ID Path**: rich_text.default.primary.text_size
+	 * - **Documentation**: https://prismic.io/docs/field#select
+	 */
+	text_size: prismic.SelectField<'Default' | 'Grande' | 'Piccola', 'filled'>
 }
 
 /**

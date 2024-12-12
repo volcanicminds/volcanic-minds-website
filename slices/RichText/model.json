@@ -50,15 +50,6 @@
             "default_value": false
           }
         },
-        "big_text": {
-          "type": "Boolean",
-          "config": {
-            "label": "Testo big",
-            "placeholder_false": "NO",
-            "placeholder_true": "SI",
-            "default_value": false
-          }
-        },
         "enable_animation": {
           "type": "Boolean",
           "config": {
@@ -66,6 +57,19 @@
             "placeholder_false": "NO",
             "placeholder_true": "SI",
             "default_value": false
+          }
+        },
+        "text_size": {
+          "type": "Select",
+          "config": {
+            "label": "Dimensione testo",
+            "placeholder": "Scegliere una dimensione del testo",
+            "options": [
+              "Default",
+              "Grande",
+              "Piccola"
+            ],
+            "default_value": "Default"
           }
         }
       },

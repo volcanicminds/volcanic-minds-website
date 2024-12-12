@@ -27,13 +27,14 @@
 				"__TYPE__": "BooleanContent",
 				"value": true
 			},
-			"big_text": {
-				"__TYPE__": "BooleanContent",
-				"value": false
-			},
 			"enable_animation": {
 				"__TYPE__": "BooleanContent",
 				"value": false
+			},
+			"text_size": {
+				"__TYPE__": "FieldContent",
+				"value": "Default",
+				"type": "Select"
 			}
 		},
 		"items": [
