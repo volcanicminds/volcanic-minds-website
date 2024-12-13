@@ -37,6 +37,34 @@
 					"default_value": false
 				}
 			},
+			"publication_date_label": {
+				"type": "Text",
+				"config": {
+					"label": "Label data di pubblicazione",
+					"placeholder": ""
+				}
+			},
+			"publication_date": {
+				"type": "Text",
+				"config": {
+					"label": "Data di pubblicazione",
+					"placeholder": ""
+				}
+			},
+			"latest_revision_date_label": {
+				"type": "Text",
+				"config": {
+					"label": "Label ultima revisione",
+					"placeholder": ""
+				}
+			},
+			"latest_revision_date": {
+				"type": "Text",
+				"config": {
+					"label": "Ultima revisione",
+					"placeholder": ""
+				}
+			},
 			"slices": {
 				"type": "Slices",
 				"fieldset": "Slice Zone",

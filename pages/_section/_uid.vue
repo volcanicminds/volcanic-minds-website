@@ -6,6 +6,14 @@
 			:current-page="document.data.title"
 		/>
 		<slice-zone :components="components" :slices="document.data.slices" />
+		<Credits
+			v-if="document.tags.length || document.data.publication_date || document.data.latest_revision_date"
+			:tags="document.tags"
+			:publication-date="document.data.publication_date"
+			:publication-date-label="document.data.publication_date_label"
+			:latest-revision-date="document.data.latest_revision_date"
+			:latest-revision-date-label="document.data.latest_revision_date_label"
+		/>
 	</div>
 </template>
 

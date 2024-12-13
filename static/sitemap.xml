@@ -21,27 +21,27 @@
         <xhtml:link rel="alternate" hreflang="it-it" href="https://volcanicminds.com/" />
         <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en" />
     </url>
-    <!-- Blog -->
+    <!-- Insights -->
     <url>
-        <loc>https://volcanicminds.com/blog</loc>
-        <xhtml:link rel="alternate" hreflang="it-it" href="https://volcanicminds.com/blog" />
-        <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/blog" />
+        <loc>https://volcanicminds.com/insights</loc>
+        <xhtml:link rel="alternate" hreflang="it-it" href="https://volcanicminds.com/insights" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/insights" />
     </url>
     <url>
-        <loc>https://volcanicminds.com/en/blog</loc>
-        <xhtml:link rel="alternate" hreflang="it-it" href="https://volcanicminds.com/blog" />
-        <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/blog" />
+        <loc>https://volcanicminds.com/en/insights</loc>
+        <xhtml:link rel="alternate" hreflang="it-it" href="https://volcanicminds.com/insights" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/insights" />
     </url>
-    <!-- Blog posts -->
+    <!-- Insights posts -->
     <url>
-        <loc>https://volcanicminds.com/blog/making-of</loc>
-        <xhtml:link rel="alternate" hreflang="it-it" href="https://volcanicminds.com/blog/making-of" />
-        <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/blog/making-of" />
+        <loc>https://volcanicminds.com/insights/making-of</loc>
+        <xhtml:link rel="alternate" hreflang="it-it" href="https://volcanicminds.com/insights/making-of" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/insights/making-of" />
     </url>
     <url>
-        <loc>https://volcanicminds.com/en/blog/making-of</loc>
-        <xhtml:link rel="alternate" hreflang="it-it" href="https://volcanicminds.com/blog/making-of" />
-        <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/blog/making-of" />
+        <loc>https://volcanicminds.com/en/insights/making-of</loc>
+        <xhtml:link rel="alternate" hreflang="it-it" href="https://volcanicminds.com/insights/making-of" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/insights/making-of" />
     </url>
     <!-- About us -->
     <url>

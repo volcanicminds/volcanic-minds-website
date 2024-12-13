@@ -581,6 +581,50 @@ interface SecondLevelPageDocumentData {
 	show_breadcrumb: prismic.BooleanField
 
 	/**
+	 * Label data di pubblicazione field in *Pagina di secondo livello*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: second_level_page.publication_date_label
+	 * - **Tab**: Main
+	 * - **Documentation**: https://prismic.io/docs/field#key-text
+	 */
+	publication_date_label: prismic.KeyTextField
+
+	/**
+	 * Data di pubblicazione field in *Pagina di secondo livello*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: second_level_page.publication_date
+	 * - **Tab**: Main
+	 * - **Documentation**: https://prismic.io/docs/field#key-text
+	 */
+	publication_date: prismic.KeyTextField
+
+	/**
+	 * Label ultima revisione field in *Pagina di secondo livello*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: second_level_page.latest_revision_date_label
+	 * - **Tab**: Main
+	 * - **Documentation**: https://prismic.io/docs/field#key-text
+	 */
+	latest_revision_date_label: prismic.KeyTextField
+
+	/**
+	 * Ultima revisione field in *Pagina di secondo livello*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: second_level_page.latest_revision_date
+	 * - **Tab**: Main
+	 * - **Documentation**: https://prismic.io/docs/field#key-text
+	 */
+	latest_revision_date: prismic.KeyTextField
+
+	/**
 	 * Slice Zone field in *Pagina di secondo livello*
 	 *
 	 * - **Field Type**: Slice Zone
