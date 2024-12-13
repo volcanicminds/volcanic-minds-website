@@ -21,13 +21,8 @@
 					class="card relative overflow-hidden bg-shark no-underline"
 				>
 					<div class="flex flex-column relative z1 h100" :class="slice.primary.center_card_content ? 'center' : ''">
-						<div class="card-image-container overflow-hidden">
-							<WrapperPrismicImage
-								v-if="item.card_image"
-								:field="item.card_image"
-								:size="1000"
-								class="col-12 h100 zoom-on-hover cover"
-							/>
+						<div v-if="Object.keys(item.card_image).length" class="card-image-container overflow-hidden">
+							<WrapperPrismicImage :field="item.card_image" :size="1000" class="col-12 h100 zoom-on-hover cover" />
 						</div>
 						<div class="flex flex-column flex-auto p3">
 							<div>
@@ -84,7 +79,7 @@ defineProps({
 		*
 			word-wrap break-word
 		.card-image-container
-			max-height 200px
+			height 200px
 		.publication-container
 			gap 7px
 			.publication-calendar
