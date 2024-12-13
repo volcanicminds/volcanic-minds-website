@@ -22,7 +22,7 @@ export default defineComponent({
 			this.loading = true
 		},
 		finish(): void {
-			setTimeout(() => (this.loading = false), 800)
+			setTimeout(() => (this.loading = false), 500)
 		}
 	}
 })
