@@ -25,23 +25,15 @@
     <url>
         <loc>https://volcanicminds.com/insights</loc>
         <xhtml:link rel="alternate" hreflang="it-it" href="https://volcanicminds.com/insights" />
-        <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/insights" />
-    </url>
-    <url>
-        <loc>https://volcanicminds.com/en/insights</loc>
-        <xhtml:link rel="alternate" hreflang="it-it" href="https://volcanicminds.com/insights" />
-        <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/insights" />
     </url>
     <!-- Insights posts -->
     <url>
         <loc>https://volcanicminds.com/insights/making-of</loc>
         <xhtml:link rel="alternate" hreflang="it-it" href="https://volcanicminds.com/insights/making-of" />
-        <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/insights/making-of" />
     </url>
     <url>
-        <loc>https://volcanicminds.com/en/insights/making-of</loc>
-        <xhtml:link rel="alternate" hreflang="it-it" href="https://volcanicminds.com/insights/making-of" />
-        <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/insights/making-of" />
+        <loc>https://volcanicminds.com/insights/google-analytics-gdpr-alternative-plausible</loc>
+        <xhtml:link rel="alternate" hreflang="it-it" href="https://volcanicminds.com/insights/google-analytics-gdpr-alternative-plausible" />
     </url>
     <!-- About us -->
     <url>

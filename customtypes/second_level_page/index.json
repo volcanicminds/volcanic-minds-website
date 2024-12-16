@@ -13,6 +13,15 @@
 					"placeholder": ""
 				}
 			},
+			"is_article": {
+				"type": "Boolean",
+				"config": {
+					"label": "È un articolo",
+					"placeholder_false": "NO",
+					"placeholder_true": "SI",
+					"default_value": false
+				}
+			},
 			"title": {
 				"type": "Text",
 				"config": {

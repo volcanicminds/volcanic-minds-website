@@ -551,6 +551,18 @@ type SecondLevelPageDocumentDataSlicesSlice =
  */
 interface SecondLevelPageDocumentData {
 	/**
+	 * È un articolo field in *Pagina di secondo livello*
+	 *
+	 * - **Field Type**: Boolean
+	 * - **Placeholder**: *None*
+	 * - **Default Value**: false
+	 * - **API ID Path**: second_level_page.is_article
+	 * - **Tab**: Main
+	 * - **Documentation**: https://prismic.io/docs/field#boolean
+	 */
+	is_article: prismic.BooleanField
+
+	/**
 	 * Titolo field in *Pagina di secondo livello*
 	 *
 	 * - **Field Type**: Text

@@ -42,11 +42,6 @@
 									{{ tag }}
 								</div>
 							</div>
-							<!-- <div class="mt2 right-align">
-								<div class="btn btn-primary card-link flex-column justify-center">
-									<font-awesome-icon :icon="['fas', 'arrow-right']" size="xl" />
-								</div>
-							</div> -->
 						</div>
 					</div>
 				</PrismicLink>
@@ -70,34 +65,41 @@ const props = defineProps({
 	}
 })
 
-// Stato per gestire i dati degli articoli
-const articles = ref([])
+interface Article {
+	id: string
+	uid: string
+	data: {
+		title: string
+		preview_image: any
+		publication_date: string
+	}
+	tags: string[]
+}
+
+const articles = ref<Article[]>([])
 const error = ref<null | { statusCode: number; message: string }>(null)
 
-// Funzione per caricare i dati da Prismic
 const loadArticles = async ($prismic: any, slice: any) => {
 	try {
-		// Estrai gli UID degli articoli dalla slice
+		// Get article UIDs from slide
 		const articleUIDs = slice.items.map((item: any) => item.article.uid)
 
 		if (articleUIDs.length > 0) {
 			const articlePromises = articleUIDs.map(async (uid: string) => {
-				// Recupera l'articolo per ciascun UID
+				// Get articles by UIDs
 				const articleResponse = await $prismic.api.query([
 					$prismic.predicates.at('document.type', 'second_level_page'),
 					$prismic.predicates.at('my.second_level_page.uid', uid)
 				])
 
 				if (articleResponse?.results && articleResponse.results.length) {
-					return articleResponse.results[0]
+					return articleResponse.results[0] as Article
 				}
 
-				// Se non ci sono risultati, ritorna null (da filtrare dopo)
 				return null
 			})
 
-			// Attendi tutti i risultati degli articoli
-			// @ts-ignore
+			// Wait all results
 			articles.value = (await Promise.all(articlePromises)).filter(Boolean)
 		}
 	} catch (e) {
@@ -108,7 +110,6 @@ const loadArticles = async ($prismic: any, slice: any) => {
 	}
 }
 
-// Recupera l'istanza corrente per accedere al contesto di Nuxt 2
 onMounted(() => {
 	const instance = getCurrentInstance()
 	// @ts-ignore
