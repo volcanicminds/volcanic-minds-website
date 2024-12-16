@@ -25,6 +25,12 @@
 				"fieldset": "Slice Zone",
 				"config": {
 					"choices": {
+						"timeline": {
+							"type": "SharedSlice"
+						},
+						"articles_grid": {
+							"type": "SharedSlice"
+						},
 						"hero_banner": {
 							"type": "SharedSlice"
 						},

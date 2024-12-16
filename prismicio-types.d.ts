@@ -6,6 +6,7 @@ import type * as prismicClient from '@prismicio/client'
 type Simplify<T> = { [KeyType in keyof T]: T[KeyType] }
 
 type FirstLevelPageDocumentDataSlicesSlice =
+	| ArticlesGridSlice
 	| HeroBannerSlice
 	| AccordionSlice
 	| CardsGridSlice
@@ -370,6 +371,8 @@ export type HeaderDocument<Lang extends string = string> = prismic.PrismicDocume
 >
 
 type HomepageDocumentDataSlicesSlice =
+	| TimelineSlice
+	| ArticlesGridSlice
 	| HeroBannerSlice
 	| ImageAndTextSlice
 	| RichTextSlice
@@ -531,6 +534,7 @@ export type NavigationMenuDocument<Lang extends string = string> = prismic.Prism
 >
 
 type SecondLevelPageDocumentDataSlicesSlice =
+	| ArticlesGridSlice
 	| HeroBannerSlice
 	| CardsGridSlice
 	| AccordionSlice
@@ -546,6 +550,18 @@ type SecondLevelPageDocumentDataSlicesSlice =
  * Content for Pagina di secondo livello documents
  */
 interface SecondLevelPageDocumentData {
+	/**
+	 * È un articolo field in *Pagina di secondo livello*
+	 *
+	 * - **Field Type**: Boolean
+	 * - **Placeholder**: *None*
+	 * - **Default Value**: false
+	 * - **API ID Path**: second_level_page.is_article
+	 * - **Tab**: Main
+	 * - **Documentation**: https://prismic.io/docs/field#boolean
+	 */
+	is_article: prismic.BooleanField
+
 	/**
 	 * Titolo field in *Pagina di secondo livello*
 	 *
@@ -846,6 +862,127 @@ type AccordionSliceVariation = AccordionSliceDefault
 export type AccordionSlice = prismic.SharedSlice<'accordion', AccordionSliceVariation>
 
 /**
+ * Primary content in *ArticlesGrid → Default → Primary*
+ */
+export interface ArticlesGridSliceDefaultPrimary {
+	/**
+	 * Titolo field in *ArticlesGrid → Default → Primary*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: articles_grid.default.primary.title
+	 * - **Documentation**: https://prismic.io/docs/field#key-text
+	 */
+	title: prismic.KeyTextField
+
+	/**
+	 * Sottotitolo field in *ArticlesGrid → Default → Primary*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: articles_grid.default.primary.subtitle
+	 * - **Documentation**: https://prismic.io/docs/field#key-text
+	 */
+	subtitle: prismic.KeyTextField
+
+	/**
+	 * Margine superiore field in *ArticlesGrid → Default → Primary*
+	 *
+	 * - **Field Type**: Boolean
+	 * - **Placeholder**: *None*
+	 * - **Default Value**: false
+	 * - **API ID Path**: articles_grid.default.primary.margin_top
+	 * - **Documentation**: https://prismic.io/docs/field#boolean
+	 */
+	margin_top: prismic.BooleanField
+
+	/**
+	 * Margine inferiore field in *ArticlesGrid → Default → Primary*
+	 *
+	 * - **Field Type**: Boolean
+	 * - **Placeholder**: *None*
+	 * - **Default Value**: false
+	 * - **API ID Path**: articles_grid.default.primary.margin_bottom
+	 * - **Documentation**: https://prismic.io/docs/field#boolean
+	 */
+	margin_bottom: prismic.BooleanField
+
+	/**
+	 * Abilita animazione field in *ArticlesGrid → Default → Primary*
+	 *
+	 * - **Field Type**: Boolean
+	 * - **Placeholder**: *None*
+	 * - **Default Value**: false
+	 * - **API ID Path**: articles_grid.default.primary.enable_animation
+	 * - **Documentation**: https://prismic.io/docs/field#boolean
+	 */
+	enable_animation: prismic.BooleanField
+
+	/**
+	 * Centra contenuto card field in *ArticlesGrid → Default → Primary*
+	 *
+	 * - **Field Type**: Boolean
+	 * - **Placeholder**: *None*
+	 * - **Default Value**: false
+	 * - **API ID Path**: articles_grid.default.primary.center_card_content
+	 * - **Documentation**: https://prismic.io/docs/field#boolean
+	 */
+	center_card_content: prismic.BooleanField
+
+	/**
+	 * CTA testo accessibile field in *ArticlesGrid → Default → Primary*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: articles_grid.default.primary.cta_accessible_text
+	 * - **Documentation**: https://prismic.io/docs/field#key-text
+	 */
+	cta_accessible_text: prismic.KeyTextField
+}
+
+/**
+ * Primary content in *ArticlesGrid → Items*
+ */
+export interface ArticlesGridSliceDefaultItem {
+	/**
+	 * Articoli field in *ArticlesGrid → Items*
+	 *
+	 * - **Field Type**: Content Relationship
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: articles_grid.items[].article
+	 * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+	 */
+	article: prismic.ContentRelationshipField
+}
+
+/**
+ * Default variation for ArticlesGrid Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type ArticlesGridSliceDefault = prismic.SharedSliceVariation<
+	'default',
+	Simplify<ArticlesGridSliceDefaultPrimary>,
+	Simplify<ArticlesGridSliceDefaultItem>
+>
+
+/**
+ * Slice variation for *ArticlesGrid*
+ */
+type ArticlesGridSliceVariation = ArticlesGridSliceDefault
+
+/**
+ * ArticlesGrid Shared Slice
+ *
+ * - **API ID**: `articles_grid`
+ * - **Description**: ArticlesGrid
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type ArticlesGridSlice = prismic.SharedSlice<'articles_grid', ArticlesGridSliceVariation>
+
+/**
  * Primary content in *CallToAction → Default → Primary*
  */
 export interface CallToActionSliceDefaultPrimary {
@@ -1033,26 +1170,6 @@ export interface CardsGridSliceDefaultItem {
 	 * - **Documentation**: https://prismic.io/docs/field#key-text
 	 */
 	card_icon: prismic.KeyTextField
-
-	/**
-	 * Immagine card field in *CardsGrid → Items*
-	 *
-	 * - **Field Type**: Image
-	 * - **Placeholder**: *None*
-	 * - **API ID Path**: cards_grid.items[].card_image
-	 * - **Documentation**: https://prismic.io/docs/field#image
-	 */
-	card_image: prismic.ImageField<never>
-
-	/**
-	 * Data di pubblicazione field in *CardsGrid → Items*
-	 *
-	 * - **Field Type**: Text
-	 * - **Placeholder**: *None*
-	 * - **API ID Path**: cards_grid.items[].publication_date
-	 * - **Documentation**: https://prismic.io/docs/field#key-text
-	 */
-	publication_date: prismic.KeyTextField
 
 	/**
 	 * Titolo card field in *CardsGrid → Items*
@@ -2193,6 +2310,11 @@ declare module '@prismicio/client' {
 			AccordionSliceDefaultItem,
 			AccordionSliceVariation,
 			AccordionSliceDefault,
+			ArticlesGridSlice,
+			ArticlesGridSliceDefaultPrimary,
+			ArticlesGridSliceDefaultItem,
+			ArticlesGridSliceVariation,
+			ArticlesGridSliceDefault,
 			CallToActionSlice,
 			CallToActionSliceDefaultPrimary,
 			CallToActionSliceVariation,

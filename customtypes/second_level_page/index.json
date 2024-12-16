@@ -6,6 +6,15 @@
 	"format": "page",
 	"json": {
 		"Main": {
+			"is_article": {
+				"type": "Boolean",
+				"config": {
+					"label": "È un articolo",
+					"placeholder_false": "NO",
+					"placeholder_true": "SI",
+					"default_value": false
+				}
+			},
 			"uid": {
 				"type": "UID",
 				"config": {
@@ -70,6 +79,9 @@
 				"fieldset": "Slice Zone",
 				"config": {
 					"choices": {
+						"articles_grid": {
+							"type": "SharedSlice"
+						},
 						"hero_banner": {
 							"type": "SharedSlice"
 						},

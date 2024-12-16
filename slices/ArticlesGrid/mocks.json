@@ -1,0 +1,56 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"title": {
+				"__TYPE__": "FieldContent",
+				"value": "they",
+				"type": "Text"
+			},
+			"subtitle": {
+				"__TYPE__": "FieldContent",
+				"value": "tree",
+				"type": "Text"
+			},
+			"margin_top": {
+				"__TYPE__": "BooleanContent",
+				"value": true
+			},
+			"margin_bottom": {
+				"__TYPE__": "BooleanContent",
+				"value": false
+			},
+			"enable_animation": {
+				"__TYPE__": "BooleanContent",
+				"value": false
+			},
+			"center_card_content": {
+				"__TYPE__": "BooleanContent",
+				"value": true
+			},
+			"cta_accessible_text": {
+				"__TYPE__": "FieldContent",
+				"value": "fallen",
+				"type": "Text"
+			}
+		},
+		"items": [
+			{
+				"__TYPE__": "GroupItemContent",
+				"value": [
+					[
+						"article",
+						{
+							"__TYPE__": "LinkContent",
+							"value": {
+								"__TYPE__": "DocumentLink",
+								"id": "mock_document_id"
+							}
+						}
+					]
+				]
+			}
+		]
+	}
+]

@@ -2,6 +2,7 @@
 
 export const components = {
 	accordion: () => import(/* webpackChunkName: "prismic__slices__accordion" */ './Accordion/index.vue'),
+	articles_grid: () => import(/* webpackChunkName: "prismic__slices__articles_grid" */ './ArticlesGrid/index.vue'),
 	call_to_action: () => import(/* webpackChunkName: "prismic__slices__call_to_action" */ './CallToAction/index.vue'),
 	cards_grid: () => import(/* webpackChunkName: "prismic__slices__cards_grid" */ './CardsGrid/index.vue'),
 	contacts: () => import(/* webpackChunkName: "prismic__slices__contacts" */ './Contacts/index.vue'),

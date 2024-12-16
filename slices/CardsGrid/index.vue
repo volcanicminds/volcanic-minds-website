@@ -21,16 +21,9 @@
 					class="card relative overflow-hidden bg-shark no-underline"
 				>
 					<div class="flex flex-column relative z1 h100" :class="slice.primary.center_card_content ? 'center' : ''">
-						<div v-if="Object.keys(item.card_image).length" class="card-image-container overflow-hidden">
-							<WrapperPrismicImage :field="item.card_image" :size="1000" class="col-12 h100 zoom-on-hover cover" />
-						</div>
 						<div class="flex flex-column flex-auto p3">
 							<div>
 								<font-awesome-icon v-if="item.card_icon" :icon="item.card_icon" class="fa-2xl mb3" />
-							</div>
-							<div v-if="item.publication_date" class="flex items-center publication-container mb1">
-								<font-awesome-icon icon="calendar" class="publication-calendar" />
-								<span class="publication-date">{{ item.publication_date }}</span>
 							</div>
 							<div v-if="item.card_title" class="h2">{{ item.card_title }}</div>
 							<PrismicRichText v-if="item.card_desc" :field="item.card_desc" class="mb-auto" />
@@ -78,14 +71,6 @@ defineProps({
 		border-radius 40px 10px
 		*
 			word-wrap break-word
-		.card-image-container
-			height 200px
-		.publication-container
-			gap 7px
-			.publication-calendar
-				font-size 14px
-			.publication-date
-				font-size 14px
 		.card-link
 			border-radius 50%
 			display inline-flex
