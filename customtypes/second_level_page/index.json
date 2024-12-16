@@ -6,15 +6,6 @@
 	"format": "page",
 	"json": {
 		"Main": {
-			"is_article": {
-				"type": "Boolean",
-				"config": {
-					"label": "È un articolo",
-					"placeholder_false": "NO",
-					"placeholder_true": "SI",
-					"default_value": false
-				}
-			},
 			"uid": {
 				"type": "UID",
 				"config": {
@@ -35,6 +26,14 @@
 					"label": "Sezione",
 					"select": "document",
 					"customtypes": ["first_level_page"]
+				}
+			},
+			"preview_image": {
+				"type": "Image",
+				"config": {
+					"label": "Immagine di anteprima",
+					"constraint": {},
+					"thumbnails": []
 				}
 			},
 			"show_breadcrumb": {

@@ -22,22 +22,31 @@
 					<div class="flex flex-column relative z1 h100" :class="slice.primary.center_card_content ? 'center' : ''">
 						<div class="card-image-container overflow-hidden">
 							<WrapperPrismicImage
-								:field="article.data.og_image"
+								:field="article.data.preview_image"
 								:size="1000"
 								class="col-12 h100 zoom-on-hover cover"
 							/>
 						</div>
 						<div class="flex flex-column flex-auto p3">
-							<div v-if="article.data.publication_date" class="flex items-center publication-container mb1">
+							<div v-if="article.data.title" class="h2 mb-auto">{{ article.data.title }}</div>
+							<div v-if="article.data.publication_date" class="flex items-center publication-container mt2">
 								<font-awesome-icon icon="calendar" class="publication-calendar" />
 								<span class="publication-date">{{ article.data.publication_date }}</span>
 							</div>
-							<div v-if="article.data.title" class="h2 mb-auto">{{ article.data.title }}</div>
-							<div class="mt2 right-align">
+							<div v-if="article.tags.length" class="flex items-center mt1">
+								<div
+									v-for="(tag, i) in article.tags"
+									:key="`tag-${i}`"
+									class="flex tag bg-cultured raisin-black font-bold mr1 uppercase"
+								>
+									{{ tag }}
+								</div>
+							</div>
+							<!-- <div class="mt2 right-align">
 								<div class="btn btn-primary card-link flex-column justify-center">
 									<font-awesome-icon :icon="['fas', 'arrow-right']" size="xl" />
 								</div>
-							</div>
+							</div> -->
 						</div>
 					</div>
 				</PrismicLink>
@@ -140,6 +149,10 @@ onMounted(() => {
 			height 46px
 		.zoom-on-hover
 			transition all 0.4s
+		.tag
+			border-radius 4px
+			font-size 12px
+			padding 3px 6px
 
 		&:hover
 			.zoom-on-hover

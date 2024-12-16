@@ -551,18 +551,6 @@ type SecondLevelPageDocumentDataSlicesSlice =
  */
 interface SecondLevelPageDocumentData {
 	/**
-	 * È un articolo field in *Pagina di secondo livello*
-	 *
-	 * - **Field Type**: Boolean
-	 * - **Placeholder**: *None*
-	 * - **Default Value**: false
-	 * - **API ID Path**: second_level_page.is_article
-	 * - **Tab**: Main
-	 * - **Documentation**: https://prismic.io/docs/field#boolean
-	 */
-	is_article: prismic.BooleanField
-
-	/**
 	 * Titolo field in *Pagina di secondo livello*
 	 *
 	 * - **Field Type**: Text
@@ -583,6 +571,17 @@ interface SecondLevelPageDocumentData {
 	 * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
 	 */
 	section: prismic.ContentRelationshipField<'first_level_page'>
+
+	/**
+	 * Immagine di anteprima field in *Pagina di secondo livello*
+	 *
+	 * - **Field Type**: Image
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: second_level_page.preview_image
+	 * - **Tab**: Main
+	 * - **Documentation**: https://prismic.io/docs/field#image
+	 */
+	preview_image: prismic.ImageField<never>
 
 	/**
 	 * Mostra breadcrumb field in *Pagina di secondo livello*
