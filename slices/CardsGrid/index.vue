@@ -18,17 +18,19 @@
 					:key="`slice-item-${i}`"
 					:aria-label="item.cta_accessible_text ? item.cta_accessible_text : undefined"
 					:field="item.cta_link && !item.cta_link.isBroken && item.cta_link.url ? item.cta_link : undefined"
-					class="card p3 relative overflow-hidden bg-shark no-underline"
+					class="card relative overflow-hidden bg-shark no-underline"
 				>
 					<div class="flex flex-column relative z1 h100" :class="slice.primary.center_card_content ? 'center' : ''">
-						<div>
-							<font-awesome-icon v-if="item.card_icon" :icon="item.card_icon" class="fa-2xl mb3" />
-						</div>
-						<div v-if="item.card_title" class="h2">{{ item.card_title }}</div>
-						<PrismicRichText v-if="item.card_desc" :field="item.card_desc" class="mb-auto" />
-						<div v-if="item.cta_link && !item.cta_link.isBroken && item.cta_link.url" class="mt2 right-align">
-							<div class="btn btn-primary card-link flex-column justify-center">
-								<font-awesome-icon :icon="['fas', 'arrow-right']" size="xl" />
+						<div class="flex flex-column flex-auto p3">
+							<div>
+								<font-awesome-icon v-if="item.card_icon" :icon="item.card_icon" class="fa-2xl mb3" />
+							</div>
+							<div v-if="item.card_title" class="h2">{{ item.card_title }}</div>
+							<PrismicRichText v-if="item.card_desc" :field="item.card_desc" class="mb-auto" />
+							<div v-if="item.cta_link && !item.cta_link.isBroken && item.cta_link.url" class="mt2 right-align">
+								<div class="btn btn-primary card-link flex-column justify-center">
+									<font-awesome-icon :icon="['fas', 'arrow-right']" size="xl" />
+								</div>
 							</div>
 						</div>
 					</div>
@@ -36,7 +38,7 @@
 						v-if="item.background"
 						:field="item.background"
 						:size="500"
-						class="card-bg absolute cover left-0 top-0 col-12 h100 blur-2"
+						class="zoom-on-hover absolute cover left-0 top-0 col-12 h100 blur-2"
 					/>
 				</component>
 			</div>
@@ -74,11 +76,10 @@ defineProps({
 			display inline-flex
 			width 46px
 			height 46px
-
-		.card-bg
+		.zoom-on-hover
 			transition all 0.4s
 
 		&:hover
-			.card-bg
-				transform scale(1.15)
+			.zoom-on-hover
+				transform scale(1.05)
 </style>

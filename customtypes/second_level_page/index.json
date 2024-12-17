@@ -13,6 +13,15 @@
 					"placeholder": ""
 				}
 			},
+			"is_article": {
+				"type": "Boolean",
+				"config": {
+					"label": "È un articolo",
+					"placeholder_false": "NO",
+					"placeholder_true": "SI",
+					"default_value": false
+				}
+			},
 			"title": {
 				"type": "Text",
 				"config": {
@@ -28,6 +37,14 @@
 					"customtypes": ["first_level_page"]
 				}
 			},
+			"preview_image": {
+				"type": "Image",
+				"config": {
+					"label": "Immagine di anteprima",
+					"constraint": {},
+					"thumbnails": []
+				}
+			},
 			"show_breadcrumb": {
 				"type": "Boolean",
 				"config": {
@@ -37,11 +54,42 @@
 					"default_value": false
 				}
 			},
+			"publication_date_label": {
+				"type": "Text",
+				"config": {
+					"label": "Label data di pubblicazione",
+					"placeholder": ""
+				}
+			},
+			"publication_date": {
+				"type": "Text",
+				"config": {
+					"label": "Data di pubblicazione",
+					"placeholder": ""
+				}
+			},
+			"latest_revision_date_label": {
+				"type": "Text",
+				"config": {
+					"label": "Label ultima revisione",
+					"placeholder": ""
+				}
+			},
+			"latest_revision_date": {
+				"type": "Text",
+				"config": {
+					"label": "Ultima revisione",
+					"placeholder": ""
+				}
+			},
 			"slices": {
 				"type": "Slices",
 				"fieldset": "Slice Zone",
 				"config": {
 					"choices": {
+						"articles_grid": {
+							"type": "SharedSlice"
+						},
 						"hero_banner": {
 							"type": "SharedSlice"
 						},
@@ -124,9 +172,9 @@
 				"type": "Boolean",
 				"config": {
 					"label": "No index",
-					"default_value": false,
-					"placeholder_true": "true",
-					"placeholder_false": "false"
+					"placeholder_false": "Indicizza",
+					"placeholder_true": "Non indicizzare",
+					"default_value": false
 				}
 			}
 		}

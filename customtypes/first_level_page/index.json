@@ -34,6 +34,9 @@
 				"fieldset": "Slice Zone",
 				"config": {
 					"choices": {
+						"articles_grid": {
+							"type": "SharedSlice"
+						},
 						"hero_banner": {
 							"type": "SharedSlice"
 						},
@@ -116,8 +119,8 @@
 				"type": "Boolean",
 				"config": {
 					"label": "No index",
-					"placeholder_false": "NO",
-					"placeholder_true": "SI",
+					"placeholder_false": "Indicizza",
+					"placeholder_true": "Non indicizzare",
 					"default_value": false
 				}
 			}

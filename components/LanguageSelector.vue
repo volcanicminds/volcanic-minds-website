@@ -64,8 +64,6 @@ export default defineComponent({
 		background-position center
 		&.it-it
 			background-image url('~/assets/images/it-it.png')
-		&.de
-			background-image url('~/assets/images/de-de.png')
 		&.en
 			background-image url('~/assets/images/en-eu.png')
 	.dropdown__menu

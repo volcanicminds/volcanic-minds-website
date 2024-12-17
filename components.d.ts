@@ -1,4 +1,5 @@
 import Breadcrumbs from './components/Breadcrumbs.vue'
+import Credits from './components/Credits.vue'
 import Footer from './components/Footer.vue'
 import Header from './components/Header.vue'
 import LanguageSelector from './components/LanguageSelector.vue'
@@ -15,6 +16,7 @@ import WrapperSlice from './components/wrapper/Slice.vue'
 declare module 'vue' {
 	export interface GlobalComponents {
 		Breadcrumbs: typeof Breadcrumbs
+		Credits: typeof Credits
 		Footer: typeof Footer
 		Header: typeof Header
 		LanguageSelector: typeof LanguageSelector

@@ -1,15 +1,16 @@
 {
-  "id": "cards_grid",
+  "id": "articles_grid",
   "type": "SharedSlice",
-  "name": "CardsGrid",
-  "description": "CardsGrid",
+  "name": "ArticlesGrid",
+  "description": "ArticlesGrid",
   "variations": [
     {
       "id": "default",
       "name": "Default",
       "docURL": "...",
-      "version": "sktwi1xtmkfgx8626",
-      "description": "CardsGrid",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
       "primary": {
         "title": {
           "type": "Text",
@@ -60,58 +61,24 @@
             "placeholder_true": "SI",
             "default_value": false
           }
-        }
-      },
-      "items": {
-        "card_icon": {
-          "type": "Text",
-          "config": {
-            "label": "Icona card",
-            "placeholder": ""
-          }
-        },
-        "card_title": {
-          "type": "Text",
-          "config": {
-            "label": "Titolo card",
-            "placeholder": ""
-          }
-        },
-        "card_desc": {
-          "type": "StructuredText",
-          "config": {
-            "label": "Descrizione card",
-            "placeholder": "",
-            "allowTargetBlank": true,
-            "multi": "paragraph,strong,em,hyperlink"
-          }
-        },
-        "cta_link": {
-          "type": "Link",
-          "config": {
-            "label": "CTA Link",
-            "placeholder": "",
-            "allowTargetBlank": true,
-            "select": null
-          }
         },
         "cta_accessible_text": {
           "type": "Text",
           "config": {
-            "label": "CTA Testo accessibile",
+            "label": "CTA testo accessibile",
             "placeholder": ""
-          }
-        },
-        "background": {
-          "type": "Image",
-          "config": {
-            "label": "Sfondo",
-            "constraint": {},
-            "thumbnails": []
           }
         }
       },
-      "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+      "items": {
+        "article": {
+          "type": "Link",
+          "config": {
+            "label": "Articoli",
+            "select": "document"
+          }
+        }
+      }
     }
   ]
 }

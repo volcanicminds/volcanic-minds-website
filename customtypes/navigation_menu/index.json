@@ -5,12 +5,25 @@
 	"status": true,
 	"json": {
 		"Main": {
-			"aria_label": { "type": "Text", "config": { "label": "Aria label", "placeholder": "" } },
+			"aria_label": {
+				"type": "Text",
+				"config": {
+					"label": "Aria label",
+					"placeholder": ""
+				}
+			},
 			"slices": {
 				"type": "Slices",
 				"fieldset": "Slice Zone",
-				"config": { "choices": { "navigation_menu": { "type": "SharedSlice" } } }
+				"config": {
+					"choices": {
+						"navigation_menu": {
+							"type": "SharedSlice"
+						}
+					}
+				}
 			}
 		}
-	}
+	},
+	"format": "custom"
 }

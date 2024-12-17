@@ -22,6 +22,38 @@ import { components } from '~/slices'
 		}
 		await store.dispatch('prismic/load', { lang, altLangs })
 
+		// Get all ArticlesGrid slices
+		const slices = document.data.slices
+		const articlesGridSlices = slices.filter((slice: { slice_type: string }) => slice.slice_type === 'articles_grid')
+
+		if (articlesGridSlices.length > 0) {
+			for (const slice of articlesGridSlices) {
+				const articleUIDs = slice.items.map((item: any) => item.article.uid)
+
+				// Get articles data from Prismic
+				if (articleUIDs.length > 0) {
+					const articlesResponse = await $prismic.api.query(
+						[
+							$prismic.predicates.at('document.type', 'second_level_page'),
+							$prismic.predicates.in('my.second_level_page.uid', articleUIDs)
+						],
+						{ lang }
+					)
+
+					// Add articles data to slice
+					slice.items = slice.items.map((item: any) => {
+						const articleData = articlesResponse.results.find(
+							(article: { uid: any }) => article.uid === item.article.uid
+						)
+						return {
+							...item,
+							article: articleData || item.article
+						}
+					})
+				}
+			}
+		}
+
 		if (document) {
 			return { document }
 		} else {

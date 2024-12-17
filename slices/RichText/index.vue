@@ -4,7 +4,11 @@
 		:margin-bottom="slice.primary.margin_bottom || false"
 		:enable-observer="slice.primary.enable_animation || false"
 	>
-		<WrapperContainer :class="slice.primary.big_text ? 'big-text' : ''">
+		<WrapperContainer
+			:class="
+				slice.primary.text_size === 'Grande' ? 'text-big' : slice.primary.text_size === 'Piccola' ? 'text-small' : ''
+			"
+		>
 			<PrismicRichText
 				:field="slice.primary.text"
 				class="rich-text"
@@ -35,10 +39,19 @@ defineProps({
 </script>
 
 <style lang="stylus" scoped>
-.big-text
+.rich-text
+	>>> p.block-img
+		img
+			max-width 100%
+
+.text-big
 	.rich-text
 		font-size 1.1em
 		font-weight 300
 		@media (min-width: 40em)
 			font-size 1.3em
+
+.text-small
+	.rich-text
+		font-size 0.8em
 </style>
