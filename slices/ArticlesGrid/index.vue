@@ -64,66 +64,6 @@ const props = defineProps({
 		required: true
 	}
 })
-
-// interface Article {
-// 	id: string
-// 	uid: string
-// 	data: {
-// 		title: string
-// 		preview_image: any
-// 		publication_date: string
-// 	}
-// 	tags: string[]
-// }
-
-// const articles = ref<Article[]>([])
-// const error = ref<null | { statusCode: number; message: string }>(null)
-
-// const loadArticles = async ($prismic: any, slice: any) => {
-// 	try {
-// 		// Get article UIDs from slide
-// 		const articleUIDs = slice.items.map((item: any) => item.article.uid)
-
-// 		if (articleUIDs.length > 0) {
-// 			const articlePromises = articleUIDs.map(async (uid: string) => {
-// 				// Get articles by UIDs
-// 				const articleResponse = await $prismic.api.query([
-// 					$prismic.predicates.at('document.type', 'second_level_page'),
-// 					$prismic.predicates.at('my.second_level_page.uid', uid)
-// 				])
-
-// 				if (articleResponse?.results && articleResponse.results.length) {
-// 					return articleResponse.results[0] as Article
-// 				}
-
-// 				return null
-// 			})
-
-// 			// Wait all results
-// 			articles.value = (await Promise.all(articlePromises)).filter(Boolean)
-// 		}
-// 	} catch (e) {
-// 		error.value = {
-// 			statusCode: 500,
-// 			message: 'An error occurred while fetching articles'
-// 		}
-// 	}
-// }
-
-// onMounted(() => {
-// 	const instance = getCurrentInstance()
-// 	// @ts-ignore
-// 	const $prismic = instance?.proxy?.$prismic
-
-// 	if ($prismic && props.slice) {
-// 		loadArticles($prismic, props.slice)
-// 	} else {
-// 		error.value = {
-// 			statusCode: 500,
-// 			message: 'Prismic client not found'
-// 		}
-// 	}
-// })
 </script>
 
 <style lang="stylus" scoped>
