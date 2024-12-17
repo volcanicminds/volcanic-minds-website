@@ -33,11 +33,11 @@
 								<font-awesome-icon icon="calendar" class="publication-calendar" />
 								<span class="publication-date">{{ item.article.data.publication_date }}</span>
 							</div>
-							<div v-if="item.article.tags.length" class="flex items-center mt1">
+							<div v-if="item.article.tags.length" class="flex flex-wrap items-center mt1">
 								<div
 									v-for="(tag, i) in item.article.tags"
 									:key="`tag-${i}`"
-									class="flex tag bg-cultured raisin-black font-bold mr1 uppercase"
+									class="flex tag bg-cultured raisin-black font-bold mr1 mb1 uppercase"
 								>
 									{{ tag }}
 								</div>
