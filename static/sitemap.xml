@@ -16,11 +16,6 @@
         <xhtml:link rel="alternate" hreflang="it-it" href="https://volcanicminds.com/" />
         <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en" />
     </url>
-    <url>
-        <loc>https://volcanicminds.com/de</loc>
-        <xhtml:link rel="alternate" hreflang="it-it" href="https://volcanicminds.com/" />
-        <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en" />
-    </url>
     <!-- Insights -->
     <url>
         <loc>https://volcanicminds.com/insights</loc>
@@ -46,11 +41,6 @@
         <xhtml:link rel="alternate" hreflang="it-it" href="https://volcanicminds.com/about-us" />
         <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/about-us" />
     </url>
-    <url>
-        <loc>https://volcanicminds.com/de/about-us</loc>
-        <xhtml:link rel="alternate" hreflang="it-it" href="https://volcanicminds.com/about-us" />
-        <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/about-us" />
-    </url>
     <!-- Workflow -->
     <url>
         <loc>https://volcanicminds.com/workflow</loc>
@@ -59,11 +49,6 @@
     </url>
     <url>
         <loc>https://volcanicminds.com/en/workflow</loc>
-        <xhtml:link rel="alternate" hreflang="it-it" href="https://volcanicminds.com/workflow" />
-        <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/workflow" />
-    </url>
-    <url>
-        <loc>https://volcanicminds.com/de/workflow</loc>
         <xhtml:link rel="alternate" hreflang="it-it" href="https://volcanicminds.com/workflow" />
         <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/workflow" />
     </url>
@@ -78,11 +63,6 @@
         <xhtml:link rel="alternate" hreflang="it-it" href="https://volcanicminds.com/contacts" />
         <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/contacts" />
     </url>
-    <url>
-        <loc>https://volcanicminds.com/de/contacts</loc>
-        <xhtml:link rel="alternate" hreflang="it-it" href="https://volcanicminds.com/contacts" />
-        <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/contacts" />
-    </url>
     <!-- Privacy policy -->
     <url>
         <loc>https://volcanicminds.com/privacy-policy</loc>
@@ -91,11 +71,6 @@
     </url>
     <url>
         <loc>https://volcanicminds.com/en/privacy-policy</loc>
-        <xhtml:link rel="alternate" hreflang="it-it" href="https://volcanicminds.com/privacy-policy" />
-        <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/privacy-policy" />
-    </url>
-    <url>
-        <loc>https://volcanicminds.com/de/privacy-policy</loc>
         <xhtml:link rel="alternate" hreflang="it-it" href="https://volcanicminds.com/privacy-policy" />
         <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/privacy-policy" />
     </url>
