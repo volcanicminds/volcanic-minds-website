@@ -37,38 +37,32 @@ export default async () => {
 					content: 'height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0'
 				},
 				{ name: 'theme-color', content: '#3c0557' },
-				{ name: 'msapplication-TileColor', content: '#7009a3' }
+				{ name: 'apple-mobile-web-app-title', content: 'Volcanic Minds' }
 			],
 			link: [
 				{
-					rel: 'apple-touch-icon',
-					sizes: '180x180',
-					href: '/apple-touch-icon.png?v=2'
+					rel: 'icon',
+					type: 'image/png',
+					href: '/favicon-96x96.png?v=3',
+					sizes: '96x96'
+				},
+				{
+					rel: 'icon',
+					type: 'image/svg+xml',
+					href: '/favicon.svg?v=3'
 				},
 				{
 					rel: 'shortcut icon',
-					href: '/favicon.ico?v=2'
+					href: '/favicon.ico?v=3'
 				},
 				{
-					rel: 'icon',
-					type: 'image/png',
-					sizes: '32x32',
-					href: '/favicon-32x32.png?v=2'
-				},
-				{
-					rel: 'icon',
-					type: 'image/png',
-					sizes: '16x16',
-					href: '/favicon-16x16.png?v=2'
+					rel: 'apple-touch-icon',
+					sizes: '180x180',
+					href: '/apple-touch-icon.png?v=3'
 				},
 				{
 					rel: 'manifest',
-					href: '/site.webmanifest?v=2'
-				},
-				{
-					rel: 'mask-icon',
-					href: '/safari-pinned-tab.svg?v=2',
-					color: '#7009a3'
+					href: '/site.webmanifest?v=3'
 				},
 				{
 					rel: 'preconnect',
