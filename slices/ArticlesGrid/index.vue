@@ -13,29 +13,29 @@
 
 			<div class="cards-container mt3">
 				<PrismicLink
-					v-for="(article, index) in articles"
+					v-for="(item, index) in slice.items"
 					:key="index"
-					:field="article"
+					:field="item.article"
 					:aria-label="slice.primary.cta_accessible_text ? slice.primary.cta_accessible_text : undefined"
 					class="card relative overflow-hidden bg-shark no-underline"
 				>
 					<div class="flex flex-column relative z1 h100" :class="slice.primary.center_card_content ? 'center' : ''">
 						<div class="card-image-container overflow-hidden">
 							<WrapperPrismicImage
-								:field="article.data.preview_image"
+								:field="item.article.data.preview_image"
 								:size="1000"
 								class="col-12 h100 zoom-on-hover cover"
 							/>
 						</div>
 						<div class="flex flex-column flex-auto p3">
-							<div v-if="article.data.title" class="h2 mb-auto">{{ article.data.title }}</div>
-							<div v-if="article.data.publication_date" class="flex items-center publication-container mt2">
+							<div v-if="item.article.data.title" class="h2 mb-auto">{{ item.article.data.title }}</div>
+							<div v-if="item.article.data.publication_date" class="flex items-center publication-container mt2">
 								<font-awesome-icon icon="calendar" class="publication-calendar" />
-								<span class="publication-date">{{ article.data.publication_date }}</span>
+								<span class="publication-date">{{ item.article.data.publication_date }}</span>
 							</div>
-							<div v-if="article.tags.length" class="flex items-center mt1">
+							<div v-if="item.article.tags.length" class="flex items-center mt1">
 								<div
-									v-for="(tag, i) in article.tags"
+									v-for="(tag, i) in item.article.tags"
 									:key="`tag-${i}`"
 									class="flex tag bg-cultured raisin-black font-bold mr1 uppercase"
 								>
@@ -65,65 +65,65 @@ const props = defineProps({
 	}
 })
 
-interface Article {
-	id: string
-	uid: string
-	data: {
-		title: string
-		preview_image: any
-		publication_date: string
-	}
-	tags: string[]
-}
+// interface Article {
+// 	id: string
+// 	uid: string
+// 	data: {
+// 		title: string
+// 		preview_image: any
+// 		publication_date: string
+// 	}
+// 	tags: string[]
+// }
 
-const articles = ref<Article[]>([])
-const error = ref<null | { statusCode: number; message: string }>(null)
+// const articles = ref<Article[]>([])
+// const error = ref<null | { statusCode: number; message: string }>(null)
 
-const loadArticles = async ($prismic: any, slice: any) => {
-	try {
-		// Get article UIDs from slide
-		const articleUIDs = slice.items.map((item: any) => item.article.uid)
+// const loadArticles = async ($prismic: any, slice: any) => {
+// 	try {
+// 		// Get article UIDs from slide
+// 		const articleUIDs = slice.items.map((item: any) => item.article.uid)
 
-		if (articleUIDs.length > 0) {
-			const articlePromises = articleUIDs.map(async (uid: string) => {
-				// Get articles by UIDs
-				const articleResponse = await $prismic.api.query([
-					$prismic.predicates.at('document.type', 'second_level_page'),
-					$prismic.predicates.at('my.second_level_page.uid', uid)
-				])
+// 		if (articleUIDs.length > 0) {
+// 			const articlePromises = articleUIDs.map(async (uid: string) => {
+// 				// Get articles by UIDs
+// 				const articleResponse = await $prismic.api.query([
+// 					$prismic.predicates.at('document.type', 'second_level_page'),
+// 					$prismic.predicates.at('my.second_level_page.uid', uid)
+// 				])
 
-				if (articleResponse?.results && articleResponse.results.length) {
-					return articleResponse.results[0] as Article
-				}
+// 				if (articleResponse?.results && articleResponse.results.length) {
+// 					return articleResponse.results[0] as Article
+// 				}
 
-				return null
-			})
+// 				return null
+// 			})
 
-			// Wait all results
-			articles.value = (await Promise.all(articlePromises)).filter(Boolean)
-		}
-	} catch (e) {
-		error.value = {
-			statusCode: 500,
-			message: 'An error occurred while fetching articles'
-		}
-	}
-}
+// 			// Wait all results
+// 			articles.value = (await Promise.all(articlePromises)).filter(Boolean)
+// 		}
+// 	} catch (e) {
+// 		error.value = {
+// 			statusCode: 500,
+// 			message: 'An error occurred while fetching articles'
+// 		}
+// 	}
+// }
 
-onMounted(() => {
-	const instance = getCurrentInstance()
-	// @ts-ignore
-	const $prismic = instance?.proxy?.$prismic
+// onMounted(() => {
+// 	const instance = getCurrentInstance()
+// 	// @ts-ignore
+// 	const $prismic = instance?.proxy?.$prismic
 
-	if ($prismic && props.slice) {
-		loadArticles($prismic, props.slice)
-	} else {
-		error.value = {
-			statusCode: 500,
-			message: 'Prismic client not found'
-		}
-	}
-})
+// 	if ($prismic && props.slice) {
+// 		loadArticles($prismic, props.slice)
+// 	} else {
+// 		error.value = {
+// 			statusCode: 500,
+// 			message: 'Prismic client not found'
+// 		}
+// 	}
+// })
 </script>
 
 <style lang="stylus" scoped>

@@ -111,25 +111,7 @@ export default async () => {
 			NUXT_SITENAME: process.env.NUXT_SITENAME
 		},
 
-		generate: {
-			fallback: '404.html',
-			async routes() {
-				// Static routes
-				const staticRoutes = ['/thank-you']
-
-				// Get all articles
-				const articles = await client.query([
-					Prismic.Predicates.at('document.type', 'second_level_page'),
-					Prismic.Predicates.at('my.second_level_page.is_article', true)
-				])
-
-				// Map UIDs with dynamic routes
-				const dynamicRoutes = articles.results.map((article) => `/insights/${article.uid}`)
-
-				// Combine static and dynamic routes
-				return [...staticRoutes, ...dynamicRoutes]
-			}
-		},
+		generate: { fallback: '404.html', routes: ['/thank-you'] },
 
 		// Global CSS: https://go.nuxtjs.dev/config-css
 		css: [
