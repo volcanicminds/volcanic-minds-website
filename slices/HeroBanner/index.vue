@@ -88,5 +88,5 @@ defineProps({
 			color var(--red-pigment)
 
 	.fade-overlay
-		box-shadow 0px -350px 200px -100px var(--raisin-black) inset
+		box-shadow 0px -300px 200px -100px var(--raisin-black) inset
 </style>
