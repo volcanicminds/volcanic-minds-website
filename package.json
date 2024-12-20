@@ -43,7 +43,7 @@
 		"@nuxtjs/eslint-config-typescript": "12.0.0",
 		"@nuxtjs/eslint-module": "^3.1.0",
 		"@prismicio/types": "^0.2.9",
-		"@slicemachine/adapter-nuxt2": "^0.3.60",
+		"@slicemachine/adapter-nuxt2": "^0.3.61",
 		"basscss-btn": "^1.1.1",
 		"basscss-btn-outline": "^1.1.0",
 		"basscss-btn-primary": "^1.1.0",
