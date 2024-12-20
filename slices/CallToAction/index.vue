@@ -8,7 +8,7 @@
 			<PrismicLink
 				:field="slice.primary.link"
 				class="btn btn-primary uppercase"
-				:class="slice.primary.size === 'regular' ? '' : 'btn-big'"
+				:class="slice.primary.size ? '' : 'btn-big'"
 				:aria-label="
 					slice.primary.accessible_label &&
 					slice.primary.link &&
