@@ -6,7 +6,106 @@
   "variations": [
     {
       "id": "default",
-      "name": "Default",
+      "name": "Selected articles",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "title": {
+          "type": "Text",
+          "config": {
+            "label": "Titolo",
+            "placeholder": ""
+          }
+        },
+        "subtitle": {
+          "type": "Text",
+          "config": {
+            "label": "Sottotitolo",
+            "placeholder": ""
+          }
+        },
+        "margin_top": {
+          "type": "Boolean",
+          "config": {
+            "label": "Margine superiore",
+            "placeholder_false": "NO",
+            "placeholder_true": "SI",
+            "default_value": false
+          }
+        },
+        "margin_bottom": {
+          "type": "Boolean",
+          "config": {
+            "label": "Margine inferiore",
+            "placeholder_false": "NO",
+            "placeholder_true": "SI",
+            "default_value": false
+          }
+        },
+        "enable_animation": {
+          "type": "Boolean",
+          "config": {
+            "label": "Abilita animazione",
+            "placeholder_false": "NO",
+            "placeholder_true": "SI",
+            "default_value": false
+          }
+        },
+        "center_card_content": {
+          "type": "Boolean",
+          "config": {
+            "label": "Centra contenuto card",
+            "placeholder_false": "NO",
+            "placeholder_true": "SI",
+            "default_value": false
+          }
+        },
+        "blog_cta_link": {
+          "type": "Link",
+          "config": {
+            "label": "CTA blog link",
+            "placeholder": "",
+            "allowTargetBlank": false,
+            "select": null
+          }
+        },
+        "blog_cta_label": {
+          "type": "Text",
+          "config": {
+            "label": "CTA blog label",
+            "placeholder": ""
+          }
+        },
+        "blog_cta_accessible_label": {
+          "type": "Text",
+          "config": {
+            "label": "CTA blog label accessibile",
+            "placeholder": ""
+          }
+        },
+        "cta_accessible_label": {
+          "type": "Text",
+          "config": {
+            "label": "CTA accessibile articolo",
+            "placeholder": ""
+          }
+        }
+      },
+      "items": {
+        "article": {
+          "type": "Link",
+          "config": {
+            "label": "Articolo",
+            "select": "document"
+          }
+        }
+      }
+    },
+    {
+      "id": "allArticles",
+      "name": "All articles",
       "docURL": "...",
       "version": "initial",
       "description": "Default",
@@ -70,15 +169,7 @@
           }
         }
       },
-      "items": {
-        "article": {
-          "type": "Link",
-          "config": {
-            "label": "Articoli",
-            "select": "document"
-          }
-        }
-      }
+      "items": {}
     }
   ]
 }

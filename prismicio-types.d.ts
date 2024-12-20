@@ -630,6 +630,17 @@ interface SecondLevelPageDocumentData {
 	publication_date: prismic.KeyTextField
 
 	/**
+	 * Data di pubblicazione per sort field in *Pagina di secondo livello*
+	 *
+	 * - **Field Type**: Date
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: second_level_page.publication_date_sort
+	 * - **Tab**: Main
+	 * - **Documentation**: https://prismic.io/docs/field#date
+	 */
+	publication_date_sort: prismic.DateField
+
+	/**
 	 * Label ultima revisione field in *Pagina di secondo livello*
 	 *
 	 * - **Field Type**: Text
@@ -873,11 +884,11 @@ type AccordionSliceVariation = AccordionSliceDefault
 export type AccordionSlice = prismic.SharedSlice<'accordion', AccordionSliceVariation>
 
 /**
- * Primary content in *ArticlesGrid → Default → Primary*
+ * Primary content in *ArticlesGrid → Selected articles → Primary*
  */
 export interface ArticlesGridSliceDefaultPrimary {
 	/**
-	 * Titolo field in *ArticlesGrid → Default → Primary*
+	 * Titolo field in *ArticlesGrid → Selected articles → Primary*
 	 *
 	 * - **Field Type**: Text
 	 * - **Placeholder**: *None*
@@ -887,7 +898,7 @@ export interface ArticlesGridSliceDefaultPrimary {
 	title: prismic.KeyTextField
 
 	/**
-	 * Sottotitolo field in *ArticlesGrid → Default → Primary*
+	 * Sottotitolo field in *ArticlesGrid → Selected articles → Primary*
 	 *
 	 * - **Field Type**: Text
 	 * - **Placeholder**: *None*
@@ -897,7 +908,7 @@ export interface ArticlesGridSliceDefaultPrimary {
 	subtitle: prismic.KeyTextField
 
 	/**
-	 * Margine superiore field in *ArticlesGrid → Default → Primary*
+	 * Margine superiore field in *ArticlesGrid → Selected articles → Primary*
 	 *
 	 * - **Field Type**: Boolean
 	 * - **Placeholder**: *None*
@@ -908,7 +919,7 @@ export interface ArticlesGridSliceDefaultPrimary {
 	margin_top: prismic.BooleanField
 
 	/**
-	 * Margine inferiore field in *ArticlesGrid → Default → Primary*
+	 * Margine inferiore field in *ArticlesGrid → Selected articles → Primary*
 	 *
 	 * - **Field Type**: Boolean
 	 * - **Placeholder**: *None*
@@ -919,7 +930,7 @@ export interface ArticlesGridSliceDefaultPrimary {
 	margin_bottom: prismic.BooleanField
 
 	/**
-	 * Abilita animazione field in *ArticlesGrid → Default → Primary*
+	 * Abilita animazione field in *ArticlesGrid → Selected articles → Primary*
 	 *
 	 * - **Field Type**: Boolean
 	 * - **Placeholder**: *None*
@@ -930,7 +941,7 @@ export interface ArticlesGridSliceDefaultPrimary {
 	enable_animation: prismic.BooleanField
 
 	/**
-	 * Centra contenuto card field in *ArticlesGrid → Default → Primary*
+	 * Centra contenuto card field in *ArticlesGrid → Selected articles → Primary*
 	 *
 	 * - **Field Type**: Boolean
 	 * - **Placeholder**: *None*
@@ -941,14 +952,44 @@ export interface ArticlesGridSliceDefaultPrimary {
 	center_card_content: prismic.BooleanField
 
 	/**
-	 * CTA testo accessibile field in *ArticlesGrid → Default → Primary*
+	 * CTA blog link field in *ArticlesGrid → Selected articles → Primary*
+	 *
+	 * - **Field Type**: Link
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: articles_grid.default.primary.blog_cta_link
+	 * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+	 */
+	blog_cta_link: prismic.LinkField
+
+	/**
+	 * CTA blog label field in *ArticlesGrid → Selected articles → Primary*
 	 *
 	 * - **Field Type**: Text
 	 * - **Placeholder**: *None*
-	 * - **API ID Path**: articles_grid.default.primary.cta_accessible_text
+	 * - **API ID Path**: articles_grid.default.primary.blog_cta_label
 	 * - **Documentation**: https://prismic.io/docs/field#key-text
 	 */
-	cta_accessible_text: prismic.KeyTextField
+	blog_cta_label: prismic.KeyTextField
+
+	/**
+	 * CTA blog label accessibile field in *ArticlesGrid → Selected articles → Primary*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: articles_grid.default.primary.blog_cta_accessible_label
+	 * - **Documentation**: https://prismic.io/docs/field#key-text
+	 */
+	blog_cta_accessible_label: prismic.KeyTextField
+
+	/**
+	 * CTA accessibile articolo field in *ArticlesGrid → Selected articles → Primary*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: articles_grid.default.primary.cta_accessible_label
+	 * - **Documentation**: https://prismic.io/docs/field#key-text
+	 */
+	cta_accessible_label: prismic.KeyTextField
 }
 
 /**
@@ -956,7 +997,7 @@ export interface ArticlesGridSliceDefaultPrimary {
  */
 export interface ArticlesGridSliceDefaultItem {
 	/**
-	 * Articoli field in *ArticlesGrid → Items*
+	 * Articolo field in *ArticlesGrid → Items*
 	 *
 	 * - **Field Type**: Content Relationship
 	 * - **Placeholder**: *None*
@@ -967,7 +1008,7 @@ export interface ArticlesGridSliceDefaultItem {
 }
 
 /**
- * Default variation for ArticlesGrid Slice
+ * Selected articles variation for ArticlesGrid Slice
  *
  * - **API ID**: `default`
  * - **Description**: Default
@@ -980,9 +1021,101 @@ export type ArticlesGridSliceDefault = prismic.SharedSliceVariation<
 >
 
 /**
+ * Primary content in *ArticlesGrid → All articles → Primary*
+ */
+export interface ArticlesGridSliceAllArticlesPrimary {
+	/**
+	 * Titolo field in *ArticlesGrid → All articles → Primary*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: articles_grid.allArticles.primary.title
+	 * - **Documentation**: https://prismic.io/docs/field#key-text
+	 */
+	title: prismic.KeyTextField
+
+	/**
+	 * Sottotitolo field in *ArticlesGrid → All articles → Primary*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: articles_grid.allArticles.primary.subtitle
+	 * - **Documentation**: https://prismic.io/docs/field#key-text
+	 */
+	subtitle: prismic.KeyTextField
+
+	/**
+	 * Margine superiore field in *ArticlesGrid → All articles → Primary*
+	 *
+	 * - **Field Type**: Boolean
+	 * - **Placeholder**: *None*
+	 * - **Default Value**: false
+	 * - **API ID Path**: articles_grid.allArticles.primary.margin_top
+	 * - **Documentation**: https://prismic.io/docs/field#boolean
+	 */
+	margin_top: prismic.BooleanField
+
+	/**
+	 * Margine inferiore field in *ArticlesGrid → All articles → Primary*
+	 *
+	 * - **Field Type**: Boolean
+	 * - **Placeholder**: *None*
+	 * - **Default Value**: false
+	 * - **API ID Path**: articles_grid.allArticles.primary.margin_bottom
+	 * - **Documentation**: https://prismic.io/docs/field#boolean
+	 */
+	margin_bottom: prismic.BooleanField
+
+	/**
+	 * Abilita animazione field in *ArticlesGrid → All articles → Primary*
+	 *
+	 * - **Field Type**: Boolean
+	 * - **Placeholder**: *None*
+	 * - **Default Value**: false
+	 * - **API ID Path**: articles_grid.allArticles.primary.enable_animation
+	 * - **Documentation**: https://prismic.io/docs/field#boolean
+	 */
+	enable_animation: prismic.BooleanField
+
+	/**
+	 * Centra contenuto card field in *ArticlesGrid → All articles → Primary*
+	 *
+	 * - **Field Type**: Boolean
+	 * - **Placeholder**: *None*
+	 * - **Default Value**: false
+	 * - **API ID Path**: articles_grid.allArticles.primary.center_card_content
+	 * - **Documentation**: https://prismic.io/docs/field#boolean
+	 */
+	center_card_content: prismic.BooleanField
+
+	/**
+	 * CTA testo accessibile field in *ArticlesGrid → All articles → Primary*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: articles_grid.allArticles.primary.cta_accessible_text
+	 * - **Documentation**: https://prismic.io/docs/field#key-text
+	 */
+	cta_accessible_text: prismic.KeyTextField
+}
+
+/**
+ * All articles variation for ArticlesGrid Slice
+ *
+ * - **API ID**: `allArticles`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type ArticlesGridSliceAllArticles = prismic.SharedSliceVariation<
+	'allArticles',
+	Simplify<ArticlesGridSliceAllArticlesPrimary>,
+	never
+>
+
+/**
  * Slice variation for *ArticlesGrid*
  */
-type ArticlesGridSliceVariation = ArticlesGridSliceDefault
+type ArticlesGridSliceVariation = ArticlesGridSliceDefault | ArticlesGridSliceAllArticles
 
 /**
  * ArticlesGrid Shared Slice
@@ -2324,8 +2457,10 @@ declare module '@prismicio/client' {
 			ArticlesGridSlice,
 			ArticlesGridSliceDefaultPrimary,
 			ArticlesGridSliceDefaultItem,
+			ArticlesGridSliceAllArticlesPrimary,
 			ArticlesGridSliceVariation,
 			ArticlesGridSliceDefault,
+			ArticlesGridSliceAllArticles,
 			CallToActionSlice,
 			CallToActionSliceDefaultPrimary,
 			CallToActionSliceVariation,

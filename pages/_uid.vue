@@ -28,28 +28,48 @@ import { components } from '~/slices'
 
 		if (articlesGridSlices.length > 0) {
 			for (const slice of articlesGridSlices) {
-				const articleUIDs = slice.items.map((item: any) => item.article.uid)
+				if (slice.variation === 'default') {
+					// Handle default variant: Fetch articles based on provided UIDs
+					const articleUIDs = slice.items.map((item: any) => item.article.uid)
 
-				// Get articles data from Prismic
-				if (articleUIDs.length > 0) {
+					// Get articles data from Prismic
+					if (articleUIDs.length > 0) {
+						const articlesResponse = await $prismic.api.query(
+							[
+								$prismic.predicates.at('document.type', 'second_level_page'),
+								$prismic.predicates.in('my.second_level_page.uid', articleUIDs)
+							],
+							{ lang }
+						)
+
+						// Add articles data to slice
+						slice.items = slice.items.map((item: any) => {
+							const articleData = articlesResponse.results.find(
+								(article: { uid: any }) => article.uid === item.article.uid
+							)
+							return {
+								...item,
+								article: articleData || item.article
+							}
+						})
+					}
+				} else if (slice.variation === 'allArticles') {
+					// Handle allArticles variant: Fetch all articles with is_article set to true
 					const articlesResponse = await $prismic.api.query(
 						[
 							$prismic.predicates.at('document.type', 'second_level_page'),
-							$prismic.predicates.in('my.second_level_page.uid', articleUIDs)
+							$prismic.predicates.at('my.second_level_page.is_article', true)
 						],
-						{ lang }
+						{
+							lang,
+							orderings: '[my.second_level_page.publication_date_sort desc]' // descending date ordering
+						}
 					)
 
-					// Add articles data to slice
-					slice.items = slice.items.map((item: any) => {
-						const articleData = articlesResponse.results.find(
-							(article: { uid: any }) => article.uid === item.article.uid
-						)
-						return {
-							...item,
-							article: articleData || item.article
-						}
-					})
+					// Replace slice items with the fetched articles
+					slice.items = articlesResponse.results.map((article: any) => ({
+						article
+					}))
 				}
 			}
 		}

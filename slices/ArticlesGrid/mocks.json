@@ -29,10 +29,27 @@
 				"__TYPE__": "BooleanContent",
 				"value": true
 			},
-			"cta_accessible_text": {
+			"blog_cta_label": {
 				"__TYPE__": "FieldContent",
-				"value": "fallen",
+				"value": "plus",
 				"type": "Text"
+			},
+			"cta_accessible_label": {
+				"__TYPE__": "FieldContent",
+				"value": "half",
+				"type": "Text"
+			},
+			"blog_cta_accessible_label": {
+				"__TYPE__": "FieldContent",
+				"value": "citizen",
+				"type": "Text"
+			},
+			"blog_cta_link": {
+				"__TYPE__": "LinkContent",
+				"value": {
+					"__TYPE__": "ExternalLink",
+					"url": "http://google.com"
+				}
 			}
 		},
 		"items": [
@@ -50,6 +67,49 @@
 						}
 					]
 				]
+			}
+		]
+	},
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "allArticles",
+		"primary": {
+			"title": {
+				"__TYPE__": "FieldContent",
+				"value": "bottom",
+				"type": "Text"
+			},
+			"subtitle": {
+				"__TYPE__": "FieldContent",
+				"value": "half",
+				"type": "Text"
+			},
+			"margin_top": {
+				"__TYPE__": "BooleanContent",
+				"value": true
+			},
+			"margin_bottom": {
+				"__TYPE__": "BooleanContent",
+				"value": true
+			},
+			"enable_animation": {
+				"__TYPE__": "BooleanContent",
+				"value": true
+			},
+			"center_card_content": {
+				"__TYPE__": "BooleanContent",
+				"value": false
+			},
+			"cta_accessible_text": {
+				"__TYPE__": "FieldContent",
+				"value": "dug",
+				"type": "Text"
+			}
+		},
+		"items": [
+			{
+				"__TYPE__": "GroupItemContent",
+				"value": []
 			}
 		]
 	}

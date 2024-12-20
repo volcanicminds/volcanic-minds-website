@@ -1,7 +1,7 @@
 <template>
 	<WrapperContainer class="mt4">
 		<div v-if="tags.length" class="flex items-center mb2">
-			<h5 class="my0 h4 mr1">Tag:</h5>
+			<h2 class="my0 h4 mr1">Tag:</h2>
 			<span v-for="(tag, i) in tags" :key="i" class="tag bg-cultured raisin-black font-bold mr1 uppercase">{{
 				tag
 			}}</span>
