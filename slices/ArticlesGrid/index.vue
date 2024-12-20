@@ -16,7 +16,7 @@
 					v-for="(item, index) in slice.items"
 					:key="index"
 					:field="item.article"
-					:aria-label="slice.primary.cta_accessible_text ? slice.primary.cta_accessible_text : undefined"
+					:aria-label="slice.primary.article_accessible_text ? slice.primary.article_accessible_text : undefined"
 					class="card relative overflow-hidden bg-shark no-underline"
 				>
 					<div class="flex flex-column relative z1 h100" :class="slice.primary.center_card_content ? 'center' : ''">
@@ -46,12 +46,26 @@
 					</div>
 				</PrismicLink>
 			</div>
+
+			<div class="center mt2">
+				<PrismicLink
+					v-if="slice.primary.blog_cta_link && slice.primary.blog_cta_label"
+					:field="slice.primary.blog_cta_link"
+					class="btn btn-primary uppercase"
+					:aria-label="
+						slice.primary.blog_cta_accessible_label && slice.primary.blog_cta_link?.target === '_blank'
+							? slice.primary.blog_cta_accessible_label
+							: undefined
+					"
+					>{{ slice.primary.blog_cta_label }}</PrismicLink
+				>
+			</div>
 		</WrapperContainer>
 	</WrapperSlice>
 </template>
 
 <script lang="ts">
-import { defineComponent, ref, onMounted, getCurrentInstance } from 'vue'
+import { defineComponent } from 'vue'
 export default defineComponent({
 	name: 'ArticlesGrid'
 })

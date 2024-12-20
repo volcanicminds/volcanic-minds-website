@@ -68,6 +68,13 @@
 					"placeholder": ""
 				}
 			},
+			"publication_date_sort": {
+				"type": "Date",
+				"config": {
+					"label": "Data di pubblicazione per sort",
+					"placeholder": ""
+				}
+			},
 			"latest_revision_date_label": {
 				"type": "Text",
 				"config": {
