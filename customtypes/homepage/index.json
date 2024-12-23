@@ -77,27 +77,6 @@
 					"placeholder": ""
 				}
 			},
-			"og_title": {
-				"type": "Text",
-				"config": {
-					"label": "OG title",
-					"placeholder": ""
-				}
-			},
-			"og_description": {
-				"type": "Text",
-				"config": {
-					"label": "OG description",
-					"placeholder": ""
-				}
-			},
-			"og_sitename": {
-				"type": "Text",
-				"config": {
-					"label": "OG sitename",
-					"placeholder": ""
-				}
-			},
 			"og_image": {
 				"type": "Image",
 				"config": {

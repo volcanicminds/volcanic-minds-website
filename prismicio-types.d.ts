@@ -55,6 +55,18 @@ interface FirstLevelPageDocumentData {
 	 * - **Documentation**: https://prismic.io/docs/field#slices
 	 */
 	slices: prismic.SliceZone<FirstLevelPageDocumentDataSlicesSlice> /**
+	 * No index field in *Pagina di primo livello*
+	 *
+	 * - **Field Type**: Boolean
+	 * - **Placeholder**: *None*
+	 * - **Default Value**: false
+	 * - **API ID Path**: first_level_page.no_index
+	 * - **Tab**: SEO
+	 * - **Documentation**: https://prismic.io/docs/field#boolean
+	 */
+	no_index: prismic.BooleanField
+
+	/**
 	 * SEO title field in *Pagina di primo livello*
 	 *
 	 * - **Field Type**: Text
@@ -77,39 +89,6 @@ interface FirstLevelPageDocumentData {
 	seo_description: prismic.KeyTextField
 
 	/**
-	 * OG title field in *Pagina di primo livello*
-	 *
-	 * - **Field Type**: Text
-	 * - **Placeholder**: *None*
-	 * - **API ID Path**: first_level_page.og_title
-	 * - **Tab**: SEO
-	 * - **Documentation**: https://prismic.io/docs/field#key-text
-	 */
-	og_title: prismic.KeyTextField
-
-	/**
-	 * OG description field in *Pagina di primo livello*
-	 *
-	 * - **Field Type**: Text
-	 * - **Placeholder**: *None*
-	 * - **API ID Path**: first_level_page.og_description
-	 * - **Tab**: SEO
-	 * - **Documentation**: https://prismic.io/docs/field#key-text
-	 */
-	og_description: prismic.KeyTextField
-
-	/**
-	 * OG sitename field in *Pagina di primo livello*
-	 *
-	 * - **Field Type**: Text
-	 * - **Placeholder**: *None*
-	 * - **API ID Path**: first_level_page.og_sitename
-	 * - **Tab**: SEO
-	 * - **Documentation**: https://prismic.io/docs/field#key-text
-	 */
-	og_sitename: prismic.KeyTextField
-
-	/**
 	 * OG image field in *Pagina di primo livello*
 	 *
 	 * - **Field Type**: Image
@@ -121,16 +100,16 @@ interface FirstLevelPageDocumentData {
 	og_image: prismic.ImageField<never>
 
 	/**
-	 * No index field in *Pagina di primo livello*
+	 * Schema.org type field in *Pagina di primo livello*
 	 *
-	 * - **Field Type**: Boolean
+	 * - **Field Type**: Select
 	 * - **Placeholder**: *None*
-	 * - **Default Value**: false
-	 * - **API ID Path**: first_level_page.no_index
+	 * - **Default Value**: WebPage
+	 * - **API ID Path**: first_level_page.schema_org_type
 	 * - **Tab**: SEO
-	 * - **Documentation**: https://prismic.io/docs/field#boolean
+	 * - **Documentation**: https://prismic.io/docs/field#select
 	 */
-	no_index: prismic.BooleanField
+	schema_org_type: prismic.SelectField<'WebPage' | 'AboutPage', 'filled'>
 }
 
 /**
@@ -430,39 +409,6 @@ interface HomepageDocumentData {
 	seo_description: prismic.KeyTextField
 
 	/**
-	 * OG title field in *Homepage*
-	 *
-	 * - **Field Type**: Text
-	 * - **Placeholder**: *None*
-	 * - **API ID Path**: homepage.og_title
-	 * - **Tab**: SEO
-	 * - **Documentation**: https://prismic.io/docs/field#key-text
-	 */
-	og_title: prismic.KeyTextField
-
-	/**
-	 * OG description field in *Homepage*
-	 *
-	 * - **Field Type**: Text
-	 * - **Placeholder**: *None*
-	 * - **API ID Path**: homepage.og_description
-	 * - **Tab**: SEO
-	 * - **Documentation**: https://prismic.io/docs/field#key-text
-	 */
-	og_description: prismic.KeyTextField
-
-	/**
-	 * OG sitename field in *Homepage*
-	 *
-	 * - **Field Type**: Text
-	 * - **Placeholder**: *None*
-	 * - **API ID Path**: homepage.og_sitename
-	 * - **Tab**: SEO
-	 * - **Documentation**: https://prismic.io/docs/field#key-text
-	 */
-	og_sitename: prismic.KeyTextField
-
-	/**
 	 * OG image field in *Homepage*
 	 *
 	 * - **Field Type**: Image
@@ -663,6 +609,17 @@ interface SecondLevelPageDocumentData {
 	latest_revision_date: prismic.KeyTextField
 
 	/**
+	 * Ultima revisione per sort field in *Pagina di secondo livello*
+	 *
+	 * - **Field Type**: Date
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: second_level_page.latest_revision_date_sort
+	 * - **Tab**: Main
+	 * - **Documentation**: https://prismic.io/docs/field#date
+	 */
+	latest_revision_date_sort: prismic.DateField
+
+	/**
 	 * Slice Zone field in *Pagina di secondo livello*
 	 *
 	 * - **Field Type**: Slice Zone
@@ -672,6 +629,18 @@ interface SecondLevelPageDocumentData {
 	 * - **Documentation**: https://prismic.io/docs/field#slices
 	 */
 	slices: prismic.SliceZone<SecondLevelPageDocumentDataSlicesSlice> /**
+	 * No index field in *Pagina di secondo livello*
+	 *
+	 * - **Field Type**: Boolean
+	 * - **Placeholder**: *None*
+	 * - **Default Value**: false
+	 * - **API ID Path**: second_level_page.no_index
+	 * - **Tab**: SEO
+	 * - **Documentation**: https://prismic.io/docs/field#boolean
+	 */
+	no_index: prismic.BooleanField
+
+	/**
 	 * SEO title field in *Pagina di secondo livello*
 	 *
 	 * - **Field Type**: Text
@@ -694,39 +663,6 @@ interface SecondLevelPageDocumentData {
 	seo_description: prismic.KeyTextField
 
 	/**
-	 * OG title field in *Pagina di secondo livello*
-	 *
-	 * - **Field Type**: Text
-	 * - **Placeholder**: *None*
-	 * - **API ID Path**: second_level_page.og_title
-	 * - **Tab**: SEO
-	 * - **Documentation**: https://prismic.io/docs/field#key-text
-	 */
-	og_title: prismic.KeyTextField
-
-	/**
-	 * OG description field in *Pagina di secondo livello*
-	 *
-	 * - **Field Type**: Text
-	 * - **Placeholder**: *None*
-	 * - **API ID Path**: second_level_page.og_description
-	 * - **Tab**: SEO
-	 * - **Documentation**: https://prismic.io/docs/field#key-text
-	 */
-	og_description: prismic.KeyTextField
-
-	/**
-	 * OG sitename field in *Pagina di secondo livello*
-	 *
-	 * - **Field Type**: Text
-	 * - **Placeholder**: *None*
-	 * - **API ID Path**: second_level_page.og_sitename
-	 * - **Tab**: SEO
-	 * - **Documentation**: https://prismic.io/docs/field#key-text
-	 */
-	og_sitename: prismic.KeyTextField
-
-	/**
 	 * OG image field in *Pagina di secondo livello*
 	 *
 	 * - **Field Type**: Image
@@ -738,16 +674,19 @@ interface SecondLevelPageDocumentData {
 	og_image: prismic.ImageField<never>
 
 	/**
-	 * No index field in *Pagina di secondo livello*
+	 * Schema.org type field in *Pagina di secondo livello*
 	 *
-	 * - **Field Type**: Boolean
+	 * - **Field Type**: Select
 	 * - **Placeholder**: *None*
-	 * - **Default Value**: false
-	 * - **API ID Path**: second_level_page.no_index
+	 * - **Default Value**: WebPage
+	 * - **API ID Path**: second_level_page.schema_org_type
 	 * - **Tab**: SEO
-	 * - **Documentation**: https://prismic.io/docs/field#boolean
+	 * - **Documentation**: https://prismic.io/docs/field#select
 	 */
-	no_index: prismic.BooleanField
+	schema_org_type: prismic.SelectField<
+		'WebPage' | 'AboutPage' | 'Article' | 'Blog' | 'BlogPosting' | 'ContactPage' | 'NewsArticle' | 'Service',
+		'filled'
+	>
 }
 
 /**

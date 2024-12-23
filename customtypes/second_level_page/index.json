@@ -89,6 +89,13 @@
 					"placeholder": ""
 				}
 			},
+			"latest_revision_date_sort": {
+				"type": "Date",
+				"config": {
+					"label": "Ultima revisione per sort",
+					"placeholder": ""
+				}
+			},
 			"slices": {
 				"type": "Slices",
 				"fieldset": "Slice Zone",
@@ -132,6 +139,15 @@
 			}
 		},
 		"SEO": {
+			"no_index": {
+				"type": "Boolean",
+				"config": {
+					"label": "No index",
+					"placeholder_false": "Indicizza",
+					"placeholder_true": "Non indicizzare",
+					"default_value": false
+				}
+			},
 			"seo_title": {
 				"type": "Text",
 				"config": {
@@ -146,27 +162,6 @@
 					"placeholder": ""
 				}
 			},
-			"og_title": {
-				"type": "Text",
-				"config": {
-					"label": "OG title",
-					"placeholder": ""
-				}
-			},
-			"og_description": {
-				"type": "Text",
-				"config": {
-					"label": "OG description",
-					"placeholder": ""
-				}
-			},
-			"og_sitename": {
-				"type": "Text",
-				"config": {
-					"label": "OG sitename",
-					"placeholder": ""
-				}
-			},
 			"og_image": {
 				"type": "Image",
 				"config": {
@@ -175,13 +170,22 @@
 					"thumbnails": []
 				}
 			},
-			"no_index": {
-				"type": "Boolean",
+			"schema_org_type": {
+				"type": "Select",
 				"config": {
-					"label": "No index",
-					"placeholder_false": "Indicizza",
-					"placeholder_true": "Non indicizzare",
-					"default_value": false
+					"label": "Schema.org type",
+					"placeholder": "",
+					"options": [
+						"WebPage",
+						"AboutPage",
+						"Article",
+						"Blog",
+						"BlogPosting",
+						"ContactPage",
+						"NewsArticle",
+						"Service"
+					],
+					"default_value": "WebPage"
 				}
 			}
 		}

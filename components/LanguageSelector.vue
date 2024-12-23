@@ -23,7 +23,7 @@
 					:field="{ ...alternateLang, link_type: 'Document' }"
 					class="block country-flag"
 					:class="alternateLang.lang"
-					:aria-label="alternateLang.lang === 'en' ? 'English' : alternateLang.lang === 'de' ? 'Deutsch' : 'Italiano'"
+					:aria-label="alternateLang.lang === 'en' ? 'English' : 'Italiano'"
 					role="button"
 					@click.native="handleDropdownClick"
 				/>

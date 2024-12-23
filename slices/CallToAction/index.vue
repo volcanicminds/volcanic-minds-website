@@ -10,10 +10,7 @@
 				class="btn btn-primary uppercase"
 				:class="slice.primary.size ? '' : 'btn-big'"
 				:aria-label="
-					slice.primary.accessible_label &&
-					slice.primary.link &&
-					slice.primary.link.target &&
-					slice.primary.link.target === '_blank'
+					slice.primary.accessible_label && slice.primary.link?.target === '_blank'
 						? slice.primary.accessible_label
 						: undefined
 				"

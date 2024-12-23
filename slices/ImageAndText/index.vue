@@ -25,10 +25,7 @@
 						:field="slice.primary.cta_link"
 						class="btn btn-primary mb4"
 						:aria-label="
-							slice.primary.cta_accessible_text &&
-							slice.primary.cta_link &&
-							slice.primary.cta_link.target &&
-							slice.primary.cta_link.target === '_blank'
+							slice.primary.cta_accessible_text && slice.primary.cta_link?.target === '_blank'
 								? slice.primary.cta_accessible_text
 								: undefined
 						"
