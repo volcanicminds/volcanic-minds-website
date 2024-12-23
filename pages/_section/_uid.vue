@@ -19,6 +19,7 @@
 
 <script lang="ts">
 import { Vue, Component, Provide } from 'nuxt-property-decorator'
+import dayjs from 'dayjs'
 import { components } from '~/slices'
 
 @Component({
@@ -165,12 +166,17 @@ export default class PageComponent extends Vue {
 						'@type': this.document.data.schema_org_type,
 						headline: this.document.data.seo_title || this.$constants.seoTitle,
 						description: this.document.data.seo_description || this.$constants.seoDescription,
-						datePublished: this.document.data.publication_date_sort || undefined,
-						dateModified: this.document.data.latest_revision_date_sort || undefined,
+						datePublished: this.document.data.publication_date_sort
+							? dayjs(this.document.data.publication_date_sort).format('YYYY-MM-DDTHH:mm:ss[Z]')
+							: undefined,
+						dateModified: this.document.data.latest_revision_date_sort
+							? dayjs(this.document.data.latest_revision_date_sort).format('YYYY-MM-DDTHH:mm:ss[Z]')
+							: undefined,
 						author: ['Article', 'BlogPosting', 'NewsArticle'].includes(this.document.data.schema_org_type)
 							? {
 									'@type': 'Organization',
-									name: 'Volcanic Minds',
+									url: process.env.NUXT_SITENAME,
+									name: this.$constants.author,
 									logo: {
 										'@type': 'ImageObject',
 										url: `${process.env.NUXT_SITENAME}${this.$constants.logo}`,
@@ -181,7 +187,7 @@ export default class PageComponent extends Vue {
 							: undefined,
 						publisher: {
 							'@type': 'Organization',
-							name: 'Volcanic Minds',
+							name: this.$constants.author,
 							logo: {
 								'@type': 'ImageObject',
 								url: `${process.env.NUXT_SITENAME}${this.$constants.logo}`,
