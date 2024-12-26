@@ -112,4 +112,5 @@ const props = defineProps({
 		&:hover
 			.zoom-on-hover
 				transform scale(1.05)
+				filter blur(1px)
 </style>
