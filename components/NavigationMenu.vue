@@ -15,6 +15,7 @@
 							class="border-none font-light dropdown__title cursor-pointer flex items-center p0"
 							:class="isMobile ? 'h2 font-light' : ''"
 							aria-expanded="false"
+							aria-haspopup="true"
 							:aria-controls="`dropdown-${i}`"
 						>
 							{{ firstLevel.primary.link_title
