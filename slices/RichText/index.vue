@@ -43,6 +43,11 @@ defineProps({
 	>>> p.block-img
 		img
 			max-width 100%
+			display flex
+			justify-self center
+	>>> [data-oembed-type='link']
+		img
+			max-width 100%
 
 .text-big
 	.rich-text
