@@ -41,22 +41,17 @@ defineProps({
 <style lang="stylus" scoped>
 .rich-text
 	>>> p.block-img
-		img
-			max-width 100%
-			display flex
-			justify-self center
-	>>> [data-oembed-type='link']
+		display flex
+		justify-content center
 		img
 			max-width 100%
 
-.text-big
-	.rich-text
+	.text-big &
 		font-size 1.1em
 		font-weight 300
 		@media (min-width: 40em)
 			font-size 1.3em
 
-.text-small
-	.rich-text
+	.text-small &
 		font-size 0.8em
 </style>

@@ -1,6 +1,6 @@
 {
 	"name": "volcanic-minds-website",
-	"version": "2.1.1",
+	"version": "2.1.2",
 	"license": "ISC",
 	"scripts": {
 		"dev": "export NODE_ENV=development && node ./switch_env.mjs && nuxt dev",
@@ -27,7 +27,7 @@
 		"@prismicio/helpers": "^2.3.9",
 		"@prismicio/slice-simulator-vue": "^0.2.3",
 		"basscss": "^8.1.0",
-		"core-js": "^3.39.0",
+		"core-js": "^3.40.0",
 		"dayjs": "^1.11.13",
 		"normalize.css": "^8.0.1",
 		"nuxt": "^2.18.1",
