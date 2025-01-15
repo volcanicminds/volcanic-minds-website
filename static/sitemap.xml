@@ -50,6 +50,10 @@
         <loc>https://volcanicminds.com/insights/corporate-meeting-polo-ict</loc>
         <xhtml:link rel="alternate" hreflang="it-it" href="https://volcanicminds.com/insights/corporate-meeting-polo-ict" />
     </url>
+    <url>
+        <loc>https://volcanicminds.com/insights/llm-transformersjs-practical-guide</loc>
+        <xhtml:link rel="alternate" hreflang="it-it" href="https://volcanicminds.com/insights/llm-transformersjs-practical-guide" />
+    </url>
     <!-- About us -->
     <url>
         <loc>https://volcanicminds.com/about-us</loc>

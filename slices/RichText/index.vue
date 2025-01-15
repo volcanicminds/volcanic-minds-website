@@ -40,6 +40,7 @@ defineProps({
 
 <style lang="stylus" scoped>
 .rich-text
+	word-wrap break-word
 	>>> p.block-img
 		display flex
 		justify-content center

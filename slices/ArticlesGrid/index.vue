@@ -104,6 +104,7 @@ const props = defineProps({
 			height 46px
 		.zoom-on-hover
 			transition all 0.4s
+			transform scale(1.05)
 		.tag
 			border-radius 4px
 			font-size 12px
@@ -111,6 +112,5 @@ const props = defineProps({
 
 		&:hover
 			.zoom-on-hover
-				transform scale(1.05)
-				filter blur(1px)
+				transform scale(1)
 </style>
