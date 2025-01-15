@@ -34,6 +34,9 @@
 				"fieldset": "Slice Zone",
 				"config": {
 					"choices": {
+						"syntax_highlighter": {
+							"type": "SharedSlice"
+						},
 						"articles_grid": {
 							"type": "SharedSlice"
 						},

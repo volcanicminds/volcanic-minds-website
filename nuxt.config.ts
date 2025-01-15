@@ -118,7 +118,8 @@ export default async () => {
 			'basscss-responsive-margin/css/responsive-margin.css',
 			'basscss-responsive-padding/css/responsive-padding.css',
 			'@/assets/style/index.styl',
-			'@fortawesome/fontawesome-svg-core/styles.css'
+			'@fortawesome/fontawesome-svg-core/styles.css',
+			'highlight.js/styles/monokai.css'
 		],
 
 		// Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
