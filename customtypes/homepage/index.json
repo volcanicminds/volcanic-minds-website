@@ -25,6 +25,9 @@
 				"fieldset": "Slice Zone",
 				"config": {
 					"choices": {
+						"syntax_highlighter": {
+							"type": "SharedSlice"
+						},
 						"timeline": {
 							"type": "SharedSlice"
 						},

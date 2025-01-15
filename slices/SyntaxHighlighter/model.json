@@ -1,0 +1,72 @@
+{
+  "id": "syntax_highlighter",
+  "type": "SharedSlice",
+  "name": "SyntaxHighlighter",
+  "description": "SyntaxHighlighter",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "language": {
+          "type": "Select",
+          "config": {
+            "label": "Linguaggio",
+            "placeholder": "Seleziona il linguaggio da renderizzare",
+            "options": [
+              "javascript",
+              "typescript"
+            ],
+            "default_value": "javascript"
+          }
+        },
+        "code": {
+          "type": "Text",
+          "config": {
+            "label": "Codice",
+            "placeholder": "Incolla qua lo snippet di codice"
+          }
+        },
+        "max_height": {
+          "type": "Number",
+          "config": {
+            "label": "Altezza massima",
+            "placeholder": "In pixel"
+          }
+        },
+        "margin_top": {
+          "type": "Boolean",
+          "config": {
+            "label": "Margine superiore",
+            "placeholder_false": "No",
+            "placeholder_true": "Sì",
+            "default_value": false
+          }
+        },
+        "margin_bottom": {
+          "type": "Boolean",
+          "config": {
+            "label": "Margine inferiore",
+            "placeholder_false": "No",
+            "placeholder_true": "Sì",
+            "default_value": false
+          }
+        },
+        "enable_animation": {
+          "type": "Boolean",
+          "config": {
+            "label": "Abilita animazione",
+            "placeholder_false": "No",
+            "placeholder_true": "Sì",
+            "default_value": false
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

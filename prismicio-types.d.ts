@@ -6,6 +6,7 @@ import type * as prismicClient from '@prismicio/client'
 type Simplify<T> = { [KeyType in keyof T]: T[KeyType] }
 
 type FirstLevelPageDocumentDataSlicesSlice =
+	| SyntaxHighlighterSlice
 	| ArticlesGridSlice
 	| HeroBannerSlice
 	| AccordionSlice
@@ -109,7 +110,10 @@ interface FirstLevelPageDocumentData {
 	 * - **Tab**: SEO
 	 * - **Documentation**: https://prismic.io/docs/field#select
 	 */
-	schema_org_type: prismic.SelectField<'WebPage' | 'AboutPage', 'filled'>
+	schema_org_type: prismic.SelectField<
+		'WebPage' | 'AboutPage' | 'Article' | 'Blog' | 'BlogPosting' | 'ContactPage' | 'NewsArticle' | 'Service',
+		'filled'
+	>
 }
 
 /**
@@ -350,6 +354,7 @@ export type HeaderDocument<Lang extends string = string> = prismic.PrismicDocume
 >
 
 type HomepageDocumentDataSlicesSlice =
+	| SyntaxHighlighterSlice
 	| TimelineSlice
 	| ArticlesGridSlice
 	| HeroBannerSlice
@@ -480,6 +485,7 @@ export type NavigationMenuDocument<Lang extends string = string> = prismic.Prism
 >
 
 type SecondLevelPageDocumentDataSlicesSlice =
+	| SyntaxHighlighterSlice
 	| ArticlesGridSlice
 	| HeroBannerSlice
 	| CardsGridSlice
@@ -2231,6 +2237,102 @@ type StatisticsSliceVariation = StatisticsSliceDefault
 export type StatisticsSlice = prismic.SharedSlice<'statistics', StatisticsSliceVariation>
 
 /**
+ * Primary content in *SyntaxHighlighter → Default → Primary*
+ */
+export interface SyntaxHighlighterSliceDefaultPrimary {
+	/**
+	 * Linguaggio field in *SyntaxHighlighter → Default → Primary*
+	 *
+	 * - **Field Type**: Select
+	 * - **Placeholder**: Seleziona il linguaggio da renderizzare
+	 * - **Default Value**: javascript
+	 * - **API ID Path**: syntax_highlighter.default.primary.language
+	 * - **Documentation**: https://prismic.io/docs/field#select
+	 */
+	language: prismic.SelectField<'javascript' | 'typescript', 'filled'>
+
+	/**
+	 * Codice field in *SyntaxHighlighter → Default → Primary*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: Incolla qua lo snippet di codice
+	 * - **API ID Path**: syntax_highlighter.default.primary.code
+	 * - **Documentation**: https://prismic.io/docs/field#key-text
+	 */
+	code: prismic.KeyTextField
+
+	/**
+	 * Altezza massima field in *SyntaxHighlighter → Default → Primary*
+	 *
+	 * - **Field Type**: Number
+	 * - **Placeholder**: In pixel
+	 * - **API ID Path**: syntax_highlighter.default.primary.max_height
+	 * - **Documentation**: https://prismic.io/docs/field#number
+	 */
+	max_height: prismic.NumberField
+
+	/**
+	 * Margine superiore field in *SyntaxHighlighter → Default → Primary*
+	 *
+	 * - **Field Type**: Boolean
+	 * - **Placeholder**: *None*
+	 * - **Default Value**: false
+	 * - **API ID Path**: syntax_highlighter.default.primary.margin_top
+	 * - **Documentation**: https://prismic.io/docs/field#boolean
+	 */
+	margin_top: prismic.BooleanField
+
+	/**
+	 * Margine inferiore field in *SyntaxHighlighter → Default → Primary*
+	 *
+	 * - **Field Type**: Boolean
+	 * - **Placeholder**: *None*
+	 * - **Default Value**: false
+	 * - **API ID Path**: syntax_highlighter.default.primary.margin_bottom
+	 * - **Documentation**: https://prismic.io/docs/field#boolean
+	 */
+	margin_bottom: prismic.BooleanField
+
+	/**
+	 * Abilita animazione field in *SyntaxHighlighter → Default → Primary*
+	 *
+	 * - **Field Type**: Boolean
+	 * - **Placeholder**: *None*
+	 * - **Default Value**: false
+	 * - **API ID Path**: syntax_highlighter.default.primary.enable_animation
+	 * - **Documentation**: https://prismic.io/docs/field#boolean
+	 */
+	enable_animation: prismic.BooleanField
+}
+
+/**
+ * Default variation for SyntaxHighlighter Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type SyntaxHighlighterSliceDefault = prismic.SharedSliceVariation<
+	'default',
+	Simplify<SyntaxHighlighterSliceDefaultPrimary>,
+	never
+>
+
+/**
+ * Slice variation for *SyntaxHighlighter*
+ */
+type SyntaxHighlighterSliceVariation = SyntaxHighlighterSliceDefault
+
+/**
+ * SyntaxHighlighter Shared Slice
+ *
+ * - **API ID**: `syntax_highlighter`
+ * - **Description**: SyntaxHighlighter
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type SyntaxHighlighterSlice = prismic.SharedSlice<'syntax_highlighter', SyntaxHighlighterSliceVariation>
+
+/**
  * Primary content in *Timeline → Default → Primary*
  */
 export interface TimelineSliceDefaultPrimary {
@@ -2441,6 +2543,10 @@ declare module '@prismicio/client' {
 			StatisticsSliceDefaultItem,
 			StatisticsSliceVariation,
 			StatisticsSliceDefault,
+			SyntaxHighlighterSlice,
+			SyntaxHighlighterSliceDefaultPrimary,
+			SyntaxHighlighterSliceVariation,
+			SyntaxHighlighterSliceDefault,
 			TimelineSlice,
 			TimelineSliceDefaultPrimary,
 			TimelineSliceDefaultItem,
