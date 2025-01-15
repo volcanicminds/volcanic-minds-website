@@ -6,7 +6,7 @@
 		:enable-observer="slice.primary.enable_animation || false"
 	>
 		<WrapperContainer>
-			<pre><div class="overflow-auto p1 code-container" :style="{ maxHeight: `${slice.primary.max_height}px` }"><code :class="`language-${slice.primary.language}`" v-html="hljs.highlight(slice.primary.code, { language: slice.primary.language }).value"></code></div></pre>
+			<pre><div class="overflow-auto p2 code-container" :style="{ maxHeight: `${slice.primary.max_height}px` }"><code :class="`language-${slice.primary.language}`" v-html="hljs.highlight(slice.primary.code, { language: slice.primary.language }).value"></code></div></pre>
 		</WrapperContainer>
 	</WrapperSlice>
 </template>
@@ -37,6 +37,7 @@ defineProps({
 pre
 	background #282c34
 	box-shadow 7px 7px 15px 0 #0000004d
+	border-radius 15px
 	.code-container
 		line-height 1.3
 		font-size 0.8em
