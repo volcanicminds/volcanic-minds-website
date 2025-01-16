@@ -2052,10 +2052,10 @@
     tslib "^2.3.1"
     uuid "^9.0.0"
 
-"@prismicio/types-internal@3.2.0":
-  version "3.2.0"
-  resolved "https://registry.yarnpkg.com/@prismicio/types-internal/-/types-internal-3.2.0.tgz#98ee6b4a0d50abc89560e561ed252a4d73a165e4"
-  integrity sha512-e/eps+d/LPPn9FlzmjxLFvZV+SU6lu65zUH53BrS1Tm0JBQjyL9zSWBX96TrSGnuzwxf5LleYlyc+KBs8pYSkg==
+"@prismicio/types-internal@3.3.0":
+  version "3.3.0"
+  resolved "https://registry.yarnpkg.com/@prismicio/types-internal/-/types-internal-3.3.0.tgz#1d985b4c3591becbbc15ba65d6d0321e07f0967f"
+  integrity sha512-5Vg0oM6FlFa5lgF7RirGf55/SZ/TJ/26tNNUDRiwZSbs8VZUMbIO21IkjTuc6lFn+hKWKCXRxB6+lgmdvaZ2QQ==
   dependencies:
     monocle-ts "^2.3.11"
     newtype-ts "^0.3.5"
@@ -2174,14 +2174,14 @@
   resolved "https://registry.yarnpkg.com/@sideway/pinpoint/-/pinpoint-2.0.0.tgz#cff8ffadc372ad29fd3f78277aeb29e632cc70df"
   integrity sha512-RNiOoTPkptFtSVzQevY/yWtZwf/RxyVnPy/OcA9HBM3MlGDnBEYL5B41H0MTn0Uec8Hi+2qUtTfG2WWZBmMejQ==
 
-"@slicemachine/adapter-nuxt2@^0.3.61":
-  version "0.3.61"
-  resolved "https://registry.yarnpkg.com/@slicemachine/adapter-nuxt2/-/adapter-nuxt2-0.3.61.tgz#e530c0050cc1071d81e80ea03e2b50c11dd1462c"
-  integrity sha512-IEMjKG1CaA4e6T3+uMxuA+PFoAAKKtiu3Bkq92U0RZU11k/+1IsDvC3S3P2jWMnMZkDgnoZUvTbTNrABfFqqsg==
+"@slicemachine/adapter-nuxt2@^0.3.63":
+  version "0.3.63"
+  resolved "https://registry.yarnpkg.com/@slicemachine/adapter-nuxt2/-/adapter-nuxt2-0.3.63.tgz#9f51cbb9f41f83db3c7da6264db47fc26b0df9a4"
+  integrity sha512-VWS0FSSNqT1jYzKpGt3OvpnS4BG1U2Kr1ULqKp+QVFTSt2iqpMfDT3jMAEJzGpN7o2ZxpdxnJYCDjaxo7WhgbA==
   dependencies:
     "@prismicio/simulator" "^0.1.4"
-    "@prismicio/types-internal" "3.2.0"
-    "@slicemachine/plugin-kit" "0.4.61"
+    "@prismicio/types-internal" "3.3.0"
+    "@slicemachine/plugin-kit" "0.4.63"
     common-tags "^1.8.2"
     fp-ts "^2.13.1"
     io-ts "^2.2.20"
@@ -2237,10 +2237,10 @@
     prettier "^3.0.3"
     prismic-ts-codegen "^0.1.19"
 
-"@slicemachine/plugin-kit@0.4.61":
-  version "0.4.61"
-  resolved "https://registry.yarnpkg.com/@slicemachine/plugin-kit/-/plugin-kit-0.4.61.tgz#2c3434aac43b980aae469478196d135faf7690e8"
-  integrity sha512-4SqfKGHW1JXMynm04d3I4wTBWqjpfFE8SdD6wg474SqjquXzeEFTUgLNZMhrfNZJGp0YjrOhcUd2wuWisgj6zQ==
+"@slicemachine/plugin-kit@0.4.63":
+  version "0.4.63"
+  resolved "https://registry.yarnpkg.com/@slicemachine/plugin-kit/-/plugin-kit-0.4.63.tgz#1a58dae3af00e9fe209f8cf065c573af4d4e5c05"
+  integrity sha512-BVovKKdPXTK6C8rim5aAdlEE+RfmQvt7Erp7bg/dgbzdnedhhp9NpTOvVYdsRhXWOE9+RCBpqQhtEI64/lud9g==
   dependencies:
     "@prismicio/client" "^7.11.0"
     common-tags "^1.8.2"
