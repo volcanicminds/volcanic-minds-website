@@ -68,7 +68,7 @@ defineProps({
 		>>> h1
 			margin-top 0
 			font-weight 100
-			font-size 13vw
+			font-size 11vw
 			word-wrap break-word
 			@media (min-width: 52em)
 				font-size 5em

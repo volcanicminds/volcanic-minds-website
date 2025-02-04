@@ -6,6 +6,7 @@ import type * as prismicClient from '@prismicio/client'
 type Simplify<T> = { [KeyType in keyof T]: T[KeyType] }
 
 type FirstLevelPageDocumentDataSlicesSlice =
+	| SocialShareSlice
 	| SyntaxHighlighterSlice
 	| ArticlesGridSlice
 	| HeroBannerSlice
@@ -153,7 +154,7 @@ export interface FooterDocumentDataIconLinksItem {
 	 * - **API ID Path**: footer.icon_links[].link
 	 * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
 	 */
-	link: prismic.LinkField
+	link: prismic.LinkField<string, string, unknown, prismic.FieldState, never>
 
 	/**
 	 * Alt text field in *Footer → Link con icone*
@@ -188,7 +189,7 @@ export interface FooterDocumentDataTextLinksItem {
 	 * - **API ID Path**: footer.text_links[].link
 	 * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
 	 */
-	link: prismic.LinkField
+	link: prismic.LinkField<string, string, unknown, prismic.FieldState, never>
 
 	/**
 	 * Nome accessibile field in *Footer → Link testuali*
@@ -485,6 +486,7 @@ export type NavigationMenuDocument<Lang extends string = string> = prismic.Prism
 >
 
 type SecondLevelPageDocumentDataSlicesSlice =
+	| SocialShareSlice
 	| SyntaxHighlighterSlice
 	| ArticlesGridSlice
 	| HeroBannerSlice
@@ -904,7 +906,7 @@ export interface ArticlesGridSliceDefaultPrimary {
 	 * - **API ID Path**: articles_grid.default.primary.blog_cta_link
 	 * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
 	 */
-	blog_cta_link: prismic.LinkField
+	blog_cta_link: prismic.LinkField<string, string, unknown, prismic.FieldState, never>
 
 	/**
 	 * CTA blog label field in *ArticlesGrid → Selected articles → Primary*
@@ -1103,7 +1105,7 @@ export interface CallToActionSliceDefaultPrimary {
 	 * - **API ID Path**: call_to_action.default.primary.link
 	 * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
 	 */
-	link: prismic.LinkField
+	link: prismic.LinkField<string, string, unknown, prismic.FieldState, never>
 
 	/**
 	 * Dimensione field in *CallToAction → Default → Primary*
@@ -1288,7 +1290,7 @@ export interface CardsGridSliceDefaultItem {
 	 * - **API ID Path**: cards_grid.items[].cta_link
 	 * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
 	 */
-	cta_link: prismic.LinkField
+	cta_link: prismic.LinkField<string, string, unknown, prismic.FieldState, never>
 
 	/**
 	 * CTA Testo accessibile field in *CardsGrid → Items*
@@ -1390,7 +1392,7 @@ export interface ContactsSliceDefaultPrimary {
 	 * - **API ID Path**: contacts.default.primary.button_link
 	 * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
 	 */
-	button_link: prismic.LinkField
+	button_link: prismic.LinkField<string, string, unknown, prismic.FieldState, never>
 
 	/**
 	 * Label bottone field in *Contacts → Default → Primary*
@@ -1575,7 +1577,7 @@ export interface HeroBannerSliceDefaultPrimary {
 	 * - **API ID Path**: hero_banner.default.primary.cta_link
 	 * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
 	 */
-	cta_link: prismic.LinkField
+	cta_link: prismic.LinkField<string, string, unknown, prismic.FieldState, never>
 
 	/**
 	 * CTA testo field in *HeroBanner → Default → Primary*
@@ -1711,7 +1713,7 @@ export interface ImageAndTextSliceDefaultPrimary {
 	 * - **API ID Path**: image_and_text.default.primary.cta_link
 	 * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
 	 */
-	cta_link: prismic.LinkField
+	cta_link: prismic.LinkField<string, string, unknown, prismic.FieldState, never>
 
 	/**
 	 * CTA Testo field in *ImageAndText → Default → Primary*
@@ -1795,7 +1797,7 @@ export interface NavigationMenuSliceDefaultPrimary {
 	 * - **API ID Path**: navigation_menu.default.primary.link_url
 	 * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
 	 */
-	link_url: prismic.LinkField
+	link_url: prismic.LinkField<string, string, unknown, prismic.FieldState, never>
 
 	/**
 	 * Titolo link field in *NavigationItem → Default → Primary*
@@ -1831,7 +1833,7 @@ export interface NavigationMenuSliceDefaultItem {
 	 * - **API ID Path**: navigation_menu.items[].link_url
 	 * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
 	 */
-	link_url: prismic.LinkField
+	link_url: prismic.LinkField<string, string, unknown, prismic.FieldState, never>
 
 	/**
 	 * Titolo link field in *NavigationItem → Items*
@@ -2004,7 +2006,7 @@ export interface PartnersSliceDefaultItem {
 	 * - **API ID Path**: partners.items[].link
 	 * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
 	 */
-	link: prismic.LinkField
+	link: prismic.LinkField<string, string, unknown, prismic.FieldState, never>
 }
 
 /**
@@ -2125,6 +2127,81 @@ type RichTextSliceVariation = RichTextSliceDefault
  * - **Documentation**: https://prismic.io/docs/slice
  */
 export type RichTextSlice = prismic.SharedSlice<'rich_text', RichTextSliceVariation>
+
+/**
+ * Primary content in *SocialShare → Default → Primary*
+ */
+export interface SocialShareSliceDefaultPrimary {
+	/**
+	 * Margine superiore field in *SocialShare → Default → Primary*
+	 *
+	 * - **Field Type**: Boolean
+	 * - **Placeholder**: *None*
+	 * - **Default Value**: false
+	 * - **API ID Path**: social_share.default.primary.margin_top
+	 * - **Documentation**: https://prismic.io/docs/field#boolean
+	 */
+	margin_top: prismic.BooleanField
+
+	/**
+	 * Margine inferiore field in *SocialShare → Default → Primary*
+	 *
+	 * - **Field Type**: Boolean
+	 * - **Placeholder**: *None*
+	 * - **Default Value**: false
+	 * - **API ID Path**: social_share.default.primary.margin_bottom
+	 * - **Documentation**: https://prismic.io/docs/field#boolean
+	 */
+	margin_bottom: prismic.BooleanField
+
+	/**
+	 * Abilita animazione field in *SocialShare → Default → Primary*
+	 *
+	 * - **Field Type**: Boolean
+	 * - **Placeholder**: *None*
+	 * - **Default Value**: false
+	 * - **API ID Path**: social_share.default.primary.enable_animation
+	 * - **Documentation**: https://prismic.io/docs/field#boolean
+	 */
+	enable_animation: prismic.BooleanField
+
+	/**
+	 * Titolo field in *SocialShare → Default → Primary*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: social_share.default.primary.title
+	 * - **Documentation**: https://prismic.io/docs/field#key-text
+	 */
+	title: prismic.KeyTextField
+}
+
+/**
+ * Default variation for SocialShare Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type SocialShareSliceDefault = prismic.SharedSliceVariation<
+	'default',
+	Simplify<SocialShareSliceDefaultPrimary>,
+	never
+>
+
+/**
+ * Slice variation for *SocialShare*
+ */
+type SocialShareSliceVariation = SocialShareSliceDefault
+
+/**
+ * SocialShare Shared Slice
+ *
+ * - **API ID**: `social_share`
+ * - **Description**: SocialShare
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type SocialShareSlice = prismic.SharedSlice<'social_share', SocialShareSliceVariation>
 
 /**
  * Primary content in *Statistics → Default → Primary*
@@ -2538,6 +2615,10 @@ declare module '@prismicio/client' {
 			RichTextSliceDefaultPrimary,
 			RichTextSliceVariation,
 			RichTextSliceDefault,
+			SocialShareSlice,
+			SocialShareSliceDefaultPrimary,
+			SocialShareSliceVariation,
+			SocialShareSliceDefault,
 			StatisticsSlice,
 			StatisticsSliceDefaultPrimary,
 			StatisticsSliceDefaultItem,
