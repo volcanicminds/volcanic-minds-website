@@ -1,0 +1,53 @@
+{
+  "id": "social_share",
+  "type": "SharedSlice",
+  "name": "SocialShare",
+  "description": "SocialShare",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "margin_top": {
+          "type": "Boolean",
+          "config": {
+            "label": "Margine superiore",
+            "placeholder_false": "No",
+            "placeholder_true": "Sì",
+            "default_value": false
+          }
+        },
+        "margin_bottom": {
+          "type": "Boolean",
+          "config": {
+            "label": "Margine inferiore",
+            "placeholder_false": "No",
+            "placeholder_true": "Sì",
+            "default_value": false
+          }
+        },
+        "enable_animation": {
+          "type": "Boolean",
+          "config": {
+            "label": "Abilita animazione",
+            "placeholder_false": "No",
+            "placeholder_true": "Sì",
+            "default_value": false
+          }
+        },
+        "title": {
+          "type": "Text",
+          "config": {
+            "label": "Titolo",
+            "placeholder": ""
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

@@ -101,6 +101,9 @@
 				"fieldset": "Slice Zone",
 				"config": {
 					"choices": {
+						"social_share": {
+							"type": "SharedSlice"
+						},
 						"syntax_highlighter": {
 							"type": "SharedSlice"
 						},

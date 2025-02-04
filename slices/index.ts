@@ -12,6 +12,7 @@ export const components = {
 		import(/* webpackChunkName: "prismic__slices__navigation_menu" */ './NavigationItem/index.vue'),
 	partners: () => import(/* webpackChunkName: "prismic__slices__partners" */ './Partners/index.vue'),
 	rich_text: () => import(/* webpackChunkName: "prismic__slices__rich_text" */ './RichText/index.vue'),
+	social_share: () => import(/* webpackChunkName: "prismic__slices__social_share" */ './SocialShare/index.vue'),
 	statistics: () => import(/* webpackChunkName: "prismic__slices__statistics" */ './Statistics/index.vue'),
 	syntax_highlighter: () =>
 		import(/* webpackChunkName: "prismic__slices__syntax_highlighter" */ './SyntaxHighlighter/index.vue'),
