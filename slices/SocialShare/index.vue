@@ -10,13 +10,13 @@
 			</div>
 			<div class="flex flex-wrap social-sharing justify-center">
 				<button class="btn linkedin" @click="shareOn('linkedin')">
-					<font-awesome-icon :icon="['fab', 'linkedin-in']" size="s" />
+					<font-awesome-icon :icon="['fab', 'linkedin-in']" size="sm" />
 				</button>
 				<button class="btn twitter" @click="shareOn('twitter')">
-					<font-awesome-icon :icon="['fab', 'x-twitter']" size="s" />
+					<font-awesome-icon :icon="['fab', 'x-twitter']" size="sm" />
 				</button>
 				<button class="btn facebook" @click="shareOn('facebook')">
-					<font-awesome-icon :icon="['fab', 'facebook-f']" size="s" />
+					<font-awesome-icon :icon="['fab', 'facebook-f']" size="sm" />
 				</button>
 			</div>
 		</WrapperContainer>
