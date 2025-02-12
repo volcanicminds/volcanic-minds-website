@@ -1,11 +1,11 @@
 <template>
 	<WrapperContainer class="mt4">
-		<div v-if="tags.length" class="flex items-center mb2">
-			<h2 class="my0 h4 mr1">Tag:</h2>
-			<span v-for="(tag, i) in tags" :key="i" class="tag bg-cultured raisin-black font-bold mr1 uppercase">{{
+		<h2 v-if="tags.length" class="h4">
+			Tag:
+			<span v-for="(tag, i) in tags" :key="i" class="tag bg-cultured raisin-black font-bold ml1 uppercase">{{
 				tag
 			}}</span>
-		</div>
+		</h2>
 		<p v-if="publicationDate" class="m0 date">{{ publicationDateLabel }}: {{ publicationDate }}</p>
 		<p v-if="latestRevisionDate" class="m0 date">{{ latestRevisionDateLabel }}: {{ latestRevisionDate }}</p>
 	</WrapperContainer>

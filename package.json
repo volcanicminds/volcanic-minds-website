@@ -57,7 +57,7 @@
 		"eslint-plugin-nuxt": "^4.0.0",
 		"eslint-plugin-vue": "^9.32.0",
 		"nuxt-compress": "^5.0.0",
-		"prettier": "^3.4.2",
+		"prettier": "^3.5.0",
 		"slice-machine-ui": "^1.26.0",
 		"stylus": "^0.64.0",
 		"stylus-loader": "4.3.3"
