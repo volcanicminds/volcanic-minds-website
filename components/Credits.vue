@@ -2,9 +2,9 @@
 	<WrapperContainer class="mt4">
 		<h2 v-if="tags.length" class="h4">
 			Tag:
-			<span v-for="(tag, i) in tags" :key="i" class="tag bg-cultured raisin-black font-bold ml1 uppercase">{{
-				tag
-			}}</span>
+			<span v-for="(tag, i) in tags" :key="i" class="tag bg-cultured raisin-black font-bold ml1 uppercase"
+				>&nbsp;{{ tag }}&nbsp;</span
+			>
 		</h2>
 		<p v-if="publicationDate" class="m0 date">{{ publicationDateLabel }}: {{ publicationDate }}</p>
 		<p v-if="latestRevisionDate" class="m0 date">{{ latestRevisionDateLabel }}: {{ latestRevisionDate }}</p>

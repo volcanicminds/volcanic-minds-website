@@ -41,6 +41,12 @@
     <url>
         <loc>https://volcanicminds.com/insights/google-analytics-gdpr-alternative-plausible</loc>
         <xhtml:link rel="alternate" hreflang="it-it" href="https://volcanicminds.com/insights/google-analytics-gdpr-alternative-plausible" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/insights/google-analytics-gdpr-alternative-plausible" />
+    </url>
+    <url>
+        <loc>https://volcanicminds.com/en/insights/google-analytics-gdpr-alternative-plausible</loc>
+        <xhtml:link rel="alternate" hreflang="it-it" href="https://volcanicminds.com/insights/google-analytics-gdpr-alternative-plausible" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/insights/google-analytics-gdpr-alternative-plausible" />
     </url>
     <url>
         <loc>https://volcanicminds.com/insights/linux-day-torino-2023</loc>
