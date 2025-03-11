@@ -1,0 +1,26 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"margin_top": {
+				"__TYPE__": "BooleanContent",
+				"value": true
+			},
+			"margin_bottom": {
+				"__TYPE__": "BooleanContent",
+				"value": true
+			},
+			"enable_animation": {
+				"__TYPE__": "BooleanContent",
+				"value": true
+			},
+			"video_id": {
+				"__TYPE__": "FieldContent",
+				"value": "ocean",
+				"type": "Text"
+			}
+		},
+		"items": []
+	}
+]

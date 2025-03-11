@@ -1,0 +1,53 @@
+{
+  "id": "youtube_embed",
+  "type": "SharedSlice",
+  "name": "YoutubeEmbed",
+  "description": "YoutubeEmbed",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "margin_top": {
+          "type": "Boolean",
+          "config": {
+            "label": "Margine superiore",
+            "default_value": false,
+            "placeholder_true": "true",
+            "placeholder_false": "false"
+          }
+        },
+        "margin_bottom": {
+          "type": "Boolean",
+          "config": {
+            "label": "Margine inferiore",
+            "default_value": false,
+            "placeholder_true": "true",
+            "placeholder_false": "false"
+          }
+        },
+        "enable_animation": {
+          "type": "Boolean",
+          "config": {
+            "label": "Abilita animazione",
+            "default_value": false,
+            "placeholder_true": "true",
+            "placeholder_false": "false"
+          }
+        },
+        "video_id": {
+          "type": "Text",
+          "config": {
+            "label": "ID video",
+            "placeholder": ""
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

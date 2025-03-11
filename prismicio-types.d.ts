@@ -486,6 +486,7 @@ export type NavigationMenuDocument<Lang extends string = string> = prismic.Prism
 >
 
 type SecondLevelPageDocumentDataSlicesSlice =
+	| YoutubeEmbedSlice
 	| SocialShareSlice
 	| SyntaxHighlighterSlice
 	| ArticlesGridSlice
@@ -2529,6 +2530,81 @@ type TimelineSliceVariation = TimelineSliceDefault
  */
 export type TimelineSlice = prismic.SharedSlice<'timeline', TimelineSliceVariation>
 
+/**
+ * Primary content in *YoutubeEmbed → Default → Primary*
+ */
+export interface YoutubeEmbedSliceDefaultPrimary {
+	/**
+	 * Margine superiore field in *YoutubeEmbed → Default → Primary*
+	 *
+	 * - **Field Type**: Boolean
+	 * - **Placeholder**: *None*
+	 * - **Default Value**: false
+	 * - **API ID Path**: youtube_embed.default.primary.margin_top
+	 * - **Documentation**: https://prismic.io/docs/field#boolean
+	 */
+	margin_top: prismic.BooleanField
+
+	/**
+	 * Margine inferiore field in *YoutubeEmbed → Default → Primary*
+	 *
+	 * - **Field Type**: Boolean
+	 * - **Placeholder**: *None*
+	 * - **Default Value**: false
+	 * - **API ID Path**: youtube_embed.default.primary.margin_bottom
+	 * - **Documentation**: https://prismic.io/docs/field#boolean
+	 */
+	margin_bottom: prismic.BooleanField
+
+	/**
+	 * Abilita animazione field in *YoutubeEmbed → Default → Primary*
+	 *
+	 * - **Field Type**: Boolean
+	 * - **Placeholder**: *None*
+	 * - **Default Value**: false
+	 * - **API ID Path**: youtube_embed.default.primary.enable_animation
+	 * - **Documentation**: https://prismic.io/docs/field#boolean
+	 */
+	enable_animation: prismic.BooleanField
+
+	/**
+	 * ID video field in *YoutubeEmbed → Default → Primary*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: youtube_embed.default.primary.video_id
+	 * - **Documentation**: https://prismic.io/docs/field#key-text
+	 */
+	video_id: prismic.KeyTextField
+}
+
+/**
+ * Default variation for YoutubeEmbed Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type YoutubeEmbedSliceDefault = prismic.SharedSliceVariation<
+	'default',
+	Simplify<YoutubeEmbedSliceDefaultPrimary>,
+	never
+>
+
+/**
+ * Slice variation for *YoutubeEmbed*
+ */
+type YoutubeEmbedSliceVariation = YoutubeEmbedSliceDefault
+
+/**
+ * YoutubeEmbed Shared Slice
+ *
+ * - **API ID**: `youtube_embed`
+ * - **Description**: YoutubeEmbed
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type YoutubeEmbedSlice = prismic.SharedSlice<'youtube_embed', YoutubeEmbedSliceVariation>
+
 declare module '@prismicio/client' {
 	interface CreateClient {
 		(repositoryNameOrEndpoint: string, options?: prismicClient.ClientConfig): prismicClient.Client<AllDocumentTypes>
@@ -2632,7 +2708,11 @@ declare module '@prismicio/client' {
 			TimelineSliceDefaultPrimary,
 			TimelineSliceDefaultItem,
 			TimelineSliceVariation,
-			TimelineSliceDefault
+			TimelineSliceDefault,
+			YoutubeEmbedSlice,
+			YoutubeEmbedSliceDefaultPrimary,
+			YoutubeEmbedSliceVariation,
+			YoutubeEmbedSliceDefault
 		}
 	}
 }

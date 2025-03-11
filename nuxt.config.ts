@@ -152,7 +152,7 @@ export default async () => {
 
 		// Build Configuration: https://go.nuxtjs.dev/config-build
 		build: {
-			transpile: ['vue-intersect']
+			transpile: ['vue-intersect', '@justinribeiro/lite-youtube']
 		},
 
 		prismic: {
@@ -187,6 +187,12 @@ export default async () => {
 				eslint: {
 					files: './**/*.{ts,js,vue}'
 				}
+			}
+		},
+
+		vue: {
+			config: {
+				ignoredElements: ['lite-youtube']
 			}
 		}
 	}
