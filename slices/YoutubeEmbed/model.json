@@ -45,6 +45,21 @@
             "label": "ID video",
             "placeholder": ""
           }
+        },
+        "video_title": {
+          "type": "Text",
+          "config": {
+            "label": "Titolo video",
+            "placeholder": ""
+          }
+        },
+        "video_preview": {
+          "type": "Image",
+          "config": {
+            "label": "Anteprima video",
+            "constraint": {},
+            "thumbnails": []
+          }
         }
       },
       "items": {}

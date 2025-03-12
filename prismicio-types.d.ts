@@ -2576,6 +2576,26 @@ export interface YoutubeEmbedSliceDefaultPrimary {
 	 * - **Documentation**: https://prismic.io/docs/field#key-text
 	 */
 	video_id: prismic.KeyTextField
+
+	/**
+	 * Titolo video field in *YoutubeEmbed → Default → Primary*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: youtube_embed.default.primary.video_title
+	 * - **Documentation**: https://prismic.io/docs/field#key-text
+	 */
+	video_title: prismic.KeyTextField
+
+	/**
+	 * Anteprima video field in *YoutubeEmbed → Default → Primary*
+	 *
+	 * - **Field Type**: Image
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: youtube_embed.default.primary.video_preview
+	 * - **Documentation**: https://prismic.io/docs/field#image
+	 */
+	video_preview: prismic.ImageField<never>
 }
 
 /**
