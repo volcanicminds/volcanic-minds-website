@@ -16,27 +16,27 @@
           "type": "Boolean",
           "config": {
             "label": "Margine superiore",
-            "default_value": false,
-            "placeholder_true": "true",
-            "placeholder_false": "false"
+            "placeholder_false": "No",
+            "placeholder_true": "Sì",
+            "default_value": false
           }
         },
         "margin_bottom": {
           "type": "Boolean",
           "config": {
             "label": "Margine inferiore",
-            "default_value": false,
-            "placeholder_true": "true",
-            "placeholder_false": "false"
+            "placeholder_false": "No",
+            "placeholder_true": "Sì",
+            "default_value": false
           }
         },
         "enable_animation": {
           "type": "Boolean",
           "config": {
             "label": "Abilita animazione",
-            "default_value": false,
-            "placeholder_true": "true",
-            "placeholder_false": "false"
+            "placeholder_false": "No",
+            "placeholder_true": "Sì",
+            "default_value": false
           }
         },
         "video_id": {
