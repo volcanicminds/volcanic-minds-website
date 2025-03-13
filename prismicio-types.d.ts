@@ -6,6 +6,7 @@ import type * as prismicClient from '@prismicio/client'
 type Simplify<T> = { [KeyType in keyof T]: T[KeyType] }
 
 type FirstLevelPageDocumentDataSlicesSlice =
+	| YoutubeEmbedSlice
 	| SocialShareSlice
 	| SyntaxHighlighterSlice
 	| ArticlesGridSlice
@@ -355,6 +356,7 @@ export type HeaderDocument<Lang extends string = string> = prismic.PrismicDocume
 >
 
 type HomepageDocumentDataSlicesSlice =
+	| YoutubeEmbedSlice
 	| SyntaxHighlighterSlice
 	| TimelineSlice
 	| ArticlesGridSlice

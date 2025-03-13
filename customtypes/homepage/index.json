@@ -25,6 +25,9 @@
 				"fieldset": "Slice Zone",
 				"config": {
 					"choices": {
+						"youtube_embed": {
+							"type": "SharedSlice"
+						},
 						"syntax_highlighter": {
 							"type": "SharedSlice"
 						},
