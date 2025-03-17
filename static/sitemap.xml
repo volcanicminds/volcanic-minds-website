@@ -118,6 +118,16 @@
         <xhtml:link rel="alternate" hreflang="it-it" href="https://volcanicminds.com/insights/low-code-no-code-vs-coding" />
         <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/insights/low-code-no-code-vs-coding" />
     </url>
+    <url>
+        <loc>https://volcanicminds.com/insights/seo-without-ads-geo-optimization</loc>
+        <xhtml:link rel="alternate" hreflang="it-it" href="https://volcanicminds.com/insights/seo-without-ads-geo-optimization" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/insights/seo-without-ads-geo-optimization" />
+    </url>
+    <url>
+        <loc>https://volcanicminds.com/en/insights/seo-without-ads-geo-optimization</loc>
+        <xhtml:link rel="alternate" hreflang="it-it" href="https://volcanicminds.com/insights/seo-without-ads-geo-optimization" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/insights/seo-without-ads-geo-optimization" />
+    </url>
     <!-- About us -->
     <url>
         <loc>https://volcanicminds.com/about-us</loc>
