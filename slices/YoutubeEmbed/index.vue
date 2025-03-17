@@ -4,7 +4,7 @@
 		:margin-bottom="slice.primary.margin_bottom || false"
 		:enable-observer="slice.primary.enable_animation || false"
 	>
-		<WrapperContainer>
+		<WrapperContainer class="md-px4">
 			<lite-youtube :videoid="slice.primary.video_id" :videotitle="slice.primary.video_title" autoload nocookie>
 				<a class="lite-youtube-fallback" :href="`https://www.youtube.com/watch?v=${slice.primary.video_id}`">{{
 					slice.primary.video_title
