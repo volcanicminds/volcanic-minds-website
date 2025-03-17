@@ -20,39 +20,103 @@
     <url>
         <loc>https://volcanicminds.com/insights</loc>
         <xhtml:link rel="alternate" hreflang="it-it" href="https://volcanicminds.com/insights" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/insights" />
+    </url>
+    <url>
+        <loc>https://volcanicminds.com/en/insights</loc>
+        <xhtml:link rel="alternate" hreflang="it-it" href="https://volcanicminds.com/insights" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/insights" />
     </url>
     <!-- Insights posts -->
     <url>
         <loc>https://volcanicminds.com/insights/making-of</loc>
         <xhtml:link rel="alternate" hreflang="it-it" href="https://volcanicminds.com/insights/making-of" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/insights/making-of" />
+    </url>
+    <url>
+        <loc>https://volcanicminds.com/en/insights/making-of</loc>
+        <xhtml:link rel="alternate" hreflang="it-it" href="https://volcanicminds.com/insights/making-of" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/insights/making-of" />
     </url>
     <url>
         <loc>https://volcanicminds.com/insights/google-analytics-gdpr-alternative-plausible</loc>
         <xhtml:link rel="alternate" hreflang="it-it" href="https://volcanicminds.com/insights/google-analytics-gdpr-alternative-plausible" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/insights/google-analytics-gdpr-alternative-plausible" />
+    </url>
+    <url>
+        <loc>https://volcanicminds.com/en/insights/google-analytics-gdpr-alternative-plausible</loc>
+        <xhtml:link rel="alternate" hreflang="it-it" href="https://volcanicminds.com/insights/google-analytics-gdpr-alternative-plausible" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/insights/google-analytics-gdpr-alternative-plausible" />
     </url>
     <url>
         <loc>https://volcanicminds.com/insights/linux-day-torino-2023</loc>
         <xhtml:link rel="alternate" hreflang="it-it" href="https://volcanicminds.com/insights/linux-day-torino-2023" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/insights/linux-day-torino-2023" />
+    </url>
+    <url>
+        <loc>https://volcanicminds.com/en/insights/linux-day-torino-2023</loc>
+        <xhtml:link rel="alternate" hreflang="it-it" href="https://volcanicminds.com/insights/linux-day-torino-2023" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/insights/linux-day-torino-2023" />
     </url>
     <url>
         <loc>https://volcanicminds.com/insights/future-vision-polo-ict</loc>
         <xhtml:link rel="alternate" hreflang="it-it" href="https://volcanicminds.com/insights/future-vision-polo-ict" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/insights/future-vision-polo-ict" />
+    </url>
+    <url>
+        <loc>https://volcanicminds.com/en/insights/future-vision-polo-ict</loc>
+        <xhtml:link rel="alternate" hreflang="it-it" href="https://volcanicminds.com/insights/future-vision-polo-ict" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/insights/future-vision-polo-ict" />
     </url>
     <url>
         <loc>https://volcanicminds.com/insights/a-bit-of-history-mupin</loc>
         <xhtml:link rel="alternate" hreflang="it-it" href="https://volcanicminds.com/insights/a-bit-of-history-mupin" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/insights/a-bit-of-history-mupin" />
+    </url>
+    <url>
+        <loc>https://volcanicminds.com/en/insights/a-bit-of-history-mupin</loc>
+        <xhtml:link rel="alternate" hreflang="it-it" href="https://volcanicminds.com/insights/a-bit-of-history-mupin" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/insights/a-bit-of-history-mupin" />
     </url>
     <url>
         <loc>https://volcanicminds.com/insights/smartcommunities-booklet</loc>
         <xhtml:link rel="alternate" hreflang="it-it" href="https://volcanicminds.com/insights/smartcommunities-booklet" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/insights/smartcommunities-booklet" />
+    </url>
+    <url>
+        <loc>https://volcanicminds.com/en/insights/smartcommunities-booklet</loc>
+        <xhtml:link rel="alternate" hreflang="it-it" href="https://volcanicminds.com/insights/smartcommunities-booklet" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/insights/smartcommunities-booklet" />
     </url>
     <url>
         <loc>https://volcanicminds.com/insights/corporate-meeting-polo-ict</loc>
         <xhtml:link rel="alternate" hreflang="it-it" href="https://volcanicminds.com/insights/corporate-meeting-polo-ict" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/insights/corporate-meeting-polo-ict" />
+    </url>
+    <url>
+        <loc>https://volcanicminds.com/en/insights/corporate-meeting-polo-ict</loc>
+        <xhtml:link rel="alternate" hreflang="it-it" href="https://volcanicminds.com/insights/corporate-meeting-polo-ict" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/insights/corporate-meeting-polo-ict" />
     </url>
     <url>
         <loc>https://volcanicminds.com/insights/llm-javascript-practical-guide</loc>
         <xhtml:link rel="alternate" hreflang="it-it" href="https://volcanicminds.com/insights/llm-javascript-practical-guide" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/insights/llm-javascript-practical-guide" />
+    </url>
+    <url>
+        <loc>https://volcanicminds.com/en/insights/llm-javascript-practical-guide</loc>
+        <xhtml:link rel="alternate" hreflang="it-it" href="https://volcanicminds.com/insights/llm-javascript-practical-guide" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/insights/llm-javascript-practical-guide" />
+    </url>
+    <url>
+        <loc>https://volcanicminds.com/insights/low-code-no-code-vs-coding</loc>
+        <xhtml:link rel="alternate" hreflang="it-it" href="https://volcanicminds.com/insights/low-code-no-code-vs-coding" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/insights/low-code-no-code-vs-coding" />
+    </url>
+    <url>
+        <loc>https://volcanicminds.com/en/insights/low-code-no-code-vs-coding</loc>
+        <xhtml:link rel="alternate" hreflang="it-it" href="https://volcanicminds.com/insights/low-code-no-code-vs-coding" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/insights/low-code-no-code-vs-coding" />
     </url>
     <!-- About us -->
     <url>

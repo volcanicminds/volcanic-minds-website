@@ -1,6 +1,7 @@
 <template>
 	<img
 		v-if="Object.keys(field).length"
+		:slot="isImgSlot ? 'image' : undefined"
 		:loading="lazy ? 'lazy' : 'eager'"
 		:src="getPrismicImageSrc()"
 		:srcset="getPrismicImageSrcset()"
@@ -15,11 +16,13 @@ const props = withDefaults(
 		size?: number
 		field: any
 		lazy?: boolean
+		isImgSlot?: boolean
 	}>(),
 	{
 		resizeByHeight: false,
 		size: 1300,
-		lazy: true
+		lazy: true,
+		isImgSlot: false
 	}
 )
 

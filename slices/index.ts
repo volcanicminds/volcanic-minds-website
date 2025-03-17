@@ -16,5 +16,6 @@ export const components = {
 	statistics: () => import(/* webpackChunkName: "prismic__slices__statistics" */ './Statistics/index.vue'),
 	syntax_highlighter: () =>
 		import(/* webpackChunkName: "prismic__slices__syntax_highlighter" */ './SyntaxHighlighter/index.vue'),
-	timeline: () => import(/* webpackChunkName: "prismic__slices__timeline" */ './Timeline/index.vue')
+	timeline: () => import(/* webpackChunkName: "prismic__slices__timeline" */ './Timeline/index.vue'),
+	youtube_embed: () => import(/* webpackChunkName: "prismic__slices__youtube_embed" */ './YoutubeEmbed/index.vue')
 }

@@ -1,0 +1,68 @@
+{
+  "id": "youtube_embed",
+  "type": "SharedSlice",
+  "name": "YoutubeEmbed",
+  "description": "YoutubeEmbed",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "margin_top": {
+          "type": "Boolean",
+          "config": {
+            "label": "Margine superiore",
+            "placeholder_false": "No",
+            "placeholder_true": "Sì",
+            "default_value": false
+          }
+        },
+        "margin_bottom": {
+          "type": "Boolean",
+          "config": {
+            "label": "Margine inferiore",
+            "placeholder_false": "No",
+            "placeholder_true": "Sì",
+            "default_value": false
+          }
+        },
+        "enable_animation": {
+          "type": "Boolean",
+          "config": {
+            "label": "Abilita animazione",
+            "placeholder_false": "No",
+            "placeholder_true": "Sì",
+            "default_value": false
+          }
+        },
+        "video_id": {
+          "type": "Text",
+          "config": {
+            "label": "ID video",
+            "placeholder": ""
+          }
+        },
+        "video_title": {
+          "type": "Text",
+          "config": {
+            "label": "Titolo video",
+            "placeholder": ""
+          }
+        },
+        "video_preview": {
+          "type": "Image",
+          "config": {
+            "label": "Anteprima video",
+            "constraint": {},
+            "thumbnails": []
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

@@ -1400,6 +1400,11 @@
   resolved "https://registry.yarnpkg.com/@jsonjoy.com/util/-/util-1.5.0.tgz#6008e35b9d9d8ee27bc4bfaa70c8cbf33a537b4c"
   integrity sha512-ojoNsrIuPI9g6o8UxhraZQSyF2ByJanAY4cTFbc8Mf2AXEF4aQRGY1dJxyJpuyav8r9FGflEt/Ff3u5Nt6YMPA==
 
+"@justinribeiro/lite-youtube@^1.7.1":
+  version "1.7.1"
+  resolved "https://registry.yarnpkg.com/@justinribeiro/lite-youtube/-/lite-youtube-1.7.1.tgz#34b6d4d98b9f4251818b408efb5267e5fd4464e2"
+  integrity sha512-nbasgHAmjw7g6zy8sK//nL7CQoJcBmvfBM3jWulKVJPRIhBHa6ZnHtQbMdd6TAukU3h0udZP09N8EEyLGWVysA==
+
 "@lukeed/csprng@^1.1.0":
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/@lukeed/csprng/-/csprng-1.1.0.tgz#1e3e4bd05c1cc7a0b2ddbd8a03f39f6e4b5e6cfe"
@@ -1922,6 +1927,13 @@
     tslib "^2.5.0"
     uuid "^9.0.0"
 
+"@prismicio/client@7.16.1":
+  version "7.16.1"
+  resolved "https://registry.yarnpkg.com/@prismicio/client/-/client-7.16.1.tgz#413ed3bd6b5ba3166a4ea2de9bfdb41f08d3e095"
+  integrity sha512-mH3JtysZyQv47OYWzuxp8vW3uWllMBJa6HD2j4cfc7vLCoxGxMrvH6Ttw12KMnChg2/exwFdq3K1OvHAtyEVdQ==
+  dependencies:
+    imgix-url-builder "^0.0.5"
+
 "@prismicio/client@^4.0.0 || ^5.1.0", "@prismicio/client@^5.2.0":
   version "5.2.0"
   resolved "https://registry.yarnpkg.com/@prismicio/client/-/client-5.2.0.tgz#d22aac74f8f35c1fd5ad667bb884be55a3861c48"
@@ -1929,7 +1941,7 @@
   dependencies:
     cross-fetch "^3.0.6"
 
-"@prismicio/client@^7.1.0", "@prismicio/client@^7.11.0":
+"@prismicio/client@^7.1.0":
   version "7.13.0"
   resolved "https://registry.yarnpkg.com/@prismicio/client/-/client-7.13.0.tgz#971262857d0752cc45b247f6f84a8c76842c58b9"
   integrity sha512-Xt3wzYrGHCk7YNV26pTfjpwieCROHSsBC60aab3C+styJQrvLoz57O/Uc95s0/kI8e4f2oD60r1d178Hx4xfzA==
@@ -2052,10 +2064,10 @@
     tslib "^2.3.1"
     uuid "^9.0.0"
 
-"@prismicio/types-internal@3.3.0":
-  version "3.3.0"
-  resolved "https://registry.yarnpkg.com/@prismicio/types-internal/-/types-internal-3.3.0.tgz#1d985b4c3591becbbc15ba65d6d0321e07f0967f"
-  integrity sha512-5Vg0oM6FlFa5lgF7RirGf55/SZ/TJ/26tNNUDRiwZSbs8VZUMbIO21IkjTuc6lFn+hKWKCXRxB6+lgmdvaZ2QQ==
+"@prismicio/types-internal@3.6.0":
+  version "3.6.0"
+  resolved "https://registry.yarnpkg.com/@prismicio/types-internal/-/types-internal-3.6.0.tgz#26605e1b8e444dfad2cefc7d9239cca14f208815"
+  integrity sha512-7JzWi/MHDEU6u/mOCUu32jHYGU/lZ+Ss47AkJXc/BMde/0tv8FQw2XXtiavSt5A5ikiakCVxeo3na9xkr3KMqg==
   dependencies:
     monocle-ts "^2.3.11"
     newtype-ts "^0.3.5"
@@ -2174,14 +2186,14 @@
   resolved "https://registry.yarnpkg.com/@sideway/pinpoint/-/pinpoint-2.0.0.tgz#cff8ffadc372ad29fd3f78277aeb29e632cc70df"
   integrity sha512-RNiOoTPkptFtSVzQevY/yWtZwf/RxyVnPy/OcA9HBM3MlGDnBEYL5B41H0MTn0Uec8Hi+2qUtTfG2WWZBmMejQ==
 
-"@slicemachine/adapter-nuxt2@^0.3.66":
-  version "0.3.66"
-  resolved "https://registry.yarnpkg.com/@slicemachine/adapter-nuxt2/-/adapter-nuxt2-0.3.66.tgz#6bdd5df36221293547ebff7bb066008930246997"
-  integrity sha512-aAXK6yLVtmfb8OnJKTd9exFTDRwR6OscQBabWBKrldXOdCUqwhkDtLEaG113o3POrOkw5nYvGnEGfw8Y5X2npA==
+"@slicemachine/adapter-nuxt2@^0.3.69":
+  version "0.3.69"
+  resolved "https://registry.yarnpkg.com/@slicemachine/adapter-nuxt2/-/adapter-nuxt2-0.3.69.tgz#2f6fd40f5141234419470a814799dc39d1049e28"
+  integrity sha512-4OMvgCeMc9mYvcobvuISFzHIsZKiripwXnYQCLe+5jANOJaK22N1h/VoYPyfvfkPsEq2teW+RlUb0nOnyO6LWg==
   dependencies:
     "@prismicio/simulator" "^0.1.4"
-    "@prismicio/types-internal" "3.3.0"
-    "@slicemachine/plugin-kit" "0.4.65"
+    "@prismicio/types-internal" "3.6.0"
+    "@slicemachine/plugin-kit" "0.4.68"
     common-tags "^1.8.2"
     fp-ts "^2.13.1"
     io-ts "^2.2.20"
@@ -2237,12 +2249,12 @@
     prettier "^3.0.3"
     prismic-ts-codegen "^0.1.19"
 
-"@slicemachine/plugin-kit@0.4.65":
-  version "0.4.65"
-  resolved "https://registry.yarnpkg.com/@slicemachine/plugin-kit/-/plugin-kit-0.4.65.tgz#e077dd32c0b28e0c167416edef16d9831c722a09"
-  integrity sha512-JzfkVDPEApv3oFPS2Y9H07dV0kJge3BxfjQ8G3s6EABQlf4hNTruI+4a9byvOffvg0YJwCe26Ce057K8xkm6Ng==
+"@slicemachine/plugin-kit@0.4.68":
+  version "0.4.68"
+  resolved "https://registry.yarnpkg.com/@slicemachine/plugin-kit/-/plugin-kit-0.4.68.tgz#d6aaa96a620cfd149fe2d12db2f13627f64448ed"
+  integrity sha512-mUVzWj5jSHaFVnNIXjMWr5CH8SG0hX785SAw/lTr+LdHjey40GJBqnRLDfNEh1gb4Qo+GyJn6XS3B+jFlSC0Hg==
   dependencies:
-    "@prismicio/client" "^7.11.0"
+    "@prismicio/client" "7.16.1"
     common-tags "^1.8.2"
     defu "^6.1.2"
     dotenv "16.3.1"
@@ -2252,7 +2264,7 @@
     io-ts-reporters "^2.0.1"
     p-limit "^4.0.0"
     prettier "^3.0.3"
-    prismic-ts-codegen "^0.1.23"
+    prismic-ts-codegen "0.1.25"
 
 "@tokenizer/token@^0.3.0":
   version "0.3.0"
@@ -4168,10 +4180,10 @@ core-js@^3.37.1:
   resolved "https://registry.yarnpkg.com/core-js/-/core-js-3.39.0.tgz#57f7647f4d2d030c32a72ea23a0555b2eaa30f83"
   integrity sha512-raM0ew0/jJUqkJ0E6e8UDtl+y/7ktFivgWvqw8dNSQeNWoSDLvQ1H/RN3aPXB9tBd4/FhyR4RDPGhsNIMsAn7g==
 
-core-js@^3.40.0:
-  version "3.40.0"
-  resolved "https://registry.yarnpkg.com/core-js/-/core-js-3.40.0.tgz#2773f6b06877d8eda102fc42f828176437062476"
-  integrity sha512-7vsMc/Lty6AGnn7uFpYT56QesI5D2Y/UkgKounk87OP9Z2H9Z8kj6jzcSGAxFmUtDOS0ntK6lbQz+Nsa0Jj6mQ==
+core-js@^3.41.0:
+  version "3.41.0"
+  resolved "https://registry.yarnpkg.com/core-js/-/core-js-3.41.0.tgz#57714dafb8c751a6095d028a7428f1fb5834a776"
+  integrity sha512-SJ4/EHwS36QMJd6h/Rg+GyR4A5xE0FSI3eZ+iBVpfqf1x0eTSg1smWLHrA+2jQThZSh97fmSgFSU8B61nxosxA==
 
 core-util-is@~1.0.0:
   version "1.0.3"
@@ -5242,7 +5254,21 @@ eslint-plugin-unicorn@^44.0.2:
     semver "^7.3.7"
     strip-indent "^3.0.0"
 
-eslint-plugin-vue@^9.32.0, eslint-plugin-vue@^9.4.0, eslint-plugin-vue@^9.7.0:
+eslint-plugin-vue@^9.33.0:
+  version "9.33.0"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-vue/-/eslint-plugin-vue-9.33.0.tgz#de33eba8f78e1d172c59c8ec7fbfd60c6ca35c39"
+  integrity sha512-174lJKuNsuDIlLpjeXc5E2Tss8P44uIimAfGD0b90k0NoirJqpG7stLuU9Vp/9ioTOrQdWVREc4mRd1BD+CvGw==
+  dependencies:
+    "@eslint-community/eslint-utils" "^4.4.0"
+    globals "^13.24.0"
+    natural-compare "^1.4.0"
+    nth-check "^2.1.1"
+    postcss-selector-parser "^6.0.15"
+    semver "^7.6.3"
+    vue-eslint-parser "^9.4.3"
+    xml-name-validator "^4.0.0"
+
+eslint-plugin-vue@^9.4.0, eslint-plugin-vue@^9.7.0:
   version "9.32.0"
   resolved "https://registry.yarnpkg.com/eslint-plugin-vue/-/eslint-plugin-vue-9.32.0.tgz#2b558e827886b567dfaa156cc1cad0f596461fab"
   integrity sha512-b/Y05HYmnB/32wqVcjxjHZzNpwxj1onBOvqW89W+V+XNG1dRuaFbNd3vT9CLbr2LXjEoq+3vn8DanWf7XU22Ug==
@@ -9352,10 +9378,15 @@ prettier-plugin-stylus@^0.1.0:
   resolved "https://registry.yarnpkg.com/prettier/-/prettier-2.8.8.tgz#e8c5d7e98a4305ffe3de2e1fc4aca1a71c28b1da"
   integrity sha512-tdN8qQGvNjw4CHbY+XXk0JgCXn9QiF21a55rBe5LJAU+kDyC4WQn4+awm2Xfk2lQMk5fKup9XgzTZtGkjBdP9Q==
 
-prettier@^3.0.3, prettier@^3.4.2:
+prettier@^3.0.3:
   version "3.4.2"
   resolved "https://registry.yarnpkg.com/prettier/-/prettier-3.4.2.tgz#a5ce1fb522a588bf2b78ca44c6e6fe5aa5a2b13f"
   integrity sha512-e9MewbtFo+Fevyuxn/4rrcDAaq0IYxPGLvObpQjiZBMAzB9IGmzlnG9RZy3FFas+eBMu2vA0CszMeduow5dIuQ==
+
+prettier@^3.5.3:
+  version "3.5.3"
+  resolved "https://registry.yarnpkg.com/prettier/-/prettier-3.5.3.tgz#4fc2ce0d657e7a02e602549f053b239cb7dfe1b5"
+  integrity sha512-QQtaxnoDJeAkDvDKWCLiwIXkTgRhwYDEQCghU9Z6q03iyek/rxRh/2lC3HB7P8sWT2xC/y5JDctPLBIGzHKbhw==
 
 pretty-bytes@^5.6.0:
   version "5.6.0"
@@ -9384,6 +9415,21 @@ prismic-dom@^2.2.6:
     "@prismicio/richtext" "^1.1.0"
     escape-html "1.0.3"
 
+prismic-ts-codegen@0.1.25:
+  version "0.1.25"
+  resolved "https://registry.yarnpkg.com/prismic-ts-codegen/-/prismic-ts-codegen-0.1.25.tgz#11f790a41e9b6ef039a434ff5165dac70996107d"
+  integrity sha512-4To1FgktKtl21oGvs/LTnC3JNHrex4bInkOYavyb+/E0EMOLYJUiv32rU/GpzNu5TrY8q6Y34BelQliVOu5IBg==
+  dependencies:
+    "@prismicio/custom-types-client" "^1.3.1"
+    common-tags "^1.8.2"
+    fast-glob "^3.3.3"
+    jiti "^1.21.7"
+    joi "^17.13.3"
+    meow "~12.0.1"
+    node-fetch "^3.3.2"
+    pascal-case "^3.1.2"
+    quick-lru "^6.1.2"
+
 prismic-ts-codegen@^0.1.19:
   version "0.1.23"
   resolved "https://registry.yarnpkg.com/prismic-ts-codegen/-/prismic-ts-codegen-0.1.23.tgz#14f9a07b0a146e6a42e7fed1e678a315c9ae3f07"
@@ -9398,21 +9444,6 @@ prismic-ts-codegen@^0.1.19:
     node-fetch "^3.3.1"
     pascal-case "^3.1.2"
     quick-lru "^6.1.1"
-
-prismic-ts-codegen@^0.1.23:
-  version "0.1.24"
-  resolved "https://registry.yarnpkg.com/prismic-ts-codegen/-/prismic-ts-codegen-0.1.24.tgz#a51f02034387ddefa3be986016ca3f628d5abc25"
-  integrity sha512-F7fj2JMZsWUpdzHJ4Z/El1B13o545v5q5d1WrY+MVDcW14RB/cRgp85PzvprvpMaszZOopkA/h3TMnNDA+rGjg==
-  dependencies:
-    "@prismicio/custom-types-client" "^1.3.1"
-    common-tags "^1.8.2"
-    fast-glob "^3.3.3"
-    jiti "^1.21.7"
-    joi "^17.13.3"
-    meow "~12.0.1"
-    node-fetch "^3.3.2"
-    pascal-case "^3.1.2"
-    quick-lru "^6.1.2"
 
 process-nextick-args@~2.0.0:
   version "2.0.1"
