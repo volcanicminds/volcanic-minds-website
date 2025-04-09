@@ -6,7 +6,6 @@ import type * as prismicClient from '@prismicio/client'
 type Simplify<T> = { [KeyType in keyof T]: T[KeyType] }
 
 type FirstLevelPageDocumentDataSlicesSlice =
-	| YoutubeEmbedSlice
 	| SocialShareSlice
 	| SyntaxHighlighterSlice
 	| ArticlesGridSlice
@@ -356,7 +355,6 @@ export type HeaderDocument<Lang extends string = string> = prismic.PrismicDocume
 >
 
 type HomepageDocumentDataSlicesSlice =
-	| YoutubeEmbedSlice
 	| SyntaxHighlighterSlice
 	| TimelineSlice
 	| ArticlesGridSlice
@@ -2578,16 +2576,6 @@ export interface YoutubeEmbedSliceDefaultPrimary {
 	 * - **Documentation**: https://prismic.io/docs/field#key-text
 	 */
 	video_id: prismic.KeyTextField
-
-	/**
-	 * Titolo video field in *YoutubeEmbed → Default → Primary*
-	 *
-	 * - **Field Type**: Text
-	 * - **Placeholder**: *None*
-	 * - **API ID Path**: youtube_embed.default.primary.video_title
-	 * - **Documentation**: https://prismic.io/docs/field#key-text
-	 */
-	video_title: prismic.KeyTextField
 
 	/**
 	 * Anteprima video field in *YoutubeEmbed → Default → Primary*

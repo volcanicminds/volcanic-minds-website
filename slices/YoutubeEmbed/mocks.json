@@ -20,11 +20,6 @@
 				"value": "ocean",
 				"type": "Text"
 			},
-			"video_title": {
-				"__TYPE__": "FieldContent",
-				"value": "save",
-				"type": "Text"
-			},
 			"video_preview": {
 				"origin": {
 					"id": "main",
