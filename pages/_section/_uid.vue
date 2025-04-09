@@ -48,11 +48,7 @@ import { components } from '~/slices'
 			(slice: { slice_type: string }) => slice.slice_type === 'youtube_embed'
 		)
 
-		if (
-			// process.env.NODE_ENV === 'production' &&
-			process.env.YOUTUBE_API_KEY &&
-			youtubeSlice
-		) {
+		if (process.env.NODE_ENV === 'production' && process.env.YOUTUBE_API_KEY && youtubeSlice) {
 			const videoId = youtubeSlice.primary.video_id
 			if (videoId) {
 				try {
