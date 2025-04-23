@@ -128,6 +128,16 @@
         <xhtml:link rel="alternate" hreflang="it-it" href="https://volcanicminds.com/insights/seo-without-ads-geo-optimization" />
         <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/insights/seo-without-ads-geo-optimization" />
     </url>
+    <url>
+        <loc>https://volcanicminds.com/insights/vibe-coding-tools-for-devs</loc>
+        <xhtml:link rel="alternate" hreflang="it-it" href="https://volcanicminds.com/insights/vibe-coding-tools-for-devs" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/insights/vibe-coding-tools-for-devs" />
+    </url>
+    <url>
+        <loc>https://volcanicminds.com/en/insights/vibe-coding-tools-for-devs</loc>
+        <xhtml:link rel="alternate" hreflang="it-it" href="https://volcanicminds.com/insights/vibe-coding-tools-for-devs" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/insights/vibe-coding-tools-for-devs" />
+    </url>
     <!-- About us -->
     <url>
         <loc>https://volcanicminds.com/about-us</loc>
