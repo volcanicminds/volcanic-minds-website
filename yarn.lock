@@ -1400,10 +1400,10 @@
   resolved "https://registry.yarnpkg.com/@jsonjoy.com/util/-/util-1.5.0.tgz#6008e35b9d9d8ee27bc4bfaa70c8cbf33a537b4c"
   integrity sha512-ojoNsrIuPI9g6o8UxhraZQSyF2ByJanAY4cTFbc8Mf2AXEF4aQRGY1dJxyJpuyav8r9FGflEt/Ff3u5Nt6YMPA==
 
-"@justinribeiro/lite-youtube@^1.7.1":
-  version "1.7.1"
-  resolved "https://registry.yarnpkg.com/@justinribeiro/lite-youtube/-/lite-youtube-1.7.1.tgz#34b6d4d98b9f4251818b408efb5267e5fd4464e2"
-  integrity sha512-nbasgHAmjw7g6zy8sK//nL7CQoJcBmvfBM3jWulKVJPRIhBHa6ZnHtQbMdd6TAukU3h0udZP09N8EEyLGWVysA==
+"@justinribeiro/lite-youtube@^1.8.0":
+  version "1.8.0"
+  resolved "https://registry.yarnpkg.com/@justinribeiro/lite-youtube/-/lite-youtube-1.8.0.tgz#dd7833722705ddd2ce00ed0b89d9371397848766"
+  integrity sha512-gUD2t+vCKnS8Ctf0QKGOEVkgk1aQDoRuB5arBOUJHbTy2ILtwGwKlf9cLY40jZp0FWxlv+ku4aviV3FPYKQY5w==
 
 "@lukeed/csprng@^1.1.0":
   version "1.1.0"
@@ -2186,14 +2186,14 @@
   resolved "https://registry.yarnpkg.com/@sideway/pinpoint/-/pinpoint-2.0.0.tgz#cff8ffadc372ad29fd3f78277aeb29e632cc70df"
   integrity sha512-RNiOoTPkptFtSVzQevY/yWtZwf/RxyVnPy/OcA9HBM3MlGDnBEYL5B41H0MTn0Uec8Hi+2qUtTfG2WWZBmMejQ==
 
-"@slicemachine/adapter-nuxt2@^0.3.74":
-  version "0.3.74"
-  resolved "https://registry.yarnpkg.com/@slicemachine/adapter-nuxt2/-/adapter-nuxt2-0.3.74.tgz#60359e815010d8ddaeadbd0a77dff7b6041e32dc"
-  integrity sha512-w8yzsIlx805SBEJt4adlnaJrQ8B9tOCgz9tm3kX5C12CJ84MU1C6gKGlYjNtgrEvmEaNog6qfzH0WB7FEXMZSA==
+"@slicemachine/adapter-nuxt2@^0.3.75":
+  version "0.3.75"
+  resolved "https://registry.yarnpkg.com/@slicemachine/adapter-nuxt2/-/adapter-nuxt2-0.3.75.tgz#20af1a6c3a34605220ede3d33bfc780608f42f42"
+  integrity sha512-lOXNw41eR146O1YgYxUKEw6ZezSL4SnAqoRrDsw3Zaom1SNBUW8G7Db6Ki8W8SDmSpyG/5a2IJ7Pte5DR9W7Lg==
   dependencies:
     "@prismicio/simulator" "^0.1.4"
     "@prismicio/types-internal" "3.8.0"
-    "@slicemachine/plugin-kit" "0.4.73"
+    "@slicemachine/plugin-kit" "0.4.74"
     common-tags "^1.8.2"
     fp-ts "^2.13.1"
     io-ts "^2.2.20"
@@ -2249,10 +2249,10 @@
     prettier "^3.0.3"
     prismic-ts-codegen "^0.1.19"
 
-"@slicemachine/plugin-kit@0.4.73":
-  version "0.4.73"
-  resolved "https://registry.yarnpkg.com/@slicemachine/plugin-kit/-/plugin-kit-0.4.73.tgz#f0df3e25ee46250f2cb0540647357da8b456bf98"
-  integrity sha512-MERWFCuiYrvhkIL+hoMxZVKDOXkqVZ7wSoEumc2wMAnyFyngso1/rfM/40X0HWSmlDjDFaImOuA2W5XtZ2X2Wg==
+"@slicemachine/plugin-kit@0.4.74":
+  version "0.4.74"
+  resolved "https://registry.yarnpkg.com/@slicemachine/plugin-kit/-/plugin-kit-0.4.74.tgz#10bc12734ac76392dadd45977356038a574add8f"
+  integrity sha512-wdarbRyZVhsm71gr2u0Pmp83qVwTaVSWC2xH7oQ8ATP6ja2ywS1OKoJiRkpF+ITiZk6KmYCGWGE0om8Bl+QXjg==
   dependencies:
     "@prismicio/client" "7.17.0"
     common-tags "^1.8.2"
@@ -4180,10 +4180,10 @@ core-js@^3.37.1:
   resolved "https://registry.yarnpkg.com/core-js/-/core-js-3.39.0.tgz#57f7647f4d2d030c32a72ea23a0555b2eaa30f83"
   integrity sha512-raM0ew0/jJUqkJ0E6e8UDtl+y/7ktFivgWvqw8dNSQeNWoSDLvQ1H/RN3aPXB9tBd4/FhyR4RDPGhsNIMsAn7g==
 
-core-js@^3.41.0:
-  version "3.41.0"
-  resolved "https://registry.yarnpkg.com/core-js/-/core-js-3.41.0.tgz#57714dafb8c751a6095d028a7428f1fb5834a776"
-  integrity sha512-SJ4/EHwS36QMJd6h/Rg+GyR4A5xE0FSI3eZ+iBVpfqf1x0eTSg1smWLHrA+2jQThZSh97fmSgFSU8B61nxosxA==
+core-js@^3.42.0:
+  version "3.42.0"
+  resolved "https://registry.yarnpkg.com/core-js/-/core-js-3.42.0.tgz#edbe91f78ac8cfb6df8d997e74d368a68082fe37"
+  integrity sha512-Sz4PP4ZA+Rq4II21qkNqOEDTDrCvcANId3xpIgB34NDkWc3UduWj2dqEtN9yZIq8Dk3HyPI33x9sqqU5C8sr0g==
 
 core-util-is@~1.0.0:
   version "1.0.3"

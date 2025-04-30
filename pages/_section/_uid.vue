@@ -239,7 +239,7 @@ export default class PageComponent extends Vue {
 					type: 'application/ld+json',
 					json: {
 						'@context': 'https://schema.org',
-						'@type': this.document.data.schema_org_type,
+						'@type': this.document.data.schema_org_type || this.$constants.schemaOrgType,
 						headline: this.document.data.seo_title || this.$constants.seoTitle,
 						description: this.document.data.seo_description || this.$constants.seoDescription,
 						datePublished: this.document.data.publication_date_sort
