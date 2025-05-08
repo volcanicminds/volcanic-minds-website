@@ -1400,10 +1400,10 @@
   resolved "https://registry.yarnpkg.com/@jsonjoy.com/util/-/util-1.5.0.tgz#6008e35b9d9d8ee27bc4bfaa70c8cbf33a537b4c"
   integrity sha512-ojoNsrIuPI9g6o8UxhraZQSyF2ByJanAY4cTFbc8Mf2AXEF4aQRGY1dJxyJpuyav8r9FGflEt/Ff3u5Nt6YMPA==
 
-"@justinribeiro/lite-youtube@^1.8.0":
-  version "1.8.0"
-  resolved "https://registry.yarnpkg.com/@justinribeiro/lite-youtube/-/lite-youtube-1.8.0.tgz#dd7833722705ddd2ce00ed0b89d9371397848766"
-  integrity sha512-gUD2t+vCKnS8Ctf0QKGOEVkgk1aQDoRuB5arBOUJHbTy2ILtwGwKlf9cLY40jZp0FWxlv+ku4aviV3FPYKQY5w==
+"@justinribeiro/lite-youtube@^1.8.1":
+  version "1.8.1"
+  resolved "https://registry.yarnpkg.com/@justinribeiro/lite-youtube/-/lite-youtube-1.8.1.tgz#d0035abb79beb924fd5a66feae5bf6828df1e99b"
+  integrity sha512-b64RclJsQoONgIjayk/2wPqwrCdxcb2ZBR49cS6Tgt858vj7eKJYhekwgYBRn61tDDflkYedK+KOkrdBZVnwRQ==
 
 "@lukeed/csprng@^1.1.0":
   version "1.1.0"
@@ -2186,14 +2186,14 @@
   resolved "https://registry.yarnpkg.com/@sideway/pinpoint/-/pinpoint-2.0.0.tgz#cff8ffadc372ad29fd3f78277aeb29e632cc70df"
   integrity sha512-RNiOoTPkptFtSVzQevY/yWtZwf/RxyVnPy/OcA9HBM3MlGDnBEYL5B41H0MTn0Uec8Hi+2qUtTfG2WWZBmMejQ==
 
-"@slicemachine/adapter-nuxt2@^0.3.75":
-  version "0.3.75"
-  resolved "https://registry.yarnpkg.com/@slicemachine/adapter-nuxt2/-/adapter-nuxt2-0.3.75.tgz#20af1a6c3a34605220ede3d33bfc780608f42f42"
-  integrity sha512-lOXNw41eR146O1YgYxUKEw6ZezSL4SnAqoRrDsw3Zaom1SNBUW8G7Db6Ki8W8SDmSpyG/5a2IJ7Pte5DR9W7Lg==
+"@slicemachine/adapter-nuxt2@^0.3.76":
+  version "0.3.76"
+  resolved "https://registry.yarnpkg.com/@slicemachine/adapter-nuxt2/-/adapter-nuxt2-0.3.76.tgz#b4426b4f762d0842b985c32f8d6766f26ee34246"
+  integrity sha512-fNrTM426xMy7FoGTrTZm2UPAXMCcms+L4+GZGV7yzd29LsmaM5rD69YqWwTpIDpuD07+q/jS7eqNpzn2gnNMSg==
   dependencies:
     "@prismicio/simulator" "^0.1.4"
     "@prismicio/types-internal" "3.8.0"
-    "@slicemachine/plugin-kit" "0.4.74"
+    "@slicemachine/plugin-kit" "0.4.75"
     common-tags "^1.8.2"
     fp-ts "^2.13.1"
     io-ts "^2.2.20"
@@ -2249,10 +2249,10 @@
     prettier "^3.0.3"
     prismic-ts-codegen "^0.1.19"
 
-"@slicemachine/plugin-kit@0.4.74":
-  version "0.4.74"
-  resolved "https://registry.yarnpkg.com/@slicemachine/plugin-kit/-/plugin-kit-0.4.74.tgz#10bc12734ac76392dadd45977356038a574add8f"
-  integrity sha512-wdarbRyZVhsm71gr2u0Pmp83qVwTaVSWC2xH7oQ8ATP6ja2ywS1OKoJiRkpF+ITiZk6KmYCGWGE0om8Bl+QXjg==
+"@slicemachine/plugin-kit@0.4.75":
+  version "0.4.75"
+  resolved "https://registry.yarnpkg.com/@slicemachine/plugin-kit/-/plugin-kit-0.4.75.tgz#9fc38e9030436691e75ed73582d59ef8877a5db8"
+  integrity sha512-UGhDF2iNYiBKqYdomPiwub78vEKLdfuKVLR/8341heIxTANEGjNjQBtaslRZzCi4HA9jFTx+l3ackZOD1MidXQ==
   dependencies:
     "@prismicio/client" "7.17.0"
     common-tags "^1.8.2"
@@ -3803,9 +3803,9 @@ caniuse-api@^3.0.0:
     lodash.uniq "^4.5.0"
 
 caniuse-lite@^1.0.0, caniuse-lite@^1.0.30001638, caniuse-lite@^1.0.30001646, caniuse-lite@^1.0.30001669:
-  version "1.0.30001687"
-  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001687.tgz#d0ac634d043648498eedf7a3932836beba90ebae"
-  integrity sha512-0S/FDhf4ZiqrTUiQ39dKeUjYRjkv7lOZU1Dgif2rIqrTzX/1wV2hfKu9TOm1IHkdSijfLswxTFzl/cvir+SLSQ==
+  version "1.0.30001717"
+  resolved "https://registry.npmjs.org/caniuse-lite/-/caniuse-lite-1.0.30001717.tgz"
+  integrity sha512-auPpttCq6BDEG8ZAuHJIplGw6GODhjw+/11e7IjpnYCxZcW/ONgPs0KVBJ0d1bY3e2+7PRe5RCLyP+PfwVgkYw==
 
 chalk@^2.4.1, chalk@^2.4.2:
   version "2.4.2"

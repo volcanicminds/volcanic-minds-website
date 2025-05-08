@@ -2,7 +2,7 @@
 	<div v-if="headerData" class="bg-raisin-black-95 header-container top-0 z3">
 		<WrapperContainer class="flex items-center px3 py2">
 			<div v-if="headerData.data.logo" class="flex flex-auto">
-				<NuxtLink :to="localePath('/')" class="logo">
+				<NuxtLink :to="localePath('/')" class="logo" title="Home">
 					<WrapperPrismicImage
 						:field="headerData.data.logo"
 						:size="50"

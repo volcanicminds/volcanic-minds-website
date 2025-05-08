@@ -19,7 +19,7 @@
 				<NavigationMenu is-mobile />
 			</WrapperContainer>
 			<div class="flex flex-column items-center py3">
-				<NuxtLink :to="localePath('/')" @click.native="closeSidebar">
+				<NuxtLink :to="localePath('/')" title="Home" @click.native="closeSidebar">
 					<WrapperPrismicImage
 						v-if="footerData.data.logo"
 						:field="footerData.data.logo"
