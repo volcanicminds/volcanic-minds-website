@@ -21,6 +21,11 @@
 							? `${slice.primary.cta_accessible_label} ${item.article.data.title}`
 							: undefined
 					"
+					:title="
+						slice.primary.cta_accessible_label
+							? `${slice.primary.cta_accessible_label} ${item.article.data.title}`
+							: undefined
+					"
 					class="card relative overflow-hidden bg-shark no-underline"
 				>
 					<div class="flex flex-column relative z1 h100" :class="slice.primary.center_card_content ? 'center' : ''">
@@ -51,8 +56,8 @@
 				</PrismicLink>
 			</div>
 
-			<div v-if="slice.primary.blog_cta_link && slice.primary.blog_cta_label" class="center mt2">
-				<PrismicLink :field="slice.primary.blog_cta_link" class="btn btn-primary uppercase">{{
+			<div v-if="slice.primary.blog_cta_link && slice.primary.blog_cta_label" class="center mt3">
+				<PrismicLink :field="slice.primary.blog_cta_link" class="btn btn-primary uppercase btn-big">{{
 					slice.primary.blog_cta_label
 				}}</PrismicLink>
 			</div>
