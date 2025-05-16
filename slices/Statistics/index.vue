@@ -9,7 +9,7 @@
 		<WrapperContainer>
 			<div class="center">
 				<div v-if="slice.primary.subtitle" class="h2 font-thin">{{ slice.primary.subtitle }}</div>
-				<component :is="slice.primary.seo_enable ? 'h2' : 'div'" v-if="slice.primary.title" class="h1 mt0">{{
+				<component :is="slice.primary.seo_enable ? 'h2' : 'div'" v-if="slice.primary.title" class="h1 m0">{{
 					slice.primary.title
 				}}</component>
 			</div>
@@ -49,9 +49,11 @@ defineProps({
 		@media (min-width: 40em)
 			grid-template-columns repeat(auto-fit, minmax(190px, 1fr))
 		grid-gap 25px
+		margin-top 30px
 	&-item
 		.h1
 			font-size 1.8em
+			margin-bottom 5px
 			@media (min-width: 40em)
 				font-size 2em
 			background var(--rainbow-gradient)

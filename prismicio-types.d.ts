@@ -1580,17 +1580,6 @@ export interface HeroBannerSliceDefaultPrimary {
 	 * - **Documentation**: https://prismic.io/docs/field#key-text
 	 */
 	cta_text: prismic.KeyTextField
-
-	/**
-	 * Abilita animazione field in *HeroBanner → Default → Primary*
-	 *
-	 * - **Field Type**: Boolean
-	 * - **Placeholder**: *None*
-	 * - **Default Value**: false
-	 * - **API ID Path**: hero_banner.default.primary.enable_animation
-	 * - **Documentation**: https://prismic.io/docs/field#boolean
-	 */
-	enable_animation: prismic.BooleanField
 }
 
 /**
