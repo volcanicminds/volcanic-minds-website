@@ -25,7 +25,9 @@
 							<div>
 								<font-awesome-icon v-if="item.card_icon" :icon="item.card_icon" class="fa-2xl mb3" />
 							</div>
-							<div v-if="item.card_title" class="h2">{{ item.card_title }}</div>
+							<component :is="slice.primary.seo_enable ? 'h3' : 'div'" v-if="item.card_title" class="h2 m0">{{
+								item.card_title
+							}}</component>
 							<PrismicRichText v-if="item.card_desc" :field="item.card_desc" class="mb-auto" />
 							<div v-if="item.cta_link && !item.cta_link.isBroken && item.cta_link.url" class="mt2 right-align">
 								<div class="btn btn-primary card-link flex-column justify-center">
