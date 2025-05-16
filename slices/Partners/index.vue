@@ -13,7 +13,7 @@
 			<h2 v-if="slice.primary.section_subtitle" class="h1 mt0 mb4 center">{{ slice.primary.section_subtitle }}</h2>
 			<div class="grid-container">
 				<div class="title mb3 sm-mb0">
-					<h3 v-if="slice.primary.title" class="h1 mt0 mb2">{{ slice.primary.title }}</h3>
+					<h2 v-if="slice.primary.title" class="h1 mt0 mb2">{{ slice.primary.title }}</h2>
 					<RainbowBar />
 				</div>
 				<div class="partners-container">
@@ -22,7 +22,6 @@
 						v-for="(item, i) in slice.items"
 						:key="`slice-item-${i}`"
 						:field="item.link && item.link"
-						:aria-label="item.link && item.name ? item.name : ''"
 						class="flex items-center no-underline"
 					>
 						<WrapperPrismicImage
@@ -31,7 +30,7 @@
 							resize-by-height
 							class="contain partners-image flex-none"
 						/>
-						<h4 v-if="item.name" class="h2 m0 font-light ml1 nowrap truncate">{{ item.name }}</h4>
+						<h3 v-if="item.name" class="h2 m0 font-light ml1 nowrap truncate">{{ item.name }}</h3>
 					</component>
 				</div>
 			</div>
