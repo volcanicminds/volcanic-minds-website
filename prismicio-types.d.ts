@@ -920,16 +920,6 @@ export interface ArticlesGridSliceDefaultPrimary {
 	blog_cta_label: prismic.KeyTextField
 
 	/**
-	 * CTA blog label accessibile field in *ArticlesGrid → Selected articles → Primary*
-	 *
-	 * - **Field Type**: Text
-	 * - **Placeholder**: *None*
-	 * - **API ID Path**: articles_grid.default.primary.blog_cta_accessible_label
-	 * - **Documentation**: https://prismic.io/docs/field#key-text
-	 */
-	blog_cta_accessible_label: prismic.KeyTextField
-
-	/**
 	 * CTA accessibile articolo field in *ArticlesGrid → Selected articles → Primary*
 	 *
 	 * - **Field Type**: Text
@@ -1089,16 +1079,6 @@ export interface CallToActionSliceDefaultPrimary {
 	label: prismic.KeyTextField
 
 	/**
-	 * Label accessibile field in *CallToAction → Default → Primary*
-	 *
-	 * - **Field Type**: Text
-	 * - **Placeholder**: *None*
-	 * - **API ID Path**: call_to_action.default.primary.accessible_label
-	 * - **Documentation**: https://prismic.io/docs/field#key-text
-	 */
-	accessible_label: prismic.KeyTextField
-
-	/**
 	 * Link field in *CallToAction → Default → Primary*
 	 *
 	 * - **Field Type**: Link
@@ -1247,6 +1227,17 @@ export interface CardsGridSliceDefaultPrimary {
 	 * - **Documentation**: https://prismic.io/docs/field#boolean
 	 */
 	center_card_content: prismic.BooleanField
+
+	/**
+	 * Abilita SEO field in *CardsGrid → Default → Primary*
+	 *
+	 * - **Field Type**: Boolean
+	 * - **Placeholder**: *None*
+	 * - **Default Value**: false
+	 * - **API ID Path**: cards_grid.default.primary.seo_enable
+	 * - **Documentation**: https://prismic.io/docs/field#boolean
+	 */
+	seo_enable: prismic.BooleanField
 }
 
 /**
@@ -1725,16 +1716,6 @@ export interface ImageAndTextSliceDefaultPrimary {
 	 * - **Documentation**: https://prismic.io/docs/field#key-text
 	 */
 	cta_text: prismic.KeyTextField
-
-	/**
-	 * CTA Testo accessible field in *ImageAndText → Default → Primary*
-	 *
-	 * - **Field Type**: Text
-	 * - **Placeholder**: *None*
-	 * - **API ID Path**: image_and_text.default.primary.cta_accessible_text
-	 * - **Documentation**: https://prismic.io/docs/field#key-text
-	 */
-	cta_accessible_text: prismic.KeyTextField
 
 	/**
 	 * Abilita animazione field in *ImageAndText → Default → Primary*
@@ -2243,12 +2224,12 @@ export interface StatisticsSliceDefaultPrimary {
 	/**
 	 * Sottotitolo field in *Statistics → Default → Primary*
 	 *
-	 * - **Field Type**: Rich Text
+	 * - **Field Type**: Text
 	 * - **Placeholder**: *None*
 	 * - **API ID Path**: statistics.default.primary.subtitle
-	 * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+	 * - **Documentation**: https://prismic.io/docs/field#key-text
 	 */
-	subtitle: prismic.RichTextField
+	subtitle: prismic.KeyTextField
 
 	/**
 	 * Abilita animazione field in *Statistics → Default → Primary*
@@ -2260,6 +2241,28 @@ export interface StatisticsSliceDefaultPrimary {
 	 * - **Documentation**: https://prismic.io/docs/field#boolean
 	 */
 	enable_animation: prismic.BooleanField
+
+	/**
+	 * Abilita SEO field in *Statistics → Default → Primary*
+	 *
+	 * - **Field Type**: Boolean
+	 * - **Placeholder**: *None*
+	 * - **Default Value**: false
+	 * - **API ID Path**: statistics.default.primary.seo_enable
+	 * - **Documentation**: https://prismic.io/docs/field#boolean
+	 */
+	seo_enable: prismic.BooleanField
+
+	/**
+	 * Abilita sfondo field in *Statistics → Default → Primary*
+	 *
+	 * - **Field Type**: Boolean
+	 * - **Placeholder**: *None*
+	 * - **Default Value**: false
+	 * - **API ID Path**: statistics.default.primary.enable_bg
+	 * - **Documentation**: https://prismic.io/docs/field#boolean
+	 */
+	enable_bg: prismic.BooleanField
 }
 
 /**

@@ -1,59 +1,61 @@
 [
-  {
-    "__TYPE__": "SharedSliceContent",
-    "variation": "default",
-    "primary": {
-      "margin_top": {
-        "__TYPE__": "BooleanContent",
-        "value": false
-      },
-      "margin_bottom": {
-        "__TYPE__": "BooleanContent",
-        "value": true
-      },
-      "title": {
-        "__TYPE__": "FieldContent",
-        "value": "snake",
-        "type": "Text"
-      },
-      "subtitle": {
-        "__TYPE__": "StructuredTextContent",
-        "value": [
-          {
-            "type": "paragraph",
-            "content": {
-              "text": "Ut eiusmod aute adipisicing eu laborum commodo nulla ex. In pariatur in quis duis ipsum. Fugiat consectetur cillum mollit irure quis irure aliquip deserunt incididunt aliqua exercitation fugiat."
-            }
-          }
-        ]
-      },
-      "enable_animation": {
-        "__TYPE__": "BooleanContent",
-        "value": true
-      }
-    },
-    "items": [
-      {
-        "__TYPE__": "GroupItemContent",
-        "value": [
-          [
-            "data",
-            {
-              "__TYPE__": "FieldContent",
-              "value": "log",
-              "type": "Text"
-            }
-          ],
-          [
-            "description",
-            {
-              "__TYPE__": "FieldContent",
-              "value": "excellent",
-              "type": "Text"
-            }
-          ]
-        ]
-      }
-    ]
-  }
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"margin_top": {
+				"__TYPE__": "BooleanContent",
+				"value": false
+			},
+			"margin_bottom": {
+				"__TYPE__": "BooleanContent",
+				"value": true
+			},
+			"title": {
+				"__TYPE__": "FieldContent",
+				"value": "snake",
+				"type": "Text"
+			},
+			"enable_animation": {
+				"__TYPE__": "BooleanContent",
+				"value": true
+			},
+			"seo_enable": {
+				"__TYPE__": "BooleanContent",
+				"value": true
+			},
+			"subtitle": {
+				"__TYPE__": "FieldContent",
+				"value": "means",
+				"type": "Text"
+			},
+			"enable_bg": {
+				"__TYPE__": "BooleanContent",
+				"value": false
+			}
+		},
+		"items": [
+			{
+				"__TYPE__": "GroupItemContent",
+				"value": [
+					[
+						"data",
+						{
+							"__TYPE__": "FieldContent",
+							"value": "log",
+							"type": "Text"
+						}
+					],
+					[
+						"description",
+						{
+							"__TYPE__": "FieldContent",
+							"value": "excellent",
+							"type": "Text"
+						}
+					]
+				]
+			}
+		]
+	}
 ]
