@@ -17,7 +17,7 @@
 			<font-awesome-icon
 				:icon="['fas', 'bars']"
 				class="md-hide lg-hide fa-xl cursor-pointer ml3"
-				:title="headerData.data.open_sidebar_label || 'Open sidebar'"
+				:aria-label="headerData.data.open_sidebar_label || 'Open sidebar'"
 				role="button"
 				@click="openSidebar"
 			/>
