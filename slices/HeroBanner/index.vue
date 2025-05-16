@@ -6,9 +6,6 @@
 		:enable-observer="slice.primary.enable_animation || false"
 		is-section
 		role="main"
-		:aria-label="
-			(slice.primary.title.length && slice.primary.title[0].text !== '' && slice.primary.title[0].text) || 'Hero banner'
-		"
 	>
 		<WrapperContainer class="relative z1">
 			<PrismicRichText
@@ -16,15 +13,13 @@
 				class="hero-title"
 				:class="slice.primary.title_mb ? '' : 'mb0'"
 				:field="slice.primary.title"
-				wrapper="div"
+				wrapper="h1"
 			/>
 			<PrismicRichText
 				v-if="slice.primary.subtitle.length && slice.primary.subtitle[0].text !== ''"
 				class="hero-subtitle"
 				:field="slice.primary.subtitle"
-				wrapper="div"
-				role="heading"
-				aria-level="1"
+				wrapper="h2"
 			/>
 			<div
 				v-if="slice.primary.cta_link && !slice.primary.cta_link.isBroken && slice.primary.cta_text"
@@ -65,21 +60,18 @@ defineProps({
 <style lang="stylus" scoped>
 .hero
 	&-title
-		>>> h1
-			margin-top 0
-			font-weight 100
-			font-size 11vw
-			word-wrap break-word
-			@media (min-width: 52em)
-				font-size 5em
-			text-transform lowercase
+		margin-top 0
+		font-weight 100
+		font-size 3em
+		word-wrap break-word
+		@media (min-width: 52em)
+			font-size 5em
+		text-transform lowercase
 
-		&.mb0
-			>>> h1
-				margin-bottom 0
 		>>> p
 			margin 0
 	&-subtitle
+		font-weight inherit
 		font-size 1.2em
 		@media (min-width: 52em)
 			font-size 1.5em

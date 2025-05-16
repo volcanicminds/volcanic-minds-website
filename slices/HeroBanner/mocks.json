@@ -7,9 +7,9 @@
 				"__TYPE__": "StructuredTextContent",
 				"value": [
 					{
-						"type": "heading1",
+						"type": "paragraph",
 						"content": {
-							"text": "Numeral"
+							"text": "Id consectetur officia nulla. Eu esse mollit irure adipisicing est adipisicing ullamco anim quis minim duis consequat. Magna deserunt laborum cupidatat."
 						}
 					}
 				]
@@ -20,7 +20,7 @@
 					{
 						"type": "paragraph",
 						"content": {
-							"text": "Occaecat pariatur amet duis ea labore pariatur. Qui proident sit deserunt nulla sint officia commodo. Quis labore nisi fugiat veniam et est et eiusmod incididunt eu proident sit."
+							"text": "Cupidatat quis pariatur duis consectetur labore ea sunt officia."
 						}
 					}
 				]

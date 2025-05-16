@@ -17,7 +17,7 @@
             "label": "Titolo",
             "placeholder": "",
             "allowTargetBlank": true,
-            "single": "heading1,strong,em"
+            "single": "strong,em"
           }
         },
         "title_mb": {
@@ -35,7 +35,7 @@
             "label": "Sottotitolo",
             "placeholder": "",
             "allowTargetBlank": true,
-            "multi": "paragraph,strong,em"
+            "single": "strong,em"
           }
         },
         "background_image": {
