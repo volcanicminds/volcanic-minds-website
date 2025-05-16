@@ -72,10 +72,6 @@
 				"__TYPE__": "BooleanContent",
 				"value": false
 			},
-			"enable_animation": {
-				"__TYPE__": "BooleanContent",
-				"value": true
-			},
 			"title_mb": {
 				"__TYPE__": "BooleanContent",
 				"value": true

@@ -3,7 +3,6 @@
 		css-class="relative py4 overflow-hidden hero"
 		:margin-top="slice.primary.margin_top || false"
 		:margin-bottom="slice.primary.margin_bottom || false"
-		:enable-observer="slice.primary.enable_animation || false"
 		is-section
 		role="main"
 	>
