@@ -1,47 +1,42 @@
 [
-  {
-    "__TYPE__": "SharedSliceContent",
-    "variation": "default",
-    "primary": {
-      "label": {
-        "__TYPE__": "FieldContent",
-        "value": "birthday",
-        "type": "Text"
-      },
-      "link": {
-        "__TYPE__": "LinkContent",
-        "value": {
-          "__TYPE__": "ExternalLink",
-          "url": "http://twitter.com"
-        }
-      },
-      "size": {
-        "__TYPE__": "BooleanContent",
-        "value": true
-      },
-      "margin_top": {
-        "__TYPE__": "BooleanContent",
-        "value": true
-      },
-      "margin_bottom": {
-        "__TYPE__": "BooleanContent",
-        "value": true
-      },
-      "enable_animation": {
-        "__TYPE__": "BooleanContent",
-        "value": true
-      },
-      "accessible_label": {
-        "__TYPE__": "FieldContent",
-        "value": "lie",
-        "type": "Text"
-      }
-    },
-    "items": [
-      {
-        "__TYPE__": "GroupItemContent",
-        "value": []
-      }
-    ]
-  }
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"label": {
+				"__TYPE__": "FieldContent",
+				"value": "birthday",
+				"type": "Text"
+			},
+			"link": {
+				"__TYPE__": "LinkContent",
+				"value": {
+					"__TYPE__": "ExternalLink",
+					"url": "http://twitter.com"
+				}
+			},
+			"size": {
+				"__TYPE__": "BooleanContent",
+				"value": true
+			},
+			"margin_top": {
+				"__TYPE__": "BooleanContent",
+				"value": true
+			},
+			"margin_bottom": {
+				"__TYPE__": "BooleanContent",
+				"value": true
+			},
+			"enable_animation": {
+				"__TYPE__": "BooleanContent",
+				"value": true
+			}
+		},
+		"items": [
+			{
+				"__TYPE__": "GroupItemContent",
+				"value": []
+			}
+		]
+	}
 ]
