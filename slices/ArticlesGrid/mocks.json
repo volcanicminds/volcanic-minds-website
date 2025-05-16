@@ -39,11 +39,6 @@
 				"value": "half",
 				"type": "Text"
 			},
-			"blog_cta_accessible_label": {
-				"__TYPE__": "FieldContent",
-				"value": "citizen",
-				"type": "Text"
-			},
 			"blog_cta_link": {
 				"__TYPE__": "LinkContent",
 				"value": {

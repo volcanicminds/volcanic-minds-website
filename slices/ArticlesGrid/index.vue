@@ -16,7 +16,11 @@
 					v-for="(item, index) in slice.items"
 					:key="index"
 					:field="item.article"
-					:aria-label="slice.primary.article_accessible_text ? slice.primary.article_accessible_text : undefined"
+					:aria-label="
+						slice.primary.cta_accessible_label
+							? `${slice.primary.cta_accessible_label} ${item.article.data.title}`
+							: undefined
+					"
 					class="card relative overflow-hidden bg-shark no-underline"
 				>
 					<div class="flex flex-column relative z1 h100" :class="slice.primary.center_card_content ? 'center' : ''">
@@ -47,18 +51,10 @@
 				</PrismicLink>
 			</div>
 
-			<div class="center mt2">
-				<PrismicLink
-					v-if="slice.primary.blog_cta_link && slice.primary.blog_cta_label"
-					:field="slice.primary.blog_cta_link"
-					class="btn btn-primary uppercase"
-					:aria-label="
-						slice.primary.blog_cta_accessible_label && slice.primary.blog_cta_link?.target === '_blank'
-							? slice.primary.blog_cta_accessible_label
-							: undefined
-					"
-					>{{ slice.primary.blog_cta_label }}</PrismicLink
-				>
+			<div v-if="slice.primary.blog_cta_link && slice.primary.blog_cta_label" class="center mt2">
+				<PrismicLink :field="slice.primary.blog_cta_link" class="btn btn-primary uppercase">{{
+					slice.primary.blog_cta_label
+				}}</PrismicLink>
 			</div>
 		</WrapperContainer>
 	</WrapperSlice>
