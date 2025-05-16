@@ -35,7 +35,7 @@
 					</template>
 				</div>
 			</div>
-			<RainbowBar />
+			<!-- <RainbowBar /> -->
 		</div>
 	</Transition>
 </template>

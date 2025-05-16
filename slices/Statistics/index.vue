@@ -52,7 +52,7 @@ defineProps({
 		margin-top 30px
 	&-item
 		.h1
-			font-size 1.8em
+			font-size 1.3em
 			margin-bottom 5px
 			@media (min-width: 40em)
 				font-size 2em
