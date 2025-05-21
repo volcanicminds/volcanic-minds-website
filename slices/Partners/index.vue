@@ -24,7 +24,7 @@
 						:field="item.link?.url ? item.link : undefined"
 						class="flex items-center no-underline"
 						:aria-label="
-							item.link?.url && item.link.link_type === 'Web' ? headerData.data.open_new_tab_label : undefined
+							item.link?.url && item.link.link_type === 'Web' ? commonTranslationsData.data.open_in_new_tab : undefined
 						"
 					>
 						<WrapperPrismicImage
@@ -46,8 +46,8 @@ import { defineComponent } from 'vue'
 export default defineComponent({
 	name: 'Partners',
 	computed: {
-		headerData(): any {
-			return this.$store.state.prismic.header
+		commonTranslationsData(): any {
+			return this.$store.state.prismic.commonTranslations
 		}
 	}
 })

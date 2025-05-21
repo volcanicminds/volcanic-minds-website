@@ -34,13 +34,6 @@
 					"label": "Label chiusura sidebar",
 					"placeholder": ""
 				}
-			},
-			"open_new_tab_label": {
-				"type": "Text",
-				"config": {
-					"label": "Label apri in nuova scheda",
-					"placeholder": ""
-				}
 			}
 		}
 	}

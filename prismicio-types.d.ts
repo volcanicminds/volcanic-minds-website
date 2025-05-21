@@ -5,6 +5,37 @@ import type * as prismicClient from '@prismicio/client'
 
 type Simplify<T> = { [KeyType in keyof T]: T[KeyType] }
 
+/**
+ * Content for Common translations documents
+ */
+interface CommonTranslationsDocumentData {
+	/**
+	 * Apri in una nuova scheda field in *Common translations*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: common_translations.open_in_new_tab
+	 * - **Tab**: Main
+	 * - **Documentation**: https://prismic.io/docs/field#key-text
+	 */
+	open_in_new_tab: prismic.KeyTextField
+}
+
+/**
+ * Common translations document from Prismic
+ *
+ * - **API ID**: `common_translations`
+ * - **Repeatable**: `false`
+ * - **Documentation**: https://prismic.io/docs/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type CommonTranslationsDocument<Lang extends string = string> = prismic.PrismicDocumentWithoutUID<
+	Simplify<CommonTranslationsDocumentData>,
+	'common_translations',
+	Lang
+>
+
 type FirstLevelPageDocumentDataSlicesSlice =
 	| SocialShareSlice
 	| SyntaxHighlighterSlice
@@ -190,16 +221,6 @@ export interface FooterDocumentDataTextLinksItem {
 	 * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
 	 */
 	link: prismic.LinkField<string, string, unknown, prismic.FieldState, never>
-
-	/**
-	 * Nome accessibile field in *Footer → Link testuali*
-	 *
-	 * - **Field Type**: Text
-	 * - **Placeholder**: *None*
-	 * - **API ID Path**: footer.text_links[].accessible_name
-	 * - **Documentation**: https://prismic.io/docs/field#key-text
-	 */
-	accessible_name: prismic.KeyTextField
 }
 
 type FooterDocumentDataSlicesSlice = never
@@ -337,17 +358,6 @@ interface HeaderDocumentData {
 	 * - **Documentation**: https://prismic.io/docs/field#key-text
 	 */
 	close_sidebar_label: prismic.KeyTextField
-
-	/**
-	 * Label apri in nuova scheda field in *Header*
-	 *
-	 * - **Field Type**: Text
-	 * - **Placeholder**: *None*
-	 * - **API ID Path**: header.open_new_tab_label
-	 * - **Tab**: Main
-	 * - **Documentation**: https://prismic.io/docs/field#key-text
-	 */
-	open_new_tab_label: prismic.KeyTextField
 }
 
 /**
@@ -725,6 +735,7 @@ export type SecondLevelPageDocument<Lang extends string = string> = prismic.Pris
 >
 
 export type AllDocumentTypes =
+	| CommonTranslationsDocument
 	| FirstLevelPageDocument
 	| FooterDocument
 	| HeaderDocument
@@ -2636,6 +2647,8 @@ declare module '@prismicio/client' {
 
 	namespace Content {
 		export type {
+			CommonTranslationsDocument,
+			CommonTranslationsDocumentData,
 			FirstLevelPageDocument,
 			FirstLevelPageDocumentData,
 			FirstLevelPageDocumentDataSlicesSlice,
