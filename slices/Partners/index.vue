@@ -21,12 +21,10 @@
 						:is="item.link && item.link.url ? 'PrismicLink' : 'div'"
 						v-for="(item, i) in slice.items"
 						:key="`slice-item-${i}`"
-						:field="item.link && item.link"
+						:field="item.link?.url ? item.link : undefined"
 						class="flex items-center no-underline"
 						:aria-label="
-							item.link && item.link.url && item.link.link_type === 'Web'
-								? headerData.data.open_new_tab_label
-								: undefined
+							item.link?.url && item.link.link_type === 'Web' ? headerData.data.open_new_tab_label : undefined
 						"
 					>
 						<WrapperPrismicImage
