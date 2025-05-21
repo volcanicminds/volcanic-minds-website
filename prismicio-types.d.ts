@@ -337,6 +337,17 @@ interface HeaderDocumentData {
 	 * - **Documentation**: https://prismic.io/docs/field#key-text
 	 */
 	close_sidebar_label: prismic.KeyTextField
+
+	/**
+	 * Label apri in nuova scheda field in *Header*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: header.open_new_tab_label
+	 * - **Tab**: Main
+	 * - **Documentation**: https://prismic.io/docs/field#key-text
+	 */
+	open_new_tab_label: prismic.KeyTextField
 }
 
 /**

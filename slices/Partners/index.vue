@@ -23,6 +23,11 @@
 						:key="`slice-item-${i}`"
 						:field="item.link && item.link"
 						class="flex items-center no-underline"
+						:aria-label="
+							item.link && item.link.url && item.link.link_type === 'Web'
+								? headerData.data.open_new_tab_label
+								: undefined
+						"
 					>
 						<WrapperPrismicImage
 							:field="item.logo"
@@ -41,7 +46,12 @@
 <script lang="ts">
 import { defineComponent } from 'vue'
 export default defineComponent({
-	name: 'Partners'
+	name: 'Partners',
+	computed: {
+		headerData(): any {
+			return this.$store.state.prismic.header
+		}
+	}
 })
 </script>
 
