@@ -18,13 +18,6 @@
             "placeholder": ""
           }
         },
-        "accessible_label": {
-          "type": "Text",
-          "config": {
-            "label": "Label accessibile",
-            "placeholder": ""
-          }
-        },
         "link": {
           "type": "Link",
           "config": {

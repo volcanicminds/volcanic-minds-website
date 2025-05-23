@@ -19,6 +19,8 @@ $ yarn generate
 
 For detailed explanation on how things work, check out the [documentation](https://nuxtjs.org).
 
+To use YouTube V3 API key, you must crate a ".env_secret" file with "YOUTUBE_API_KEY=xxx": il will be copied in the .env file for production builds.
+
 ## Special Directories
 
 You can create the following extra directories, some of which have special behaviors. Only `pages` is required; you can delete them if you don't want to use their functionality.

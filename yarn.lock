@@ -1400,10 +1400,10 @@
   resolved "https://registry.yarnpkg.com/@jsonjoy.com/util/-/util-1.5.0.tgz#6008e35b9d9d8ee27bc4bfaa70c8cbf33a537b4c"
   integrity sha512-ojoNsrIuPI9g6o8UxhraZQSyF2ByJanAY4cTFbc8Mf2AXEF4aQRGY1dJxyJpuyav8r9FGflEt/Ff3u5Nt6YMPA==
 
-"@justinribeiro/lite-youtube@^1.7.1":
-  version "1.7.1"
-  resolved "https://registry.yarnpkg.com/@justinribeiro/lite-youtube/-/lite-youtube-1.7.1.tgz#34b6d4d98b9f4251818b408efb5267e5fd4464e2"
-  integrity sha512-nbasgHAmjw7g6zy8sK//nL7CQoJcBmvfBM3jWulKVJPRIhBHa6ZnHtQbMdd6TAukU3h0udZP09N8EEyLGWVysA==
+"@justinribeiro/lite-youtube@^1.8.1":
+  version "1.8.1"
+  resolved "https://registry.yarnpkg.com/@justinribeiro/lite-youtube/-/lite-youtube-1.8.1.tgz#d0035abb79beb924fd5a66feae5bf6828df1e99b"
+  integrity sha512-b64RclJsQoONgIjayk/2wPqwrCdxcb2ZBR49cS6Tgt858vj7eKJYhekwgYBRn61tDDflkYedK+KOkrdBZVnwRQ==
 
 "@lukeed/csprng@^1.1.0":
   version "1.1.0"
@@ -1927,10 +1927,10 @@
     tslib "^2.5.0"
     uuid "^9.0.0"
 
-"@prismicio/client@7.16.1":
-  version "7.16.1"
-  resolved "https://registry.yarnpkg.com/@prismicio/client/-/client-7.16.1.tgz#413ed3bd6b5ba3166a4ea2de9bfdb41f08d3e095"
-  integrity sha512-mH3JtysZyQv47OYWzuxp8vW3uWllMBJa6HD2j4cfc7vLCoxGxMrvH6Ttw12KMnChg2/exwFdq3K1OvHAtyEVdQ==
+"@prismicio/client@7.17.0":
+  version "7.17.0"
+  resolved "https://registry.yarnpkg.com/@prismicio/client/-/client-7.17.0.tgz#7b8f12fbc76e02a23fe817a1a0d8410d83fc40f6"
+  integrity sha512-7e1ICYk4IAxKX8zmtCOy9e8rXeeT9A45ZgJY9lNNWqUaL1LW/ilXnh/SsAZG/G5q14JyRJHwBIGIzcKY9hjJhw==
   dependencies:
     imgix-url-builder "^0.0.5"
 
@@ -2064,10 +2064,10 @@
     tslib "^2.3.1"
     uuid "^9.0.0"
 
-"@prismicio/types-internal@3.6.0":
-  version "3.6.0"
-  resolved "https://registry.yarnpkg.com/@prismicio/types-internal/-/types-internal-3.6.0.tgz#26605e1b8e444dfad2cefc7d9239cca14f208815"
-  integrity sha512-7JzWi/MHDEU6u/mOCUu32jHYGU/lZ+Ss47AkJXc/BMde/0tv8FQw2XXtiavSt5A5ikiakCVxeo3na9xkr3KMqg==
+"@prismicio/types-internal@3.8.0":
+  version "3.8.0"
+  resolved "https://registry.yarnpkg.com/@prismicio/types-internal/-/types-internal-3.8.0.tgz#49c30345aea96e0e7ac933093294c9d4f3f91ff7"
+  integrity sha512-1o7pumA1gp/84dxh9a2hw4DFvPtmz3GnGFgKYQUUOUecGkzhEDL43AQG3FfsYYgnoM4KSXrLG0QF1fEkzoMosA==
   dependencies:
     monocle-ts "^2.3.11"
     newtype-ts "^0.3.5"
@@ -2186,14 +2186,14 @@
   resolved "https://registry.yarnpkg.com/@sideway/pinpoint/-/pinpoint-2.0.0.tgz#cff8ffadc372ad29fd3f78277aeb29e632cc70df"
   integrity sha512-RNiOoTPkptFtSVzQevY/yWtZwf/RxyVnPy/OcA9HBM3MlGDnBEYL5B41H0MTn0Uec8Hi+2qUtTfG2WWZBmMejQ==
 
-"@slicemachine/adapter-nuxt2@^0.3.69":
-  version "0.3.69"
-  resolved "https://registry.yarnpkg.com/@slicemachine/adapter-nuxt2/-/adapter-nuxt2-0.3.69.tgz#2f6fd40f5141234419470a814799dc39d1049e28"
-  integrity sha512-4OMvgCeMc9mYvcobvuISFzHIsZKiripwXnYQCLe+5jANOJaK22N1h/VoYPyfvfkPsEq2teW+RlUb0nOnyO6LWg==
+"@slicemachine/adapter-nuxt2@^0.3.77":
+  version "0.3.77"
+  resolved "https://registry.yarnpkg.com/@slicemachine/adapter-nuxt2/-/adapter-nuxt2-0.3.77.tgz#95cfea6ff72461c63febbe8334f358bd32cd6f45"
+  integrity sha512-hm2ZuVz1if5HzXjkOn2yrpk+RX6POHZjf1M68oSSvo+3fOyCihV3gmqECHSOPcw1kFClY3FkZmli7HoSuEr1rA==
   dependencies:
     "@prismicio/simulator" "^0.1.4"
-    "@prismicio/types-internal" "3.6.0"
-    "@slicemachine/plugin-kit" "0.4.68"
+    "@prismicio/types-internal" "3.8.0"
+    "@slicemachine/plugin-kit" "0.4.76"
     common-tags "^1.8.2"
     fp-ts "^2.13.1"
     io-ts "^2.2.20"
@@ -2249,12 +2249,12 @@
     prettier "^3.0.3"
     prismic-ts-codegen "^0.1.19"
 
-"@slicemachine/plugin-kit@0.4.68":
-  version "0.4.68"
-  resolved "https://registry.yarnpkg.com/@slicemachine/plugin-kit/-/plugin-kit-0.4.68.tgz#d6aaa96a620cfd149fe2d12db2f13627f64448ed"
-  integrity sha512-mUVzWj5jSHaFVnNIXjMWr5CH8SG0hX785SAw/lTr+LdHjey40GJBqnRLDfNEh1gb4Qo+GyJn6XS3B+jFlSC0Hg==
+"@slicemachine/plugin-kit@0.4.76":
+  version "0.4.76"
+  resolved "https://registry.yarnpkg.com/@slicemachine/plugin-kit/-/plugin-kit-0.4.76.tgz#47411357ea531717b83f4f55198151de3ad5a5a1"
+  integrity sha512-dahBV7K4d2XY/OmZVFOhkc1rsWp+wqgV9GxRsN8BgRVF0Vk86g4VQ3yKXWgkuwWkxMAKdjXGnh8Hx6zcN8iJ9w==
   dependencies:
-    "@prismicio/client" "7.16.1"
+    "@prismicio/client" "7.17.0"
     common-tags "^1.8.2"
     defu "^6.1.2"
     dotenv "16.3.1"
@@ -3803,9 +3803,9 @@ caniuse-api@^3.0.0:
     lodash.uniq "^4.5.0"
 
 caniuse-lite@^1.0.0, caniuse-lite@^1.0.30001638, caniuse-lite@^1.0.30001646, caniuse-lite@^1.0.30001669:
-  version "1.0.30001687"
-  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001687.tgz#d0ac634d043648498eedf7a3932836beba90ebae"
-  integrity sha512-0S/FDhf4ZiqrTUiQ39dKeUjYRjkv7lOZU1Dgif2rIqrTzX/1wV2hfKu9TOm1IHkdSijfLswxTFzl/cvir+SLSQ==
+  version "1.0.30001717"
+  resolved "https://registry.npmjs.org/caniuse-lite/-/caniuse-lite-1.0.30001717.tgz"
+  integrity sha512-auPpttCq6BDEG8ZAuHJIplGw6GODhjw+/11e7IjpnYCxZcW/ONgPs0KVBJ0d1bY3e2+7PRe5RCLyP+PfwVgkYw==
 
 chalk@^2.4.1, chalk@^2.4.2:
   version "2.4.2"
@@ -4180,10 +4180,10 @@ core-js@^3.37.1:
   resolved "https://registry.yarnpkg.com/core-js/-/core-js-3.39.0.tgz#57f7647f4d2d030c32a72ea23a0555b2eaa30f83"
   integrity sha512-raM0ew0/jJUqkJ0E6e8UDtl+y/7ktFivgWvqw8dNSQeNWoSDLvQ1H/RN3aPXB9tBd4/FhyR4RDPGhsNIMsAn7g==
 
-core-js@^3.41.0:
-  version "3.41.0"
-  resolved "https://registry.yarnpkg.com/core-js/-/core-js-3.41.0.tgz#57714dafb8c751a6095d028a7428f1fb5834a776"
-  integrity sha512-SJ4/EHwS36QMJd6h/Rg+GyR4A5xE0FSI3eZ+iBVpfqf1x0eTSg1smWLHrA+2jQThZSh97fmSgFSU8B61nxosxA==
+core-js@^3.42.0:
+  version "3.42.0"
+  resolved "https://registry.yarnpkg.com/core-js/-/core-js-3.42.0.tgz#edbe91f78ac8cfb6df8d997e74d368a68082fe37"
+  integrity sha512-Sz4PP4ZA+Rq4II21qkNqOEDTDrCvcANId3xpIgB34NDkWc3UduWj2dqEtN9yZIq8Dk3HyPI33x9sqqU5C8sr0g==
 
 core-util-is@~1.0.0:
   version "1.0.3"

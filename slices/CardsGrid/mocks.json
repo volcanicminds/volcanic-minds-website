@@ -28,6 +28,10 @@
 			"center_card_content": {
 				"__TYPE__": "BooleanContent",
 				"value": false
+			},
+			"seo_enable": {
+				"__TYPE__": "BooleanContent",
+				"value": true
 			}
 		},
 		"items": [

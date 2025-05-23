@@ -34,9 +34,6 @@
 				"fieldset": "Slice Zone",
 				"config": {
 					"choices": {
-						"youtube_embed": {
-							"type": "SharedSlice"
-						},
 						"social_share": {
 							"type": "SharedSlice"
 						},

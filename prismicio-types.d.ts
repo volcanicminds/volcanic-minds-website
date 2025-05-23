@@ -5,8 +5,60 @@ import type * as prismicClient from '@prismicio/client'
 
 type Simplify<T> = { [KeyType in keyof T]: T[KeyType] }
 
+/**
+ * Content for Common translations documents
+ */
+interface CommonTranslationsDocumentData {
+	/**
+	 * Apri in una nuova scheda field in *Common translations*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: common_translations.open_in_new_tab
+	 * - **Tab**: Main
+	 * - **Documentation**: https://prismic.io/docs/field#key-text
+	 */
+	open_in_new_tab: prismic.KeyTextField
+
+	/**
+	 * Visualizza il sito in italiano field in *Common translations*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: common_translations.view_italian_site
+	 * - **Tab**: Main
+	 * - **Documentation**: https://prismic.io/docs/field#key-text
+	 */
+	view_italian_site: prismic.KeyTextField
+
+	/**
+	 * Visualizza il sito in inglese field in *Common translations*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: common_translations.view_english_site
+	 * - **Tab**: Main
+	 * - **Documentation**: https://prismic.io/docs/field#key-text
+	 */
+	view_english_site: prismic.KeyTextField
+}
+
+/**
+ * Common translations document from Prismic
+ *
+ * - **API ID**: `common_translations`
+ * - **Repeatable**: `false`
+ * - **Documentation**: https://prismic.io/docs/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type CommonTranslationsDocument<Lang extends string = string> = prismic.PrismicDocumentWithoutUID<
+	Simplify<CommonTranslationsDocumentData>,
+	'common_translations',
+	Lang
+>
+
 type FirstLevelPageDocumentDataSlicesSlice =
-	| YoutubeEmbedSlice
 	| SocialShareSlice
 	| SyntaxHighlighterSlice
 	| ArticlesGridSlice
@@ -191,16 +243,6 @@ export interface FooterDocumentDataTextLinksItem {
 	 * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
 	 */
 	link: prismic.LinkField<string, string, unknown, prismic.FieldState, never>
-
-	/**
-	 * Nome accessibile field in *Footer → Link testuali*
-	 *
-	 * - **Field Type**: Text
-	 * - **Placeholder**: *None*
-	 * - **API ID Path**: footer.text_links[].accessible_name
-	 * - **Documentation**: https://prismic.io/docs/field#key-text
-	 */
-	accessible_name: prismic.KeyTextField
 }
 
 type FooterDocumentDataSlicesSlice = never
@@ -356,7 +398,6 @@ export type HeaderDocument<Lang extends string = string> = prismic.PrismicDocume
 >
 
 type HomepageDocumentDataSlicesSlice =
-	| YoutubeEmbedSlice
 	| SyntaxHighlighterSlice
 	| TimelineSlice
 	| ArticlesGridSlice
@@ -716,6 +757,7 @@ export type SecondLevelPageDocument<Lang extends string = string> = prismic.Pris
 >
 
 export type AllDocumentTypes =
+	| CommonTranslationsDocument
 	| FirstLevelPageDocument
 	| FooterDocument
 	| HeaderDocument
@@ -922,16 +964,6 @@ export interface ArticlesGridSliceDefaultPrimary {
 	blog_cta_label: prismic.KeyTextField
 
 	/**
-	 * CTA blog label accessibile field in *ArticlesGrid → Selected articles → Primary*
-	 *
-	 * - **Field Type**: Text
-	 * - **Placeholder**: *None*
-	 * - **API ID Path**: articles_grid.default.primary.blog_cta_accessible_label
-	 * - **Documentation**: https://prismic.io/docs/field#key-text
-	 */
-	blog_cta_accessible_label: prismic.KeyTextField
-
-	/**
 	 * CTA accessibile articolo field in *ArticlesGrid → Selected articles → Primary*
 	 *
 	 * - **Field Type**: Text
@@ -1091,16 +1123,6 @@ export interface CallToActionSliceDefaultPrimary {
 	label: prismic.KeyTextField
 
 	/**
-	 * Label accessibile field in *CallToAction → Default → Primary*
-	 *
-	 * - **Field Type**: Text
-	 * - **Placeholder**: *None*
-	 * - **API ID Path**: call_to_action.default.primary.accessible_label
-	 * - **Documentation**: https://prismic.io/docs/field#key-text
-	 */
-	accessible_label: prismic.KeyTextField
-
-	/**
 	 * Link field in *CallToAction → Default → Primary*
 	 *
 	 * - **Field Type**: Link
@@ -1249,6 +1271,17 @@ export interface CardsGridSliceDefaultPrimary {
 	 * - **Documentation**: https://prismic.io/docs/field#boolean
 	 */
 	center_card_content: prismic.BooleanField
+
+	/**
+	 * Abilita SEO field in *CardsGrid → Default → Primary*
+	 *
+	 * - **Field Type**: Boolean
+	 * - **Placeholder**: *None*
+	 * - **Default Value**: false
+	 * - **API ID Path**: cards_grid.default.primary.seo_enable
+	 * - **Documentation**: https://prismic.io/docs/field#boolean
+	 */
+	seo_enable: prismic.BooleanField
 }
 
 /**
@@ -1591,17 +1624,6 @@ export interface HeroBannerSliceDefaultPrimary {
 	 * - **Documentation**: https://prismic.io/docs/field#key-text
 	 */
 	cta_text: prismic.KeyTextField
-
-	/**
-	 * Abilita animazione field in *HeroBanner → Default → Primary*
-	 *
-	 * - **Field Type**: Boolean
-	 * - **Placeholder**: *None*
-	 * - **Default Value**: false
-	 * - **API ID Path**: hero_banner.default.primary.enable_animation
-	 * - **Documentation**: https://prismic.io/docs/field#boolean
-	 */
-	enable_animation: prismic.BooleanField
 }
 
 /**
@@ -1727,16 +1749,6 @@ export interface ImageAndTextSliceDefaultPrimary {
 	 * - **Documentation**: https://prismic.io/docs/field#key-text
 	 */
 	cta_text: prismic.KeyTextField
-
-	/**
-	 * CTA Testo accessible field in *ImageAndText → Default → Primary*
-	 *
-	 * - **Field Type**: Text
-	 * - **Placeholder**: *None*
-	 * - **API ID Path**: image_and_text.default.primary.cta_accessible_text
-	 * - **Documentation**: https://prismic.io/docs/field#key-text
-	 */
-	cta_accessible_text: prismic.KeyTextField
 
 	/**
 	 * Abilita animazione field in *ImageAndText → Default → Primary*
@@ -2177,6 +2189,16 @@ export interface SocialShareSliceDefaultPrimary {
 	 * - **Documentation**: https://prismic.io/docs/field#key-text
 	 */
 	title: prismic.KeyTextField
+
+	/**
+	 * Introduzione tweet field in *SocialShare → Default → Primary*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: social_share.default.primary.tweet_intro
+	 * - **Documentation**: https://prismic.io/docs/field#key-text
+	 */
+	tweet_intro: prismic.KeyTextField
 }
 
 /**
@@ -2245,12 +2267,12 @@ export interface StatisticsSliceDefaultPrimary {
 	/**
 	 * Sottotitolo field in *Statistics → Default → Primary*
 	 *
-	 * - **Field Type**: Rich Text
+	 * - **Field Type**: Text
 	 * - **Placeholder**: *None*
 	 * - **API ID Path**: statistics.default.primary.subtitle
-	 * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+	 * - **Documentation**: https://prismic.io/docs/field#key-text
 	 */
-	subtitle: prismic.RichTextField
+	subtitle: prismic.KeyTextField
 
 	/**
 	 * Abilita animazione field in *Statistics → Default → Primary*
@@ -2262,6 +2284,28 @@ export interface StatisticsSliceDefaultPrimary {
 	 * - **Documentation**: https://prismic.io/docs/field#boolean
 	 */
 	enable_animation: prismic.BooleanField
+
+	/**
+	 * Abilita SEO field in *Statistics → Default → Primary*
+	 *
+	 * - **Field Type**: Boolean
+	 * - **Placeholder**: *None*
+	 * - **Default Value**: false
+	 * - **API ID Path**: statistics.default.primary.seo_enable
+	 * - **Documentation**: https://prismic.io/docs/field#boolean
+	 */
+	seo_enable: prismic.BooleanField
+
+	/**
+	 * Abilita sfondo field in *Statistics → Default → Primary*
+	 *
+	 * - **Field Type**: Boolean
+	 * - **Placeholder**: *None*
+	 * - **Default Value**: false
+	 * - **API ID Path**: statistics.default.primary.enable_bg
+	 * - **Documentation**: https://prismic.io/docs/field#boolean
+	 */
+	enable_bg: prismic.BooleanField
 }
 
 /**
@@ -2580,16 +2624,6 @@ export interface YoutubeEmbedSliceDefaultPrimary {
 	video_id: prismic.KeyTextField
 
 	/**
-	 * Titolo video field in *YoutubeEmbed → Default → Primary*
-	 *
-	 * - **Field Type**: Text
-	 * - **Placeholder**: *None*
-	 * - **API ID Path**: youtube_embed.default.primary.video_title
-	 * - **Documentation**: https://prismic.io/docs/field#key-text
-	 */
-	video_title: prismic.KeyTextField
-
-	/**
 	 * Anteprima video field in *YoutubeEmbed → Default → Primary*
 	 *
 	 * - **Field Type**: Image
@@ -2645,6 +2679,8 @@ declare module '@prismicio/client' {
 
 	namespace Content {
 		export type {
+			CommonTranslationsDocument,
+			CommonTranslationsDocumentData,
 			FirstLevelPageDocument,
 			FirstLevelPageDocumentData,
 			FirstLevelPageDocumentDataSlicesSlice,

@@ -1,0 +1,32 @@
+{
+	"format": "custom",
+	"id": "common_translations",
+	"label": "Common translations",
+	"repeatable": false,
+	"status": true,
+	"json": {
+		"Main": {
+			"open_in_new_tab": {
+				"type": "Text",
+				"config": {
+					"label": "Apri in una nuova scheda",
+					"placeholder": ""
+				}
+			},
+			"view_italian_site": {
+				"type": "Text",
+				"config": {
+					"label": "Visualizza il sito in italiano",
+					"placeholder": ""
+				}
+			},
+			"view_english_site": {
+				"type": "Text",
+				"config": {
+					"label": "Visualizza il sito in inglese",
+					"placeholder": ""
+				}
+			}
+		}
+	}
+}

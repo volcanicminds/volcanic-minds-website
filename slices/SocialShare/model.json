@@ -45,6 +45,13 @@
             "label": "Titolo",
             "placeholder": ""
           }
+        },
+        "tweet_intro": {
+          "type": "Text",
+          "config": {
+            "label": "Introduzione tweet",
+            "placeholder": ""
+          }
         }
       },
       "items": {}

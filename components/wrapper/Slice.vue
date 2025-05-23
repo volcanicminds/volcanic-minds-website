@@ -29,7 +29,7 @@ withDefaults(
 		paddingBottom?: boolean
 		enableBg?: boolean
 		cssClass?: string
-		enableObserver: boolean
+		enableObserver?: boolean
 		isSection?: boolean
 	}>(),
 	{

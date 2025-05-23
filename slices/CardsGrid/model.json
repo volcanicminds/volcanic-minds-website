@@ -60,6 +60,15 @@
             "placeholder_true": "SI",
             "default_value": false
           }
+        },
+        "seo_enable": {
+          "type": "Boolean",
+          "config": {
+            "label": "Abilita SEO",
+            "placeholder_false": "No",
+            "placeholder_true": "Sì",
+            "default_value": false
+          }
         }
       },
       "items": {

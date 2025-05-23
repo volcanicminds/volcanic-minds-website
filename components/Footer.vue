@@ -5,7 +5,17 @@
 				<WrapperPrismicImage v-if="footerData.data.logo" :field="footerData.data.logo" :size="200" />
 				<div v-if="footerData.data.icon_links" class="flex social-links-container mt3">
 					<template v-for="(link, i) in footerData.data.icon_links">
-						<PrismicLink v-if="link.icon" :key="i" :field="link.link" :aria-label="link.alt_text || 'Link'">
+						<PrismicLink
+							v-if="link.icon"
+							:key="i"
+							:field="link.link"
+							:title="link.alt_text || undefined"
+							:aria-label="
+								link.link?.url && link.link.link_type === 'Web'
+									? commonTranslationsData.data.open_in_new_tab
+									: undefined
+							"
+						>
 							<font-awesome-icon :icon="link.icon" size="2xl" />
 						</PrismicLink>
 					</template>
@@ -18,7 +28,11 @@
 						:key="index"
 						:field="textLink.link"
 						class="footer-data no-underline"
-						:aria-label="textLink.accessible_name"
+						:aria-label="
+							textLink.link?.url && textLink.link.link_type === 'Web'
+								? commonTranslationsData.data.open_in_new_tab
+								: undefined
+						"
 						>{{ textLink.text }}</PrismicLink
 					>
 					{{ index < footerData.data.text_links.length - 1 ? ' &#8226; ' : '' }}
@@ -37,6 +51,9 @@ export default defineComponent({
 	computed: {
 		footerData(): any {
 			return this.$store.state.prismic.footer
+		},
+		commonTranslationsData(): any {
+			return this.$store.state.prismic.commonTranslations
 		}
 	}
 })

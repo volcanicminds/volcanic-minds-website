@@ -3,6 +3,7 @@
 	"label": "Header",
 	"repeatable": false,
 	"status": true,
+	"format": "custom",
 	"json": {
 		"Main": {
 			"logo": {
@@ -35,6 +36,5 @@
 				}
 			}
 		}
-	},
-	"format": "custom"
+	}
 }

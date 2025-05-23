@@ -17,7 +17,7 @@
             "label": "Titolo",
             "placeholder": "",
             "allowTargetBlank": true,
-            "multi": "strong,em,heading1"
+            "single": "strong,em"
           }
         },
         "title_mb": {
@@ -35,7 +35,7 @@
             "label": "Sottotitolo",
             "placeholder": "",
             "allowTargetBlank": true,
-            "multi": "paragraph,strong,em"
+            "single": "strong,em"
           }
         },
         "background_image": {
@@ -87,15 +87,6 @@
           "config": {
             "label": "CTA testo",
             "placeholder": ""
-          }
-        },
-        "enable_animation": {
-          "type": "Boolean",
-          "config": {
-            "label": "Abilita animazione",
-            "placeholder_false": "NO",
-            "placeholder_true": "SI",
-            "default_value": false
           }
         }
       },

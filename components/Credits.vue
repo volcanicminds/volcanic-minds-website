@@ -1,9 +1,9 @@
 <template>
 	<WrapperContainer class="mt4">
 		<h2 v-if="tags.length" class="h4">
-			Tag:
-			<span v-for="(tag, i) in tags" :key="i" class="tag bg-cultured raisin-black font-bold ml1 uppercase"
-				>&nbsp;{{ tag }}&nbsp;</span
+			Tag:<span v-for="(tag, i) in tags" :key="i" class="tag bg-cultured raisin-black font-bold ml1 uppercase"
+				><span class="tag-separator">{{ i > 0 ? ',&nbsp;' : '&nbsp;' }}</span
+				>{{ tag }}</span
 			>
 		</h2>
 		<p v-if="publicationDate" class="m0 date">{{ publicationDateLabel }}: {{ publicationDate }}</p>
@@ -29,6 +29,8 @@ withDefaults(
 	border-radius 4px
 	font-size 12px
 	padding 3px 6px
+	.tag-separator
+		font-size 0
 
 .date
 	font-size 16px

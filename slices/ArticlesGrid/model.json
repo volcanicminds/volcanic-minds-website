@@ -78,13 +78,6 @@
             "placeholder": ""
           }
         },
-        "blog_cta_accessible_label": {
-          "type": "Text",
-          "config": {
-            "label": "CTA blog label accessibile",
-            "placeholder": ""
-          }
-        },
         "cta_accessible_label": {
           "type": "Text",
           "config": {

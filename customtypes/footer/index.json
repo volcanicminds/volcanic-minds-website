@@ -83,13 +83,6 @@
 								"allowTargetBlank": true,
 								"select": null
 							}
-						},
-						"accessible_name": {
-							"type": "Text",
-							"config": {
-								"label": "Nome accessibile",
-								"placeholder": ""
-							}
 						}
 					}
 				}

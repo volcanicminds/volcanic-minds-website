@@ -46,13 +46,6 @@
             "placeholder": ""
           }
         },
-        "video_title": {
-          "type": "Text",
-          "config": {
-            "label": "Titolo video",
-            "placeholder": ""
-          }
-        },
         "video_preview": {
           "type": "Image",
           "config": {
