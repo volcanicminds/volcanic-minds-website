@@ -12,6 +12,20 @@
 					"label": "Apri in una nuova scheda",
 					"placeholder": ""
 				}
+			},
+			"view_italian_site": {
+				"type": "Text",
+				"config": {
+					"label": "Visualizza il sito in italiano",
+					"placeholder": ""
+				}
+			},
+			"view_english_site": {
+				"type": "Text",
+				"config": {
+					"label": "Visualizza il sito in inglese",
+					"placeholder": ""
+				}
 			}
 		}
 	}

@@ -23,7 +23,11 @@
 					:field="{ ...alternateLang, link_type: 'Document' }"
 					class="block country-flag"
 					:class="alternateLang.lang"
-					:aria-label="alternateLang.lang === 'en' ? 'English' : 'Italiano'"
+					:aria-label="
+						alternateLang.lang === 'en'
+							? commonTranslationsData.data.view_english_site
+							: commonTranslationsData.data.view_italian_site
+					"
 					role="button"
 					@click.native="handleDropdownClick"
 				/>
@@ -44,6 +48,9 @@ export default defineComponent({
 		},
 		headerData(): any {
 			return this.$store.state.prismic.header
+		},
+		commonTranslationsData(): any {
+			return this.$store.state.prismic.commonTranslations
 		}
 	},
 	methods: {

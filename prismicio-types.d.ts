@@ -19,6 +19,28 @@ interface CommonTranslationsDocumentData {
 	 * - **Documentation**: https://prismic.io/docs/field#key-text
 	 */
 	open_in_new_tab: prismic.KeyTextField
+
+	/**
+	 * Visualizza il sito in italiano field in *Common translations*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: common_translations.view_italian_site
+	 * - **Tab**: Main
+	 * - **Documentation**: https://prismic.io/docs/field#key-text
+	 */
+	view_italian_site: prismic.KeyTextField
+
+	/**
+	 * Visualizza il sito in inglese field in *Common translations*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: common_translations.view_english_site
+	 * - **Tab**: Main
+	 * - **Documentation**: https://prismic.io/docs/field#key-text
+	 */
+	view_english_site: prismic.KeyTextField
 }
 
 /**
