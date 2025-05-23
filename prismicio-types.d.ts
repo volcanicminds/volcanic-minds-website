@@ -2189,6 +2189,16 @@ export interface SocialShareSliceDefaultPrimary {
 	 * - **Documentation**: https://prismic.io/docs/field#key-text
 	 */
 	title: prismic.KeyTextField
+
+	/**
+	 * Introduzione tweet field in *SocialShare → Default → Primary*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: social_share.default.primary.tweet_intro
+	 * - **Documentation**: https://prismic.io/docs/field#key-text
+	 */
+	tweet_intro: prismic.KeyTextField
 }
 
 /**

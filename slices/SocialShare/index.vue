@@ -31,7 +31,7 @@ export default defineComponent({
 </script>
 
 <script setup lang="ts">
-defineProps({
+const props = defineProps({
 	slice: {
 		type: Object,
 		required: true
@@ -42,7 +42,7 @@ defineProps({
 const pageUrl = computed(() => (process.client ? encodeURIComponent(window.location.href) : ''))
 
 // Custom text
-const tweetText = encodeURIComponent("Dai un'occhiata a questo articolo!")
+const tweetText = encodeURIComponent(props.slice.primary.tweet_intro || "Dai un'occhiata a questo articolo!")
 
 const shareOn = (platform: string) => {
 	let shareUrl = ''

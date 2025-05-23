@@ -19,6 +19,11 @@
 				"__TYPE__": "FieldContent",
 				"value": "combination",
 				"type": "Text"
+			},
+			"tweet_intro": {
+				"__TYPE__": "FieldContent",
+				"value": "capital",
+				"type": "Text"
 			}
 		},
 		"items": []
