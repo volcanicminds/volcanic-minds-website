@@ -8,7 +8,7 @@
 	>
 		<WrapperContainer>
 			<div class="center">
-				<div v-if="slice.primary.subtitle" class="h2 font-thin">{{ slice.primary.subtitle }}</div>
+				<div v-if="slice.primary.subtitle" class="h2 font-thin mb1">{{ slice.primary.subtitle }}</div>
 				<component :is="slice.primary.seo_enable ? 'h2' : 'div'" v-if="slice.primary.title" class="h1 m0">{{
 					slice.primary.title
 				}}</component>
