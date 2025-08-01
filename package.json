@@ -11,7 +11,8 @@
 		"generate-dev": "export NODE_ENV=development && node ./switch_env.mjs && nuxt generate",
 		"generate": "export NODE_ENV=production && node ./switch_env.mjs && nuxt generate",
 		"lint": "eslint --ext .ts,.js,.vue .",
-		"slicemachine": "start-slicemachine"
+		"slicemachine": "start-slicemachine",
+		"deploy": "./deploy.sh"
 	},
 	"dependencies": {
 		"@fortawesome/fontawesome-svg-core": "^6.7.2",
