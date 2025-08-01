@@ -75,7 +75,7 @@ defineProps({
 		&-container
 			display grid
 			grid-template-columns repeat(auto-fit, minmax(250px, 1fr))
-			grid-gap 40px 10px
+			grid-gap 30px 10px
 
 		&-image
 			width 25px
