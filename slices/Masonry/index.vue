@@ -7,14 +7,12 @@
 		:is-section="slice.primary.subtitle ? true : false"
 	>
 		<WrapperContainer class="portfolio-container">
-			<!-- Sezione Intestazione -->
 			<div class="center mb3">
 				<div v-if="slice.primary.title" class="h2 font-thin mb1">{{ slice.primary.title }}</div>
 				<h2 v-if="slice.primary.subtitle" class="h1 m0">{{ slice.primary.subtitle }}</h2>
 				<PrismicRichText v-if="slice.primary.description" class="m0" :field="slice.primary.description" />
 			</div>
 
-			<!-- Masonry Wall -->
 			<div class="masonry-wall">
 				<component
 					:is="item.card_link && !item.card_link.isBroken && item.card_link.url ? 'PrismicLink' : 'div'"
@@ -24,23 +22,23 @@
 					:aria-label="item.card_link_alternative_text ? item.card_link_alternative_text : 'Visualizza il lavoro'"
 					class="work-card no-underline"
 					:class="[
-						`work-card--${item.card_size || 'default'}`, // --> MODIFICA CHIAVE: Aggiunge la classe di dimensione
-						{ 'is-link': item.card_link && !item.card_link.isBroken && item.card_link.url }
+						`work-card--${item.card_size || 'default'}`,
+						{
+							'text-on-hover': item.show_text_on_hover,
+							'is-link': item.card_link && !item.card_link.isBroken && item.card_link.url
+						}
 					]"
 				>
-					<!-- Contenitore interno per gestire il flexbox e lo stretch dell'immagine -->
-					<div class="work-card__inner">
-						<!-- Immagine in primo piano -->
-						<div v-if="item.card_image" class="work-card__image-container">
-							<WrapperPrismicImage :field="item.card_image" :size="1200" class="work-card__image" />
-						</div>
+					<div v-if="item.card_image" class="work-card__image-container">
+						<WrapperPrismicImage :field="item.card_image" :size="1200" class="work-card__image" />
+					</div>
 
-						<!-- Contenuto testuale della card -->
-						<div class="work-card__content p2">
+					<div v-if="item.card_title || item.card_desc" class="work-card__content">
+						<div class="work-card__content-inner p2">
 							<component :is="slice.primary.seo_enable ? 'h3' : 'div'" v-if="item.card_title" class="h3 m0 mb1">
 								{{ item.card_title }}
 							</component>
-							<PrismicRichText v-if="item.card_desc" :field="item.card_desc" class="m0" />
+							<PrismicRichText v-if="item.card_desc" :field="item.card_desc" class="m0 card-description" />
 						</div>
 					</div>
 				</component>
@@ -66,7 +64,6 @@ defineProps({
 </script>
 
 <style lang="stylus" scoped>
-// Breakpoint per il collasso in modalità mobile
 $breakpoint-md = 1024px
 
 .portfolio-container
@@ -77,28 +74,16 @@ $breakpoint-md = 1024px
 	padding-left 1rem
 	padding-right 1rem
 
-// --- NUOVA GRIGLIA CON PESI DINAMICI ---
 .masonry-wall
 	display grid
 	gap 1rem
-
-	// Definiamo una griglia di base. Es: 4 colonne su desktop.
-	// La griglia si adatterà in base a quante colonne un elemento occupa (span).
 	grid-template-columns repeat(4, 1fr)
+	grid-auto-rows 250px
 
-	// Definiamo un'altezza di riga di base.
-	// Questo è FONDAMENTALE per far funzionare lo span verticale (grid-row).
-	// Ogni card occuperà un multiplo di questa altezza.
-	grid-auto-rows 250px // Puoi aggiustare questo valore per cambiare l'altezza base
-
-// Stile base della Card
 .work-card
-	// Per default, ogni card occupa 1 cella di colonna e 1 di riga
+	position relative
 	grid-column span 1
 	grid-row span 1
-
-	background-color #fff
-	color #000
 	border-radius 12px
 	overflow hidden
 	box-shadow 0 4px 6px rgba(0, 0, 0, 0.1)
@@ -112,54 +97,68 @@ $breakpoint-md = 1024px
 			.work-card__image
 				transform scale(1.05)
 
-// --- CLASSI DI DIMENSIONE DINAMICHE ---
-// Queste classi vengono aggiunte in base alla scelta fatta in Prismic
-
 .work-card--wide
-	grid-column span 2 // Occupa 2 colonne
+	grid-column span 2
 
 .work-card--tall
-	grid-row span 2 // Occupa 2 righe
+	grid-row span 2
 
 .work-card--large
-	grid-column span 2 // Occupa 2 colonne
-	grid-row span 2 // E 2 righe
-
-// Struttura interna per far sì che l'immagine si adatti allo spazio
-.work-card__inner
-	display flex
-	flex-direction column
-	width 100%
-	height 100% // Fondamentale: fa sì che il contenuto riempia tutta l'area della griglia
+	grid-column span 2
+	grid-row span 2
 
 .work-card__image-container
-	flex-shrink 0 // Impedisce all'immagine di restringersi
-	overflow hidden
+	position absolute
+	top 0
+	left 0
+	width 100%
+	height 100%
 
 .work-card__image
 	width 100%
 	height 100%
-	object-fit cover // Importantissimo: adatta l'immagine a riempire lo spazio senza distorcerla
+	object-fit cover
 	transition transform 0.4s ease
 
 .work-card__content
-	flex-grow 1 // Fa sì che la sezione testo occupi lo spazio rimanente
+	position absolute
+	bottom 0
+	left 0
+	width 100%
+	height 100%
+	display flex
+	flex-direction column
+	justify-content flex-end
+	color white
+	background linear-gradient(0deg, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.6) 40%, rgba(0, 0, 0, 0) 70%)
+	transition opacity 0.3s ease-in-out
 
+.card-description
+	display -webkit-box
+	-webkit-box-orient vertical
+	-webkit-line-clamp 2
+	overflow hidden
 
-// --- RESPONSIVITÀ PER MOBILE ---
-// Sotto i 1024px, tutto torna ad essere una singola colonna
+.work-card.text-on-hover
+	.work-card__content
+		opacity 0
+	&:hover
+		.work-card__content
+			opacity 1
+
 @media (max-width: $breakpoint-md - 1px)
 	.masonry-wall
-		// Passiamo a una singola colonna
 		grid-template-columns 1fr
-		// L'altezza delle righe diventa automatica in base al contenuto
 		grid-auto-rows auto
 
-	// Annulliamo TUTTI gli span personalizzati su mobile
 	.work-card
 	.work-card--wide
 	.work-card--tall
 	.work-card--large
 		grid-column span 1
 		grid-row span 1
+		min-height 300px
+
+	.work-card__content
+		opacity 1
 </style>

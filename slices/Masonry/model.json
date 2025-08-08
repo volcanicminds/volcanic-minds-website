@@ -134,6 +134,15 @@
             ],
             "default_value": "default"
           }
+        },
+        "show_text_on_hover": {
+          "type": "Boolean",
+          "config": {
+            "label": "Mostra testo su hover",
+            "placeholder_false": "false",
+            "placeholder_true": "true",
+            "default_value": false
+          }
         }
       }
     }

@@ -106,6 +106,13 @@
 							"value": "default",
 							"type": "Select"
 						}
+					],
+					[
+						"show_text_on_hover",
+						{
+							"__TYPE__": "BooleanContent",
+							"value": true
+						}
 					]
 				]
 			},
@@ -179,6 +186,13 @@
 							"__TYPE__": "FieldContent",
 							"value": "large",
 							"type": "Select"
+						}
+					],
+					[
+						"show_text_on_hover",
+						{
+							"__TYPE__": "BooleanContent",
+							"value": false
 						}
 					]
 				]
@@ -254,6 +268,13 @@
 							"value": "large",
 							"type": "Select"
 						}
+					],
+					[
+						"show_text_on_hover",
+						{
+							"__TYPE__": "BooleanContent",
+							"value": true
+						}
 					]
 				]
 			},
@@ -327,6 +348,13 @@
 							"__TYPE__": "FieldContent",
 							"value": "default",
 							"type": "Select"
+						}
+					],
+					[
+						"show_text_on_hover",
+						{
+							"__TYPE__": "BooleanContent",
+							"value": true
 						}
 					]
 				]
@@ -402,6 +430,13 @@
 							"value": "tall",
 							"type": "Select"
 						}
+					],
+					[
+						"show_text_on_hover",
+						{
+							"__TYPE__": "BooleanContent",
+							"value": true
+						}
 					]
 				]
 			},
@@ -475,6 +510,13 @@
 							"__TYPE__": "FieldContent",
 							"value": "tall",
 							"type": "Select"
+						}
+					],
+					[
+						"show_text_on_hover",
+						{
+							"__TYPE__": "BooleanContent",
+							"value": false
 						}
 					]
 				]

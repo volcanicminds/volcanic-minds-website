@@ -1956,6 +1956,17 @@ export interface MasonrySliceDefaultItem {
 	 * - **Documentation**: https://prismic.io/docs/field#select
 	 */
 	card_size: prismic.SelectField<'default' | 'wide' | 'tall' | 'large', 'filled'>
+
+	/**
+	 * Mostra testo su hover field in *Masonry → Items*
+	 *
+	 * - **Field Type**: Boolean
+	 * - **Placeholder**: *None*
+	 * - **Default Value**: false
+	 * - **API ID Path**: masonry.items[].show_text_on_hover
+	 * - **Documentation**: https://prismic.io/docs/field#boolean
+	 */
+	show_text_on_hover: prismic.BooleanField
 }
 
 /**
