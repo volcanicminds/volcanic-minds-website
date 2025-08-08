@@ -19,8 +19,10 @@
 					{
 						"type": "paragraph",
 						"content": {
-							"text": "Laborum velit dolore duis exercitation cupidatat culpa dolore voluptate sit nisi sint ullamco. Nisi anim ullamco nisi voluptate est voluptate."
-						}
+							"text": "Laborum velit dolore duis exercitation cupidatat culpa dolore voluptate sit nisi sint ullamco. Nisi anim ullamco nisi voluptate est voluptate.",
+							"spans": []
+						},
+						"direction": "ltr"
 					}
 				]
 			},
