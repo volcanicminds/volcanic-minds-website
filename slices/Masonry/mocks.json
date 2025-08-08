@@ -1,0 +1,434 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"title": {
+				"__TYPE__": "FieldContent",
+				"type": "Text",
+				"value": "Portfolio"
+			},
+			"subtitle": {
+				"__TYPE__": "FieldContent",
+				"type": "Text",
+				"value": "I nostri lavori"
+			},
+			"description": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Laborum velit dolore duis exercitation cupidatat culpa dolore voluptate sit nisi sint ullamco. Nisi anim ullamco nisi voluptate est voluptate."
+						}
+					}
+				]
+			},
+			"margin_top": {
+				"__TYPE__": "BooleanContent",
+				"value": true
+			},
+			"margin_bottom": {
+				"__TYPE__": "BooleanContent",
+				"value": true
+			},
+			"enable_animation": {
+				"__TYPE__": "BooleanContent",
+				"value": true
+			},
+			"enable_bg": {
+				"__TYPE__": "BooleanContent",
+				"value": true
+			},
+			"seo_enable": {
+				"__TYPE__": "BooleanContent",
+				"value": true
+			}
+		},
+		"items": [
+			{
+				"__TYPE__": "GroupItemContent",
+				"value": [
+					[
+						"card_desc",
+						{
+							"__TYPE__": "StructuredTextContent",
+							"value": [
+								{
+									"type": "paragraph",
+									"content": {
+										"text": "Sunt cupidatat adipisicing occaecat velit enim enim nostrud laborum eu excepteur id ullamco esse. Fugiat non excepteur ex ad nostrud eu ad voluptate irure dolor."
+									}
+								}
+							]
+						}
+					],
+					[
+						"card_title",
+						{
+							"__TYPE__": "FieldContent",
+							"type": "Text",
+							"value": "titolo 1"
+						}
+					],
+					[
+						"card_image",
+						{
+							"url": "https://images.unsplash.com/photo-1597714026720-8f74c62310ba?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMzc0NjN8MHwxfHNlYXJjaHwyfHxjaXRydXMlMjBmcnVpdHxlbnwwfHx8fDE3NTQ1NzE1NjJ8MA&ixlib=rb-4.1.0&q=85",
+							"alt": "orange fruits under blue sky during daytime",
+							"origin": {
+								"id": "eaOjEz8746k",
+								"url": "https://images.unsplash.com/photo-1597714026720-8f74c62310ba?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMzc0NjN8MHwxfHNlYXJjaHwyfHxjaXRydXMlMjBmcnVpdHxlbnwwfHx8fDE3NTQ1NzE1NjJ8MA&ixlib=rb-4.1.0&q=85",
+								"width": 5688,
+								"height": 3792
+							},
+							"width": 5688,
+							"height": 3792,
+							"edit": {
+								"background": "transparent",
+								"zoom": 1,
+								"crop": {
+									"x": 0,
+									"y": 0
+								}
+							},
+							"credits": null,
+							"__TYPE__": "ImageContent",
+							"thumbnails": {}
+						}
+					]
+				]
+			},
+			{
+				"__TYPE__": "GroupItemContent",
+				"value": [
+					[
+						"card_image",
+						{
+							"url": "https://images.unsplash.com/photo-1597589022928-bb4002c099ec?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMzc0NjN8MHwxfHNlYXJjaHw0fHxjaXRydXMlMjBmcnVpdHxlbnwwfHx8fDE3NTQ1NzE1NjJ8MA&ixlib=rb-4.1.0&q=85",
+							"alt": "yellow lemon fruit beside green leaves",
+							"origin": {
+								"id": "3t8rQ3LD2JI",
+								"url": "https://images.unsplash.com/photo-1597589022928-bb4002c099ec?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMzc0NjN8MHwxfHNlYXJjaHw0fHxjaXRydXMlMjBmcnVpdHxlbnwwfHx8fDE3NTQ1NzE1NjJ8MA&ixlib=rb-4.1.0&q=85",
+								"width": 3024,
+								"height": 3024
+							},
+							"width": 3024,
+							"height": 3024,
+							"edit": {
+								"background": "transparent",
+								"zoom": 1,
+								"crop": {
+									"x": 0,
+									"y": 0
+								}
+							},
+							"credits": null,
+							"__TYPE__": "ImageContent",
+							"thumbnails": {}
+						}
+					],
+					[
+						"card_title",
+						{
+							"__TYPE__": "FieldContent",
+							"type": "Text",
+							"value": "titolo 2"
+						}
+					],
+					[
+						"card_desc",
+						{
+							"__TYPE__": "StructuredTextContent",
+							"value": [
+								{
+									"type": "paragraph",
+									"content": {
+										"text": "Per noi non esistono clienti, ma partner con cui lavorare sullo stesso livello, fianco a fianco, perché crediamo che il successo duraturo nasca dalla simbiosi e fiducia reciproca.",
+										"spans": [
+											{
+												"type": "em",
+												"start": 8,
+												"end": 28
+											},
+											{
+												"type": "strong",
+												"start": 150,
+												"end": 168
+											}
+										]
+									},
+									"direction": "ltr"
+								}
+							]
+						}
+					]
+				]
+			},
+			{
+				"__TYPE__": "GroupItemContent",
+				"value": [
+					[
+						"card_image",
+						{
+							"url": "https://images.unsplash.com/photo-1577234286642-fc512a5f8f11?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMzc0NjN8MHwxfHNlYXJjaHw2fHxjaXRydXMlMjBmcnVpdHxlbnwwfHx8fDE3NTQ1NzE1NjJ8MA&ixlib=rb-4.1.0&q=85",
+							"alt": "sliced grapefruits",
+							"origin": {
+								"id": "ezSFnAFi9hY",
+								"url": "https://images.unsplash.com/photo-1577234286642-fc512a5f8f11?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMzc0NjN8MHwxfHNlYXJjaHw2fHxjaXRydXMlMjBmcnVpdHxlbnwwfHx8fDE3NTQ1NzE1NjJ8MA&ixlib=rb-4.1.0&q=85",
+								"width": 3024,
+								"height": 4032
+							},
+							"width": 3024,
+							"height": 4032,
+							"edit": {
+								"background": "transparent",
+								"zoom": 1,
+								"crop": {
+									"x": 0,
+									"y": 0
+								}
+							},
+							"credits": null,
+							"__TYPE__": "ImageContent",
+							"thumbnails": {}
+						}
+					],
+					[
+						"card_title",
+						{
+							"__TYPE__": "FieldContent",
+							"type": "Text",
+							"value": "titolo 3"
+						}
+					],
+					[
+						"card_desc",
+						{
+							"__TYPE__": "StructuredTextContent",
+							"value": [
+								{
+									"type": "paragraph",
+									"content": {
+										"text": "Per noi non esistono clienti, ma partner con cui lavorare sullo stesso livello, fianco a fianco, perché crediamo che il successo duraturo nasca dalla simbiosi e fiducia reciproca.",
+										"spans": [
+											{
+												"type": "em",
+												"start": 8,
+												"end": 28
+											},
+											{
+												"type": "strong",
+												"start": 150,
+												"end": 168
+											}
+										]
+									},
+									"direction": "ltr"
+								}
+							]
+						}
+					]
+				]
+			},
+			{
+				"__TYPE__": "GroupItemContent",
+				"value": [
+					[
+						"card_image",
+						{
+							"url": "https://images.unsplash.com/photo-1592187270271-9a4b84faa228?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMzc0NjN8MHwxfHNlYXJjaHwxM3x8Y2l0cnVzJTIwZnJ1aXR8ZW58MHx8fHwxNzU0NTcxNTYyfDA&ixlib=rb-4.1.0&q=85",
+							"alt": "sliced orange fruit on blue surface",
+							"origin": {
+								"id": "8ZGgg6rhzxs",
+								"url": "https://images.unsplash.com/photo-1592187270271-9a4b84faa228?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMzc0NjN8MHwxfHNlYXJjaHwxM3x8Y2l0cnVzJTIwZnJ1aXR8ZW58MHx8fHwxNzU0NTcxNTYyfDA&ixlib=rb-4.1.0&q=85",
+								"width": 4000,
+								"height": 6000
+							},
+							"width": 4000,
+							"height": 6000,
+							"edit": {
+								"background": "transparent",
+								"zoom": 1,
+								"crop": {
+									"x": 0,
+									"y": 0
+								}
+							},
+							"credits": null,
+							"__TYPE__": "ImageContent",
+							"thumbnails": {}
+						}
+					],
+					[
+						"card_title",
+						{
+							"__TYPE__": "FieldContent",
+							"type": "Text",
+							"value": "titolo 4"
+						}
+					],
+					[
+						"card_desc",
+						{
+							"__TYPE__": "StructuredTextContent",
+							"value": [
+								{
+									"type": "paragraph",
+									"content": {
+										"text": "Per noi non esistono clienti, ma partner con cui lavorare sullo stesso livello, fianco a fianco, perché crediamo che il successo duraturo nasca dalla simbiosi e fiducia reciproca.",
+										"spans": [
+											{
+												"type": "em",
+												"start": 8,
+												"end": 28
+											},
+											{
+												"type": "strong",
+												"start": 150,
+												"end": 168
+											}
+										]
+									},
+									"direction": "ltr"
+								}
+							]
+						}
+					]
+				]
+			},
+			{
+				"__TYPE__": "GroupItemContent",
+				"value": [
+					[
+						"card_image",
+						{
+							"url": "https://images.unsplash.com/photo-1609127102567-8a9a21dc27d8?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMzc0NjN8MHwxfHNlYXJjaHwyNnx8Y2l0cnVzJTIwZnJ1aXR8ZW58MHx8fHwxNzU0NTcxNTYzfDA&ixlib=rb-4.1.0&q=85",
+							"alt": "3 lemon fruits on pink surface",
+							"origin": {
+								"id": "qs5of5rSiIg",
+								"url": "https://images.unsplash.com/photo-1609127102567-8a9a21dc27d8?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMzc0NjN8MHwxfHNlYXJjaHwyNnx8Y2l0cnVzJTIwZnJ1aXR8ZW58MHx8fHwxNzU0NTcxNTYzfDA&ixlib=rb-4.1.0&q=85",
+								"width": 4475,
+								"height": 3132
+							},
+							"width": 4475,
+							"height": 3132,
+							"edit": {
+								"background": "transparent",
+								"zoom": 1,
+								"crop": {
+									"x": 0,
+									"y": 0
+								}
+							},
+							"credits": null,
+							"__TYPE__": "ImageContent",
+							"thumbnails": {}
+						}
+					],
+					[
+						"card_title",
+						{
+							"__TYPE__": "FieldContent",
+							"type": "Text",
+							"value": "titolo 5"
+						}
+					],
+					[
+						"card_desc",
+						{
+							"__TYPE__": "StructuredTextContent",
+							"value": [
+								{
+									"type": "paragraph",
+									"content": {
+										"text": "Per noi non esistono clienti, ma partner con cui lavorare sullo stesso livello, fianco a fianco, perché crediamo che il successo duraturo nasca dalla simbiosi e fiducia reciproca.",
+										"spans": [
+											{
+												"type": "em",
+												"start": 8,
+												"end": 28
+											},
+											{
+												"type": "strong",
+												"start": 150,
+												"end": 168
+											}
+										]
+									},
+									"direction": "ltr"
+								}
+							]
+						}
+					]
+				]
+			},
+			{
+				"__TYPE__": "GroupItemContent",
+				"value": [
+					[
+						"card_image",
+						{
+							"url": "https://images.unsplash.com/photo-1552841847-0e031d33a283?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMzc0NjN8MHwxfHNlYXJjaHwyMXx8Y2l0cnVzJTIwZnJ1aXR8ZW58MHx8fHwxNzU0NTcxNTYyfDA&ixlib=rb-4.1.0&q=85",
+							"alt": "sliced lemons",
+							"origin": {
+								"id": "1pJLkDYasfY",
+								"url": "https://images.unsplash.com/photo-1552841847-0e031d33a283?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMzc0NjN8MHwxfHNlYXJjaHwyMXx8Y2l0cnVzJTIwZnJ1aXR8ZW58MHx8fHwxNzU0NTcxNTYyfDA&ixlib=rb-4.1.0&q=85",
+								"width": 3914,
+								"height": 4892
+							},
+							"width": 3914,
+							"height": 4892,
+							"edit": {
+								"background": "transparent",
+								"zoom": 1,
+								"crop": {
+									"x": 0,
+									"y": 0
+								}
+							},
+							"credits": null,
+							"__TYPE__": "ImageContent",
+							"thumbnails": {}
+						}
+					],
+					[
+						"card_title",
+						{
+							"__TYPE__": "FieldContent",
+							"type": "Text",
+							"value": "titolo 6"
+						}
+					],
+					[
+						"card_desc",
+						{
+							"__TYPE__": "StructuredTextContent",
+							"value": [
+								{
+									"type": "paragraph",
+									"content": {
+										"text": "Per noi non esistono clienti, ma partner con cui lavorare sullo stesso livello, fianco a fianco, perché crediamo che il successo duraturo nasca dalla simbiosi e fiducia reciproca.",
+										"spans": [
+											{
+												"type": "em",
+												"start": 8,
+												"end": 28
+											},
+											{
+												"type": "strong",
+												"start": 150,
+												"end": 168
+											}
+										]
+									},
+									"direction": "ltr"
+								}
+							]
+						}
+					]
+				]
+			}
+		]
+	}
+]

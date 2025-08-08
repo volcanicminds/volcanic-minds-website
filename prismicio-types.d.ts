@@ -59,6 +59,7 @@ export type CommonTranslationsDocument<Lang extends string = string> = prismic.P
 >
 
 type FirstLevelPageDocumentDataSlicesSlice =
+	| MasonrySlice
 	| SocialShareSlice
 	| SyntaxHighlighterSlice
 	| ArticlesGridSlice
@@ -529,6 +530,7 @@ export type NavigationMenuDocument<Lang extends string = string> = prismic.Prism
 >
 
 type SecondLevelPageDocumentDataSlicesSlice =
+	| MasonrySlice
 	| YoutubeEmbedSlice
 	| SocialShareSlice
 	| SyntaxHighlighterSlice
@@ -1801,6 +1803,178 @@ type ImageAndTextSliceVariation = ImageAndTextSliceDefault
 export type ImageAndTextSlice = prismic.SharedSlice<'image_and_text', ImageAndTextSliceVariation>
 
 /**
+ * Primary content in *Masonry → Default → Primary*
+ */
+export interface MasonrySliceDefaultPrimary {
+	/**
+	 * Titolo field in *Masonry → Default → Primary*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: masonry.default.primary.title
+	 * - **Documentation**: https://prismic.io/docs/field#key-text
+	 */
+	title: prismic.KeyTextField
+
+	/**
+	 * Sottotitolo field in *Masonry → Default → Primary*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: masonry.default.primary.subtitle
+	 * - **Documentation**: https://prismic.io/docs/field#key-text
+	 */
+	subtitle: prismic.KeyTextField
+
+	/**
+	 * Descrizione field in *Masonry → Default → Primary*
+	 *
+	 * - **Field Type**: Rich Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: masonry.default.primary.description
+	 * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+	 */
+	description: prismic.RichTextField
+
+	/**
+	 * Margine superiore field in *Masonry → Default → Primary*
+	 *
+	 * - **Field Type**: Boolean
+	 * - **Placeholder**: *None*
+	 * - **Default Value**: false
+	 * - **API ID Path**: masonry.default.primary.margin_top
+	 * - **Documentation**: https://prismic.io/docs/field#boolean
+	 */
+	margin_top: prismic.BooleanField
+
+	/**
+	 * Margine inferiore field in *Masonry → Default → Primary*
+	 *
+	 * - **Field Type**: Boolean
+	 * - **Placeholder**: *None*
+	 * - **Default Value**: false
+	 * - **API ID Path**: masonry.default.primary.margin_bottom
+	 * - **Documentation**: https://prismic.io/docs/field#boolean
+	 */
+	margin_bottom: prismic.BooleanField
+
+	/**
+	 * Abilita animazione field in *Masonry → Default → Primary*
+	 *
+	 * - **Field Type**: Boolean
+	 * - **Placeholder**: *None*
+	 * - **Default Value**: false
+	 * - **API ID Path**: masonry.default.primary.enable_animation
+	 * - **Documentation**: https://prismic.io/docs/field#boolean
+	 */
+	enable_animation: prismic.BooleanField
+
+	/**
+	 * Abilita sfondo field in *Masonry → Default → Primary*
+	 *
+	 * - **Field Type**: Boolean
+	 * - **Placeholder**: *None*
+	 * - **Default Value**: false
+	 * - **API ID Path**: masonry.default.primary.enable_bg
+	 * - **Documentation**: https://prismic.io/docs/field#boolean
+	 */
+	enable_bg: prismic.BooleanField
+
+	/**
+	 * Abilita SEO field in *Masonry → Default → Primary*
+	 *
+	 * - **Field Type**: Boolean
+	 * - **Placeholder**: *None*
+	 * - **Default Value**: false
+	 * - **API ID Path**: masonry.default.primary.seo_enable
+	 * - **Documentation**: https://prismic.io/docs/field#boolean
+	 */
+	seo_enable: prismic.BooleanField
+}
+
+/**
+ * Primary content in *Masonry → Items*
+ */
+export interface MasonrySliceDefaultItem {
+	/**
+	 * Immagine field in *Masonry → Items*
+	 *
+	 * - **Field Type**: Image
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: masonry.items[].card_image
+	 * - **Documentation**: https://prismic.io/docs/field#image
+	 */
+	card_image: prismic.ImageField<never>
+
+	/**
+	 * Titolo card field in *Masonry → Items*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: masonry.items[].card_title
+	 * - **Documentation**: https://prismic.io/docs/field#key-text
+	 */
+	card_title: prismic.KeyTextField
+
+	/**
+	 * Descrizione card field in *Masonry → Items*
+	 *
+	 * - **Field Type**: Rich Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: masonry.items[].card_desc
+	 * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+	 */
+	card_desc: prismic.RichTextField
+
+	/**
+	 * Link pagina field in *Masonry → Items*
+	 *
+	 * - **Field Type**: Link
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: masonry.items[].card_link
+	 * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+	 */
+	card_link: prismic.LinkField<string, string, unknown, prismic.FieldState, never>
+
+	/**
+	 * Link testo accessibile field in *Masonry → Items*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: masonry.items[].card_link_alternative_text
+	 * - **Documentation**: https://prismic.io/docs/field#key-text
+	 */
+	card_link_alternative_text: prismic.KeyTextField
+}
+
+/**
+ * Default variation for Masonry Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type MasonrySliceDefault = prismic.SharedSliceVariation<
+	'default',
+	Simplify<MasonrySliceDefaultPrimary>,
+	Simplify<MasonrySliceDefaultItem>
+>
+
+/**
+ * Slice variation for *Masonry*
+ */
+type MasonrySliceVariation = MasonrySliceDefault
+
+/**
+ * Masonry Shared Slice
+ *
+ * - **API ID**: `masonry`
+ * - **Description**: Masonry
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type MasonrySlice = prismic.SharedSlice<'masonry', MasonrySliceVariation>
+
+/**
  * Primary content in *NavigationItem → Default → Primary*
  */
 export interface NavigationMenuSliceDefaultPrimary {
@@ -2735,6 +2909,11 @@ declare module '@prismicio/client' {
 			ImageAndTextSliceDefaultPrimary,
 			ImageAndTextSliceVariation,
 			ImageAndTextSliceDefault,
+			MasonrySlice,
+			MasonrySliceDefaultPrimary,
+			MasonrySliceDefaultItem,
+			MasonrySliceVariation,
+			MasonrySliceDefault,
 			NavigationMenuSlice,
 			NavigationMenuSliceDefaultPrimary,
 			NavigationMenuSliceDefaultItem,

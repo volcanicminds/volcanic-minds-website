@@ -101,6 +101,9 @@
 				"fieldset": "Slice Zone",
 				"config": {
 					"choices": {
+						"masonry": {
+							"type": "SharedSlice"
+						},
 						"youtube_embed": {
 							"type": "SharedSlice"
 						},

@@ -34,6 +34,9 @@
 				"fieldset": "Slice Zone",
 				"config": {
 					"choices": {
+						"masonry": {
+							"type": "SharedSlice"
+						},
 						"social_share": {
 							"type": "SharedSlice"
 						},
