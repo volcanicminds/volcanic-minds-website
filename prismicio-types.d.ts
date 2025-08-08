@@ -1837,6 +1837,17 @@ export interface MasonrySliceDefaultPrimary {
 	description: prismic.RichTextField
 
 	/**
+	 * Stile Layout field in *Masonry → Default → Primary*
+	 *
+	 * - **Field Type**: Select
+	 * - **Placeholder**: *None*
+	 * - **Default Value**: default
+	 * - **API ID Path**: masonry.default.primary.layout_style
+	 * - **Documentation**: https://prismic.io/docs/field#select
+	 */
+	layout_style: prismic.SelectField<'default' | 'compact', 'filled'>
+
+	/**
 	 * Margine superiore field in *Masonry → Default → Primary*
 	 *
 	 * - **Field Type**: Boolean

@@ -45,6 +45,11 @@
 			"seo_enable": {
 				"__TYPE__": "BooleanContent",
 				"value": true
+			},
+			"layout_style": {
+				"__TYPE__": "FieldContent",
+				"value": "default",
+				"type": "Select"
 			}
 		},
 		"items": [

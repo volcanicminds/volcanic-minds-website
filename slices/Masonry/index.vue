@@ -13,7 +13,7 @@
 				<PrismicRichText v-if="slice.primary.description" class="m0" :field="slice.primary.description" />
 			</div>
 
-			<div class="masonry-wall">
+			<div class="masonry-wall" :class="`layout--${slice.primary.layout_style || 'default'}`">
 				<component
 					:is="item.card_link && !item.card_link.isBroken && item.card_link.url ? 'PrismicLink' : 'div'"
 					v-for="(item, i) in slice.items"
@@ -76,26 +76,36 @@ $breakpoint-md = 1024px
 
 .masonry-wall
 	display grid
-	gap 1rem
 	grid-template-columns repeat(4, 1fr)
 	grid-auto-rows 250px
+
+.masonry-wall.layout--default
+	gap 1rem
+
+.masonry-wall.layout--compact
+	gap 0
 
 .work-card
 	position relative
 	grid-column span 1
 	grid-row span 1
-	border-radius 12px
 	overflow hidden
 	box-shadow 0 4px 6px rgba(0, 0, 0, 0.1)
 	transition all 0.3s ease-in-out
 
-	&.is-link
-		cursor pointer
-		&:hover
-			transform translateY(-5px)
-			box-shadow 0 10px 15px rgba(0, 0, 0, 0.1)
-			.work-card__image
-				transform scale(1.05)
+.layout--default .work-card
+	border-radius 12px
+
+.layout--compact .work-card
+	border-radius 0
+
+.work-card.is-link
+	cursor pointer
+	&:hover
+		transform translateY(-5px)
+		box-shadow 0 10px 15px rgba(0, 0, 0, 0.1)
+		.work-card__image
+			transform scale(1.05)
 
 .work-card--wide
 	grid-column span 2
