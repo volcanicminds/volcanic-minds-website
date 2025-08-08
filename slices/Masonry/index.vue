@@ -1,3 +1,11 @@
+<script lang="ts">
+import { defineComponent, ref, onMounted, onUpdated, onUnmounted } from 'vue'
+
+export default defineComponent({
+	name: 'PortfolioMasonry'
+})
+</script>
+
 <template>
 	<WrapperSlice
 		:margin-top="slice.primary.margin_top || false"
@@ -13,7 +21,7 @@
 				<PrismicRichText v-if="slice.primary.description" class="m0" :field="slice.primary.description" />
 			</div>
 
-			<div class="masonry-wall" :class="`layout--${slice.primary.layout_style || 'default'}`">
+			<div ref="masonryWallRef" class="masonry-wall" :class="`layout--${slice.primary.layout_style || 'default'}`">
 				<component
 					:is="item.card_link && !item.card_link.isBroken && item.card_link.url ? 'PrismicLink' : 'div'"
 					v-for="(item, i) in slice.items"
@@ -47,19 +55,58 @@
 	</WrapperSlice>
 </template>
 
-<script lang="ts">
-import { defineComponent } from 'vue'
-export default defineComponent({
-	name: 'PortfolioMasonry'
-})
-</script>
-
 <script setup lang="ts">
 defineProps({
 	slice: {
 		type: Object,
 		required: true
 	}
+})
+
+const masonryWallRef = ref<HTMLElement | null>(null)
+
+const updateCornerClasses = () => {
+	const container = masonryWallRef.value
+	if (!container || getComputedStyle(container).getPropertyValue('display') !== 'grid') {
+		return
+	}
+
+	const cards = Array.from(container.children) as HTMLElement[]
+	if (cards.length === 0) return
+
+	// Pulisce le classi esistenti
+	cards.forEach((card) => {
+		card.classList.remove('is-top-left', 'is-top-right', 'is-bottom-left', 'is-bottom-right')
+	})
+
+	// Calcola le coordinate estreme della griglia
+	const positions = cards.map((card) => card.getBoundingClientRect())
+	const minTop = Math.min(...positions.map((p) => p.top))
+	const maxBottom = Math.max(...positions.map((p) => p.bottom))
+	const minLeft = Math.min(...positions.map((p) => p.left))
+	const maxRight = Math.max(...positions.map((p) => p.right))
+
+	// Applica le classi agli angoli
+	cards.forEach((card, index) => {
+		const pos = positions[index]
+		if (pos.top === minTop && pos.left === minLeft) card.classList.add('is-top-left')
+		if (pos.top === minTop && pos.right === maxRight) card.classList.add('is-top-right')
+		if (pos.bottom === maxBottom && pos.left === minLeft) card.classList.add('is-bottom-left')
+		if (pos.bottom === maxBottom && pos.right === maxRight) card.classList.add('is-bottom-right')
+	})
+}
+
+onMounted(() => {
+	updateCornerClasses()
+	window.addEventListener('resize', updateCornerClasses)
+})
+
+onUpdated(() => {
+	updateCornerClasses()
+})
+
+onUnmounted(() => {
+	window.removeEventListener('resize', updateCornerClasses)
 })
 </script>
 
@@ -98,6 +145,19 @@ $breakpoint-md = 1024px
 
 .layout--compact .work-card
 	border-radius 0
+
+// Stili per gli angoli arrotondati in modalità compatta
+.layout--compact .work-card.is-top-left
+	border-top-left-radius 12px
+
+.layout--compact .work-card.is-top-right
+	border-top-right-radius 12px
+
+.layout--compact .work-card.is-bottom-left
+	border-bottom-left-radius 12px
+
+.layout--compact .work-card.is-bottom-right
+	border-bottom-right-radius 12px
 
 .work-card.is-link
 	cursor pointer
