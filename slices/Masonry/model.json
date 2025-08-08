@@ -120,6 +120,20 @@
             "label": "Link testo accessibile",
             "placeholder": ""
           }
+        },
+        "card_size": {
+          "type": "Select",
+          "config": {
+            "label": "Dimensione",
+            "placeholder": "",
+            "options": [
+              "default",
+              "wide",
+              "tall",
+              "large"
+            ],
+            "default_value": "default"
+          }
         }
       }
     }

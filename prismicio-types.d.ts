@@ -1945,6 +1945,17 @@ export interface MasonrySliceDefaultItem {
 	 * - **Documentation**: https://prismic.io/docs/field#key-text
 	 */
 	card_link_alternative_text: prismic.KeyTextField
+
+	/**
+	 * Dimensione field in *Masonry → Items*
+	 *
+	 * - **Field Type**: Select
+	 * - **Placeholder**: *None*
+	 * - **Default Value**: default
+	 * - **API ID Path**: masonry.items[].card_size
+	 * - **Documentation**: https://prismic.io/docs/field#select
+	 */
+	card_size: prismic.SelectField<'default' | 'wide' | 'tall' | 'large', 'filled'>
 }
 
 /**

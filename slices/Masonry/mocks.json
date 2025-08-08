@@ -98,6 +98,14 @@
 							"__TYPE__": "ImageContent",
 							"thumbnails": {}
 						}
+					],
+					[
+						"card_size",
+						{
+							"__TYPE__": "FieldContent",
+							"value": "default",
+							"type": "Select"
+						}
 					]
 				]
 			},
@@ -163,6 +171,14 @@
 									"direction": "ltr"
 								}
 							]
+						}
+					],
+					[
+						"card_size",
+						{
+							"__TYPE__": "FieldContent",
+							"value": "large",
+							"type": "Select"
 						}
 					]
 				]
@@ -230,6 +246,14 @@
 								}
 							]
 						}
+					],
+					[
+						"card_size",
+						{
+							"__TYPE__": "FieldContent",
+							"value": "large",
+							"type": "Select"
+						}
 					]
 				]
 			},
@@ -295,6 +319,14 @@
 									"direction": "ltr"
 								}
 							]
+						}
+					],
+					[
+						"card_size",
+						{
+							"__TYPE__": "FieldContent",
+							"value": "default",
+							"type": "Select"
 						}
 					]
 				]
@@ -362,6 +394,14 @@
 								}
 							]
 						}
+					],
+					[
+						"card_size",
+						{
+							"__TYPE__": "FieldContent",
+							"value": "tall",
+							"type": "Select"
+						}
 					]
 				]
 			},
@@ -427,6 +467,14 @@
 									"direction": "ltr"
 								}
 							]
+						}
+					],
+					[
+						"card_size",
+						{
+							"__TYPE__": "FieldContent",
+							"value": "tall",
+							"type": "Select"
 						}
 					]
 				]
