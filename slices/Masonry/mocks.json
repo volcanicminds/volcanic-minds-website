@@ -48,8 +48,8 @@
 			},
 			"layout_style": {
 				"__TYPE__": "FieldContent",
-				"value": "default",
-				"type": "Select"
+				"type": "Select",
+				"value": "spaced-compact"
 			}
 		},
 		"items": [
@@ -117,6 +117,60 @@
 						{
 							"__TYPE__": "BooleanContent",
 							"value": true
+						}
+					]
+				]
+			},
+			{
+				"__TYPE__": "GroupItemContent",
+				"value": [
+					[
+						"card_image",
+						{
+							"__TYPE__": "ImageContent",
+							"url": "https://images.unsplash.com/photo-1528826194825-a71b700fe80b?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMzc0NjN8MHwxfHNlYXJjaHwxOXx8Y2l0cnVzJTIwZnJ1aXR8ZW58MHx8fHwxNzU0NTcxNTYyfDA&ixlib=rb-4.1.0&q=85",
+							"alt": "slice grapefruit",
+							"origin": {
+								"id": "kxa2GSsEkqU",
+								"url": "https://images.unsplash.com/photo-1528826194825-a71b700fe80b?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMzc0NjN8MHwxfHNlYXJjaHwxOXx8Y2l0cnVzJTIwZnJ1aXR8ZW58MHx8fHwxNzU0NTcxNTYyfDA&ixlib=rb-4.1.0&q=85",
+								"width": 4892,
+								"height": 3494
+							},
+							"width": 4892,
+							"height": 3494,
+							"edit": {
+								"background": "transparent",
+								"zoom": 1,
+								"crop": {
+									"x": 0,
+									"y": 0
+								}
+							},
+							"thumbnails": {}
+						}
+					],
+					[
+						"card_title",
+						{
+							"__TYPE__": "FieldContent",
+							"type": "Text",
+							"value": "doppio"
+						}
+					],
+					[
+						"card_desc",
+						{
+							"__TYPE__": "StructuredTextContent",
+							"value": [
+								{
+									"type": "paragraph",
+									"content": {
+										"text": "agrumi carpiati all'indietro",
+										"spans": []
+									},
+									"direction": "ltr"
+								}
+							]
 						}
 					]
 				]
@@ -351,8 +405,8 @@
 						"card_size",
 						{
 							"__TYPE__": "FieldContent",
-							"value": "default",
-							"type": "Select"
+							"type": "Select",
+							"value": "tall"
 						}
 					],
 					[
@@ -513,8 +567,8 @@
 						"card_size",
 						{
 							"__TYPE__": "FieldContent",
-							"value": "tall",
-							"type": "Select"
+							"type": "Select",
+							"value": "wide"
 						}
 					],
 					[

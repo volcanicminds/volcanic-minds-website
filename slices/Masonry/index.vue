@@ -126,8 +126,12 @@ $breakpoint-md = 1024px
 	grid-template-columns repeat(4, 1fr)
 	grid-auto-rows 250px
 
+// Stili per il gap
 .masonry-wall.layout--default
 	gap 1rem
+
+.masonry-wall.layout--spaced-compact
+	gap 0.5rem
 
 .masonry-wall.layout--compact
 	gap 0
@@ -140,23 +144,29 @@ $breakpoint-md = 1024px
 	box-shadow 0 4px 6px rgba(0, 0, 0, 0.1)
 	transition all 0.3s ease-in-out
 
+// Stili per il border-radius di base
 .layout--default .work-card
 	border-radius 12px
 
 .layout--compact .work-card
+.layout--spaced-compact .work-card
 	border-radius 0
 
-// Stili per gli angoli arrotondati in modalità compatta
+// Stili per gli angoli arrotondati (per compact e spaced-compact)
 .layout--compact .work-card.is-top-left
+.layout--spaced-compact .work-card.is-top-left
 	border-top-left-radius 12px
 
 .layout--compact .work-card.is-top-right
+.layout--spaced-compact .work-card.is-top-right
 	border-top-right-radius 12px
 
 .layout--compact .work-card.is-bottom-left
+.layout--spaced-compact .work-card.is-bottom-left
 	border-bottom-left-radius 12px
 
 .layout--compact .work-card.is-bottom-right
+.layout--spaced-compact .work-card.is-bottom-right
 	border-bottom-right-radius 12px
 
 .work-card.is-link

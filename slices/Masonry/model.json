@@ -42,7 +42,8 @@
             "placeholder": "",
             "options": [
               "default",
-              "compact"
+              "compact",
+              "spaced-compact"
             ],
             "default_value": "default"
           }

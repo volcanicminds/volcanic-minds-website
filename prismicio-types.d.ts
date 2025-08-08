@@ -1845,7 +1845,7 @@ export interface MasonrySliceDefaultPrimary {
 	 * - **API ID Path**: masonry.default.primary.layout_style
 	 * - **Documentation**: https://prismic.io/docs/field#select
 	 */
-	layout_style: prismic.SelectField<'default' | 'compact', 'filled'>
+	layout_style: prismic.SelectField<'default' | 'compact' | 'spaced-compact', 'filled'>
 
 	/**
 	 * Margine superiore field in *Masonry → Default → Primary*
