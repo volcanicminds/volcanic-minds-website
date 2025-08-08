@@ -118,6 +118,31 @@
 							"__TYPE__": "BooleanContent",
 							"value": true
 						}
+					],
+					[
+						"card_image_hover",
+						{
+							"__TYPE__": "ImageContent",
+							"url": "https://images.unsplash.com/photo-1597589022928-bb4002c099ec?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMzc0NjN8MHwxfHNlYXJjaHw0fHxjaXRydXMlMjBmcnVpdHxlbnwwfHx8fDE3NTQ1NzE1NjJ8MA&ixlib=rb-4.1.0&q=85",
+							"alt": "yellow lemon fruit beside green leaves",
+							"origin": {
+								"id": "3t8rQ3LD2JI",
+								"url": "https://images.unsplash.com/photo-1597589022928-bb4002c099ec?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMzc0NjN8MHwxfHNlYXJjaHw0fHxjaXRydXMlMjBmcnVpdHxlbnwwfHx8fDE3NTQ1NzE1NjJ8MA&ixlib=rb-4.1.0&q=85",
+								"width": 3024,
+								"height": 3024
+							},
+							"width": 3024,
+							"height": 3024,
+							"edit": {
+								"background": "transparent",
+								"zoom": 1,
+								"crop": {
+									"x": 0,
+									"y": 0
+								}
+							},
+							"thumbnails": {}
+						}
 					]
 				]
 			},
@@ -127,7 +152,6 @@
 					[
 						"card_image",
 						{
-							"__TYPE__": "ImageContent",
 							"url": "https://images.unsplash.com/photo-1528826194825-a71b700fe80b?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMzc0NjN8MHwxfHNlYXJjaHwxOXx8Y2l0cnVzJTIwZnJ1aXR8ZW58MHx8fHwxNzU0NTcxNTYyfDA&ixlib=rb-4.1.0&q=85",
 							"alt": "slice grapefruit",
 							"origin": {
@@ -146,6 +170,8 @@
 									"y": 0
 								}
 							},
+							"credits": null,
+							"__TYPE__": "ImageContent",
 							"thumbnails": {}
 						}
 					],
@@ -252,6 +278,31 @@
 						{
 							"__TYPE__": "BooleanContent",
 							"value": false
+						}
+					],
+					[
+						"card_image_hover",
+						{
+							"__TYPE__": "ImageContent",
+							"url": "https://images.unsplash.com/photo-1610040855959-27944b04f12d?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMzc0NjN8MHwxfHNlYXJjaHw5fHxjaXRydXMlMjBmcnVpdHxlbnwwfHx8fDE3NTQ1NzE1NjJ8MA&ixlib=rb-4.1.0&q=85",
+							"alt": "orange fruit on brown wooden table",
+							"origin": {
+								"id": "agP9RgnWZAY",
+								"url": "https://images.unsplash.com/photo-1610040855959-27944b04f12d?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMzc0NjN8MHwxfHNlYXJjaHw5fHxjaXRydXMlMjBmcnVpdHxlbnwwfHx8fDE3NTQ1NzE1NjJ8MA&ixlib=rb-4.1.0&q=85",
+								"width": 5143,
+								"height": 4114
+							},
+							"width": 5143,
+							"height": 4114,
+							"edit": {
+								"background": "transparent",
+								"zoom": 1,
+								"crop": {
+									"x": 0,
+									"y": 0
+								}
+							},
+							"thumbnails": {}
 						}
 					]
 				]

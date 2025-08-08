@@ -156,6 +156,14 @@
             "placeholder_true": "true",
             "default_value": false
           }
+        },
+        "card_image_hover": {
+          "type": "Image",
+          "config": {
+            "label": "Immagine su hover",
+            "constraint": {},
+            "thumbnails": []
+          }
         }
       }
     }

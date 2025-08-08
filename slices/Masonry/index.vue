@@ -33,12 +33,24 @@ export default defineComponent({
 						`work-card--${item.card_size || 'default'}`,
 						{
 							'text-on-hover': item.show_text_on_hover,
-							'is-link': item.card_link && !item.card_link.isBroken && item.card_link.url
+							'is-link': item.card_link && !item.card_link.isBroken && item.card_link.url,
+							'has-hover-image': item.card_image_hover && item.card_image_hover.url
 						}
 					]"
 				>
-					<div v-if="item.card_image" class="work-card__image-container">
-						<WrapperPrismicImage :field="item.card_image" :size="1200" class="work-card__image" />
+					<div class="work-card__image-container">
+						<WrapperPrismicImage
+							v-if="item.card_image"
+							:field="item.card_image"
+							:size="1200"
+							class="work-card__image work-card__image--default"
+						/>
+						<WrapperPrismicImage
+							v-if="item.card_image_hover && item.card_image_hover.url"
+							:field="item.card_image_hover"
+							:size="1200"
+							class="work-card__image work-card__image--hover"
+						/>
 					</div>
 
 					<div v-if="item.card_title || item.card_desc" class="work-card__content">
@@ -74,19 +86,16 @@ const updateCornerClasses = () => {
 	const cards = Array.from(container.children) as HTMLElement[]
 	if (cards.length === 0) return
 
-	// Pulisce le classi esistenti
 	cards.forEach((card) => {
 		card.classList.remove('is-top-left', 'is-top-right', 'is-bottom-left', 'is-bottom-right')
 	})
 
-	// Calcola le coordinate estreme della griglia
 	const positions = cards.map((card) => card.getBoundingClientRect())
 	const minTop = Math.min(...positions.map((p) => p.top))
 	const maxBottom = Math.max(...positions.map((p) => p.bottom))
 	const minLeft = Math.min(...positions.map((p) => p.left))
 	const maxRight = Math.max(...positions.map((p) => p.right))
 
-	// Applica le classi agli angoli
 	cards.forEach((card, index) => {
 		const pos = positions[index]
 		if (pos.top === minTop && pos.left === minLeft) card.classList.add('is-top-left')
@@ -126,7 +135,6 @@ $breakpoint-md = 1024px
 	grid-template-columns repeat(4, 1fr)
 	grid-auto-rows 250px
 
-// Stili per il gap
 .masonry-wall.layout--default
 	gap 1rem
 
@@ -144,7 +152,6 @@ $breakpoint-md = 1024px
 	box-shadow 0 4px 6px rgba(0, 0, 0, 0.1)
 	transition all 0.3s ease-in-out
 
-// Stili per il border-radius di base
 .layout--default .work-card
 	border-radius 12px
 
@@ -152,7 +159,6 @@ $breakpoint-md = 1024px
 .layout--spaced-compact .work-card
 	border-radius 0
 
-// Stili per gli angoli arrotondati (per compact e spaced-compact)
 .layout--compact .work-card.is-top-left
 .layout--spaced-compact .work-card.is-top-left
 	border-top-left-radius 12px
@@ -174,8 +180,6 @@ $breakpoint-md = 1024px
 	&:hover
 		transform translateY(-5px)
 		box-shadow 0 10px 15px rgba(0, 0, 0, 0.1)
-		.work-card__image
-			transform scale(1.05)
 
 .work-card--wide
 	grid-column span 2
@@ -195,10 +199,22 @@ $breakpoint-md = 1024px
 	height 100%
 
 .work-card__image
+	position absolute
+	top 0
+	left 0
 	width 100%
 	height 100%
 	object-fit cover
-	transition transform 0.4s ease
+	transition all 0.4s ease
+
+.work-card__image--hover
+	opacity 0
+
+.work-card.has-hover-image:hover .work-card__image--hover
+	opacity 1
+
+.work-card:not(.has-hover-image):hover .work-card__image--default
+	transform scale(1.05)
 
 .work-card__content
 	position absolute

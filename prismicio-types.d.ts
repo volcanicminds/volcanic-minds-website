@@ -1978,6 +1978,16 @@ export interface MasonrySliceDefaultItem {
 	 * - **Documentation**: https://prismic.io/docs/field#boolean
 	 */
 	show_text_on_hover: prismic.BooleanField
+
+	/**
+	 * Immagine su hover field in *Masonry → Items*
+	 *
+	 * - **Field Type**: Image
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: masonry.items[].card_image_hover
+	 * - **Documentation**: https://prismic.io/docs/field#image
+	 */
+	card_image_hover: prismic.ImageField<never>
 }
 
 /**
