@@ -124,7 +124,7 @@ $breakpoint-md = 1024px
 
 .portfolio-container
 	width 100%
-	max-width 1536px
+	max-width 1380px
 	margin-left auto
 	margin-right auto
 	padding-left 1rem
@@ -133,7 +133,7 @@ $breakpoint-md = 1024px
 .masonry-wall
 	display grid
 	grid-template-columns repeat(4, 1fr)
-	grid-auto-rows 250px
+	grid-auto-rows 223px
 
 .masonry-wall.layout--default
 	gap 1rem
@@ -253,7 +253,7 @@ $breakpoint-md = 1024px
 	.work-card--large
 		grid-column span 1
 		grid-row span 1
-		min-height 300px
+		min-height 400px
 
 	.work-card__content
 		opacity 1
