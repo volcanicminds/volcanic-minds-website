@@ -2,7 +2,7 @@
 	<div v-if="footerData" class="bg-raisin-black" role="contentinfo" aria-label="Footer">
 		<WrapperContainer class="py3">
 			<div class="flex flex-column items-center">
-				<WrapperPrismicImage v-if="footerData.data.logo" :field="footerData.data.logo" :size="200" />
+				<WrapperPrismicImage v-if="footerData.data.logo" :field="footerData.data.logo" :size="150" />
 				<div v-if="footerData.data.icon_links" class="flex social-links-container mt3">
 					<template v-for="(link, i) in footerData.data.icon_links">
 						<PrismicLink
@@ -16,7 +16,7 @@
 									: undefined
 							"
 						>
-							<font-awesome-icon :icon="link.icon" size="2xl" />
+							<font-awesome-icon :icon="link.icon" size="lg" />
 						</PrismicLink>
 					</template>
 				</div>
@@ -61,7 +61,7 @@ export default defineComponent({
 
 <style lang="stylus" scoped>
 .social-links-container
-	gap 30px
+	gap 25px
 
 .footer-data
 	font-size 0.9rem
