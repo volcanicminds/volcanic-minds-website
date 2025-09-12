@@ -73,6 +73,11 @@ defineProps({
 		border-radius 40px 10px
 		*
 			word-wrap break-word
+
+		& ::v-deep a
+			text-underline-offset 5px
+			text-decoration underline
+
 		.card-link
 			border-radius 50%
 			display inline-flex
