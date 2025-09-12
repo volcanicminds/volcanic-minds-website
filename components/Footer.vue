@@ -22,7 +22,11 @@
 				</div>
 			</div>
 
-			<div v-if="footerData.data.text_links" class="center md-px4 mt3">
+			<div v-if="footerData.data.company_data" class="center md-px4 mt3">
+				<PrismicRichText :field="footerData.data.company_data" wrapper="div" class="footer-data" />
+			</div>
+
+			<div v-if="footerData.data.text_links" class="center md-px4 mt1">
 				<template v-for="(textLink, index) in footerData.data.text_links">
 					<PrismicLink
 						:key="index"
@@ -37,9 +41,6 @@
 					>
 					{{ index < footerData.data.text_links.length - 1 ? ' &#8226; ' : '' }}
 				</template>
-			</div>
-			<div v-if="footerData.data.company_data" class="center md-px4 mt3">
-				<PrismicRichText :field="footerData.data.company_data" wrapper="div" class="footer-data" />
 			</div>
 		</WrapperContainer>
 	</div>
