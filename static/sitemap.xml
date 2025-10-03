@@ -158,6 +158,26 @@
         <xhtml:link rel="alternate" hreflang="it-it" href="https://volcanicminds.com/insights/volcanic-minds-bronze-sponsor-ai-heroes-2025" />
         <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/insights/volcanic-minds-bronze-sponsor-ai-heroes-2025" />
     </url>
+    <url>
+        <loc>https://volcanicminds.com/insights/rag-agent-mastra-ai</loc>
+        <xhtml:link rel="alternate" hreflang="it-it" href="https://volcanicminds.com/insights/rag-agent-mastra-ai" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/insights/rag-agent-mastra-ai" />
+    </url>
+    <url>
+        <loc>https://volcanicminds.com/en/insights/rag-agent-mastra-ai</loc>
+        <xhtml:link rel="alternate" hreflang="it-it" href="https://volcanicminds.com/insights/rag-agent-mastra-ai" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/insights/rag-agent-mastra-ai" />
+    </url>
+        <url>
+        <loc>https://volcanicminds.com/insights/tech-debt-strategic-risk</loc>
+        <xhtml:link rel="alternate" hreflang="it-it" href="https://volcanicminds.com/insights/tech-debt-strategic-risk" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/insights/tech-debt-strategic-risk" />
+    </url>
+    <url>
+        <loc>https://volcanicminds.com/en/insights/tech-debt-strategic-risk</loc>
+        <xhtml:link rel="alternate" hreflang="it-it" href="https://volcanicminds.com/insights/tech-debt-strategic-risk" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/insights/tech-debt-strategic-risk" />
+    </url>
     <!-- About us -->
     <url>
         <loc>https://volcanicminds.com/about-us</loc>
