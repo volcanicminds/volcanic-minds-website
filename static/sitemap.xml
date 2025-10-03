@@ -27,6 +27,102 @@
         <xhtml:link rel="alternate" hreflang="it-it" href="https://volcanicminds.com/insights" />
         <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/insights" />
     </url>
+    <!-- About us -->
+    <url>
+        <loc>https://volcanicminds.com/about-us</loc>
+        <xhtml:link rel="alternate" hreflang="it-it" href="https://volcanicminds.com/about-us" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/about-us" />
+    </url>
+    <url>
+        <loc>https://volcanicminds.com/en/about-us</loc>
+        <xhtml:link rel="alternate" hreflang="it-it" href="https://volcanicminds.com/about-us" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/about-us" />
+    </url>
+    <!-- Portfolio -->
+    <url>
+        <loc>https://volcanicminds.com/portfolio</loc>
+        <xhtml:link rel="alternate" hreflang="it-it" href="https://volcanicminds.com/portfolio" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/portfolio" />
+    </url>
+    <url>
+        <loc>https://volcanicminds.com/en/portfolio</loc>
+        <xhtml:link rel="alternate" hreflang="it-it" href="https://volcanicminds.com/portfolio" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/portfolio" />
+    </url>
+    <!-- Contacts -->
+    <url>
+        <loc>https://volcanicminds.com/contacts</loc>
+        <xhtml:link rel="alternate" hreflang="it-it" href="https://volcanicminds.com/contacts" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/contacts" />
+    </url>
+    <url>
+        <loc>https://volcanicminds.com/en/contacts</loc>
+        <xhtml:link rel="alternate" hreflang="it-it" href="https://volcanicminds.com/contacts" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/contacts" />
+    </url>
+    <!-- Privacy policy -->
+    <url>
+        <loc>https://volcanicminds.com/privacy-policy</loc>
+        <xhtml:link rel="alternate" hreflang="it-it" href="https://volcanicminds.com/privacy-policy" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/privacy-policy" />
+    </url>
+    <url>
+        <loc>https://volcanicminds.com/en/privacy-policy</loc>
+        <xhtml:link rel="alternate" hreflang="it-it" href="https://volcanicminds.com/privacy-policy" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/privacy-policy" />
+    </url>
+    <!-- Services -->
+    <url>
+        <loc>https://volcanicminds.com/services</loc>
+        <xhtml:link rel="alternate" hreflang="it-it" href="https://volcanicminds.com/services" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/services" />
+    </url>
+    <url>
+        <loc>https://volcanicminds.com/en/services</loc>
+        <xhtml:link rel="alternate" hreflang="it-it" href="https://volcanicminds.com/services" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/services" />
+    </url>
+    <url>
+        <loc>https://volcanicminds.com/services/design-strategy</loc>
+        <xhtml:link rel="alternate" hreflang="it-it" href="https://volcanicminds.com/services/design-strategy" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/services/design-strategy" />
+    </url>
+    <url>
+        <loc>https://volcanicminds.com/en/services/design-strategy</loc>
+        <xhtml:link rel="alternate" hreflang="it-it" href="https://volcanicminds.com/services/design-strategy" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/services/design-strategy" />
+    </url>
+    <url>
+        <loc>https://volcanicminds.com/services/digital-factory</loc>
+        <xhtml:link rel="alternate" hreflang="it-it" href="https://volcanicminds.com/services/digital-factory" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/services/digital-factory" />
+    </url>
+    <url>
+        <loc>https://volcanicminds.com/en/services/digital-factory</loc>
+        <xhtml:link rel="alternate" hreflang="it-it" href="https://volcanicminds.com/services/digital-factory" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/services/digital-factory" />
+    </url>
+    <url>
+        <loc>https://volcanicminds.com/services/project-leading</loc>
+        <xhtml:link rel="alternate" hreflang="it-it" href="https://volcanicminds.com/services/project-leading" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/services/project-leading" />
+    </url>
+    <url>
+        <loc>https://volcanicminds.com/en/services/project-leading</loc>
+        <xhtml:link rel="alternate" hreflang="it-it" href="https://volcanicminds.com/services/project-leading" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/services/project-leading" />
+    </url>
+    <!-- FAQ -->
+    <url>
+        <loc>https://volcanicminds.com/services/frequently-asked-questions</loc>
+        <xhtml:link rel="alternate" hreflang="it-it" href="https://volcanicminds.com/services/frequently-asked-questions" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/services/frequently-asked-questions" />
+    </url>
+    <url>
+        <loc>https://volcanicminds.com/en/services/frequently-asked-questions</loc>
+        <xhtml:link rel="alternate" hreflang="it-it" href="https://volcanicminds.com/services/frequently-asked-questions" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/services/frequently-asked-questions" />
+    </url>
     <!-- Insights posts -->
     <url>
         <loc>https://volcanicminds.com/insights/making-of</loc>
@@ -177,90 +273,5 @@
         <loc>https://volcanicminds.com/en/insights/tech-debt-strategic-risk</loc>
         <xhtml:link rel="alternate" hreflang="it-it" href="https://volcanicminds.com/insights/tech-debt-strategic-risk" />
         <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/insights/tech-debt-strategic-risk" />
-    </url>
-    <!-- About us -->
-    <url>
-        <loc>https://volcanicminds.com/about-us</loc>
-        <xhtml:link rel="alternate" hreflang="it-it" href="https://volcanicminds.com/about-us" />
-        <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/about-us" />
-    </url>
-    <url>
-        <loc>https://volcanicminds.com/en/about-us</loc>
-        <xhtml:link rel="alternate" hreflang="it-it" href="https://volcanicminds.com/about-us" />
-        <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/about-us" />
-    </url>
-    <!-- Workflow -->
-    <url>
-        <loc>https://volcanicminds.com/workflow</loc>
-        <xhtml:link rel="alternate" hreflang="it-it" href="https://volcanicminds.com/workflow" />
-        <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/workflow" />
-    </url>
-    <url>
-        <loc>https://volcanicminds.com/en/workflow</loc>
-        <xhtml:link rel="alternate" hreflang="it-it" href="https://volcanicminds.com/workflow" />
-        <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/workflow" />
-    </url>
-    <!-- Contacts -->
-    <url>
-        <loc>https://volcanicminds.com/contacts</loc>
-        <xhtml:link rel="alternate" hreflang="it-it" href="https://volcanicminds.com/contacts" />
-        <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/contacts" />
-    </url>
-    <url>
-        <loc>https://volcanicminds.com/en/contacts</loc>
-        <xhtml:link rel="alternate" hreflang="it-it" href="https://volcanicminds.com/contacts" />
-        <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/contacts" />
-    </url>
-    <!-- Privacy policy -->
-    <url>
-        <loc>https://volcanicminds.com/privacy-policy</loc>
-        <xhtml:link rel="alternate" hreflang="it-it" href="https://volcanicminds.com/privacy-policy" />
-        <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/privacy-policy" />
-    </url>
-    <url>
-        <loc>https://volcanicminds.com/en/privacy-policy</loc>
-        <xhtml:link rel="alternate" hreflang="it-it" href="https://volcanicminds.com/privacy-policy" />
-        <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/privacy-policy" />
-    </url>
-    <!-- Services -->
-    <url>
-        <loc>https://volcanicminds.com/services</loc>
-        <xhtml:link rel="alternate" hreflang="it-it" href="https://volcanicminds.com/services" />
-        <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/services" />
-    </url>
-    <url>
-        <loc>https://volcanicminds.com/en/services</loc>
-        <xhtml:link rel="alternate" hreflang="it-it" href="https://volcanicminds.com/services" />
-        <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/services" />
-    </url>
-    <url>
-        <loc>https://volcanicminds.com/services/design-strategy</loc>
-        <xhtml:link rel="alternate" hreflang="it-it" href="https://volcanicminds.com/services/design-strategy" />
-        <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/services/design-strategy" />
-    </url>
-    <url>
-        <loc>https://volcanicminds.com/en/services/design-strategy</loc>
-        <xhtml:link rel="alternate" hreflang="it-it" href="https://volcanicminds.com/services/design-strategy" />
-        <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/services/design-strategy" />
-    </url>
-    <url>
-        <loc>https://volcanicminds.com/services/digital-factory</loc>
-        <xhtml:link rel="alternate" hreflang="it-it" href="https://volcanicminds.com/services/digital-factory" />
-        <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/services/digital-factory" />
-    </url>
-    <url>
-        <loc>https://volcanicminds.com/en/services/digital-factory</loc>
-        <xhtml:link rel="alternate" hreflang="it-it" href="https://volcanicminds.com/services/digital-factory" />
-        <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/services/digital-factory" />
-    </url>
-    <url>
-        <loc>https://volcanicminds.com/services/project-leading</loc>
-        <xhtml:link rel="alternate" hreflang="it-it" href="https://volcanicminds.com/services/project-leading" />
-        <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/services/project-leading" />
-    </url>
-    <url>
-        <loc>https://volcanicminds.com/en/services/project-leading</loc>
-        <xhtml:link rel="alternate" hreflang="it-it" href="https://volcanicminds.com/services/project-leading" />
-        <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/services/project-leading" />
     </url>
 </urlset>
