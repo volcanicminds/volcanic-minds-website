@@ -264,7 +264,7 @@
         <xhtml:link rel="alternate" hreflang="it-it" href="https://volcanicminds.com/insights/rag-agent-mastra-ai" />
         <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/insights/rag-agent-mastra-ai" />
     </url>
-        <url>
+    <url>
         <loc>https://volcanicminds.com/insights/tech-debt-strategic-risk</loc>
         <xhtml:link rel="alternate" hreflang="it-it" href="https://volcanicminds.com/insights/tech-debt-strategic-risk" />
         <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/insights/tech-debt-strategic-risk" />
@@ -273,5 +273,15 @@
         <loc>https://volcanicminds.com/en/insights/tech-debt-strategic-risk</loc>
         <xhtml:link rel="alternate" hreflang="it-it" href="https://volcanicminds.com/insights/tech-debt-strategic-risk" />
         <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/insights/tech-debt-strategic-risk" />
+    </url>
+    <url>
+        <loc>https://volcanicminds.com/insights/volcano-sdk-kong-agents-production-ready</loc>
+        <xhtml:link rel="alternate" hreflang="it-it" href="https://volcanicminds.com/insights/volcano-sdk-kong-agents-production-ready" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/insights/volcano-sdk-kong-agents-production-ready" />
+    </url>
+    <url>
+        <loc>https://volcanicminds.com/en/insights/volcano-sdk-kong-agents-production-ready</loc>
+        <xhtml:link rel="alternate" hreflang="it-it" href="https://volcanicminds.com/insights/volcano-sdk-kong-agents-production-ready" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/insights/volcano-sdk-kong-agents-production-ready" />
     </url>
 </urlset>
