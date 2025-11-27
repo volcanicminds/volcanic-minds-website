@@ -284,4 +284,14 @@
         <xhtml:link rel="alternate" hreflang="it-it" href="https://volcanicminds.com/insights/volcano-sdk-kong-agents-production-ready" />
         <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/insights/volcano-sdk-kong-agents-production-ready" />
     </url>
+    <url>
+        <loc>https://volcanicminds.com/insights/how-to-manage-risk-custom-software-projects</loc>
+        <xhtml:link rel="alternate" hreflang="it-it" href="https://volcanicminds.com/insights/how-to-manage-risk-custom-software-projects" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/insights/how-to-manage-risk-custom-software-projects" />
+    </url>
+    <url>
+        <loc>https://volcanicminds.com/en/insights/how-to-manage-risk-custom-software-projects</loc>
+        <xhtml:link rel="alternate" hreflang="it-it" href="https://volcanicminds.com/insights/how-to-manage-risk-custom-software-projects" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/insights/how-to-manage-risk-custom-software-projects" />
+    </url>
 </urlset>
