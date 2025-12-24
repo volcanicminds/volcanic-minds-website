@@ -294,4 +294,14 @@
         <xhtml:link rel="alternate" hreflang="it-it" href="https://volcanicminds.com/insights/how-to-manage-risk-custom-software-projects" />
         <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/insights/how-to-manage-risk-custom-software-projects" />
     </url>
+    <url>
+        <loc>https://volcanicminds.com/insights/composite-ai-agents-governance-mastra</loc>
+        <xhtml:link rel="alternate" hreflang="it-it" href="https://volcanicminds.com/insights/composite-ai-agents-governance-mastra" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/insights/composite-ai-agents-governance-mastra" />
+    </url>
+    <url>
+        <loc>https://volcanicminds.com/en/insights/composite-ai-agents-governance-mastra</loc>
+        <xhtml:link rel="alternate" hreflang="it-it" href="https://volcanicminds.com/insights/composite-ai-agents-governance-mastra" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/insights/composite-ai-agents-governance-mastra" />
+    </url>
 </urlset>
