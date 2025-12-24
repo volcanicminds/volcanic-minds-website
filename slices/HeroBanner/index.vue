@@ -64,7 +64,7 @@ defineProps({
 		font-size 3em
 		word-wrap break-word
 		@media (min-width: 52em)
-			font-size 5em
+			font-size 3.5em
 		text-transform lowercase
 
 		>>> p
