@@ -115,12 +115,20 @@ export default class PageComponent extends Vue {
 				{
 					hid: 'og-title',
 					property: 'og:title',
-					content: this.document.data.seo_title || this.$constants.seoTitle
+					content:
+						this.document.data.og_title ||
+						this.$constants.ogTitle ||
+						this.document.data.seo_title ||
+						this.$constants.seoTitle
 				},
 				{
 					hid: 'og-desc',
 					property: 'og:description',
-					content: this.document.data.seo_description || this.$constants.seoDescription
+					content:
+						this.document.data.og_description ||
+						this.$constants.ogDescription ||
+						this.document.data.seo_description ||
+						this.$constants.seoDescription
 				},
 				{
 					hid: 'og-image',

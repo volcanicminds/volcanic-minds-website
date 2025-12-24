@@ -145,6 +145,28 @@ interface FirstLevelPageDocumentData {
 	seo_description: prismic.KeyTextField
 
 	/**
+	 * OG title field in *Pagina di primo livello*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: first_level_page.og_title
+	 * - **Tab**: SEO
+	 * - **Documentation**: https://prismic.io/docs/field#key-text
+	 */
+	og_title: prismic.KeyTextField
+
+	/**
+	 * OG description field in *Pagina di primo livello*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: first_level_page.og_description
+	 * - **Tab**: SEO
+	 * - **Documentation**: https://prismic.io/docs/field#key-text
+	 */
+	og_description: prismic.KeyTextField
+
+	/**
 	 * OG image field in *Pagina di primo livello*
 	 *
 	 * - **Field Type**: Image
@@ -459,6 +481,28 @@ interface HomepageDocumentData {
 	seo_description: prismic.KeyTextField
 
 	/**
+	 * OG title field in *Pagina di primo livello*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: first_level_page.og_title
+	 * - **Tab**: SEO
+	 * - **Documentation**: https://prismic.io/docs/field#key-text
+	 */
+	og_title: prismic.KeyTextField
+
+	/**
+	 * OG description field in *Pagina di primo livello*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: first_level_page.og_description
+	 * - **Tab**: SEO
+	 * - **Documentation**: https://prismic.io/docs/field#key-text
+	 */
+	og_description: prismic.KeyTextField
+
+	/**
 	 * OG image field in *Homepage*
 	 *
 	 * - **Field Type**: Image
@@ -715,6 +759,28 @@ interface SecondLevelPageDocumentData {
 	 * - **Documentation**: https://prismic.io/docs/field#key-text
 	 */
 	seo_description: prismic.KeyTextField
+
+	/**
+	 * OG title field in *Pagina di primo livello*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: first_level_page.og_title
+	 * - **Tab**: SEO
+	 * - **Documentation**: https://prismic.io/docs/field#key-text
+	 */
+	og_title: prismic.KeyTextField
+
+	/**
+	 * OG description field in *Pagina di primo livello*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: first_level_page.og_description
+	 * - **Tab**: SEO
+	 * - **Documentation**: https://prismic.io/docs/field#key-text
+	 */
+	og_description: prismic.KeyTextField
 
 	/**
 	 * OG image field in *Pagina di secondo livello*
