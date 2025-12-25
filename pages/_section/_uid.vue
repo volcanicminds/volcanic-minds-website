@@ -192,6 +192,118 @@ export default class PageComponent extends Vue {
 		htmlAttrs: { lang: string }
 		script: { type: string; json: any }[]
 	} {
+		const type = this.document.data.schema_org_type || 'WebPage'
+		let jsonLd: any = {
+			'@context': 'https://schema.org',
+			'@type': type,
+			headline: this.document.data.seo_title || this.$constants.seoTitle,
+			description: this.document.data.seo_description || this.$constants.seoDescription,
+			mainEntityOfPage: {
+				'@type': 'WebPage',
+				'@id': `${process.env.NUXT_SITENAME}${this.$nuxt.$route.path}`
+			},
+			inLanguage: this.$i18n.locale
+		}
+
+		if (type === 'Service') {
+			jsonLd = {
+				'@context': 'https://schema.org',
+				'@type': 'Service',
+				serviceType: this.document.data.title,
+				description: this.document.data.seo_description || this.$constants.seoDescription,
+				provider: this.$constants.schemaOrganization,
+				areaServed: {
+					'@type': 'Country',
+					name: 'Italy'
+				},
+				hasOfferCatalog: {
+					'@type': 'OfferCatalog',
+					name: 'Servizi Volcanic Minds'
+				}
+			}
+		} else if (['Article', 'BlogPosting', 'NewsArticle'].includes(type) || this.document.data.is_article) {
+			jsonLd = {
+				'@context': 'https://schema.org',
+				'@type': 'TechArticle',
+				headline: this.document.data.title,
+				image: this.document.data.og_image?.url ? [this.document.data.og_image.url] : [],
+				datePublished:
+					this.document.data.publication_date ||
+					(this.document.data.publication_date_sort
+						? dayjs(this.document.data.publication_date_sort).format('YYYY-MM-DDTHH:mm:ss[Z]')
+						: undefined),
+				dateModified:
+					this.document.data.latest_revision_date ||
+					(this.document.data.latest_revision_date_sort
+						? dayjs(this.document.data.latest_revision_date_sort).format('YYYY-MM-DDTHH:mm:ss[Z]')
+						: undefined),
+				author: {
+					'@type': 'Organization',
+					name: 'Volcanic Minds Team',
+					url: 'https://volcanicminds.com'
+				},
+				publisher: {
+					'@type': 'Organization',
+					name: 'Volcanic Minds',
+					logo: {
+						'@type': 'ImageObject',
+						url: `${process.env.NUXT_SITENAME}${this.$constants.logo}`
+					}
+				},
+				description: this.document.data.seo_description || this.$constants.seoDescription,
+				about: this.document.tags // Use Prismic tags as "about"
+			}
+		}
+
+		const scripts = [
+			{
+				type: 'application/ld+json',
+				json: jsonLd
+			}
+		]
+
+		if (this.youtubeSlice) {
+			scripts.push({
+				type: 'application/ld+json',
+				json: {
+					'@context': 'https://schema.org',
+					'@type': 'VideoObject',
+					name: this.youtubeSlice.primary.video_title,
+					description: this.youtubeSlice.primary.video_description,
+					thumbnailUrl: `https://i.ytimg.com/vi/${this.youtubeSlice.primary.video_id}/hqdefault.jpg`,
+					uploadDate: this.youtubeSlice.primary.video_publishedAt,
+					embedUrl: `https://www.youtube.com/embed/${this.youtubeSlice.primary.video_id}`,
+					duration: this.youtubeSlice.primary.video_duration,
+					publisher: {
+						'@type': 'Organization',
+						name: this.$constants.author,
+						logo: {
+							'@type': 'ImageObject',
+							url: `${process.env.NUXT_SITENAME}${this.$constants.logo}`,
+							width: 192,
+							height: 192
+						}
+					},
+					interactionStatistic: {
+						'@type': 'InteractionCounter',
+						interactionType: {
+							'@type': 'UseAction',
+							name: 'ViewAction'
+						},
+						userInteractionCount: this.youtubeSlice.primary.video_viewCount
+					},
+					keywords: this.youtubeSlice.primary.video_keywords,
+					contentUrl: `https://www.youtube.com/watch?v=${this.youtubeSlice.primary.video_id}`,
+					mainEntityOfPage: {
+						'@type': 'WebPage',
+						'@id': `${process.env.NUXT_SITENAME}${this.$nuxt.$route.path}`,
+						headline: this.document.data.seo_title || this.$constants.seoTitle,
+						description: this.document.data.seo_description || this.$constants.seoDescription
+					}
+				}
+			})
+		}
+
 		return {
 			title: this.document.data.seo_title || this.$constants.seoTitle,
 			meta: [
@@ -242,107 +354,7 @@ export default class PageComponent extends Vue {
 			htmlAttrs: {
 				lang: this.$i18n.locale
 			},
-			script: [
-				{
-					type: 'application/ld+json',
-					json: {
-						'@context': 'https://schema.org',
-						'@type': this.document.data.schema_org_type || this.$constants.schemaOrgType,
-						headline: this.document.data.seo_title || this.$constants.seoTitle,
-						description: this.document.data.seo_description || this.$constants.seoDescription,
-						datePublished: this.document.data.publication_date_sort
-							? dayjs(this.document.data.publication_date_sort).format('YYYY-MM-DDTHH:mm:ss[Z]')
-							: undefined,
-						dateModified: this.document.data.latest_revision_date_sort
-							? dayjs(this.document.data.latest_revision_date_sort).format('YYYY-MM-DDTHH:mm:ss[Z]')
-							: undefined,
-						author: ['Article', 'BlogPosting', 'NewsArticle'].includes(this.document.data.schema_org_type)
-							? {
-									'@type': 'Organization',
-									url: process.env.NUXT_SITENAME,
-									name: this.$constants.author,
-									logo: {
-										'@type': 'ImageObject',
-										url: `${process.env.NUXT_SITENAME}${this.$constants.logo}`,
-										width: 192,
-										height: 192
-									}
-								}
-							: undefined,
-						publisher: {
-							'@type': 'Organization',
-							name: this.$constants.author,
-							logo: {
-								'@type': 'ImageObject',
-								url: `${process.env.NUXT_SITENAME}${this.$constants.logo}`,
-								width: 192,
-								height: 192
-							}
-						},
-						image: this.document.data.og_image?.url
-							? {
-									'@type': 'ImageObject',
-									url: this.document.data.og_image.url,
-									width: this.document.data.og_image.dimensions.width,
-									height: this.document.data.og_image.dimensions.height
-								}
-							: {
-									'@type': 'ImageObject',
-									url: `${process.env.NUXT_SITENAME}${this.$constants.seoImageUrl}`,
-									width: 1200,
-									height: 630
-								},
-						mainEntityOfPage: {
-							'@type': 'WebPage',
-							'@id': `${process.env.NUXT_SITENAME}${this.$nuxt.$route.path}`
-						},
-						inLanguage: this.$i18n.locale
-					}
-				},
-				...(this.youtubeSlice
-					? [
-							{
-								type: 'application/ld+json',
-								json: {
-									'@context': 'https://schema.org',
-									'@type': 'VideoObject',
-									name: this.youtubeSlice.primary.video_title,
-									description: this.youtubeSlice.primary.video_description,
-									thumbnailUrl: `https://i.ytimg.com/vi/${this.youtubeSlice.primary.video_id}/hqdefault.jpg`,
-									uploadDate: this.youtubeSlice.primary.video_publishedAt,
-									embedUrl: `https://www.youtube.com/embed/${this.youtubeSlice.primary.video_id}`,
-									duration: this.youtubeSlice.primary.video_duration,
-									publisher: {
-										'@type': 'Organization',
-										name: this.$constants.author,
-										logo: {
-											'@type': 'ImageObject',
-											url: `${process.env.NUXT_SITENAME}${this.$constants.logo}`,
-											width: 192,
-											height: 192
-										}
-									},
-									interactionStatistic: {
-										'@type': 'InteractionCounter',
-										interactionType: {
-											'@type': 'UseAction',
-											name: 'ViewAction'
-										},
-										userInteractionCount: this.youtubeSlice.primary.video_viewCount
-									},
-									keywords: this.youtubeSlice.primary.video_keywords,
-									contentUrl: `https://www.youtube.com/watch?v=${this.youtubeSlice.primary.video_id}`,
-									mainEntityOfPage: {
-										'@type': 'WebPage',
-										'@id': `${process.env.NUXT_SITENAME}${this.$nuxt.$route.path}`,
-										headline: this.document.data.seo_title || this.$constants.seoTitle,
-										description: this.document.data.seo_description || this.$constants.seoDescription
-									}
-								}
-							}
-						]
-					: [])
-			]
+			script: scripts
 		}
 	}
 }

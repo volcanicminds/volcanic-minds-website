@@ -151,37 +151,13 @@ export default class PageComponent extends Vue {
 					type: 'application/ld+json',
 					json: {
 						'@context': 'https://schema.org',
-						'@type': 'WebPage',
-						headline: this.document.data.seo_title || this.$constants.seoTitle,
-						description: this.document.data.seo_description || this.$constants.seoDescription,
-						publisher: {
-							'@type': 'Organization',
-							name: 'Volcanic Minds',
-							logo: {
-								'@type': 'ImageObject',
-								url: `${process.env.NUXT_SITENAME}${this.$constants.logo}`,
-								width: 192,
-								height: 192
-							}
-						},
-						image: this.document.data.og_image?.url
-							? {
-									'@type': 'ImageObject',
-									url: this.document.data.og_image.url,
-									width: this.document.data.og_image.dimensions.width,
-									height: this.document.data.og_image.dimensions.height
-								}
-							: {
-									'@type': 'ImageObject',
-									url: `${process.env.NUXT_SITENAME}${this.$constants.seoImageUrl}`,
-									width: 1200,
-									height: 630
-								},
-						mainEntityOfPage: {
-							'@type': 'WebPage',
-							'@id': `${process.env.NUXT_SITENAME}${this.$nuxt.$route.path}`
-						},
-						inLanguage: this.$i18n.locale
+						...this.$constants.schemaOrganization,
+						description:
+							this.document.data.seo_description ||
+							this.$constants.seoDescription ||
+							this.$constants.schemaOrganization.description,
+						knowsAbout: this.$constants.defaultKnowsAbout,
+						makesOffer: this.$constants.defaultMakesOffer
 					}
 				}
 			]

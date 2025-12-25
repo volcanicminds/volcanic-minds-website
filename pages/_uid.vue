@@ -88,6 +88,7 @@ export default class PageComponent extends Vue {
 	@Provide() components = components
 
 	// https://jankal.dev/blog/typing-the-nuxt-head-method/
+
 	head(): {
 		title: any
 		meta: (
@@ -97,6 +98,67 @@ export default class PageComponent extends Vue {
 		htmlAttrs: { lang: string }
 		script: { type: string; json: any }[]
 	} {
+		const type = this.document.data.schema_org_type || 'WebPage'
+		let jsonLd: any = {
+			'@context': 'https://schema.org',
+			'@type': type,
+			headline: this.document.data.seo_title || this.$constants.seoTitle,
+			description: this.document.data.seo_description || this.$constants.seoDescription,
+			mainEntityOfPage: {
+				'@type': 'WebPage',
+				'@id': `${process.env.NUXT_SITENAME}${this.$nuxt.$route.path}`
+			},
+			inLanguage: this.$i18n.locale
+		}
+
+		if (type === 'Service') {
+			jsonLd = {
+				'@context': 'https://schema.org',
+				'@type': 'Service',
+				serviceType: this.document.data.title,
+				description: this.document.data.seo_description || this.$constants.seoDescription,
+				provider: this.$constants.schemaOrganization,
+				areaServed: {
+					'@type': 'Country',
+					name: 'Italy'
+				},
+				hasOfferCatalog: {
+					'@type': 'OfferCatalog',
+					name: 'Servizi Volcanic Minds'
+				}
+			}
+		} else if (type === 'AboutPage') {
+			jsonLd = {
+				'@context': 'https://schema.org',
+				'@type': 'AboutPage',
+				mainEntity: this.$constants.schemaOrganization
+			}
+		} else if (['Article', 'BlogPosting', 'NewsArticle'].includes(type) || this.document.data.is_article) {
+			jsonLd = {
+				'@context': 'https://schema.org',
+				'@type': 'TechArticle',
+				headline: this.document.data.title,
+				image: this.document.data.og_image?.url ? [this.document.data.og_image.url] : [],
+				datePublished: this.document.data.publication_date,
+				dateModified: this.document.data.latest_revision_date,
+				author: {
+					'@type': 'Organization',
+					name: 'Volcanic Minds Team',
+					url: 'https://volcanicminds.com'
+				},
+				publisher: {
+					'@type': 'Organization',
+					name: 'Volcanic Minds',
+					logo: {
+						'@type': 'ImageObject',
+						url: `${process.env.NUXT_SITENAME}${this.$constants.logo}`
+					}
+				},
+				description: this.document.data.seo_description || this.$constants.seoDescription,
+				about: this.document.tags // Use Prismic tags as "about"
+			}
+		}
+
 		return {
 			title: this.document.data.seo_title || this.$constants.seoTitle,
 			meta: [
@@ -150,40 +212,7 @@ export default class PageComponent extends Vue {
 			script: [
 				{
 					type: 'application/ld+json',
-					json: {
-						'@context': 'https://schema.org',
-						'@type': this.document.data.schema_org_type || this.$constants.schemaOrgType,
-						headline: this.document.data.seo_title || this.$constants.seoTitle,
-						description: this.document.data.seo_description || this.$constants.seoDescription,
-						publisher: {
-							'@type': 'Organization',
-							name: 'Volcanic Minds',
-							logo: {
-								'@type': 'ImageObject',
-								url: `${process.env.NUXT_SITENAME}${this.$constants.logo}`,
-								width: 192,
-								height: 192
-							}
-						},
-						image: this.document.data.og_image?.url
-							? {
-									'@type': 'ImageObject',
-									url: this.document.data.og_image.url,
-									width: this.document.data.og_image.dimensions.width,
-									height: this.document.data.og_image.dimensions.height
-								}
-							: {
-									'@type': 'ImageObject',
-									url: `${process.env.NUXT_SITENAME}${this.$constants.seoImageUrl}`,
-									width: 1200,
-									height: 630
-								},
-						mainEntityOfPage: {
-							'@type': 'WebPage',
-							'@id': `${process.env.NUXT_SITENAME}${this.$nuxt.$route.path}`
-						},
-						inLanguage: this.$i18n.locale
-					}
+					json: jsonLd
 				}
 			]
 		}
