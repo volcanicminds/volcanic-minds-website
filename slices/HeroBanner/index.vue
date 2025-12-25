@@ -10,7 +10,7 @@
 			<PrismicRichText
 				v-if="slice.primary.title.length && slice.primary.title[0].text !== ''"
 				class="hero-title"
-				:class="slice.primary.title_mb ? '' : 'mb0'"
+				:class="slice.primary.title_mb ? 'mb-title' : 'mb0'"
 				:field="slice.primary.title"
 				wrapper="h1"
 			/>
@@ -57,26 +57,31 @@ defineProps({
 </script>
 
 <style lang="stylus" scoped>
+.mb-title
+	margin-bottom 3rem
 .hero
 	&-title
 		margin-top 0
-		font-weight 100
-		font-size 3em
+		font-weight 200
+		font-size 2.6em
+		line-height 1.07
 		word-wrap break-word
 		@media (min-width: 52em)
-			font-size 3.5em
-		text-transform lowercase
-
+			font-size 2.8em
+		>>> strong
+			font-weight 800
+			@media (min-width: 52em)
+				font-size 0.9em
 		>>> p
 			margin 0
 	&-subtitle
 		font-weight inherit
 		font-size 1.2em
+		line-height 1.2
 		@media (min-width: 52em)
-			font-size 1.5em
+			font-size 1.35em
 		>>> strong
-			font-weight 700
-			color var(--red-pigment)
+			font-weight 600
 
 	.fade-overlay
 		box-shadow 0px -300px 200px -100px var(--raisin-black) inset
