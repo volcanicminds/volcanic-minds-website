@@ -1,5 +1,5 @@
 <template>
-	<div class="max-width-4 mx-auto px3 col-12">
+	<div class="max-width-4 px2 sm-px3 mx-auto col-12">
 		<slot />
 	</div>
 </template>

@@ -63,7 +63,7 @@ defineProps({
 	&-title
 		margin-top 0
 		font-weight 200
-		font-size 2.6em
+		font-size 2.4em
 		line-height 1.07
 		word-wrap break-word
 		@media (min-width: 52em)
@@ -76,7 +76,7 @@ defineProps({
 			margin 0
 	&-subtitle
 		font-weight inherit
-		font-size 1.2em
+		font-size 1.15em
 		line-height 1.2
 		@media (min-width: 52em)
 			font-size 1.35em
