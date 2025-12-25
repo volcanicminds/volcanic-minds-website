@@ -1,6 +1,6 @@
 export const seoTitle = 'Volcanic Minds | Smart, Fast, Efficient'
 export const seoDescription =
-	'Volcanic Minds è la Digital Experience Company e Software House di Torino specializzata in sviluppo software custom, architetture Cloud, SaaS e integrazione di Intelligenza Artificiale per Enterprise e Startup.'
+	'Software House Torino e partner innovativo. Sviluppiamo SaaS, software custom e soluzioni Enterprise. Integriamo Cloud Native e Agenti AI per massimizzare il ROI.'
 export const seoSiteName = 'Volcanic Minds'
 export const seoImageUrl = '/open-graph.png'
 export const logo = '/logo.png'
@@ -9,7 +9,7 @@ export const schemaOrgType = 'WebPage'
 
 export const ogTitle = 'Volcanic Minds | Smart, Fast, Efficient'
 export const ogDescription =
-	'Trasformiamo le sfide di business in soluzioni digitali. Sviluppo Web, AI, Cloud Architecture e Design Strategy per accelerare la tua crescita.'
+	"Più che fornitori, partner per l'innovazione. Sviluppiamo Software, SaaS e Soluzioni AI Enterprise unendo ingegneria Cloud Native e Design UX/UI accessibili per far scalare il tuo business."
 
 export const schemaOrganization = {
 	'@type': 'ProfessionalService',
