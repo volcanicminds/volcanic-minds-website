@@ -11,57 +11,6 @@ export const ogTitle = 'Volcanic Minds | Smart, Fast, Efficient'
 export const ogDescription =
 	"Più che fornitori, partner per l'innovazione. Sviluppiamo Software, SaaS e Soluzioni AI Enterprise unendo ingegneria Cloud Native e Design UX/UI accessibili per far scalare il tuo business."
 
-const areaServed = [
-	{
-		'@type': 'City',
-		name: 'Torino'
-	},
-	{
-		'@type': 'AdministrativeArea',
-		name: 'Piemonte'
-	},
-	{
-		'@type': 'AdministrativeArea',
-		name: 'Lombardia'
-	},
-	{
-		'@type': 'AdministrativeArea',
-		name: 'Liguria'
-	},
-	{
-		'@type': 'AdministrativeArea',
-		name: "Valle d'Aosta"
-	},
-	{
-		'@type': 'AdministrativeArea',
-		name: 'Veneto'
-	},
-	{
-		'@type': 'AdministrativeArea',
-		name: 'Trentino-Alto Adige'
-	},
-	{
-		'@type': 'AdministrativeArea',
-		name: 'Emilia-Romagna'
-	},
-	{
-		'@type': 'AdministrativeArea',
-		name: 'Toscana'
-	},
-	{
-		'@type': 'AdministrativeArea',
-		name: 'Umbria'
-	},
-	{
-		'@type': 'Country',
-		name: 'Italia'
-	},
-	{
-		'@type': 'Continent',
-		name: 'Europa'
-	}
-]
-
 const address = {
 	'@type': 'PostalAddress',
 	streetAddress: 'Corso Vinzaglio 24',
@@ -137,7 +86,7 @@ export const schemaOrganization = {
 		'https://images.prismic.io/volcanic-website/3ca43570-29b0-47c7-8205-06ca7537fd03_Volcanic+Minds.png?auto=compress,format',
 	'@id': 'https://volcanicminds.com/#organization',
 	url: 'https://volcanicminds.com',
-	priceRange: '$$-$$$',
+	priceRange: '€€-€€€',
 	address,
 	geo,
 	areaServed: areaServedIT,
@@ -172,7 +121,7 @@ export const defaultMakesOffer = [
 		'@type': 'Offer',
 		itemOffered: {
 			'@type': 'Service',
-			name: 'Integrazione AI & Data Intelligence',
+			name: 'Integrazione AI e Data Intelligence',
 			description: 'Sviluppo di agenti AI, sistemi RAG e automazione processi aziendali.'
 		}
 	},
