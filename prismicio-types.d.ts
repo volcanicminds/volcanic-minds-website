@@ -240,7 +240,7 @@ export interface FooterDocumentDataIconLinksItem {
 	 * - **API ID Path**: footer.icon_links[].link
 	 * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
 	 */
-	link: prismic.LinkField<string, string, unknown, prismic.FieldState, never>
+	link: prismic.LinkField<string, string, unknown, prismic.FieldState>
 
 	/**
 	 * Alt text field in *Footer → Link con icone*
@@ -275,7 +275,7 @@ export interface FooterDocumentDataTextLinksItem {
 	 * - **API ID Path**: footer.text_links[].link
 	 * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
 	 */
-	link: prismic.LinkField<string, string, unknown, prismic.FieldState, never>
+	link: prismic.LinkField<string, string, unknown, prismic.FieldState>
 }
 
 type FooterDocumentDataSlicesSlice = never
@@ -1039,7 +1039,7 @@ export interface ArticlesGridSliceDefaultPrimary {
 	 * - **API ID Path**: articles_grid.default.primary.blog_cta_link
 	 * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
 	 */
-	blog_cta_link: prismic.LinkField<string, string, unknown, prismic.FieldState, never>
+	blog_cta_link: prismic.LinkField<string, string, unknown, prismic.FieldState>
 
 	/**
 	 * CTA blog label field in *ArticlesGrid → Selected articles → Primary*
@@ -1218,7 +1218,7 @@ export interface CallToActionSliceDefaultPrimary {
 	 * - **API ID Path**: call_to_action.default.primary.link
 	 * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
 	 */
-	link: prismic.LinkField<string, string, unknown, prismic.FieldState, never>
+	link: prismic.LinkField<string, string, unknown, prismic.FieldState>
 
 	/**
 	 * Dimensione field in *CallToAction → Default → Primary*
@@ -1414,7 +1414,7 @@ export interface CardsGridSliceDefaultItem {
 	 * - **API ID Path**: cards_grid.items[].cta_link
 	 * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
 	 */
-	cta_link: prismic.LinkField<string, string, unknown, prismic.FieldState, never>
+	cta_link: prismic.LinkField<string, string, unknown, prismic.FieldState>
 
 	/**
 	 * CTA Testo accessibile field in *CardsGrid → Items*
@@ -1516,7 +1516,7 @@ export interface ContactsSliceDefaultPrimary {
 	 * - **API ID Path**: contacts.default.primary.button_link
 	 * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
 	 */
-	button_link: prismic.LinkField<string, string, unknown, prismic.FieldState, never>
+	button_link: prismic.LinkField<string, string, unknown, prismic.FieldState>
 
 	/**
 	 * Label bottone field in *Contacts → Default → Primary*
@@ -1701,7 +1701,7 @@ export interface HeroBannerSliceDefaultPrimary {
 	 * - **API ID Path**: hero_banner.default.primary.cta_link
 	 * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
 	 */
-	cta_link: prismic.LinkField<string, string, unknown, prismic.FieldState, never>
+	cta_link: prismic.LinkField<string, string, unknown, prismic.FieldState>
 
 	/**
 	 * CTA testo field in *HeroBanner → Default → Primary*
@@ -1826,7 +1826,7 @@ export interface ImageAndTextSliceDefaultPrimary {
 	 * - **API ID Path**: image_and_text.default.primary.cta_link
 	 * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
 	 */
-	cta_link: prismic.LinkField<string, string, unknown, prismic.FieldState, never>
+	cta_link: prismic.LinkField<string, string, unknown, prismic.FieldState>
 
 	/**
 	 * CTA Testo field in *ImageAndText → Default → Primary*
@@ -2031,7 +2031,7 @@ export interface MasonrySliceDefaultItem {
 	 * - **API ID Path**: masonry.items[].card_link
 	 * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
 	 */
-	card_link: prismic.LinkField<string, string, unknown, prismic.FieldState, never>
+	card_link: prismic.LinkField<string, string, unknown, prismic.FieldState>
 
 	/**
 	 * Link testo accessibile field in *Masonry → Items*
@@ -2115,7 +2115,7 @@ export interface NavigationMenuSliceDefaultPrimary {
 	 * - **API ID Path**: navigation_menu.default.primary.link_url
 	 * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
 	 */
-	link_url: prismic.LinkField<string, string, unknown, prismic.FieldState, never>
+	link_url: prismic.LinkField<string, string, unknown, prismic.FieldState>
 
 	/**
 	 * Titolo link field in *NavigationItem → Default → Primary*
@@ -2151,7 +2151,7 @@ export interface NavigationMenuSliceDefaultItem {
 	 * - **API ID Path**: navigation_menu.items[].link_url
 	 * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
 	 */
-	link_url: prismic.LinkField<string, string, unknown, prismic.FieldState, never>
+	link_url: prismic.LinkField<string, string, unknown, prismic.FieldState>
 
 	/**
 	 * Titolo link field in *NavigationItem → Items*
@@ -2324,7 +2324,7 @@ export interface PartnersSliceDefaultItem {
 	 * - **API ID Path**: partners.items[].link
 	 * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
 	 */
-	link: prismic.LinkField<string, string, unknown, prismic.FieldState, never>
+	link: prismic.LinkField<string, string, unknown, prismic.FieldState>
 }
 
 /**
