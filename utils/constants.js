@@ -11,6 +11,71 @@ export const ogTitle = 'Volcanic Minds | Smart, Fast, Efficient'
 export const ogDescription =
 	"Più che fornitori, partner per l'innovazione. Sviluppiamo Software, SaaS e Soluzioni AI Enterprise unendo ingegneria Cloud Native e Design UX/UI accessibili per far scalare il tuo business."
 
+const areaServed = [
+	{
+		'@type': 'City',
+		name: 'Torino'
+	},
+	{
+		'@type': 'AdministrativeArea',
+		name: 'Piemonte'
+	},
+	{
+		'@type': 'AdministrativeArea',
+		name: 'Lombardia'
+	},
+	{
+		'@type': 'AdministrativeArea',
+		name: 'Liguria'
+	},
+	{
+		'@type': 'AdministrativeArea',
+		name: "Valle d'Aosta"
+	},
+	{
+		'@type': 'AdministrativeArea',
+		name: 'Veneto'
+	},
+	{
+		'@type': 'AdministrativeArea',
+		name: 'Trentino-Alto Adige'
+	},
+	{
+		'@type': 'AdministrativeArea',
+		name: 'Emilia-Romagna'
+	},
+	{
+		'@type': 'AdministrativeArea',
+		name: 'Toscana'
+	},
+	{
+		'@type': 'AdministrativeArea',
+		name: 'Umbria'
+	},
+	{
+		'@type': 'Country',
+		name: 'Italia'
+	},
+	{
+		'@type': 'Continent',
+		name: 'Europa'
+	}
+]
+
+const address = {
+	'@type': 'PostalAddress',
+	streetAddress: 'Corso Vinzaglio 24',
+	addressLocality: 'Torino',
+	postalCode: '10121',
+	addressCountry: 'IT'
+}
+
+const geo = {
+	'@type': 'GeoCoordinates',
+	latitude: 45.06837,
+	longitude: 7.66863
+}
+
 export const schemaOrganization = {
 	'@type': 'ProfessionalService',
 	name: 'Volcanic Minds',
@@ -18,18 +83,10 @@ export const schemaOrganization = {
 		'https://images.prismic.io/volcanic-website/3ca43570-29b0-47c7-8205-06ca7537fd03_Volcanic+Minds.png?auto=compress,format',
 	'@id': 'https://volcanicminds.com/#organization',
 	url: 'https://volcanicminds.com',
-	address: {
-		'@type': 'PostalAddress',
-		streetAddress: 'Corso Vinzaglio 24',
-		addressLocality: 'Torino',
-		postalCode: '10121',
-		addressCountry: 'IT'
-	},
-	geo: {
-		'@type': 'GeoCoordinates',
-		latitude: 45.06837,
-		longitude: 7.66863
-	},
+	priceRange: '$$-$$$',
+	address,
+	geo,
+	areaServed,
 	sameAs: [
 		'https://www.linkedin.com/company/volcanic-minds',
 		'https://github.com/volcanicminds',
