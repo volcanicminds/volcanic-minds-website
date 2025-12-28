@@ -200,7 +200,7 @@ export default class PageComponent extends Vue {
 			description: this.document.data.seo_description || this.$constants.seoDescription,
 			mainEntityOfPage: {
 				'@type': 'WebPage',
-				'@id': `${process.env.NUXT_SITENAME}${this.$nuxt.$route.path}`
+				'@id': `${process.env.NUXT_SITENAME}${this.$i18n.locale === 'it' ? '' : '/en'}${this.$nuxt.$route.path}`
 			},
 			inLanguage: this.$i18n.locale
 		}
