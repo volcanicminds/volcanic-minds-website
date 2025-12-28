@@ -137,9 +137,12 @@
 						"Article",
 						"Blog",
 						"BlogPosting",
+						"CollectionPage",
 						"ContactPage",
+						"FAQPage",
 						"NewsArticle",
-						"Service"
+						"Service",
+						"TechArticle"
 					],
 					"default_value": "WebPage"
 				}

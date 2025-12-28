@@ -212,16 +212,16 @@ export default class PageComponent extends Vue {
 				serviceType: this.document.data.title,
 				description: this.document.data.seo_description || this.$constants.seoDescription,
 				provider: this.$constants.schemaOrganization,
-				areaServed: {
-					'@type': 'Country',
-					name: 'Italy'
-				},
+				areaServed: this.$i18n.locale === 'it' ? this.$constants.areaServedIT : this.$constants.areaServedEN,
 				hasOfferCatalog: {
 					'@type': 'OfferCatalog',
 					name: 'Servizi Volcanic Minds'
 				}
 			}
-		} else if (['Article', 'BlogPosting', 'NewsArticle'].includes(type) || this.document.data.is_article) {
+		} else if (
+			['Article', 'BlogPosting', 'NewsArticle', 'TechArticle'].includes(type) ||
+			this.document.data.is_article
+		) {
 			jsonLd = {
 				'@context': 'https://schema.org',
 				'@type': 'TechArticle',
@@ -237,6 +237,7 @@ export default class PageComponent extends Vue {
 					(this.document.data.latest_revision_date_sort
 						? dayjs(this.document.data.latest_revision_date_sort).format('YYYY-MM-DDTHH:mm:ss[Z]')
 						: undefined),
+				proficiencyLevel: 'Expert',
 				author: {
 					'@type': 'Organization',
 					name: 'Volcanic Minds Team',
@@ -261,6 +262,29 @@ export default class PageComponent extends Vue {
 				json: jsonLd
 			}
 		]
+
+		// FAQPage Logic via Accordion Slice
+		const accordionSlice = this.document.data.slices.find(
+			(slice: { slice_type: string }) => slice.slice_type === 'accordion'
+		)
+		if (accordionSlice && accordionSlice.items && accordionSlice.items.length > 0) {
+			const faqJsonLd = {
+				'@context': 'https://schema.org',
+				'@type': 'FAQPage',
+				mainEntity: accordionSlice.items.map((item: any) => ({
+					'@type': 'Question',
+					name: item.title,
+					acceptedAnswer: {
+						'@type': 'Answer',
+						text: item.description
+					}
+				}))
+			}
+			scripts.push({
+				type: 'application/ld+json',
+				json: faqJsonLd
+			})
+		}
 
 		if (this.youtubeSlice) {
 			scripts.push({

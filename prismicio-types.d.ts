@@ -188,7 +188,17 @@ interface FirstLevelPageDocumentData {
 	 * - **Documentation**: https://prismic.io/docs/field#select
 	 */
 	schema_org_type: prismic.SelectField<
-		'WebPage' | 'AboutPage' | 'Article' | 'Blog' | 'BlogPosting' | 'ContactPage' | 'NewsArticle' | 'Service',
+		| 'WebPage'
+		| 'AboutPage'
+		| 'Article'
+		| 'Blog'
+		| 'BlogPosting'
+		| 'CollectionPage'
+		| 'ContactPage'
+		| 'FAQPage'
+		| 'NewsArticle'
+		| 'Service'
+		| 'TechArticle',
 		'filled'
 	>
 }
@@ -804,7 +814,17 @@ interface SecondLevelPageDocumentData {
 	 * - **Documentation**: https://prismic.io/docs/field#select
 	 */
 	schema_org_type: prismic.SelectField<
-		'WebPage' | 'AboutPage' | 'Article' | 'Blog' | 'BlogPosting' | 'ContactPage' | 'NewsArticle' | 'Service',
+		| 'WebPage'
+		| 'AboutPage'
+		| 'Article'
+		| 'Blog'
+		| 'BlogPosting'
+		| 'CollectionPage'
+		| 'ContactPage'
+		| 'FAQPage'
+		| 'NewsArticle'
+		| 'Service'
+		| 'TechArticle',
 		'filled'
 	>
 }

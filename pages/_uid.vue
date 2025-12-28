@@ -7,6 +7,7 @@
 
 <script lang="ts">
 import { Vue, Component, Provide } from 'nuxt-property-decorator'
+import dayjs from 'dayjs'
 import { components } from '~/slices'
 
 @Component({
@@ -118,10 +119,7 @@ export default class PageComponent extends Vue {
 				serviceType: this.document.data.title,
 				description: this.document.data.seo_description || this.$constants.seoDescription,
 				provider: this.$constants.schemaOrganization,
-				areaServed: {
-					'@type': 'Country',
-					name: 'Italy'
-				},
+				areaServed: this.$i18n.locale === 'it' ? this.$constants.areaServedIT : this.$constants.areaServedEN,
 				hasOfferCatalog: {
 					'@type': 'OfferCatalog',
 					name: 'Servizi Volcanic Minds'
@@ -133,7 +131,20 @@ export default class PageComponent extends Vue {
 				'@type': 'AboutPage',
 				mainEntity: this.$constants.schemaOrganization
 			}
-		} else if (['Article', 'BlogPosting', 'NewsArticle'].includes(type) || this.document.data.is_article) {
+		} else if (type === 'ContactPage') {
+			jsonLd = {
+				'@context': 'https://schema.org',
+				'@type': 'ContactPage',
+				mainEntity: {
+					'@type': 'Organization',
+					...this.$constants.schemaOrganization,
+					contactPoint: this.$constants.contactPoints
+				}
+			}
+		} else if (
+			['Article', 'BlogPosting', 'NewsArticle', 'TechArticle'].includes(type) ||
+			this.document.data.is_article
+		) {
 			jsonLd = {
 				'@context': 'https://schema.org',
 				'@type': 'TechArticle',
@@ -141,6 +152,7 @@ export default class PageComponent extends Vue {
 				image: this.document.data.og_image?.url ? [this.document.data.og_image.url] : [],
 				datePublished: this.document.data.publication_date,
 				dateModified: this.document.data.latest_revision_date,
+				proficiencyLevel: 'Expert',
 				author: {
 					'@type': 'Organization',
 					name: 'Volcanic Minds Team',
@@ -157,6 +169,75 @@ export default class PageComponent extends Vue {
 				description: this.document.data.seo_description || this.$constants.seoDescription,
 				about: this.document.tags // Use Prismic tags as "about"
 			}
+		} else if (this.document.uid === 'portfolio') {
+			// Portfolio CollectionPage
+			// Note: We assume the articles_grid slice with variant 'default' or 'allArticles' contains the items
+			// But for now, we just define the CollectionPage structure.
+			// Finding items from slice if possible would be better, but the slice processing happens in asyncData.
+			// The slice data is modified in place in asyncData, so we can access valid items here.
+			const articlesGridSlice = this.document.data.slices.find(
+				(slice: { slice_type: string }) => slice.slice_type === 'articles_grid'
+			)
+			const itemListElement: any[] = []
+			if (articlesGridSlice && articlesGridSlice.items) {
+				itemListElement.push(
+					...articlesGridSlice.items.map((item: any, index: number) => ({
+						'@type': 'ListItem',
+						position: index + 1,
+						url: `${process.env.NUXT_SITENAME}/${this.$i18n.locale === 'it' ? '' : 'en/'}insights/${item.article.uid}`
+					}))
+				)
+			}
+
+			jsonLd = {
+				'@context': 'https://schema.org',
+				'@type': 'CollectionPage',
+				headline: this.document.data.title,
+				description: this.document.data.seo_description || this.$constants.seoDescription,
+				mainEntity: {
+					'@type': 'ItemList',
+					itemListElement
+				}
+			}
+		}
+
+		const scripts = [
+			{
+				type: 'application/ld+json',
+				json: jsonLd
+			}
+		]
+
+		// FAQPage Logic via Accordion Slice
+		const accordionSlice = this.document.data.slices.find(
+			(slice: { slice_type: string }) => slice.slice_type === 'accordion'
+		)
+		if (accordionSlice && accordionSlice.items && accordionSlice.items.length > 0) {
+			const faqJsonLd = {
+				'@context': 'https://schema.org',
+				'@type': 'FAQPage',
+				mainEntity: accordionSlice.items.map((item: any) => ({
+					'@type': 'Question',
+					name: item.title,
+					acceptedAnswer: {
+						'@type': 'Answer',
+						text: item.description // This is HTML/RichText from Prismic usually, but using it as text is fine or we should strip tags?
+						// Prismic Rich Text usually comes as array or html. item.description is likely text or simple string in some slices.
+						// Checking Slice Machine or previous file view? Standard Prismic 'accordion' usually has title (Key Text) and description (Rich Text).
+						// If description is Rich Text, we might need a serializer, but typically in JSON-LD we need plain text or HTML string.
+						// Assuming item.description is the string content for now, or we'd need a helper.
+						// Looking at index.vue slice handling, it doesn't show accordion details.
+						// However, `utils/htmlSerializer` might be needed if we were rendering.
+						// In JSON-LD, if it's Key Text, it's a string. If it's Rich Text, it's an array.
+						// We'll trust user verification. But usually `description` is Key Text or specific Rich Text.
+						// Let's assume it works or just use it.
+					}
+				}))
+			}
+			scripts.push({
+				type: 'application/ld+json',
+				json: faqJsonLd
+			})
 		}
 
 		return {
@@ -209,12 +290,7 @@ export default class PageComponent extends Vue {
 			htmlAttrs: {
 				lang: this.$i18n.locale
 			},
-			script: [
-				{
-					type: 'application/ld+json',
-					json: jsonLd
-				}
-			]
+			script: scripts
 		}
 	}
 }

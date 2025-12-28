@@ -76,6 +76,60 @@ const geo = {
 	longitude: 7.66863
 }
 
+export const areaServedIT = [
+	{ '@type': 'City', name: 'Torino' },
+	{ '@type': 'City', name: 'Milano' },
+	{ '@type': 'AdministrativeArea', name: 'Piemonte' },
+	{ '@type': 'AdministrativeArea', name: 'Lombardia' },
+	{ '@type': 'AdministrativeArea', name: 'Liguria' },
+	{ '@type': 'AdministrativeArea', name: "Valle d'Aosta" },
+	{ '@type': 'AdministrativeArea', name: 'Veneto' },
+	{ '@type': 'AdministrativeArea', name: 'Trentino-Alto Adige' },
+	{ '@type': 'AdministrativeArea', name: 'Emilia-Romagna' },
+	{ '@type': 'AdministrativeArea', name: 'Toscana' },
+	{ '@type': 'Country', name: 'Italia' },
+	{ '@type': 'Continent', name: 'Europa' }
+]
+
+export const areaServedEN = [
+	{ '@type': 'Country', name: 'Italy' },
+	{ '@type': 'Country', name: 'Switzerland' },
+	{ '@type': 'Country', name: 'United Kingdom' },
+	{ '@type': 'Country', name: 'United States' },
+	{ '@type': 'Continent', name: 'Europe' }
+]
+
+export const contactPoints = [
+	{
+		'@type': 'ContactPoint',
+		contactType: 'sales',
+		email: 'info@volcanicminds.com',
+		areaServed: 'Worldwide',
+		availableLanguage: ['English', 'Italian']
+	},
+	{
+		'@type': 'ContactPoint',
+		contactType: 'hr',
+		email: 'hr@volcanicminds.com',
+		areaServed: 'Worldwide',
+		availableLanguage: ['English', 'Italian']
+	},
+	{
+		'@type': 'ContactPoint',
+		contactType: 'partnership',
+		email: 'partner@volcanicminds.com',
+		areaServed: 'Worldwide',
+		availableLanguage: ['English', 'Italian']
+	},
+	{
+		'@type': 'ContactPoint',
+		contactType: 'sponsorship',
+		email: 'sponsor@volcanicminds.com',
+		areaServed: 'Italy',
+		availableLanguage: ['English', 'Italian']
+	}
+]
+
 export const schemaOrganization = {
 	'@type': 'ProfessionalService',
 	name: 'Volcanic Minds',
@@ -86,7 +140,7 @@ export const schemaOrganization = {
 	priceRange: '$$-$$$',
 	address,
 	geo,
-	areaServed,
+	areaServed: areaServedIT,
 	sameAs: [
 		'https://www.linkedin.com/company/volcanic-minds',
 		'https://github.com/volcanicminds',
