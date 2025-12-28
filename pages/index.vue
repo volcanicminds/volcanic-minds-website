@@ -152,6 +152,8 @@ export default class PageComponent extends Vue {
 					json: {
 						'@context': 'https://schema.org',
 						...this.$constants.schemaOrganization,
+						'@id': `${process.env.NUXT_SITENAME}${this.$i18n.locale === 'it' ? '' : '/en'}#organization`,
+						url: `${process.env.NUXT_SITENAME}${this.$i18n.locale === 'it' ? '' : '/en'}`,
 						areaServed: this.$i18n.locale === 'it' ? this.$constants.areaServedIT : this.$constants.areaServedEN,
 						description:
 							this.document.data.seo_description ||
