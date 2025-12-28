@@ -41,11 +41,32 @@ export const areaServedIT = [
 ]
 
 export const areaServedEN = [
+	// 1. Mercato Domestico
 	{ '@type': 'Country', name: 'Italy' },
-	{ '@type': 'Country', name: 'Switzerland' },
+
+	// 2. Vicini ricchi & Strategici (Nearshore ideale da Torino)
+	{ '@type': 'Country', name: 'Switzerland' }, // Ticino & Zurigo: gold mine
+	{ '@type': 'Country', name: 'Germany' }, // Motore economico, tariffe alte
+	{ '@type': 'Country', name: 'Austria' },
+	{ '@type': 'Country', name: 'France' }, // Prossimità geografica
+
+	// 3. Mercati ad alto budget (Lingua Inglese)
 	{ '@type': 'Country', name: 'United Kingdom' },
-	{ '@type': 'Country', name: 'United States' },
-	{ '@type': 'Continent', name: 'Europe' }
+	{ '@type': 'Country', name: 'Ireland' }, // Hub tecnologico EU
+
+	// 4. Nord Europa (Tariffe altissime, amano l'outsourcing di qualità)
+	{ '@type': 'Country', name: 'Sweden' },
+	{ '@type': 'Country', name: 'Norway' },
+	{ '@type': 'Country', name: 'Denmark' },
+	{ '@type': 'Country', name: 'Netherlands' }, // Olanda: molto pragmatiici, tariffe alte
+
+	// 5. Big Opportunity (Fuso orario gestibile)
+	{ '@type': 'Country', name: 'United States' }, // Focus East Coast
+	{ '@type': 'Country', name: 'United Arab Emirates' }, // Dubai/Abu Dhabi (Emergente per AI)
+
+	// 6. Copertura Continentale
+	{ '@type': 'Continent', name: 'Europe' },
+	{ '@type': 'Continent', name: 'North America' }
 ]
 
 export const contactPoints = [
@@ -108,7 +129,7 @@ export const defaultKnowsAbout = [
 	'UX/UI Design'
 ]
 
-export const defaultMakesOffer = [
+export const defaultMakesOfferIT = [
 	{
 		'@type': 'Offer',
 		itemOffered: {
@@ -134,3 +155,32 @@ export const defaultMakesOffer = [
 		}
 	}
 ]
+
+export const defaultMakesOfferEN = [
+	{
+		'@type': 'Offer',
+		itemOffered: {
+			'@type': 'Service',
+			name: 'Custom Software Development',
+			description: 'Building enterprise platforms and custom web applications.'
+		}
+	},
+	{
+		'@type': 'Offer',
+		itemOffered: {
+			'@type': 'Service',
+			name: 'AI Integration & Data Intelligence',
+			description: 'Development of AI agents, RAG systems, and business process automation.'
+		}
+	},
+	{
+		'@type': 'Offer',
+		itemOffered: {
+			'@type': 'Service',
+			name: 'Digital Factory',
+			description: 'Frontend, backend development, and scalable cloud architectures.'
+		}
+	}
+]
+
+export const defaultMakesOffer = defaultMakesOfferIT

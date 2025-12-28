@@ -152,12 +152,14 @@ export default class PageComponent extends Vue {
 					json: {
 						'@context': 'https://schema.org',
 						...this.$constants.schemaOrganization,
+						areaServed: this.$i18n.locale === 'it' ? this.$constants.areaServedIT : this.$constants.areaServedEN,
 						description:
 							this.document.data.seo_description ||
 							this.$constants.seoDescription ||
 							this.$constants.schemaOrganization.description,
 						knowsAbout: this.$constants.defaultKnowsAbout,
-						makesOffer: this.$constants.defaultMakesOffer
+						makesOffer:
+							this.$i18n.locale === 'it' ? this.$constants.defaultMakesOfferIT : this.$constants.defaultMakesOfferEN
 					}
 				}
 			]
