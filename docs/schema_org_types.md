@@ -91,4 +91,6 @@ Distinguishing between these is crucial for SEO:
 | **Portfolio (Project List)**     | `CollectionPage`                          |
 | **Insights (Article List)**      | `CollectionPage`                          |
 | **FAQ Page**                     | `FAQPage`                                 |
+| **Contact Page**                 | `ContactPage`                             |
+| **Partnerships**                 | `WebPage`                                 |
 | **Policy / Terms / Misc**        | `WebPage`                                 |
