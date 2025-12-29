@@ -152,7 +152,7 @@ export default class PageComponent extends Vue {
 				image: this.document.data.og_image?.url ? [this.document.data.og_image.url] : [],
 				datePublished: this.document.data.publication_date,
 				dateModified: this.document.data.latest_revision_date,
-				proficiencyLevel: 'Expert',
+				proficiencyLevel: this.document.data.proficiency_level || 'Expert',
 				author: {
 					'@type': 'Organization',
 					name: 'Volcanic Minds Team',

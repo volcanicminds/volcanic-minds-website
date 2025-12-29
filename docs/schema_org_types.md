@@ -41,6 +41,7 @@ Distinguishing between these is crucial for SEO:
 - **What it is:** Technical content intended for a specialized audience.
 - **Key Trait:** Educational, specific, proficiency-oriented.
 - **When to use:** **This is critical for us.** Use this for code tutorials, architectural breakdowns, developers' guides, or deep-dives into specific technologies.
+- **Proficiency Level:** You can now select the `Proficiency Level` (Beginner, Intermediate, Expert) from the SEO tab. This informs search engines about the intended audience's skill level. If left empty, it defaults to **Expert**.
 - **Examples:** "How to set up Nuxt with Prismic", "A guide to clean architecture in Vue", "Implementing CI/CD pipelines".
 
 ---

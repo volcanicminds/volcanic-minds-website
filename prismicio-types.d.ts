@@ -201,6 +201,18 @@ interface FirstLevelPageDocumentData {
 		| 'TechArticle',
 		'filled'
 	>
+
+	/**
+	 * Proficiency Level (TechArticle) field in *Pagina di primo livello*
+	 *
+	 * - **Field Type**: Select
+	 * - **Placeholder**: Seleziona il livello (default: Expert)
+	 * - **Default Value**: Expert
+	 * - **API ID Path**: first_level_page.proficiency_level
+	 * - **Tab**: SEO
+	 * - **Documentation**: https://prismic.io/docs/field#select
+	 */
+	proficiency_level: prismic.SelectField<'Beginner' | 'Intermediate' | 'Expert', 'filled'>
 }
 
 /**
@@ -827,6 +839,18 @@ interface SecondLevelPageDocumentData {
 		| 'TechArticle',
 		'filled'
 	>
+
+	/**
+	 * Proficiency Level (TechArticle) field in *Pagina di secondo livello*
+	 *
+	 * - **Field Type**: Select
+	 * - **Placeholder**: Seleziona il livello (default: Expert)
+	 * - **Default Value**: Expert
+	 * - **API ID Path**: second_level_page.proficiency_level
+	 * - **Tab**: SEO
+	 * - **Documentation**: https://prismic.io/docs/field#select
+	 */
+	proficiency_level: prismic.SelectField<'Beginner' | 'Intermediate' | 'Expert', 'filled'>
 }
 
 /**

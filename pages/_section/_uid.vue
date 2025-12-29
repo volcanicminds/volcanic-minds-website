@@ -237,7 +237,7 @@ export default class PageComponent extends Vue {
 					(this.document.data.latest_revision_date_sort
 						? dayjs(this.document.data.latest_revision_date_sort).format('YYYY-MM-DDTHH:mm:ss[Z]')
 						: undefined),
-				proficiencyLevel: 'Expert',
+				proficiencyLevel: this.document.data.proficiency_level || 'Expert',
 				author: {
 					'@type': 'Organization',
 					name: 'Volcanic Minds Team',

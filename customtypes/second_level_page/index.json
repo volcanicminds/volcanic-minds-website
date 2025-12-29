@@ -216,6 +216,19 @@
 					],
 					"default_value": "WebPage"
 				}
+			},
+			"proficiency_level": {
+				"type": "Select",
+				"config": {
+					"label": "Proficiency Level (TechArticle)",
+					"placeholder": "Seleziona il livello (default: Expert)",
+					"options": [
+						"Beginner",
+						"Intermediate",
+						"Expert"
+					],
+					"default_value": "Expert"
+				}
 			}
 		}
 	}
