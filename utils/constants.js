@@ -41,30 +41,19 @@ export const areaServedIT = [
 ]
 
 export const areaServedEN = [
-	// 1. Mercato Domestico
 	{ '@type': 'Country', name: 'Italy' },
-
-	// 2. Vicini ricchi & Strategici (Nearshore ideale da Torino)
-	{ '@type': 'Country', name: 'Switzerland' }, // Ticino & Zurigo: gold mine
-	{ '@type': 'Country', name: 'Germany' }, // Motore economico, tariffe alte
+	{ '@type': 'Country', name: 'Switzerland' },
+	{ '@type': 'Country', name: 'Germany' },
 	{ '@type': 'Country', name: 'Austria' },
-	{ '@type': 'Country', name: 'France' }, // Prossimità geografica
-
-	// 3. Mercati ad alto budget (Lingua Inglese)
+	{ '@type': 'Country', name: 'France' },
 	{ '@type': 'Country', name: 'United Kingdom' },
-	{ '@type': 'Country', name: 'Ireland' }, // Hub tecnologico EU
-
-	// 4. Nord Europa (Tariffe altissime, amano l'outsourcing di qualità)
+	{ '@type': 'Country', name: 'Ireland' },
 	{ '@type': 'Country', name: 'Sweden' },
 	{ '@type': 'Country', name: 'Norway' },
 	{ '@type': 'Country', name: 'Denmark' },
-	{ '@type': 'Country', name: 'Netherlands' }, // Olanda: molto pragmatiici, tariffe alte
-
-	// 5. Big Opportunity (Fuso orario gestibile)
-	{ '@type': 'Country', name: 'United States' }, // Focus East Coast
-	{ '@type': 'Country', name: 'United Arab Emirates' }, // Dubai/Abu Dhabi (Emergente per AI)
-
-	// 6. Copertura Continentale
+	{ '@type': 'Country', name: 'Netherlands' },
+	{ '@type': 'Country', name: 'United States' },
+	{ '@type': 'Country', name: 'United Arab Emirates' },
 	{ '@type': 'Continent', name: 'Europe' },
 	{ '@type': 'Continent', name: 'North America' }
 ]
