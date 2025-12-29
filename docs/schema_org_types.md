@@ -88,5 +88,7 @@ Distinguishing between these is crucial for SEO:
 | **Opinion / Story / Update**     | `BlogPosting`                             |
 | **Project Case Study**           | `Article` (or `TechArticle` if technical) |
 | **Service Description**          | `Service`                                 |
-| **List of Articles / Projects**  | `CollectionPage`                          |
+| **Portfolio (Project List)**     | `CollectionPage`                          |
+| **Insights (Article List)**      | `CollectionPage`                          |
+| **FAQ Page**                     | `FAQPage`                                 |
 | **Policy / Terms / Misc**        | `WebPage`                                 |
