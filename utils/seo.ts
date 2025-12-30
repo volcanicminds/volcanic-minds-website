@@ -21,7 +21,7 @@ export const getHreflangLinks = (ctx: any) => {
 	})
 
 	// Add x-default pointing to 'it'
-	const itPath = ctx.switchLocalePath('it')
+	const itPath = ctx.switchLocalePath('it-it')
 	links.push({
 		rel: 'alternate',
 		hreflang: 'x-default',
