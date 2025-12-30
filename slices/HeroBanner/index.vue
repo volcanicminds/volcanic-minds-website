@@ -31,7 +31,7 @@
 		</WrapperContainer>
 		<WrapperPrismicImage
 			:field="slice.primary.background_image"
-			:size="1000"
+			:size="500"
 			class="cover absolute col-12 h100 left-0 top-0"
 			:class="slice.primary.background_image_blur ? 'blur-4' : ''"
 			:lazy="false"

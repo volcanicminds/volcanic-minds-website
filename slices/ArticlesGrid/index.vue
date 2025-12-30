@@ -32,7 +32,7 @@
 						<div class="card-image-container overflow-hidden">
 							<WrapperPrismicImage
 								:field="item.article.data.preview_image"
-								:size="1000"
+								:size="500"
 								class="col-12 h100 zoom-on-hover cover"
 							/>
 						</div>

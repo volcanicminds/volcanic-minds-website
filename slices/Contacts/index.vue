@@ -9,18 +9,18 @@
 	>
 		<WrapperPrismicImage
 			:field="slice.primary.background_1"
-			:size="1000"
+			:size="500"
 			class="absolute bottom-0 left-0 bg-image contain position-bottom-left"
 		/>
 		<WrapperPrismicImage
 			:field="slice.primary.background_2"
-			:size="1000"
+			:size="500"
 			class="absolute top-0 right-0 bg-image contain position-top-right"
 		/>
 		<WrapperContainer class="center relative">
 			<div v-if="slice.items.length" class="flex flex-wrap justify-center faces-container mb3">
 				<div v-for="(face, i) in slice.items" :key="i" class="faces-image overflow-hidden">
-					<WrapperPrismicImage :field="face.face" :size="1000" class="h100 col-12 cover" />
+					<WrapperPrismicImage :field="face.face" :size="500" class="h100 col-12 cover" />
 				</div>
 			</div>
 			<h2 v-if="slice.primary.title" class="h1 mt0 mb2">{{ slice.primary.title }}</h2>
