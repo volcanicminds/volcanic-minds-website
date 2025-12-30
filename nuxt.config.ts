@@ -167,7 +167,8 @@ export default async () => {
 		prismic: {
 			endpoint: smConfig.apiEndpoint,
 			modern: true,
-			preview: '/preview',
+			toolbar: process.env.NODE_ENV !== 'production',
+			preview: process.env.NODE_ENV !== 'production' ? '/preview' : false,
 			apiOptions: {
 				routes: [
 					{
