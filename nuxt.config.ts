@@ -34,7 +34,7 @@ export default async () => {
 				},
 				{
 					name: 'viewport',
-					content: 'height=device-height, width=device-width, initial-scale=1, minimum-scale=1'
+					content: 'width=device-width, initial-scale=1'
 				},
 				{ name: 'theme-color', content: '#3c0557' },
 				{ name: 'apple-mobile-web-app-title', content: 'Volcanic Minds' }
@@ -93,11 +93,13 @@ export default async () => {
 							src: 'https://plausible.io/js/script.js'
 						}
 					: {},
-				{
-					async: true,
-					defer: true,
-					src: 'https://static.cdn.prismic.io/prismic.js?new=true&repo=volcanic-website'
-				}
+				process.env.NODE_ENV !== 'production'
+					? {
+							async: true,
+							defer: true,
+							src: 'https://static.cdn.prismic.io/prismic.js?new=true&repo=volcanic-website'
+						}
+					: {}
 			]
 		},
 
