@@ -40,6 +40,7 @@
 						v-if="item.background"
 						:field="item.background"
 						:size="500"
+						sizes="(max-width: 768px) 100vw, 33vw"
 						class="zoom-on-hover absolute cover left-0 top-0 col-12 h100 blur-2"
 					/>
 				</component>

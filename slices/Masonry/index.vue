@@ -43,12 +43,14 @@ export default defineComponent({
 							v-if="item.card_image"
 							:field="item.card_image"
 							:size="1200"
+							sizes="(max-width: 1024px) 100vw, 25vw"
 							class="work-card__image work-card__image--default"
 						/>
 						<WrapperPrismicImage
 							v-if="item.card_image_hover && item.card_image_hover.url"
 							:field="item.card_image_hover"
 							:size="1200"
+							sizes="(max-width: 1024px) 100vw, 25vw"
 							class="work-card__image work-card__image--hover"
 						/>
 					</div>

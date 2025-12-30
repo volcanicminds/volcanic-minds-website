@@ -10,7 +10,12 @@
 		<WrapperContainer class="flex flex-wrap" :class="slice.primary.reverse ? 'row-reverse' : ''">
 			<div class="col-12 md-col-5 flex items-center justify-center mb3 md-mb0">
 				<div class="gradient-bg flex h100 col-12">
-					<WrapperPrismicImage :field="slice.primary.image" :size="800" class="col-12 h100 cover" />
+					<WrapperPrismicImage
+						:field="slice.primary.image"
+						:size="1000"
+						sizes="(max-width: 1024px) 100vw, 40vw"
+						class="col-12 h100 cover"
+					/>
 				</div>
 			</div>
 			<div class="col-12 md-col-7 flex flex-column justify-center" :class="slice.primary.reverse ? 'md-pr4' : 'md-pl4'">

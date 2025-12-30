@@ -3,8 +3,9 @@
 		v-if="Object.keys(field).length"
 		:slot="isImgSlot ? 'image' : undefined"
 		:loading="lazy ? 'lazy' : 'eager'"
-		:src="getPrismicImageSrc()"
+		:src="getPrismicImageSrc(size)"
 		:srcset="getPrismicImageSrcset()"
+		:sizes="sizes"
 		:alt="field.alt || 'image'"
 	/>
 </template>
@@ -17,29 +18,41 @@ const props = withDefaults(
 		field: any
 		lazy?: boolean
 		isImgSlot?: boolean
+		widths?: number[]
+		sizes?: string
 	}>(),
 	{
 		resizeByHeight: false,
 		size: 1300,
 		lazy: true,
-		isImgSlot: false
+		isImgSlot: false,
+		widths: () => [375, 640, 828, 1080, 1200, 1920, 2048],
+		sizes: '100vw'
 	}
 )
 
-function getPrismicImageSrc(): any {
+function getPrismicImageSrc(w?: number): any {
+	if (!props.field.url) return ''
 	if (props.field.url.includes('.svg')) {
-		return props.field.url // do not perform any modifications on SVG files, due to Prismic security check
+		return props.field.url
 	}
+
+	const baseUrl = props.field.url + (props.field.url.includes('?') ? '' : '?') + '&auto=format,compress&fit=max'
+
 	if (props.resizeByHeight) {
-		return props.field.url + `&h=${props.size}` + '&fit=max'
+		return baseUrl + `&h=${w || props.size}`
 	}
-	return props.field.url + `&w=${props.size}` + '&fit=max'
+	return baseUrl + `&w=${w || props.size}`
 }
 
 function getPrismicImageSrcset(): string | undefined {
-	if (props.field.url.includes('.svg')) {
-		return undefined // if file is SVG, provide no srcset
+	if (!props.field.url || props.field.url.includes('.svg')) {
+		return undefined
 	}
-	return getPrismicImageSrc() + '&dpr=1 1x,' + getPrismicImageSrc() + '&dpr=2 2x,' + getPrismicImageSrc() + '&dpr=3 3x'
+
+	// Se l'immagine è volutamente piccola (come nell'Hero), limitiamo il srcset alla dimensione richiesta
+	const targetWidths = props.size < 1200 ? props.widths.filter((w) => w <= props.size * 2) : props.widths
+
+	return targetWidths.map((w) => `${getPrismicImageSrc(w)} ${w}w`).join(', ')
 }
 </script>

@@ -33,6 +33,7 @@
 							<WrapperPrismicImage
 								:field="item.article.data.preview_image"
 								:size="500"
+								sizes="(max-width: 768px) 100vw, 33vw"
 								class="col-12 h100 zoom-on-hover cover"
 							/>
 						</div>

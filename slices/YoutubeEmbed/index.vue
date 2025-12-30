@@ -14,6 +14,7 @@
 					is-img-slot
 					:field="slice.primary.video_preview"
 					:size="2000"
+					sizes="100vw"
 				/>
 			</lite-youtube>
 		</WrapperContainer>
