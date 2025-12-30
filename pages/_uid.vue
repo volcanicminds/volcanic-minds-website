@@ -236,16 +236,7 @@ export default class PageComponent extends Vue {
 					name: item.title,
 					acceptedAnswer: {
 						'@type': 'Answer',
-						text: item.description // This is HTML/RichText from Prismic usually, but using it as text is fine or we should strip tags?
-						// Prismic Rich Text usually comes as array or html. item.description is likely text or simple string in some slices.
-						// Checking Slice Machine or previous file view? Standard Prismic 'accordion' usually has title (Key Text) and description (Rich Text).
-						// If description is Rich Text, we might need a serializer, but typically in JSON-LD we need plain text or HTML string.
-						// Assuming item.description is the string content for now, or we'd need a helper.
-						// Looking at index.vue slice handling, it doesn't show accordion details.
-						// However, `utils/htmlSerializer` might be needed if we were rendering.
-						// In JSON-LD, if it's Key Text, it's a string. If it's Rich Text, it's an array.
-						// We'll trust user verification. But usually `description` is Key Text or specific Rich Text.
-						// Let's assume it works or just use it.
+						text: (this as any).$prismic.asText(item.description)
 					}
 				}))
 			}

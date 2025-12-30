@@ -285,12 +285,13 @@ export default class PageComponent extends Vue {
 			const faqJsonLd = {
 				'@context': 'https://schema.org',
 				'@type': 'FAQPage',
+				inLanguage: getNormalizedLanguage(this),
 				mainEntity: accordionSlice.items.map((item: any) => ({
 					'@type': 'Question',
 					name: item.title,
 					acceptedAnswer: {
 						'@type': 'Answer',
-						text: item.description
+						text: (this as any).$prismic.asText(item.description)
 					}
 				}))
 			}
