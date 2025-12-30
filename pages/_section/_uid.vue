@@ -21,7 +21,13 @@
 import { Vue, Component, Provide } from 'nuxt-property-decorator'
 import dayjs from 'dayjs'
 import { components } from '~/slices'
-import { getHreflangLinks, getBreadcrumbSchema, getLCPPreloadLink } from '~/utils/seo'
+import {
+	getHreflangLinks,
+	getBreadcrumbSchema,
+	getLCPPreloadLink,
+	getNormalizedLanguage,
+	getOrganizationSchema
+} from '~/utils/seo'
 
 @Component({
 	// @ts-ignore
@@ -204,16 +210,17 @@ export default class PageComponent extends Vue {
 				'@type': 'WebPage',
 				'@id': `${process.env.NUXT_SITENAME}${this.switchLocalePath(this.$i18n.locale)}`
 			},
-			inLanguage: this.$i18n.locale
+			inLanguage: getNormalizedLanguage(this)
 		}
 
 		if (type === 'Service') {
 			jsonLd = {
 				'@context': 'https://schema.org',
 				'@type': 'Service',
+				inLanguage: getNormalizedLanguage(this),
 				serviceType: this.document.data.title,
 				description: this.document.data.seo_description || this.$constants.seoDescription,
-				provider: this.$constants.schemaOrganization,
+				provider: getOrganizationSchema(this),
 				areaServed: this.$constants.areaServed[this.$i18n.locale],
 				hasOfferCatalog: {
 					'@type': 'OfferCatalog',
@@ -227,6 +234,7 @@ export default class PageComponent extends Vue {
 			jsonLd = {
 				'@context': 'https://schema.org',
 				'@type': 'TechArticle',
+				inLanguage: getNormalizedLanguage(this),
 				headline: this.document.data.title,
 				image: this.document.data.og_image?.url ? [this.document.data.og_image.url] : [],
 				datePublished:

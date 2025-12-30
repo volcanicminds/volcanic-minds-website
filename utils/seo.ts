@@ -10,12 +10,13 @@ export const getHreflangLinks = (ctx: any) => {
 	const locales = ctx.$i18n.locales
 
 	const links = locales.map((locale: any) => {
-		const code = typeof locale === 'string' ? locale : locale.code
+		const code = (typeof locale === 'string' ? locale : locale?.code) ?? 'en'
 		const path = ctx.switchLocalePath(code)
+		const langCode = code.includes('-') ? code.split('-')[0] : code
 
 		return {
 			rel: 'alternate',
-			hreflang: code,
+			hreflang: langCode,
 			href: `${sitename}${path}`
 		}
 	})
@@ -64,8 +65,26 @@ export const getBreadcrumbSchema = (ctx: any, document: any, section?: any) => {
 	return {
 		'@context': 'https://schema.org',
 		'@type': 'BreadcrumbList',
+		inLanguage: getNormalizedLanguage(ctx),
 		itemListElement
 	}
+}
+
+export const getNormalizedLanguage = (ctx: any) => {
+	const code = ctx.$i18n.locale || 'en'
+	return code.includes('-') ? code.split('-')[0] : code
+}
+
+export const getOrganizationSchema = (ctx: any) => {
+	const schema = { ...ctx.$constants.schemaOrganization }
+	const logoField = ctx.$store.state.prismic.header?.data?.logo
+
+	if (logoField && logoField.url) {
+		const size = 50
+		schema.logo = logoField.url.includes('.svg') ? logoField.url : `${logoField.url}&h=${size}&fit=max`
+	}
+
+	return schema
 }
 
 export const getLCPPreloadLink = (document: any) => {

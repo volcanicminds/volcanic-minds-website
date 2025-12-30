@@ -9,7 +9,13 @@
 import { Vue, Component, Provide } from 'nuxt-property-decorator'
 import dayjs from 'dayjs'
 import { components } from '~/slices'
-import { getHreflangLinks, getBreadcrumbSchema, getLCPPreloadLink } from '~/utils/seo'
+import {
+	getHreflangLinks,
+	getBreadcrumbSchema,
+	getLCPPreloadLink,
+	getNormalizedLanguage,
+	getOrganizationSchema
+} from '~/utils/seo'
 
 @Component({
 	// @ts-ignore
@@ -139,7 +145,7 @@ export default class PageComponent extends Vue {
 				'@type': 'ContactPage',
 				mainEntity: {
 					'@type': 'Organization',
-					...this.$constants.schemaOrganization,
+					...getOrganizationSchema(this),
 					contactPoint: this.$constants.contactPoints
 				}
 			}
@@ -150,6 +156,7 @@ export default class PageComponent extends Vue {
 			jsonLd = {
 				'@context': 'https://schema.org',
 				'@type': 'TechArticle',
+				inLanguage: getNormalizedLanguage(this),
 				headline: this.document.data.title,
 				image: this.document.data.og_image?.url ? [this.document.data.og_image.url] : [],
 				datePublished: this.document.data.publication_date,
@@ -194,6 +201,7 @@ export default class PageComponent extends Vue {
 			jsonLd = {
 				'@context': 'https://schema.org',
 				'@type': 'CollectionPage',
+				inLanguage: getNormalizedLanguage(this),
 				headline: this.document.data.title,
 				description: this.document.data.seo_description || this.$constants.seoDescription,
 				mainEntity: {
@@ -222,6 +230,7 @@ export default class PageComponent extends Vue {
 			const faqJsonLd = {
 				'@context': 'https://schema.org',
 				'@type': 'FAQPage',
+				inLanguage: getNormalizedLanguage(this),
 				mainEntity: accordionSlice.items.map((item: any) => ({
 					'@type': 'Question',
 					name: item.title,
