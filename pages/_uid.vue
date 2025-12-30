@@ -9,6 +9,7 @@
 import { Vue, Component, Provide } from 'nuxt-property-decorator'
 import dayjs from 'dayjs'
 import { components } from '~/slices'
+import { getHreflangLinks } from '~/utils/seo'
 
 @Component({
 	// @ts-ignore
@@ -97,6 +98,7 @@ export default class PageComponent extends Vue {
 			| { hid: string; property: string; content: any; name?: undefined }
 		)[]
 		htmlAttrs: { lang: string }
+		link: { rel: string; hreflang: string; href: string }[]
 		script: { type: string; json: any }[]
 	} {
 		const type = this.document.data.schema_org_type || 'WebPage'
@@ -290,6 +292,7 @@ export default class PageComponent extends Vue {
 			htmlAttrs: {
 				lang: this.$i18n.locale
 			},
+			link: getHreflangLinks(this),
 			script: scripts
 		}
 	}
