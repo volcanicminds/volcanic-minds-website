@@ -34,7 +34,7 @@ export default async () => {
 				},
 				{
 					name: 'viewport',
-					content: 'height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0'
+					content: 'height=device-height, width=device-width, initial-scale=1, minimum-scale=1'
 				},
 				{ name: 'theme-color', content: '#3c0557' },
 				{ name: 'apple-mobile-web-app-title', content: 'Volcanic Minds' }
