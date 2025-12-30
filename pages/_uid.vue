@@ -109,7 +109,7 @@ export default class PageComponent extends Vue {
 			description: this.document.data.seo_description || this.$constants.seoDescription,
 			mainEntityOfPage: {
 				'@type': 'WebPage',
-				'@id': `${process.env.NUXT_SITENAME}${this.$i18n.locale === 'it' ? '' : '/en'}${this.$nuxt.$route.path}`
+				'@id': `${process.env.NUXT_SITENAME}${this.switchLocalePath(this.$i18n.locale)}`
 			},
 			inLanguage: this.$i18n.locale
 		}
@@ -121,7 +121,7 @@ export default class PageComponent extends Vue {
 				serviceType: this.document.data.title,
 				description: this.document.data.seo_description || this.$constants.seoDescription,
 				provider: this.$constants.schemaOrganization,
-				areaServed: this.$i18n.locale === 'it' ? this.$constants.areaServedIT : this.$constants.areaServedEN,
+				areaServed: this.$constants.areaServed[this.$i18n.locale],
 				hasOfferCatalog: {
 					'@type': 'OfferCatalog',
 					name: 'Servizi Volcanic Minds'
@@ -186,7 +186,7 @@ export default class PageComponent extends Vue {
 					...articlesGridSlice.items.map((item: any, index: number) => ({
 						'@type': 'ListItem',
 						position: index + 1,
-						url: `${process.env.NUXT_SITENAME}/${this.$i18n.locale === 'it' ? '' : 'en/'}insights/${item.article.uid}`
+						url: `${process.env.NUXT_SITENAME}${this.switchLocalePath(this.$i18n.locale)}insights/${item.article.uid}`
 					}))
 				)
 			}

@@ -155,16 +155,15 @@ export default class PageComponent extends Vue {
 					json: {
 						'@context': 'https://schema.org',
 						...this.$constants.schemaOrganization,
-						'@id': `${process.env.NUXT_SITENAME}${this.$i18n.locale === 'it' ? '' : '/en'}#organization`,
-						url: `${process.env.NUXT_SITENAME}${this.$i18n.locale === 'it' ? '' : '/en'}`,
-						areaServed: this.$i18n.locale === 'it' ? this.$constants.areaServedIT : this.$constants.areaServedEN,
+						'@id': `${process.env.NUXT_SITENAME}${this.switchLocalePath(this.$i18n.locale)}#organization`,
+						url: `${process.env.NUXT_SITENAME}${this.switchLocalePath(this.$i18n.locale)}`,
+						areaServed: this.$constants.areaServed[this.$i18n.locale],
 						description:
 							this.document.data.seo_description ||
 							this.$constants.seoDescription ||
 							this.$constants.schemaOrganization.description,
 						knowsAbout: this.$constants.defaultKnowsAbout,
-						makesOffer:
-							this.$i18n.locale === 'it' ? this.$constants.defaultMakesOfferIT : this.$constants.defaultMakesOfferEN
+						makesOffer: this.$constants.defaultMakesOffer[this.$i18n.locale]
 					}
 				}
 			]

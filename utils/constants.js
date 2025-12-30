@@ -25,38 +25,39 @@ const geo = {
 	longitude: 7.66863
 }
 
-export const areaServedIT = [
-	{ '@type': 'City', name: 'Torino' },
-	{ '@type': 'City', name: 'Milano' },
-	{ '@type': 'AdministrativeArea', name: 'Piemonte' },
-	{ '@type': 'AdministrativeArea', name: 'Lombardia' },
-	{ '@type': 'AdministrativeArea', name: 'Liguria' },
-	{ '@type': 'AdministrativeArea', name: "Valle d'Aosta" },
-	{ '@type': 'AdministrativeArea', name: 'Veneto' },
-	{ '@type': 'AdministrativeArea', name: 'Trentino-Alto Adige' },
-	{ '@type': 'AdministrativeArea', name: 'Emilia-Romagna' },
-	{ '@type': 'AdministrativeArea', name: 'Toscana' },
-	{ '@type': 'Country', name: 'Italia' },
-	{ '@type': 'Continent', name: 'Europa' }
-]
-
-export const areaServedEN = [
-	{ '@type': 'Country', name: 'Italy' },
-	{ '@type': 'Country', name: 'Switzerland' },
-	{ '@type': 'Country', name: 'Germany' },
-	{ '@type': 'Country', name: 'Austria' },
-	{ '@type': 'Country', name: 'France' },
-	{ '@type': 'Country', name: 'United Kingdom' },
-	{ '@type': 'Country', name: 'Ireland' },
-	{ '@type': 'Country', name: 'Sweden' },
-	{ '@type': 'Country', name: 'Norway' },
-	{ '@type': 'Country', name: 'Denmark' },
-	{ '@type': 'Country', name: 'Netherlands' },
-	{ '@type': 'Country', name: 'United States' },
-	{ '@type': 'Country', name: 'United Arab Emirates' },
-	{ '@type': 'Continent', name: 'Europe' },
-	{ '@type': 'Continent', name: 'North America' }
-]
+export const areaServed = {
+	it: [
+		{ '@type': 'City', name: 'Torino' },
+		{ '@type': 'City', name: 'Milano' },
+		{ '@type': 'AdministrativeArea', name: 'Piemonte' },
+		{ '@type': 'AdministrativeArea', name: 'Lombardia' },
+		{ '@type': 'AdministrativeArea', name: 'Liguria' },
+		{ '@type': 'AdministrativeArea', name: "Valle d'Aosta" },
+		{ '@type': 'AdministrativeArea', name: 'Veneto' },
+		{ '@type': 'AdministrativeArea', name: 'Trentino-Alto Adige' },
+		{ '@type': 'AdministrativeArea', name: 'Emilia-Romagna' },
+		{ '@type': 'AdministrativeArea', name: 'Toscana' },
+		{ '@type': 'Country', name: 'Italia' },
+		{ '@type': 'Continent', name: 'Europa' }
+	],
+	en: [
+		{ '@type': 'Country', name: 'Italy' },
+		{ '@type': 'Country', name: 'Switzerland' },
+		{ '@type': 'Country', name: 'Germany' },
+		{ '@type': 'Country', name: 'Austria' },
+		{ '@type': 'Country', name: 'France' },
+		{ '@type': 'Country', name: 'United Kingdom' },
+		{ '@type': 'Country', name: 'Ireland' },
+		{ '@type': 'Country', name: 'Sweden' },
+		{ '@type': 'Country', name: 'Norway' },
+		{ '@type': 'Country', name: 'Denmark' },
+		{ '@type': 'Country', name: 'Netherlands' },
+		{ '@type': 'Country', name: 'United States' },
+		{ '@type': 'Country', name: 'United Arab Emirates' },
+		{ '@type': 'Continent', name: 'Europe' },
+		{ '@type': 'Continent', name: 'North America' }
+	]
+}
 
 export const contactPoints = [
 	{
@@ -99,7 +100,7 @@ export const schemaOrganization = {
 	priceRange: '€€-€€€',
 	address,
 	geo,
-	areaServed: areaServedIT,
+	areaServed: areaServed.it,
 	sameAs: [
 		'https://www.linkedin.com/company/volcanic-minds',
 		'https://github.com/volcanicminds',
@@ -118,58 +119,57 @@ export const defaultKnowsAbout = [
 	'UX/UI Design'
 ]
 
-export const defaultMakesOfferIT = [
-	{
-		'@type': 'Offer',
-		itemOffered: {
-			'@type': 'Service',
-			name: 'Sviluppo Software Custom',
-			description: 'Realizzazione di piattaforme enterprise e applicazioni web su misura.'
+export const defaultMakesOffer = {
+	it: [
+		{
+			'@type': 'Offer',
+			itemOffered: {
+				'@type': 'Service',
+				name: 'Sviluppo Software Custom',
+				description: 'Realizzazione di piattaforme enterprise e applicazioni web su misura.'
+			}
+		},
+		{
+			'@type': 'Offer',
+			itemOffered: {
+				'@type': 'Service',
+				name: 'Integrazione AI e Data Intelligence',
+				description: 'Sviluppo di agenti AI, sistemi RAG e automazione processi aziendali.'
+			}
+		},
+		{
+			'@type': 'Offer',
+			itemOffered: {
+				'@type': 'Service',
+				name: 'Digital Factory',
+				description: 'Sviluppo frontend, backend e architetture cloud scalabili.'
+			}
 		}
-	},
-	{
-		'@type': 'Offer',
-		itemOffered: {
-			'@type': 'Service',
-			name: 'Integrazione AI e Data Intelligence',
-			description: 'Sviluppo di agenti AI, sistemi RAG e automazione processi aziendali.'
+	],
+	en: [
+		{
+			'@type': 'Offer',
+			itemOffered: {
+				'@type': 'Service',
+				name: 'Custom Software Development',
+				description: 'Building enterprise platforms and custom web applications.'
+			}
+		},
+		{
+			'@type': 'Offer',
+			itemOffered: {
+				'@type': 'Service',
+				name: 'AI Integration & Data Intelligence',
+				description: 'Development of AI agents, RAG systems, and business process automation.'
+			}
+		},
+		{
+			'@type': 'Offer',
+			itemOffered: {
+				'@type': 'Service',
+				name: 'Digital Factory',
+				description: 'Frontend, backend development, and scalable cloud architectures.'
+			}
 		}
-	},
-	{
-		'@type': 'Offer',
-		itemOffered: {
-			'@type': 'Service',
-			name: 'Digital Factory',
-			description: 'Sviluppo frontend, backend e architetture cloud scalabili.'
-		}
-	}
-]
-
-export const defaultMakesOfferEN = [
-	{
-		'@type': 'Offer',
-		itemOffered: {
-			'@type': 'Service',
-			name: 'Custom Software Development',
-			description: 'Building enterprise platforms and custom web applications.'
-		}
-	},
-	{
-		'@type': 'Offer',
-		itemOffered: {
-			'@type': 'Service',
-			name: 'AI Integration & Data Intelligence',
-			description: 'Development of AI agents, RAG systems, and business process automation.'
-		}
-	},
-	{
-		'@type': 'Offer',
-		itemOffered: {
-			'@type': 'Service',
-			name: 'Digital Factory',
-			description: 'Frontend, backend development, and scalable cloud architectures.'
-		}
-	}
-]
-
-export const defaultMakesOffer = defaultMakesOfferIT
+	]
+}

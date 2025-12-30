@@ -202,7 +202,7 @@ export default class PageComponent extends Vue {
 			description: this.document.data.seo_description || this.$constants.seoDescription,
 			mainEntityOfPage: {
 				'@type': 'WebPage',
-				'@id': `${process.env.NUXT_SITENAME}${this.$i18n.locale === 'it' ? '' : '/en'}${this.$nuxt.$route.path}`
+				'@id': `${process.env.NUXT_SITENAME}${this.switchLocalePath(this.$i18n.locale)}`
 			},
 			inLanguage: this.$i18n.locale
 		}
@@ -214,7 +214,7 @@ export default class PageComponent extends Vue {
 				serviceType: this.document.data.title,
 				description: this.document.data.seo_description || this.$constants.seoDescription,
 				provider: this.$constants.schemaOrganization,
-				areaServed: this.$i18n.locale === 'it' ? this.$constants.areaServedIT : this.$constants.areaServedEN,
+				areaServed: this.$constants.areaServed[this.$i18n.locale],
 				hasOfferCatalog: {
 					'@type': 'OfferCatalog',
 					name: 'Servizi Volcanic Minds'
@@ -322,7 +322,7 @@ export default class PageComponent extends Vue {
 					contentUrl: `https://www.youtube.com/watch?v=${this.youtubeSlice.primary.video_id}`,
 					mainEntityOfPage: {
 						'@type': 'WebPage',
-						'@id': `${process.env.NUXT_SITENAME}${this.$nuxt.$route.path}`,
+						'@id': `${process.env.NUXT_SITENAME}${this.switchLocalePath(this.$i18n.locale)}`,
 						headline: this.document.data.seo_title || this.$constants.seoTitle,
 						description: this.document.data.seo_description || this.$constants.seoDescription
 					}
