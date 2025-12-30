@@ -26,9 +26,19 @@ const geo = {
 }
 
 export const areaServed = {
-	it: [
+	'it-it': [
 		{ '@type': 'City', name: 'Torino' },
 		{ '@type': 'City', name: 'Milano' },
+		{ '@type': 'City', name: 'Bologna' },
+		{ '@type': 'City', name: 'Verona' },
+		{ '@type': 'City', name: 'Padova' },
+		{ '@type': 'City', name: 'Brescia' },
+		{ '@type': 'City', name: 'Genova' },
+		{ '@type': 'City', name: 'Trento' },
+		{ '@type': 'City', name: 'Aosta' },
+		{ '@type': 'City', name: 'Lugano' },
+		{ '@type': 'City', name: 'St. Moritz' },
+		{ '@type': 'City', name: 'Monte Carlo' },
 		{ '@type': 'AdministrativeArea', name: 'Piemonte' },
 		{ '@type': 'AdministrativeArea', name: 'Lombardia' },
 		{ '@type': 'AdministrativeArea', name: 'Liguria' },
@@ -37,25 +47,42 @@ export const areaServed = {
 		{ '@type': 'AdministrativeArea', name: 'Trentino-Alto Adige' },
 		{ '@type': 'AdministrativeArea', name: 'Emilia-Romagna' },
 		{ '@type': 'AdministrativeArea', name: 'Toscana' },
+		{ '@type': 'AdministrativeArea', name: 'Canton Ticino' },
+		{ '@type': 'AdministrativeArea', name: 'Canton Grigioni' },
 		{ '@type': 'Country', name: 'Italia' },
+		{ '@type': 'Country', name: 'Svizzera' },
+		{ '@type': 'Country', name: 'Monaco' },
+		{ '@type': 'Country', name: 'San Marino' },
+		{ '@type': 'Country', name: 'Città del Vaticano' },
+		{ '@type': 'Country', name: 'Malta' },
 		{ '@type': 'Continent', name: 'Europa' }
 	],
 	en: [
-		{ '@type': 'Country', name: 'Italy' },
+		{ '@type': 'City', name: 'Zurich' },
+		{ '@type': 'City', name: 'Geneva' },
+		{ '@type': 'City', name: 'London' },
+		{ '@type': 'City', name: 'Munich' },
+		{ '@type': 'City', name: 'Dubai' },
+		{ '@type': 'City', name: 'Frankfurt' },
+		{ '@type': 'City', name: 'Paris' },
+		{ '@type': 'City', name: 'Boston' },
+		{ '@type': 'Country', name: 'Luxembourg' },
 		{ '@type': 'Country', name: 'Switzerland' },
-		{ '@type': 'Country', name: 'Germany' },
-		{ '@type': 'Country', name: 'Austria' },
-		{ '@type': 'Country', name: 'France' },
 		{ '@type': 'Country', name: 'United Kingdom' },
-		{ '@type': 'Country', name: 'Ireland' },
-		{ '@type': 'Country', name: 'Sweden' },
 		{ '@type': 'Country', name: 'Norway' },
+		{ '@type': 'Country', name: 'Sweden' },
 		{ '@type': 'Country', name: 'Denmark' },
 		{ '@type': 'Country', name: 'Netherlands' },
-		{ '@type': 'Country', name: 'United States' },
+		{ '@type': 'Country', name: 'Germany' },
+		{ '@type': 'Country', name: 'Qatar' },
+		{ '@type': 'Country', name: 'Ireland' },
+		{ '@type': 'Country', name: 'Austria' },
+		{ '@type': 'Country', name: 'France' },
 		{ '@type': 'Country', name: 'United Arab Emirates' },
-		{ '@type': 'Continent', name: 'Europe' },
-		{ '@type': 'Continent', name: 'North America' }
+		{ '@type': 'Country', name: 'Canada' },
+		{ '@type': 'Country', name: 'United States' },
+		{ '@type': 'Country', name: 'Italy' },
+		{ '@type': 'Continent', name: 'Europe' }
 	]
 }
 
@@ -120,7 +147,7 @@ export const defaultKnowsAbout = [
 ]
 
 export const defaultMakesOffer = {
-	it: [
+	'it-it': [
 		{
 			'@type': 'Offer',
 			itemOffered: {

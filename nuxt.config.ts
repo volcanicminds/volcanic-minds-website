@@ -3,7 +3,7 @@ import smConfig from './slicemachine.config.json'
 
 export default async () => {
 	const client = await Prismic.getApi(smConfig.apiEndpoint)
-	const locales = [...new Set(client.languages.map((lang) => lang.id.split('-')[0]))]
+	const locales = client.languages.map((lang) => lang.id)
 	const defaultLocale = locales[0]
 
 	// Robots
