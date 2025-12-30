@@ -37,8 +37,6 @@ export const areaServed = {
 		{ '@type': 'City', name: 'Trento' },
 		{ '@type': 'City', name: 'Aosta' },
 		{ '@type': 'City', name: 'Lugano' },
-		{ '@type': 'City', name: 'St. Moritz' },
-		{ '@type': 'City', name: 'Monte Carlo' },
 		{ '@type': 'AdministrativeArea', name: 'Piemonte' },
 		{ '@type': 'AdministrativeArea', name: 'Lombardia' },
 		{ '@type': 'AdministrativeArea', name: 'Liguria' },
@@ -54,7 +52,6 @@ export const areaServed = {
 		{ '@type': 'Country', name: 'Monaco' },
 		{ '@type': 'Country', name: 'San Marino' },
 		{ '@type': 'Country', name: 'Città del Vaticano' },
-		{ '@type': 'Country', name: 'Malta' },
 		{ '@type': 'Continent', name: 'Europa' }
 	],
 	en: [
