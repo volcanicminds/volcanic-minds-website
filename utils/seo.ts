@@ -20,13 +20,50 @@ export const getHreflangLinks = (ctx: any) => {
 		}
 	})
 
-	// Add x-default pointing to 'it'
-	const itPath = ctx.switchLocalePath('it-it')
+	// Add x-default pointing to 'en'
+	const enPath = ctx.switchLocalePath('en')
 	links.push({
 		rel: 'alternate',
 		hreflang: 'x-default',
-		href: `${sitename}${itPath}`
+		href: `${sitename}${enPath}`
 	})
 
 	return links
+}
+
+export const getBreadcrumbSchema = (ctx: any, document: any, section?: any) => {
+	const sitename = process.env.NUXT_SITENAME || 'https://volcanicminds.com'
+
+	const itemListElement = [
+		{
+			'@type': 'ListItem',
+			position: 1,
+			name: 'Home',
+			item: `${sitename}${ctx.localePath('/')}`
+		}
+	]
+
+	if (section && section.data?.title) {
+		itemListElement.push({
+			'@type': 'ListItem',
+			position: itemListElement.length + 1,
+			name: section.data.title,
+			item: `${sitename}${section.url}`
+		})
+	}
+
+	if (document && document.data?.title) {
+		itemListElement.push({
+			'@type': 'ListItem',
+			position: itemListElement.length + 1,
+			name: document.data.title,
+			item: `${sitename}${ctx.$nuxt.$route.path}`
+		})
+	}
+
+	return {
+		'@context': 'https://schema.org',
+		'@type': 'BreadcrumbList',
+		itemListElement
+	}
 }

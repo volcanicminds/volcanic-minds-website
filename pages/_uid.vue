@@ -9,7 +9,7 @@
 import { Vue, Component, Provide } from 'nuxt-property-decorator'
 import dayjs from 'dayjs'
 import { components } from '~/slices'
-import { getHreflangLinks } from '~/utils/seo'
+import { getHreflangLinks, getBreadcrumbSchema } from '~/utils/seo'
 
 @Component({
 	// @ts-ignore
@@ -203,7 +203,11 @@ export default class PageComponent extends Vue {
 			}
 		}
 
-		const scripts = [
+		const scripts: any[] = [
+			{
+				type: 'application/ld+json',
+				json: getBreadcrumbSchema(this, this.document)
+			},
 			{
 				type: 'application/ld+json',
 				json: jsonLd
