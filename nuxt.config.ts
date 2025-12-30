@@ -152,7 +152,16 @@ export default async () => {
 
 		// Build Configuration: https://go.nuxtjs.dev/config-build
 		build: {
-			transpile: ['vue-intersect', '@justinribeiro/lite-youtube']
+			transpile: ['vue-intersect', '@justinribeiro/lite-youtube'],
+			cssSourceMap: process.env.NODE_ENV !== 'production',
+			extractCSS: process.env.NODE_ENV === 'production',
+			postcss: {
+				preset: {
+					features: {
+						'custom-properties': false
+					}
+				}
+			}
 		},
 
 		prismic: {
