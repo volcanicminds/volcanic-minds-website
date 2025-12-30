@@ -9,7 +9,7 @@
 import { Vue, Component, Provide } from 'nuxt-property-decorator'
 import dayjs from 'dayjs'
 import { components } from '~/slices'
-import { getHreflangLinks, getBreadcrumbSchema } from '~/utils/seo'
+import { getHreflangLinks, getBreadcrumbSchema, getLCPPreloadLink } from '~/utils/seo'
 
 @Component({
 	// @ts-ignore
@@ -296,7 +296,7 @@ export default class PageComponent extends Vue {
 			htmlAttrs: {
 				lang: this.$i18n.locale
 			},
-			link: getHreflangLinks(this),
+			link: [...getHreflangLinks(this), getLCPPreloadLink(this.document)].filter(Boolean) as any,
 			script: scripts
 		}
 	}

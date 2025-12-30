@@ -67,3 +67,24 @@ export const getBreadcrumbSchema = (ctx: any, document: any, section?: any) => {
 		itemListElement
 	}
 }
+
+export const getLCPPreloadLink = (document: any) => {
+	if (!document?.data?.slices) return null
+
+	const heroSlice = document.data.slices.find((slice: any) => slice.slice_type === 'hero_banner')
+
+	if (heroSlice?.primary?.background_image?.url) {
+		const imageUrl = heroSlice.primary.background_image.url
+		const size = 500
+		const preloadUrl = imageUrl.includes('.svg') ? imageUrl : `${imageUrl}&w=${size}&fit=max`
+
+		return {
+			rel: 'preload',
+			as: 'image',
+			href: preloadUrl,
+			fetchpriority: 'high'
+		}
+	}
+
+	return null
+}
