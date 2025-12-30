@@ -13,12 +13,14 @@
 				:class="slice.primary.title_mb ? 'mb-title' : 'mb0'"
 				:field="slice.primary.title"
 				wrapper="h1"
+				:html-serializer="htmlSerializer"
 			/>
 			<PrismicRichText
 				v-if="slice.primary.subtitle.length && slice.primary.subtitle[0].text !== ''"
 				class="hero-subtitle"
 				:field="slice.primary.subtitle"
 				wrapper="h2"
+				:html-serializer="htmlSerializer"
 			/>
 			<div
 				v-if="slice.primary.cta_link && !slice.primary.cta_link.isBroken && slice.primary.cta_text"
@@ -55,6 +57,19 @@ defineProps({
 		required: true
 	}
 })
+
+const htmlSerializer = (type: string, element: any, content: string, children: string[]) => {
+	if (type === 'paragraph') {
+		return children.join('')
+	}
+	if (type === 'em') {
+		return `<span class="italic">${children.join('')}</span>`
+	}
+	if (type === 'strong') {
+		return `<span class="bold">${children.join('')}</span>`
+	}
+	return null
+}
 </script>
 
 <style lang="stylus" scoped>
@@ -69,20 +84,22 @@ defineProps({
 		word-wrap break-word
 		@media (min-width: 52em)
 			font-size 2.8em
-		>>> strong
+		>>> .bold
 			font-weight 800
 			@media (min-width: 52em)
 				font-size 0.9em
-		>>> p
-			margin 0
+		>>> .italic
+			font-style italic
 	&-subtitle
 		font-weight inherit
 		font-size 1.15em
 		line-height 1.2
 		@media (min-width: 52em)
 			font-size 1.35em
-		>>> strong
+		>>> .bold
 			font-weight 600
+		>>> .italic
+			font-style italic
 
 	.fade-overlay
 		box-shadow 0px -300px 200px -100px var(--raisin-black) inset
