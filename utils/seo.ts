@@ -93,13 +93,34 @@ export const getLCPPreloadLink = (document: any) => {
 
 	if (heroSlice?.primary?.background_image?.url) {
 		const imageUrl = heroSlice.primary.background_image.url
-		const size = 500
-		const preloadUrl = imageUrl.includes('.svg') ? imageUrl : `${imageUrl}&w=${size}&fit=max`
+		if (imageUrl.includes('.svg')) {
+			return {
+				rel: 'preload',
+				as: 'image',
+				href: imageUrl,
+				fetchpriority: 'high'
+			}
+		}
+
+		// Logic sync with WrapperPrismicImage.vue
+		const size = 500 // Hero background default size
+		const widths = [375, 640, 828, 1080, 1200, 1920, 2048]
+		const sizes = '100vw'
+
+		const getSrc = (w: number) => {
+			const baseUrl = imageUrl + (imageUrl.includes('?') ? '' : '?') + '&auto=format,compress&fit=max'
+			return `${baseUrl}&w=${w}`
+		}
+
+		const targetWidths = size < 1200 ? widths.filter((w) => w <= size * 2) : widths
+		const srcset = targetWidths.map((w) => `${getSrc(w)} ${w}w`).join(', ')
 
 		return {
 			rel: 'preload',
 			as: 'image',
-			href: preloadUrl,
+			href: getSrc(size),
+			imagesrcset: srcset,
+			imagesizes: sizes,
 			fetchpriority: 'high'
 		}
 	}
