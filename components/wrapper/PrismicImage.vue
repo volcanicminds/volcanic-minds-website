@@ -7,6 +7,7 @@
 		:srcset="getPrismicImageSrcset()"
 		:sizes="sizes"
 		:alt="field.alt || 'image'"
+		:fetchpriority="fetchpriority"
 	/>
 </template>
 
@@ -20,6 +21,7 @@ const props = withDefaults(
 		isImgSlot?: boolean
 		widths?: number[]
 		sizes?: string
+		fetchpriority?: 'high' | 'low' | 'auto'
 	}>(),
 	{
 		resizeByHeight: false,
@@ -27,7 +29,8 @@ const props = withDefaults(
 		lazy: true,
 		isImgSlot: false,
 		widths: () => [375, 640, 828, 1080, 1200, 1920, 2048],
-		sizes: '100vw'
+		sizes: '100vw',
+		fetchpriority: 'auto'
 	}
 )
 

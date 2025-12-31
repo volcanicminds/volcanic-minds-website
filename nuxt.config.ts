@@ -180,7 +180,7 @@ export default async () => {
 		components: true,
 
 		// Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
-		buildModules: ['@nuxtjs/prismic', '@nuxt/typescript-build', 'nuxt-compress'],
+		buildModules: ['@nuxt/typescript-build', 'nuxt-compress'],
 
 		// Modules: https://go.nuxtjs.dev/config-modules
 		modules: [

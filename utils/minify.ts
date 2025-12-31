@@ -13,7 +13,6 @@ export const minifyDocument = (document: any) => {
 			og_title: document.data?.og_title,
 			og_description: document.data?.og_description,
 			og_image: document.data?.og_image,
-			slices: document.data?.slices,
 			show_breadcrumb: document.data?.show_breadcrumb,
 			schema_org_type: document.data?.schema_org_type,
 			is_article: document.data?.is_article,
@@ -23,7 +22,14 @@ export const minifyDocument = (document: any) => {
 			latest_revision_date: document.data?.latest_revision_date,
 			publication_date_sort: document.data?.publication_date_sort,
 			latest_revision_date_sort: document.data?.latest_revision_date_sort,
-			proficiency_level: document.data?.proficiency_level
+			proficiency_level: document.data?.proficiency_level,
+			// slices: document.data?.slices,
+			slices: document.data?.slices?.map((slice: any) => ({
+				slice_type: slice.slice_type,
+				variation: slice.variation,
+				primary: slice.primary,
+				items: slice.items
+			}))
 		}
 	}
 }
