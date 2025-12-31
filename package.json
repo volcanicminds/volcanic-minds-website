@@ -12,6 +12,7 @@
 		"generate": "export NODE_ENV=production && node ./switch_env.mjs && nuxt generate",
 		"lint": "eslint --ext .ts,.js,.vue .",
 		"slicemachine": "start-slicemachine",
+		"prepare": "yarn lint && yarn build && yarn generate",
 		"deploy": "./deploy.sh"
 	},
 	"dependencies": {
