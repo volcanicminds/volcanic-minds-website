@@ -21,6 +21,7 @@
 import { Vue, Component, Provide } from 'nuxt-property-decorator'
 import dayjs from 'dayjs'
 import { components } from '~/slices'
+import { minifyDocument } from '~/utils/minify'
 import {
 	getHreflangLinks,
 	getBreadcrumbSchema,
@@ -175,7 +176,7 @@ import {
 		}
 
 		if (document && section) {
-			return { document, section, youtubeSlice }
+			return { document: minifyDocument(document), section, youtubeSlice }
 		} else {
 			error({ statusCode: 404, message: 'Page not found' })
 		}

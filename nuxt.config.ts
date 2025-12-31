@@ -20,6 +20,7 @@ export default async () => {
 			host: '0.0.0.0' // default: localhost
 		},
 		target: 'static',
+		modern: 'client',
 
 		// Global page headers: https://go.nuxtjs.dev/config-head
 		head: {
@@ -83,6 +84,55 @@ export default async () => {
 					media: 'print',
 					onload: 'this.onload=null;this.removeAttribute("media");',
 					href: 'https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap'
+				},
+				{
+					rel: 'preload',
+					as: 'font',
+					type: 'font/woff2',
+					crossorigin: 'anonymous',
+					href: 'https://fonts.gstatic.com/s/lato/v25/S6u-w4BMUTPHjxsIPx-oPCLC79U1.woff2'
+				},
+				{
+					rel: 'preload',
+					as: 'font',
+					type: 'font/woff2',
+					crossorigin: 'anonymous',
+					href: 'https://fonts.gstatic.com/s/lato/v25/S6u_w4BMUTPHjxsI9w2_Gwftx9897g.woff2'
+				},
+				{
+					rel: 'preload',
+					as: 'font',
+					type: 'font/woff2',
+					crossorigin: 'anonymous',
+					href: 'https://fonts.gstatic.com/s/lato/v25/S6u_w4BMUTPHjxsI3wi_Gwftx9897g.woff2'
+				},
+				{
+					rel: 'preload',
+					as: 'font',
+					type: 'font/woff2',
+					crossorigin: 'anonymous',
+					href: 'https://fonts.gstatic.com/s/lato/v25/S6u8w4BMUTPHh30AXC-qNiXg7Q.woff2'
+				},
+				{
+					rel: 'preload',
+					as: 'font',
+					type: 'font/woff2',
+					crossorigin: 'anonymous',
+					href: 'https://fonts.gstatic.com/s/lato/v25/S6u9w4BMUTPHh7USSwiPGQ3q5d0.woff2'
+				},
+				{
+					rel: 'preload',
+					as: 'font',
+					type: 'font/woff2',
+					crossorigin: 'anonymous',
+					href: 'https://fonts.gstatic.com/s/lato/v25/S6u9w4BMUTPHh6UVSwiPGQ3q5d0.woff2'
+				},
+				{
+					rel: 'preload',
+					as: 'font',
+					type: 'font/woff2',
+					crossorigin: 'anonymous',
+					href: 'https://fonts.gstatic.com/s/lato/v25/S6u9w4BMUTPHh50XSwiPGQ3q5d0.woff2'
 				}
 			],
 			script: [
@@ -120,12 +170,11 @@ export default async () => {
 			'basscss-responsive-margin/css/responsive-margin.css',
 			'basscss-responsive-padding/css/responsive-padding.css',
 			'@/assets/style/index.styl',
-			'@fortawesome/fontawesome-svg-core/styles.css',
-			'highlight.js/styles/monokai.css'
+			'@fortawesome/fontawesome-svg-core/styles.css'
 		],
 
 		// Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-		plugins: ['~/plugins/fontawesome.js', '~/plugins/constants'],
+		plugins: ['~/plugins/fontawesome.js', '~/plugins/constants.js'],
 
 		// Auto import components: https://go.nuxtjs.dev/config-components
 		components: true,

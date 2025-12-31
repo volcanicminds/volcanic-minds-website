@@ -7,8 +7,8 @@
 
 <script lang="ts">
 import { Vue, Component, Provide } from 'nuxt-property-decorator'
-import dayjs from 'dayjs'
 import { components } from '~/slices'
+import { minifyDocument } from '~/utils/minify'
 import {
 	getHreflangLinks,
 	getBreadcrumbSchema,
@@ -83,7 +83,7 @@ import {
 		}
 
 		if (document) {
-			return { document }
+			return { document: minifyDocument(document) }
 		} else {
 			error({ statusCode: 404, message: 'Page not found' })
 		}

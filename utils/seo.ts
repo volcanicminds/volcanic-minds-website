@@ -34,7 +34,6 @@ export const getHreflangLinks = (ctx: any) => {
 
 export const getBreadcrumbSchema = (ctx: any, document: any, section?: any) => {
 	const sitename = process.env.NUXT_SITENAME || 'https://volcanicminds.com'
-
 	const itemListElement = [
 		{
 			'@type': 'ListItem',
@@ -44,21 +43,21 @@ export const getBreadcrumbSchema = (ctx: any, document: any, section?: any) => {
 		}
 	]
 
-	if (section && section.data?.title) {
+	if (section && section.data && (section.data.title || section.data.seo_title)) {
 		itemListElement.push({
 			'@type': 'ListItem',
-			position: itemListElement.length + 1,
-			name: section.data.title,
+			position: 2,
+			name: section.data.title || section.data.seo_title || section.data.og_title || 'Sezione',
 			item: `${sitename}${section.url}`
 		})
 	}
 
-	if (document && document.data?.title) {
+	if (document && document.data && (document.data.title || document.data.seo_title)) {
 		itemListElement.push({
 			'@type': 'ListItem',
 			position: itemListElement.length + 1,
-			name: document.data.title,
-			item: `${sitename}${ctx.$nuxt.$route.path}`
+			name: document.data.title || document.data.seo_title || document.data.og_title,
+			item: `${sitename}${ctx.$nuxt.$route.path}`.replace(/\/$/, '')
 		})
 	}
 
