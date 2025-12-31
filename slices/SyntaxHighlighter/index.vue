@@ -6,17 +6,10 @@
 		:enable-observer="slice.primary.enable_animation || false"
 	>
 		<WrapperContainer>
-			<pre>
-				<div 
-					class="overflow-auto p2 code-container" 
-					:style="{ maxHeight: `${slice.primary.max_height}px` }"
-				>
-					<code 
-						:class="`language-${slice.primary.language}`" 
-						v-html="highlightedCode"
-					></code>
-				</div>
-			</pre>
+			<pre
+				class="overflow-auto p2 code-container"
+				:style="{ maxHeight: `${slice.primary.max_height}px` }"
+			><code :class="`language-${slice.primary.language}`" v-html="highlightedCode"></code></pre>
 		</WrapperContainer>
 	</WrapperSlice>
 </template>
@@ -56,8 +49,15 @@ onMounted(async () => {
 const highlightedCode = computed(() => {
 	const code = props.slice.primary.code || ''
 	const lang = props.slice.primary.language || 'javascript'
+
 	if (!hljsCore.value) {
+		// During SSR or before hljs is loaded, return encoded code to avoid breaking HTML
 		return code
+			.replace(/&/g, '&amp;')
+			.replace(/</g, '&lt;')
+			.replace(/>/g, '&gt;')
+			.replace(/"/g, '&quot;')
+			.replace(/'/g, '&#039;')
 	}
 
 	return hljsCore.value.highlight(code, { language: lang }).value
