@@ -90,41 +90,6 @@ export default async () => {
 					as: 'font',
 					type: 'font/woff2',
 					crossorigin: 'anonymous',
-					href: 'https://fonts.gstatic.com/s/lato/v25/S6u-w4BMUTPHjxsIPx-oPCLC79U1.woff2'
-				},
-				{
-					rel: 'preload',
-					as: 'font',
-					type: 'font/woff2',
-					crossorigin: 'anonymous',
-					href: 'https://fonts.gstatic.com/s/lato/v25/S6u_w4BMUTPHjxsI9w2_Gwftx9897g.woff2'
-				},
-				{
-					rel: 'preload',
-					as: 'font',
-					type: 'font/woff2',
-					crossorigin: 'anonymous',
-					href: 'https://fonts.gstatic.com/s/lato/v25/S6u_w4BMUTPHjxsI3wi_Gwftx9897g.woff2'
-				},
-				{
-					rel: 'preload',
-					as: 'font',
-					type: 'font/woff2',
-					crossorigin: 'anonymous',
-					href: 'https://fonts.gstatic.com/s/lato/v25/S6u8w4BMUTPHh30AXC-qNiXg7Q.woff2'
-				},
-				{
-					rel: 'preload',
-					as: 'font',
-					type: 'font/woff2',
-					crossorigin: 'anonymous',
-					href: 'https://fonts.gstatic.com/s/lato/v25/S6u9w4BMUTPHh7USSwiPGQ3q5d0.woff2'
-				},
-				{
-					rel: 'preload',
-					as: 'font',
-					type: 'font/woff2',
-					crossorigin: 'anonymous',
 					href: 'https://fonts.gstatic.com/s/lato/v25/S6u9w4BMUTPHh6UVSwiPGQ3q5d0.woff2'
 				},
 				{
