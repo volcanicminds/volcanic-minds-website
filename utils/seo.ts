@@ -234,7 +234,7 @@ const _getArticleNode = (ctx: any, type = 'TechArticle') => {
 	const currentPath = `${sitename}${ctx.$nuxt.$route.path}`.replace(/\/$/, '')
 	const identityId = `${sitename}/#identity`
 
-	return {
+	const articleNode: any = {
 		'@type': type,
 		'@id': `${currentPath}/#article`,
 		headline: ctx.document.data.title,
@@ -249,7 +249,6 @@ const _getArticleNode = (ctx: any, type = 'TechArticle') => {
 			(ctx.document.data.latest_revision_date_sort
 				? dayjs(ctx.document.data.latest_revision_date_sort).format('YYYY-MM-DDTHH:mm:ss[Z]')
 				: undefined),
-		proficiencyLevel: ctx.document.data.proficiency_level || 'Expert',
 		author: {
 			'@type': 'Organization',
 			name: 'Volcanic Minds Team',
@@ -260,6 +259,13 @@ const _getArticleNode = (ctx: any, type = 'TechArticle') => {
 		about: ctx.document.tags,
 		mainEntityOfPage: { '@id': `${currentPath}/#webpage` }
 	}
+
+	// Only TechArticle supports proficiencyLevel
+	if (type === 'TechArticle') {
+		articleNode.proficiencyLevel = ctx.document.data.proficiency_level || 'Expert'
+	}
+
+	return articleNode
 }
 
 const _getFAQNode = (ctx: any, items: any[]) => {
