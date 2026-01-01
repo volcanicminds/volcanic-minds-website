@@ -196,3 +196,71 @@ export const defaultMakesOffer = {
 		}
 	]
 }
+
+export const landingPageDetails = {
+	LandingEuropePage: {
+		name: 'Volcanic Minds',
+		alternateName: 'Volcanic Minds - Nearshore Software Partner',
+		description:
+			'Italian Software House providing custom software development, AI integration, and mobile app services for European companies. High-quality engineering with EU time zone alignment.'
+	},
+	LandingItalyPage: {
+		name: 'Volcanic Minds',
+		alternateName: 'Volcanic Minds - Sviluppo Software Italia',
+		description:
+			'Partner tecnologico per lo sviluppo di software su misura e soluzioni AI per aziende in tutta Italia. Operatività remota e in loco.'
+	},
+	LandingNorthItalyPage: {
+		name: 'Volcanic Minds - Sviluppo Software Nord Italia',
+		description:
+			'Partner tecnologico per lo sviluppo di software su misura e soluzioni AI per aziende in Lombardia, Veneto ed Emilia-Romagna. Operatività remota e in loco.'
+	},
+	LandingLocalPage: {
+		it: {
+			name: 'Volcanic Minds',
+			description:
+				'Software House a Torino specializzata in sviluppo software custom, Web App, Mobile e soluzioni di Intelligenza Artificiale per le aziende.'
+		},
+		en: {
+			name: 'Volcanic Minds',
+			description:
+				'Software House based in Turin, specialized in Custom Software Development, Web Apps, Mobile, and Enterprise AI solutions.'
+		}
+	}
+}
+
+export const AREA_SERVED_MAPS = {
+	LandingLocalPage: [
+		{ '@type': 'City', name: 'Torino', sameAs: 'https://it.wikipedia.org/wiki/Torino' },
+		{ '@type': 'AdministrativeArea', name: 'Piemonte', sameAs: 'https://it.wikipedia.org/wiki/Piemonte' }
+	],
+	LandingItalyPage: {
+		'@type': 'Country',
+		name: 'Italy',
+		sameAs: 'https://en.wikipedia.org/wiki/Italy'
+	},
+	LandingNorthItalyPage: [
+		{ '@type': 'AdministrativeArea', name: 'Lombardia', sameAs: 'https://it.wikipedia.org/wiki/Lombardia' },
+		{ '@type': 'AdministrativeArea', name: 'Veneto', sameAs: 'https://it.wikipedia.org/wiki/Veneto' },
+		{ '@type': 'AdministrativeArea', name: 'Emilia-Romagna', sameAs: 'https://it.wikipedia.org/wiki/Emilia-Romagna' },
+		{ '@type': 'AdministrativeArea', name: 'Liguria', sameAs: 'https://it.wikipedia.org/wiki/Liguria' },
+		{ '@type': 'AdministrativeArea', name: "Valle d'Aosta", sameAs: 'https://it.wikipedia.org/wiki/Valle_d%27Aosta' }
+	],
+	LandingEuropePage: {
+		'@type': 'Continent',
+		name: 'Europe',
+		sameAs: 'https://en.wikipedia.org/wiki/Europe'
+	}
+}
+
+export const OPENING_HOURS_SPECIFICATION = {
+	'@type': 'OpeningHoursSpecification',
+	dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+	opens: '09:00',
+	closes: '18:00'
+}
+
+export const SAME_AS_SOCIALS = [
+	'https://www.linkedin.com/company/volcanicminds/',
+	'https://www.facebook.com/volcanicminds'
+]

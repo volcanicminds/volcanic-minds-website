@@ -1,5 +1,6 @@
 import dayjs from 'dayjs'
 import { asText, isRichTextFilled } from '~/utils/prismic'
+import { AREA_SERVED_MAPS, landingPageDetails, OPENING_HOURS_SPECIFICATION, SAME_AS_SOCIALS } from '~/utils/constants'
 
 /**
  * Generates hreflang alternate links for SEO/GEO localization.
@@ -35,41 +36,14 @@ export const getHreflangLinks = (ctx: any) => {
 	return links
 }
 
-export const getBreadcrumbSchema = (ctx: any, document: any, section?: any) => {
-	const sitename = process.env.NUXT_SITENAME || 'https://volcanicminds.com'
-	const itemListElement = [
-		{
-			'@type': 'ListItem',
-			position: 1,
-			name: 'Home',
-			item: `${sitename}${ctx.localePath('/')}`
-		}
-	]
+/**
+ * --- INTERNAL GENERATORS ---
+ * Not exported to enforce usage of the main Graph Composer
+ */
 
-	if (section && section.data && (section.data.title || section.data.seo_title)) {
-		itemListElement.push({
-			'@type': 'ListItem',
-			position: 2,
-			name: section.data.title || section.data.seo_title || section.data.og_title || 'Sezione',
-			item: `${sitename}${section.url}`
-		})
-	}
-
-	if (document && document.data && (document.data.title || document.data.seo_title)) {
-		itemListElement.push({
-			'@type': 'ListItem',
-			position: itemListElement.length + 1,
-			name: document.data.title || document.data.seo_title || document.data.og_title,
-			item: `${sitename}${ctx.$nuxt.$route.path}`.replace(/\/$/, '')
-		})
-	}
-
-	return {
-		'@context': 'https://schema.org',
-		'@type': 'BreadcrumbList',
-		inLanguage: getNormalizedLanguage(ctx),
-		itemListElement
-	}
+const getNormalizedLanguage = (ctx: any) => {
+	const code = ctx.$i18n.locale || 'en'
+	return code.includes('-') ? code.split('-')[0] : code
 }
 
 const PRICE_RANGE = '€€-€€€'
@@ -93,62 +67,346 @@ const COMPANY_GEO = {
 	longitude: 7.66866
 }
 
-const OPENING_HOURS_SPECIFICATION = {
-	'@type': 'OpeningHoursSpecification',
-	dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
-	opens: '09:00',
-	closes: '18:00'
+const _getBreadcrumbNode = (ctx: any, document: any, section?: any) => {
+	const sitename = process.env.NUXT_SITENAME || 'https://volcanicminds.com'
+	const currentPath = `${sitename}${ctx.$nuxt.$route.path}`.replace(/\/$/, '')
+
+	const itemListElement = [
+		{
+			'@type': 'ListItem',
+			position: 1,
+			name: 'Home',
+			item: `${sitename}${ctx.localePath('/')}`
+		}
+	]
+
+	if (section && section.data && (section.data.title || section.data.seo_title)) {
+		itemListElement.push({
+			'@type': 'ListItem',
+			position: 2,
+			name: section.data.title || section.data.seo_title || section.data.og_title || 'Sezione',
+			item: `${sitename}${section.url}`
+		})
+	}
+
+	if (document && document.data && (document.data.title || document.data.seo_title)) {
+		itemListElement.push({
+			'@type': 'ListItem',
+			position: itemListElement.length + 1,
+			name: document.data.title || document.data.seo_title || document.data.og_title,
+			item: currentPath
+		})
+	}
+
+	return {
+		'@type': 'BreadcrumbList',
+		'@id': `${currentPath}/#breadcrumb`,
+		itemListElement
+	}
 }
 
-const SAME_AS_SOCIALS = ['https://www.linkedin.com/company/volcanicminds/', 'https://www.facebook.com/volcanicminds']
+const _getOrganizationNode = (ctx: any, type: string) => {
+	const sitename = process.env.NUXT_SITENAME || 'https://volcanicminds.com'
+	const logoUrl = ctx.$store.state.prismic.header?.data?.logo?.url || `${sitename}/logo.png`
+	const identityId = `${sitename}/#identity`
+	const lang = getNormalizedLanguage(ctx)
 
-const AREA_SERVED_LOCAL = [
-	{
-		'@type': 'City',
-		name: 'Torino',
-		sameAs: 'https://it.wikipedia.org/wiki/Torino'
-	},
-	{
-		'@type': 'AdministrativeArea',
-		name: 'Piemonte',
-		sameAs: 'https://it.wikipedia.org/wiki/Piemonte'
+	// Default LocalBusiness (LandingLocalPage and generic pages)
+	// Supports IT/EN localization
+	const localDetails = landingPageDetails.LandingLocalPage[lang] || landingPageDetails.LandingLocalPage.it
+
+	// Base LocalBusiness Schema
+	const baseOrg = {
+		'@type': 'LocalBusiness',
+		'@id': identityId,
+		name: localDetails?.name || 'Volcanic Minds',
+		url: sitename,
+		image: logoUrl,
+		logo: {
+			'@type': 'ImageObject',
+			url: logoUrl
+		},
+		telephone: '+39 011 XXXXXXX',
+		priceRange: PRICE_RANGE,
+		description:
+			localDetails?.description ||
+			'Software House a Torino specializzata in sviluppo software custom, Web App, Mobile e soluzioni di Intelligenza Artificiale per le aziende.',
+		address: {
+			'@type': 'PostalAddress',
+			...COMPANY_ADDRESS
+		},
+		geo: {
+			'@type': 'GeoCoordinates',
+			...COMPANY_GEO
+		},
+		openingHoursSpecification: OPENING_HOURS_SPECIFICATION,
+		sameAs: SAME_AS_SOCIALS,
+		areaServed: AREA_SERVED_MAPS.LandingLocalPage
 	}
-]
 
-const AREA_SERVED_NORTH_ITALY = [
-	{
-		'@type': 'AdministrativeArea',
-		name: 'Lombardia',
-		sameAs: 'https://it.wikipedia.org/wiki/Lombardia'
-	},
-	{
-		'@type': 'AdministrativeArea',
-		name: 'Veneto',
-		sameAs: 'https://it.wikipedia.org/wiki/Veneto'
-	},
-	{
-		'@type': 'AdministrativeArea',
-		name: 'Emilia-Romagna',
-		sameAs: 'https://it.wikipedia.org/wiki/Emilia-Romagna'
-	},
-	{
-		'@type': 'AdministrativeArea',
-		name: 'Liguria',
-		sameAs: 'https://it.wikipedia.org/wiki/Liguria'
-	},
-	{
-		'@type': 'AdministrativeArea',
-		name: "Valle d'Aosta",
-		sameAs: 'https://it.wikipedia.org/wiki/Valle_d%27Aosta'
+	// Dynamic Overrides based on Landing Page Type
+	if (type === 'LandingEuropePage') {
+		return {
+			...baseOrg,
+			'@type': 'Organization', // Broader scope
+			name: landingPageDetails.LandingEuropePage.name,
+			alternateName: landingPageDetails.LandingEuropePage.alternateName,
+			description: landingPageDetails.LandingEuropePage.description,
+			contactPoint: {
+				'@type': 'ContactPoint',
+				telephone: '+39 011 XXXXXXX',
+				contactType: 'sales',
+				areaServed: {
+					'@type': 'Continent',
+					name: 'Europe',
+					sameAs: 'https://en.wikipedia.org/wiki/Europe'
+				},
+				availableLanguage: ['English', 'Italian']
+			},
+			areaServed: AREA_SERVED_MAPS.LandingEuropePage
+		}
 	}
-]
 
-const AREA_SERVED_ITALY = {
-	'@type': 'Country',
-	name: 'Italy',
-	sameAs: 'https://en.wikipedia.org/wiki/Italy'
+	if (type === 'LandingItalyPage') {
+		return {
+			...baseOrg,
+			name: landingPageDetails.LandingItalyPage.name,
+			alternateName: landingPageDetails.LandingItalyPage.alternateName,
+			description: landingPageDetails.LandingItalyPage.description,
+			areaServed: AREA_SERVED_MAPS.LandingItalyPage
+		}
+	}
+
+	if (type === 'LandingNorthItalyPage') {
+		return {
+			...baseOrg,
+			name: landingPageDetails.LandingNorthItalyPage.name,
+			description: landingPageDetails.LandingNorthItalyPage.description,
+			areaServed: AREA_SERVED_MAPS.LandingNorthItalyPage
+		}
+	}
+
+	// Default LocalBusiness (LandingLocalPage and generic pages)
+	return baseOrg
 }
 
+const _getServiceNode = (ctx: any) => {
+	const sitename = process.env.NUXT_SITENAME || 'https://volcanicminds.com'
+	const currentPath = `${sitename}${ctx.$nuxt.$route.path}`.replace(/\/$/, '')
+	const identityId = `${sitename}/#identity`
+
+	return {
+		'@type': 'Service',
+		'@id': `${currentPath}/#service`,
+		name: ctx.document.data.title,
+		description: ctx.document.data.seo_description || ctx.$constants.seoDescription,
+		provider: { '@id': identityId },
+		areaServed: ctx.$constants.areaServed[ctx.$i18n.locale],
+		hasOfferCatalog: {
+			'@type': 'OfferCatalog',
+			name: 'Servizi Volcanic Minds'
+		}
+	}
+}
+
+const _getWebPageNode = (ctx: any, document: any) => {
+	const sitename = process.env.NUXT_SITENAME || 'https://volcanicminds.com'
+	const currentPath = `${sitename}${ctx.switchLocalePath(ctx.$i18n.locale)}`.replace(/\/$/, '')
+	const identityId = `${sitename}/#identity`
+
+	return {
+		'@type': 'WebPage',
+		'@id': `${currentPath}/#webpage`,
+		url: currentPath,
+		name: document.data.seo_title || document.data.title || ctx.$constants.seoTitle,
+		description:
+			document.data.seo_description || ctx.$constants.seoDescription || ctx.$constants.schemaOrganization.description,
+		inLanguage: getNormalizedLanguage(ctx),
+		isPartOf: { '@id': `${sitename}/#website` },
+		about: { '@id': identityId },
+		breadcrumb: { '@id': `${currentPath}/#breadcrumb` },
+		publisher: { '@id': identityId }
+	}
+}
+
+const _getArticleNode = (ctx: any, type = 'TechArticle') => {
+	const sitename = process.env.NUXT_SITENAME || 'https://volcanicminds.com'
+	const currentPath = `${sitename}${ctx.$nuxt.$route.path}`.replace(/\/$/, '')
+	const identityId = `${sitename}/#identity`
+
+	return {
+		'@type': type,
+		'@id': `${currentPath}/#article`,
+		headline: ctx.document.data.title,
+		image: ctx.document.data.og_image?.url ? [ctx.document.data.og_image.url] : [],
+		datePublished:
+			ctx.document.data.publication_date ||
+			(ctx.document.data.publication_date_sort
+				? dayjs(ctx.document.data.publication_date_sort).format('YYYY-MM-DDTHH:mm:ss[Z]')
+				: undefined),
+		dateModified:
+			ctx.document.data.latest_revision_date ||
+			(ctx.document.data.latest_revision_date_sort
+				? dayjs(ctx.document.data.latest_revision_date_sort).format('YYYY-MM-DDTHH:mm:ss[Z]')
+				: undefined),
+		proficiencyLevel: ctx.document.data.proficiency_level || 'Expert',
+		author: {
+			'@type': 'Organization',
+			name: 'Volcanic Minds Team',
+			url: 'https://volcanicminds.com'
+		},
+		publisher: { '@id': identityId },
+		description: ctx.document.data.seo_description || ctx.$constants.seoDescription,
+		about: ctx.document.tags,
+		mainEntityOfPage: { '@id': `${currentPath}/#webpage` }
+	}
+}
+
+const _getFAQNode = (ctx: any, items: any[]) => {
+	const sitename = process.env.NUXT_SITENAME || 'https://volcanicminds.com'
+	const currentPath = `${sitename}${ctx.$nuxt.$route.path}`.replace(/\/$/, '')
+
+	if (!items || !Array.isArray(items)) return null
+	const validItems = items.filter((item: any) => item.title && isRichTextFilled(item.description))
+	if (validItems.length === 0) return null
+
+	return {
+		'@type': 'FAQPage',
+		'@id': `${currentPath}/#faq`,
+		mainEntity: validItems.map((item: any) => ({
+			'@type': 'Question',
+			name: item.title,
+			acceptedAnswer: {
+				'@type': 'Answer',
+				text: asText(item.description)
+			}
+		}))
+	}
+}
+
+const _getCollectionPageNode = (ctx: any) => {
+	const sitename = process.env.NUXT_SITENAME || 'https://volcanicminds.com'
+	const currentPath = `${sitename}${ctx.$nuxt.$route.path}`.replace(/\/$/, '')
+
+	const articlesGridSlice = ctx.document.data.slices.find(
+		(slice: { slice_type: string }) => slice.slice_type === 'articles_grid'
+	)
+	const itemListElement: any[] = []
+	if (articlesGridSlice && articlesGridSlice.items) {
+		itemListElement.push(
+			...articlesGridSlice.items.map((item: any, index: number) => ({
+				'@type': 'ListItem',
+				position: index + 1,
+				url: `${process.env.NUXT_SITENAME}${ctx.switchLocalePath(ctx.$i18n.locale)}insights/${item.article.uid}`
+			}))
+		)
+	}
+
+	return {
+		'@type': 'CollectionPage',
+		'@id': `${currentPath}/#collection`,
+		mainEntity: {
+			'@type': 'ItemList',
+			itemListElement
+		}
+	}
+}
+
+const _getAboutPageNode = (ctx: any) => {
+	const sitename = process.env.NUXT_SITENAME || 'https://volcanicminds.com'
+	const currentPath = `${sitename}${ctx.$nuxt.$route.path}`.replace(/\/$/, '')
+	const identityId = `${sitename}/#identity`
+
+	return {
+		'@type': 'AboutPage',
+		'@id': `${currentPath}/#aboutpage`,
+		mainEntity: { '@id': identityId }
+	}
+}
+
+const _getContactPageNode = (ctx: any) => {
+	const sitename = process.env.NUXT_SITENAME || 'https://volcanicminds.com'
+	const currentPath = `${sitename}${ctx.$nuxt.$route.path}`.replace(/\/$/, '')
+	const identityId = `${sitename}/#identity`
+
+	return {
+		'@type': 'ContactPage',
+		'@id': `${currentPath}/#contactpage`,
+		mainEntity: { '@id': identityId }
+	}
+}
+
+/**
+ * --- MAIN COMPOSER ---
+ *
+ * Constructs the Link Graph based on page type.
+ */
+export const getCompanySchema = (ctx: any, type = 'WebPage', items?: any[]) => {
+	const graph: any[] = []
+
+	// 1. Organization / LocalBusiness Node (Always present)
+	const orgNode = _getOrganizationNode(ctx, type)
+	graph.push(orgNode)
+
+	// 2. WebSite Node (Static, always present context)
+	const sitename = process.env.NUXT_SITENAME || 'https://volcanicminds.com'
+	graph.push({
+		'@type': 'WebSite',
+		'@id': `${sitename}/#website`,
+		url: sitename,
+		name: 'Volcanic Minds',
+		publisher: { '@id': `${sitename}/#identity` }
+	})
+
+	// 3. WebPage Node (Always present)
+	const webPageNode: any = _getWebPageNode(ctx, ctx.document)
+	graph.push(webPageNode)
+
+	// 4. Breadcrumb Node (Always present)
+	const breadcrumbNode = _getBreadcrumbNode(ctx, ctx.document)
+	graph.push(breadcrumbNode)
+
+	// 5. Specific Type Nodes (Service, Article, FAQ, etc.)
+	if (['Article', 'BlogPosting', 'NewsArticle', 'TechArticle'].includes(type)) {
+		const articleNode = _getArticleNode(ctx, type)
+		// Link WebPage -> Article
+		webPageNode.mainEntity = { '@id': articleNode['@id'] }
+		graph.push(articleNode)
+	} else if (type === 'Service') {
+		const serviceNode = _getServiceNode(ctx)
+		// Link WebPage -> Service
+		webPageNode.mainEntity = { '@id': serviceNode['@id'] }
+		graph.push(serviceNode)
+	} else if (type === 'FAQPage' && items) {
+		const faqNode = _getFAQNode(ctx, items)
+		if (faqNode) {
+			// FAQ is often auxiliary, but if it's an FAQPage it's main
+			webPageNode.mainEntity = { '@id': faqNode['@id'] }
+			graph.push(faqNode)
+		}
+	} else if (type === 'CollectionPage') {
+		const collectionNode = _getCollectionPageNode(ctx)
+		webPageNode.mainEntity = { '@id': collectionNode['@id'] }
+		graph.push(collectionNode)
+	} else if (type === 'AboutPage') {
+		const aboutNode = _getAboutPageNode(ctx)
+		// Merges specific AboutPage props into WebPage logic distinctively
+		Object.assign(webPageNode, aboutNode)
+	} else if (type === 'ContactPage') {
+		const contactNode = _getContactPageNode(ctx)
+		Object.assign(webPageNode, contactNode)
+	}
+
+	const jsonLd = {
+		'@context': 'https://schema.org',
+		'@graph': graph
+	}
+
+	console.log('Generated Schema Graph:', JSON.stringify(jsonLd, null, 2))
+	return jsonLd
+}
+
+// Keep export for LCP Preload if unrelated to schema
 export const getLCPPreloadLink = (document: any) => {
 	if (!document?.data?.slices) return null
 
@@ -191,360 +449,9 @@ export const getLCPPreloadLink = (document: any) => {
 	return null
 }
 
-const getNormalizedLanguage = (ctx: any) => {
-	const code = ctx.$i18n.locale || 'en'
-	return code.includes('-') ? code.split('-')[0] : code
-}
-
-const getOrganizationSchema = (ctx: any) => {
-	const schema = { ...ctx.$constants.schemaOrganization }
-	const logoField = ctx.$store.state.prismic.header?.data?.logo
-
-	if (logoField && logoField.url) {
-		const size = 50
-		schema.logo = logoField.url.includes('.svg') ? logoField.url : `${logoField.url}&h=${size}&fit=max`
-	}
-
-	return schema
-}
-
-const getWebPageSchema = (ctx: any) => {
-	return {
-		'@context': 'https://schema.org',
-		'@type': 'WebPage',
-		...getOrganizationSchema(ctx),
-		'@id': `${process.env.NUXT_SITENAME}${ctx.switchLocalePath(ctx.$i18n.locale)}#organization`,
-		url: `${process.env.NUXT_SITENAME}${ctx.switchLocalePath(ctx.$i18n.locale)}`,
-		areaServed: ctx.$constants.areaServed[ctx.$i18n.locale],
-		description:
-			ctx.document.data.seo_description ||
-			ctx.$constants.seoDescription ||
-			ctx.$constants.schemaOrganization.description,
-		headline: ctx.document.data.seo_title || ctx.$constants.seoTitle,
-		mainEntityOfPage: {
-			'@type': 'WebPage',
-			'@id': `${process.env.NUXT_SITENAME}${ctx.switchLocalePath(ctx.$i18n.locale)}`
-		},
-		knowsAbout: ctx.$constants.defaultKnowsAbout,
-		makesOffer: ctx.$constants.defaultMakesOffer[ctx.$i18n.locale],
-		inLanguage: getNormalizedLanguage(ctx)
-	}
-}
-
-const getHomePageSchema = (ctx: any) => {
-	return {
-		'@context': 'https://schema.org',
-		...getOrganizationSchema(ctx),
-		'@id': `${process.env.NUXT_SITENAME}${ctx.switchLocalePath(ctx.$i18n.locale)}#organization`,
-		url: `${process.env.NUXT_SITENAME}${ctx.switchLocalePath(ctx.$i18n.locale)}`,
-		areaServed: ctx.$constants.areaServed[ctx.$i18n.locale],
-		description:
-			ctx.document.data.seo_description ||
-			ctx.$constants.seoDescription ||
-			ctx.$constants.schemaOrganization.description,
-		knowsAbout: ctx.$constants.defaultKnowsAbout,
-		makesOffer: ctx.$constants.defaultMakesOffer[ctx.$i18n.locale],
-		inLanguage: getNormalizedLanguage(ctx),
-		priceRange: PRICE_RANGE
-	}
-}
-
-const getServiceSchema = (ctx: any) => {
-	return {
-		'@context': 'https://schema.org',
-		'@type': 'Service',
-		inLanguage: getNormalizedLanguage(ctx),
-		serviceType: ctx.document.data.title,
-		description: ctx.document.data.seo_description || ctx.$constants.seoDescription,
-		provider: getOrganizationSchema(ctx),
-		areaServed: ctx.$constants.areaServed[ctx.$i18n.locale],
-		hasOfferCatalog: {
-			'@type': 'OfferCatalog',
-			name: 'Servizi Volcanic Minds'
-		}
-	}
-}
-
-const getLandingPageSchema = (ctx: any, type = 'LandingLocalPage') => {
-	const sitename = process.env.NUXT_SITENAME || 'https://volcanicminds.com'
-	const logoUrl = ctx.$store.state.prismic.header?.data?.logo?.url || `${sitename}/logo.png`
-
-	// 1. LandingEuropePage (Organization)
-	if (type === 'LandingEuropePage') {
-		return {
-			'@context': 'https://schema.org',
-			'@type': 'Organization',
-			name: 'Volcanic Minds',
-			alternateName: 'Volcanic Minds - Nearshore Software Partner',
-			url: `${sitename}/en/`,
-			logo: logoUrl,
-			description:
-				'Italian Software House providing custom software development, AI integration, and mobile app services for European companies. High-quality engineering with EU time zone alignment.',
-			address: {
-				'@type': 'PostalAddress',
-				...COMPANY_ADDRESS
-			},
-			contactPoint: {
-				'@type': 'ContactPoint',
-				telephone: '+39 011 XXXXXXX',
-				contactType: 'sales',
-				areaServed: {
-					'@type': 'Continent',
-					name: 'Europe',
-					sameAs: 'https://en.wikipedia.org/wiki/Europe'
-				},
-				availableLanguage: ['English', 'Italian']
-			},
-			areaServed: {
-				'@type': 'Continent',
-				name: 'Europe'
-			}
-		}
-	}
-
-	// 1.5 LandingItalyPage (ProfessionalService - Country Coverage)
-	if (type === 'LandingItalyPage') {
-		return {
-			'@context': 'https://schema.org',
-			'@type': 'ProfessionalService',
-			name: 'Volcanic Minds',
-			alternateName: 'Volcanic Minds - Sviluppo Software Italia',
-			image: logoUrl,
-			url: `${sitename}${ctx.$route.path}`,
-			telephone: '+39 011 XXXXXXX',
-			description:
-				'Partner tecnologico per lo sviluppo di software su misura e soluzioni AI per aziende in tutta Italia. Operatività remota e in loco.',
-			address: {
-				'@type': 'PostalAddress',
-				...COMPANY_ADDRESS
-			},
-			areaServed: AREA_SERVED_ITALY,
-			priceRange: PRICE_RANGE
-		}
-	}
-
-	// 2. LandingNorthItalyPage (ProfessionalService - Area Coverage)
-	if (type === 'LandingNorthItalyPage') {
-		return {
-			'@context': 'https://schema.org',
-			'@type': 'ProfessionalService',
-			name: 'Volcanic Minds - Sviluppo Software Nord Italia',
-			image: logoUrl,
-			url: `${sitename}${ctx.$route.path}`,
-			telephone: '+39 011 XXXXXXX',
-			description:
-				'Partner tecnologico per lo sviluppo di software su misura e soluzioni AI per aziende in Lombardia, Veneto ed Emilia-Romagna. Operatività remota e in loco.',
-			address: {
-				'@type': 'PostalAddress',
-				...COMPANY_ADDRESS
-			},
-			areaServed: AREA_SERVED_NORTH_ITALY,
-			priceRange: PRICE_RANGE
-		}
-	}
-
-	// 3. Default: LandingLocalPage (ProfessionalService - HQ Torino)
-	return {
-		'@context': 'https://schema.org',
-		'@type': 'ProfessionalService',
-		name: 'Volcanic Minds',
-		image: logoUrl,
-		'@id': `${sitename}/#localbusiness`,
-		url: sitename,
-		telephone: '+39 011 XXXXXXX',
-		priceRange: PRICE_RANGE,
-		description:
-			'Software House a Torino specializzata in sviluppo software custom, Web App, Mobile e soluzioni di Intelligenza Artificiale per le aziende.',
-		address: {
-			'@type': 'PostalAddress',
-			...COMPANY_ADDRESS
-		},
-		geo: {
-			'@type': 'GeoCoordinates',
-			...COMPANY_GEO
-		},
-		openingHoursSpecification: OPENING_HOURS_SPECIFICATION,
-		areaServed: AREA_SERVED_LOCAL,
-		sameAs: SAME_AS_SOCIALS
-	}
-}
-
-const getFAQPageSchema = (ctx: any, items: any[]) => {
-	if (!items || !Array.isArray(items)) return null
-
-	const validItems = items.filter((item: any) => item.title && isRichTextFilled(item.description))
-
-	if (validItems.length === 0) return null
-
-	return {
-		'@context': 'https://schema.org',
-		'@type': 'FAQPage',
-		inLanguage: getNormalizedLanguage(ctx),
-		mainEntity: validItems.map((item: any) => ({
-			'@type': 'Question',
-			name: item.title,
-			acceptedAnswer: {
-				'@type': 'Answer',
-				text: asText(item.description)
-			}
-		}))
-	}
-}
-
-const getAboutPageSchema = (ctx: any) => {
-	return {
-		'@context': 'https://schema.org',
-		'@type': 'AboutPage',
-		mainEntity: ctx.$constants.schemaOrganization,
-		...getOrganizationSchema(ctx),
-		'@id': `${process.env.NUXT_SITENAME}${ctx.switchLocalePath(ctx.$i18n.locale)}#organization`,
-		url: `${process.env.NUXT_SITENAME}${ctx.switchLocalePath(ctx.$i18n.locale)}`,
-		areaServed: ctx.$constants.areaServed[ctx.$i18n.locale],
-		description:
-			ctx.document.data.seo_description ||
-			ctx.$constants.seoDescription ||
-			ctx.$constants.schemaOrganization.description,
-		headline: ctx.document.data.seo_title || ctx.$constants.seoTitle,
-		mainEntityOfPage: {
-			'@type': 'WebPage',
-			'@id': `${process.env.NUXT_SITENAME}${ctx.switchLocalePath(ctx.$i18n.locale)}`
-		},
-		knowsAbout: ctx.$constants.defaultKnowsAbout,
-		makesOffer: ctx.$constants.defaultMakesOffer[ctx.$i18n.locale],
-		inLanguage: getNormalizedLanguage(ctx)
-	}
-}
-
-const getArticleSchema = (ctx: any, type = 'TechArticle') => {
-	return {
-		'@context': 'https://schema.org',
-		'@type': type,
-		inLanguage: getNormalizedLanguage(ctx),
-		headline: ctx.document.data.title,
-		image: ctx.document.data.og_image?.url ? [ctx.document.data.og_image.url] : [],
-		datePublished:
-			ctx.document.data.publication_date ||
-			(ctx.document.data.publication_date_sort
-				? dayjs(ctx.document.data.publication_date_sort).format('YYYY-MM-DDTHH:mm:ss[Z]')
-				: undefined),
-		dateModified:
-			ctx.document.data.latest_revision_date ||
-			(ctx.document.data.latest_revision_date_sort
-				? dayjs(ctx.document.data.latest_revision_date_sort).format('YYYY-MM-DDTHH:mm:ss[Z]')
-				: undefined),
-		proficiencyLevel: ctx.document.data.proficiency_level || 'Expert',
-		author: {
-			'@type': 'Organization',
-			name: 'Volcanic Minds Team',
-			url: 'https://volcanicminds.com'
-		},
-		publisher: {
-			'@type': 'Organization',
-			name: 'Volcanic Minds',
-			logo: {
-				'@type': 'ImageObject',
-				url: `${process.env.NUXT_SITENAME}${ctx.$constants.logo}`
-			}
-		},
-		description: ctx.document.data.seo_description || ctx.$constants.seoDescription,
-		about: ctx.document.tags // Use Prismic tags as "about"
-	}
-}
-
-const getCollectionPageSchema = (ctx: any) => {
-	const articlesGridSlice = ctx.document.data.slices.find(
-		(slice: { slice_type: string }) => slice.slice_type === 'articles_grid'
-	)
-	const itemListElement: any[] = []
-	if (articlesGridSlice && articlesGridSlice.items) {
-		itemListElement.push(
-			...articlesGridSlice.items.map((item: any, index: number) => ({
-				'@type': 'ListItem',
-				position: index + 1,
-				url: `${process.env.NUXT_SITENAME}${ctx.switchLocalePath(ctx.$i18n.locale)}insights/${item.article.uid}`
-			}))
-		)
-	}
-
-	return {
-		'@context': 'https://schema.org',
-		'@type': 'CollectionPage',
-		inLanguage: getNormalizedLanguage(ctx),
-		headline: ctx.document.data.title,
-		description: ctx.document.data.seo_description || ctx.$constants.seoDescription,
-		mainEntity: {
-			'@type': 'ItemList',
-			itemListElement
-		}
-	}
-}
-
-const getContactPageSchema = (ctx: any) => {
-	return {
-		'@context': 'https://schema.org',
-		'@type': 'ContactPage',
-		mainEntity: {
-			'@type': 'Organization',
-			...getOrganizationSchema(ctx),
-			contactPoint: ctx.$constants.contactPoints
-		},
-		...getOrganizationSchema(ctx),
-		'@id': `${process.env.NUXT_SITENAME}${ctx.switchLocalePath(ctx.$i18n.locale)}#organization`,
-		url: `${process.env.NUXT_SITENAME}${ctx.switchLocalePath(ctx.$i18n.locale)}`,
-		areaServed: ctx.$constants.areaServed[ctx.$i18n.locale],
-		description:
-			ctx.document.data.seo_description ||
-			ctx.$constants.seoDescription ||
-			ctx.$constants.schemaOrganization.description,
-		headline: ctx.document.data.seo_title || ctx.$constants.seoTitle,
-		mainEntityOfPage: {
-			'@type': 'WebPage',
-			'@id': `${process.env.NUXT_SITENAME}${ctx.switchLocalePath(ctx.$i18n.locale)}`
-		},
-		knowsAbout: ctx.$constants.defaultKnowsAbout,
-		makesOffer: ctx.$constants.defaultMakesOffer[ctx.$i18n.locale],
-		inLanguage: getNormalizedLanguage(ctx)
-	}
-}
-
-const _getCompanySchema = (ctx: any, type = 'WebPage', items?: any[]) => {
-	if (type.startsWith('Landing')) {
-		return getLandingPageSchema(ctx, type)
-	}
-
-	if (['Article', 'BlogPosting', 'NewsArticle', 'TechArticle'].includes(type)) {
-		return getArticleSchema(ctx, type)
-	}
-
-	if (type === 'CollectionPage') {
-		return getCollectionPageSchema(ctx)
-	}
-
-	if (type === 'Service') {
-		return getServiceSchema(ctx)
-	}
-
-	if (type === 'AboutPage') {
-		return getAboutPageSchema(ctx)
-	}
-
-	if (type === 'ContactPage') {
-		return getContactPageSchema(ctx)
-	}
-
-	if (type === 'FAQPage' && items) {
-		return getFAQPageSchema(ctx, items)
-	}
-
-	if (type === 'HomePage') {
-		return getHomePageSchema(ctx)
-	}
-
-	return getWebPageSchema(ctx)
-}
-
-export const getCompanySchema = (ctx: any, type = 'WebPage', items?: any[]) => {
-	const jsonLd = _getCompanySchema(ctx, type, items)
-	console.log(jsonLd)
-	return jsonLd
+// Keep export for Breadcrumb (legacy usage check needed)
+export const getBreadcrumbSchema = (ctx: any, document: any, section?: any) => {
+	// Fallback to internal if called directly, but wrap in simple object if needed
+	// or deprecate. For strict backwards compatibility, returning the list logic:
+	return _getBreadcrumbNode(ctx, document, section)
 }
