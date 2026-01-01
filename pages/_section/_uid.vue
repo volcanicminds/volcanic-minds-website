@@ -29,6 +29,7 @@ import {
 	getNormalizedLanguage,
 	getOrganizationSchema
 } from '~/utils/seo'
+import { asText, isRichTextFilled } from '~/utils/prismic'
 
 @Component({
 	// @ts-ignore
@@ -283,23 +284,27 @@ export default class PageComponent extends Vue {
 			(slice: { slice_type: string }) => slice.slice_type === 'accordion'
 		)
 		if (accordionSlice && accordionSlice.items && accordionSlice.items.length > 0) {
-			const faqJsonLd = {
-				'@context': 'https://schema.org',
-				'@type': 'FAQPage',
-				inLanguage: getNormalizedLanguage(this),
-				mainEntity: accordionSlice.items.map((item: any) => ({
-					'@type': 'Question',
-					name: item.title,
-					acceptedAnswer: {
-						'@type': 'Answer',
-						text: (this as any).$prismic.asText(item.description)
-					}
-				}))
+			const validItems = accordionSlice.items.filter((item: any) => item.title && isRichTextFilled(item.description))
+
+			if (validItems.length > 0) {
+				const faqJsonLd = {
+					'@context': 'https://schema.org',
+					'@type': 'FAQPage',
+					inLanguage: getNormalizedLanguage(this),
+					mainEntity: validItems.map((item: any) => ({
+						'@type': 'Question',
+						name: item.title,
+						acceptedAnswer: {
+							'@type': 'Answer',
+							text: asText(item.description)
+						}
+					}))
+				}
+				scripts.push({
+					type: 'application/ld+json',
+					json: faqJsonLd
+				})
 			}
-			scripts.push({
-				type: 'application/ld+json',
-				json: faqJsonLd
-			})
 		}
 
 		if (this.youtubeSlice) {
