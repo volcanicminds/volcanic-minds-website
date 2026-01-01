@@ -1,3 +1,4 @@
+import dayjs from 'dayjs'
 import { asText, isRichTextFilled } from '~/utils/prismic'
 
 /**
@@ -71,26 +72,7 @@ export const getBreadcrumbSchema = (ctx: any, document: any, section?: any) => {
 	}
 }
 
-export const getNormalizedLanguage = (ctx: any) => {
-	const code = ctx.$i18n.locale || 'en'
-	return code.includes('-') ? code.split('-')[0] : code
-}
-
-export const getOrganizationSchema = (ctx: any) => {
-	const schema = { ...ctx.$constants.schemaOrganization }
-	const logoField = ctx.$store.state.prismic.header?.data?.logo
-
-	if (logoField && logoField.url) {
-		const size = 50
-		schema.logo = logoField.url.includes('.svg') ? logoField.url : `${logoField.url}&h=${size}&fit=max`
-	}
-
-	return schema
-}
-
-// ---------------------------------------------------------------------------------------------------------------------
-// Constants for Schema.org Strategies
-// ---------------------------------------------------------------------------------------------------------------------
+const PRICE_RANGE = '€€-€€€'
 
 /**
  * Headquarters Address (Torino)
@@ -167,151 +149,6 @@ const AREA_SERVED_ITALY = {
 	sameAs: 'https://en.wikipedia.org/wiki/Italy'
 }
 
-// ---------------------------------------------------------------------------------------------------------------------
-// Factory Methods
-// ---------------------------------------------------------------------------------------------------------------------
-
-/**
- * Generates the specific Company Schema based on the selected strategy.
- *
- * Strategies:
- * - LandingLocalPage (Default): ProfessionalService for Torino (HQ).
- * - LandingNorthItalyPage: ProfessionalService for North Italy coverage.
- * - LandingEuropePage: Organization for European coverage.
- */
-export const getCompanySchema = (ctx: any, type = 'LandingLocalPage') => {
-	const sitename = process.env.NUXT_SITENAME || 'https://volcanicminds.com'
-	const logoUrl = ctx.$store.state.prismic.header?.data?.logo?.url || `${sitename}/logo.png`
-
-	// 1. LandingEuropePage (Organization)
-	if (type === 'LandingEuropePage') {
-		return {
-			'@context': 'https://schema.org',
-			'@type': 'Organization',
-			name: 'Volcanic Minds',
-			alternateName: 'Volcanic Minds - Nearshore Software Partner',
-			url: `${sitename}/en/`,
-			logo: logoUrl,
-			description:
-				'Italian Software House providing custom software development, AI integration, and mobile app services for European companies. High-quality engineering with EU time zone alignment.',
-			address: {
-				'@type': 'PostalAddress',
-				streetAddress: 'Corso Vinzaglio 24',
-				addressLocality: 'Turin',
-				postalCode: '10121',
-				addressCountry: 'IT'
-			},
-			contactPoint: {
-				'@type': 'ContactPoint',
-				telephone: '+39 011 XXXXXXX',
-				contactType: 'sales',
-				areaServed: {
-					'@type': 'Continent',
-					name: 'Europe',
-					sameAs: 'https://en.wikipedia.org/wiki/Europe'
-				},
-				availableLanguage: ['English', 'Italian']
-			},
-			areaServed: {
-				'@type': 'Continent',
-				name: 'Europe'
-			}
-		}
-	}
-
-	// 1.5 LandingItalyPage (ProfessionalService - Country Coverage)
-	if (type === 'LandingItalyPage') {
-		return {
-			'@context': 'https://schema.org',
-			'@type': 'ProfessionalService',
-			name: 'Volcanic Minds - Sviluppo Software Italia',
-			image: logoUrl,
-			url: `${sitename}${ctx.$route.path}`,
-			telephone: '+39 011 XXXXXXX',
-			description:
-				'Partner tecnologico per lo sviluppo di software su misura e soluzioni AI per aziende in tutta Italia. Operatività remota e in loco.',
-			address: {
-				'@type': 'PostalAddress',
-				...COMPANY_ADDRESS
-			},
-			areaServed: AREA_SERVED_ITALY,
-			priceRange: '$$'
-		}
-	}
-
-	// 2. LandingNorthItalyPage (ProfessionalService - Area Coverage)
-	if (type === 'LandingNorthItalyPage') {
-		return {
-			'@context': 'https://schema.org',
-			'@type': 'ProfessionalService',
-			name: 'Volcanic Minds - Sviluppo Software Nord Italia',
-			image: logoUrl,
-			url: `${sitename}${ctx.$route.path}`,
-			telephone: '+39 011 XXXXXXX',
-			description:
-				'Partner tecnologico per lo sviluppo di software su misura e soluzioni AI per aziende in Lombardia, Veneto ed Emilia-Romagna. Operatività remota e in loco.',
-			address: {
-				'@type': 'PostalAddress',
-				...COMPANY_ADDRESS
-			},
-			areaServed: AREA_SERVED_NORTH_ITALY,
-			priceRange: '$$'
-		}
-	}
-
-	// 3. Default: LandingLocalPage (ProfessionalService - HQ Torino)
-	return {
-		'@context': 'https://schema.org',
-		'@type': 'ProfessionalService',
-		name: 'Volcanic Minds',
-		image: logoUrl,
-		'@id': `${sitename}/#localbusiness`,
-		url: sitename,
-		telephone: '+39 011 XXXXXXX',
-		priceRange: '$$',
-		description:
-			'Software House a Torino specializzata in sviluppo software custom, Web App, Mobile e soluzioni di Intelligenza Artificiale per le aziende.',
-		address: {
-			'@type': 'PostalAddress',
-			...COMPANY_ADDRESS
-		},
-		geo: {
-			'@type': 'GeoCoordinates',
-			...COMPANY_GEO
-		},
-		openingHoursSpecification: OPENING_HOURS_SPECIFICATION,
-		areaServed: AREA_SERVED_LOCAL,
-		sameAs: SAME_AS_SOCIALS
-	}
-}
-
-/**
- * Generates the FAQPage Schema from a list of items.
- * Handles validation internally.
- */
-
-export const getFAQSchema = (ctx: any, items: any[]) => {
-	if (!items || !Array.isArray(items)) return null
-
-	const validItems = items.filter((item: any) => item.title && isRichTextFilled(item.description))
-
-	if (validItems.length === 0) return null
-
-	return {
-		'@context': 'https://schema.org',
-		'@type': 'FAQPage',
-		inLanguage: getNormalizedLanguage(ctx),
-		mainEntity: validItems.map((item: any) => ({
-			'@type': 'Question',
-			name: item.title,
-			acceptedAnswer: {
-				'@type': 'Answer',
-				text: asText(item.description)
-			}
-		}))
-	}
-}
-
 export const getLCPPreloadLink = (document: any) => {
 	if (!document?.data?.slices) return null
 
@@ -352,4 +189,362 @@ export const getLCPPreloadLink = (document: any) => {
 	}
 
 	return null
+}
+
+const getNormalizedLanguage = (ctx: any) => {
+	const code = ctx.$i18n.locale || 'en'
+	return code.includes('-') ? code.split('-')[0] : code
+}
+
+const getOrganizationSchema = (ctx: any) => {
+	const schema = { ...ctx.$constants.schemaOrganization }
+	const logoField = ctx.$store.state.prismic.header?.data?.logo
+
+	if (logoField && logoField.url) {
+		const size = 50
+		schema.logo = logoField.url.includes('.svg') ? logoField.url : `${logoField.url}&h=${size}&fit=max`
+	}
+
+	return schema
+}
+
+const getWebPageSchema = (ctx: any) => {
+	return {
+		'@context': 'https://schema.org',
+		'@type': 'WebPage',
+		...getOrganizationSchema(ctx),
+		'@id': `${process.env.NUXT_SITENAME}${ctx.switchLocalePath(ctx.$i18n.locale)}#organization`,
+		url: `${process.env.NUXT_SITENAME}${ctx.switchLocalePath(ctx.$i18n.locale)}`,
+		areaServed: ctx.$constants.areaServed[ctx.$i18n.locale],
+		description:
+			ctx.document.data.seo_description ||
+			ctx.$constants.seoDescription ||
+			ctx.$constants.schemaOrganization.description,
+		headline: ctx.document.data.seo_title || ctx.$constants.seoTitle,
+		mainEntityOfPage: {
+			'@type': 'WebPage',
+			'@id': `${process.env.NUXT_SITENAME}${ctx.switchLocalePath(ctx.$i18n.locale)}`
+		},
+		knowsAbout: ctx.$constants.defaultKnowsAbout,
+		makesOffer: ctx.$constants.defaultMakesOffer[ctx.$i18n.locale],
+		inLanguage: getNormalizedLanguage(ctx)
+	}
+}
+
+const getHomePageSchema = (ctx: any) => {
+	return {
+		'@context': 'https://schema.org',
+		...getOrganizationSchema(ctx),
+		'@id': `${process.env.NUXT_SITENAME}${ctx.switchLocalePath(ctx.$i18n.locale)}#organization`,
+		url: `${process.env.NUXT_SITENAME}${ctx.switchLocalePath(ctx.$i18n.locale)}`,
+		areaServed: ctx.$constants.areaServed[ctx.$i18n.locale],
+		description:
+			ctx.document.data.seo_description ||
+			ctx.$constants.seoDescription ||
+			ctx.$constants.schemaOrganization.description,
+		knowsAbout: ctx.$constants.defaultKnowsAbout,
+		makesOffer: ctx.$constants.defaultMakesOffer[ctx.$i18n.locale],
+		inLanguage: getNormalizedLanguage(ctx),
+		priceRange: PRICE_RANGE
+	}
+}
+
+const getServiceSchema = (ctx: any) => {
+	return {
+		'@context': 'https://schema.org',
+		'@type': 'Service',
+		inLanguage: getNormalizedLanguage(ctx),
+		serviceType: ctx.document.data.title,
+		description: ctx.document.data.seo_description || ctx.$constants.seoDescription,
+		provider: getOrganizationSchema(ctx),
+		areaServed: ctx.$constants.areaServed[ctx.$i18n.locale],
+		hasOfferCatalog: {
+			'@type': 'OfferCatalog',
+			name: 'Servizi Volcanic Minds'
+		}
+	}
+}
+
+const getLandingPageSchema = (ctx: any, type = 'LandingLocalPage') => {
+	const sitename = process.env.NUXT_SITENAME || 'https://volcanicminds.com'
+	const logoUrl = ctx.$store.state.prismic.header?.data?.logo?.url || `${sitename}/logo.png`
+
+	// 1. LandingEuropePage (Organization)
+	if (type === 'LandingEuropePage') {
+		return {
+			'@context': 'https://schema.org',
+			'@type': 'Organization',
+			name: 'Volcanic Minds',
+			alternateName: 'Volcanic Minds - Nearshore Software Partner',
+			url: `${sitename}/en/`,
+			logo: logoUrl,
+			description:
+				'Italian Software House providing custom software development, AI integration, and mobile app services for European companies. High-quality engineering with EU time zone alignment.',
+			address: {
+				'@type': 'PostalAddress',
+				...COMPANY_ADDRESS
+			},
+			contactPoint: {
+				'@type': 'ContactPoint',
+				telephone: '+39 011 XXXXXXX',
+				contactType: 'sales',
+				areaServed: {
+					'@type': 'Continent',
+					name: 'Europe',
+					sameAs: 'https://en.wikipedia.org/wiki/Europe'
+				},
+				availableLanguage: ['English', 'Italian']
+			},
+			areaServed: {
+				'@type': 'Continent',
+				name: 'Europe'
+			}
+		}
+	}
+
+	// 1.5 LandingItalyPage (ProfessionalService - Country Coverage)
+	if (type === 'LandingItalyPage') {
+		return {
+			'@context': 'https://schema.org',
+			'@type': 'ProfessionalService',
+			name: 'Volcanic Minds',
+			alternateName: 'Volcanic Minds - Sviluppo Software Italia',
+			image: logoUrl,
+			url: `${sitename}${ctx.$route.path}`,
+			telephone: '+39 011 XXXXXXX',
+			description:
+				'Partner tecnologico per lo sviluppo di software su misura e soluzioni AI per aziende in tutta Italia. Operatività remota e in loco.',
+			address: {
+				'@type': 'PostalAddress',
+				...COMPANY_ADDRESS
+			},
+			areaServed: AREA_SERVED_ITALY,
+			priceRange: PRICE_RANGE
+		}
+	}
+
+	// 2. LandingNorthItalyPage (ProfessionalService - Area Coverage)
+	if (type === 'LandingNorthItalyPage') {
+		return {
+			'@context': 'https://schema.org',
+			'@type': 'ProfessionalService',
+			name: 'Volcanic Minds - Sviluppo Software Nord Italia',
+			image: logoUrl,
+			url: `${sitename}${ctx.$route.path}`,
+			telephone: '+39 011 XXXXXXX',
+			description:
+				'Partner tecnologico per lo sviluppo di software su misura e soluzioni AI per aziende in Lombardia, Veneto ed Emilia-Romagna. Operatività remota e in loco.',
+			address: {
+				'@type': 'PostalAddress',
+				...COMPANY_ADDRESS
+			},
+			areaServed: AREA_SERVED_NORTH_ITALY,
+			priceRange: PRICE_RANGE
+		}
+	}
+
+	// 3. Default: LandingLocalPage (ProfessionalService - HQ Torino)
+	return {
+		'@context': 'https://schema.org',
+		'@type': 'ProfessionalService',
+		name: 'Volcanic Minds',
+		image: logoUrl,
+		'@id': `${sitename}/#localbusiness`,
+		url: sitename,
+		telephone: '+39 011 XXXXXXX',
+		priceRange: PRICE_RANGE,
+		description:
+			'Software House a Torino specializzata in sviluppo software custom, Web App, Mobile e soluzioni di Intelligenza Artificiale per le aziende.',
+		address: {
+			'@type': 'PostalAddress',
+			...COMPANY_ADDRESS
+		},
+		geo: {
+			'@type': 'GeoCoordinates',
+			...COMPANY_GEO
+		},
+		openingHoursSpecification: OPENING_HOURS_SPECIFICATION,
+		areaServed: AREA_SERVED_LOCAL,
+		sameAs: SAME_AS_SOCIALS
+	}
+}
+
+const getFAQPageSchema = (ctx: any, items: any[]) => {
+	if (!items || !Array.isArray(items)) return null
+
+	const validItems = items.filter((item: any) => item.title && isRichTextFilled(item.description))
+
+	if (validItems.length === 0) return null
+
+	return {
+		'@context': 'https://schema.org',
+		'@type': 'FAQPage',
+		inLanguage: getNormalizedLanguage(ctx),
+		mainEntity: validItems.map((item: any) => ({
+			'@type': 'Question',
+			name: item.title,
+			acceptedAnswer: {
+				'@type': 'Answer',
+				text: asText(item.description)
+			}
+		}))
+	}
+}
+
+const getAboutPageSchema = (ctx: any) => {
+	return {
+		'@context': 'https://schema.org',
+		'@type': 'AboutPage',
+		mainEntity: ctx.$constants.schemaOrganization,
+		...getOrganizationSchema(ctx),
+		'@id': `${process.env.NUXT_SITENAME}${ctx.switchLocalePath(ctx.$i18n.locale)}#organization`,
+		url: `${process.env.NUXT_SITENAME}${ctx.switchLocalePath(ctx.$i18n.locale)}`,
+		areaServed: ctx.$constants.areaServed[ctx.$i18n.locale],
+		description:
+			ctx.document.data.seo_description ||
+			ctx.$constants.seoDescription ||
+			ctx.$constants.schemaOrganization.description,
+		headline: ctx.document.data.seo_title || ctx.$constants.seoTitle,
+		mainEntityOfPage: {
+			'@type': 'WebPage',
+			'@id': `${process.env.NUXT_SITENAME}${ctx.switchLocalePath(ctx.$i18n.locale)}`
+		},
+		knowsAbout: ctx.$constants.defaultKnowsAbout,
+		makesOffer: ctx.$constants.defaultMakesOffer[ctx.$i18n.locale],
+		inLanguage: getNormalizedLanguage(ctx)
+	}
+}
+
+const getArticleSchema = (ctx: any, type = 'TechArticle') => {
+	return {
+		'@context': 'https://schema.org',
+		'@type': type,
+		inLanguage: getNormalizedLanguage(ctx),
+		headline: ctx.document.data.title,
+		image: ctx.document.data.og_image?.url ? [ctx.document.data.og_image.url] : [],
+		datePublished:
+			ctx.document.data.publication_date ||
+			(ctx.document.data.publication_date_sort
+				? dayjs(ctx.document.data.publication_date_sort).format('YYYY-MM-DDTHH:mm:ss[Z]')
+				: undefined),
+		dateModified:
+			ctx.document.data.latest_revision_date ||
+			(ctx.document.data.latest_revision_date_sort
+				? dayjs(ctx.document.data.latest_revision_date_sort).format('YYYY-MM-DDTHH:mm:ss[Z]')
+				: undefined),
+		proficiencyLevel: ctx.document.data.proficiency_level || 'Expert',
+		author: {
+			'@type': 'Organization',
+			name: 'Volcanic Minds Team',
+			url: 'https://volcanicminds.com'
+		},
+		publisher: {
+			'@type': 'Organization',
+			name: 'Volcanic Minds',
+			logo: {
+				'@type': 'ImageObject',
+				url: `${process.env.NUXT_SITENAME}${ctx.$constants.logo}`
+			}
+		},
+		description: ctx.document.data.seo_description || ctx.$constants.seoDescription,
+		about: ctx.document.tags // Use Prismic tags as "about"
+	}
+}
+
+const getCollectionPageSchema = (ctx: any) => {
+	const articlesGridSlice = ctx.document.data.slices.find(
+		(slice: { slice_type: string }) => slice.slice_type === 'articles_grid'
+	)
+	const itemListElement: any[] = []
+	if (articlesGridSlice && articlesGridSlice.items) {
+		itemListElement.push(
+			...articlesGridSlice.items.map((item: any, index: number) => ({
+				'@type': 'ListItem',
+				position: index + 1,
+				url: `${process.env.NUXT_SITENAME}${ctx.switchLocalePath(ctx.$i18n.locale)}insights/${item.article.uid}`
+			}))
+		)
+	}
+
+	return {
+		'@context': 'https://schema.org',
+		'@type': 'CollectionPage',
+		inLanguage: getNormalizedLanguage(ctx),
+		headline: ctx.document.data.title,
+		description: ctx.document.data.seo_description || ctx.$constants.seoDescription,
+		mainEntity: {
+			'@type': 'ItemList',
+			itemListElement
+		}
+	}
+}
+
+const getContactPageSchema = (ctx: any) => {
+	return {
+		'@context': 'https://schema.org',
+		'@type': 'ContactPage',
+		mainEntity: {
+			'@type': 'Organization',
+			...getOrganizationSchema(ctx),
+			contactPoint: ctx.$constants.contactPoints
+		},
+		...getOrganizationSchema(ctx),
+		'@id': `${process.env.NUXT_SITENAME}${ctx.switchLocalePath(ctx.$i18n.locale)}#organization`,
+		url: `${process.env.NUXT_SITENAME}${ctx.switchLocalePath(ctx.$i18n.locale)}`,
+		areaServed: ctx.$constants.areaServed[ctx.$i18n.locale],
+		description:
+			ctx.document.data.seo_description ||
+			ctx.$constants.seoDescription ||
+			ctx.$constants.schemaOrganization.description,
+		headline: ctx.document.data.seo_title || ctx.$constants.seoTitle,
+		mainEntityOfPage: {
+			'@type': 'WebPage',
+			'@id': `${process.env.NUXT_SITENAME}${ctx.switchLocalePath(ctx.$i18n.locale)}`
+		},
+		knowsAbout: ctx.$constants.defaultKnowsAbout,
+		makesOffer: ctx.$constants.defaultMakesOffer[ctx.$i18n.locale],
+		inLanguage: getNormalizedLanguage(ctx)
+	}
+}
+
+const _getCompanySchema = (ctx: any, type = 'WebPage', items?: any[]) => {
+	if (type.startsWith('Landing')) {
+		return getLandingPageSchema(ctx, type)
+	}
+
+	if (['Article', 'BlogPosting', 'NewsArticle', 'TechArticle'].includes(type)) {
+		return getArticleSchema(ctx, type)
+	}
+
+	if (type === 'CollectionPage') {
+		return getCollectionPageSchema(ctx)
+	}
+
+	if (type === 'Service') {
+		return getServiceSchema(ctx)
+	}
+
+	if (type === 'AboutPage') {
+		return getAboutPageSchema(ctx)
+	}
+
+	if (type === 'ContactPage') {
+		return getContactPageSchema(ctx)
+	}
+
+	if (type === 'FAQPage' && items) {
+		return getFAQPageSchema(ctx, items)
+	}
+
+	if (type === 'HomePage') {
+		return getHomePageSchema(ctx)
+	}
+
+	return getWebPageSchema(ctx)
+}
+
+export const getCompanySchema = (ctx: any, type = 'WebPage', items?: any[]) => {
+	const jsonLd = _getCompanySchema(ctx, type, items)
+	console.log(jsonLd)
+	return jsonLd
 }

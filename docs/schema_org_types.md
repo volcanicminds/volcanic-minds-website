@@ -78,6 +78,11 @@ Distinguishing between these is crucial for SEO:
 - **What it is:** Represents the _whole blog_ as a section, not a single post.
 - **When to use:** Rarely. Usually, `CollectionPage` is better for the list of articles.
 
+### 11. HomePage
+
+- **What it is:** Represents the _whole blog_ as a section, not a single post.
+- **When to use:** Only for the main homepage.
+
 ---
 
 ## Geolocalized Landing Pages
@@ -129,3 +134,4 @@ These special types are used to define the geographical scope and business entit
 | **Contact Page**                 | `ContactPage`                             |
 | **Partnerships**                 | `WebPage`                                 |
 | **Policy / Terms / Misc**        | `WebPage`                                 |
+| **Homepage**                     | `HomePage`                                |

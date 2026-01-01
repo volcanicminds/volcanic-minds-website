@@ -132,6 +132,7 @@
 					"label": "Schema.org type",
 					"placeholder": "",
 					"options": [
+						"HomePage",
 						"WebPage",
 						"AboutPage",
 						"Article",

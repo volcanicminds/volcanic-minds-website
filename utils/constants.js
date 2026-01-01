@@ -121,7 +121,6 @@ export const schemaOrganization = {
 		'https://images.prismic.io/volcanic-website/3ca43570-29b0-47c7-8205-06ca7537fd03_Volcanic+Minds.png?auto=compress,format',
 	'@id': 'https://volcanicminds.com/#organization',
 	url: 'https://volcanicminds.com',
-	priceRange: '€€-€€€',
 	address,
 	geo,
 	areaServed: areaServed.it,

@@ -9,16 +9,8 @@
 import { Vue, Component, Provide } from 'nuxt-property-decorator'
 import { components } from '~/slices'
 import { minifyDocument } from '~/utils/minify'
-import {
-	getHreflangLinks,
-	getBreadcrumbSchema,
-	getLCPPreloadLink,
-	getNormalizedLanguage,
-	getOrganizationSchema,
-	getCompanySchema,
-	getFAQSchema
-} from '~/utils/seo'
-import { asText, isRichTextFilled } from '~/utils/prismic'
+import { getHreflangLinks, getBreadcrumbSchema, getLCPPreloadLink, getCompanySchema } from '~/utils/seo'
+
 @Component({
 	// @ts-ignore
 	async asyncData({ $prismic, params, error, i18n, store }) {
@@ -110,60 +102,6 @@ export default class PageComponent extends Vue {
 		script: { type: string; json: any }[]
 	} {
 		const type = this.document.data.schema_org_type || 'WebPage'
-		let jsonLd: any = {
-			'@context': 'https://schema.org',
-			'@type': type,
-			headline: this.document.data.seo_title || this.$constants.seoTitle,
-			description: this.document.data.seo_description || this.$constants.seoDescription,
-			mainEntityOfPage: {
-				'@type': 'WebPage',
-				'@id': `${process.env.NUXT_SITENAME}${this.switchLocalePath(this.$i18n.locale)}`
-			},
-			inLanguage: this.$i18n.locale
-		}
-
-		if (type === 'Service') {
-			jsonLd = {
-				'@context': 'https://schema.org',
-				'@type': 'Service',
-				serviceType: this.document.data.title,
-				description: this.document.data.seo_description || this.$constants.seoDescription,
-				provider: this.$constants.schemaOrganization,
-				areaServed: this.$constants.areaServed[this.$i18n.locale],
-				hasOfferCatalog: {
-					'@type': 'OfferCatalog',
-					name: 'Servizi Volcanic Minds'
-				}
-			}
-		} else if (type === 'AboutPage') {
-			jsonLd = {
-				'@context': 'https://schema.org',
-				'@type': 'AboutPage',
-				mainEntity: this.$constants.schemaOrganization
-			}
-		} else if (type === 'ContactPage') {
-			jsonLd = {
-				'@context': 'https://schema.org',
-				'@type': 'ContactPage',
-				mainEntity: {
-					'@type': 'Organization',
-					...getOrganizationSchema(this),
-					contactPoint: this.$constants.contactPoints
-				}
-			}
-		}
-
-		// Company Schema (Landing Pages)
-		if (
-			['LandingLocalPage', 'LandingItalyPage', 'LandingNorthItalyPage', 'LandingEuropePage'].includes(type) ||
-			type === 'ContactPage'
-		) {
-			jsonLd = {
-				...jsonLd,
-				...getCompanySchema(this, type === 'ContactPage' ? 'LandingLocalPage' : type)
-			}
-		}
-
 		const scripts: any[] = [
 			{
 				type: 'application/ld+json',
@@ -171,7 +109,7 @@ export default class PageComponent extends Vue {
 			},
 			{
 				type: 'application/ld+json',
-				json: jsonLd
+				json: getCompanySchema(this, type)
 			}
 		]
 
@@ -180,7 +118,7 @@ export default class PageComponent extends Vue {
 			(slice: { slice_type: string }) => slice.slice_type === 'accordion'
 		)
 		if (accordionSlice && accordionSlice.items && accordionSlice.items.length > 0) {
-			const faqSchema = getFAQSchema(this, accordionSlice.items)
+			const faqSchema = getCompanySchema(this, 'FAQPage', accordionSlice.items)
 			if (faqSchema) {
 				scripts.push({
 					type: 'application/ld+json',

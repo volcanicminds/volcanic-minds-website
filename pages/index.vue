@@ -152,7 +152,7 @@ export default class PageComponent extends Vue {
 			script: [
 				{
 					type: 'application/ld+json',
-					json: getCompanySchema(this, 'LandingLocalPage')
+					json: getCompanySchema(this, 'HomePage')
 				}
 			]
 		}
