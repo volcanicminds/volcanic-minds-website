@@ -198,7 +198,11 @@ interface FirstLevelPageDocumentData {
 		| 'FAQPage'
 		| 'NewsArticle'
 		| 'Service'
-		| 'TechArticle',
+		| 'TechArticle'
+		| 'LandingLocalPage'
+		| 'LandingItalyPage'
+		| 'LandingNorthItalyPage'
+		| 'LandingEuropePage',
 		'filled'
 	>
 
@@ -836,7 +840,11 @@ interface SecondLevelPageDocumentData {
 		| 'FAQPage'
 		| 'NewsArticle'
 		| 'Service'
-		| 'TechArticle',
+		| 'TechArticle'
+		| 'LandingLocalPage'
+		| 'LandingItalyPage'
+		| 'LandingNorthItalyPage'
+		| 'LandingEuropePage',
 		'filled'
 	>
 

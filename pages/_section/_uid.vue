@@ -27,7 +27,9 @@ import {
 	getBreadcrumbSchema,
 	getLCPPreloadLink,
 	getNormalizedLanguage,
-	getOrganizationSchema
+	getOrganizationSchema,
+	getCompanySchema,
+	getFAQSchema
 } from '~/utils/seo'
 import { asText, isRichTextFilled } from '~/utils/prismic'
 
@@ -215,56 +217,14 @@ export default class PageComponent extends Vue {
 			inLanguage: getNormalizedLanguage(this)
 		}
 
-		if (type === 'Service') {
-			jsonLd = {
-				'@context': 'https://schema.org',
-				'@type': 'Service',
-				inLanguage: getNormalizedLanguage(this),
-				serviceType: this.document.data.title,
-				description: this.document.data.seo_description || this.$constants.seoDescription,
-				provider: getOrganizationSchema(this),
-				areaServed: this.$constants.areaServed[this.$i18n.locale],
-				hasOfferCatalog: {
-					'@type': 'OfferCatalog',
-					name: 'Servizi Volcanic Minds'
-				}
-			}
-		} else if (
-			['Article', 'BlogPosting', 'NewsArticle', 'TechArticle'].includes(type) ||
-			this.document.data.is_article
+		// Company Schema (Landing Pages)
+		if (
+			['LandingLocalPage', 'LandingItalyPage', 'LandingNorthItalyPage', 'LandingEuropePage'].includes(type) ||
+			type === 'ContactPage'
 		) {
 			jsonLd = {
-				'@context': 'https://schema.org',
-				'@type': 'TechArticle',
-				inLanguage: getNormalizedLanguage(this),
-				headline: this.document.data.title,
-				image: this.document.data.og_image?.url ? [this.document.data.og_image.url] : [],
-				datePublished:
-					this.document.data.publication_date ||
-					(this.document.data.publication_date_sort
-						? dayjs(this.document.data.publication_date_sort).format('YYYY-MM-DDTHH:mm:ss[Z]')
-						: undefined),
-				dateModified:
-					this.document.data.latest_revision_date ||
-					(this.document.data.latest_revision_date_sort
-						? dayjs(this.document.data.latest_revision_date_sort).format('YYYY-MM-DDTHH:mm:ss[Z]')
-						: undefined),
-				proficiencyLevel: this.document.data.proficiency_level || 'Expert',
-				author: {
-					'@type': 'Organization',
-					name: 'Volcanic Minds Team',
-					url: 'https://volcanicminds.com'
-				},
-				publisher: {
-					'@type': 'Organization',
-					name: 'Volcanic Minds',
-					logo: {
-						'@type': 'ImageObject',
-						url: `${process.env.NUXT_SITENAME}${this.$constants.logo}`
-					}
-				},
-				description: this.document.data.seo_description || this.$constants.seoDescription,
-				about: this.document.tags // Use Prismic tags as "about"
+				...jsonLd,
+				...getCompanySchema(this, type === 'ContactPage' ? 'LandingLocalPage' : type)
 			}
 		}
 
@@ -279,30 +239,16 @@ export default class PageComponent extends Vue {
 			}
 		]
 
-		// FAQPage Logic via Accordion Slice
+		// FAQPage Logic
 		const accordionSlice = this.document.data.slices.find(
 			(slice: { slice_type: string }) => slice.slice_type === 'accordion'
 		)
 		if (accordionSlice && accordionSlice.items && accordionSlice.items.length > 0) {
-			const validItems = accordionSlice.items.filter((item: any) => item.title && isRichTextFilled(item.description))
-
-			if (validItems.length > 0) {
-				const faqJsonLd = {
-					'@context': 'https://schema.org',
-					'@type': 'FAQPage',
-					inLanguage: getNormalizedLanguage(this),
-					mainEntity: validItems.map((item: any) => ({
-						'@type': 'Question',
-						name: item.title,
-						acceptedAnswer: {
-							'@type': 'Answer',
-							text: asText(item.description)
-						}
-					}))
-				}
+			const faqSchema = getFAQSchema(this, accordionSlice.items)
+			if (faqSchema) {
 				scripts.push({
 					type: 'application/ld+json',
-					json: faqJsonLd
+					json: faqSchema
 				})
 			}
 		}

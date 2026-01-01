@@ -7,7 +7,7 @@
 <script lang="ts">
 import { Vue, Component, Provide } from 'nuxt-property-decorator'
 import { components } from '~/slices'
-import { getHreflangLinks, getLCPPreloadLink, getNormalizedLanguage, getOrganizationSchema } from '~/utils/seo'
+import { getHreflangLinks, getLCPPreloadLink, getCompanySchema } from '~/utils/seo'
 
 @Component({
 	// @ts-ignore
@@ -152,20 +152,7 @@ export default class PageComponent extends Vue {
 			script: [
 				{
 					type: 'application/ld+json',
-					json: {
-						'@context': 'https://schema.org',
-						...getOrganizationSchema(this),
-						'@id': `${process.env.NUXT_SITENAME}${this.switchLocalePath(this.$i18n.locale)}#organization`,
-						url: `${process.env.NUXT_SITENAME}${this.switchLocalePath(this.$i18n.locale)}`,
-						areaServed: this.$constants.areaServed[this.$i18n.locale],
-						description:
-							this.document.data.seo_description ||
-							this.$constants.seoDescription ||
-							this.$constants.schemaOrganization.description,
-						knowsAbout: this.$constants.defaultKnowsAbout,
-						makesOffer: this.$constants.defaultMakesOffer[this.$i18n.locale],
-						inLanguage: getNormalizedLanguage(this)
-					}
+					json: getCompanySchema(this, 'LandingLocalPage')
 				}
 			]
 		}

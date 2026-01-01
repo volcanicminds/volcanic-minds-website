@@ -80,6 +80,36 @@ Distinguishing between these is crucial for SEO:
 
 ---
 
+## Geolocalized Landing Pages
+
+These special types are used to define the geographical scope and business entity structure for landing pages targeting specific markets. They override the default organization schema.
+
+### 11. LandingLocalPage (Default)
+
+- **What it is:** The default strategy. Represents the company as a `ProfessionalService` operating locally.
+- **When to use:** For standard pages or landing pages targeting the local area (Torino/Piemonte).
+- **Schema:** Adds local HQ address and operating hours.
+
+### 12. LandingItalyPage
+
+- **What it is:** Strategy for nationwide Italian coverage.
+- **When to use:** For landing pages targeting the entire Italian market (e.g., "Sviluppo Software Italia").
+- **Schema:** `ProfessionalService` with `areaServed` set to "Italy".
+
+### 13. LandingNorthItalyPage
+
+- **What it is:** Strategy for Northern Italy coverage.
+- **When to use:** For landing pages targeting key northern regions (Lombardia, Veneto, Emilia-Romagna).
+- **Schema:** `ProfessionalService` with `areaServed` set to specific northern regions.
+
+### 14. LandingEuropePage
+
+- **What it is:** Strategy for European/Nearshore coverage.
+- **When to use:** For pages targeting international clients (e.g., "Nearshore Software Development").
+- **Schema:** `Organization` (broader than ProfessionalService) with `areaServed` set to "Europe".
+
+---
+
 ## Quick Selection Cheat-Sheet
 
 | Content Type                     | Recommended Schema                        |
@@ -89,6 +119,10 @@ Distinguishing between these is crucial for SEO:
 | **Opinion / Story / Update**     | `BlogPosting`                             |
 | **Project Case Study**           | `Article` (or `TechArticle` if technical) |
 | **Service Description**          | `Service`                                 |
+| **Landing Page (Local/Default)** | `LandingLocalPage`                        |
+| **Landing Page (Italy)**         | `LandingItalyPage`                        |
+| **Landing Page (North Italy)**   | `LandingNorthItalyPage`                   |
+| **Landing Page (Europe)**        | `LandingEuropePage`                       |
 | **Portfolio (Project List)**     | `CollectionPage`                          |
 | **Insights (Article List)**      | `CollectionPage`                          |
 | **FAQ Page**                     | `FAQPage`                                 |

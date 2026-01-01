@@ -14,7 +14,9 @@ import {
 	getBreadcrumbSchema,
 	getLCPPreloadLink,
 	getNormalizedLanguage,
-	getOrganizationSchema
+	getOrganizationSchema,
+	getCompanySchema,
+	getFAQSchema
 } from '~/utils/seo'
 import { asText, isRichTextFilled } from '~/utils/prismic'
 @Component({
@@ -149,65 +151,16 @@ export default class PageComponent extends Vue {
 					contactPoint: this.$constants.contactPoints
 				}
 			}
-		} else if (
-			['Article', 'BlogPosting', 'NewsArticle', 'TechArticle'].includes(type) ||
-			this.document.data.is_article
+		}
+
+		// Company Schema (Landing Pages)
+		if (
+			['LandingLocalPage', 'LandingItalyPage', 'LandingNorthItalyPage', 'LandingEuropePage'].includes(type) ||
+			type === 'ContactPage'
 		) {
 			jsonLd = {
-				'@context': 'https://schema.org',
-				'@type': 'TechArticle',
-				inLanguage: getNormalizedLanguage(this),
-				headline: this.document.data.title,
-				image: this.document.data.og_image?.url ? [this.document.data.og_image.url] : [],
-				datePublished: this.document.data.publication_date,
-				dateModified: this.document.data.latest_revision_date,
-				proficiencyLevel: this.document.data.proficiency_level || 'Expert',
-				author: {
-					'@type': 'Organization',
-					name: 'Volcanic Minds Team',
-					url: 'https://volcanicminds.com'
-				},
-				publisher: {
-					'@type': 'Organization',
-					name: 'Volcanic Minds',
-					logo: {
-						'@type': 'ImageObject',
-						url: `${process.env.NUXT_SITENAME}${this.$constants.logo}`
-					}
-				},
-				description: this.document.data.seo_description || this.$constants.seoDescription,
-				about: this.document.tags // Use Prismic tags as "about"
-			}
-		} else if (this.document.uid === 'portfolio') {
-			// Portfolio CollectionPage
-			// Note: We assume the articles_grid slice with variant 'default' or 'allArticles' contains the items
-			// But for now, we just define the CollectionPage structure.
-			// Finding items from slice if possible would be better, but the slice processing happens in asyncData.
-			// The slice data is modified in place in asyncData, so we can access valid items here.
-			const articlesGridSlice = this.document.data.slices.find(
-				(slice: { slice_type: string }) => slice.slice_type === 'articles_grid'
-			)
-			const itemListElement: any[] = []
-			if (articlesGridSlice && articlesGridSlice.items) {
-				itemListElement.push(
-					...articlesGridSlice.items.map((item: any, index: number) => ({
-						'@type': 'ListItem',
-						position: index + 1,
-						url: `${process.env.NUXT_SITENAME}${this.switchLocalePath(this.$i18n.locale)}insights/${item.article.uid}`
-					}))
-				)
-			}
-
-			jsonLd = {
-				'@context': 'https://schema.org',
-				'@type': 'CollectionPage',
-				inLanguage: getNormalizedLanguage(this),
-				headline: this.document.data.title,
-				description: this.document.data.seo_description || this.$constants.seoDescription,
-				mainEntity: {
-					'@type': 'ItemList',
-					itemListElement
-				}
+				...jsonLd,
+				...getCompanySchema(this, type === 'ContactPage' ? 'LandingLocalPage' : type)
 			}
 		}
 
@@ -222,30 +175,16 @@ export default class PageComponent extends Vue {
 			}
 		]
 
-		// FAQPage Logic via Accordion Slice
+		// FAQPage Logic
 		const accordionSlice = this.document.data.slices.find(
 			(slice: { slice_type: string }) => slice.slice_type === 'accordion'
 		)
 		if (accordionSlice && accordionSlice.items && accordionSlice.items.length > 0) {
-			const validItems = accordionSlice.items.filter((item: any) => item.title && isRichTextFilled(item.description))
-
-			if (validItems.length > 0) {
-				const faqJsonLd = {
-					'@context': 'https://schema.org',
-					'@type': 'FAQPage',
-					inLanguage: getNormalizedLanguage(this),
-					mainEntity: validItems.map((item: any) => ({
-						'@type': 'Question',
-						name: item.title,
-						acceptedAnswer: {
-							'@type': 'Answer',
-							text: asText(item.description)
-						}
-					}))
-				}
+			const faqSchema = getFAQSchema(this, accordionSlice.items)
+			if (faqSchema) {
 				scripts.push({
 					type: 'application/ld+json',
-					json: faqJsonLd
+					json: faqSchema
 				})
 			}
 		}

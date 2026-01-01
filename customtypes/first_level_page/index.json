@@ -142,7 +142,11 @@
 						"FAQPage",
 						"NewsArticle",
 						"Service",
-						"TechArticle"
+						"TechArticle",
+						"LandingLocalPage",
+						"LandingItalyPage",
+						"LandingNorthItalyPage",
+						"LandingEuropePage"
 					],
 					"default_value": "WebPage"
 				}
