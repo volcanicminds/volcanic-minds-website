@@ -21,7 +21,7 @@
 import { Vue, Component, Provide } from 'nuxt-property-decorator'
 import { components } from '~/slices'
 import { minifyDocument } from '~/utils/minify'
-import { getHreflangLinks, getBreadcrumbSchema, getLCPPreloadLink, getCompanySchema } from '~/utils/seo'
+import { getHreflangLinks, getLCPPreloadLink, getCompanySchema } from '~/utils/seo'
 
 @Component({
 	// @ts-ignore
@@ -195,72 +195,11 @@ export default class PageComponent extends Vue {
 		script: { type: string; json: any }[]
 	} {
 		const type = this.document.data.schema_org_type || 'WebPage'
-		const scripts: any[] = [
-			{
-				type: 'application/ld+json',
-				json: getBreadcrumbSchema(this, this.document, this.section)
-			},
-			{
-				type: 'application/ld+json',
-				json: getCompanySchema(this, type)
-			}
-		]
 
 		// FAQPage Logic
 		const accordionSlice = this.document.data.slices.find(
 			(slice: { slice_type: string }) => slice.slice_type === 'accordion'
 		)
-		if (accordionSlice && accordionSlice.items && accordionSlice.items.length > 0) {
-			const faqSchema = getCompanySchema(this, 'FAQPage', accordionSlice.items)
-			if (faqSchema) {
-				scripts.push({
-					type: 'application/ld+json',
-					json: faqSchema
-				})
-			}
-		}
-
-		if (this.youtubeSlice) {
-			scripts.push({
-				type: 'application/ld+json',
-				json: {
-					'@context': 'https://schema.org',
-					'@type': 'VideoObject',
-					name: this.youtubeSlice.primary.video_title,
-					description: this.youtubeSlice.primary.video_description,
-					thumbnailUrl: `https://i.ytimg.com/vi/${this.youtubeSlice.primary.video_id}/hqdefault.jpg`,
-					uploadDate: this.youtubeSlice.primary.video_publishedAt,
-					embedUrl: `https://www.youtube.com/embed/${this.youtubeSlice.primary.video_id}`,
-					duration: this.youtubeSlice.primary.video_duration,
-					publisher: {
-						'@type': 'Organization',
-						name: this.$constants.author,
-						logo: {
-							'@type': 'ImageObject',
-							url: `${process.env.NUXT_SITENAME}${this.$constants.logo}`,
-							width: 192,
-							height: 192
-						}
-					},
-					interactionStatistic: {
-						'@type': 'InteractionCounter',
-						interactionType: {
-							'@type': 'UseAction',
-							name: 'ViewAction'
-						},
-						userInteractionCount: this.youtubeSlice.primary.video_viewCount
-					},
-					keywords: this.youtubeSlice.primary.video_keywords,
-					contentUrl: `https://www.youtube.com/watch?v=${this.youtubeSlice.primary.video_id}`,
-					mainEntityOfPage: {
-						'@type': 'WebPage',
-						'@id': `${process.env.NUXT_SITENAME}${this.switchLocalePath(this.$i18n.locale)}`,
-						headline: this.document.data.seo_title || this.$constants.seoTitle,
-						description: this.document.data.seo_description || this.$constants.seoDescription
-					}
-				}
-			})
-		}
 
 		return {
 			title: this.document.data.seo_title || this.$constants.seoTitle,
@@ -313,7 +252,12 @@ export default class PageComponent extends Vue {
 				lang: this.$i18n.locale
 			},
 			link: [...getHreflangLinks(this), getLCPPreloadLink(this.document)].filter(Boolean) as any,
-			script: scripts
+			script: [
+				{
+					type: 'application/ld+json',
+					json: getCompanySchema(this, type, accordionSlice?.items)
+				}
+			]
 		}
 	}
 }

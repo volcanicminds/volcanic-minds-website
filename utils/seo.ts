@@ -336,12 +336,52 @@ const _getContactPageNode = (ctx: any) => {
 	}
 }
 
+const _getVideoObjectNode = (ctx: any) => {
+	const sitename = process.env.NUXT_SITENAME || 'https://volcanicminds.com'
+	const currentPath = `${sitename}${ctx.$nuxt.$route.path}`.replace(/\/$/, '')
+	const videoSlice = ctx.youtubeSlice
+
+	if (!videoSlice?.primary?.video_id) return null
+
+	return {
+		'@type': 'VideoObject',
+		'@id': `${currentPath}/#video`,
+		name: videoSlice.primary.video_title,
+		description: videoSlice.primary.video_description,
+		thumbnailUrl: `https://i.ytimg.com/vi/${videoSlice.primary.video_id}/hqdefault.jpg`,
+		uploadDate: videoSlice.primary.video_publishedAt,
+		embedUrl: `https://www.youtube.com/embed/${videoSlice.primary.video_id}`,
+		duration: videoSlice.primary.video_duration,
+		publisher: {
+			'@type': 'Organization',
+			name: ctx.$constants.author || 'Volcanic Minds',
+			logo: {
+				'@type': 'ImageObject',
+				url: `${sitename}${ctx.$constants.logo || '/logo.png'}`,
+				width: 192,
+				height: 192
+			}
+		},
+		interactionStatistic: {
+			'@type': 'InteractionCounter',
+			interactionType: {
+				'@type': 'UseAction',
+				name: 'ViewAction'
+			},
+			userInteractionCount: videoSlice.primary.video_viewCount
+		},
+		keywords: videoSlice.primary.video_keywords,
+		contentUrl: `https://www.youtube.com/watch?v=${videoSlice.primary.video_id}`,
+		mainEntityOfPage: { '@id': `${currentPath}/#webpage` }
+	}
+}
+
 /**
  * --- MAIN COMPOSER ---
  *
  * Constructs the Link Graph based on page type.
  */
-export const getCompanySchema = (ctx: any, type = 'WebPage', items?: any[]) => {
+export const getCompanySchema = (ctx: any, type = 'WebPage', faqItems?: any[]) => {
 	const graph: any[] = []
 
 	// 1. Organization / LocalBusiness Node (Always present)
@@ -363,7 +403,8 @@ export const getCompanySchema = (ctx: any, type = 'WebPage', items?: any[]) => {
 	graph.push(webPageNode)
 
 	// 4. Breadcrumb Node (Always present)
-	const breadcrumbNode = _getBreadcrumbNode(ctx, ctx.document)
+	// Pass ctx.section if available (for Level 2 pages)
+	const breadcrumbNode = _getBreadcrumbNode(ctx, ctx.document, ctx.section)
 	graph.push(breadcrumbNode)
 
 	// 5. Specific Type Nodes (Service, Article, FAQ, etc.)
@@ -377,13 +418,6 @@ export const getCompanySchema = (ctx: any, type = 'WebPage', items?: any[]) => {
 		// Link WebPage -> Service
 		webPageNode.mainEntity = { '@id': serviceNode['@id'] }
 		graph.push(serviceNode)
-	} else if (type === 'FAQPage' && items) {
-		const faqNode = _getFAQNode(ctx, items)
-		if (faqNode) {
-			// FAQ is often auxiliary, but if it's an FAQPage it's main
-			webPageNode.mainEntity = { '@id': faqNode['@id'] }
-			graph.push(faqNode)
-		}
 	} else if (type === 'CollectionPage') {
 		const collectionNode = _getCollectionPageNode(ctx)
 		webPageNode.mainEntity = { '@id': collectionNode['@id'] }
@@ -397,12 +431,41 @@ export const getCompanySchema = (ctx: any, type = 'WebPage', items?: any[]) => {
 		Object.assign(webPageNode, contactNode)
 	}
 
+	// 6. FAQ Logic (Can accompany any page type)
+	if (type === 'FAQPage' && faqItems) {
+		const faqNode = _getFAQNode(ctx, faqItems)
+		if (faqNode) {
+			// FAQ is often auxiliary, but if it's an FAQPage it's main
+			webPageNode.mainEntity = { '@id': faqNode['@id'] }
+			graph.push(faqNode)
+		}
+	} else if (faqItems && faqItems.length > 0) {
+		// If page is NOT FAQPage but has FAQ items (e.g. Service with FAQs)
+		const faqNode = _getFAQNode(ctx, faqItems)
+		if (faqNode) {
+			webPageNode.hasPart = { '@id': faqNode['@id'] }
+			graph.push(faqNode)
+		}
+	}
+
+	// 7. VideoObject Logic (If youtubeSlice is present on context)
+	if (ctx.youtubeSlice) {
+		const videoNode = _getVideoObjectNode(ctx)
+		if (videoNode) {
+			// Video is usually part of the page content
+			webPageNode.hasPart = webPageNode.hasPart
+				? [].concat(webPageNode.hasPart, { '@id': videoNode['@id'] } as any)
+				: { '@id': videoNode['@id'] }
+			graph.push(videoNode)
+		}
+	}
+
 	const jsonLd = {
 		'@context': 'https://schema.org',
 		'@graph': graph
 	}
 
-	console.log('Generated Schema Graph:', JSON.stringify(jsonLd, null, 2))
+	// console.log('Generated Schema Graph:', JSON.stringify(jsonLd, null, 2))
 	return jsonLd
 }
 

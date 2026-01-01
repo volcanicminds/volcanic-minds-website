@@ -115,7 +115,7 @@ export const contactPoints = [
 ]
 
 export const schemaOrganization = {
-	'@type': 'ProfessionalService',
+	'@type': 'LocalBusiness',
 	name: 'Volcanic Minds',
 	image:
 		'https://images.prismic.io/volcanic-website/3ca43570-29b0-47c7-8205-06ca7537fd03_Volcanic+Minds.png?auto=compress,format',

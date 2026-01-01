@@ -9,7 +9,7 @@
 import { Vue, Component, Provide } from 'nuxt-property-decorator'
 import { components } from '~/slices'
 import { minifyDocument } from '~/utils/minify'
-import { getHreflangLinks, getBreadcrumbSchema, getLCPPreloadLink, getCompanySchema } from '~/utils/seo'
+import { getHreflangLinks, getLCPPreloadLink, getCompanySchema } from '~/utils/seo'
 
 @Component({
 	// @ts-ignore
@@ -102,30 +102,11 @@ export default class PageComponent extends Vue {
 		script: { type: string; json: any }[]
 	} {
 		const type = this.document.data.schema_org_type || 'WebPage'
-		const scripts: any[] = [
-			{
-				type: 'application/ld+json',
-				json: getBreadcrumbSchema(this, this.document)
-			},
-			{
-				type: 'application/ld+json',
-				json: getCompanySchema(this, type)
-			}
-		]
 
 		// FAQPage Logic
 		const accordionSlice = this.document.data.slices.find(
 			(slice: { slice_type: string }) => slice.slice_type === 'accordion'
 		)
-		if (accordionSlice && accordionSlice.items && accordionSlice.items.length > 0) {
-			const faqSchema = getCompanySchema(this, 'FAQPage', accordionSlice.items)
-			if (faqSchema) {
-				scripts.push({
-					type: 'application/ld+json',
-					json: faqSchema
-				})
-			}
-		}
 
 		return {
 			title: this.document.data.seo_title || this.$constants.seoTitle,
@@ -178,7 +159,12 @@ export default class PageComponent extends Vue {
 				lang: this.$i18n.locale
 			},
 			link: [...getHreflangLinks(this), getLCPPreloadLink(this.document)].filter(Boolean) as any,
-			script: scripts
+			script: [
+				{
+					type: 'application/ld+json',
+					json: getCompanySchema(this, type, accordionSlice?.items)
+				}
+			]
 		}
 	}
 }
