@@ -24,8 +24,11 @@
 				</div>
 			</div>
 			<h2 v-if="slice.primary.title" class="h1 mt0 mb2">{{ slice.primary.title }}</h2>
-			<PrismicRichText v-if="slice.primary.text" :field="slice.primary.text" />
-			<div v-if="slice.primary.button_label && slice.primary.button_link" class="mt3">
+			<PrismicRichText v-if="isRichTextFilled(slice.primary.text)" :field="slice.primary.text" class="mb2" />
+			<div
+				v-if="slice.primary.button_label && slice.primary.button_link"
+				:class="slice.items.length || slice.primary.title || slice.primary.text ? 'mt2' : ''"
+			>
 				<PrismicLink :field="slice.primary.button_link" class="btn btn-primary btn-big uppercase">{{
 					slice.primary.button_label
 				}}</PrismicLink>
@@ -36,6 +39,7 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue'
+import { isRichTextFilled } from '~/utils/prismic'
 export default defineComponent({
 	name: 'Contacts'
 })
