@@ -234,11 +234,37 @@ export const AREA_SERVED_MAPS = {
 		{ '@type': 'City', name: 'Torino', sameAs: 'https://it.wikipedia.org/wiki/Torino' },
 		{ '@type': 'AdministrativeArea', name: 'Piemonte', sameAs: 'https://it.wikipedia.org/wiki/Piemonte' }
 	],
-	LandingItalyPage: {
-		'@type': 'Country',
-		name: 'Italy',
-		sameAs: 'https://en.wikipedia.org/wiki/Italy'
-	},
+	LandingItalyPage: [
+		{ '@type': 'AdministrativeArea', name: 'Abruzzo', sameAs: 'https://it.wikipedia.org/wiki/Abruzzo' },
+		{ '@type': 'AdministrativeArea', name: 'Basilicata', sameAs: 'https://it.wikipedia.org/wiki/Basilicata' },
+		{ '@type': 'AdministrativeArea', name: 'Calabria', sameAs: 'https://it.wikipedia.org/wiki/Calabria' },
+		{ '@type': 'AdministrativeArea', name: 'Campania', sameAs: 'https://it.wikipedia.org/wiki/Campania' },
+		{ '@type': 'AdministrativeArea', name: 'Emilia-Romagna', sameAs: 'https://it.wikipedia.org/wiki/Emilia-Romagna' },
+		{
+			'@type': 'AdministrativeArea',
+			name: 'Friuli-Venezia Giulia',
+			sameAs: 'https://it.wikipedia.org/wiki/Friuli-Venezia_Giulia'
+		},
+		{ '@type': 'AdministrativeArea', name: 'Lazio', sameAs: 'https://it.wikipedia.org/wiki/Lazio' },
+		{ '@type': 'AdministrativeArea', name: 'Liguria', sameAs: 'https://it.wikipedia.org/wiki/Liguria' },
+		{ '@type': 'AdministrativeArea', name: 'Lombardia', sameAs: 'https://it.wikipedia.org/wiki/Lombardia' },
+		{ '@type': 'AdministrativeArea', name: 'Marche', sameAs: 'https://it.wikipedia.org/wiki/Marche' },
+		{ '@type': 'AdministrativeArea', name: 'Molise', sameAs: 'https://it.wikipedia.org/wiki/Molise' },
+		{ '@type': 'AdministrativeArea', name: 'Piemonte', sameAs: 'https://it.wikipedia.org/wiki/Piemonte' },
+		{ '@type': 'AdministrativeArea', name: 'Puglia', sameAs: 'https://it.wikipedia.org/wiki/Puglia' },
+		{ '@type': 'AdministrativeArea', name: 'Sardegna', sameAs: 'https://it.wikipedia.org/wiki/Sardegna' },
+		{ '@type': 'AdministrativeArea', name: 'Sicilia', sameAs: 'https://it.wikipedia.org/wiki/Sicilia' },
+		{ '@type': 'AdministrativeArea', name: 'Toscana', sameAs: 'https://it.wikipedia.org/wiki/Toscana' },
+		{
+			'@type': 'AdministrativeArea',
+			name: 'Trentino-Alto Adige',
+			sameAs: 'https://it.wikipedia.org/wiki/Trentino-Alto_Adige'
+		},
+		{ '@type': 'AdministrativeArea', name: 'Umbria', sameAs: 'https://it.wikipedia.org/wiki/Umbria' },
+		{ '@type': 'AdministrativeArea', name: "Valle d'Aosta", sameAs: 'https://it.wikipedia.org/wiki/Valle_d%27Aosta' },
+		{ '@type': 'AdministrativeArea', name: 'Veneto', sameAs: 'https://it.wikipedia.org/wiki/Veneto' },
+		{ '@type': 'Country', name: 'Italy', sameAs: 'https://en.wikipedia.org/wiki/Italy' }
+	],
 	LandingNorthItalyPage: [
 		{ '@type': 'AdministrativeArea', name: 'Lombardia', sameAs: 'https://it.wikipedia.org/wiki/Lombardia' },
 		{ '@type': 'AdministrativeArea', name: 'Veneto', sameAs: 'https://it.wikipedia.org/wiki/Veneto' },
