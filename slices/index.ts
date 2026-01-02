@@ -9,6 +9,7 @@ export const components = {
 	hero_banner: () => import(/* webpackChunkName: "prismic__slices__hero_banner" */ './HeroBanner/index.vue'),
 	how_to_steps: () => import(/* webpackChunkName: "prismic__slices__how_to_steps" */ './HowToSteps/index.vue'),
 	image_and_text: () => import(/* webpackChunkName: "prismic__slices__image_and_text" */ './ImageAndText/index.vue'),
+	logo_showcase: () => import(/* webpackChunkName: "prismic__slices__logo_showcase" */ './LogoShowcase/index.vue'),
 	masonry: () => import(/* webpackChunkName: "prismic__slices__masonry" */ './Masonry/index.vue'),
 	navigation_menu: () =>
 		import(/* webpackChunkName: "prismic__slices__navigation_menu" */ './NavigationItem/index.vue'),

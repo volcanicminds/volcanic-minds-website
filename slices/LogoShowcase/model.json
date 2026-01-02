@@ -1,0 +1,146 @@
+{
+  "id": "logo_showcase",
+  "type": "SharedSlice",
+  "name": "LogoShowcase",
+  "description": "LogoShowcase",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "title": {
+          "type": "Text",
+          "config": {
+            "label": "Titolo",
+            "placeholder": ""
+          }
+        },
+        "subtitle": {
+          "type": "Text",
+          "config": {
+            "label": "Sottotitolo",
+            "placeholder": ""
+          }
+        },
+        "layout_mode": {
+          "type": "Select",
+          "config": {
+            "label": "Modlità Layout",
+            "options": [
+              "Grid (Wrap)",
+              "Single Row"
+            ],
+            "default_value": "Grid (Wrap)"
+          }
+        },
+        "auto_scroll": {
+          "type": "Boolean",
+          "config": {
+            "label": "Abilita Auto-Scroll (se necessario)",
+            "placeholder_false": "NO",
+            "placeholder_true": "SI",
+            "default_value": false
+          }
+        },
+        "scroll_speed": {
+          "type": "Select",
+          "config": {
+            "label": "Velocità Scroll",
+            "options": [
+              "Slow",
+              "Medium",
+              "Fast"
+            ],
+            "default_value": "Medium"
+          }
+        },
+        "alignment": {
+           "type": "Select",
+           "config": {
+             "label": "Allineamento (se statico)",
+             "options": [
+               "Left",
+               "Center"
+             ],
+             "default_value": "Center"
+           }
+        },
+        "logo_size": {
+          "type": "Select",
+          "config": {
+            "label": "Dimensione Logo",
+            "options": [
+              "Small (60px)",
+              "Normal (85px)"
+            ],
+            "default_value": "Small (60px)"
+          }
+        },
+        "enable_bg": {
+          "type": "Boolean",
+          "config": {
+            "label": "Abilita Sfondo (Grigio)",
+            "placeholder_false": "NO",
+            "placeholder_true": "SI",
+            "default_value": false
+          }
+        },
+        "margin_top": {
+          "type": "Boolean",
+          "config": {
+            "label": "Margine superiore",
+            "placeholder_false": "NO",
+            "placeholder_true": "SI",
+            "default_value": false
+          }
+        },
+        "margin_bottom": {
+          "type": "Boolean",
+          "config": {
+            "label": "Margine inferiore",
+            "placeholder_false": "NO",
+            "placeholder_true": "SI",
+            "default_value": false
+          }
+        },
+        "enable_animation": {
+          "type": "Boolean",
+          "config": {
+            "label": "Abilita animazione",
+            "placeholder_false": "NO",
+            "placeholder_true": "SI",
+            "default_value": false
+          }
+        }
+      },
+      "items": {
+        "logo": {
+          "type": "Image",
+          "config": {
+            "label": "Logo",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "name": {
+          "type": "Text",
+          "config": {
+            "label": "Nome (Tooltip/Alt)",
+            "placeholder": ""
+          }
+        },
+        "link": {
+          "type": "Link",
+          "config": {
+            "label": "Link (Opzionale)",
+            "select": null
+          }
+        }
+      }
+    }
+  ]
+}

@@ -340,8 +340,8 @@ export const AUTHORS = {
 		'@type': 'Person',
 		name: 'Davide Morra',
 		jobTitle: 'CEO & Founder',
-		url: 'https://volcanicminds.com', // or personal site
-		sameAs: ['https://www.linkedin.com/in/davidemorra/', 'https://github.com/davidemorra']
+		url: 'https://volcanicminds.com',
+		sameAs: ['https://www.linkedin.com/in/dmorra', 'https://github.com/mrddter', 'https://morra.in']
 	},
 	'Volcanic Minds Team': {
 		'@type': 'Organization',

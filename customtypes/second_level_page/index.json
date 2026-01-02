@@ -148,6 +148,9 @@
 						},
 						"how_to_steps": {
 							"type": "SharedSlice"
+						},
+						"logo_showcase": {
+							"type": "SharedSlice"
 						}
 					}
 				}

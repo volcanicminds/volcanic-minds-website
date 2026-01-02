@@ -4,6 +4,8 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import {
 	faAngleDown,
 	faChevronRight,
+	faChevronUp,
+	faChevronDown,
 	faArrowRight,
 	faMinus,
 	faPlus,
@@ -32,6 +34,8 @@ config.autoAddCss = false
 library.add(
 	faAngleDown,
 	faChevronRight,
+	faChevronUp,
+	faChevronDown,
 	faArrowRight,
 	faMinus,
 	faPlus,
