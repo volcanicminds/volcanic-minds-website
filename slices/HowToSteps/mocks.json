@@ -1,0 +1,62 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"title": {
+				"__TYPE__": "FieldContent",
+				"type": "Text",
+				"value": "HowTo: Test pratico"
+			},
+			"subtitle": {
+				"__TYPE__": "FieldContent",
+				"type": "Text",
+				"value": "Un test pratico sull'uso di passi per generare HowTo snippet"
+			}
+		},
+		"items": [
+			{
+				"__TYPE__": "GroupItemContent",
+				"value": [
+					[
+						"step_title",
+						{
+							"__TYPE__": "FieldContent",
+							"type": "Text",
+							"value": "Installazione mastra"
+						}
+					],
+					[
+						"step_description",
+						{
+							"__TYPE__": "StructuredTextContent",
+							"value": [
+								{
+									"type": "paragraph",
+									"content": {
+										"text": "npm i mastra",
+										"spans": []
+									},
+									"direction": "ltr"
+								}
+							]
+						}
+					]
+				]
+			},
+			{
+				"__TYPE__": "GroupItemContent",
+				"value": [
+					[
+						"step_title",
+						{
+							"__TYPE__": "FieldContent",
+							"type": "Text",
+							"value": "Aggiunto pacchetto volcanic minds backend"
+						}
+					]
+				]
+			}
+		]
+	}
+]

@@ -1,59 +1,59 @@
 [
-  {
-    "__TYPE__": "SharedSliceContent",
-    "variation": "default",
-    "primary": {
-      "title": {
-        "__TYPE__": "FieldContent",
-        "value": "shorter",
-        "type": "Text"
-      },
-      "subtitle": {
-        "__TYPE__": "FieldContent",
-        "value": "general",
-        "type": "Text"
-      },
-      "margin_top": {
-        "__TYPE__": "BooleanContent",
-        "value": true
-      },
-      "margin_bottom": {
-        "__TYPE__": "BooleanContent",
-        "value": true
-      },
-      "enable_animation": {
-        "__TYPE__": "BooleanContent",
-        "value": true
-      }
-    },
-    "items": [
-      {
-        "__TYPE__": "GroupItemContent",
-        "value": [
-          [
-            "title",
-            {
-              "__TYPE__": "FieldContent",
-              "value": "teeth",
-              "type": "Text"
-            }
-          ],
-          [
-            "description",
-            {
-              "__TYPE__": "StructuredTextContent",
-              "value": [
-                {
-                  "type": "paragraph",
-                  "content": {
-                    "text": "Lorem ipsum aute aliqua anim nisi exercitation. Culpa consectetur quis sunt aute."
-                  }
-                }
-              ]
-            }
-          ]
-        ]
-      }
-    ]
-  }
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"title": {
+				"__TYPE__": "FieldContent",
+				"value": "shorter",
+				"type": "Text"
+			},
+			"subtitle": {
+				"__TYPE__": "FieldContent",
+				"value": "general",
+				"type": "Text"
+			},
+			"margin_top": {
+				"__TYPE__": "BooleanContent",
+				"value": true
+			},
+			"margin_bottom": {
+				"__TYPE__": "BooleanContent",
+				"value": true
+			},
+			"enable_animation": {
+				"__TYPE__": "BooleanContent",
+				"value": true
+			}
+		},
+		"items": [
+			{
+				"__TYPE__": "GroupItemContent",
+				"value": [
+					[
+						"title",
+						{
+							"__TYPE__": "FieldContent",
+							"type": "Text",
+							"value": "Single item"
+						}
+					],
+					[
+						"description",
+						{
+							"__TYPE__": "StructuredTextContent",
+							"value": [
+								{
+									"type": "paragraph",
+									"content": {
+										"text": "Lorem ipsum aute aliqua anim nisi exercitation. Culpa consectetur quis sunt aute."
+									}
+								}
+							]
+						}
+					]
+				]
+			}
+		]
+	}
 ]

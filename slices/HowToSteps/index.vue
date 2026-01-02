@@ -12,7 +12,7 @@
 			</div>
 
 			<div class="how-to-steps max-width-3 mx-auto">
-				<div v-for="(item, i) in slice.items" :key="`step-${i}`" class="step-item relative pb4">
+				<div v-for="(item, i) in slice.items" :key="`step-${i}`" class="step-item relative pb2">
 					<div class="flex items-start cursor-pointer" @click="toggleStep(`step-${i}`)">
 						<!-- Step Number -->
 						<div class="step-number flex-none flex items-center justify-center mr3 font-bold">

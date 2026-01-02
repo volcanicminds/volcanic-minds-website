@@ -1,0 +1,77 @@
+{
+  "id": "how_to_steps",
+  "type": "SharedSlice",
+  "name": "HowToSteps",
+  "description": "HowToSteps",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "title": {
+          "type": "Text",
+          "config": {
+            "label": "Titolo",
+            "placeholder": ""
+          }
+        },
+        "subtitle": {
+          "type": "Text",
+          "config": {
+            "label": "Sottotitolo",
+            "placeholder": ""
+          }
+        },
+        "margin_top": {
+          "type": "Boolean",
+          "config": {
+            "label": "Margine superiore",
+            "placeholder_false": "NO",
+            "placeholder_true": "SI",
+            "default_value": false
+          }
+        },
+        "margin_bottom": {
+          "type": "Boolean",
+          "config": {
+            "label": "Margine inferiore",
+            "placeholder_false": "NO",
+            "placeholder_true": "SI",
+            "default_value": false
+          }
+        },
+        "enable_animation": {
+          "type": "Boolean",
+          "config": {
+            "label": "Abilita animazione",
+            "placeholder_false": "NO",
+            "placeholder_true": "SI",
+            "default_value": false
+          }
+        }
+      },
+      "items": {
+        "step_title": {
+          "type": "Text",
+          "config": {
+            "label": "Titolo Step",
+            "placeholder": "Es. Installazione"
+          }
+        },
+        "step_description": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Descrizione Step",
+            "placeholder": "Dettagli dello step...",
+            "allowTargetBlank": true,
+            "multi": "paragraph,em,strong,hyperlink,image,preformatted,list-item,o-list-item"
+          }
+        }
+      }
+    }
+  ]
+}

@@ -60,6 +60,9 @@
 						},
 						"call_to_action": {
 							"type": "SharedSlice"
+						},
+						"how_to_steps": {
+							"type": "SharedSlice"
 						}
 					}
 				}
