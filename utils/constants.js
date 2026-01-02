@@ -295,7 +295,8 @@ export const SAME_AS_SOCIALS = [
 
 export const REVIEWS_DATA = {
 	ratingValue: '5.0',
-	reviewCount: '52',
+	ratingCount: '6',
+	reviewCount: '2',
 	bestRating: '5',
 	worstRating: '1'
 }
