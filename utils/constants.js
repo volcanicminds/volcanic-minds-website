@@ -289,8 +289,9 @@ export const OPENING_HOURS_SPECIFICATION = {
 }
 
 export const SAME_AS_SOCIALS = [
-	'https://www.linkedin.com/company/volcanicminds/',
-	'https://www.facebook.com/volcanicminds'
+	'https://linkedin.com/company/volcanic-minds',
+	'https://github.com/volcanicminds',
+	'https://youtube.com/@volcanicminds'
 ]
 
 export const REVIEWS_DATA = {

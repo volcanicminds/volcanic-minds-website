@@ -125,9 +125,9 @@ const _getOrganizationNode = (ctx: any, type: string) => {
 	// Supports IT/EN localization
 	const localDetails = landingPageDetails.LandingLocalPage[lang] || landingPageDetails.LandingLocalPage.it
 
-	// Base LocalBusiness Schema
+	// Base ProfessionalService Schema
 	const baseOrg = {
-		'@type': 'LocalBusiness',
+		'@type': 'ProfessionalService',
 		'@id': identityId,
 		name: localDetails?.name || 'Volcanic Minds',
 		url: sitename,
@@ -136,6 +136,10 @@ const _getOrganizationNode = (ctx: any, type: string) => {
 			'@type': 'ImageObject',
 			url: logoUrl
 		},
+		additionalType: [
+			'https://www.wikidata.org/wiki/Q1668024', // Computer software company
+			'https://www.wikidata.org/wiki/Q5302303' // Software development
+		],
 		// telephone: '+39 011 XXXXXXX',
 		priceRange: PRICE_RANGE,
 		description:
