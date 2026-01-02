@@ -24,13 +24,15 @@
 							<h3 class="my0 h3 step-title">{{ item.step_title }}</h3>
 
 							<!-- Step Description (Collapsible) -->
-							<div v-show="isStepOpen(`step-${i}`)" class="mt2 rich-text-content">
+							<div
+								v-show="isRichTextFilled(item.step_description) && isStepOpen(`step-${i}`)"
+								class="mt2 rich-text-content"
+							>
 								<PrismicRichText :field="item.step_description" />
 							</div>
 						</div>
-
 						<!-- Toggle Icon -->
-						<div class="toggle-icon ml3 flex-none opacity-50">
+						<div v-if="isRichTextFilled(item.step_description)" class="toggle-icon ml3 flex-none opacity-50">
 							<font-awesome-icon :icon="['fas', isStepOpen(`step-${i}`) ? 'chevron-up' : 'chevron-down']" />
 						</div>
 					</div>
@@ -45,6 +47,7 @@
 
 <script lang="ts">
 import { defineComponent, ref } from 'vue'
+import { isRichTextFilled } from '~/utils/prismic'
 
 export default defineComponent({
 	name: 'HowToSteps'
