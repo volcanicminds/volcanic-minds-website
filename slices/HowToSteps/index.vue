@@ -106,7 +106,8 @@ function toggleStep(id: string): void {
 	z-index 0
 
 .step-title
-	line-height 40px // Align with number
+	line-height 1.2
+	padding-top 6px
 
 .toggle-icon
 	line-height 40px
