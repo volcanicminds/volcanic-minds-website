@@ -2,7 +2,8 @@ import dayjs from 'dayjs'
 import { asText, isRichTextFilled } from '~/utils/prismic'
 import {
 	AREA_SERVED_MAPS,
-	AUTHORS,
+	ORG_AUTHOR,
+	TECH_AUTHOR,
 	landingPageDetails,
 	OPENING_HOURS_SPECIFICATION,
 	REVIEWS_DATA,
@@ -247,15 +248,11 @@ const _getArticleNode = (ctx: any, type = 'TechArticle') => {
 	const currentPath = `${sitename}${ctx.$nuxt.$route.path}`.replace(/\/$/, '')
 	const identityId = `${sitename}/#identity`
 
-	// 1. Author Strategy (Dual: Person vs Organization)
-	// For TechArticles, we want to highlight individual expertise (E-E-A-T)
-	// For now, we default to Davide Morra for Tech, later we can map from Prismic author field
-	let authorNode: any = AUTHORS['Volcanic Minds Team']
+	let authorNode: any = ORG_AUTHOR
 	if (type === 'TechArticle') {
-		authorNode = AUTHORS['Davide Morra']
+		authorNode = TECH_AUTHOR
 	}
 
-	// 2. Semantic Mentions (Wikidata)
 	const mentions: any[] = []
 	if (ctx.document.tags && Array.isArray(ctx.document.tags)) {
 		ctx.document.tags.forEach((tag: string) => {
@@ -429,7 +426,7 @@ const _getSoftwareApplicationNode = (ctx: any) => {
 		description: ctx.document.data.seo_description || ctx.$constants.seoDescription,
 		image: ctx.document.data.og_image?.url,
 		url: currentPath,
-		...SOFTWARE_APPS_DEFAULTS,
+		...SOFTWARE_APPS_DEFAULTS[ctx.$i18n.locale],
 		currentLine: ctx.document.uid === 'volcano-sdk' ? 'Volcano SDK 1.0' : undefined // Example of dynamic override
 	}
 }

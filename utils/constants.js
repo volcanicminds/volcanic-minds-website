@@ -1,10 +1,12 @@
+const companyName = 'Volcanic Minds'
+
 export const seoTitle = 'Volcanic Minds | Smart, Fast, Efficient'
 export const seoDescription =
 	'Software House Torino e partner innovativo. Sviluppiamo SaaS, software custom e soluzioni Enterprise. Integriamo Cloud Native e Agenti AI per massimizzare il ROI.'
-export const seoSiteName = 'Volcanic Minds'
+export const seoSiteName = companyName
 export const seoImageUrl = '/open-graph.png'
 export const logo = '/logo.png'
-export const author = 'Volcanic Minds'
+export const author = companyName
 export const schemaOrgType = 'WebPage'
 
 export const ogTitle = 'Volcanic Minds | Smart, Fast, Efficient'
@@ -116,7 +118,7 @@ export const contactPoints = [
 
 export const schemaOrganization = {
 	'@type': 'LocalBusiness',
-	name: 'Volcanic Minds',
+	name: companyName,
 	image:
 		'https://images.prismic.io/volcanic-website/3ca43570-29b0-47c7-8205-06ca7537fd03_Volcanic+Minds.png?auto=compress,format',
 	'@id': 'https://volcanicminds.com/#organization',
@@ -199,13 +201,13 @@ export const defaultMakesOffer = {
 
 export const landingPageDetails = {
 	LandingEuropePage: {
-		name: 'Volcanic Minds',
+		name: companyName,
 		alternateName: 'Volcanic Minds - Nearshore Software Partner',
 		description:
 			'Italian Software House providing custom software development, AI integration, and mobile app services for European companies. High-quality engineering with EU time zone alignment.'
 	},
 	LandingItalyPage: {
-		name: 'Volcanic Minds',
+		name: companyName,
 		alternateName: 'Volcanic Minds - Sviluppo Software Italia',
 		description:
 			'Partner tecnologico per lo sviluppo di software su misura e soluzioni AI per aziende in tutta Italia. Operatività remota e in loco.'
@@ -217,12 +219,12 @@ export const landingPageDetails = {
 	},
 	LandingLocalPage: {
 		it: {
-			name: 'Volcanic Minds',
+			name: companyName,
 			description:
 				'Software House a Torino specializzata in sviluppo software custom, Web App, Mobile e soluzioni di Intelligenza Artificiale per le aziende.'
 		},
 		en: {
-			name: 'Volcanic Minds',
+			name: companyName,
 			description:
 				'Software House based in Turin, specialized in Custom Software Development, Web Apps, Mobile, and Enterprise AI solutions.'
 		}
@@ -291,8 +293,6 @@ export const SAME_AS_SOCIALS = [
 	'https://www.facebook.com/volcanicminds'
 ]
 
-// --- NEW SEO CONFIGURATION --- //
-
 export const REVIEWS_DATA = {
 	ratingValue: '5.0',
 	reviewCount: '52',
@@ -335,33 +335,45 @@ export const TAG_TO_WIKIDATA = {
 	Management: 'https://www.wikidata.org/wiki/Q2920921'
 }
 
-export const AUTHORS = {
-	'Davide Morra': {
-		'@type': 'Person',
-		name: 'Davide Morra',
-		jobTitle: 'CEO & Founder',
-		url: 'https://volcanicminds.com',
-		sameAs: ['https://www.linkedin.com/in/dmorra', 'https://github.com/mrddter', 'https://morra.in']
-	},
-	'Volcanic Minds Team': {
-		'@type': 'Organization',
-		name: 'Volcanic Minds Team',
-		url: 'https://volcanicminds.com',
-		logo: {
-			'@type': 'ImageObject',
-			url: logo
-		}
+export const TECH_AUTHOR = {
+	'@type': 'Person',
+	name: 'Davide Morra',
+	jobTitle: 'CEO & Founder',
+	url: 'https://volcanicminds.com',
+	sameAs: ['https://www.linkedin.com/in/dmorra', 'https://github.com/mrddter', 'https://morra.in']
+}
+
+export const ORG_AUTHOR = {
+	'@type': 'Organization',
+	name: 'Volcanic Minds Team',
+	url: 'https://volcanicminds.com',
+	logo: {
+		'@type': 'ImageObject',
+		url: logo
 	}
 }
 
 export const SOFTWARE_APPS_DEFAULTS = {
-	operatingSystem: 'Any',
-	applicationCategory: 'BusinessApplication',
-	offers: {
-		'@type': 'Offer',
-		price: '0',
-		priceCurrency: 'EUR',
-		availability: 'https://schema.org/OnlineOnly',
-		description: 'Richiesta preventivo / Contact for pricing'
+	'it-it': {
+		operatingSystem: 'Any',
+		applicationCategory: 'BusinessApplication',
+		offers: {
+			'@type': 'Offer',
+			price: '0',
+			priceCurrency: 'EUR',
+			availability: 'https://schema.org/OnlineOnly',
+			description: 'Richiesta preventivo senza costi aggiuntivi'
+		}
+	},
+	en: {
+		operatingSystem: 'Any',
+		applicationCategory: 'BusinessApplication',
+		offers: {
+			'@type': 'Offer',
+			price: '0',
+			priceCurrency: 'EUR',
+			availability: 'https://schema.org/OnlineOnly',
+			description: 'Contact for pricing without additional costs'
+		}
 	}
 }
