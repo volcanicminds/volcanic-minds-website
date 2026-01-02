@@ -4,6 +4,7 @@
 		:margin-bottom="slice.primary.margin_bottom || false"
 		:enable-observer="slice.primary.enable_animation || false"
 		:enable-bg="slice.primary.enable_bg || false"
+		css-class="py4 relative overflow-hidden"
 		:is-section="slice.primary.title ? true : false"
 	>
 		<WrapperContainer>
