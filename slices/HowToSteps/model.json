@@ -13,10 +13,12 @@
       "imageUrl": "",
       "primary": {
         "title": {
-          "type": "Text",
+          "type": "StructuredText",
           "config": {
             "label": "Titolo",
-            "placeholder": ""
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "heading2,heading3,heading4,paragraph,strong,em"
           }
         },
         "subtitle": {
@@ -38,10 +40,35 @@
         "margin_bottom": {
           "type": "Boolean",
           "config": {
-            "label": "Margine inferiore",
+            "label": "Margin bottom",
+            "placeholder_false": "Less",
+            "placeholder_true": "More",
+            "default_value": false
+          }
+        },
+        "enable_bg": {
+          "type": "Boolean",
+          "config": {
+            "label": "Abilita Sfondo (Grigio)",
             "placeholder_false": "NO",
             "placeholder_true": "SI",
             "default_value": false
+          }
+        },
+        "background_1": {
+          "type": "Image",
+          "config": {
+            "label": "Immagine sfondo 1 (in basso a sx)",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "background_2": {
+          "type": "Image",
+          "config": {
+            "label": "Immagine sfondo 2 (in alto a dx)",
+            "constraint": {},
+            "thumbnails": []
           }
         },
         "enable_animation": {
@@ -56,10 +83,12 @@
       },
       "items": {
         "step_title": {
-          "type": "Text",
+          "type": "StructuredText",
           "config": {
             "label": "Titolo Step",
-            "placeholder": "Es. Installazione"
+            "placeholder": "Es. Installazione",
+            "allowTargetBlank": true,
+            "single": "heading3,heading4,paragraph,strong,em"
           }
         },
         "step_description": {

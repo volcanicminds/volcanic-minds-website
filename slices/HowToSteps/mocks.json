@@ -1,62 +1,82 @@
 [
-	{
-		"__TYPE__": "SharedSliceContent",
-		"variation": "default",
-		"primary": {
-			"title": {
-				"__TYPE__": "FieldContent",
-				"type": "Text",
-				"value": "HowTo: Test pratico"
-			},
-			"subtitle": {
-				"__TYPE__": "FieldContent",
-				"type": "Text",
-				"value": "Un test pratico sull'uso di passi per generare HowTo snippet"
-			}
-		},
-		"items": [
-			{
-				"__TYPE__": "GroupItemContent",
-				"value": [
-					[
-						"step_title",
-						{
-							"__TYPE__": "FieldContent",
-							"type": "Text",
-							"value": "Installazione mastra"
-						}
-					],
-					[
-						"step_description",
-						{
-							"__TYPE__": "StructuredTextContent",
-							"value": [
-								{
-									"type": "paragraph",
-									"content": {
-										"text": "npm i mastra",
-										"spans": []
-									},
-									"direction": "ltr"
-								}
-							]
-						}
-					]
-				]
-			},
-			{
-				"__TYPE__": "GroupItemContent",
-				"value": [
-					[
-						"step_title",
-						{
-							"__TYPE__": "FieldContent",
-							"type": "Text",
-							"value": "Aggiunto pacchetto volcanic minds backend"
-						}
-					]
-				]
-			}
-		]
-	}
+  {
+    "variation": "default",
+    "version": "initial",
+    "items": [
+      {
+        "step_title": [
+          {
+            "type": "heading3",
+            "content": {
+              "text": "Installazione mastra",
+              "spans": []
+            }
+          }
+        ],
+        "step_description": [
+          {
+            "type": "paragraph",
+            "content": {
+              "text": "npm i mastra",
+              "spans": []
+            }
+          }
+        ]
+      },
+      {
+         "step_title": [
+            {
+              "type": "heading3",
+              "content": {
+                "text": "Configurazione",
+                "spans": []
+              }
+            }
+         ],
+         "step_description": [
+           {
+             "type": "paragraph",
+             "content": {
+               "text": "Configura il file mastra.config.ts",
+               "spans": []
+             }
+           }
+         ]
+       }
+    ],
+    "primary": {
+      "title": [
+        {
+          "type": "heading2",
+          "content": {
+            "text": "HowTo: Test pratico",
+            "spans": []
+          }
+        }
+      ],
+      "subtitle": "Un test pratico sull'uso di passi per generare HowTo snippet",
+      "margin_top": true,
+      "margin_bottom": true,
+      "enable_animation": true,
+      "enable_bg": true,
+      "background_1": {
+        "dimensions": {
+          "width": 900,
+          "height": 500
+        },
+        "alt": "Placeholder image",
+        "copyright": null,
+        "url": "https://images.unsplash.com/photo-1599305445671-ac291c95aaa9"
+      },
+      "background_2": {
+        "dimensions": {
+          "width": 900,
+          "height": 500
+        },
+        "alt": "Placeholder image",
+        "copyright": null,
+        "url": "https://images.unsplash.com/photo-1599305445671-ac291c95aaa9"
+      }
+    }
+  }
 ]

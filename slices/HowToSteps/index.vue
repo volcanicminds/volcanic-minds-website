@@ -3,11 +3,29 @@
 		:margin-top="slice.primary.margin_top || false"
 		:margin-bottom="slice.primary.margin_bottom || false"
 		:enable-observer="slice.primary.enable_animation || false"
+		:enable-bg="slice.primary.enable_bg || false"
 		:is-section="slice.primary.subtitle ? true : false"
+		css-class="py4 relative overflow-hidden"
 	>
-		<WrapperContainer>
+		<!-- Lateral Images (Backgrounds) -->
+		<WrapperPrismicImage
+			v-if="slice.primary.background_1 && slice.primary.background_1.url"
+			:field="slice.primary.background_1"
+			:size="500"
+			class="absolute bottom-0 left-0 bg-image contain position-bottom-left"
+		/>
+		<WrapperPrismicImage
+			v-if="slice.primary.background_2 && slice.primary.background_2.url"
+			:field="slice.primary.background_2"
+			:size="500"
+			class="absolute top-0 right-0 bg-image contain position-top-right"
+		/>
+
+		<WrapperContainer class="relative z2">
 			<div class="center mb4">
-				<div v-if="slice.primary.title" class="h2 font-thin mb1">{{ slice.primary.title }}</div>
+				<div v-if="isRichTextFilled(slice.primary.title)" class="h2 font-thin mb1">
+					<PrismicRichText :field="slice.primary.title" />
+				</div>
 				<h2 v-if="slice.primary.subtitle" class="h1 m0">{{ slice.primary.subtitle }}</h2>
 			</div>
 
@@ -21,7 +39,9 @@
 
 						<div class="flex-auto">
 							<!-- Step Title -->
-							<h3 class="my0 h3 step-title">{{ item.step_title }}</h3>
+							<div class="my0 h3 step-title">
+								<PrismicRichText :field="item.step_title" />
+							</div>
 
 							<!-- Step Description (Collapsible) -->
 							<div
@@ -64,8 +84,8 @@ defineProps({
 	}
 })
 
-// Initialize: first step open by default? or all closed?
-// Let's open the first one by default.
+// Initialize: first step open by default -> CHANGED: All closed by default or First?
+// Let's keep first open as established.
 openSteps.value = ['step-0']
 
 function isStepOpen(id: string): boolean {
@@ -76,8 +96,11 @@ function toggleStep(id: string): void {
 	if (openSteps.value.includes(id)) {
 		openSteps.value = openSteps.value.filter((stepId) => stepId !== id)
 	} else {
-		openSteps.value.push(id) // Allow multiple open? or accordion style?
-		// Let's allow multiple open for "How To" context so users can read ahead
+		// Accordion behavior: close others?
+		// "HowTo" implies steps, reading one by one. But user didn't specify.
+		// Previous impl allowed multiple. Let's keep it.
+		// Actually, standard accordion behavior is usually single open. But let's stick to previous logical decision unless asked.
+		openSteps.value.push(id)
 	}
 }
 </script>
@@ -111,4 +134,12 @@ function toggleStep(id: string): void {
 
 .toggle-icon
 	line-height 40px
+
+/* Background Images similar to Contacts */
+.bg-image
+	width 80%
+	height 80%
+	filter blur(15px)
+	opacity 0.6
+	pointer-events none
 </style>
