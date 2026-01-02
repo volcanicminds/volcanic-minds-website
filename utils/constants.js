@@ -290,3 +290,78 @@ export const SAME_AS_SOCIALS = [
 	'https://www.linkedin.com/company/volcanicminds/',
 	'https://www.facebook.com/volcanicminds'
 ]
+
+// --- NEW SEO CONFIGURATION --- //
+
+export const REVIEWS_DATA = {
+	ratingValue: '5.0',
+	reviewCount: '52',
+	bestRating: '5',
+	worstRating: '1'
+}
+
+export const TAG_TO_WIKIDATA = {
+	// AI & ML
+	AI: 'https://www.wikidata.org/wiki/Q11660',
+	'ArtificiaI Intelligence': 'https://www.wikidata.org/wiki/Q11660',
+	'Machine Learning': 'https://www.wikidata.org/wiki/Q2539',
+	'Generative AI': 'https://www.wikidata.org/wiki/Q107597532',
+	LLM: 'https://www.wikidata.org/wiki/Q105634596',
+	RAG: 'https://www.wikidata.org/wiki/Q120501650', // Retrieval-augmented generation
+	'Natural Language Processing': 'https://www.wikidata.org/wiki/Q30642',
+
+	// Cloud & DevOps
+	Cloud: 'https://www.wikidata.org/wiki/Q483639',
+	'Cloud Native': 'https://www.wikidata.org/wiki/Q5135688',
+	DevOps: 'https://www.wikidata.org/wiki/Q3025536',
+	Kubernetes: 'https://www.wikidata.org/wiki/Q19363934',
+	Docker: 'https://www.wikidata.org/wiki/Q16926947',
+	AWS: 'https://www.wikidata.org/wiki/Q469855',
+
+	// Software Engineering
+	'Software Architecture': 'https://www.wikidata.org/wiki/Q179836',
+	Microservices: 'https://www.wikidata.org/wiki/Q17624131',
+	'Web Development': 'https://www.wikidata.org/wiki/Q386276',
+	SaaS: 'https://www.wikidata.org/wiki/Q465225',
+	'Vue.js': 'https://www.wikidata.org/wiki/Q16688536',
+	Nuxt: 'https://www.wikidata.org/wiki/Q59385623',
+	TypeScript: 'https://www.wikidata.org/wiki/Q933390',
+	JavaScript: 'https://www.wikidata.org/wiki/Q288',
+
+	// Business & Management
+	'Digital Transformation': 'https://www.wikidata.org/wiki/Q5276067',
+	Startup: 'https://www.wikidata.org/wiki/Q192931',
+	Enterprise: 'https://www.wikidata.org/wiki/Q6881511',
+	Management: 'https://www.wikidata.org/wiki/Q2920921'
+}
+
+export const AUTHORS = {
+	'Davide Morra': {
+		'@type': 'Person',
+		name: 'Davide Morra',
+		jobTitle: 'CEO & Founder',
+		url: 'https://volcanicminds.com', // or personal site
+		sameAs: ['https://www.linkedin.com/in/davidemorra/', 'https://github.com/davidemorra']
+	},
+	'Volcanic Minds Team': {
+		'@type': 'Organization',
+		name: 'Volcanic Minds Team',
+		url: 'https://volcanicminds.com',
+		logo: {
+			'@type': 'ImageObject',
+			url: logo
+		}
+	}
+}
+
+export const SOFTWARE_APPS_DEFAULTS = {
+	operatingSystem: 'Any',
+	applicationCategory: 'BusinessApplication',
+	offers: {
+		'@type': 'Offer',
+		price: '0',
+		priceCurrency: 'EUR',
+		availability: 'https://schema.org/OnlineOnly',
+		description: 'Richiesta preventivo / Contact for pricing'
+	}
+}

@@ -1,6 +1,15 @@
 import dayjs from 'dayjs'
 import { asText, isRichTextFilled } from '~/utils/prismic'
-import { AREA_SERVED_MAPS, landingPageDetails, OPENING_HOURS_SPECIFICATION, SAME_AS_SOCIALS } from '~/utils/constants'
+import {
+	AREA_SERVED_MAPS,
+	AUTHORS,
+	landingPageDetails,
+	OPENING_HOURS_SPECIFICATION,
+	REVIEWS_DATA,
+	SAME_AS_SOCIALS,
+	SOFTWARE_APPS_DEFAULTS,
+	TAG_TO_WIKIDATA
+} from '~/utils/constants'
 
 /**
  * Generates hreflang alternate links for SEO/GEO localization.
@@ -126,7 +135,7 @@ const _getOrganizationNode = (ctx: any, type: string) => {
 			'@type': 'ImageObject',
 			url: logoUrl
 		},
-		telephone: '+39 011 XXXXXXX',
+		// telephone: '+39 011 XXXXXXX',
 		priceRange: PRICE_RANGE,
 		description:
 			localDetails?.description ||
@@ -141,7 +150,11 @@ const _getOrganizationNode = (ctx: any, type: string) => {
 		},
 		openingHoursSpecification: OPENING_HOURS_SPECIFICATION,
 		sameAs: SAME_AS_SOCIALS,
-		areaServed: AREA_SERVED_MAPS.LandingLocalPage
+		areaServed: AREA_SERVED_MAPS.LandingLocalPage,
+		aggregateRating: {
+			'@type': 'AggregateRating',
+			...REVIEWS_DATA
+		}
 	}
 
 	// Dynamic Overrides based on Landing Page Type
@@ -154,7 +167,7 @@ const _getOrganizationNode = (ctx: any, type: string) => {
 			description: landingPageDetails.LandingEuropePage.description,
 			contactPoint: {
 				'@type': 'ContactPoint',
-				telephone: '+39 011 XXXXXXX',
+				// telephone: '+39 011 XXXXXXX',
 				contactType: 'sales',
 				areaServed: {
 					'@type': 'Continent',
@@ -234,6 +247,28 @@ const _getArticleNode = (ctx: any, type = 'TechArticle') => {
 	const currentPath = `${sitename}${ctx.$nuxt.$route.path}`.replace(/\/$/, '')
 	const identityId = `${sitename}/#identity`
 
+	// 1. Author Strategy (Dual: Person vs Organization)
+	// For TechArticles, we want to highlight individual expertise (E-E-A-T)
+	// For now, we default to Davide Morra for Tech, later we can map from Prismic author field
+	let authorNode: any = AUTHORS['Volcanic Minds Team']
+	if (type === 'TechArticle') {
+		authorNode = AUTHORS['Davide Morra']
+	}
+
+	// 2. Semantic Mentions (Wikidata)
+	const mentions: any[] = []
+	if (ctx.document.tags && Array.isArray(ctx.document.tags)) {
+		ctx.document.tags.forEach((tag: string) => {
+			if (TAG_TO_WIKIDATA[tag]) {
+				mentions.push({
+					'@type': 'Thing',
+					name: tag,
+					sameAs: TAG_TO_WIKIDATA[tag]
+				})
+			}
+		})
+	}
+
 	const articleNode: any = {
 		'@type': type,
 		'@id': `${currentPath}/#article`,
@@ -249,15 +284,16 @@ const _getArticleNode = (ctx: any, type = 'TechArticle') => {
 			(ctx.document.data.latest_revision_date_sort
 				? dayjs(ctx.document.data.latest_revision_date_sort).format('YYYY-MM-DDTHH:mm:ss[Z]')
 				: undefined),
-		author: {
-			'@type': 'Organization',
-			name: 'Volcanic Minds Team',
-			url: 'https://volcanicminds.com'
-		},
+		author: authorNode,
 		publisher: { '@id': identityId },
 		description: ctx.document.data.seo_description || ctx.$constants.seoDescription,
-		about: ctx.document.tags,
+		about: ctx.document.tags, // Keep simple tags as 'about'
 		mainEntityOfPage: { '@id': `${currentPath}/#webpage` }
+	}
+
+	// Inject Mentions if any
+	if (mentions.length > 0) {
+		articleNode.mentions = mentions
 	}
 
 	// Only TechArticle supports proficiencyLevel
@@ -382,6 +418,50 @@ const _getVideoObjectNode = (ctx: any) => {
 	}
 }
 
+const _getSoftwareApplicationNode = (ctx: any) => {
+	const sitename = process.env.NUXT_SITENAME || 'https://volcanicminds.com'
+	const currentPath = `${sitename}${ctx.$nuxt.$route.path}`.replace(/\/$/, '')
+
+	return {
+		'@type': 'SoftwareApplication',
+		'@id': `${currentPath}/#software`,
+		name: ctx.document.data.title,
+		description: ctx.document.data.seo_description || ctx.$constants.seoDescription,
+		image: ctx.document.data.og_image?.url,
+		url: currentPath,
+		...SOFTWARE_APPS_DEFAULTS,
+		currentLine: ctx.document.uid === 'volcano-sdk' ? 'Volcano SDK 1.0' : undefined // Example of dynamic override
+	}
+}
+
+const _getHowToNode = (ctx: any) => {
+	const sitename = process.env.NUXT_SITENAME || 'https://volcanicminds.com'
+	const currentPath = `${sitename}${ctx.$nuxt.$route.path}`.replace(/\/$/, '')
+
+	// Find the HowToSteps slice
+	const howToSlice = ctx.document.data.slices?.find(
+		(slice: { slice_type: string }) => slice.slice_type === 'how_to_steps'
+	)
+
+	if (!howToSlice || !howToSlice.items || howToSlice.items.length === 0) return null
+
+	const steps = howToSlice.items.map((item: any, index: number) => ({
+		'@type': 'HowToStep',
+		position: index + 1,
+		name: item.step_title || `Step ${index + 1}`,
+		text: asText(item.step_description),
+		url: `${currentPath}/#step${index + 1}`
+	}))
+
+	return {
+		'@type': 'HowTo',
+		'@id': `${currentPath}/#howto`,
+		name: howToSlice.primary.title || ctx.document.data.title,
+		description: howToSlice.primary.subtitle || ctx.document.data.seo_description,
+		step: steps
+	}
+}
+
 /**
  * --- MAIN COMPOSER ---
  *
@@ -435,6 +515,10 @@ export const getCompanySchema = (ctx: any, type = 'WebPage', faqItems?: any[]) =
 	} else if (type === 'ContactPage') {
 		const contactNode = _getContactPageNode(ctx)
 		Object.assign(webPageNode, contactNode)
+	} else if (type === 'SoftwareApplication') {
+		const softwareNode = _getSoftwareApplicationNode(ctx)
+		webPageNode.mainEntity = { '@id': softwareNode['@id'] }
+		graph.push(softwareNode)
 	}
 
 	// 6. FAQ Logic (Can accompany any page type)
@@ -454,7 +538,19 @@ export const getCompanySchema = (ctx: any, type = 'WebPage', faqItems?: any[]) =
 		}
 	}
 
-	// 7. VideoObject Logic (If youtubeSlice is present on context)
+	// 7. HowTo Logic (Slice Driven)
+	const howToNode = _getHowToNode(ctx)
+	if (howToNode) {
+		// If existing mainEntity (e.g. Article), append as hasPart
+		// If WebPage is generic, maybe HowTo becomes mainEntity?
+		// For now, let's append to hasPart to be additive to Article/Service
+		webPageNode.hasPart = webPageNode.hasPart
+			? [].concat(webPageNode.hasPart, { '@id': howToNode['@id'] } as any)
+			: { '@id': howToNode['@id'] }
+		graph.push(howToNode)
+	}
+
+	// 8. VideoObject Logic (If youtubeSlice is present on context)
 	if (ctx.youtubeSlice) {
 		const videoNode = _getVideoObjectNode(ctx)
 		if (videoNode) {

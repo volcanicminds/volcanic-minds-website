@@ -7,6 +7,7 @@ export const components = {
 	cards_grid: () => import(/* webpackChunkName: "prismic__slices__cards_grid" */ './CardsGrid/index.vue'),
 	contacts: () => import(/* webpackChunkName: "prismic__slices__contacts" */ './Contacts/index.vue'),
 	hero_banner: () => import(/* webpackChunkName: "prismic__slices__hero_banner" */ './HeroBanner/index.vue'),
+	how_to_steps: () => import(/* webpackChunkName: "prismic__slices__how_to_steps" */ './HowToSteps/index.vue'),
 	image_and_text: () => import(/* webpackChunkName: "prismic__slices__image_and_text" */ './ImageAndText/index.vue'),
 	masonry: () => import(/* webpackChunkName: "prismic__slices__masonry" */ './Masonry/index.vue'),
 	navigation_menu: () =>
