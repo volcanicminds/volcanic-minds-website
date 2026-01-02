@@ -1,69 +1,14 @@
 [
-  {
-    "variation": "default",
-    "version": "initial",
-    "items": [
-      {
-        "logo": {
-          "dimensions": {
-            "width": 900,
-            "height": 500
-          },
-          "alt": "Placeholder image",
-          "copyright": null,
-          "url": "https://images.unsplash.com/photo-1599305445671-ac291c95aaa9"
-        },
-        "name": "Logo 1"
-      },
-      {
-         "logo": {
-           "dimensions": {
-             "width": 900,
-             "height": 500
-           },
-           "alt": "Placeholder image",
-           "copyright": null,
-           "url": "https://images.unsplash.com/photo-1599305445671-ac291c95aaa9"
-         },
-         "name": "Logo 2"
-      },
-       {
-          "logo": {
-            "dimensions": {
-              "width": 900,
-              "height": 500
-            },
-            "alt": "Placeholder image",
-            "copyright": null,
-            "url": "https://images.unsplash.com/photo-1599305445671-ac291c95aaa9"
-          },
-          "name": "Logo 3"
-       },
-       {
-           "logo": {
-             "dimensions": {
-               "width": 900,
-               "height": 500
-             },
-             "alt": "Placeholder image",
-             "copyright": null,
-             "url": "https://images.unsplash.com/photo-1599305445671-ac291c95aaa9"
-           },
-           "name": "Logo 4"
-        }
-    ],
-    "primary": {
-      "title": "Trusted Partners",
-      "subtitle": "Leading companies trust us",
-      "layout_mode": "Grid (Wrap)",
-      "auto_scroll": false,
-      "scroll_speed": "Medium",
-      "alignment": "Center",
-      "logo_size": "Normal (60px)",
-      "enable_bg": true,
-      "margin_top": true,
-      "margin_bottom": true,
-      "enable_animation": true
-    }
-  }
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"layout_mode": {
+				"__TYPE__": "FieldContent",
+				"type": "Select",
+				"value": "Single Row"
+			}
+		},
+		"items": []
+	}
 ]

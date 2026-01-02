@@ -29,24 +29,24 @@
 				<h2 v-if="slice.primary.subtitle" class="h1 m0">{{ slice.primary.subtitle }}</h2>
 			</div>
 
-			<div class="how-to-steps max-width-3 mx-auto">
+			<div class="how-to-steps mx-auto">
 				<div v-for="(item, i) in slice.items" :key="`step-${i}`" class="step-item relative pb2">
 					<div class="flex items-start cursor-pointer" @click="toggleStep(`step-${i}`)">
 						<!-- Step Number -->
-						<div class="step-number flex-none flex items-center justify-center mr3 font-bold">
+						<div class="step-number flex-none flex items-center justify-center mr2 font-bold">
 							{{ +i + 1 }}
 						</div>
 
 						<div class="flex-auto">
 							<!-- Step Title -->
-							<div class="my0 h3 step-title">
+							<div class="my0 step-title">
 								<PrismicRichText :field="item.step_title" />
 							</div>
 
 							<!-- Step Description (Collapsible) -->
 							<div
 								v-show="isRichTextFilled(item.step_description) && isStepOpen(`step-${i}`)"
-								class="mt2 rich-text-content"
+								class="rich-text-content"
 							>
 								<PrismicRichText :field="item.step_description" />
 							</div>
@@ -110,7 +110,7 @@ function toggleStep(id: string): void {
 	width 40px
 	height 40px
 	border-radius 50%
-	background var(--primary)
+	background-color var(--shark-light)
 	color var(--white)
 	font-size 1.2rem
 	z-index 10
@@ -122,7 +122,7 @@ function toggleStep(id: string): void {
 
 .step-connector
 	width 2px
-	background var(--cultured-opaque)
+	background-color var(--cultured-opaque)
 	top 40px
 	bottom 0
 	left 19px // Center of 40px circle
@@ -130,7 +130,7 @@ function toggleStep(id: string): void {
 
 .step-title
 	line-height 1.2
-	padding-top 6px
+	margin-top -1rem
 
 .toggle-icon
 	line-height 40px

@@ -1,5 +1,6 @@
 <script lang="ts">
 import { defineComponent, ref, onMounted, onUpdated, onUnmounted } from 'vue'
+import { isRichTextFilled } from '~/utils/prismic'
 
 export default defineComponent({
 	name: 'PortfolioMasonry'
@@ -12,13 +13,21 @@ export default defineComponent({
 		:margin-bottom="slice.primary.margin_bottom || false"
 		:enable-observer="slice.primary.enable_animation || false"
 		:enable-bg="slice.primary.enable_bg || false"
+		css-class="py4 relative overflow-hidden"
 		:is-section="slice.primary.subtitle ? true : false"
 	>
 		<WrapperContainer class="portfolio-container">
-			<div class="center mb3">
+			<div
+				v-if="slice.primary.title || slice.primary.subtitle || isRichTextFilled(slice.primary.description)"
+				class="center pb3"
+			>
 				<div v-if="slice.primary.title" class="h2 font-thin mb1">{{ slice.primary.title }}</div>
 				<h2 v-if="slice.primary.subtitle" class="h1 m0">{{ slice.primary.subtitle }}</h2>
-				<PrismicRichText v-if="slice.primary.description" class="m0" :field="slice.primary.description" />
+				<PrismicRichText
+					v-if="isRichTextFilled(slice.primary.description)"
+					class="m0"
+					:field="slice.primary.description"
+				/>
 			</div>
 
 			<div ref="masonryWallRef" class="masonry-wall" :class="`layout--${slice.primary.layout_style || 'default'}`">
