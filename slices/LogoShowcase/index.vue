@@ -25,7 +25,11 @@
 					:style="scrollStyle"
 				>
 					<!-- Original Items -->
-					<div class="items-group flex items-center" :class="{ 'flex-wrap': isGrid }">
+					<div
+						class="items-group flex items-center"
+						:class="{ 'flex-wrap': isGrid, 'max-h-grid': isGrid }"
+						:style="maxHeightStyle"
+					>
 						<component
 							:is="item.link && item.link.url ? 'PrismicLink' : 'div'"
 							v-for="(item, i) in slice.items"
@@ -120,10 +124,40 @@ const alignmentClass = computed(() => {
 })
 
 const logoSizeClass = computed(() => {
-	// Default is 'Small (60px)' if not set
 	const size = props.slice.primary.logo_size
-	if (size === 'Normal (85px)') return 'size-normal'
-	return 'size-small'
+	if (size === 'Normal (60px)') return 'size-normal'
+	if (size === 'Big (70px)') return 'size-big'
+	return 'size-small' // Default 50px
+})
+
+const maxHeightStyle = computed(() => {
+	if (!isGrid.value) return {}
+
+	// User requested "Grid (WRAP) deve visualizzare solo 2 righe"
+	// We calculate max-height roughly: 2 * (LogoHeight + Margins Y)
+	// Logo Heights: 50, 60, 70
+	// Margins: my2 is usually ~1rem top + 1rem bottom = 2rem total per row?
+	// Or my2 = 0.5rem top/bottom => 1rem total.
+	// Let's assume my2 adds ~20-30px vertical space per row total.
+
+	let rowHeight = 0
+	switch (logoSizeClass.value) {
+		case 'size-big':
+			rowHeight = 70 + 32
+			break // 32px margin approx
+		case 'size-normal':
+			rowHeight = 60 + 32
+			break
+		default:
+			rowHeight = 50 + 32
+			break // size-small
+	}
+
+	// 2 rows
+	return {
+		maxHeight: `${rowHeight * 2}px`,
+		overflow: 'hidden'
+	}
 })
 
 const scrollDuration = computed(() => {
@@ -247,10 +281,13 @@ watch(
 		transition all 0.3s ease
 
 		&.size-small
-			max-height 60px
+			max-height 50px
 
 		&.size-normal
-			max-height 85px
+			max-height 60px
+
+		&.size-big
+			max-height 70px
 
 		&:hover
 			filter grayscale(0)

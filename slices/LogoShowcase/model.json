@@ -74,10 +74,11 @@
           "config": {
             "label": "Dimensione Logo",
             "options": [
-              "Small (60px)",
-              "Normal (85px)"
+              "Small (50px)",
+              "Normal (60px)",
+              "Big (70px)"
             ],
-            "default_value": "Small (60px)"
+            "default_value": "Small (50px)"
           }
         },
         "enable_bg": {
