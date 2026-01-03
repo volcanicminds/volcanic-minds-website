@@ -252,7 +252,10 @@ const _getWebPageNode = (ctx: any, document: any) => {
 	const currentPath = `${sitename}${ctx.switchLocalePath(ctx.$i18n.locale)}`.replace(/\/$/, '')
 	const identityId = `${sitename}/#identity`
 
-	return {
+	const homePath = `${sitename}${ctx.localePath('/')}`.replace(/\/$/, '')
+	const isHome = currentPath === homePath
+
+	const webpageNode: any = {
 		'@type': 'WebPage',
 		'@id': `${currentPath}/#webpage`,
 		url: currentPath,
@@ -263,9 +266,14 @@ const _getWebPageNode = (ctx: any, document: any) => {
 		inLanguage: getNormalizedLanguage(ctx),
 		isPartOf: { '@id': `${sitename}/#website` },
 		about: { '@id': identityId },
-		breadcrumb: { '@id': `${currentPath}/#breadcrumb` },
 		publisher: { '@id': identityId }
 	}
+
+	if (!isHome) {
+		webpageNode.breadcrumb = { '@id': `${currentPath}/#breadcrumb` }
+	}
+
+	return webpageNode
 }
 
 const _getArticleNode = (ctx: any, type = 'TechArticle') => {
