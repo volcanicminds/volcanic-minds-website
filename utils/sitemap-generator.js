@@ -138,7 +138,8 @@ async function generateSitemap() {
 
 				entry.alternates.push({
 					lang: langCode,
-					url: `${SITE_URL}${url}`
+					url: `${SITE_URL}${url}`,
+					lastmod: doc.last_publication_date // Add lastmod date
 				})
 			}
 		})
@@ -203,12 +204,21 @@ async function generateSitemap() {
 			// Block 1: loc = IT, alternates = IT, EN, x-default (EN)
 			// Block 2: loc = EN, alternates = IT, EN, x-default (EN)
 
-			// Find default lang (English usually x-default based on existing sitemap)
-			const defaultLangUrl = group.alternates.find((a) => a.lang === 'en')?.url || group.alternates[0].url
+			// Search for default language (en)
+			const defaultLangVariant = group.alternates.find((a) => a.lang === 'en') || group.alternates[0]
+			const defaultLangUrl = defaultLangVariant.url
 
 			group.alternates.forEach((mainVariant) => {
 				xml += '    <url>\n'
 				xml += `        <loc>${mainVariant.url}</loc>\n`
+
+				// Add lastmod if available
+				if (mainVariant.lastmod) {
+					// Ensure format is compatible (ISO strings usually are)
+					// Prismic returns full ISO e.g. 2024-05-12T10:00:00+0000
+					// sitemaps usually prefer YYYY-MM-DD or full ISO 8601
+					xml += `        <lastmod>${mainVariant.lastmod}</lastmod>\n`
+				}
 
 				group.alternates.forEach((alt) => {
 					xml += `        <xhtml:link rel="alternate" hreflang="${alt.lang}" href="${alt.url}" />\n`
