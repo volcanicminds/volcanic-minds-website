@@ -220,6 +220,14 @@ export default async () => {
 			config: {
 				ignoredElements: ['lite-youtube']
 			}
+		},
+		hooks: {
+			// Run sitemap generation after static site generation
+			'generate:done': async () => {
+				// eslint-disable-next-line @typescript-eslint/no-var-requires
+				const generateSitemap = require('./utils/sitemap-generator')
+				await generateSitemap()
+			}
 		}
 	}
 }

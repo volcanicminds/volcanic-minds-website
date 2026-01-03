@@ -1,11 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-    xmlns:news="http://www.google.com/schemas/sitemap-news/0.9"
-    xmlns:xhtml="http://www.w3.org/1999/xhtml"
-    xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0"
-    xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
-    xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
-    <!-- Home -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
     <url>
         <loc>https://volcanicminds.com/</loc>
         <xhtml:link rel="alternate" hreflang="it" href="https://volcanicminds.com/" />
@@ -18,7 +12,6 @@
         <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en" />
         <xhtml:link rel="alternate" hreflang="x-default" href="https://volcanicminds.com/en" />
     </url>
-    <!-- Insights -->
     <url>
         <loc>https://volcanicminds.com/insights</loc>
         <xhtml:link rel="alternate" hreflang="it" href="https://volcanicminds.com/insights" />
@@ -31,7 +24,6 @@
         <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/insights" />
         <xhtml:link rel="alternate" hreflang="x-default" href="https://volcanicminds.com/en/insights" />
     </url>
-    <!-- About us -->
     <url>
         <loc>https://volcanicminds.com/about-us</loc>
         <xhtml:link rel="alternate" hreflang="it" href="https://volcanicminds.com/about-us" />
@@ -44,7 +36,6 @@
         <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/about-us" />
         <xhtml:link rel="alternate" hreflang="x-default" href="https://volcanicminds.com/en/about-us" />
     </url>
-    <!-- Portfolio -->
     <url>
         <loc>https://volcanicminds.com/portfolio</loc>
         <xhtml:link rel="alternate" hreflang="it" href="https://volcanicminds.com/portfolio" />
@@ -57,7 +48,6 @@
         <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/portfolio" />
         <xhtml:link rel="alternate" hreflang="x-default" href="https://volcanicminds.com/en/portfolio" />
     </url>
-    <!-- Contacts -->
     <url>
         <loc>https://volcanicminds.com/contacts</loc>
         <xhtml:link rel="alternate" hreflang="it" href="https://volcanicminds.com/contacts" />
@@ -70,7 +60,6 @@
         <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/contacts" />
         <xhtml:link rel="alternate" hreflang="x-default" href="https://volcanicminds.com/en/contacts" />
     </url>
-    <!-- Privacy policy -->
     <url>
         <loc>https://volcanicminds.com/privacy-policy</loc>
         <xhtml:link rel="alternate" hreflang="it" href="https://volcanicminds.com/privacy-policy" />
@@ -83,7 +72,6 @@
         <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/privacy-policy" />
         <xhtml:link rel="alternate" hreflang="x-default" href="https://volcanicminds.com/en/privacy-policy" />
     </url>
-    <!-- Services -->
     <url>
         <loc>https://volcanicminds.com/services</loc>
         <xhtml:link rel="alternate" hreflang="it" href="https://volcanicminds.com/services" />
@@ -95,18 +83,6 @@
         <xhtml:link rel="alternate" hreflang="it" href="https://volcanicminds.com/services" />
         <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/services" />
         <xhtml:link rel="alternate" hreflang="x-default" href="https://volcanicminds.com/en/services" />
-    </url>
-    <url>
-        <loc>https://volcanicminds.com/services/design-strategy</loc>
-        <xhtml:link rel="alternate" hreflang="it" href="https://volcanicminds.com/services/design-strategy" />
-        <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/services/design-strategy" />
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://volcanicminds.com/en/services/design-strategy" />
-    </url>
-    <url>
-        <loc>https://volcanicminds.com/en/services/design-strategy</loc>
-        <xhtml:link rel="alternate" hreflang="it" href="https://volcanicminds.com/services/design-strategy" />
-        <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/services/design-strategy" />
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://volcanicminds.com/en/services/design-strategy" />
     </url>
     <url>
         <loc>https://volcanicminds.com/services/digital-factory</loc>
@@ -121,6 +97,18 @@
         <xhtml:link rel="alternate" hreflang="x-default" href="https://volcanicminds.com/en/services/digital-factory" />
     </url>
     <url>
+        <loc>https://volcanicminds.com/services/design-strategy</loc>
+        <xhtml:link rel="alternate" hreflang="it" href="https://volcanicminds.com/services/design-strategy" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/services/design-strategy" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://volcanicminds.com/en/services/design-strategy" />
+    </url>
+    <url>
+        <loc>https://volcanicminds.com/en/services/design-strategy</loc>
+        <xhtml:link rel="alternate" hreflang="it" href="https://volcanicminds.com/services/design-strategy" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/services/design-strategy" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://volcanicminds.com/en/services/design-strategy" />
+    </url>
+    <url>
         <loc>https://volcanicminds.com/services/project-leading</loc>
         <xhtml:link rel="alternate" hreflang="it" href="https://volcanicminds.com/services/project-leading" />
         <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/services/project-leading" />
@@ -132,7 +120,6 @@
         <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/services/project-leading" />
         <xhtml:link rel="alternate" hreflang="x-default" href="https://volcanicminds.com/en/services/project-leading" />
     </url>
-    <!-- FAQ -->
     <url>
         <loc>https://volcanicminds.com/services/frequently-asked-questions</loc>
         <xhtml:link rel="alternate" hreflang="it" href="https://volcanicminds.com/services/frequently-asked-questions" />
@@ -145,7 +132,78 @@
         <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/services/frequently-asked-questions" />
         <xhtml:link rel="alternate" hreflang="x-default" href="https://volcanicminds.com/en/services/frequently-asked-questions" />
     </url>
-    <!-- Insights posts -->
+    <url>
+        <loc>https://volcanicminds.com/insights/composite-ai-agents-governance-mastra</loc>
+        <xhtml:link rel="alternate" hreflang="it" href="https://volcanicminds.com/insights/composite-ai-agents-governance-mastra" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/insights/composite-ai-agents-governance-mastra" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://volcanicminds.com/en/insights/composite-ai-agents-governance-mastra" />
+    </url>
+    <url>
+        <loc>https://volcanicminds.com/en/insights/composite-ai-agents-governance-mastra</loc>
+        <xhtml:link rel="alternate" hreflang="it" href="https://volcanicminds.com/insights/composite-ai-agents-governance-mastra" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/insights/composite-ai-agents-governance-mastra" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://volcanicminds.com/en/insights/composite-ai-agents-governance-mastra" />
+    </url>
+    <url>
+        <loc>https://volcanicminds.com/en/insights/google-analytics-gdpr-alternative-plausible</loc>
+        <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/insights/google-analytics-gdpr-alternative-plausible" />
+        <xhtml:link rel="alternate" hreflang="it" href="https://volcanicminds.com/insights/google-analytics-gdpr-alternative-plausible" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://volcanicminds.com/en/insights/google-analytics-gdpr-alternative-plausible" />
+    </url>
+    <url>
+        <loc>https://volcanicminds.com/insights/google-analytics-gdpr-alternative-plausible</loc>
+        <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/insights/google-analytics-gdpr-alternative-plausible" />
+        <xhtml:link rel="alternate" hreflang="it" href="https://volcanicminds.com/insights/google-analytics-gdpr-alternative-plausible" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://volcanicminds.com/en/insights/google-analytics-gdpr-alternative-plausible" />
+    </url>
+    <url>
+        <loc>https://volcanicminds.com/insights/rag-agent-mastra-ai</loc>
+        <xhtml:link rel="alternate" hreflang="it" href="https://volcanicminds.com/insights/rag-agent-mastra-ai" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/insights/rag-agent-mastra-ai" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://volcanicminds.com/en/insights/rag-agent-mastra-ai" />
+    </url>
+    <url>
+        <loc>https://volcanicminds.com/en/insights/rag-agent-mastra-ai</loc>
+        <xhtml:link rel="alternate" hreflang="it" href="https://volcanicminds.com/insights/rag-agent-mastra-ai" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/insights/rag-agent-mastra-ai" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://volcanicminds.com/en/insights/rag-agent-mastra-ai" />
+    </url>
+    <url>
+        <loc>https://volcanicminds.com/en/insights/volcano-sdk-kong-agents-production-ready</loc>
+        <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/insights/volcano-sdk-kong-agents-production-ready" />
+        <xhtml:link rel="alternate" hreflang="it" href="https://volcanicminds.com/insights/volcano-sdk-kong-agents-production-ready" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://volcanicminds.com/en/insights/volcano-sdk-kong-agents-production-ready" />
+    </url>
+    <url>
+        <loc>https://volcanicminds.com/insights/volcano-sdk-kong-agents-production-ready</loc>
+        <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/insights/volcano-sdk-kong-agents-production-ready" />
+        <xhtml:link rel="alternate" hreflang="it" href="https://volcanicminds.com/insights/volcano-sdk-kong-agents-production-ready" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://volcanicminds.com/en/insights/volcano-sdk-kong-agents-production-ready" />
+    </url>
+    <url>
+        <loc>https://volcanicminds.com/en/insights/vibe-coding-tools-for-devs</loc>
+        <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/insights/vibe-coding-tools-for-devs" />
+        <xhtml:link rel="alternate" hreflang="it" href="https://volcanicminds.com/insights/vibe-coding-tools-for-devs" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://volcanicminds.com/en/insights/vibe-coding-tools-for-devs" />
+    </url>
+    <url>
+        <loc>https://volcanicminds.com/insights/vibe-coding-tools-for-devs</loc>
+        <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/insights/vibe-coding-tools-for-devs" />
+        <xhtml:link rel="alternate" hreflang="it" href="https://volcanicminds.com/insights/vibe-coding-tools-for-devs" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://volcanicminds.com/en/insights/vibe-coding-tools-for-devs" />
+    </url>
+    <url>
+        <loc>https://volcanicminds.com/insights/llm-javascript-practical-guide</loc>
+        <xhtml:link rel="alternate" hreflang="it" href="https://volcanicminds.com/insights/llm-javascript-practical-guide" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/insights/llm-javascript-practical-guide" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://volcanicminds.com/en/insights/llm-javascript-practical-guide" />
+    </url>
+    <url>
+        <loc>https://volcanicminds.com/en/insights/llm-javascript-practical-guide</loc>
+        <xhtml:link rel="alternate" hreflang="it" href="https://volcanicminds.com/insights/llm-javascript-practical-guide" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/insights/llm-javascript-practical-guide" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://volcanicminds.com/en/insights/llm-javascript-practical-guide" />
+    </url>
     <url>
         <loc>https://volcanicminds.com/insights/making-of</loc>
         <xhtml:link rel="alternate" hreflang="it" href="https://volcanicminds.com/insights/making-of" />
@@ -159,51 +217,51 @@
         <xhtml:link rel="alternate" hreflang="x-default" href="https://volcanicminds.com/en/insights/making-of" />
     </url>
     <url>
-        <loc>https://volcanicminds.com/insights/google-analytics-gdpr-alternative-plausible</loc>
-        <xhtml:link rel="alternate" hreflang="it" href="https://volcanicminds.com/insights/google-analytics-gdpr-alternative-plausible" />
-        <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/insights/google-analytics-gdpr-alternative-plausible" />
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://volcanicminds.com/en/insights/google-analytics-gdpr-alternative-plausible" />
+        <loc>https://volcanicminds.com/en/insights/how-to-manage-risk-custom-software-projects</loc>
+        <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/insights/how-to-manage-risk-custom-software-projects" />
+        <xhtml:link rel="alternate" hreflang="it" href="https://volcanicminds.com/insights/how-to-manage-risk-custom-software-projects" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://volcanicminds.com/en/insights/how-to-manage-risk-custom-software-projects" />
     </url>
     <url>
-        <loc>https://volcanicminds.com/en/insights/google-analytics-gdpr-alternative-plausible</loc>
-        <xhtml:link rel="alternate" hreflang="it" href="https://volcanicminds.com/insights/google-analytics-gdpr-alternative-plausible" />
-        <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/insights/google-analytics-gdpr-alternative-plausible" />
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://volcanicminds.com/en/insights/google-analytics-gdpr-alternative-plausible" />
-    </url>
-    <url>
-        <loc>https://volcanicminds.com/insights/linux-day-torino-2023</loc>
-        <xhtml:link rel="alternate" hreflang="it" href="https://volcanicminds.com/insights/linux-day-torino-2023" />
-        <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/insights/linux-day-torino-2023" />
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://volcanicminds.com/en/insights/linux-day-torino-2023" />
-    </url>
-    <url>
-        <loc>https://volcanicminds.com/en/insights/linux-day-torino-2023</loc>
-        <xhtml:link rel="alternate" hreflang="it" href="https://volcanicminds.com/insights/linux-day-torino-2023" />
-        <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/insights/linux-day-torino-2023" />
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://volcanicminds.com/en/insights/linux-day-torino-2023" />
-    </url>
-    <url>
-        <loc>https://volcanicminds.com/insights/future-vision-polo-ict</loc>
-        <xhtml:link rel="alternate" hreflang="it" href="https://volcanicminds.com/insights/future-vision-polo-ict" />
-        <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/insights/future-vision-polo-ict" />
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://volcanicminds.com/en/insights/future-vision-polo-ict" />
+        <loc>https://volcanicminds.com/insights/how-to-manage-risk-custom-software-projects</loc>
+        <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/insights/how-to-manage-risk-custom-software-projects" />
+        <xhtml:link rel="alternate" hreflang="it" href="https://volcanicminds.com/insights/how-to-manage-risk-custom-software-projects" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://volcanicminds.com/en/insights/how-to-manage-risk-custom-software-projects" />
     </url>
     <url>
         <loc>https://volcanicminds.com/en/insights/future-vision-polo-ict</loc>
-        <xhtml:link rel="alternate" hreflang="it" href="https://volcanicminds.com/insights/future-vision-polo-ict" />
         <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/insights/future-vision-polo-ict" />
+        <xhtml:link rel="alternate" hreflang="it" href="https://volcanicminds.com/insights/future-vision-polo-ict" />
         <xhtml:link rel="alternate" hreflang="x-default" href="https://volcanicminds.com/en/insights/future-vision-polo-ict" />
     </url>
     <url>
-        <loc>https://volcanicminds.com/insights/a-bit-of-history-mupin</loc>
-        <xhtml:link rel="alternate" hreflang="it" href="https://volcanicminds.com/insights/a-bit-of-history-mupin" />
-        <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/insights/a-bit-of-history-mupin" />
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://volcanicminds.com/en/insights/a-bit-of-history-mupin" />
+        <loc>https://volcanicminds.com/insights/future-vision-polo-ict</loc>
+        <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/insights/future-vision-polo-ict" />
+        <xhtml:link rel="alternate" hreflang="it" href="https://volcanicminds.com/insights/future-vision-polo-ict" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://volcanicminds.com/en/insights/future-vision-polo-ict" />
+    </url>
+    <url>
+        <loc>https://volcanicminds.com/insights/low-code-no-code-vs-coding</loc>
+        <xhtml:link rel="alternate" hreflang="it" href="https://volcanicminds.com/insights/low-code-no-code-vs-coding" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/insights/low-code-no-code-vs-coding" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://volcanicminds.com/en/insights/low-code-no-code-vs-coding" />
+    </url>
+    <url>
+        <loc>https://volcanicminds.com/en/insights/low-code-no-code-vs-coding</loc>
+        <xhtml:link rel="alternate" hreflang="it" href="https://volcanicminds.com/insights/low-code-no-code-vs-coding" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/insights/low-code-no-code-vs-coding" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://volcanicminds.com/en/insights/low-code-no-code-vs-coding" />
     </url>
     <url>
         <loc>https://volcanicminds.com/en/insights/a-bit-of-history-mupin</loc>
-        <xhtml:link rel="alternate" hreflang="it" href="https://volcanicminds.com/insights/a-bit-of-history-mupin" />
         <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/insights/a-bit-of-history-mupin" />
+        <xhtml:link rel="alternate" hreflang="it" href="https://volcanicminds.com/insights/a-bit-of-history-mupin" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://volcanicminds.com/en/insights/a-bit-of-history-mupin" />
+    </url>
+    <url>
+        <loc>https://volcanicminds.com/insights/a-bit-of-history-mupin</loc>
+        <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/insights/a-bit-of-history-mupin" />
+        <xhtml:link rel="alternate" hreflang="it" href="https://volcanicminds.com/insights/a-bit-of-history-mupin" />
         <xhtml:link rel="alternate" hreflang="x-default" href="https://volcanicminds.com/en/insights/a-bit-of-history-mupin" />
     </url>
     <url>
@@ -219,100 +277,16 @@
         <xhtml:link rel="alternate" hreflang="x-default" href="https://volcanicminds.com/en/insights/smartcommunities-booklet" />
     </url>
     <url>
-        <loc>https://volcanicminds.com/insights/corporate-meeting-polo-ict</loc>
-        <xhtml:link rel="alternate" hreflang="it" href="https://volcanicminds.com/insights/corporate-meeting-polo-ict" />
-        <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/insights/corporate-meeting-polo-ict" />
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://volcanicminds.com/en/insights/corporate-meeting-polo-ict" />
-    </url>
-    <url>
-        <loc>https://volcanicminds.com/en/insights/corporate-meeting-polo-ict</loc>
-        <xhtml:link rel="alternate" hreflang="it" href="https://volcanicminds.com/insights/corporate-meeting-polo-ict" />
-        <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/insights/corporate-meeting-polo-ict" />
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://volcanicminds.com/en/insights/corporate-meeting-polo-ict" />
-    </url>
-    <url>
-        <loc>https://volcanicminds.com/insights/llm-javascript-practical-guide</loc>
-        <xhtml:link rel="alternate" hreflang="it" href="https://volcanicminds.com/insights/llm-javascript-practical-guide" />
-        <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/insights/llm-javascript-practical-guide" />
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://volcanicminds.com/en/insights/llm-javascript-practical-guide" />
-    </url>
-    <url>
-        <loc>https://volcanicminds.com/en/insights/llm-javascript-practical-guide</loc>
-        <xhtml:link rel="alternate" hreflang="it" href="https://volcanicminds.com/insights/llm-javascript-practical-guide" />
-        <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/insights/llm-javascript-practical-guide" />
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://volcanicminds.com/en/insights/llm-javascript-practical-guide" />
-    </url>
-    <url>
-        <loc>https://volcanicminds.com/insights/low-code-no-code-vs-coding</loc>
-        <xhtml:link rel="alternate" hreflang="it" href="https://volcanicminds.com/insights/low-code-no-code-vs-coding" />
-        <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/insights/low-code-no-code-vs-coding" />
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://volcanicminds.com/en/insights/low-code-no-code-vs-coding" />
-    </url>
-    <url>
-        <loc>https://volcanicminds.com/en/insights/low-code-no-code-vs-coding</loc>
-        <xhtml:link rel="alternate" hreflang="it" href="https://volcanicminds.com/insights/low-code-no-code-vs-coding" />
-        <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/insights/low-code-no-code-vs-coding" />
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://volcanicminds.com/en/insights/low-code-no-code-vs-coding" />
-    </url>
-    <url>
-        <loc>https://volcanicminds.com/insights/seo-without-ads-geo-optimization</loc>
-        <xhtml:link rel="alternate" hreflang="it" href="https://volcanicminds.com/insights/seo-without-ads-geo-optimization" />
-        <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/insights/seo-without-ads-geo-optimization" />
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://volcanicminds.com/en/insights/seo-without-ads-geo-optimization" />
-    </url>
-    <url>
-        <loc>https://volcanicminds.com/en/insights/seo-without-ads-geo-optimization</loc>
-        <xhtml:link rel="alternate" hreflang="it" href="https://volcanicminds.com/insights/seo-without-ads-geo-optimization" />
-        <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/insights/seo-without-ads-geo-optimization" />
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://volcanicminds.com/en/insights/seo-without-ads-geo-optimization" />
-    </url>
-    <url>
-        <loc>https://volcanicminds.com/insights/vibe-coding-tools-for-devs</loc>
-        <xhtml:link rel="alternate" hreflang="it" href="https://volcanicminds.com/insights/vibe-coding-tools-for-devs" />
-        <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/insights/vibe-coding-tools-for-devs" />
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://volcanicminds.com/en/insights/vibe-coding-tools-for-devs" />
-    </url>
-    <url>
-        <loc>https://volcanicminds.com/en/insights/vibe-coding-tools-for-devs</loc>
-        <xhtml:link rel="alternate" hreflang="it" href="https://volcanicminds.com/insights/vibe-coding-tools-for-devs" />
-        <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/insights/vibe-coding-tools-for-devs" />
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://volcanicminds.com/en/insights/vibe-coding-tools-for-devs" />
-    </url>
-    <url>
-        <loc>https://volcanicminds.com/insights/we-make-future-2025-bologna-fiere</loc>
-        <xhtml:link rel="alternate" hreflang="it" href="https://volcanicminds.com/insights/we-make-future-2025-bologna-fiere" />
-        <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/insights/we-make-future-2025-bologna-fiere" />
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://volcanicminds.com/en/insights/we-make-future-2025-bologna-fiere" />
-    </url>
-    <url>
-        <loc>https://volcanicminds.com/en/insights/we-make-future-2025-bologna-fiere</loc>
-        <xhtml:link rel="alternate" hreflang="it" href="https://volcanicminds.com/insights/we-make-future-2025-bologna-fiere" />
-        <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/insights/we-make-future-2025-bologna-fiere" />
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://volcanicminds.com/en/insights/we-make-future-2025-bologna-fiere" />
+        <loc>https://volcanicminds.com/en/insights/volcanic-minds-bronze-sponsor-ai-heroes-2025</loc>
+        <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/insights/volcanic-minds-bronze-sponsor-ai-heroes-2025" />
+        <xhtml:link rel="alternate" hreflang="it" href="https://volcanicminds.com/insights/volcanic-minds-bronze-sponsor-ai-heroes-2025" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://volcanicminds.com/en/insights/volcanic-minds-bronze-sponsor-ai-heroes-2025" />
     </url>
     <url>
         <loc>https://volcanicminds.com/insights/volcanic-minds-bronze-sponsor-ai-heroes-2025</loc>
-        <xhtml:link rel="alternate" hreflang="it" href="https://volcanicminds.com/insights/volcanic-minds-bronze-sponsor-ai-heroes-2025" />
         <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/insights/volcanic-minds-bronze-sponsor-ai-heroes-2025" />
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://volcanicminds.com/en/insights/volcanic-minds-bronze-sponsor-ai-heroes-2025" />
-    </url>
-    <url>
-        <loc>https://volcanicminds.com/en/insights/volcanic-minds-bronze-sponsor-ai-heroes-2025</loc>
         <xhtml:link rel="alternate" hreflang="it" href="https://volcanicminds.com/insights/volcanic-minds-bronze-sponsor-ai-heroes-2025" />
-        <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/insights/volcanic-minds-bronze-sponsor-ai-heroes-2025" />
         <xhtml:link rel="alternate" hreflang="x-default" href="https://volcanicminds.com/en/insights/volcanic-minds-bronze-sponsor-ai-heroes-2025" />
-    </url>
-    <url>
-        <loc>https://volcanicminds.com/insights/rag-agent-mastra-ai</loc>
-        <xhtml:link rel="alternate" hreflang="it" href="https://volcanicminds.com/insights/rag-agent-mastra-ai" />
-        <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/insights/rag-agent-mastra-ai" />
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://volcanicminds.com/en/insights/rag-agent-mastra-ai" />
-    </url>
-    <url>
-        <loc>https://volcanicminds.com/en/insights/rag-agent-mastra-ai</loc>
-        <xhtml:link rel="alternate" hreflang="it" href="https://volcanicminds.com/insights/rag-agent-mastra-ai" />
-        <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/insights/rag-agent-mastra-ai" />
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://volcanicminds.com/en/insights/rag-agent-mastra-ai" />
     </url>
     <url>
         <loc>https://volcanicminds.com/insights/tech-debt-strategic-risk</loc>
@@ -327,39 +301,51 @@
         <xhtml:link rel="alternate" hreflang="x-default" href="https://volcanicminds.com/en/insights/tech-debt-strategic-risk" />
     </url>
     <url>
-        <loc>https://volcanicminds.com/insights/volcano-sdk-kong-agents-production-ready</loc>
-        <xhtml:link rel="alternate" hreflang="it" href="https://volcanicminds.com/insights/volcano-sdk-kong-agents-production-ready" />
-        <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/insights/volcano-sdk-kong-agents-production-ready" />
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://volcanicminds.com/en/insights/volcano-sdk-kong-agents-production-ready" />
+        <loc>https://volcanicminds.com/insights/corporate-meeting-polo-ict</loc>
+        <xhtml:link rel="alternate" hreflang="it" href="https://volcanicminds.com/insights/corporate-meeting-polo-ict" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/insights/corporate-meeting-polo-ict" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://volcanicminds.com/en/insights/corporate-meeting-polo-ict" />
     </url>
     <url>
-        <loc>https://volcanicminds.com/en/insights/volcano-sdk-kong-agents-production-ready</loc>
-        <xhtml:link rel="alternate" hreflang="it" href="https://volcanicminds.com/insights/volcano-sdk-kong-agents-production-ready" />
-        <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/insights/volcano-sdk-kong-agents-production-ready" />
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://volcanicminds.com/en/insights/volcano-sdk-kong-agents-production-ready" />
+        <loc>https://volcanicminds.com/en/insights/corporate-meeting-polo-ict</loc>
+        <xhtml:link rel="alternate" hreflang="it" href="https://volcanicminds.com/insights/corporate-meeting-polo-ict" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/insights/corporate-meeting-polo-ict" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://volcanicminds.com/en/insights/corporate-meeting-polo-ict" />
     </url>
     <url>
-        <loc>https://volcanicminds.com/insights/how-to-manage-risk-custom-software-projects</loc>
-        <xhtml:link rel="alternate" hreflang="it" href="https://volcanicminds.com/insights/how-to-manage-risk-custom-software-projects" />
-        <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/insights/how-to-manage-risk-custom-software-projects" />
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://volcanicminds.com/en/insights/how-to-manage-risk-custom-software-projects" />
+        <loc>https://volcanicminds.com/insights/seo-without-ads-geo-optimization</loc>
+        <xhtml:link rel="alternate" hreflang="it" href="https://volcanicminds.com/insights/seo-without-ads-geo-optimization" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/insights/seo-without-ads-geo-optimization" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://volcanicminds.com/en/insights/seo-without-ads-geo-optimization" />
     </url>
     <url>
-        <loc>https://volcanicminds.com/en/insights/how-to-manage-risk-custom-software-projects</loc>
-        <xhtml:link rel="alternate" hreflang="it" href="https://volcanicminds.com/insights/how-to-manage-risk-custom-software-projects" />
-        <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/insights/how-to-manage-risk-custom-software-projects" />
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://volcanicminds.com/en/insights/how-to-manage-risk-custom-software-projects" />
+        <loc>https://volcanicminds.com/en/insights/seo-without-ads-geo-optimization</loc>
+        <xhtml:link rel="alternate" hreflang="it" href="https://volcanicminds.com/insights/seo-without-ads-geo-optimization" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/insights/seo-without-ads-geo-optimization" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://volcanicminds.com/en/insights/seo-without-ads-geo-optimization" />
     </url>
     <url>
-        <loc>https://volcanicminds.com/insights/composite-ai-agents-governance-mastra</loc>
-        <xhtml:link rel="alternate" hreflang="it" href="https://volcanicminds.com/insights/composite-ai-agents-governance-mastra" />
-        <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/insights/composite-ai-agents-governance-mastra" />
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://volcanicminds.com/en/insights/composite-ai-agents-governance-mastra" />
+        <loc>https://volcanicminds.com/insights/we-make-future-2025-bologna-fiere</loc>
+        <xhtml:link rel="alternate" hreflang="it" href="https://volcanicminds.com/insights/we-make-future-2025-bologna-fiere" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/insights/we-make-future-2025-bologna-fiere" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://volcanicminds.com/en/insights/we-make-future-2025-bologna-fiere" />
     </url>
     <url>
-        <loc>https://volcanicminds.com/en/insights/composite-ai-agents-governance-mastra</loc>
-        <xhtml:link rel="alternate" hreflang="it" href="https://volcanicminds.com/insights/composite-ai-agents-governance-mastra" />
-        <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/insights/composite-ai-agents-governance-mastra" />
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://volcanicminds.com/en/insights/composite-ai-agents-governance-mastra" />
+        <loc>https://volcanicminds.com/en/insights/we-make-future-2025-bologna-fiere</loc>
+        <xhtml:link rel="alternate" hreflang="it" href="https://volcanicminds.com/insights/we-make-future-2025-bologna-fiere" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/insights/we-make-future-2025-bologna-fiere" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://volcanicminds.com/en/insights/we-make-future-2025-bologna-fiere" />
+    </url>
+    <url>
+        <loc>https://volcanicminds.com/insights/linux-day-torino-2023</loc>
+        <xhtml:link rel="alternate" hreflang="it" href="https://volcanicminds.com/insights/linux-day-torino-2023" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/insights/linux-day-torino-2023" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://volcanicminds.com/en/insights/linux-day-torino-2023" />
+    </url>
+    <url>
+        <loc>https://volcanicminds.com/en/insights/linux-day-torino-2023</loc>
+        <xhtml:link rel="alternate" hreflang="it" href="https://volcanicminds.com/insights/linux-day-torino-2023" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/insights/linux-day-torino-2023" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://volcanicminds.com/en/insights/linux-day-torino-2023" />
     </url>
 </urlset>
