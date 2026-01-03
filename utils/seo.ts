@@ -150,7 +150,11 @@ const _getOrganizationNode = (ctx: any, type: string) => {
 		'@id': identityId,
 		name: localDetails?.name || 'Volcanic Minds',
 		url: sitename,
-		image: logoUrl,
+		image: [
+			'https://volcanicminds.com/web-app-manifest-512x512.png',
+			'https://volcanicminds.com/open-graph.png',
+			'https://volcanicminds.com/logo-light.png'
+		],
 		logo: {
 			'@type': 'ImageObject',
 			url: logoUrl
@@ -160,6 +164,7 @@ const _getOrganizationNode = (ctx: any, type: string) => {
 			'https://www.wikidata.org/wiki/Q5302303' // Software development
 		],
 		knowsAbout: defaultKnowsAbout,
+		email: 'info@volcanicminds.com',
 		// telephone: '+39 011 XXXXXXX',
 		priceRange: PRICE_RANGE,
 		description:
@@ -193,6 +198,7 @@ const _getOrganizationNode = (ctx: any, type: string) => {
 			contactPoint: {
 				'@type': 'ContactPoint',
 				// telephone: '+39 011 XXXXXXX',
+				email: 'info@volcanicminds.com',
 				contactType: 'sales',
 				areaServed: {
 					'@type': 'Continent',
