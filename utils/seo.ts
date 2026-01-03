@@ -315,16 +315,12 @@ const _getArticleNode = (ctx: any, type = 'TechArticle') => {
 		'@id': `${currentPath}/#article`,
 		headline: ctx.document.data.title,
 		image: ctx.document.data.og_image?.url ? [ctx.document.data.og_image.url] : [],
-		datePublished:
-			ctx.document.data.publication_date ||
-			(ctx.document.data.publication_date_sort
-				? dayjs(ctx.document.data.publication_date_sort).format('YYYY-MM-DDTHH:mm:ss[Z]')
-				: undefined),
-		dateModified:
-			ctx.document.data.latest_revision_date ||
-			(ctx.document.data.latest_revision_date_sort
-				? dayjs(ctx.document.data.latest_revision_date_sort).format('YYYY-MM-DDTHH:mm:ss[Z]')
-				: undefined),
+		datePublished: ctx.document.data.publication_date_sort
+			? dayjs(ctx.document.data.publication_date_sort).format('YYYY-MM-DDTHH:mm:ss[Z]')
+			: undefined,
+		dateModified: ctx.document.data.latest_revision_date_sort
+			? dayjs(ctx.document.data.latest_revision_date_sort).format('YYYY-MM-DDTHH:mm:ss[Z]')
+			: undefined,
 		author: authorNode,
 		publisher: { '@id': identityId },
 		description: ctx.document.data.seo_description || ctx.$constants.seoDescription,
