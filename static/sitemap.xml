@@ -6,6 +6,10 @@
         <xhtml:link rel="alternate" hreflang="it" href="https://volcanicminds.com/" />
         <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en" />
         <xhtml:link rel="alternate" hreflang="x-default" href="https://volcanicminds.com/en" />
+        <image:image>
+            <image:loc>https://images.prismic.io/volcanic-website/aCcV_SdWJ-7kSNnm_ufficio5.jpeg</image:loc>
+            <image:title>Homepage</image:title>
+        </image:image>
     </url>
     <url>
         <loc>https://volcanicminds.com/en</loc>
@@ -13,6 +17,10 @@
         <xhtml:link rel="alternate" hreflang="it" href="https://volcanicminds.com/" />
         <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en" />
         <xhtml:link rel="alternate" hreflang="x-default" href="https://volcanicminds.com/en" />
+        <image:image>
+            <image:loc>https://images.prismic.io/volcanic-website/aCcV_SdWJ-7kSNnm_ufficio5.jpeg</image:loc>
+            <image:title>Hero banner office background</image:title>
+        </image:image>
     </url>
     <url>
         <loc>https://volcanicminds.com/insights</loc>
@@ -20,6 +28,10 @@
         <xhtml:link rel="alternate" hreflang="it" href="https://volcanicminds.com/insights" />
         <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/insights" />
         <xhtml:link rel="alternate" hreflang="x-default" href="https://volcanicminds.com/en/insights" />
+        <image:image>
+            <image:loc>https://images.prismic.io/volcanic-website/a3b77759-c2d2-426b-98d9-f8cf236a5d46_scrivania.jpg</image:loc>
+            <image:title>Pc su desktop</image:title>
+        </image:image>
     </url>
     <url>
         <loc>https://volcanicminds.com/en/insights</loc>
@@ -27,27 +39,127 @@
         <xhtml:link rel="alternate" hreflang="it" href="https://volcanicminds.com/insights" />
         <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/insights" />
         <xhtml:link rel="alternate" hreflang="x-default" href="https://volcanicminds.com/en/insights" />
-    </url>
-    <url>
-        <loc>https://volcanicminds.com/about-us</loc>
-        <lastmod>2025-12-25T23:07:19+0000</lastmod>
-        <xhtml:link rel="alternate" hreflang="it" href="https://volcanicminds.com/about-us" />
-        <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/about-us" />
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://volcanicminds.com/en/about-us" />
+        <image:image>
+            <image:loc>https://images.prismic.io/volcanic-website/a3b77759-c2d2-426b-98d9-f8cf236a5d46_scrivania.jpg</image:loc>
+            <image:title>Pc on desk</image:title>
+        </image:image>
     </url>
     <url>
         <loc>https://volcanicminds.com/en/about-us</loc>
         <lastmod>2025-12-25T23:06:22+0000</lastmod>
-        <xhtml:link rel="alternate" hreflang="it" href="https://volcanicminds.com/about-us" />
         <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/about-us" />
+        <xhtml:link rel="alternate" hreflang="it" href="https://volcanicminds.com/about-us" />
         <xhtml:link rel="alternate" hreflang="x-default" href="https://volcanicminds.com/en/about-us" />
+        <image:image>
+            <image:loc>https://images.prismic.io/volcanic-website/1dab4f5e-5343-475a-88db-0931416c0de6_software.jpg</image:loc>
+            <image:title>Desk with smartphone and PC monitors</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://images.prismic.io/volcanic-website/91b5303b-3da0-4d9a-bd87-0288089bc390_pexels-ann-h-1765033.jpg</image:loc>
+            <image:title>The playbook</image:title>
+        </image:image>
+    </url>
+    <url>
+        <loc>https://volcanicminds.com/about-us</loc>
+        <lastmod>2025-12-25T23:07:19+0000</lastmod>
+        <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/about-us" />
+        <xhtml:link rel="alternate" hreflang="it" href="https://volcanicminds.com/about-us" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://volcanicminds.com/en/about-us" />
+        <image:image>
+            <image:loc>https://images.prismic.io/volcanic-website/1dab4f5e-5343-475a-88db-0931416c0de6_software.jpg</image:loc>
+            <image:title>Scrivania con PC e smartphone</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://images.prismic.io/volcanic-website/91b5303b-3da0-4d9a-bd87-0288089bc390_pexels-ann-h-1765033.jpg</image:loc>
+            <image:title>Il playbook</image:title>
+        </image:image>
     </url>
     <url>
         <loc>https://volcanicminds.com/portfolio</loc>
-        <lastmod>2025-12-29T17:30:48+0000</lastmod>
+        <lastmod>2026-01-03T02:32:21+0000</lastmod>
         <xhtml:link rel="alternate" hreflang="it" href="https://volcanicminds.com/portfolio" />
         <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/portfolio" />
         <xhtml:link rel="alternate" hreflang="x-default" href="https://volcanicminds.com/en/portfolio" />
+        <image:image>
+            <image:loc>https://images.prismic.io/volcanic-website/aCNMwSdWJ-7kSBVK_ufficio.webp</image:loc>
+            <image:title>Ufficio stilizzato</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://images.prismic.io/volcanic-website/aK3R02GNHVfTOVOY_portfolio-urmet-ate-desktop.webp</image:loc>
+            <image:title>Urmet ATE - Monitoraggio apparati di telesoccorso</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://images.prismic.io/volcanic-website/aK3R1GGNHVfTOVOZ_portfolio-urmet-ate-preview.webp</image:loc>
+            <image:title>Urmet ATE - Dashboard monitoraggio apparati di telesoccorso</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://images.prismic.io/volcanic-website/aK3R1mGNHVfTOVOb_portfolio-urmet-mobile.webp</image:loc>
+            <image:title>Elkron - App antintrusione</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://images.prismic.io/volcanic-website/aK3RymGNHVfTOVOP_portfolio-elkron-tablet.webp</image:loc>
+            <image:title>Elkron - Gestione multifunzione</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://images.prismic.io/volcanic-website/aK3RyWGNHVfTOVOO_portfolio-elkron-preview.webp</image:loc>
+            <image:title>Elkron - Dashboard gestione multifunzione</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://images.prismic.io/volcanic-website/aK71VmGNHVfTOXRF_portfolio-urmet-1076-dashboard.webp</image:loc>
+            <image:title>Urmet Innovation - Monitoraggio stati e allarmi</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://images.prismic.io/volcanic-website/aK71V2GNHVfTOXRG_portfolio-urmet-1076-preview.webp</image:loc>
+            <image:title>Urmet Innovation - Dashboard - Monitoraggio stati e allarmi</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://images.prismic.io/volcanic-website/aK3Ry2GNHVfTOVOQ_portfolio-eni-mobile.webp</image:loc>
+            <image:title>Test diagnostici medici audio</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://images.prismic.io/volcanic-website/aK3RyGGNHVfTOVOM_portfolio-elkron-mobile.webp</image:loc>
+            <image:title>Elkron - App multifunzione casa</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://images.prismic.io/volcanic-website/aK3RzGGNHVfTOVOR_portfolio-epicura-desktop-mobile.webp</image:loc>
+            <image:title>epiCura - Gestionale avanzato per operatori sanitari</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://images.prismic.io/volcanic-website/aK3R0GGNHVfTOVOV_portfolio-hawica-desktop.webp</image:loc>
+            <image:title>Hawica - Gestionale per officine meccaniche</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://images.prismic.io/volcanic-website/aK3R0WGNHVfTOVOW_portfolio-hawica-preview.webp</image:loc>
+            <image:title>Hawica - Dashboard - Gestionale per officine meccaniche</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://images.prismic.io/volcanic-website/aK3R1WGNHVfTOVOa_portfolio-urmet-desktop.webp</image:loc>
+            <image:title>Urmet - Dashboard allarme</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://images.prismic.io/volcanic-website/aK3R12GNHVfTOVOc_portfolio-urmet-preview.webp</image:loc>
+            <image:title>Urmet - Preview Dashboard allarme</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://images.prismic.io/volcanic-website/aK3RzWGNHVfTOVOS_portfolio-greenrouter-desktop.webp</image:loc>
+            <image:title>GreenRouter - Suite di ripartizione carbon footprint</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://images.prismic.io/volcanic-website/aK3RzmGNHVfTOVOT_portfolio-gruppocs-desktop.webp</image:loc>
+            <image:title>Gruppo CS - Concept - Portale pianificazione corsi e servizi</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://images.prismic.io/volcanic-website/aK3Rz2GNHVfTOVOU_portfolio-gruppocs-preview.webp</image:loc>
+            <image:title>Gruppo CS - Dashboard - Portale pianificazione corsi e servizi</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://images.prismic.io/volcanic-website/aK7ev2GNHVfTOW48_portfolio-ship-concept.webp</image:loc>
+            <image:title>App mobile - Gestione clientela e attività di bordo</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://images.prismic.io/volcanic-website/aK3R2WGNHVfTOVOe_portfolio-vm-website.webp</image:loc>
+            <image:title>Volcanic Minds Website</image:title>
+        </image:image>
     </url>
     <url>
         <loc>https://volcanicminds.com/en/portfolio</loc>
@@ -55,20 +167,108 @@
         <xhtml:link rel="alternate" hreflang="it" href="https://volcanicminds.com/portfolio" />
         <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/portfolio" />
         <xhtml:link rel="alternate" hreflang="x-default" href="https://volcanicminds.com/en/portfolio" />
-    </url>
-    <url>
-        <loc>https://volcanicminds.com/contacts</loc>
-        <lastmod>2026-01-02T18:33:16+0000</lastmod>
-        <xhtml:link rel="alternate" hreflang="it" href="https://volcanicminds.com/contacts" />
-        <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/contacts" />
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://volcanicminds.com/en/contacts" />
+        <image:image>
+            <image:loc>https://images.prismic.io/volcanic-website/aCNMwSdWJ-7kSBVK_ufficio.webp</image:loc>
+            <image:title>Portfolio</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://images.prismic.io/volcanic-website/aK3R02GNHVfTOVOY_portfolio-urmet-ate-desktop.webp</image:loc>
+            <image:title>Telecare device monitoring</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://images.prismic.io/volcanic-website/aK3R1GGNHVfTOVOZ_portfolio-urmet-ate-preview.webp</image:loc>
+            <image:title>Portfolio</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://images.prismic.io/volcanic-website/aK3R1mGNHVfTOVOb_portfolio-urmet-mobile.webp</image:loc>
+            <image:title>Anti-intrusion app</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://images.prismic.io/volcanic-website/aK3RymGNHVfTOVOP_portfolio-elkron-tablet.webp</image:loc>
+            <image:title>Multifunction management</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://images.prismic.io/volcanic-website/aK3RyWGNHVfTOVOO_portfolio-elkron-preview.webp</image:loc>
+            <image:title>Portfolio</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://images.prismic.io/volcanic-website/aK71VmGNHVfTOXRF_portfolio-urmet-1076-dashboard.webp</image:loc>
+            <image:title>Status and alarm monitoring</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://images.prismic.io/volcanic-website/aK71V2GNHVfTOXRG_portfolio-urmet-1076-preview.webp</image:loc>
+            <image:title>Portfolio</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://images.prismic.io/volcanic-website/aK3Ry2GNHVfTOVOQ_portfolio-eni-mobile.webp</image:loc>
+            <image:title>Diagnostic tests</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://images.prismic.io/volcanic-website/aK3RyGGNHVfTOVOM_portfolio-elkron-mobile.webp</image:loc>
+            <image:title>Multifunction app</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://images.prismic.io/volcanic-website/aK3RzGGNHVfTOVOR_portfolio-epicura-desktop-mobile.webp</image:loc>
+            <image:title>Management for healthcare operators</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://images.prismic.io/volcanic-website/aK3R0GGNHVfTOVOV_portfolio-hawica-desktop.webp</image:loc>
+            <image:title>Workshop and warehouse management</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://images.prismic.io/volcanic-website/aK3R0WGNHVfTOVOW_portfolio-hawica-preview.webp</image:loc>
+            <image:title>Portfolio</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://images.prismic.io/volcanic-website/aK3R1WGNHVfTOVOa_portfolio-urmet-desktop.webp</image:loc>
+            <image:title>Alarm dashboard</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://images.prismic.io/volcanic-website/aK3R12GNHVfTOVOc_portfolio-urmet-preview.webp</image:loc>
+            <image:title>Portfolio</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://images.prismic.io/volcanic-website/aK3RzWGNHVfTOVOS_portfolio-greenrouter-desktop.webp</image:loc>
+            <image:title>Carbon footprint suite</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://images.prismic.io/volcanic-website/aK3RzmGNHVfTOVOT_portfolio-gruppocs-desktop.webp</image:loc>
+            <image:title>Course planning</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://images.prismic.io/volcanic-website/aK3Rz2GNHVfTOVOU_portfolio-gruppocs-preview.webp</image:loc>
+            <image:title>Portfolio</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://images.prismic.io/volcanic-website/aK7ev2GNHVfTOW48_portfolio-ship-concept.webp</image:loc>
+            <image:title>Customer and on-board activity</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://images.prismic.io/volcanic-website/aK3R2WGNHVfTOVOe_portfolio-vm-website.webp</image:loc>
+            <image:title>Volcanic Website</image:title>
+        </image:image>
     </url>
     <url>
         <loc>https://volcanicminds.com/en/contacts</loc>
         <lastmod>2025-12-25T22:51:24+0000</lastmod>
-        <xhtml:link rel="alternate" hreflang="it" href="https://volcanicminds.com/contacts" />
         <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/contacts" />
+        <xhtml:link rel="alternate" hreflang="it" href="https://volcanicminds.com/contacts" />
         <xhtml:link rel="alternate" hreflang="x-default" href="https://volcanicminds.com/en/contacts" />
+        <image:image>
+            <image:loc>https://images.prismic.io/volcanic-website/c6473956-d767-41c9-be25-2bf7a9fd0cd0_contact-7436930.jpg</image:loc>
+            <image:title>Dial phone</image:title>
+        </image:image>
+    </url>
+    <url>
+        <loc>https://volcanicminds.com/contacts</loc>
+        <lastmod>2026-01-02T18:33:16+0000</lastmod>
+        <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/contacts" />
+        <xhtml:link rel="alternate" hreflang="it" href="https://volcanicminds.com/contacts" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://volcanicminds.com/en/contacts" />
+        <image:image>
+            <image:loc>https://images.prismic.io/volcanic-website/c6473956-d767-41c9-be25-2bf7a9fd0cd0_contact-7436930.jpg</image:loc>
+            <image:title>Telefono a disco</image:title>
+        </image:image>
     </url>
     <url>
         <loc>https://volcanicminds.com/privacy-policy</loc>
@@ -76,6 +276,10 @@
         <xhtml:link rel="alternate" hreflang="it" href="https://volcanicminds.com/privacy-policy" />
         <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/privacy-policy" />
         <xhtml:link rel="alternate" hreflang="x-default" href="https://volcanicminds.com/en/privacy-policy" />
+        <image:image>
+            <image:loc>https://images.prismic.io/volcanic-website/91bc75fc-0421-4e4f-9db5-97364904a3a8_privacy.jpg</image:loc>
+            <image:title>Portone di legno con lucchetto</image:title>
+        </image:image>
     </url>
     <url>
         <loc>https://volcanicminds.com/en/privacy-policy</loc>
@@ -83,13 +287,33 @@
         <xhtml:link rel="alternate" hreflang="it" href="https://volcanicminds.com/privacy-policy" />
         <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/privacy-policy" />
         <xhtml:link rel="alternate" hreflang="x-default" href="https://volcanicminds.com/en/privacy-policy" />
+        <image:image>
+            <image:loc>https://images.prismic.io/volcanic-website/91bc75fc-0421-4e4f-9db5-97364904a3a8_privacy.jpg</image:loc>
+            <image:title>Wooden door with lock</image:title>
+        </image:image>
     </url>
     <url>
         <loc>https://volcanicminds.com/services</loc>
-        <lastmod>2026-01-03T01:38:06+0000</lastmod>
+        <lastmod>2026-01-03T02:25:58+0000</lastmod>
         <xhtml:link rel="alternate" hreflang="it" href="https://volcanicminds.com/services" />
         <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/services" />
         <xhtml:link rel="alternate" hreflang="x-default" href="https://volcanicminds.com/en/services" />
+        <image:image>
+            <image:loc>https://images.prismic.io/volcanic-website/e6ddfc75-8e63-4e1d-9adb-faf95b2b0cc9_pexels-christina-morillo-1181316.jpg</image:loc>
+            <image:title>Donna con computer in mano in stanza server</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://images.prismic.io/volcanic-website/471adf52-6e60-4304-bea4-9c4b2b5f8ac5_Man+with+Mug+is+Talking+to+His+Colleague+at+Table+Free+Stock+Photo+by+Everypixel.jpg</image:loc>
+            <image:title>Uomo con tazza davanti a pc e collega</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://images.prismic.io/volcanic-website/77f59960-f890-4fce-bac9-499175bfc68d_pexels-oluwaseun-duncan-226240.jpg</image:loc>
+            <image:title>Computer con codice html</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://images.prismic.io/volcanic-website/55d577cc-c2cc-4926-9fd0-99c4bd113d9d_pexels-cottonbro-studio-7438102.jpg</image:loc>
+            <image:title>Persone attorno a un tavolo con computer</image:title>
+        </image:image>
     </url>
     <url>
         <loc>https://volcanicminds.com/en/services</loc>
@@ -97,6 +321,22 @@
         <xhtml:link rel="alternate" hreflang="it" href="https://volcanicminds.com/services" />
         <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/services" />
         <xhtml:link rel="alternate" hreflang="x-default" href="https://volcanicminds.com/en/services" />
+        <image:image>
+            <image:loc>https://images.prismic.io/volcanic-website/e6ddfc75-8e63-4e1d-9adb-faf95b2b0cc9_pexels-christina-morillo-1181316.jpg</image:loc>
+            <image:title>Woman with a computer in hand in a server room.</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://images.prismic.io/volcanic-website/471adf52-6e60-4304-bea4-9c4b2b5f8ac5_Man+with+Mug+is+Talking+to+His+Colleague+at+Table+Free+Stock+Photo+by+Everypixel.jpg</image:loc>
+            <image:title>Man with a cup in front of a computer and colleague</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://images.prismic.io/volcanic-website/77f59960-f890-4fce-bac9-499175bfc68d_pexels-oluwaseun-duncan-226240.jpg</image:loc>
+            <image:title>Computer with HTML code</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://images.prismic.io/volcanic-website/55d577cc-c2cc-4926-9fd0-99c4bd113d9d_pexels-cottonbro-studio-7438102.jpg</image:loc>
+            <image:title>People around a table with computers</image:title>
+        </image:image>
     </url>
     <url>
         <loc>https://volcanicminds.com/services/digital-factory</loc>
@@ -104,6 +344,22 @@
         <xhtml:link rel="alternate" hreflang="it" href="https://volcanicminds.com/services/digital-factory" />
         <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/services/digital-factory" />
         <xhtml:link rel="alternate" hreflang="x-default" href="https://volcanicminds.com/en/services/digital-factory" />
+        <image:image>
+            <image:loc>https://images.prismic.io/volcanic-website/77f59960-f890-4fce-bac9-499175bfc68d_pexels-oluwaseun-duncan-226240.jpg</image:loc>
+            <image:title>Codice web su schermo PC</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://images.prismic.io/volcanic-website/3cf08d44-0556-4f8d-9446-d574be8401c9_pexels-fauxels-3183150.jpg</image:loc>
+            <image:title>Digital Factory</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://images.prismic.io/volcanic-website/471adf52-6e60-4304-bea4-9c4b2b5f8ac5_Man+with+Mug+is+Talking+to+His+Colleague+at+Table+Free+Stock+Photo+by+Everypixel.jpg</image:loc>
+            <image:title>Uomo con tazza davanti a pc e collega</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://images.prismic.io/volcanic-website/55d577cc-c2cc-4926-9fd0-99c4bd113d9d_pexels-cottonbro-studio-7438102.jpg</image:loc>
+            <image:title>Persone attorno a un tavolo con computer</image:title>
+        </image:image>
     </url>
     <url>
         <loc>https://volcanicminds.com/en/services/digital-factory</loc>
@@ -111,6 +367,22 @@
         <xhtml:link rel="alternate" hreflang="it" href="https://volcanicminds.com/services/digital-factory" />
         <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/services/digital-factory" />
         <xhtml:link rel="alternate" hreflang="x-default" href="https://volcanicminds.com/en/services/digital-factory" />
+        <image:image>
+            <image:loc>https://images.prismic.io/volcanic-website/77f59960-f890-4fce-bac9-499175bfc68d_pexels-oluwaseun-duncan-226240.jpg</image:loc>
+            <image:title>Computer with HTML code</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://images.prismic.io/volcanic-website/3cf08d44-0556-4f8d-9446-d574be8401c9_pexels-fauxels-3183150.jpg</image:loc>
+            <image:title>Digital Factory</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://images.prismic.io/volcanic-website/471adf52-6e60-4304-bea4-9c4b2b5f8ac5_Man+with+Mug+is+Talking+to+His+Colleague+at+Table+Free+Stock+Photo+by+Everypixel.jpg</image:loc>
+            <image:title>Man with a cup in front of a computer and colleague</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://images.prismic.io/volcanic-website/55d577cc-c2cc-4926-9fd0-99c4bd113d9d_pexels-cottonbro-studio-7438102.jpg</image:loc>
+            <image:title>People around a table with computers</image:title>
+        </image:image>
     </url>
     <url>
         <loc>https://volcanicminds.com/services/design-strategy</loc>
@@ -118,6 +390,22 @@
         <xhtml:link rel="alternate" hreflang="it" href="https://volcanicminds.com/services/design-strategy" />
         <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/services/design-strategy" />
         <xhtml:link rel="alternate" hreflang="x-default" href="https://volcanicminds.com/en/services/design-strategy" />
+        <image:image>
+            <image:loc>https://images.prismic.io/volcanic-website/471adf52-6e60-4304-bea4-9c4b2b5f8ac5_Man+with+Mug+is+Talking+to+His+Colleague+at+Table+Free+Stock+Photo+by+Everypixel.jpg</image:loc>
+            <image:title>Uomo con tazza che parla con collega</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://images.prismic.io/volcanic-website/c401d104-c8f0-4011-a4cd-79e440260a21_pexels-startup-stock-photos-212286.jpg</image:loc>
+            <image:title>Uomo di spalle che guarda lavagna con post-it</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://images.prismic.io/volcanic-website/77f59960-f890-4fce-bac9-499175bfc68d_pexels-oluwaseun-duncan-226240.jpg</image:loc>
+            <image:title>Computer con codice html</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://images.prismic.io/volcanic-website/55d577cc-c2cc-4926-9fd0-99c4bd113d9d_pexels-cottonbro-studio-7438102.jpg</image:loc>
+            <image:title>Persone attorno a un tavolo con computer</image:title>
+        </image:image>
     </url>
     <url>
         <loc>https://volcanicminds.com/en/services/design-strategy</loc>
@@ -125,6 +413,22 @@
         <xhtml:link rel="alternate" hreflang="it" href="https://volcanicminds.com/services/design-strategy" />
         <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/services/design-strategy" />
         <xhtml:link rel="alternate" hreflang="x-default" href="https://volcanicminds.com/en/services/design-strategy" />
+        <image:image>
+            <image:loc>https://images.prismic.io/volcanic-website/471adf52-6e60-4304-bea4-9c4b2b5f8ac5_Man+with+Mug+is+Talking+to+His+Colleague+at+Table+Free+Stock+Photo+by+Everypixel.jpg</image:loc>
+            <image:title>Man with a cup in front of a computer and colleague</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://images.prismic.io/volcanic-website/c401d104-c8f0-4011-a4cd-79e440260a21_pexels-startup-stock-photos-212286.jpg</image:loc>
+            <image:title>Man looking at a whiteboard with post-it notes from behind</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://images.prismic.io/volcanic-website/77f59960-f890-4fce-bac9-499175bfc68d_pexels-oluwaseun-duncan-226240.jpg</image:loc>
+            <image:title>Computer with HTML code</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://images.prismic.io/volcanic-website/55d577cc-c2cc-4926-9fd0-99c4bd113d9d_pexels-cottonbro-studio-7438102.jpg</image:loc>
+            <image:title>People around a table with computers</image:title>
+        </image:image>
     </url>
     <url>
         <loc>https://volcanicminds.com/services/project-leading</loc>
@@ -132,6 +436,42 @@
         <xhtml:link rel="alternate" hreflang="it" href="https://volcanicminds.com/services/project-leading" />
         <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/services/project-leading" />
         <xhtml:link rel="alternate" hreflang="x-default" href="https://volcanicminds.com/en/services/project-leading" />
+        <image:image>
+            <image:loc>https://images.prismic.io/volcanic-website/55d577cc-c2cc-4926-9fd0-99c4bd113d9d_pexels-cottonbro-studio-7438102.jpg</image:loc>
+            <image:title>Persone attorno a un tavolo con computer</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://images.prismic.io/volcanic-website/79f94874-eca8-40d7-ad76-e07ff19fc222_app-design.jpg</image:loc>
+            <image:title>Project Leading</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://images.prismic.io/volcanic-website/aKhn56Tt2nPbaoy9_pexels-fauxels-3184296.jpg</image:loc>
+            <image:title>Project Leading</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://images.prismic.io/volcanic-website/aKho7qTt2nPbao0L_pexels-mikhail-nilov-8284734.jpg</image:loc>
+            <image:title>Project Leading</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://images.prismic.io/volcanic-website/c84a902d-cc36-4dce-a42c-c6a8e44ae79b_developers.jpg</image:loc>
+            <image:title>Project Leading</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://images.prismic.io/volcanic-website/aKhr3aTt2nPbao2J_pexels-ron-lach-9870144.jpg</image:loc>
+            <image:title>Project Leading</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://images.prismic.io/volcanic-website/Z2q87pbqstJ980Kk_1728492980723.jpeg</image:loc>
+            <image:title>Project Leading</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://images.prismic.io/volcanic-website/471adf52-6e60-4304-bea4-9c4b2b5f8ac5_Man+with+Mug+is+Talking+to+His+Colleague+at+Table+Free+Stock+Photo+by+Everypixel.jpg</image:loc>
+            <image:title>Uomo con tazza davanti a pc e collega</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://images.prismic.io/volcanic-website/77f59960-f890-4fce-bac9-499175bfc68d_pexels-oluwaseun-duncan-226240.jpg</image:loc>
+            <image:title>Schermo acceso con codice</image:title>
+        </image:image>
     </url>
     <url>
         <loc>https://volcanicminds.com/en/services/project-leading</loc>
@@ -139,6 +479,42 @@
         <xhtml:link rel="alternate" hreflang="it" href="https://volcanicminds.com/services/project-leading" />
         <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/services/project-leading" />
         <xhtml:link rel="alternate" hreflang="x-default" href="https://volcanicminds.com/en/services/project-leading" />
+        <image:image>
+            <image:loc>https://images.prismic.io/volcanic-website/55d577cc-c2cc-4926-9fd0-99c4bd113d9d_pexels-cottonbro-studio-7438102.jpg</image:loc>
+            <image:title>People around a table with computers</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://images.prismic.io/volcanic-website/79f94874-eca8-40d7-ad76-e07ff19fc222_app-design.jpg</image:loc>
+            <image:title>Project Leading</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://images.prismic.io/volcanic-website/aKhn56Tt2nPbaoy9_pexels-fauxels-3184296.jpg</image:loc>
+            <image:title>Project Leading</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://images.prismic.io/volcanic-website/aKho7qTt2nPbao0L_pexels-mikhail-nilov-8284734.jpg</image:loc>
+            <image:title>Project Leading</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://images.prismic.io/volcanic-website/c84a902d-cc36-4dce-a42c-c6a8e44ae79b_developers.jpg</image:loc>
+            <image:title>Project Leading</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://images.prismic.io/volcanic-website/aKhr3aTt2nPbao2J_pexels-ron-lach-9870144.jpg</image:loc>
+            <image:title>Project Leading</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://images.prismic.io/volcanic-website/Z2q87pbqstJ980Kk_1728492980723.jpeg</image:loc>
+            <image:title>Project Leading</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://images.prismic.io/volcanic-website/471adf52-6e60-4304-bea4-9c4b2b5f8ac5_Man+with+Mug+is+Talking+to+His+Colleague+at+Table+Free+Stock+Photo+by+Everypixel.jpg</image:loc>
+            <image:title>Man with mug in front of PC and colleague</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://images.prismic.io/volcanic-website/77f59960-f890-4fce-bac9-499175bfc68d_pexels-oluwaseun-duncan-226240.jpg</image:loc>
+            <image:title>Monitor on with code</image:title>
+        </image:image>
     </url>
     <url>
         <loc>https://volcanicminds.com/services/frequently-asked-questions</loc>
@@ -146,6 +522,10 @@
         <xhtml:link rel="alternate" hreflang="it" href="https://volcanicminds.com/services/frequently-asked-questions" />
         <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/services/frequently-asked-questions" />
         <xhtml:link rel="alternate" hreflang="x-default" href="https://volcanicminds.com/en/services/frequently-asked-questions" />
+        <image:image>
+            <image:loc>https://images.prismic.io/volcanic-website/5d8e80fb-7224-4e35-a2d3-05c1bc6b668e_developer.jpg</image:loc>
+            <image:title>Domande frequenti</image:title>
+        </image:image>
     </url>
     <url>
         <loc>https://volcanicminds.com/en/services/frequently-asked-questions</loc>
@@ -153,132 +533,114 @@
         <xhtml:link rel="alternate" hreflang="it" href="https://volcanicminds.com/services/frequently-asked-questions" />
         <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/services/frequently-asked-questions" />
         <xhtml:link rel="alternate" hreflang="x-default" href="https://volcanicminds.com/en/services/frequently-asked-questions" />
-    </url>
-    <url>
-        <loc>https://volcanicminds.com/insights/composite-ai-agents-governance-mastra</loc>
-        <lastmod>2025-12-29T17:38:05+0000</lastmod>
-        <xhtml:link rel="alternate" hreflang="it" href="https://volcanicminds.com/insights/composite-ai-agents-governance-mastra" />
-        <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/insights/composite-ai-agents-governance-mastra" />
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://volcanicminds.com/en/insights/composite-ai-agents-governance-mastra" />
-    </url>
-    <url>
-        <loc>https://volcanicminds.com/en/insights/composite-ai-agents-governance-mastra</loc>
-        <lastmod>2025-12-29T17:37:15+0000</lastmod>
-        <xhtml:link rel="alternate" hreflang="it" href="https://volcanicminds.com/insights/composite-ai-agents-governance-mastra" />
-        <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/insights/composite-ai-agents-governance-mastra" />
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://volcanicminds.com/en/insights/composite-ai-agents-governance-mastra" />
-    </url>
-    <url>
-        <loc>https://volcanicminds.com/en/insights/google-analytics-gdpr-alternative-plausible</loc>
-        <lastmod>2025-12-29T17:36:38+0000</lastmod>
-        <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/insights/google-analytics-gdpr-alternative-plausible" />
-        <xhtml:link rel="alternate" hreflang="it" href="https://volcanicminds.com/insights/google-analytics-gdpr-alternative-plausible" />
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://volcanicminds.com/en/insights/google-analytics-gdpr-alternative-plausible" />
-    </url>
-    <url>
-        <loc>https://volcanicminds.com/insights/google-analytics-gdpr-alternative-plausible</loc>
-        <lastmod>2025-12-29T17:36:55+0000</lastmod>
-        <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/insights/google-analytics-gdpr-alternative-plausible" />
-        <xhtml:link rel="alternate" hreflang="it" href="https://volcanicminds.com/insights/google-analytics-gdpr-alternative-plausible" />
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://volcanicminds.com/en/insights/google-analytics-gdpr-alternative-plausible" />
-    </url>
-    <url>
-        <loc>https://volcanicminds.com/insights/rag-agent-mastra-ai</loc>
-        <lastmod>2025-12-29T17:34:00+0000</lastmod>
-        <xhtml:link rel="alternate" hreflang="it" href="https://volcanicminds.com/insights/rag-agent-mastra-ai" />
-        <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/insights/rag-agent-mastra-ai" />
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://volcanicminds.com/en/insights/rag-agent-mastra-ai" />
-    </url>
-    <url>
-        <loc>https://volcanicminds.com/en/insights/rag-agent-mastra-ai</loc>
-        <lastmod>2025-12-29T17:34:13+0000</lastmod>
-        <xhtml:link rel="alternate" hreflang="it" href="https://volcanicminds.com/insights/rag-agent-mastra-ai" />
-        <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/insights/rag-agent-mastra-ai" />
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://volcanicminds.com/en/insights/rag-agent-mastra-ai" />
-    </url>
-    <url>
-        <loc>https://volcanicminds.com/en/insights/volcano-sdk-kong-agents-production-ready</loc>
-        <lastmod>2025-12-29T17:32:49+0000</lastmod>
-        <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/insights/volcano-sdk-kong-agents-production-ready" />
-        <xhtml:link rel="alternate" hreflang="it" href="https://volcanicminds.com/insights/volcano-sdk-kong-agents-production-ready" />
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://volcanicminds.com/en/insights/volcano-sdk-kong-agents-production-ready" />
-    </url>
-    <url>
-        <loc>https://volcanicminds.com/insights/volcano-sdk-kong-agents-production-ready</loc>
-        <lastmod>2025-12-29T17:32:36+0000</lastmod>
-        <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/insights/volcano-sdk-kong-agents-production-ready" />
-        <xhtml:link rel="alternate" hreflang="it" href="https://volcanicminds.com/insights/volcano-sdk-kong-agents-production-ready" />
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://volcanicminds.com/en/insights/volcano-sdk-kong-agents-production-ready" />
-    </url>
-    <url>
-        <loc>https://volcanicminds.com/en/insights/vibe-coding-tools-for-devs</loc>
-        <lastmod>2025-12-29T17:34:39+0000</lastmod>
-        <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/insights/vibe-coding-tools-for-devs" />
-        <xhtml:link rel="alternate" hreflang="it" href="https://volcanicminds.com/insights/vibe-coding-tools-for-devs" />
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://volcanicminds.com/en/insights/vibe-coding-tools-for-devs" />
-    </url>
-    <url>
-        <loc>https://volcanicminds.com/insights/vibe-coding-tools-for-devs</loc>
-        <lastmod>2025-12-29T17:34:51+0000</lastmod>
-        <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/insights/vibe-coding-tools-for-devs" />
-        <xhtml:link rel="alternate" hreflang="it" href="https://volcanicminds.com/insights/vibe-coding-tools-for-devs" />
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://volcanicminds.com/en/insights/vibe-coding-tools-for-devs" />
-    </url>
-    <url>
-        <loc>https://volcanicminds.com/insights/llm-javascript-practical-guide</loc>
-        <lastmod>2025-12-29T17:35:29+0000</lastmod>
-        <xhtml:link rel="alternate" hreflang="it" href="https://volcanicminds.com/insights/llm-javascript-practical-guide" />
-        <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/insights/llm-javascript-practical-guide" />
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://volcanicminds.com/en/insights/llm-javascript-practical-guide" />
-    </url>
-    <url>
-        <loc>https://volcanicminds.com/en/insights/llm-javascript-practical-guide</loc>
-        <lastmod>2025-12-29T17:35:17+0000</lastmod>
-        <xhtml:link rel="alternate" hreflang="it" href="https://volcanicminds.com/insights/llm-javascript-practical-guide" />
-        <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/insights/llm-javascript-practical-guide" />
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://volcanicminds.com/en/insights/llm-javascript-practical-guide" />
-    </url>
-    <url>
-        <loc>https://volcanicminds.com/insights/making-of</loc>
-        <lastmod>2025-12-29T17:36:14+0000</lastmod>
-        <xhtml:link rel="alternate" hreflang="it" href="https://volcanicminds.com/insights/making-of" />
-        <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/insights/making-of" />
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://volcanicminds.com/en/insights/making-of" />
-    </url>
-    <url>
-        <loc>https://volcanicminds.com/en/insights/making-of</loc>
-        <lastmod>2025-12-29T17:36:00+0000</lastmod>
-        <xhtml:link rel="alternate" hreflang="it" href="https://volcanicminds.com/insights/making-of" />
-        <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/insights/making-of" />
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://volcanicminds.com/en/insights/making-of" />
-    </url>
-    <url>
-        <loc>https://volcanicminds.com/en/insights/how-to-manage-risk-custom-software-projects</loc>
-        <lastmod>2025-12-29T17:37:45+0000</lastmod>
-        <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/insights/how-to-manage-risk-custom-software-projects" />
-        <xhtml:link rel="alternate" hreflang="it" href="https://volcanicminds.com/insights/how-to-manage-risk-custom-software-projects" />
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://volcanicminds.com/en/insights/how-to-manage-risk-custom-software-projects" />
-    </url>
-    <url>
-        <loc>https://volcanicminds.com/insights/how-to-manage-risk-custom-software-projects</loc>
-        <lastmod>2025-12-25T23:13:55+0000</lastmod>
-        <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/insights/how-to-manage-risk-custom-software-projects" />
-        <xhtml:link rel="alternate" hreflang="it" href="https://volcanicminds.com/insights/how-to-manage-risk-custom-software-projects" />
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://volcanicminds.com/en/insights/how-to-manage-risk-custom-software-projects" />
+        <image:image>
+            <image:loc>https://images.prismic.io/volcanic-website/5d8e80fb-7224-4e35-a2d3-05c1bc6b668e_developer.jpg</image:loc>
+            <image:title>Frequently Asked Questions</image:title>
+        </image:image>
     </url>
     <url>
         <loc>https://volcanicminds.com/en/insights/future-vision-polo-ict</loc>
-        <lastmod>2025-12-25T23:40:32+0000</lastmod>
+        <lastmod>2026-01-03T02:36:23+0000</lastmod>
         <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/insights/future-vision-polo-ict" />
         <xhtml:link rel="alternate" hreflang="it" href="https://volcanicminds.com/insights/future-vision-polo-ict" />
         <xhtml:link rel="alternate" hreflang="x-default" href="https://volcanicminds.com/en/insights/future-vision-polo-ict" />
+        <image:image>
+            <image:loc>https://images.prismic.io/volcanic-website/Z20wg5bqstJ981ZZ_Future-Vision-Tecnologie-e-tendenze-ICT-nel-settore-cinematografico-e-multimedia.jpg.webp</image:loc>
+            <image:title>Volcanic Minds speaking at Future Vision</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://images.prismic.io/volcanic-website/Z2q8npbqstJ980Kg_1728492981362.jpeg</image:loc>
+            <image:title>Volcanic Minds speaking at Future Vision</image:title>
+        </image:image>
     </url>
     <url>
         <loc>https://volcanicminds.com/insights/future-vision-polo-ict</loc>
-        <lastmod>2025-12-25T23:40:45+0000</lastmod>
+        <lastmod>2026-01-03T02:36:08+0000</lastmod>
         <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/insights/future-vision-polo-ict" />
         <xhtml:link rel="alternate" hreflang="it" href="https://volcanicminds.com/insights/future-vision-polo-ict" />
         <xhtml:link rel="alternate" hreflang="x-default" href="https://volcanicminds.com/en/insights/future-vision-polo-ict" />
+        <image:image>
+            <image:loc>https://images.prismic.io/volcanic-website/Z20wg5bqstJ981ZZ_Future-Vision-Tecnologie-e-tendenze-ICT-nel-settore-cinematografico-e-multimedia.jpg.webp</image:loc>
+            <image:title>Volcanic Minds speaker al Future Vision</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://images.prismic.io/volcanic-website/Z2q8npbqstJ980Kg_1728492981362.jpeg</image:loc>
+            <image:title>Immagine dell&apos;evento</image:title>
+        </image:image>
+    </url>
+    <url>
+        <loc>https://volcanicminds.com/insights/rag-agent-mastra-ai</loc>
+        <lastmod>2026-01-03T02:36:53+0000</lastmod>
+        <xhtml:link rel="alternate" hreflang="it" href="https://volcanicminds.com/insights/rag-agent-mastra-ai" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/insights/rag-agent-mastra-ai" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://volcanicminds.com/en/insights/rag-agent-mastra-ai" />
+        <image:image>
+            <image:loc>https://images.prismic.io/volcanic-website/aK7P02GNHVfTOWt1_mastra-article-cover.webp</image:loc>
+            <image:title>TypeScript: Agenti e RAG su misura Mastra AI</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://images.prismic.io/volcanic-website/Z4eHzpbqstJ99euZ_transformers.webp</image:loc>
+            <image:title>Immagine di sfondo</image:title>
+        </image:image>
+    </url>
+    <url>
+        <loc>https://volcanicminds.com/en/insights/rag-agent-mastra-ai</loc>
+        <lastmod>2026-01-03T02:37:13+0000</lastmod>
+        <xhtml:link rel="alternate" hreflang="it" href="https://volcanicminds.com/insights/rag-agent-mastra-ai" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/insights/rag-agent-mastra-ai" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://volcanicminds.com/en/insights/rag-agent-mastra-ai" />
+        <image:image>
+            <image:loc>https://images.prismic.io/volcanic-website/aK7P02GNHVfTOWt1_mastra-article-cover.webp</image:loc>
+            <image:title>TypeScript: Custom RAG Agents Mastra AI</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://images.prismic.io/volcanic-website/Z4eHzpbqstJ99euZ_transformers.webp</image:loc>
+            <image:title>Immagine di sfondo</image:title>
+        </image:image>
+    </url>
+    <url>
+        <loc>https://volcanicminds.com/en/insights/volcano-sdk-kong-agents-production-ready</loc>
+        <lastmod>2026-01-03T02:35:29+0000</lastmod>
+        <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/insights/volcano-sdk-kong-agents-production-ready" />
+        <xhtml:link rel="alternate" hreflang="it" href="https://volcanicminds.com/insights/volcano-sdk-kong-agents-production-ready" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://volcanicminds.com/en/insights/volcano-sdk-kong-agents-production-ready" />
+        <image:image>
+            <image:loc>https://images.prismic.io/volcanic-website/aPjaX7pReVYa3kG8_kong-volcano-sdk-small.png</image:loc>
+            <image:title>Volcano SDK: AI Agents backed by Kong</image:title>
+        </image:image>
+    </url>
+    <url>
+        <loc>https://volcanicminds.com/insights/volcano-sdk-kong-agents-production-ready</loc>
+        <lastmod>2026-01-03T02:35:46+0000</lastmod>
+        <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/insights/volcano-sdk-kong-agents-production-ready" />
+        <xhtml:link rel="alternate" hreflang="it" href="https://volcanicminds.com/insights/volcano-sdk-kong-agents-production-ready" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://volcanicminds.com/en/insights/volcano-sdk-kong-agents-production-ready" />
+        <image:image>
+            <image:loc>https://images.prismic.io/volcanic-website/aPjaX7pReVYa3kG8_kong-volcano-sdk-small.png</image:loc>
+            <image:title>Volcano SDK: Agenti AI con la potenza di Kong</image:title>
+        </image:image>
+    </url>
+    <url>
+        <loc>https://volcanicminds.com/en/insights/composite-ai-agents-governance-mastra</loc>
+        <lastmod>2026-01-03T02:34:37+0000</lastmod>
+        <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/insights/composite-ai-agents-governance-mastra" />
+        <xhtml:link rel="alternate" hreflang="it" href="https://volcanicminds.com/insights/composite-ai-agents-governance-mastra" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://volcanicminds.com/en/insights/composite-ai-agents-governance-mastra" />
+        <image:image>
+            <image:loc>https://images.prismic.io/volcanic-website/aUtTzHNYClf9ooAw_composite-ai-governance-mastra.jpeg</image:loc>
+            <image:title>Composite Agents: Real Governance and AI Workflow</image:title>
+        </image:image>
+    </url>
+    <url>
+        <loc>https://volcanicminds.com/insights/composite-ai-agents-governance-mastra</loc>
+        <lastmod>2026-01-03T02:34:19+0000</lastmod>
+        <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/insights/composite-ai-agents-governance-mastra" />
+        <xhtml:link rel="alternate" hreflang="it" href="https://volcanicminds.com/insights/composite-ai-agents-governance-mastra" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://volcanicminds.com/en/insights/composite-ai-agents-governance-mastra" />
+        <image:image>
+            <image:loc>https://images.prismic.io/volcanic-website/aUtTzHNYClf9ooAw_composite-ai-governance-mastra.jpeg</image:loc>
+            <image:title>Agenti Compositi: Governance Reale e Workflow AI</image:title>
+        </image:image>
     </url>
     <url>
         <loc>https://volcanicminds.com/insights/low-code-no-code-vs-coding</loc>
@@ -286,6 +648,14 @@
         <xhtml:link rel="alternate" hreflang="it" href="https://volcanicminds.com/insights/low-code-no-code-vs-coding" />
         <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/insights/low-code-no-code-vs-coding" />
         <xhtml:link rel="alternate" hreflang="x-default" href="https://volcanicminds.com/en/insights/low-code-no-code-vs-coding" />
+        <image:image>
+            <image:loc>https://images.prismic.io/volcanic-website/Z6I4KpbqstJ9-N4a_low-code.png</image:loc>
+            <image:title>Immagine di copertina</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://images.prismic.io/volcanic-website/Z6I2upbqstJ9-N3V_coding.jpg</image:loc>
+            <image:title>Immagine di sfondo</image:title>
+        </image:image>
     </url>
     <url>
         <loc>https://volcanicminds.com/en/insights/low-code-no-code-vs-coding</loc>
@@ -293,6 +663,14 @@
         <xhtml:link rel="alternate" hreflang="it" href="https://volcanicminds.com/insights/low-code-no-code-vs-coding" />
         <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/insights/low-code-no-code-vs-coding" />
         <xhtml:link rel="alternate" hreflang="x-default" href="https://volcanicminds.com/en/insights/low-code-no-code-vs-coding" />
+        <image:image>
+            <image:loc>https://images.prismic.io/volcanic-website/Z6oFgJbqstJ9-blP_lowcode.png</image:loc>
+            <image:title>Preview image</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://images.prismic.io/volcanic-website/Z6I2upbqstJ9-N3V_coding.jpg</image:loc>
+            <image:title>Background image</image:title>
+        </image:image>
     </url>
     <url>
         <loc>https://volcanicminds.com/en/insights/a-bit-of-history-mupin</loc>
@@ -300,6 +678,10 @@
         <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/insights/a-bit-of-history-mupin" />
         <xhtml:link rel="alternate" hreflang="it" href="https://volcanicminds.com/insights/a-bit-of-history-mupin" />
         <xhtml:link rel="alternate" hreflang="x-default" href="https://volcanicminds.com/en/insights/a-bit-of-history-mupin" />
+        <image:image>
+            <image:loc>https://images.prismic.io/volcanic-website/Z20vLZbqstJ981ZI_434465043_939022031557893_7887267120915919672_n.jpg</image:loc>
+            <image:title>A bit of [hi]story by MuPIn</image:title>
+        </image:image>
     </url>
     <url>
         <loc>https://volcanicminds.com/insights/a-bit-of-history-mupin</loc>
@@ -307,6 +689,10 @@
         <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/insights/a-bit-of-history-mupin" />
         <xhtml:link rel="alternate" hreflang="it" href="https://volcanicminds.com/insights/a-bit-of-history-mupin" />
         <xhtml:link rel="alternate" hreflang="x-default" href="https://volcanicminds.com/en/insights/a-bit-of-history-mupin" />
+        <image:image>
+            <image:loc>https://images.prismic.io/volcanic-website/Z20vLZbqstJ981ZI_434465043_939022031557893_7887267120915919672_n.jpg</image:loc>
+            <image:title>Immagine di copertina</image:title>
+        </image:image>
     </url>
     <url>
         <loc>https://volcanicminds.com/insights/smartcommunities-booklet</loc>
@@ -314,6 +700,10 @@
         <xhtml:link rel="alternate" hreflang="it" href="https://volcanicminds.com/insights/smartcommunities-booklet" />
         <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/insights/smartcommunities-booklet" />
         <xhtml:link rel="alternate" hreflang="x-default" href="https://volcanicminds.com/en/insights/smartcommunities-booklet" />
+        <image:image>
+            <image:loc>https://images.prismic.io/volcanic-website/Z2mLrJbqstJ98yvN_booklet-SCC23_compr-1-min.png</image:loc>
+            <image:title>Volcanic Minds nello SmartCommunities Booklet</image:title>
+        </image:image>
     </url>
     <url>
         <loc>https://volcanicminds.com/en/insights/smartcommunities-booklet</loc>
@@ -321,76 +711,32 @@
         <xhtml:link rel="alternate" hreflang="it" href="https://volcanicminds.com/insights/smartcommunities-booklet" />
         <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/insights/smartcommunities-booklet" />
         <xhtml:link rel="alternate" hreflang="x-default" href="https://volcanicminds.com/en/insights/smartcommunities-booklet" />
-    </url>
-    <url>
-        <loc>https://volcanicminds.com/en/insights/volcanic-minds-bronze-sponsor-ai-heroes-2025</loc>
-        <lastmod>2025-12-25T23:52:56+0000</lastmod>
-        <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/insights/volcanic-minds-bronze-sponsor-ai-heroes-2025" />
-        <xhtml:link rel="alternate" hreflang="it" href="https://volcanicminds.com/insights/volcanic-minds-bronze-sponsor-ai-heroes-2025" />
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://volcanicminds.com/en/insights/volcanic-minds-bronze-sponsor-ai-heroes-2025" />
+        <image:image>
+            <image:loc>https://images.prismic.io/volcanic-website/Z2mLrJbqstJ98yvN_booklet-SCC23_compr-1-min.png</image:loc>
+            <image:title>Volcanic Minds in the SmartCommunities Booklet</image:title>
+        </image:image>
     </url>
     <url>
         <loc>https://volcanicminds.com/insights/volcanic-minds-bronze-sponsor-ai-heroes-2025</loc>
         <lastmod>2025-12-25T23:53:12+0000</lastmod>
-        <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/insights/volcanic-minds-bronze-sponsor-ai-heroes-2025" />
         <xhtml:link rel="alternate" hreflang="it" href="https://volcanicminds.com/insights/volcanic-minds-bronze-sponsor-ai-heroes-2025" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/insights/volcanic-minds-bronze-sponsor-ai-heroes-2025" />
         <xhtml:link rel="alternate" hreflang="x-default" href="https://volcanicminds.com/en/insights/volcanic-minds-bronze-sponsor-ai-heroes-2025" />
+        <image:image>
+            <image:loc>https://images.prismic.io/volcanic-website/aDCAHSdWJ-7kSf5d_ai-heroes.png</image:loc>
+            <image:title>Immagine di copertina</image:title>
+        </image:image>
     </url>
     <url>
-        <loc>https://volcanicminds.com/insights/tech-debt-strategic-risk</loc>
-        <lastmod>2025-12-25T23:59:12+0000</lastmod>
-        <xhtml:link rel="alternate" hreflang="it" href="https://volcanicminds.com/insights/tech-debt-strategic-risk" />
-        <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/insights/tech-debt-strategic-risk" />
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://volcanicminds.com/en/insights/tech-debt-strategic-risk" />
-    </url>
-    <url>
-        <loc>https://volcanicminds.com/en/insights/tech-debt-strategic-risk</loc>
-        <lastmod>2025-12-26T00:00:02+0000</lastmod>
-        <xhtml:link rel="alternate" hreflang="it" href="https://volcanicminds.com/insights/tech-debt-strategic-risk" />
-        <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/insights/tech-debt-strategic-risk" />
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://volcanicminds.com/en/insights/tech-debt-strategic-risk" />
-    </url>
-    <url>
-        <loc>https://volcanicminds.com/insights/corporate-meeting-polo-ict</loc>
-        <lastmod>2025-12-25T23:33:01+0000</lastmod>
-        <xhtml:link rel="alternate" hreflang="it" href="https://volcanicminds.com/insights/corporate-meeting-polo-ict" />
-        <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/insights/corporate-meeting-polo-ict" />
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://volcanicminds.com/en/insights/corporate-meeting-polo-ict" />
-    </url>
-    <url>
-        <loc>https://volcanicminds.com/en/insights/corporate-meeting-polo-ict</loc>
-        <lastmod>2025-12-25T23:33:30+0000</lastmod>
-        <xhtml:link rel="alternate" hreflang="it" href="https://volcanicminds.com/insights/corporate-meeting-polo-ict" />
-        <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/insights/corporate-meeting-polo-ict" />
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://volcanicminds.com/en/insights/corporate-meeting-polo-ict" />
-    </url>
-    <url>
-        <loc>https://volcanicminds.com/insights/seo-without-ads-geo-optimization</loc>
-        <lastmod>2025-12-25T23:44:44+0000</lastmod>
-        <xhtml:link rel="alternate" hreflang="it" href="https://volcanicminds.com/insights/seo-without-ads-geo-optimization" />
-        <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/insights/seo-without-ads-geo-optimization" />
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://volcanicminds.com/en/insights/seo-without-ads-geo-optimization" />
-    </url>
-    <url>
-        <loc>https://volcanicminds.com/en/insights/seo-without-ads-geo-optimization</loc>
-        <lastmod>2025-12-25T23:45:33+0000</lastmod>
-        <xhtml:link rel="alternate" hreflang="it" href="https://volcanicminds.com/insights/seo-without-ads-geo-optimization" />
-        <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/insights/seo-without-ads-geo-optimization" />
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://volcanicminds.com/en/insights/seo-without-ads-geo-optimization" />
-    </url>
-    <url>
-        <loc>https://volcanicminds.com/insights/we-make-future-2025-bologna-fiere</loc>
-        <lastmod>2025-12-25T23:49:24+0000</lastmod>
-        <xhtml:link rel="alternate" hreflang="it" href="https://volcanicminds.com/insights/we-make-future-2025-bologna-fiere" />
-        <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/insights/we-make-future-2025-bologna-fiere" />
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://volcanicminds.com/en/insights/we-make-future-2025-bologna-fiere" />
-    </url>
-    <url>
-        <loc>https://volcanicminds.com/en/insights/we-make-future-2025-bologna-fiere</loc>
-        <lastmod>2025-12-25T23:50:28+0000</lastmod>
-        <xhtml:link rel="alternate" hreflang="it" href="https://volcanicminds.com/insights/we-make-future-2025-bologna-fiere" />
-        <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/insights/we-make-future-2025-bologna-fiere" />
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://volcanicminds.com/en/insights/we-make-future-2025-bologna-fiere" />
+        <loc>https://volcanicminds.com/en/insights/volcanic-minds-bronze-sponsor-ai-heroes-2025</loc>
+        <lastmod>2025-12-25T23:52:56+0000</lastmod>
+        <xhtml:link rel="alternate" hreflang="it" href="https://volcanicminds.com/insights/volcanic-minds-bronze-sponsor-ai-heroes-2025" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/insights/volcanic-minds-bronze-sponsor-ai-heroes-2025" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://volcanicminds.com/en/insights/volcanic-minds-bronze-sponsor-ai-heroes-2025" />
+        <image:image>
+            <image:loc>https://images.prismic.io/volcanic-website/aDCAHSdWJ-7kSf5d_ai-heroes.png</image:loc>
+            <image:title>Cover image</image:title>
+        </image:image>
     </url>
     <url>
         <loc>https://volcanicminds.com/insights/linux-day-torino-2023</loc>
@@ -398,6 +744,10 @@
         <xhtml:link rel="alternate" hreflang="it" href="https://volcanicminds.com/insights/linux-day-torino-2023" />
         <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/insights/linux-day-torino-2023" />
         <xhtml:link rel="alternate" hreflang="x-default" href="https://volcanicminds.com/en/insights/linux-day-torino-2023" />
+        <image:image>
+            <image:loc>https://images.prismic.io/volcanic-website/Z2mR1JbqstJ98yyk_1699282558744.jpeg</image:loc>
+            <image:title>Immagine di anteprima</image:title>
+        </image:image>
     </url>
     <url>
         <loc>https://volcanicminds.com/en/insights/linux-day-torino-2023</loc>
@@ -405,5 +755,263 @@
         <xhtml:link rel="alternate" hreflang="it" href="https://volcanicminds.com/insights/linux-day-torino-2023" />
         <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/insights/linux-day-torino-2023" />
         <xhtml:link rel="alternate" hreflang="x-default" href="https://volcanicminds.com/en/insights/linux-day-torino-2023" />
+        <image:image>
+            <image:loc>https://images.prismic.io/volcanic-website/Z2mR1JbqstJ98yyk_1699282558744.jpeg</image:loc>
+            <image:title>Davide Morra speaking to the audience at Linux Day 2024</image:title>
+        </image:image>
+    </url>
+    <url>
+        <loc>https://volcanicminds.com/en/insights/seo-without-ads-geo-optimization</loc>
+        <lastmod>2025-12-25T23:45:33+0000</lastmod>
+        <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/insights/seo-without-ads-geo-optimization" />
+        <xhtml:link rel="alternate" hreflang="it" href="https://volcanicminds.com/insights/seo-without-ads-geo-optimization" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://volcanicminds.com/en/insights/seo-without-ads-geo-optimization" />
+        <image:image>
+            <image:loc>https://images.prismic.io/volcanic-website/Z9QU9hsAHJWomim8_SEOGEO.png</image:loc>
+            <image:title>Preview image</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://images.prismic.io/volcanic-website/Z9QWoRsAHJWomioF_pexels-fotios-photos-16368540.jpg</image:loc>
+            <image:title>Background image</image:title>
+        </image:image>
+    </url>
+    <url>
+        <loc>https://volcanicminds.com/insights/seo-without-ads-geo-optimization</loc>
+        <lastmod>2025-12-25T23:44:44+0000</lastmod>
+        <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/insights/seo-without-ads-geo-optimization" />
+        <xhtml:link rel="alternate" hreflang="it" href="https://volcanicminds.com/insights/seo-without-ads-geo-optimization" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://volcanicminds.com/en/insights/seo-without-ads-geo-optimization" />
+        <image:image>
+            <image:loc>https://images.prismic.io/volcanic-website/Z9QU9hsAHJWomim8_SEOGEO.png</image:loc>
+            <image:title>Immagine di anteprima</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://images.prismic.io/volcanic-website/Z9QWoRsAHJWomioF_pexels-fotios-photos-16368540.jpg</image:loc>
+            <image:title>Immagine di sfondo</image:title>
+        </image:image>
+    </url>
+    <url>
+        <loc>https://volcanicminds.com/en/insights/we-make-future-2025-bologna-fiere</loc>
+        <lastmod>2025-12-25T23:50:28+0000</lastmod>
+        <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/insights/we-make-future-2025-bologna-fiere" />
+        <xhtml:link rel="alternate" hreflang="it" href="https://volcanicminds.com/insights/we-make-future-2025-bologna-fiere" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://volcanicminds.com/en/insights/we-make-future-2025-bologna-fiere" />
+        <image:image>
+            <image:loc>https://images.prismic.io/volcanic-website/aCc5iidWJ-7kSOL5_wmf2025.jpg</image:loc>
+            <image:title>Article preview image</image:title>
+        </image:image>
+    </url>
+    <url>
+        <loc>https://volcanicminds.com/insights/we-make-future-2025-bologna-fiere</loc>
+        <lastmod>2025-12-25T23:49:24+0000</lastmod>
+        <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/insights/we-make-future-2025-bologna-fiere" />
+        <xhtml:link rel="alternate" hreflang="it" href="https://volcanicminds.com/insights/we-make-future-2025-bologna-fiere" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://volcanicminds.com/en/insights/we-make-future-2025-bologna-fiere" />
+        <image:image>
+            <image:loc>https://images.prismic.io/volcanic-website/aCc5iidWJ-7kSOL5_wmf2025.jpg</image:loc>
+            <image:title>Anteprima articolo</image:title>
+        </image:image>
+    </url>
+    <url>
+        <loc>https://volcanicminds.com/en/insights/tech-debt-strategic-risk</loc>
+        <lastmod>2025-12-26T00:00:02+0000</lastmod>
+        <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/insights/tech-debt-strategic-risk" />
+        <xhtml:link rel="alternate" hreflang="it" href="https://volcanicminds.com/insights/tech-debt-strategic-risk" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://volcanicminds.com/en/insights/tech-debt-strategic-risk" />
+        <image:image>
+            <image:loc>https://images.prismic.io/volcanic-website/aNPA_J5xUNkB1DPk_debito-tecnico.png</image:loc>
+            <image:title>Tech Debt: a strategic mortgage</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://images.prismic.io/volcanic-website/aNOpTJ5xUNkB1C9v_unsplash-sigmund-plan-blueprint-tech.jpg</image:loc>
+            <image:title>Tech Debt: a strategic mortgage</image:title>
+        </image:image>
+    </url>
+    <url>
+        <loc>https://volcanicminds.com/insights/tech-debt-strategic-risk</loc>
+        <lastmod>2025-12-25T23:59:12+0000</lastmod>
+        <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/insights/tech-debt-strategic-risk" />
+        <xhtml:link rel="alternate" hreflang="it" href="https://volcanicminds.com/insights/tech-debt-strategic-risk" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://volcanicminds.com/en/insights/tech-debt-strategic-risk" />
+        <image:image>
+            <image:loc>https://images.prismic.io/volcanic-website/aNPA_J5xUNkB1DPk_debito-tecnico.png</image:loc>
+            <image:title>Debito Tecnico: un mutuo strategico</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://images.prismic.io/volcanic-website/aNOpTJ5xUNkB1C9v_unsplash-sigmund-plan-blueprint-tech.jpg</image:loc>
+            <image:title>Debito Tecnico: un mutuo strategico</image:title>
+        </image:image>
+    </url>
+    <url>
+        <loc>https://volcanicminds.com/insights/how-to-manage-risk-custom-software-projects</loc>
+        <lastmod>2025-12-25T23:13:55+0000</lastmod>
+        <xhtml:link rel="alternate" hreflang="it" href="https://volcanicminds.com/insights/how-to-manage-risk-custom-software-projects" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/insights/how-to-manage-risk-custom-software-projects" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://volcanicminds.com/en/insights/how-to-manage-risk-custom-software-projects" />
+        <image:image>
+            <image:loc>https://images.prismic.io/volcanic-website/aSiAbXNYClf9njXt_risk-management.webp</image:loc>
+            <image:title>Software su Misura: gestire il rischio</image:title>
+        </image:image>
+    </url>
+    <url>
+        <loc>https://volcanicminds.com/en/insights/how-to-manage-risk-custom-software-projects</loc>
+        <lastmod>2025-12-29T17:37:45+0000</lastmod>
+        <xhtml:link rel="alternate" hreflang="it" href="https://volcanicminds.com/insights/how-to-manage-risk-custom-software-projects" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/insights/how-to-manage-risk-custom-software-projects" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://volcanicminds.com/en/insights/how-to-manage-risk-custom-software-projects" />
+        <image:image>
+            <image:loc>https://images.prismic.io/volcanic-website/aSiAbXNYClf9njXt_risk-management.webp</image:loc>
+            <image:title>Custom Software: Managing Risk</image:title>
+        </image:image>
+    </url>
+    <url>
+        <loc>https://volcanicminds.com/insights/corporate-meeting-polo-ict</loc>
+        <lastmod>2025-12-25T23:33:01+0000</lastmod>
+        <xhtml:link rel="alternate" hreflang="it" href="https://volcanicminds.com/insights/corporate-meeting-polo-ict" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/insights/corporate-meeting-polo-ict" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://volcanicminds.com/en/insights/corporate-meeting-polo-ict" />
+        <image:image>
+            <image:loc>https://images.prismic.io/volcanic-website/Z20rTZbqstJ981Y1_PoloICT_CM1123.jpg</image:loc>
+            <image:title>Corporate Meeting Polo ICT</image:title>
+        </image:image>
+    </url>
+    <url>
+        <loc>https://volcanicminds.com/en/insights/corporate-meeting-polo-ict</loc>
+        <lastmod>2025-12-25T23:33:30+0000</lastmod>
+        <xhtml:link rel="alternate" hreflang="it" href="https://volcanicminds.com/insights/corporate-meeting-polo-ict" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/insights/corporate-meeting-polo-ict" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://volcanicminds.com/en/insights/corporate-meeting-polo-ict" />
+        <image:image>
+            <image:loc>https://images.prismic.io/volcanic-website/Z20rTZbqstJ981Y1_PoloICT_CM1123.jpg</image:loc>
+            <image:title>Corporate Meeting Polo ICT</image:title>
+        </image:image>
+    </url>
+    <url>
+        <loc>https://volcanicminds.com/en/insights/google-analytics-gdpr-alternative-plausible</loc>
+        <lastmod>2025-12-29T17:36:38+0000</lastmod>
+        <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/insights/google-analytics-gdpr-alternative-plausible" />
+        <xhtml:link rel="alternate" hreflang="it" href="https://volcanicminds.com/insights/google-analytics-gdpr-alternative-plausible" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://volcanicminds.com/en/insights/google-analytics-gdpr-alternative-plausible" />
+        <image:image>
+            <image:loc>https://images.prismic.io/volcanic-website/Z1sUspbqstJ98bKg_plausible.png</image:loc>
+            <image:title>Preview image</image:title>
+        </image:image>
+    </url>
+    <url>
+        <loc>https://volcanicminds.com/insights/google-analytics-gdpr-alternative-plausible</loc>
+        <lastmod>2025-12-29T17:36:55+0000</lastmod>
+        <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/insights/google-analytics-gdpr-alternative-plausible" />
+        <xhtml:link rel="alternate" hreflang="it" href="https://volcanicminds.com/insights/google-analytics-gdpr-alternative-plausible" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://volcanicminds.com/en/insights/google-analytics-gdpr-alternative-plausible" />
+        <image:image>
+            <image:loc>https://images.prismic.io/volcanic-website/Z1sUspbqstJ98bKg_plausible.png</image:loc>
+            <image:title>Immagine di anteprima con logo Plausible</image:title>
+        </image:image>
+    </url>
+    <url>
+        <loc>https://volcanicminds.com/en/insights/vibe-coding-tools-for-devs</loc>
+        <lastmod>2026-01-03T02:33:59+0000</lastmod>
+        <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/insights/vibe-coding-tools-for-devs" />
+        <xhtml:link rel="alternate" hreflang="it" href="https://volcanicminds.com/insights/vibe-coding-tools-for-devs" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://volcanicminds.com/en/insights/vibe-coding-tools-for-devs" />
+        <image:image>
+            <image:loc>https://images.prismic.io/volcanic-website/aAdiDVvg_A-GMt8A_vibe-coding.png</image:loc>
+            <image:title>Vibe Coding: how AI is transforming software development</image:title>
+        </image:image>
+    </url>
+    <url>
+        <loc>https://volcanicminds.com/insights/vibe-coding-tools-for-devs</loc>
+        <lastmod>2026-01-03T02:33:41+0000</lastmod>
+        <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/insights/vibe-coding-tools-for-devs" />
+        <xhtml:link rel="alternate" hreflang="it" href="https://volcanicminds.com/insights/vibe-coding-tools-for-devs" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://volcanicminds.com/en/insights/vibe-coding-tools-for-devs" />
+        <image:image>
+            <image:loc>https://images.prismic.io/volcanic-website/aAdiDVvg_A-GMt8A_vibe-coding.png</image:loc>
+            <image:title>Vibe Coding: l’AI per rivoluzionare lo sviluppo</image:title>
+        </image:image>
+    </url>
+    <url>
+        <loc>https://volcanicminds.com/insights/llm-javascript-practical-guide</loc>
+        <lastmod>2025-12-29T17:35:29+0000</lastmod>
+        <xhtml:link rel="alternate" hreflang="it" href="https://volcanicminds.com/insights/llm-javascript-practical-guide" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/insights/llm-javascript-practical-guide" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://volcanicminds.com/en/insights/llm-javascript-practical-guide" />
+        <image:image>
+            <image:loc>https://images.prismic.io/volcanic-website/Z4em05bqstJ99fG-_transformersjs.png</image:loc>
+            <image:title>Immagine di anteprima</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://images.prismic.io/volcanic-website/Z4eHzpbqstJ99euZ_transformers.webp</image:loc>
+            <image:title>Immagine di sfondo</image:title>
+        </image:image>
+    </url>
+    <url>
+        <loc>https://volcanicminds.com/en/insights/llm-javascript-practical-guide</loc>
+        <lastmod>2025-12-29T17:35:17+0000</lastmod>
+        <xhtml:link rel="alternate" hreflang="it" href="https://volcanicminds.com/insights/llm-javascript-practical-guide" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/insights/llm-javascript-practical-guide" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://volcanicminds.com/en/insights/llm-javascript-practical-guide" />
+        <image:image>
+            <image:loc>https://images.prismic.io/volcanic-website/Z4em05bqstJ99fG-_transformersjs.png</image:loc>
+            <image:title>Preview image</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://images.prismic.io/volcanic-website/Z4eHzpbqstJ99euZ_transformers.webp</image:loc>
+            <image:title>Background image</image:title>
+        </image:image>
+    </url>
+    <url>
+        <loc>https://volcanicminds.com/insights/making-of</loc>
+        <lastmod>2025-12-29T17:36:14+0000</lastmod>
+        <xhtml:link rel="alternate" hreflang="it" href="https://volcanicminds.com/insights/making-of" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/insights/making-of" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://volcanicminds.com/en/insights/making-of" />
+        <image:image>
+            <image:loc>https://images.prismic.io/volcanic-website/Z2GYc5bqstJ98m3-_og-sito.png</image:loc>
+            <image:title>Anteprima articolo</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://images.prismic.io/volcanic-website/045f9b0e-87d6-4e0f-a877-ad033043387c_pexels-designecologist-1779487.jpg</image:loc>
+            <image:title>Immagine di copertina</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://images.prismic.io/volcanic-website/d584424f-e2e3-4421-8878-43bed987a96b_nuxtbg.png</image:loc>
+            <image:title>Immagine di sfondo Nuxt</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://images.prismic.io/volcanic-website/d42253d7-3e52-4766-bc9e-8d1a1cc09e3b_prismicbg.png</image:loc>
+            <image:title>Immagine con mockup colorati di dispositivi</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://images.prismic.io/volcanic-website/5fa6da07-a095-4753-8aee-6e6d81d7f7c3_plausible.png</image:loc>
+            <image:title>Dashboard analytics</image:title>
+        </image:image>
+    </url>
+    <url>
+        <loc>https://volcanicminds.com/en/insights/making-of</loc>
+        <lastmod>2025-12-29T17:36:00+0000</lastmod>
+        <xhtml:link rel="alternate" hreflang="it" href="https://volcanicminds.com/insights/making-of" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://volcanicminds.com/en/insights/making-of" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://volcanicminds.com/en/insights/making-of" />
+        <image:image>
+            <image:loc>https://images.prismic.io/volcanic-website/Z2GYc5bqstJ98m3-_og-sito.png</image:loc>
+            <image:title>Our website</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://images.prismic.io/volcanic-website/045f9b0e-87d6-4e0f-a877-ad033043387c_pexels-designecologist-1779487.jpg</image:loc>
+            <image:title>Mac on desk with purple background light</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://images.prismic.io/volcanic-website/d584424f-e2e3-4421-8878-43bed987a96b_nuxtbg.png</image:loc>
+            <image:title>The framework</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://images.prismic.io/volcanic-website/d42253d7-3e52-4766-bc9e-8d1a1cc09e3b_prismicbg.png</image:loc>
+            <image:title>The Content Management System</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://images.prismic.io/volcanic-website/5fa6da07-a095-4753-8aee-6e6d81d7f7c3_plausible.png</image:loc>
+            <image:title>The web analytics</image:title>
+        </image:image>
     </url>
 </urlset>

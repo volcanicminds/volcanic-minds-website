@@ -142,7 +142,7 @@ async function generateSitemap() {
 				// 1. Main Preview Image
 				if (doc.data.preview_image && doc.data.preview_image.url) {
 					images.push({
-						loc: doc.data.preview_image.url,
+						loc: doc.data.preview_image.url.split('?')[0],
 						title: doc.data.preview_image.alt || doc.data.title || ''
 					})
 				}
@@ -154,8 +154,8 @@ async function generateSitemap() {
 						if (slice.slice_type === 'image_and_text') {
 							if (slice.primary.image && slice.primary.image.url) {
 								images.push({
-									loc: slice.primary.image.url,
-									title: slice.primary.image.alt || slice.primary.title || ''
+									loc: slice.primary.image.url.split('?')[0],
+									title: slice.primary.image.alt || slice.primary.title || doc.data.title || ''
 								})
 							}
 						}
@@ -163,8 +163,8 @@ async function generateSitemap() {
 						else if (slice.slice_type === 'hero_banner') {
 							if (slice.primary.background_image && slice.primary.background_image.url) {
 								images.push({
-									loc: slice.primary.background_image.url,
-									title: slice.primary.background_image.alt || ''
+									loc: slice.primary.background_image.url.split('?')[0],
+									title: slice.primary.background_image.alt || doc.data.title || ''
 								})
 							}
 						}
@@ -174,15 +174,15 @@ async function generateSitemap() {
 								slice.items.forEach((item) => {
 									if (item.card_image && item.card_image.url) {
 										images.push({
-											loc: item.card_image.url,
-											title: item.card_image.alt || item.card_title || ''
+											loc: item.card_image.url.split('?')[0],
+											title: item.card_image.alt || item.card_title || doc.data.title || ''
 										})
 									}
 									// Masonry hover image
 									if (item.card_image_hover && item.card_image_hover.url) {
 										images.push({
-											loc: item.card_image_hover.url,
-											title: item.card_image_hover.alt || ''
+											loc: item.card_image_hover.url.split('?')[0],
+											title: item.card_image_hover.alt || doc.data.title || ''
 										})
 									}
 								})
@@ -194,8 +194,8 @@ async function generateSitemap() {
 								slice.items.forEach((item) => {
 									if (item.background && item.background.url) {
 										images.push({
-											loc: item.background.url,
-											title: item.background.alt || item.card_title || ''
+											loc: item.background.url.split('?')[0],
+											title: item.background.alt || item.card_title || doc.data.title || ''
 										})
 									}
 								})
