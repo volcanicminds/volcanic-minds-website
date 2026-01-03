@@ -234,12 +234,54 @@ const _getOrganizationNode = (ctx: any, type: string) => {
 	return baseOrg
 }
 
+const SERVICES_CATALOG = {
+	'it-it': 'Servizi Volcanic Minds',
+	en: 'Services Volcanic Minds'
+}
+
+const SERVICES_CATALOG_ITEMS = {
+	'it-it': [
+		{
+			name: 'Design Strategy',
+			description: 'Scopri il potenziale del tuo prodotto con il nostro metodo personalizzato',
+			path: '/services/design-strategy'
+		},
+		{
+			name: 'Digital Factory',
+			description: 'Sviluppo Software Custom, Modernizzazione Applicativa e Cloud Native Development.',
+			path: '/services/digital-factory'
+		},
+		{
+			name: 'Project Leading',
+			description: 'Gestione tecnica dei fornitori, Project Management Agile e supervisione architetturale.',
+			path: '/services/project-leading'
+		}
+	],
+	en: [
+		{
+			name: 'Design Strategy',
+			description: "Unlock your product's potential with our custom method",
+			path: '/services/design-strategy'
+		},
+		{
+			name: 'Digital Factory',
+			description: 'Sviluppo Software Custom, Modernizzazione Applicativa e Cloud Native Development.',
+			path: '/services/digital-factory'
+		},
+		{
+			name: 'Project Leading',
+			description: 'We comprehensively manage not just your team, but all development partners',
+			path: '/services/project-leading'
+		}
+	]
+}
+
 const _getServiceNode = (ctx: any) => {
 	const sitename = process.env.NUXT_SITENAME || 'https://volcanicminds.com'
 	const currentPath = `${sitename}${ctx.$nuxt.$route.path}`.replace(/\/$/, '')
 	const identityId = `${sitename}/#identity`
 
-	return {
+	const serviceNode: any = {
 		'@type': 'Service',
 		'@id': `${currentPath}/#service`,
 		name: ctx.document.data.title,
@@ -247,15 +289,37 @@ const _getServiceNode = (ctx: any) => {
 			ctx.document.data.service_type ||
 			ctx.document.data.og_title ||
 			ctx.document.data.seo_title ||
-			ctx.document.data.title,
+			ctx.document.data.title ||
+			'Service',
 		description: ctx.document.data.seo_description || ctx.$constants.seoDescription,
 		provider: { '@id': identityId },
-		areaServed: ctx.$constants.areaServed[ctx.$i18n.locale],
-		hasOfferCatalog: {
-			'@type': 'OfferCatalog',
-			name: 'Servizi Volcanic Minds'
-		}
+		areaServed: ctx.$constants.areaServed[ctx.$i18n.locale]
 	}
+
+	if (
+		ctx.document.uid === 'services' ||
+		ctx.$nuxt.$route.path.endsWith('/services') ||
+		ctx.$nuxt.$route.path.endsWith('/services/')
+	) {
+		const locale = ctx.$i18n.locale === 'it-it' ? 'it-it' : 'en'
+		const catalogItems = SERVICES_CATALOG_ITEMS[locale] || SERVICES_CATALOG_ITEMS.en
+		serviceNode.hasOfferCatalog = {
+			'@type': 'OfferCatalog',
+			name: SERVICES_CATALOG[locale]
+		}
+
+		serviceNode.hasOfferCatalog.itemListElement = catalogItems.map((item: any) => ({
+			'@type': 'Offer',
+			itemOffered: {
+				'@type': 'Service',
+				name: item.name,
+				description: item.description,
+				url: `${sitename}${ctx.localePath(item.path).replace(/\/$/, '')}`
+			}
+		}))
+	}
+
+	return serviceNode
 }
 
 const _getWebPageNode = (ctx: any, document: any) => {
