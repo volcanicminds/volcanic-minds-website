@@ -243,6 +243,11 @@ const _getServiceNode = (ctx: any) => {
 		'@type': 'Service',
 		'@id': `${currentPath}/#service`,
 		name: ctx.document.data.title,
+		serviceType:
+			ctx.document.data.service_type ||
+			ctx.document.data.og_title ||
+			ctx.document.data.seo_title ||
+			ctx.document.data.title,
 		description: ctx.document.data.seo_description || ctx.$constants.seoDescription,
 		provider: { '@id': identityId },
 		areaServed: ctx.$constants.areaServed[ctx.$i18n.locale],

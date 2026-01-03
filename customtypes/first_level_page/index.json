@@ -158,6 +158,13 @@
 					"default_value": "WebPage"
 				}
 			},
+			"service_type": {
+				"type": "Text",
+				"config": {
+					"label": "Service Type (Solo se Service)",
+					"placeholder": "Es. UX/UI Design & Product Strategy"
+				}
+			},
 			"proficiency_level": {
 				"type": "Select",
 				"config": {
