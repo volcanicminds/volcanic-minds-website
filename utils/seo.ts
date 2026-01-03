@@ -265,12 +265,12 @@ const SERVICES_CATALOG_ITEMS = {
 		},
 		{
 			name: 'Digital Factory',
-			description: 'Sviluppo Software Custom, Modernizzazione Applicativa e Cloud Native Development.',
+			description: 'Custom Software Development, Application Modernization and Cloud Native Development.',
 			path: '/services/digital-factory'
 		},
 		{
 			name: 'Project Leading',
-			description: 'We comprehensively manage not just your team, but all development partners',
+			description: 'Technical Vendor Management, Agile Project Management and Architectural Oversight.',
 			path: '/services/project-leading'
 		}
 	]
