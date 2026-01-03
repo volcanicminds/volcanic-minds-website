@@ -4,6 +4,7 @@ import {
 	AREA_SERVED_MAPS,
 	ORG_AUTHOR,
 	TECH_AUTHOR,
+	defaultKnowsAbout,
 	landingPageDetails,
 	OPENING_HOURS_SPECIFICATION,
 	REVIEWS_DATA,
@@ -77,16 +78,34 @@ const COMPANY_GEO = {
 	longitude: 7.66866
 }
 
+const _getPageImage = (ctx: any) => {
+	if (ctx.document.data.og_image?.url) {
+		return ctx.document.data.og_image.url
+	}
+
+	if (ctx.document.data.slices) {
+		const heroSlice = ctx.document.data.slices.find((slice: any) => slice.slice_type === 'hero_banner')
+		if (heroSlice?.primary?.background_image?.url) {
+			return heroSlice.primary.background_image.url
+		}
+	}
+	return undefined
+}
+
 const _getBreadcrumbNode = (ctx: any, document: any, section?: any) => {
 	const sitename = process.env.NUXT_SITENAME || 'https://volcanicminds.com'
 	const currentPath = `${sitename}${ctx.$nuxt.$route.path}`.replace(/\/$/, '')
+	const homePath = `${sitename}${ctx.localePath('/')}`.replace(/\/$/, '')
+
+	// Do not generate Breadcrumb for Homepage
+	if (currentPath === homePath) return null
 
 	const itemListElement = [
 		{
 			'@type': 'ListItem',
 			position: 1,
 			name: 'Home',
-			item: `${sitename}${ctx.localePath('/')}`
+			item: homePath
 		}
 	]
 
@@ -140,6 +159,7 @@ const _getOrganizationNode = (ctx: any, type: string) => {
 			'https://www.wikidata.org/wiki/Q1668024', // Computer software company
 			'https://www.wikidata.org/wiki/Q5302303' // Software development
 		],
+		knowsAbout: defaultKnowsAbout,
 		// telephone: '+39 011 XXXXXXX',
 		priceRange: PRICE_RANGE,
 		description:
@@ -166,7 +186,7 @@ const _getOrganizationNode = (ctx: any, type: string) => {
 	if (type === 'LandingEuropePage') {
 		return {
 			...baseOrg,
-			'@type': 'Organization', // Broader scope
+			'@type': 'Organization',
 			name: landingPageDetails.LandingEuropePage.name,
 			alternateName: landingPageDetails.LandingEuropePage.alternateName,
 			description: landingPageDetails.LandingEuropePage.description,
@@ -239,6 +259,7 @@ const _getWebPageNode = (ctx: any, document: any) => {
 		name: document.data.seo_title || document.data.title || ctx.$constants.seoTitle,
 		description:
 			document.data.seo_description || ctx.$constants.seoDescription || ctx.$constants.schemaOrganization.description,
+		image: _getPageImage(ctx),
 		inLanguage: getNormalizedLanguage(ctx),
 		isPartOf: { '@id': `${sitename}/#website` },
 		about: { '@id': identityId },
@@ -288,7 +309,7 @@ const _getArticleNode = (ctx: any, type = 'TechArticle') => {
 		author: authorNode,
 		publisher: { '@id': identityId },
 		description: ctx.document.data.seo_description || ctx.$constants.seoDescription,
-		about: ctx.document.tags, // Keep simple tags as 'about'
+		about: ctx.document.tags,
 		mainEntityOfPage: { '@id': `${currentPath}/#webpage` }
 	}
 
@@ -464,14 +485,12 @@ const _getHowToNode = (ctx: any) => {
 }
 
 /**
- * --- MAIN COMPOSER ---
- *
  * Constructs the Link Graph based on page type.
  */
 export const getCompanySchema = (ctx: any, type = 'WebPage', faqItems?: any[]) => {
 	const graph: any[] = []
 
-	// 1. Organization / LocalBusiness Node (Always present)
+	// 1. Organization / Main Node (Always present)
 	const orgNode = _getOrganizationNode(ctx, type)
 	graph.push(orgNode)
 
@@ -489,10 +508,12 @@ export const getCompanySchema = (ctx: any, type = 'WebPage', faqItems?: any[]) =
 	const webPageNode: any = _getWebPageNode(ctx, ctx.document)
 	graph.push(webPageNode)
 
-	// 4. Breadcrumb Node (Always present)
+	// 4. Breadcrumb Node
 	// Pass ctx.section if available (for Level 2 pages)
 	const breadcrumbNode = _getBreadcrumbNode(ctx, ctx.document, ctx.section)
-	graph.push(breadcrumbNode)
+	if (breadcrumbNode) {
+		graph.push(breadcrumbNode)
+	}
 
 	// 5. Specific Type Nodes (Service, Article, FAQ, etc.)
 	if (['Article', 'BlogPosting', 'NewsArticle', 'TechArticle'].includes(type)) {
@@ -511,7 +532,6 @@ export const getCompanySchema = (ctx: any, type = 'WebPage', faqItems?: any[]) =
 		graph.push(collectionNode)
 	} else if (type === 'AboutPage') {
 		const aboutNode = _getAboutPageNode(ctx)
-		// Merges specific AboutPage props into WebPage logic distinctively
 		Object.assign(webPageNode, aboutNode)
 	} else if (type === 'ContactPage') {
 		const contactNode = _getContactPageNode(ctx)
@@ -539,12 +559,9 @@ export const getCompanySchema = (ctx: any, type = 'WebPage', faqItems?: any[]) =
 		}
 	}
 
-	// 7. HowTo Logic (Slice Driven)
+	// 7. HowTo Logic
 	const howToNode = _getHowToNode(ctx)
 	if (howToNode) {
-		// If existing mainEntity (e.g. Article), append as hasPart
-		// If WebPage is generic, maybe HowTo becomes mainEntity?
-		// For now, let's append to hasPart to be additive to Article/Service
 		webPageNode.hasPart = webPageNode.hasPart
 			? [].concat(webPageNode.hasPart, { '@id': howToNode['@id'] } as any)
 			: { '@id': howToNode['@id'] }
@@ -568,7 +585,6 @@ export const getCompanySchema = (ctx: any, type = 'WebPage', faqItems?: any[]) =
 		'@graph': graph
 	}
 
-	// console.log('Generated Schema Graph:', JSON.stringify(jsonLd, null, 2))
 	return jsonLd
 }
 
@@ -613,11 +629,4 @@ export const getLCPPreloadLink = (document: any) => {
 	}
 
 	return null
-}
-
-// Keep export for Breadcrumb (legacy usage check needed)
-export const getBreadcrumbSchema = (ctx: any, document: any, section?: any) => {
-	// Fallback to internal if called directly, but wrap in simple object if needed
-	// or deprecate. For strict backwards compatibility, returning the list logic:
-	return _getBreadcrumbNode(ctx, document, section)
 }
