@@ -295,8 +295,9 @@ async function generateSitemap() {
 				if (mainVariant.lastmod) {
 					// Ensure format is compatible (ISO strings usually are)
 					// Prismic returns full ISO e.g. 2024-05-12T10:00:00+0000
-					// sitemaps usually prefer YYYY-MM-DD or full ISO 8601
-					xml += `        <lastmod>${mainVariant.lastmod}</lastmod>\n`
+					// sitemaps usually prefer YYYY-MM-DD or full ISO 8601 with colon in timezone
+					const isoDate = mainVariant.lastmod.replace('+0000', '+00:00')
+					xml += `        <lastmod>${isoDate}</lastmod>\n`
 				}
 
 				group.alternates.forEach((alt) => {
