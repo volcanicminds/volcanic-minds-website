@@ -380,7 +380,7 @@ const _getCollectionPageNode = (ctx: any) => {
 			...articlesGridSlice.items.map((item: any, index: number) => ({
 				'@type': 'ListItem',
 				position: index + 1,
-				url: `${process.env.NUXT_SITENAME}${ctx.switchLocalePath(ctx.$i18n.locale)}insights/${item.article.uid}`
+				url: `${process.env.NUXT_SITENAME}${ctx.switchLocalePath(ctx.$i18n.locale).replace(/\/$/, '')}/${item.article.uid}`
 			}))
 		)
 	}
