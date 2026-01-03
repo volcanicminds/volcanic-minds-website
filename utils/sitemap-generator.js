@@ -136,10 +136,89 @@ async function generateSitemap() {
 				const entry = pagesMap.get(groupKey)
 				const langCode = doc.lang === 'it-it' ? 'it' : doc.lang.slice(0, 2)
 
+				// Extract Images from Document
+				const images = []
+
+				// 1. Main Preview Image
+				if (doc.data.preview_image && doc.data.preview_image.url) {
+					images.push({
+						loc: doc.data.preview_image.url,
+						title: doc.data.preview_image.alt || doc.data.title || ''
+					})
+				}
+
+				// 2. Scan Slices for Images
+				if (doc.data.slices) {
+					doc.data.slices.forEach((slice) => {
+						// ImageAndText
+						if (slice.slice_type === 'image_and_text') {
+							if (slice.primary.image && slice.primary.image.url) {
+								images.push({
+									loc: slice.primary.image.url,
+									title: slice.primary.image.alt || slice.primary.title || ''
+								})
+							}
+						}
+						// HeroBanner
+						else if (slice.slice_type === 'hero_banner') {
+							if (slice.primary.background_image && slice.primary.background_image.url) {
+								images.push({
+									loc: slice.primary.background_image.url,
+									title: slice.primary.background_image.alt || ''
+								})
+							}
+						}
+						// Masonry
+						else if (slice.slice_type === 'masonry') {
+							if (slice.items) {
+								slice.items.forEach((item) => {
+									if (item.card_image && item.card_image.url) {
+										images.push({
+											loc: item.card_image.url,
+											title: item.card_image.alt || item.card_title || ''
+										})
+									}
+									// Masonry hover image
+									if (item.card_image_hover && item.card_image_hover.url) {
+										images.push({
+											loc: item.card_image_hover.url,
+											title: item.card_image_hover.alt || ''
+										})
+									}
+								})
+							}
+						}
+						// CardsGrid
+						else if (slice.slice_type === 'cards_grid') {
+							if (slice.items) {
+								slice.items.forEach((item) => {
+									if (item.background && item.background.url) {
+										images.push({
+											loc: item.background.url,
+											title: item.background.alt || item.card_title || ''
+										})
+									}
+								})
+							}
+						}
+					})
+				}
+
+				// Remove duplicates by URL
+				const uniqueImages = []
+				const seenUrls = new Set()
+				images.forEach((img) => {
+					if (!seenUrls.has(img.loc)) {
+						seenUrls.add(img.loc)
+						uniqueImages.push(img)
+					}
+				})
+
 				entry.alternates.push({
 					lang: langCode,
 					url: `${SITE_URL}${url}`,
-					lastmod: doc.last_publication_date // Add lastmod date
+					lastmod: doc.last_publication_date,
+					images: uniqueImages
 				})
 			}
 		})
@@ -164,7 +243,7 @@ async function generateSitemap() {
 		const getWeight = (group) => {
 			const u = group.uid
 			const t = group.type
-			const mainUrl = group.alternates[0]?.url || ''
+			const mainUrl = (group.alternates[0] && group.alternates[0].url) || ''
 
 			if (t === 'homepage') return 100
 			if (mainUrl.endsWith('/insights')) return 90
@@ -225,6 +304,25 @@ async function generateSitemap() {
 				})
 				// x-default
 				xml += `        <xhtml:link rel="alternate" hreflang="x-default" href="${defaultLangUrl}" />\n`
+
+				// Add Images
+				if (mainVariant.images && mainVariant.images.length > 0) {
+					mainVariant.images.forEach((img) => {
+						xml += '        <image:image>\n'
+						xml += `            <image:loc>${img.loc}</image:loc>\n`
+						if (img.title) {
+							// Escape generic characters if needed, mostly handled by js strings but basic XML escape might be safer if titles have special chars
+							const safeTitle = img.title
+								.replace(/&/g, '&amp;')
+								.replace(/</g, '&lt;')
+								.replace(/>/g, '&gt;')
+								.replace(/"/g, '&quot;')
+								.replace(/'/g, '&apos;')
+							xml += `            <image:title>${safeTitle}</image:title>\n`
+						}
+						xml += '        </image:image>\n'
+					})
+				}
 
 				xml += '    </url>\n'
 			})
